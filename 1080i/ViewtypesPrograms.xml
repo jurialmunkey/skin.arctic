@@ -1,0 +1,490 @@
+<includes>
+<!-- ========= -->
+<!-- List (50) -->
+<!-- ========= -->
+    <include name="Viewtype-ProgramList">
+    
+        <control type="group">
+            <visible>Control.IsVisible(50) + !Window.IsActive(addoninformation) + !Window.IsActive(1122) + !Window.IsActive(favourites) + !Window.IsActive(script-Actors-DialogInfo.xml) + !Window.IsActive(script-Actors-DialogVideoInfo.xml) + IsEmpty(Window(Home).Property(script.metadata.actors.hasparent)) + !Window.IsActive(favourites)</visible>
+            <include>CommonViewAnimations</include>
+            <include>OptionsShutdownAnimation</include>
+
+            <control type="image">
+                <posx>230</posx>
+                <posy>171</posy>
+                <height>737</height>
+                <width>1460</width>
+                <texture border="25">views/newgloss/border-glass.png</texture>
+                <colordiffuse>77ffffff</colordiffuse>
+                <visible>!Skin.HasSetting(hide.glass)</visible>
+            </control>
+            <control type="image">
+                <posx>235</posx>
+                <posy>176</posy>
+                <height>727</height>
+                <width>1450</width>
+                <texture border="35">views/newgloss/whitepanel-15.png</texture>
+            </control>
+            
+            <control type="image">
+                <description>Shadow</description>
+                <posx>150</posx>
+                <posy>883</posy>
+                <width>1620</width>
+                <height>150</height>
+                <texture>windows/home/item-shadow.png</texture>
+            </control>
+            
+            <control type="list" id="50">
+                <posx>250</posx>
+                <posy>190</posy>
+                <height>700</height>
+                <width>1420</width>
+                <pagecontrol>70</pagecontrol>
+                <!--<onleft condition="substring(Container.FolderPath,plugin://plugin.program.advanced.launcher/,left)">ActivateWindow(1122)</onleft>-->
+                <onleft condition="!Skin.HasSetting(KioskMode)">9010</onleft>
+                <onleft condition="Skin.HasSetting(KioskMode)">50</onleft>
+                <onright>70</onright>
+                <onup>50</onup>
+                <ondown>50</ondown>
+                <viewtype label="List">list</viewtype>
+                <scrolltime tween="cubic" easing="out">500</scrolltime>
+                <preloaditems>2</preloaditems>
+                <itemlayout height="100" condition="!substring(Container.FolderPath,plugin://plugin.program.advanced.launcher/,left)">
+                    <control type="image">
+                        <description>List separator</description>
+                        <posx>0</posx>
+                        <posy>0</posy>
+                        <width>1420</width>
+                        <height>101</height>
+                        <texture border="90,3,90,3">views/list/other/separator-l.png</texture>
+                    </control>
+                    <control type="label">
+                        <description>Label</description>
+                        <posx>120</posx>
+                        <posy>0</posy>
+                        <width>1280</width>
+                        <height>100</height>
+                        <font>Font-Condensed-S34-B</font>
+                        <align>left</align>
+                        <label>$INFO[ListItem.Label]</label>
+                        <textcolor>mod-infotags</textcolor>
+                        <selectedcolor>mod-infotags</selectedcolor>
+                        <scroll>false</scroll>
+                    </control>
+                    <control type="label">
+                        <description>Label 2</description>
+                        <posx>1390</posx>
+                        <posy>0</posy>
+                        <width>1270</width>
+                        <height>100</height>
+                        <font>Font-Condensed-S34-B</font>
+                        <align>right</align>
+                        <label>$INFO[ListItem.Label2]</label>
+                        <textcolor>mod-infotags-l</textcolor>
+                        <selectedcolor>mod-infotags-l</selectedcolor>
+                        <scroll>false</scroll>
+                    </control>
+                    <control type="image">
+                        <posx>20</posx>
+                        <posy>8</posy>
+                        <width>85</width>
+                        <height>85</height>
+                        <texture background="true">$INFO[ListItem.Icon]</texture>
+                        <aspectratio>keep</aspectratio>
+                    </control>
+                </itemlayout>
+                <itemlayout height="100" condition="substring(Container.FolderPath,plugin://plugin.program.advanced.launcher/,left)">
+                    <control type="image">
+                        <description>List separator</description>
+                        <posx>0</posx>
+                        <posy>0</posy>
+                        <width>1420</width>
+                        <height>101</height>
+                        <texture border="90,3,90,3">views/list/other/separator-l.png</texture>
+                    </control>
+                    <control type="label">
+                        <description>Label</description>
+                        <posx>120</posx>
+                        <posy>0</posy>
+                        <width>1280</width>
+                        <height>62</height>
+                        <font>Font-Condensed-S34-B</font>
+                        <align>left</align>
+                        <label>$INFO[ListItem.Label]</label>
+                        <selectedcolor>mod-infotags</selectedcolor>
+                        <textcolor>mod-infotags</textcolor>
+                        <scroll>false</scroll>
+                        <visible>!IsEmpty(ListItem.Studio) | !IsEmpty(ListItem.Genre)</visible>
+                    </control>
+                    <control type="label">
+                        <description>Genre / Studio</description>
+                        <posx>120</posx>
+                        <posy>43</posy>
+                        <width>1280</width>
+                        <height>54</height>
+                        <font>Font-Condensed-S28</font>
+                        <align>left</align>
+                        <label>$INFO[ListItem.Genre]$INFO[ListItem.Studio, • ,]</label>
+                        <selectedcolor>mod-infotags-l</selectedcolor>
+                        <textcolor>mod-infotags-l</textcolor>
+                        <scroll>false</scroll>
+                    </control>
+                    <control type="label">
+                        <description>Label</description>
+                        <posx>120</posx>
+                        <posy>0</posy>
+                        <width>1280</width>
+                        <height>100</height>
+                        <font>Font-Condensed-S34-B</font>
+                        <align>left</align>
+                        <label>$INFO[ListItem.Label]</label>
+                        <textcolor>mod-infotags</textcolor>
+                        <selectedcolor>mod-infotags</selectedcolor>
+                        <scroll>false</scroll>
+                        <visible>IsEmpty(ListItem.Studio) + IsEmpty(ListItem.Genre)</visible>
+                    </control>
+                    <control type="label">
+                        <description>Label 2</description>
+                        <posx>1390</posx>
+                        <posy>0</posy>
+                        <width>1270</width>
+                        <height>100</height>
+                        <font>Font-Condensed-S34-B</font>
+                        <align>right</align>
+                        <label>$INFO[ListItem.Year]</label>
+                        <textcolor>mod-infotags-l</textcolor>
+                        <selectedcolor>mod-infotags-l</selectedcolor>
+                        <scroll>false</scroll>
+                    </control>
+                    <control type="image">
+                        <posx>20</posx>
+                        <posy>8</posy>
+                        <width>85</width>
+                        <height>85</height>
+                        <texture background="true">$INFO[ListItem.Icon]</texture>
+                        <aspectratio>keep</aspectratio>
+                    </control>
+                </itemlayout>
+                <focusedlayout height="100" condition="!substring(Container.FolderPath,plugin://plugin.program.advanced.launcher/,left)">
+                    <control type="image">
+                        <description>List separator</description>
+                        <posx>0</posx>
+                        <posy>0</posy>
+                        <width>1420</width>
+                        <height>101</height>
+                        <texture border="90,3,90,3">views/list/other/separator-l.png</texture>
+                    </control>
+                    <control type="image">
+                        <posx>0</posx>
+                        <posy>0</posy>
+                        <width>1420</width>
+                        <height>99</height>
+                        <texture border="5">views/other/focus-mod.png</texture>
+                        <include>defaultfocusanim</include>
+                        <include>visiblehidefadeinfo</include>
+                    </control>
+                    <control type="image">
+                        <posx>20</posx>
+                        <posy>8</posy>
+                        <width>85</width>
+                        <height>85</height>
+                        <texture background="true">$INFO[ListItem.Icon]</texture>
+                        <aspectratio>keep</aspectratio>
+                    </control>
+                    <control type="group">
+                        <animation type="Focus" condition="Container(50).OnNext | Container(50).OnPrevious" reversible="false">
+                            <effect type="fade" start="71.5" end="100" time="500" tween="sine" easing="inout" />
+                        </animation>
+                        <animation effect="fade" start="100" end="71.5" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(50)">Conditional</animation>
+                        <control type="label">
+                            <description>Label</description>
+                            <posx>120</posx>
+                            <posy>0</posy>
+                            <width>1280</width>
+                            <height>100</height>
+                            <font>Font-Condensed-S34-B</font>
+                            <align>left</align>
+                            <label>$INFO[ListItem.Label]</label>
+                            <textcolor>eewhite</textcolor>
+                            <selectedcolor>eewhite</selectedcolor>
+                        </control>
+                        <control type="label">
+                            <description>Label 2</description>
+                            <posx>1390</posx>
+                            <posy>0</posy>
+                            <width>1270</width>
+                            <height>100</height>
+                            <font>Font-Condensed-S34-B</font>
+                            <align>right</align>
+                            <label>$INFO[ListItem.Label2]</label>
+                            <textcolor>D4FFFFFF</textcolor>
+                            <selectedcolor>D4FFFFFF</selectedcolor>
+                            <scroll>false</scroll>
+                        </control>
+                    </control>
+                </focusedlayout>
+                <focusedlayout height="100" condition="substring(Container.FolderPath,plugin://plugin.program.advanced.launcher/,left)">
+                    <control type="image">
+                        <description>List separator</description>
+                        <posx>0</posx>
+                        <posy>0</posy>
+                        <width>1420</width>
+                        <height>101</height>
+                        <texture border="90,3,90,3">views/list/other/separator-l.png</texture>
+                    </control>
+                    <control type="image">
+                        <posx>0</posx>
+                        <posy>0</posy>
+                        <width>1420</width>
+                        <height>99</height>
+                        <texture border="5">views/other/focus-mod.png</texture>
+                        <include>defaultfocusanim</include>
+                        <include>visiblehidefadeinfo</include>
+                    </control>
+                    <control type="image">
+                        <posx>20</posx>
+                        <posy>8</posy>
+                        <width>85</width>
+                        <height>85</height>
+                        <texture background="true">$INFO[ListItem.Icon]</texture>
+                        <aspectratio>keep</aspectratio>
+                    </control>
+                    <control type="group">
+                        <animation type="Focus" condition="Container(50).OnNext | Container(50).OnPrevious" reversible="false">
+                            <effect type="fade" start="71.5" end="100" time="500" tween="sine" easing="inout" />
+                        </animation>
+                        <animation effect="fade" start="100" end="71.5" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(50)">Conditional</animation>
+                        <control type="label">
+                            <description>Label</description>
+                            <posx>120</posx>
+                            <posy>0</posy>
+                            <width>1280</width>
+                            <height>62</height>
+                            <font>Font-Condensed-S34-B</font>
+                            <align>left</align>
+                            <label>$INFO[ListItem.Label]</label>
+                            <selectedcolor>eewhite</selectedcolor>
+                            <textcolor>eewhite</textcolor>
+                            <scroll>false</scroll>
+                            <visible>!IsEmpty(ListItem.Studio) | !IsEmpty(ListItem.Genre)</visible>
+                        </control>
+                        <control type="label">
+                            <description>Genre / Studio</description>
+                            <posx>120</posx>
+                            <posy>43</posy>
+                            <width>1280</width>
+                            <height>54</height>
+                            <font>Font-Condensed-S28</font>
+                            <align>left</align>
+                            <label>$INFO[ListItem.Genre]$INFO[ListItem.Studio, • ,]</label>
+                            <selectedcolor>D4FFFFFF</selectedcolor>
+                            <textcolor>D4FFFFFF</textcolor>
+                            <scroll>false</scroll>
+                        </control>
+                        <control type="label">
+                            <description>Label</description>
+                            <posx>120</posx>
+                            <posy>0</posy>
+                            <width>1280</width>
+                            <height>100</height>
+                            <font>Font-Condensed-S34-B</font>
+                            <align>left</align>
+                            <label>$INFO[ListItem.Label]</label>
+                            <textcolor>eewhite</textcolor>
+                            <selectedcolor>eewhite</selectedcolor>
+                            <visible>IsEmpty(ListItem.Studio) + IsEmpty(ListItem.Genre)</visible>
+                        </control>
+                        <control type="label">
+                            <description>Label 2</description>
+                            <posx>1390</posx>
+                            <posy>0</posy>
+                            <width>1270</width>
+                            <height>100</height>
+                            <font>Font-Condensed-S34-B</font>
+                            <align>right</align>
+                            <label>$INFO[ListItem.Year]</label>
+                            <textcolor>D4FFFFFF</textcolor>
+                            <selectedcolor>D4FFFFFF</selectedcolor>
+                            <scroll>false</scroll>
+                        </control>
+                    </control>
+                </focusedlayout>
+            </control>
+
+            <control type="scrollbar" id="70">
+                <description>Scrollbar</description>
+                <posx>1664</posx>
+                <posy>190</posy>
+                <width>6</width>
+                <height>700</height>
+                <onleft condition="![Control.IsVisible(500) | Control.IsVisible(501) | Control.IsVisible(502)] | [[Control.IsVisible(500) | Control.IsVisible(501) | Control.IsVisible(502)] + Skin.HasSetting(KioskMode)]">50</onleft>
+                <onleft condition="[Control.IsVisible(500) | Control.IsVisible(501) | Control.IsVisible(502)] + !Skin.HasSetting(KioskMode)">9010</onleft>
+                <onright condition="!Skin.HasSetting(KioskMode)">9010</onright>
+                <onright condition="Skin.HasSetting(KioskMode)">50</onright>
+                <ondown condition="!Skin.HasSetting(KioskMode)">9010</ondown>
+                <ondown condition="Skin.HasSetting(KioskMode)">50</ondown>
+                <texturesliderbar border="1">views/other/scrollbar-sq.png</texturesliderbar>
+                <texturesliderbarfocus border="1">views/other/scrollbar-sq.png</texturesliderbarfocus>
+                <orientation>vertical</orientation>
+                <showonepage>false</showonepage>
+                <animation effect="fade" start="45" end="0" time="300" tween="sine" easing="inout" condition="!Control.IsVisible(9772)">Conditional</animation>
+                <visible>Control.IsVisible(50)</visible>
+            </control>
+        </control>
+    </include>
+    <include name="Viewtype-ProgramInfo">
+		<!-- INFO VIEW -->
+		<control type="group">
+			<include>FullscreenDimensions</include>
+			<include>OptionsShutdownAnimation</include>
+			<include>BannerListAnimations</include>
+			<visible>Control.IsVisible(52)</visible>
+			<control type="wraplist" id="52">
+				<posx>0</posx>
+				<posy>134</posy>
+				<width>1920</width>
+				<height>1000</height>
+				<scrolltime tween="cubic" easing="out">500</scrolltime>
+				<orientation>horizontal</orientation>
+				<viewtype label="Info">list</viewtype>
+				<!--<onup condition="substring(Container.FolderPath,plugin://plugin.program.advanced.launcher/,left)">ActivateWindow(1122)</onup>-->
+				<ondown condition="!Skin.HasSetting(KioskMode)">9010</ondown>
+				<ondown condition="Skin.HasSetting(KioskMode)">52</ondown>
+				<onright>52</onright>
+				<onup>52</onup>
+				<onleft>52</onleft>
+				<focusposition>0</focusposition>
+				<preloaditems>2</preloaditems>
+				<itemlayout width="1920">
+					<control type="group">
+						<posx>80</posx>
+						<control type="image">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>740</width>
+							<height>740</height>
+							<texture background="true" diffuse="views/newgloss/banner-740.png">$INFO[ListItem.Thumb]</texture>
+							<aspectratio scalediffuse="true" align="right" aligny="bottom">keep</aspectratio>
+							<bordertexture border="18">views/newgloss/border.png</bordertexture>
+							<bordersize>18</bordersize>
+						</control>
+						<control type="image">
+							<posx>0</posx>
+							<posy>720</posy>
+							<width>740</width>
+							<height>740</height>
+							<texture diffuse="views/posterview/diffuse-ref.png" flipy="true" background="true">$INFO[ListItem.Thumb]</texture>
+							<aspectratio scalediffuse="true" align="right" aligny="top">keep</aspectratio>
+							<bordersize>18</bordersize>
+							<bordertexture border="18" diffuse="views/posterview/diffuse-ref.png" flipy="true">views/newgloss/border.png</bordertexture>
+						</control>
+					</control>
+					<control type="group">
+						<posx>880</posx>
+						<posy>500</posy>
+						<control type="label">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>900</width>
+							<height>45</height>
+							<align>left</align>
+							<aligny>center</aligny>
+							<font>Font-Alaska-S45-BL</font>
+							<textcolor>mod-infotags</textcolor>
+							<info>ListItem.Label</info>
+							<scroll>false</scroll>
+						</control>
+						<control type="label">
+							<posx>0</posx>
+							<posy>40</posy>
+							<width>900</width>
+							<height>45</height>
+							<align>left</align>
+							<aligny>center</aligny>
+							<font>Font-Alaska-S29-BL</font>
+							<textcolor>mod-infotags-l</textcolor>
+							<label>$INFO[ListItem.Studio,,  •  ]$INFO[ListItem.Genre]</label>
+							<scroll>false</scroll>
+						</control>
+						<control type="textbox">
+							<posx>0</posx>
+							<posy>80</posy>
+							<width>900</width>
+							<height>150</height>
+							<align>justify</align>
+							<font>Font-Alaska-S25-NC</font>
+							<textcolor>mod-infotags</textcolor>
+							<label>$INFO[ListItem.Plot]</label>
+							<scroll>false</scroll>
+						</control>
+					</control>
+				</itemlayout>
+				<focusedlayout width="1920">
+					<control type="group">
+						<posx>80</posx>
+						<control type="image">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>740</width>
+							<height>740</height>
+							<texture background="true" diffuse="views/newgloss/banner-740.png">$INFO[ListItem.Thumb]</texture>
+							<aspectratio scalediffuse="true" align="right" aligny="bottom">keep</aspectratio>
+							<bordertexture border="18">views/newgloss/border.png</bordertexture>
+							<bordersize>18</bordersize>
+						</control>
+						<control type="image">
+							<posx>0</posx>
+							<posy>720</posy>
+							<width>740</width>
+							<height>740</height>
+							<texture diffuse="views/posterview/diffuse-ref.png" flipy="true" background="true">$INFO[ListItem.Thumb]</texture>
+							<aspectratio scalediffuse="true" align="right" aligny="top">keep</aspectratio>
+							<bordersize>18</bordersize>
+							<bordertexture border="18" diffuse="views/posterview/diffuse-ref.png" flipy="true">views/newgloss/border.png</bordertexture>
+						</control>
+					</control>
+					<control type="group">
+						<posx>880</posx>
+						<posy>500</posy>
+						<control type="label">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>900</width>
+							<height>45</height>
+							<align>left</align>
+							<aligny>center</aligny>
+							<font>Font-Alaska-S45-BL</font>
+							<textcolor>Mod_Tags</textcolor>
+							<info>ListItem.Label</info>
+							<scroll>false</scroll>
+						</control>
+						<control type="label">
+							<posx>0</posx>
+							<posy>40</posy>
+							<width>900</width>
+							<height>45</height>
+							<align>left</align>
+							<aligny>center</aligny>
+							<font>Font-Alaska-S29-BL</font>
+							<textcolor>Mod_Tags_Light</textcolor>
+							<label>$INFO[ListItem.Studio,,  •  ]$INFO[ListItem.Genre]</label>
+							<scroll>false</scroll>
+						</control>
+						<control type="textbox">
+							<posx>0</posx>
+							<posy>80</posy>
+							<width>900</width>
+							<height>150</height>
+							<align>justify</align>
+							<font>Font-Alaska-S25-NC</font>
+							<textcolor>Mod_Tags</textcolor>
+							<label>$INFO[ListItem.Plot]</label>
+							<scroll>false</scroll>
+						</control>
+					</control>
+				</focusedlayout>
+			</control>
+		</control>
+	</include>
+</includes>

@@ -1,0 +1,200 @@
+<includes>
+<!-- ========= -->
+<!-- Big List (51) -->
+<!-- ========= -->
+    <include name="Viewtype-BigList"> 
+    	<control type="group">  
+    		<visible>Control.IsVisible(51) + !Window.IsActive(movieinformation) + !Window.IsActive(script-Actors-DialogInfo.xml) + !Window.IsActive(script-Actors-DialogVideoInfo.xml) + IsEmpty(Window(Home).Property(script.metadata.actors.hasparent)) + !Window.IsActive(addoninformation) + !Window.IsActive(favourites)</visible> 
+    		<include>CommonViewAnimations</include>
+            <include>OptionsShutdownAnimation</include>
+			<control type="fixedlist" id="51">
+				<posx>90</posx>
+				<posy>160</posy>
+				<height>770</height>
+				<width>1720</width>
+				<pagecontrol>70</pagecontrol>
+				<onleft condition="!Skin.HasSetting(KioskMode)">9010</onleft>
+				<onleft condition="Skin.HasSetting(KioskMode)">51</onleft>
+				<onright>70</onright>
+				<onup>51</onup>
+				<ondown>51</ondown>
+				<viewtype label="Info List">list</viewtype>
+				<scrolltime tween="cubic" easing="out">500</scrolltime>
+				<preloaditems>2</preloaditems>
+				<focusposition>1</focusposition>
+				<movement>2</movement>
+				<itemlayout height="190">
+					<control type="group">
+						<posx>100</posx>
+						<!-- Episode Thumb -->
+						<control type="image">
+							<posx>20</posx>
+							<posy>20</posy>
+							<width>284</width>
+							<height>160</height>
+							<texture background="true" diffuse="arctic/list/episode.png">$VAR[ListInfoLandscapeVar]</texture>
+							<aspectratio scalediffuse="false">scale</aspectratio>
+							<fadetime>200</fadetime>
+						</control>
+						<control type="image">
+							<posx>10</posx>
+							<posy>10</posy>
+							<width>304</width>
+							<height>180</height>
+							<texture background="true" border="35">arctic/common/border.png</texture>
+						</control>
+						<!-- Overlay -->
+						<control type="image">
+							<posx>1450</posx>
+							<posy>-12</posy>
+							<width>100</width>
+							<height>100</height>
+							<aspect>keepaspect</aspect>
+							<texture>$VAR[DefaultListOverlay]</texture>
+							<colordiffuse>Mod_Tags_Light</colordiffuse>
+						</control>
+						<!-- Info -->
+						<control type="group">
+							<posx>320</posx>
+							<control type="label">
+								<posx>0</posx>
+								<posy>20</posy>
+								<width>680</width>
+								<font>Font-Alaska-S32-BL</font>
+								<textcolor>Mod_Tags</textcolor>
+								<shadowcolor>44000000</shadowcolor>
+								<label>$INFO[ListItem.Title]</label>
+								<align>left</align>
+								<scroll>false</scroll>
+							</control>
+							<control type="label">
+								<posx>0</posx>
+								<posy>50</posy>
+								<width>680</width>
+								<font>Font-Alaska-S25-L</font>
+								<textcolor>Mod_Tags_Light</textcolor>
+								<shadowcolor>44000000</shadowcolor>
+								<label>$VAR[UnderTitle]</label>
+								<align>left</align>
+								<scroll>false</scroll>
+							</control>
+							<control type="textbox">
+								<posx>0</posx>
+								<posy>78</posy>
+								<width>1190</width>
+								<height>108</height>
+								<font>Font-Condensed-S25</font>
+								<textcolor>Mod_Tags_Light</textcolor>
+								<shadowcolor>44000000</shadowcolor>
+								<label>$INFO[ListItem.Plot]</label>
+								<align>justify</align>
+							</control>
+						</control>
+					</control>
+				</itemlayout>
+				<focusedlayout height="190">
+					<control type="group">
+						<posx>100</posx>
+						<animation effect="slide" start="0,96" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(51).OnPrevious">Focus</animation>
+						<animation effect="slide" start="0,-96" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(51).OnNext">Focus</animation>
+						<!-- Focus Background -->
+						<control type="image">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>1540</width>
+							<height>200</height>
+							<texture background="true" border="35">arctic/common/border.png</texture>
+						</control>
+						<control type="image">
+							<posx>10</posx>
+							<posy>10</posy>
+							<width>1520</width>
+							<height>180</height>
+							<texture background="true" border="10">arctic/common/panel.png</texture>
+						</control>
+						<!-- Overlay -->
+						<control type="image">
+							<posx>1450</posx>
+							<posy>-12</posy>
+							<width>100</width>
+							<height>100</height>
+							<aspect>keepaspect</aspect>
+							<texture>$VAR[DefaultListOverlay]</texture>
+						</control>
+						<!-- Episode Thumb -->
+						<control type="image">
+							<posx>20</posx>
+							<posy>20</posy>
+							<width>284</width>
+							<height>160</height>
+							<texture background="true" diffuse="arctic/list/episode.png">$VAR[ListInfoLandscapeVar]</texture>
+							<aspectratio scalediffuse="false">scale</aspectratio>
+							<fadetime>200</fadetime>
+						</control>
+						<control type="image">
+							<posx>10</posx>
+							<posy>10</posy>
+							<width>304</width>
+							<height>180</height>
+							<texture background="true" border="35">arctic/common/border.png</texture>
+						</control>
+						<!-- Info -->
+						<control type="group">
+							<posx>320</posx>
+							<control type="label">
+								<posx>0</posx>
+								<posy>20</posy>
+								<width>680</width>
+								<font>Font-Alaska-S32-BL</font>
+								<textcolor>ddwhite</textcolor>
+								<shadowcolor>44000000</shadowcolor>
+								<label>$INFO[ListItem.Title]</label>
+								<align>left</align>
+								<scroll>false</scroll>
+							</control>
+							<control type="label">
+								<posx>0</posx>
+								<posy>50</posy>
+								<width>680</width>
+								<font>Font-Alaska-S25-L</font>
+								<textcolor>bbwhite</textcolor>
+								<shadowcolor>44000000</shadowcolor>
+								<label>$VAR[UnderTitle]</label>
+								<align>left</align>
+								<scroll>false</scroll>
+							</control>
+							<control type="textbox">
+								<posx>0</posx>
+								<posy>78</posy>
+								<width>1190</width>
+								<height>108</height>
+								<font>Font-Condensed-S25</font>
+								<textcolor>bbwhite</textcolor>
+								<shadowcolor>44000000</shadowcolor>
+								<label>$INFO[ListItem.Plot]</label>
+								<align>justify</align>
+							</control>
+						</control>
+					</control>
+				</focusedlayout>
+			</control>
+			<control type="scrollbar" id="70">
+				<description>Scrollbar</description>
+				<width>26</width>
+				<height>1080</height>
+				<posx>1894</posx>
+				<orientation>vertical</orientation>
+				<textureslidernib flipx="true">arctic/common/slider-nf-v.png</textureslidernib>
+				<textureslidernibfocus flipx="true">arctic/common/slider-fo-v.png</textureslidernibfocus>
+				<showonepage>true</showonepage>
+				<onleft>51</onleft>
+				<onright condition="!Skin.HasSetting(KioskMode)">9010</onright>
+				<onright condition="Skin.HasSetting(KioskMode)">51</onright>
+				<animation effect="fade" start="100" end="0" time="300" tween="sine" easing="inout" condition="!Control.IsVisible(9772)">Conditional</animation>
+				<animation effect="fade" start="40" end="100" time="300" tween="sine" easing="inout" condition="Control.HasFocus(70)">Conditional</animation>
+				<animation effect="fade" start="100" end="40" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(70)">Conditional</animation>
+				<visible>Control.IsVisible(51)</visible>
+			</control>
+		</control>
+    </include> 
+</includes>

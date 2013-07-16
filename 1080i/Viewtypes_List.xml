@@ -1,0 +1,325 @@
+<includes>
+<!-- ========= -->
+<!-- List (50) -->
+<!-- ========= -->
+    <include name="Viewtype-List">
+    
+        <control type="group">
+            <visible>Control.IsVisible(50) + !Window.IsActive(movieinformation) + !Window.IsActive(script-Actors-DialogInfo.xml) + !Window.IsActive(script-Actors-DialogVideoInfo.xml) + IsEmpty(Window(Home).Property(script.metadata.actors.hasparent)) + !Window.IsActive(addoninformation) + !Window.IsActive(favourites)</visible>
+            <include>CommonViewAnimations</include>
+            <include>OptionsShutdownAnimation</include>
+            <posy>15</posy>
+			<control type="image">
+                <description>Shadow</description>
+                <posx>150</posx>
+                <posy>840</posy>
+                <width>1620</width>
+                <height>150</height>
+                <texture>windows/home/item-shadow.png</texture>
+            </control>
+            <control type="image">
+                <posx>230</posx>
+                <posy>171</posy>
+                <height>737</height>
+                <width>1460</width>
+                <texture border="25">views/newgloss/border-glass.png</texture>
+                <colordiffuse>77ffffff</colordiffuse>
+                <visible>!Skin.HasSetting(hide.glass)</visible>
+            </control>
+            <control type="image">
+                <posx>235</posx>
+                <posy>176</posy>
+                <height>727</height>
+                <width>1450</width>
+                <texture border="35">views/newgloss/whitepanel-15.png</texture>
+            </control>
+            
+            
+            <control type="list" id="50">
+                <posx>250</posx>
+                <posy>190</posy>
+                <height>700</height>
+                <width>1420</width>
+                <pagecontrol>70</pagecontrol>
+                <onleft condition="!Skin.HasSetting(KioskMode)">9010</onleft>
+                <onleft condition="Skin.HasSetting(KioskMode)">50</onleft>
+                <onright>70</onright>
+                <onup>50</onup>
+                <ondown>50</ondown>
+                <viewtype label="Big List">list</viewtype>
+                <scrolltime tween="cubic" easing="out">500</scrolltime>
+                <preloaditems>2</preloaditems>
+                <itemlayout height="100" condition="Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(sets) | Container.Content(episodes)">
+                </itemlayout>
+                <itemlayout height="100" condition="!Container.Content(movies) + !Container.Content(tvshows) + !Container.Content(seasons) + !Container.Content(episodes)">
+                    <control type="image">
+                        <description>List separator</description>
+                        <posx>0</posx>
+                        <posy>0</posy>
+                        <width>1420</width>
+                        <height>101</height>
+                        <texture border="90,3,90,3">views/list/other/separator-l.png</texture>
+                    </control>
+                    <control type="image">
+                        <posx>0</posx>
+                        <posy>1</posy>
+                        <width>1420</width>
+                        <height>94</height>
+                        <texture>views/other/selected.png</texture>
+                        <colordiffuse>25FFFFFF</colordiffuse>
+                        <aspectratio aligny="top">center</aspectratio>
+                        <visible>ListItem.IsPlaying</visible>
+                    </control>
+                    <control type="label">
+                        <description>Label</description>
+                        <posx>120</posx>
+                        <posy>0</posy>
+                        <width>1280</width>
+                        <height>100</height>
+                        <font>Font-Condensed-S34-B</font>
+                        <align>left</align>
+                        <label>$INFO[ListItem.Label]</label>
+                        <textcolor>mod-infotags</textcolor>
+                        <selectedcolor>mod-infotags</selectedcolor>
+                        <scroll>false</scroll>
+                        <animation effect="slide" end="-20" time="0" condition="Container.Content(genres)">Conditional</animation>
+                    </control>
+                    <control type="label">
+                        <description>Label 2</description>
+                        <posx>1390</posx>
+                        <posy>0</posy>
+                        <width>1270</width>
+                        <height>100</height>
+                        <font>Font-Condensed-S34-B</font>
+                        <align>right</align>
+                        <label>$INFO[ListItem.Label2]</label>
+                        <textcolor>mod-infotags-l</textcolor>
+                        <selectedcolor>mod-infotags-l</selectedcolor>
+                        <scroll>false</scroll>
+                        <visible>IsEmpty(ListItem.Overlay) + IsEmpty(ListItem.Rating)</visible>
+                    </control>
+                    <control type="label">
+                        <description>Label 2</description>
+                        <posx>1273</posx>
+                        <posy>0</posy>
+                        <width>1270</width>
+                        <height>100</height>
+                        <font>Font-Condensed-S34-B</font>
+                        <align>right</align>
+                        <label>$INFO[ListItem.Label2]</label>
+                        <textcolor>mod-infotags-l</textcolor>
+                        <selectedcolor>mod-infotags-l</selectedcolor>
+                        <scroll>false</scroll>
+                        <visible>!IsEmpty(ListItem.Overlay) | !IsEmpty(ListItem.Rating)</visible>
+                        <animation effect="slide" end="55" time="0" condition="IsEmpty(ListItem.Overlay)">Conditional</animation>
+                        <animation effect="slide" end="62" time="0" condition="IsEmpty(ListItem.Rating)">Conditional</animation>
+                    </control>
+                    <control type="image">
+                        <description>Watched/unwatched overlay</description>
+                        <posx>1263</posx>
+                        <posy>0</posy>
+                        <width>100</width>
+                        <height>100</height>
+                        <texture>$VAR[DefaultListOverlay]</texture>
+                        <visible>!IsEmpty(ListItem.Overlay)</visible>
+                        <animation effect="slide" end="62" time="0" condition="IsEmpty(ListItem.Rating)">Conditional</animation>
+                    </control>
+                    <control type="image">
+                        <description>Watched/unwatched overlay</description>
+                        <posx>1263</posx>
+                        <posy>0</posy>
+                        <width>100</width>
+                        <height>100</height>
+                        <texture>$VAR[DefaultListOverlay]</texture>
+                        <visible>!IsEmpty(ListItem.Overlay)</visible>
+                        <include>overlay.diffuse</include>
+                        <animation effect="slide" end="62" time="0" condition="IsEmpty(ListItem.Rating)">Conditional</animation>
+                    </control>
+                    <control type="label">
+                        <posx>1390</posx>
+                        <posy>0</posy>
+                        <width>1220</width>
+                        <height>100</height>
+                        <font>Font-Condensed-S34-B</font>
+                        <align>right</align>
+                        <label fallback="[COLOR=mod-infotags-l]0.0[/COLOR]">$INFO[ListItem.Rating]</label>
+                        <textcolor>mod-infotags-l</textcolor>
+                        <selectedcolor>mod-infotags-l</selectedcolor>
+                        <scroll>false</scroll>
+                        <visible>!IsEmpty(ListItem.Rating)</visible>
+                    </control>
+                    <control type="image">
+                        <posx>20</posx>
+                        <posy>8</posy>
+                        <width>85</width>
+                        <height>85</height>
+                        <texture background="true">$INFO[ListItem.Icon]</texture>
+                        <aspectratio>keep</aspectratio>
+                        <visible>!Container.Content(genres)</visible>
+                    </control>
+                    <control type="image">
+                        <posx>20</posx>
+                        <posy>5</posy>
+                        <width>60</width>
+                        <height>90</height>
+                        <texture background="true" fallback="special://skin/extras/moviegenres/Default.jpg">$INFO[ListItem.Label,special://skin/extras/moviegenres/,.jpg]</texture>
+                        <visible>Container.Content(genres)</visible>
+                    </control>
+                </itemlayout>
+                <focusedlayout height="100" condition="!Container.Content(movies) + !Container.Content(tvshows) + !Container.Content(seasons) + !Container.Content(episodes) + !Container.Content(sets)">
+                    <control type="image">
+                        <description>List separator</description>
+                        <posx>0</posx>
+                        <posy>0</posy>
+                        <width>1420</width>
+                        <height>101</height>
+                        <texture border="90,3,90,3">views/list/other/separator-l.png</texture>
+                    </control>
+                    <control type="image">
+                        <posx>0</posx>
+                        <posy>1</posy>
+                        <width>1420</width>
+                        <height>94</height>
+                        <texture>views/other/selected.png</texture>
+                        <colordiffuse>25FFFFFF</colordiffuse>
+                        <aspectratio aligny="top">center</aspectratio>
+                        <visible>ListItem.IsPlaying</visible>
+                    </control>
+                    <control type="image">
+                        <posx>0</posx>
+                        <posy>0</posy>
+                        <width>1420</width>
+                        <height>99</height>
+                        <texture border="5">views/other/focus-mod.png</texture>
+                        <include>defaultfocusanim</include>
+                        <include>visiblehidefadeinfo</include>
+                    </control>
+                    <control type="image">
+                        <posx>20</posx>
+                        <posy>8</posy>
+                        <width>85</width>
+                        <height>85</height>
+                        <texture background="true">$INFO[ListItem.Icon]</texture>
+                        <aspectratio>keep</aspectratio>
+                        <visible>!Container.Content(genres)</visible>
+                    </control>
+                    <control type="image">
+                        <posx>20</posx>
+                        <posy>5</posy>
+                        <width>60</width>
+                        <height>90</height>
+                        <texture background="true" fallback="special://skin/extras/moviegenres/Default.jpg">$INFO[ListItem.Label,special://skin/extras/moviegenres/,.jpg]</texture>
+                        <visible>Container.Content(genres)</visible>
+                    </control>
+                    <control type="group">
+                        <animation type="Focus" condition="[Container(50).OnNext | Container(50).OnPrevious] + !Container(50).ListItem.IsPlaying" reversible="false">
+                            <effect type="fade" start="71.5" end="100" time="500" tween="sine" easing="inout" />
+                        </animation>
+                        <animation effect="fade" start="100" end="71.5" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(50) + !Container(50).ListItem.IsPlaying">Conditional</animation>
+                        <control type="label">
+                            <description>Label</description>
+                            <posx>120</posx>
+                            <posy>0</posy>
+                            <width>1280</width>
+                            <height>100</height>
+                            <font>Font-Condensed-S34-B</font>
+                            <align>left</align>
+                            <label>$VAR[ListItem.Label]</label>
+                            <textcolor>eewhite</textcolor>
+                            <selectedcolor>eewhite</selectedcolor>
+                            <animation effect="slide" end="-20" time="0" condition="Container.Content(genres)">Conditional</animation>
+                        </control>
+                        <control type="label">
+                            <description>Label 2</description>
+                            <posx>1390</posx>
+                            <posy>0</posy>
+                            <width>1270</width>
+                            <height>100</height>
+                            <font>Font-Condensed-S34-B</font>
+                            <align>right</align>
+                            <label>$INFO[ListItem.Label2]</label>
+                            <textcolor>D4FFFFFF</textcolor>
+                            <selectedcolor>D4FFFFFF</selectedcolor>
+                            <scroll>false</scroll>
+                            <visible>IsEmpty(ListItem.Overlay) + IsEmpty(ListItem.Rating)</visible>
+                        </control>
+                        <control type="label">
+                            <description>Label 2</description>
+                            <posx>1273</posx>
+                            <posy>0</posy>
+                            <width>1270</width>
+                            <height>100</height>
+                            <font>Font-Condensed-S34-B</font>
+                            <align>right</align>
+                            <label>$INFO[ListItem.Label2]</label>
+                            <textcolor>D4FFFFFF</textcolor>
+                            <selectedcolor>D4FFFFFF</selectedcolor>
+                            <scroll>false</scroll>
+                            <visible>!IsEmpty(ListItem.Overlay) | !IsEmpty(ListItem.Rating)</visible>
+                            <animation effect="slide" end="62" time="0" condition="IsEmpty(ListItem.Rating)">Conditional</animation>
+                        </control>
+                        <control type="image">
+                            <description>Watched/unwatched overlay</description>
+                            <posx>1263</posx>
+                            <posy>0</posy>
+                            <width>100</width>
+                            <height>100</height>
+                            <colordiffuse>D4FFFFFF</colordiffuse>
+                            <texture>$VAR[DefaultListOverlay]</texture>
+                            <visible>!IsEmpty(ListItem.Overlay)</visible>
+                            <animation effect="slide" end="40" time="0" condition="IsEmpty(ListItem.Overlay)">Conditional</animation>
+                            <animation effect="slide" end="62" time="0" condition="IsEmpty(ListItem.Rating)">Conditional</animation>
+                        </control>
+                        <control type="image">
+                            <description>Watched/unwatched overlay</description>
+                            <posx>1263</posx>
+                            <posy>0</posy>
+                            <width>100</width>
+                            <height>100</height>
+                            <texture>$VAR[DefaultListOverlay]</texture>
+                            <visible>!IsEmpty(ListItem.Overlay)</visible>
+                            <animation effect="slide" end="40" time="0" condition="IsEmpty(ListItem.Overlay)">Conditional</animation>
+                            <animation effect="slide" end="62" time="0" condition="IsEmpty(ListItem.Rating)">Conditional</animation>
+                            <include>overlay.diffuse</include>
+                        </control>
+                        <control type="label">
+                            <posx>1390</posx>
+                            <posy>0</posy>
+                            <width>1220</width>
+                            <height>100</height>
+                            <font>Font-Condensed-S34-B</font>
+                            <align>right</align>
+                            <label fallback="[COLOR=47FFFFFF]0.0[/COLOR]">$INFO[ListItem.Rating]</label>
+                            <textcolor>D4FFFFFF</textcolor>
+                            <selectedcolor>D4FFFFFF</selectedcolor>
+                            <scroll>false</scroll>
+                            <visible>!IsEmpty(ListItem.Rating)</visible>
+                        </control>
+                    </control>
+                </focusedlayout>
+                <focusedlayout height="100" condition="Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(sets) | Container.Content(episodes)">
+                	<control type="button">
+                		<onfocus>Container.SetViewMode(517)</onfocus>
+                	</control>
+                </focusedlayout>
+            </control>
+        </control>
+        <control type="scrollbar" id="70">
+			<description>Scrollbar</description>
+			<width>26</width>
+			<height>1080</height>
+			<posx>1894</posx>
+			<orientation>vertical</orientation>
+			<textureslidernib flipx="true">arctic/common/slider-nf-v.png</textureslidernib>
+			<textureslidernibfocus flipx="true">arctic/common/slider-fo-v.png</textureslidernibfocus>
+			<showonepage>true</showonepage>
+			<onleft>50</onleft>
+			<onright condition="!Skin.HasSetting(KioskMode)">9010</onright>
+			<onright condition="Skin.HasSetting(KioskMode)">50</onright>
+			<animation effect="fade" start="100" end="0" time="300" tween="sine" easing="inout" condition="!Control.IsVisible(9772)">Conditional</animation>
+			<animation effect="fade" start="40" end="100" time="300" tween="sine" easing="inout" condition="Control.HasFocus(70)">Conditional</animation>
+			<animation effect="fade" start="100" end="40" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(70)">Conditional</animation>
+			<visible>Control.IsVisible(50)</visible>
+		</control>
+    </include> 
+</includes>

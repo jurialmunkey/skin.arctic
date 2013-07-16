@@ -1,0 +1,720 @@
+<window>
+    <defaultcontrol always="true">50</defaultcontrol>
+    <allowoverlay>yes</allowoverlay>
+    <views>50,51,56,57,502,503,504,505,506,507,508,509,510,511,513,514,516,517,519,60</views>
+    <backgroundcolor>0</backgroundcolor>
+    <onload condition="System.HasAddon(script.tvtunes) + Library.HasContent(TVShows) + !Player.HasMedia + Skin.HasSetting(TVTunes.Enabled)">RunScript(script.tvtunes,backend=True&amp;loop=False)</onload>
+    <onload condition="System.HasAddon(script.tv.show.next.aired) + Library.HasContent(TVShows) + Skin.HasSetting(NextAired.Enabled)">RunScript(script.tv.show.next.aired,backend=True)</onload>
+    <onload condition="System.HasAddon(script.extendedinfo)">Runscript(script.extendedinfo, backend="true")</onload>
+    <controls>
+        
+        <control type="group">
+        	
+            <include>CommonItems</include>
+            <include>VideoHeader</include>
+            <include>VideoViews</include>
+            <include>FadeBackgroundContentContext</include>
+			<include>Arctic.ClearLogo</include>
+            <control type="group" id="9000">
+                <posx>267</posx>
+                <posy>517</posy>
+                <include>OptionsAnimations</include>
+                <animation effect="slide" start="0" end="-204" time="0" condition="true">Conditional</animation>     
+                <control type="group">
+                    <include>OptionsPanelAnimations</include>
+                    <control type="image">
+                        <description>shadow image</description>
+                        <posx>5</posx>
+                        <posy>505</posy>
+                        <height>60</height>
+                        <width>442</width>
+                        <texture>dialogs/shutdown/shadow.png</texture>
+                        <aspectratio>stretch</aspectratio>
+                    </control>
+                    <control type="image">
+                        <description>background image</description>
+                        <posx>0</posx>
+                        <posy>0</posy>
+                        <height>540</height>
+                        <width>442</width>
+                        <texture>dialogs/shutdown/shutdown.png</texture>
+                        <aspectratio>stretch</aspectratio>
+                    </control>
+                </control>
+                
+                <control type="grouplist" id="9111">
+                    <posx>19</posx>
+                    <posy>47</posy>
+                    <width>404</width>
+                    <height>399</height>
+                    <itemgap>0</itemgap>
+                    <onleft>50</onleft>
+                    <onright>50</onright>
+                    <onup>9111</onup>
+                    <ondown>9111</ondown>
+                    <include>GeneralOptionsAnimations</include>
+                    <control type="button" id="2">
+                        <description>View</description>
+                        <visible>false</visible>
+                    </control>
+                    <control type="button" id="100">
+                        <description>Label</description>
+                        <posy>330</posy>
+                        <include>optionsbuttonsdimensions</include>
+                        <label>$INFO[Control.GetLabel(2)]</label>
+                        <onclick>setfocus(201)</onclick>
+                        <texturefocus border="70,2,2,2">dialogs/options/buttons/view-fo.png</texturefocus>
+                        <texturenofocus border="70,2,2,2">dialogs/options/buttons/view-nf.png</texturenofocus>
+                        <animation effect="fade" start="100" end="50" time="0" condition="!Control.IsEnabled(2)">Conditional</animation>
+                    </control>
+                    <control type="button" id="21">
+                        <description>Label</description>
+                        <posy>330</posy>
+                        <include>optionsbuttonsdimensions</include>
+                        <label>14018</label>
+                        <onclick>setfocus(101)</onclick>
+                        <texturefocus border="70,2,2,2">dialogs/options/buttons/custom-fo.png</texturefocus>
+                        <texturenofocus border="70,2,2,2">dialogs/options/buttons/custom-nf.png</texturenofocus>
+                        <animation effect="fade" start="100" end="50" time="0" condition="!Control.IsEnabled(21)">Conditional</animation>
+                    </control>
+                    <control type="button" id="98">
+                        <description>Label</description>
+                        <include>optionsbuttonsdimensions</include>
+                        <label>42160</label>
+                        <onclick>RunAddon(script.tv.show.next.aired)</onclick>
+                        <texturefocus border="70,2,2,2">dialogs/options/buttons/tvguide-fo.png</texturefocus>
+                        <texturenofocus border="70,2,2,2">dialogs/options/buttons/tvguide-nf.png</texturenofocus>
+                        <visible>[Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes)] + System.HasAddon(script.tv.show.next.aired)</visible>
+                    </control>
+                    <control type="button" id="22">
+                        <description>Label</description>
+                        <include>optionsbuttonsdimensions</include>
+                        <label>42025</label>
+                        <onclick>XBMC.RunScript(script.artwork.downloader,mode=custom,mediatype=tvshow,landscape,clearlogo,clearart)</onclick>
+                        <texturefocus border="70,2,2,2">dialogs/options/buttons/refresh-fo.png</texturefocus>
+                        <texturenofocus border="70,2,2,2">dialogs/options/buttons/refresh-nf.png</texturenofocus>
+                        <visible>Container.Content(TVShows) + System.HasAddon(script.artwork.downloader)</visible>
+                    </control>
+                    <control type="button" id="23">
+                        <description>Label</description>
+                        <include>optionsbuttonsdimensions</include>
+                        <label>42025</label>
+                        <onclick>XBMC.RunScript(script.artwork.downloader,mode=custom,mediatype=movie,landscape,clearlogo,clearart)</onclick>
+                        <texturefocus border="70,2,2,2">dialogs/options/buttons/refresh-fo.png</texturefocus>
+                        <texturenofocus border="70,2,2,2">dialogs/options/buttons/refresh-nf.png</texturenofocus>
+                        <visible>Container.Content(Movies) + System.HasAddon(script.artwork.downloader)</visible>
+                    </control>
+                    <control type="button" id="97">
+                        <description>Metadata actors</description>
+                        <include>optionsbuttonsdimensions</include>
+                        <label>344</label>
+                        <onclick>Action(left)</onclick>
+                        <onclick>SetProperty(metadata.actors,1,home)</onclick>
+                        <onclick>RunScript(script.metadata.actors)</onclick>
+                        <texturefocus border="70,2,2,2">dialogs/options/buttons/user-fo.png</texturefocus>
+                        <texturenofocus border="70,2,2,2">dialogs/options/buttons/user-nf.png</texturenofocus>
+                        <animation effect="fade" start="100" end="50" time="0" condition="!Control.IsEnabled(97)">Conditional</animation>
+                        <visible>System.HasAddon(script.metadata.actors)</visible>
+                    </control>
+                    <control type="button" id="3">
+                        <description>sort</description>
+                        <include>optionsbuttonsdimensions</include>
+                        <texturefocus border="70,2,2,2">dialogs/options/buttons/sort-fo.png</texturefocus>
+                        <texturenofocus border="70,2,2,2">dialogs/options/buttons/sort-nf.png</texturenofocus>
+                        <animation effect="fade" start="100" end="50" time="0" condition="!Control.IsEnabled(3)">Conditional</animation>
+                    </control>
+                    <control type="togglebutton" id="4">
+                        <description>Ascending</description>
+                        <include>optionsbuttonsdimensions</include>
+                        <label>584</label>
+                        <altlabel>585</altlabel>
+                        <texturefocus border="70,2,2,2">dialogs/options/buttons/up-fo.png</texturefocus>
+                        <texturenofocus border="70,2,2,2">dialogs/options/buttons/up-nf.png</texturenofocus>
+                        <alttexturenofocus border="70,2,2,2">dialogs/options/buttons/down-nf.png</alttexturenofocus>
+                        <alttexturefocus border="70,2,2,2">dialogs/options/buttons/down-fo.png</alttexturefocus>
+                        <animation effect="fade" start="100" end="50" time="0" condition="!Control.IsEnabled(4)">Conditional</animation>
+                    </control>
+                    <control type="button" id="8">
+                        <description>Search</description>
+                        <include>optionsbuttonsdimensions</include>
+                        <label>137</label>
+                        <texturefocus border="70,2,2,2">dialogs/options/buttons/search-fo.png</texturefocus>
+                        <texturenofocus border="70,2,2,2">dialogs/options/buttons/search-nf.png</texturenofocus>
+                        <animation effect="fade" start="100" end="50" time="0" condition="!Control.IsEnabled(8)">Conditional</animation>
+                    </control>
+                    <control type="edit" id="19">
+                        <description>Filter</description>
+                        <posx>0</posx>
+                        <posy>0</posy>
+                        <width>404</width>
+                        <height>57</height>
+                        <font>Font-Condensed-S34</font>
+                        <align>left</align>
+                        <textcolor>FF484848</textcolor>
+                        <focusedcolor>DDFFFFFF</focusedcolor>
+                        <textoffsetx>75</textoffsetx>
+                        <scroll>false</scroll>  
+                        <label>587</label>
+                        <pulseonselect>false</pulseonselect>
+                        <texturefocus border="62,2,62,2">dialogs/options/buttons/filter-fo.png</texturefocus>
+                        <texturenofocus border="62,2,62,2">dialogs/options/buttons/filter-nf.png</texturenofocus>
+                        <animation effect="fade" start="100" end="50" time="0" condition="!Control.IsEnabled(19)">Conditional</animation>
+                        <visible>Container.CanFilter + !Container.CanFilterAdvanced</visible>
+                    </control>
+                    <control type="radiobutton" id="20">
+                        <description>Advanced Filter</description>
+                        <include>optionsbuttonsdimensions</include>
+                        <label>587</label>
+                        <texturefocus border="2">dialogs/options/buttons/default-fo.png</texturefocus>
+                        <textureradioon>buttons/radio/options-radio-button-fo.png</textureradioon>
+                        <textureradiooff>buttons/radio/options-radio-button-nf.png</textureradiooff>
+                        <radioposx>-19</radioposx>
+                        <selected>Container.Filtered</selected>
+                        <onclick>SetFocus(50)</onclick>
+                        <onclick>Filter</onclick>
+                        <animation effect="fade" start="100" end="50" time="0" condition="!Control.IsEnabled(20)">Conditional</animation>
+                        <visible>Container.CanFilterAdvanced</visible>
+                    </control>
+                    <control type="button" id="99">
+                        <description>Files</description>
+                        <include>optionsbuttonsdimensions</include>
+                        <label>744</label>
+                        <texturefocus border="70,2,2,2">dialogs/options/buttons/files-fo.png</texturefocus>
+                        <texturenofocus border="70,2,2,2">dialogs/options/buttons/files-nf.png</texturenofocus>
+                        <onclick>ActivateWindow(Videos,Files,return)</onclick>
+                        <onclick>setfocus(50)</onclick>
+                        <animation effect="fade" start="100" end="50" time="0" condition="!Control.IsEnabled(99)">Conditional</animation>
+                    </control>
+                    <control type="radiobutton" id="14">
+                        <description>Watched Toggle</description>
+                        <include>optionsbuttonsdimensions</include>
+                        <label>20367</label>
+                        <texturefocus border="2">dialogs/options/buttons/default-fo.png</texturefocus>
+                        <textureradioon>buttons/radio/options-radio-button-fo.png</textureradioon>
+                        <textureradiooff>buttons/radio/options-radio-button-nf.png</textureradiooff>
+                        <radioposx>-19</radioposx>
+                        <animation effect="fade" start="100" end="50" time="0" condition="!Control.IsEnabled(14)">Conditional</animation>
+                    </control>
+                    <control type="radiobutton" id="17">
+                        <description>Flatten</description>
+                        <include>optionsbuttonsdimensions</include>
+                        <label>20411</label>
+                        <texturefocus border="2">dialogs/options/buttons/default-fo.png</texturefocus>
+                        <textureradioon>buttons/radio/options-radio-button-fo.png</textureradioon>
+                        <textureradiooff>buttons/radio/options-radio-button-nf.png</textureradiooff>
+                        <radioposx>-19</radioposx>
+                        <animation effect="fade" start="100" end="50" time="0" condition="!Control.IsEnabled(17)">Conditional</animation>
+                    </control>
+                </control>
+                <control type="grouplist" id="9222">
+                    <description>View Specific Controls</description>
+                    <posx>19</posx>
+                    <posy>47</posy>
+                    <width>404</width>
+                    <height>399</height>
+                    <itemgap>0</itemgap>
+                    <onleft>9111</onleft>
+                    <onright>9111</onright>
+                    <onup>9222</onup>
+                    <ondown>9222</ondown>
+                    <include>SpecificOptionsAnimations</include>
+                    <control type="button" id="101">
+                        <description>Label</description>
+                        <posy>330</posy>
+                        <include>optionsbuttonsdimensions</include>
+                        <label>$LOCALIZE[42017]</label>
+                        <onclick>setfocus(9111)</onclick>
+                        <texturefocus border="70,2,2,2">dialogs/options/buttons/custom-back-fo.png</texturefocus>
+                        <texturenofocus border="70,2,2,2">dialogs/options/buttons/custom-back-nf.png</texturenofocus>
+                    </control>
+                    <!-- WRAP AND FIXED OPTIONS -->
+                    <!-- Landscape -->
+                    <control type="radiobutton" id="151">
+                        <include>optionsbuttonsdimensions</include>
+                        <selected>Skin.HasSetting(viewtype.landscape.wrap)</selected>
+                        <onclick>Skin.ToggleSetting(viewtype.landscape.wrap)</onclick>
+                        <onclick>ReloadSkin()</onclick>
+                        <label>Wrap list</label>
+                        <texturefocus>dialogs/options/buttons/default-fo.png</texturefocus>
+                        <textureradiofocus>buttons/radio/options-radio-button-fo.png</textureradiofocus>
+                        <textureradionofocus>buttons/radio/options-radio-button-nf.png</textureradionofocus>
+                        <radioposx>-19</radioposx>
+                        <visible>Control.IsVisible(507)</visible>
+                    </control>
+                    <!-- Classic Poster -->
+                    <control type="radiobutton" id="152">
+                        <include>optionsbuttonsdimensions</include>
+                        <selected>Skin.HasSetting(viewtype.classicposter.wrap)</selected>
+                        <onclick>Skin.ToggleSetting(viewtype.classicposter.wrap)</onclick>
+                        <onclick>ReloadSkin()</onclick>
+                        <label>Wrap list</label>
+                        <texturefocus>dialogs/options/buttons/default-fo.png</texturefocus>
+                        <textureradiofocus>buttons/radio/options-radio-button-fo.png</textureradiofocus>
+                        <textureradionofocus>buttons/radio/options-radio-button-nf.png</textureradionofocus>
+                        <radioposx>-19</radioposx>
+                        <visible>Control.IsVisible(506)</visible>
+                    </control>
+                    <!-- Classic Info -->
+                    <control type="radiobutton" id="153">
+                        <include>optionsbuttonsdimensions</include>
+                        <selected>Skin.HasSetting(viewtype.classicposterinfo.wrap)</selected>
+                        <onclick>Skin.ToggleSetting(viewtype.classicposterinfo.wrap)</onclick>
+                        <onclick>ReloadSkin()</onclick>
+                        <label>Wrap list</label>
+                        <texturefocus>dialogs/options/buttons/default-fo.png</texturefocus>
+                        <textureradiofocus>buttons/radio/options-radio-button-fo.png</textureradiofocus>
+                        <textureradionofocus>buttons/radio/options-radio-button-nf.png</textureradionofocus>
+                        <radioposx>-19</radioposx>
+                        <visible>Control.IsVisible(514)</visible>
+                    </control>
+                    <!-- Poster Info -->
+                    <control type="radiobutton" id="154">
+                        <include>optionsbuttonsdimensions</include>
+                        <selected>Skin.HasSetting(viewtype.posterinfo.wrap)</selected>
+                        <onclick>Skin.ToggleSetting(viewtype.posterinfo.wrap)</onclick>
+                        <onclick>ReloadSkin()</onclick>
+                        <label>Wrap list</label>
+                        <texturefocus>dialogs/options/buttons/default-fo.png</texturefocus>
+                        <textureradiofocus>buttons/radio/options-radio-button-fo.png</textureradiofocus>
+                        <textureradionofocus>buttons/radio/options-radio-button-nf.png</textureradionofocus>
+                        <radioposx>-19</radioposx>
+                        <visible>Control.IsVisible(56)</visible>
+                    </control>
+                    <!-- Low List -->
+                    <control type="radiobutton" id="155">
+                        <include>optionsbuttonsdimensions</include>
+                        <selected>Skin.HasSetting(viewtype.lowlist.wrap)</selected>
+                        <onclick>Skin.ToggleSetting(viewtype.lowlist.wrap)</onclick>
+                        <onclick>ReloadSkin()</onclick>
+                        <label>Wrap list</label>
+                        <texturefocus>dialogs/options/buttons/default-fo.png</texturefocus>
+                        <textureradiofocus>buttons/radio/options-radio-button-fo.png</textureradiofocus>
+                        <textureradionofocus>buttons/radio/options-radio-button-nf.png</textureradionofocus>
+                        <radioposx>-19</radioposx>
+                        <visible>Control.IsVisible(511)</visible>
+                    </control>
+                    
+                    <!-- OTHER SETTINGS -->
+					<!-- Disc Art -->
+                    <control type="radiobutton" id="102">
+                        <include>optionsbuttonsdimensions</include>
+                        <label>Show Discart</label>
+                        <texturefocus>dialogs/options/buttons/default-fo.png</texturefocus>
+                        <onclick>Skin.ToggleSetting(showdiscart)</onclick>
+                        <selected>Skin.HasSetting(showdiscart)</selected>
+                        <textureradiofocus>buttons/radio/options-radio-button-fo.png</textureradiofocus>
+                        <textureradionofocus>buttons/radio/options-radio-button-nf.png</textureradionofocus>
+                        <radioposx>-19</radioposx>
+                        <visible>Container.Content(movies) + [Control.IsVisible(511) | Control.IsVisible(506) | Control.IsVisible(56) | Control.IsVisible(514)]</visible>
+                    </control>
+                    <!-- Poster Info Hide Info -->
+                    <control type="radiobutton" id="110">
+                        <include>optionsbuttonsdimensions</include>
+                        <label>Hide info</label>
+                        <texturefocus>dialogs/options/buttons/default-fo.png</texturefocus>
+                        <onclick>Skin.ToggleSetting(old.posterinfo)</onclick>
+                        <selected>Skin.HasSetting(old.posterinfo)</selected>
+                        <textureradiofocus>buttons/radio/options-radio-button-fo.png</textureradiofocus>
+                        <textureradionofocus>buttons/radio/options-radio-button-nf.png</textureradionofocus>
+                        <radioposx>-19</radioposx>
+                        <visible>Control.IsVisible(56)</visible>
+                    </control>
+                    <!-- Hide Wall Info -->
+                    <control type="radiobutton" id="111">
+                        <include>optionsbuttonsdimensions</include>
+                        <label>Hide info</label>
+                        <texturefocus>dialogs/options/buttons/default-fo.png</texturefocus>
+                        <onclick>Skin.ToggleSetting(hide.posterwallinfo)</onclick>
+                        <selected>Skin.HasSetting(hide.posterwallinfo)</selected>
+                        <textureradiofocus>buttons/radio/options-radio-button-fo.png</textureradiofocus>
+                        <textureradionofocus>buttons/radio/options-radio-button-nf.png</textureradionofocus>
+                        <radioposx>-19</radioposx>
+                        <visible>Control.IsVisible(502)</visible>
+                    </control>
+                    <!-- Prefer Landscape Art -->
+                    <control type="radiobutton" id="115">
+                        <include>optionsbuttonsdimensions</include>
+                        <selected>Skin.HasSetting(PreferLandscapeArt)</selected>
+                        <onclick>Skin.ToggleSetting(PreferLandscapeArt)</onclick>
+                        <label>Prefer landscape art</label>
+                        <texturefocus>dialogs/options/buttons/default-fo.png</texturefocus>
+                        <textureradiofocus>buttons/radio/options-radio-button-fo.png</textureradiofocus>
+                        <textureradionofocus>buttons/radio/options-radio-button-nf.png</textureradionofocus>
+                        <radioposx>-19</radioposx>
+                        <visible>[Control.IsVisible(60) | Control.IsVisible(508) | Control.IsVisible(509) | Control.IsVisible(510) | Control.IsVisible(513)</visible>
+                    </control>
+                    <!-- Show Episode Thumb As Fanart in Low List -->
+                    <control type="radiobutton" id="118">
+                        <include>optionsbuttonsdimensions</include>
+                        <selected>Skin.HasSetting(lowlist.showepisodethumb)</selected>
+                        <onclick>Skin.ToggleSetting(lowlist.showepisodethumb)</onclick>
+                        <label>Episode thumb fanart</label>
+                        <texturefocus>dialogs/options/buttons/default-fo.png</texturefocus>
+                        <textureradiofocus>buttons/radio/options-radio-button-fo.png</textureradiofocus>
+                        <textureradionofocus>buttons/radio/options-radio-button-nf.png</textureradionofocus>
+                        <radioposx>-19</radioposx>
+                        <visible>Control.IsVisible(511) + Container.Content(episodes)</visible>
+                    </control>
+                    <!-- Zoom Landscape View -->
+                    <control type="radiobutton" id="124">
+                        <include>optionsbuttonsdimensions</include>
+                        <selected>Skin.HasSetting(landscapeview.zoom)</selected>
+                        <onclick>Skin.ToggleSetting(landscapeview.zoom)</onclick>
+                        <label>Focus zoom</label>
+                        <texturefocus>dialogs/options/buttons/default-fo.png</texturefocus>
+                        <textureradiofocus>buttons/radio/options-radio-button-fo.png</textureradiofocus>
+                        <textureradionofocus>buttons/radio/options-radio-button-nf.png</textureradionofocus>
+                        <radioposx>-19</radioposx>
+                        <visible>Control.IsVisible(507)</visible>
+                    </control>
+                    <!-- Banner Show Plot -->
+                    <control type="radiobutton" id="125">
+                        <include>optionsbuttonsdimensions</include>
+                        <selected>Skin.HasSetting(bannerlist.showplot)</selected>
+                        <onclick>Skin.ToggleSetting(bannerlist.showplot)</onclick>
+                        <label>Show plot</label>
+                        <texturefocus>dialogs/options/buttons/default-fo.png</texturefocus>
+                        <textureradiofocus>buttons/radio/options-radio-button-fo.png</textureradiofocus>
+                        <textureradionofocus>buttons/radio/options-radio-button-nf.png</textureradionofocus>
+                        <radioposx>-19</radioposx>
+                        <visible>Control.IsVisible(60)</visible>
+                    </control>
+                    
+                    <!-- GLOBAL OPTIONS -->
+                    <!-- Extrafanart -->
+                    <control type="radiobutton" id="108">
+                        <include>optionsbuttonsdimensions</include>
+                        <label>Use extrafanart</label>
+                        <texturefocus>dialogs/options/buttons/default-fo.png</texturefocus>
+                        <onclick>Skin.ToggleSetting(movies.use.extrafanart)</onclick>
+                        <selected>Skin.HasSetting(movies.use.extrafanart)</selected>
+                        <textureradiofocus>buttons/radio/options-radio-button-fo.png</textureradiofocus>
+                        <textureradionofocus>buttons/radio/options-radio-button-nf.png</textureradionofocus>
+                        <radioposx>-19</radioposx>
+                        <visible>Container.Content(movies)</visible>
+                    </control>
+                    <control type="radiobutton" id="109">
+                        <include>optionsbuttonsdimensions</include>
+                        <label>Use extrafanart</label>
+                        <texturefocus>dialogs/options/buttons/default-fo.png</texturefocus>
+                        <onclick>Skin.ToggleSetting(tvshows.use.extrafanart)</onclick>
+                        <selected>Skin.HasSetting(tvshows.use.extrafanart)</selected>
+                        <textureradiofocus>buttons/radio/options-radio-button-fo.png</textureradiofocus>
+                        <textureradionofocus>buttons/radio/options-radio-button-nf.png</textureradionofocus>
+                        <radioposx>-19</radioposx>
+                        <visible>Container.Content(tvshows) | Container.Content(episodes) | Container.Content(seasons)</visible>
+                    </control>
+                    <!-- Animate Fanart -->
+                    <control type="radiobutton" id="148">
+                        <include>optionsbuttonsdimensions</include>
+                        <label>Animate fanart</label>
+                        <texturefocus>dialogs/options/buttons/default-fo.png</texturefocus>
+                        <onclick>Skin.ToggleSetting(Fanart.Animate)</onclick>
+                        <selected>Skin.HasSetting(Fanart.Animate)</selected>
+                        <textureradiofocus>buttons/radio/options-radio-button-fo.png</textureradiofocus>
+                        <textureradionofocus>buttons/radio/options-radio-button-nf.png</textureradionofocus>
+                        <radioposx>-19</radioposx>
+                    </control>
+                    <!-- Hide Info Tags -->
+                    <control type="radiobutton" id="105">
+                        <include>optionsbuttonsdimensions</include>
+                        <label>Hide info tags</label>
+                        <texturefocus>dialogs/options/buttons/default-fo.png</texturefocus>
+                        <onclick>Skin.ToggleSetting(HideInfoTags)</onclick>
+                        <selected>Skin.HasSetting(HideInfoTags)</selected>
+                        <textureradiofocus>buttons/radio/options-radio-button-fo.png</textureradiofocus>
+                        <textureradionofocus>buttons/radio/options-radio-button-nf.png</textureradionofocus>
+                        <radioposx>-19</radioposx>
+                    </control>
+                    <control type="radiobutton" id="106">
+                        <include>optionsbuttonsdimensions</include>
+                        <label>Show clear logo</label>
+                        <texturefocus>dialogs/options/buttons/default-fo.png</texturefocus>
+                        <onclick>Skin.ToggleSetting(ShowLowerLogo)</onclick>
+                        <selected>Skin.HasSetting(ShowLowerLogo)</selected>
+                        <textureradiofocus>buttons/radio/options-radio-button-fo.png</textureradiofocus>
+                        <textureradionofocus>buttons/radio/options-radio-button-nf.png</textureradionofocus>
+                        <radioposx>-19</radioposx>
+                        <visible>!Skin.HasSetting(HideInfoTags)</visible>
+                    </control>
+                    
+                    
+                    
+                </control>
+                <control type="grouplist" id="9223">
+                    <description>View Controls</description>
+                    <posx>19</posx>
+                    <posy>47</posy>
+                    <width>404</width>
+                    <height>399</height>
+                    <itemgap>0</itemgap>
+                    <onleft>9111</onleft>
+                    <onright>9111</onright>
+                    <onup>9223</onup>
+                    <ondown>9223</ondown>
+                    <include>ViewOptionsAnimations</include>
+                    <control type="button" id="201">
+                        <description>Label</description>
+                        <posy>330</posy>
+                        <include>optionsbuttonsdimensions</include>
+                        <label>$LOCALIZE[42017]</label>
+                        <onclick>setfocus(9111)</onclick>
+                        <texturefocus border="70,2,2,2">dialogs/options/buttons/custom-back-fo.png</texturefocus>
+                        <texturenofocus border="70,2,2,2">dialogs/options/buttons/custom-back-nf.png</texturenofocus>
+                    </control>
+                    <!-- Menu List -->
+                    <control type="radiobutton" id="202">
+                        <include>optionsbuttonsdimensions</include>
+                        <label>List</label>
+                        <texturefocus>dialogs/options/buttons/default-fo.png</texturefocus>
+                        <onclick>Container.SetViewMode(50)</onclick>
+                        <selected>Control.IsVisible(50)</selected>
+                        <textureradiofocus>buttons/radio/options-radio-button-fo.png</textureradiofocus>
+                        <textureradionofocus>buttons/radio/options-radio-button-nf.png</textureradionofocus>
+                        <radioposx>-19</radioposx>
+                        <visible>![Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]</visible>
+                    </control>
+                    <!-- Medium List -->
+                    <control type="radiobutton" id="215">
+                        <include>optionsbuttonsdimensions</include>
+                        <label>Medium List</label>
+                        <texturefocus>dialogs/options/buttons/default-fo.png</texturefocus>
+                        <onclick>Container.SetViewMode(517)</onclick>
+                        <selected>Control.IsVisible(517)</selected>
+                        <textureradiofocus>buttons/radio/options-radio-button-fo.png</textureradiofocus>
+                        <textureradionofocus>buttons/radio/options-radio-button-nf.png</textureradionofocus>
+                        <radioposx>-19</radioposx>
+                        <visible>Container.Content(episodes) | Container.Content(Seasons) | Container.Content(tvshows) | Container.Content(movies)</visible>
+                    </control>
+                    <!-- Low List -->
+                    <control type="radiobutton" id="216">
+                        <include>optionsbuttonsdimensions</include>
+                        <label>Low List</label>
+                        <texturefocus>dialogs/options/buttons/default-fo.png</texturefocus>
+                        <onclick>Container.SetViewMode(511)</onclick>
+                        <selected>Control.IsVisible(511)</selected>
+                        <textureradiofocus>buttons/radio/options-radio-button-fo.png</textureradiofocus>
+                        <textureradionofocus>buttons/radio/options-radio-button-nf.png</textureradionofocus>
+                        <radioposx>-19</radioposx>
+                        <visible>Container.Content(episodes) | Container.Content(Seasons) | Container.Content(tvshows) | Container.Content(movies)  | Container.Content(Sets)</visible>
+                    </control>
+                    <!-- Info List -->
+                    <control type="radiobutton" id="203">
+                        <include>optionsbuttonsdimensions</include>
+                        <label>Info List</label>
+                        <texturefocus>dialogs/options/buttons/default-fo.png</texturefocus>
+                        <onclick>Container.SetViewMode(51)</onclick>
+                        <selected>Control.IsVisible(51)</selected>
+                        <textureradiofocus>buttons/radio/options-radio-button-fo.png</textureradiofocus>
+                        <textureradionofocus>buttons/radio/options-radio-button-nf.png</textureradionofocus>
+                        <radioposx>-19</radioposx>
+                        <visible>[Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]</visible>
+                    </control>
+                    <!-- Banner List -->
+                    <control type="radiobutton" id="204">
+                        <include>optionsbuttonsdimensions</include>
+                        <label>Banner List</label>
+                        <texturefocus>dialogs/options/buttons/default-fo.png</texturefocus>
+                        <onclick>Container.SetViewMode(60)</onclick>
+                        <selected>Control.IsVisible(60)</selected>
+                        <textureradiofocus>buttons/radio/options-radio-button-fo.png</textureradiofocus>
+                        <textureradionofocus>buttons/radio/options-radio-button-nf.png</textureradionofocus>
+                        <radioposx>-19</radioposx>
+                        <visible>Container.Content(Movies) | Container.Content(TVShows)</visible>
+                    </control>
+                    <!-- Episode Info -->
+                    <control type="radiobutton" id="213">
+                        <include>optionsbuttonsdimensions</include>
+                        <label>Episode Info</label>
+                        <texturefocus>dialogs/options/buttons/default-fo.png</texturefocus>
+                        <onclick>Container.SetViewMode(516)</onclick>
+                        <selected>Control.IsVisible(516)</selected>
+                        <textureradiofocus>buttons/radio/options-radio-button-fo.png</textureradiofocus>
+                        <textureradionofocus>buttons/radio/options-radio-button-nf.png</textureradionofocus>
+                        <radioposx>-19</radioposx>
+                        <visible>Container.Content(episodes) | Container.Content(Seasons) | Container.Content(tvshows) | Container.Content(movies)</visible>
+                    </control>
+                    <!-- Love Film -->
+                    <control type="radiobutton" id="214">
+                        <include>optionsbuttonsdimensions</include>
+                        <label>Lovefilm</label>
+                        <texturefocus>dialogs/options/buttons/default-fo.png</texturefocus>
+                        <onclick>Container.SetViewMode(519)</onclick>
+                        <selected>Control.IsVisible(519)</selected>
+                        <textureradiofocus>buttons/radio/options-radio-button-fo.png</textureradiofocus>
+                        <textureradionofocus>buttons/radio/options-radio-button-nf.png</textureradionofocus>
+                        <radioposx>-19</radioposx>
+                        <visible>Container.Content(episodes) | Container.Content(Seasons) | Container.Content(tvshows) | Container.Content(movies)</visible>
+                    </control>
+                    <!-- Reel -->
+                    <control type="radiobutton" id="210">
+                        <include>optionsbuttonsdimensions</include>
+                        <label>Reel</label>
+                        <texturefocus>dialogs/options/buttons/default-fo.png</texturefocus>
+                        <onclick>Container.SetViewMode(513)</onclick>
+                        <selected>Control.IsVisible(513)</selected>
+                        <textureradiofocus>buttons/radio/options-radio-button-fo.png</textureradiofocus>
+                        <textureradionofocus>buttons/radio/options-radio-button-nf.png</textureradionofocus>
+                        <radioposx>-19</radioposx>
+                        <visible>!Container.Content(seasons) + [Container.Content(TVShows) | Container.Content(movies) | Container.Content(episodes)]</visible>
+                    </control>
+                    <!-- Classic Poster -->
+                    <control type="radiobutton" id="205">
+                        <include>optionsbuttonsdimensions</include>
+                        <label>Classic Poster</label>
+                        <texturefocus>dialogs/options/buttons/default-fo.png</texturefocus>
+                        <onclick>Container.SetViewMode(506)</onclick>
+                        <selected>Control.IsVisible(506)</selected>
+                        <textureradiofocus>buttons/radio/options-radio-button-fo.png</textureradiofocus>
+                        <textureradionofocus>buttons/radio/options-radio-button-nf.png</textureradionofocus>
+                        <radioposx>-19</radioposx>
+                        <visible>Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Sets)</visible>
+                    </control>
+                    <!-- Classic Info -->
+                    <control type="radiobutton" id="206">
+                        <include>optionsbuttonsdimensions</include>
+                        <label>Classic Info</label>
+                        <texturefocus>dialogs/options/buttons/default-fo.png</texturefocus>
+                        <onclick>Container.SetViewMode(514)</onclick>
+                        <selected>Control.IsVisible(514)</selected>
+                        <textureradiofocus>buttons/radio/options-radio-button-fo.png</textureradiofocus>
+                        <textureradionofocus>buttons/radio/options-radio-button-nf.png</textureradionofocus>
+                        <radioposx>-19</radioposx>
+                        <visible>Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Sets)</visible>
+                    </control>
+                    <!-- Info Poster -->
+                    <control type="radiobutton" id="207">
+                        <include>optionsbuttonsdimensions</include>
+                        <label>Info Poster</label>
+                        <texturefocus>dialogs/options/buttons/default-fo.png</texturefocus>
+                        <onclick>Container.SetViewMode(56)</onclick>
+                        <selected>Control.IsVisible(56)</selected>
+                        <textureradiofocus>buttons/radio/options-radio-button-fo.png</textureradiofocus>
+                        <textureradionofocus>buttons/radio/options-radio-button-nf.png</textureradionofocus>
+                        <radioposx>-19</radioposx>
+                        <visible>Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Sets)</visible>
+                    </control>
+                    <!-- Wall -->
+                    <control type="radiobutton" id="208">
+                        <include>optionsbuttonsdimensions</include>
+                        <label>Wall</label>
+                        <texturefocus>dialogs/options/buttons/default-fo.png</texturefocus>
+                        <onclick>Container.SetViewMode(502)</onclick>
+                        <selected>Control.IsVisible(502)</selected>
+                        <textureradiofocus>buttons/radio/options-radio-button-fo.png</textureradiofocus>
+                        <textureradionofocus>buttons/radio/options-radio-button-nf.png</textureradionofocus>
+                        <radioposx>-19</radioposx>
+                        <visible>Container.Content(movies) | Container.Content(tvshows)</visible>
+                    </control>
+                    <!-- Landscape -->
+                    <control type="radiobutton" id="209">
+                        <include>optionsbuttonsdimensions</include>
+                        <label>Landscape</label>
+                        <texturefocus>dialogs/options/buttons/default-fo.png</texturefocus>
+                        <onclick>Container.SetViewMode(507)</onclick>
+                        <selected>Control.IsVisible(507)</selected>
+                        <textureradiofocus>buttons/radio/options-radio-button-fo.png</textureradiofocus>
+                        <textureradionofocus>buttons/radio/options-radio-button-nf.png</textureradionofocus>
+                        <radioposx>-19</radioposx>
+                        <visible>Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes)</visible>
+                    </control>
+                    <!-- Wall Panel -->
+                    <control type="radiobutton" id="211">
+                        <include>optionsbuttonsdimensions</include>
+                        <label>Wall Panel</label>
+                        <texturefocus>dialogs/options/buttons/default-fo.png</texturefocus>
+                        <onclick>Container.SetViewMode(510)</onclick>
+                        <selected>Control.IsVisible(510)</selected>
+                        <textureradiofocus>buttons/radio/options-radio-button-fo.png</textureradiofocus>
+                        <textureradionofocus>buttons/radio/options-radio-button-nf.png</textureradionofocus>
+                        <radioposx>-19</radioposx>
+                        <visible>Container.Content(Movies) | Container.Content(TVShows)</visible>
+                    </control>
+                    
+                    
+                </control>                      
+                
+                <control type="group">
+                    <include>GeneralOptionsAnimations</include>
+                    <control type="image">
+                        <posx>9</posx>
+                        <posy>433</posy>
+                        <width>100</width>
+                        <height>100</height>
+                        <texture>buttons/options_nofo.png</texture>
+                    </control>
+                    <control type="label">
+                        <posx>94</posx>
+                        <posy>433</posy>
+                        <width>300</width>
+                        <height>100</height>
+                        <label>$LOCALIZE[41600]</label>
+                        <font>Font-Alaska-S29-BL</font>
+                        <textcolor>eewhite</textcolor>
+                        <shadowcolor>22000000</shadowcolor>
+                    </control>
+                </control>
+                
+                <control type="group">
+                    <include>SpecificOptionsAnimations</include>
+                    <control type="image">
+                        <posx>9</posx>
+                        <posy>433</posy>
+                        <width>100</width>
+                        <height>100</height>
+                        <texture>buttons/options_nofo.png</texture>
+                    </control>
+                    <control type="label">
+                        <posx>94</posx>
+                        <posy>433</posy>
+                        <width>300</width>
+                        <height>100</height>
+                        <label>$LOCALIZE[42010]</label>
+                        <font>Font-Alaska-S29-BL</font>
+                        <textcolor>eewhite</textcolor>
+                        <shadowcolor>22000000</shadowcolor>
+                    </control>
+                </control>
+                
+                <control type="group">
+                    <include>ViewOptionsAnimations</include>
+                    <control type="image">
+                        <posx>9</posx>
+                        <posy>433</posy>
+                        <width>100</width>
+                        <height>100</height>
+                        <texture>buttons/options_nofo.png</texture>
+                    </control>
+                    <control type="label">
+                        <posx>94</posx> 
+                        <posy>433</posy>
+                        <width>300</width>
+                        <height>100</height>
+                        <label>$LOCALIZE[42021]</label>
+                        <font>Font-Alaska-S29-BL</font>
+                        <textcolor>eewhite</textcolor>
+                        <shadowcolor>22000000</shadowcolor>
+                    </control>
+                </control>
+            </control>
+        </control>
+        
+        <!-- Scrollbar visibility controls -->
+        <control type="image" id="9773">
+            <animation effect="fade" start="100" end="0" time="0" delay="1500">WindowOpen</animation>
+        </control>
+        <control type="image" id="9772">
+            <animation effect="fade" start="0" end="100" time="0">Visible</animation>
+            <animation effect="fade" start="100" end="0" time="0">Hidden</animation>
+            <visible>Control.HasFocus(70) | !Control.IsVisible(9773)</visible>
+        </control>
+        <control type="image" id="9772">
+            <animation effect="fade" start="0" end="100" time="0">Visible</animation>
+            <animation effect="fade" start="100" end="0" time="0" delay="1500">Hidden</animation>
+            <visible>!Control.HasFocus(70) + [Container.Scrolling | Container.OnScrollNext | Container.OnScrollPrevious]</visible>
+        </control>
+        
+        <include>FadeBackground</include>
+        <include>Common-Info</include>
+    </controls>
+</window>

@@ -52,7 +52,7 @@
 					<textcolor>Mod_Tags</textcolor>
 					<scroll>false</scroll>
 					<align>left</align>
-					<visible>Container.Content(artists) | Container.Content(albums)</visible>
+					<visible>!Container.Content(songs)</visible>
 				</control>
 				<control type="label">
 					<posx>100</posx>
@@ -199,7 +199,7 @@
 							<textcolor>ddwhite</textcolor>
 							<scroll>false</scroll>
 							<align>left</align>
-							<visible>Container.Content(artists) | Container.Content(albums)</visible>
+							<visible>!Container.Content(songs)</visible>
 						</control>
 						<control type="label">
 							<posx>100</posx>

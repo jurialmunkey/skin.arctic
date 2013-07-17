@@ -74,7 +74,7 @@
                                     <posy>454</posy>
                                     <width>444</width>
                                     <height>444</height>
-                                    <texture background="true" flipy="true" diffuse="views/posterview/diffuse-ref-square.png">$VAR[SquareThumbLarge]</texture>
+                                    <texture background="true" flipy="true" diffuse="views/posterview/diffuse-ref-square.png" fallback="windows/common/black.png">$VAR[SquareThumbLarge]</texture>
                                     <aspectratio align="center" scalediffuse="false">stretch</aspectratio>
                                     <visible>!Container.Content(Genres)</visible>
                                 </control>
@@ -101,18 +101,9 @@
                                     <posy>10</posy>
                                     <width>444</width>
                                     <height>444</height>
-                                    <texture background="true" diffuse="arctic/covers/444.png">$VAR[SquareThumbLarge]</texture>
+                                    <texture background="true" diffuse="arctic/covers/444.png"  fallback="windows/common/black.png">$VAR[SquareThumbLarge]</texture>
                                     <aspectratio align="center" scalediffuse="false">stretch</aspectratio>
                                     <visible>!Container.Content(Genres)</visible>
-                                </control>
-                                <control type="image">
-									<description>Glass</description>
-									<posx>-32</posx>
-                                    <posy>10</posy>
-                                    <width>444</width>
-                                    <height>444</height>
-									<texture border="25">arctic/common/glass-ring.png</texture>
-									<visible>Skin.HasSetting(covers.showglass)</visible>
 								</control>
                                 <control type="image">
                                     <description>Poster</description>
@@ -199,7 +190,7 @@
                                     <posy>454</posy>
                                     <width>444</width>
                                     <height>444</height>
-                                    <texture background="true" flipy="true" diffuse="views/posterview/diffuse-ref-square.png">$VAR[SquareThumbLarge]</texture>
+                                    <texture background="true" flipy="true" diffuse="views/posterview/diffuse-ref-square.png" fallback="windows/common/black.png">$VAR[SquareThumbLarge]</texture>
                                     <aspectratio align="center" scalediffuse="false">stretch</aspectratio>
                                     <visible>!Container.Content(Genres)</visible>
                                 </control>
@@ -226,28 +217,10 @@
                                     <posy>10</posy>
                                     <width>444</width>
                                     <height>444</height>
-                                    <texture background="true" diffuse="arctic/covers/444.png">$VAR[SquareThumbLarge]</texture>
+                                    <texture background="true" diffuse="arctic/covers/444.png"  fallback="windows/common/black.png">$VAR[SquareThumbLarge]</texture>
                                     <aspectratio align="center" scalediffuse="false">stretch</aspectratio>
                                     <visible>!Container.Content(Genres)</visible>
                                 </control>
-                                <control type="image">
-                                    <description>Poster</description>
-                                    <posx>-32</posx>
-                                    <posy>10</posy>
-                                    <width>444</width>
-                                    <height>444</height>
-                                    <texture background="true" diffuse="arctic/covers/444.png">views/newgloss/info-gloss.png</texture>
-                                    <aspectratio scalediffuse="false">stretch</aspectratio>
-                                </control>
-                                <control type="image">
-									<description>Glass</description>
-									<posx>-32</posx>
-                                    <posy>10</posy>
-                                    <width>444</width>
-                                    <height>444</height>
-									<texture border="25">arctic/common/glass-ring.png</texture>
-									<visible>Skin.HasSetting(covers.showglass)</visible>
-								</control>
                                 <control type="image">
                                     <description>Border</description>
                                     <posx>-42</posx>
@@ -387,7 +360,7 @@
                                     <posy>454</posy>
                                     <width>444</width>
                                     <height>444</height>
-                                    <texture background="true" flipy="true" diffuse="views/posterview/diffuse-ref-square.png">$VAR[SquareThumbLarge]</texture>
+                                    <texture background="true" flipy="true" diffuse="views/posterview/diffuse-ref-square.png"  fallback="windows/common/black.png">$VAR[SquareThumbLarge]</texture>
                                     <aspectratio align="center" scalediffuse="false">stretch</aspectratio>
                                     <visible>!Container.Content(Genres)</visible>
                                 </control>
@@ -414,7 +387,7 @@
                                     <posy>10</posy>
                                     <width>444</width>
                                     <height>444</height>
-                                    <texture background="true" diffuse="arctic/covers/444.png">$VAR[SquareThumbLarge]</texture>
+                                    <texture background="true" diffuse="arctic/covers/444.png" fallback="windows/common/black.png">$VAR[SquareThumbLarge]</texture>
                                     <aspectratio align="center" scalediffuse="false">stretch</aspectratio>
                                     <visible>!Container.Content(Genres)</visible>
                                 </control>

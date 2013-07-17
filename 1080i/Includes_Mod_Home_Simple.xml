@@ -304,6 +304,13 @@
 					<control type="image">
 						<width>30</width>
 						<height>30</height>
+						<texture>osd/fullscreen/cd.png</texture>
+						<animation effect="fade" start="100" end="30" time="250" condition="!Control.HasFocus(525) | !Container(525).HasFocus(11)">Conditional</animation>
+						<visible>System.HasMediaDVD</visible>
+					</control>
+					<control type="image">
+						<width>30</width>
+						<height>30</height>
 						<texture>windows/home/favourites.png</texture>
 						<animation effect="fade" start="100" end="30" time="250" condition="Control.HasFocus(85) | Control.HasFocus(84) | !Container(525).HasFocus(10)">Conditional</animation>
 						<visible>!Skin.HasSetting(disable.favourites)</visible>

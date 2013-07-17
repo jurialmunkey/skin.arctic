@@ -6,7 +6,7 @@
 	<onload condition="[Window.IsActive(movieinformation) | !IsEmpty(Window(Home).Property(script.metadata.actors.hasparent))] + IsEmpty(Window(Home).Property(script.metadata.actors.push))">SetFocus(9301)</onload>
 	<controls>
 		<control type="group">
-		    <posx>-30</posx>
+		    <posx>-70</posx>
 		    <posy>10</posy>
 		    <width>1920</width>
 		    <height>1080</height>

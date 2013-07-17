@@ -3,6 +3,7 @@
     <allowoverlay>no</allowoverlay>
     <controls>
         <control type="group">
+        	<visible>!Window.IsActive(FileBrowser)</visible>
             <include>KeyboardAnimations</include>            
             <control type="label">
                 <description>Heading</description>
@@ -124,6 +125,34 @@
 					<selected>Skin.HasSetting(settings.widget.usedefault)</selected>										
 					<label>Use default widget for settings</label>
 					<visible>StringCompare(Skin.String(homescreen.style),panel) + !stringcompare(Skin.String(defaultpanel.widget.type),$LOCALIZE[10511])</visible>
+				</control>
+				<control type="button" id="2105">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>648</width>
+					<height>77</height>
+					<align>left</align>
+					<aligny>center</aligny>
+					<textoffsetx>35</textoffsetx>
+					<font>Font-Condensed-S27</font>
+					<include>SettingsCategoryDefaultButtonVars</include>
+					<onclick>Skin.SetPath(pictures.slideshowpath)</onclick>
+					<label>[B]Programs slideshow path:[/B]$INFO[Skin.String(pictures.slideshowpath),[CR],]</label>
+					<visible>StringCompare(Skin.String(homescreen.style),panel) + !Skin.HasSetting(disable.programs) + stringcompare(Skin.String(defaultpanel.widget.type),$LOCALIZE[10511])</visible>
+				</control>
+				<control type="button" id="2106">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>648</width>
+					<height>77</height>
+					<align>left</align>
+					<aligny>center</aligny>
+					<textoffsetx>35</textoffsetx>
+					<font>Font-Condensed-S27</font>
+					<include>SettingsCategoryDefaultButtonVars</include>
+					<onclick>Skin.SetPath(pictures.slideshowpath2)</onclick>
+					<label>[B]Pictures slideshow path:[/B]$INFO[Skin.String(pictures.slideshowpath2),[CR],]</label>
+					<visible>StringCompare(Skin.String(homescreen.style),panel) + [!Skin.HasSetting(disable.pictures) | stringcompare(Skin.String(defaultpanel.widget.type),$LOCALIZE[129])]</visible>
 				</control>
             </control>
             

@@ -454,7 +454,8 @@
 					</control>
 				</control>
 				<control type="wraplist" id="525">
-					<onup>SetFocus(83,0)</onup>
+					<onup condition="!Skin.HasSetting(HomeClicksSubmenu)">SetFocus(83,0)</onup>
+					<onup condition="Skin.HasSetting(HomeClicksSubmenu)">SetFocus(82,0)</onup>
 					<ondown>85</ondown>
 					<onleft>525</onleft>
 					<onright>525</onright>
@@ -649,8 +650,9 @@
 				<!-- SUBMENU ITEMS -->
 				<control type="list" id="83">
 					<animation effect="slide" end="276" condition="Container(525).HasFocus(4)">Conditional</animation>
-					<onup condition="Container(525).HasFocus(1) | Container(525).HasFocus(2) | Container(525).HasFocus(3)">82</onup>
-					<onup condition="![Container(525).HasFocus(1) | Container(525).HasFocus(2) | Container(525).HasFocus(3)]">AlarmClock(bounce.up.alarm,noop,00:01,silent)</onup>
+					<onup condition="!Skin.HasSetting(HomeClicksSubmenu) + [Container(525).HasFocus(1) | Container(525).HasFocus(2) | Container(525).HasFocus(3)]">82</onup>
+					<onup condition="!Skin.HasSetting(HomeClicksSubmenu) + ![Container(525).HasFocus(1) | Container(525).HasFocus(2) | Container(525).HasFocus(3)]">AlarmClock(bounce.up.alarm,noop,00:01,silent)</onup>
+					<onup condition="Skin.HasSetting(HomeClicksSubmenu)">AlarmClock(bounce.up.alarm,noop,00:01,silent)</onup>
 					<ondown>525</ondown>
 					<onleft>83</onleft>
 					<onright>83</onright>
@@ -1050,7 +1052,7 @@
 				<height>1</height>
 				<visible allowhiddenfocus="true">false</visible>
 				<onclick>SetFocus(84)</onclick>
-				<onfocus condition="[StringCompare(Skin.String(homescreen.style),simple) + Window.IsActive(home) + Skin.HasSetting(simple.lowerbar)]">SetFocus(84)</onfocus>
+				<onfocus>SetFocus(84)</onfocus>
 				<onup>525</onup>
 				<ondown>525</ondown>
 				<onleft>525</onleft>

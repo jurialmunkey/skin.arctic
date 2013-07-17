@@ -144,7 +144,7 @@
 						<width>374</width>
 						<height>210</height>
 						<texture background="true" diffuse="views/newgloss/landscape-diffuse.png">$VAR[LandscapeViewVar]</texture>
-						<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
+						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
 					</control>
 					<control type="image">
 						<description>Border Top</description>
@@ -310,7 +310,7 @@
 						<width>374</width>
 						<height>210</height>
 						<texture background="true" diffuse="views/newgloss/landscape-diffuse.png">$VAR[LandscapeViewVar]</texture>
-						<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
+						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
 					</control>
 					<control type="image">
 						<description>Border Top</description>

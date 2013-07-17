@@ -60,12 +60,20 @@
 				<!-- Top DARK PANEL -->
 				<control type="group">
 					<include>panel.slideup.anim</include>
-					<control type="image">
+					<!--<control type="image">
 						<posx>-10</posx>
 						<posy>140</posy>
 						<width>1940</width>
 						<height>580</height>
 						<texture border="15">views/newgloss/border-glass.png</texture>
+						<animation effect="zoom" start="-10,140,1940,580" end="-10,135,1940,810" time="350" tween="cubic" easing="inout" condition="Control.HasFocus(82) | Control.HasFocus(83) | Control.HasFocus(84)">Conditional</animation>
+					</control>-->
+					<control type="image">
+						<posx>-10</posx>
+						<posy>140</posy>
+						<width>1940</width>
+						<height>580</height>
+						<texture border="40">arctic/common/border-20.png</texture>
 						<animation effect="zoom" start="-10,140,1940,580" end="-10,135,1940,810" time="350" tween="cubic" easing="inout" condition="Control.HasFocus(82) | Control.HasFocus(83) | Control.HasFocus(84)">Conditional</animation>
 					</control>
 					<control type="image">

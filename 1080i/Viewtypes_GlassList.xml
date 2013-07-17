@@ -86,126 +86,35 @@
 						<control type="label">
 							<posx>0</posx>
 							<posy>22</posy>
-							<width>120</width>
-							<label>$INFO[ListItem.Episode]</label>
+							<width>150</width>
+							<label>$VAR[EpisodeNumber]</label>
 							<font>Font-Episode-Large</font>
 							<textcolor>77white</textcolor>
 							<scroll>false</scroll>
 							<align>left</align>
-							<visible>IntegerGreaterThan(ListItem.Episode,9) + Container.Content(episodes) + !SubString(ListItem.Episode,S)</visible>
-						</control>
-						<control type="label">
-							<posx>0</posx>
-							<posy>22</posy>
-							<width>120</width>
-							<label>$INFO[ListItem.Episode,0,]</label>
-							<font>Font-Episode-Large</font>
-							<textcolor>77white</textcolor>
-							<scroll>false</scroll>
-							<align>left</align>
-							<visible>!IntegerGreaterThan(ListItem.Episode,9) + Container.Content(episodes) + !SubString(ListItem.Episode,S)</visible>
-						</control>
-						<control type="label">
-							<posx>0</posx>
-							<posy>22</posy>
-							<width>120</width>
-							<label>$INFO[ListItem.Episode]</label>
-							<font>Font-Episode-Large</font>
-							<textcolor>77white</textcolor>
-							<scroll>false</scroll>
-							<align>left</align>
-							<visible>Container.Content(episodes) + SubString(ListItem.Episode,S) + [StringCompare(ListItem.Episode,S1) | StringCompare(ListItem.Episode,S2) | StringCompare(ListItem.Episode,S3) | StringCompare(ListItem.Episode,S4) | StringCompare(ListItem.Episode,S5) | StringCompare(ListItem.Episode,S6) | StringCompare(ListItem.Episode,S7) | StringCompare(ListItem.Episode,S8) | StringCompare(ListItem.Episode,S9)]</visible>
-						</control>
-						<control type="label">
-							<posx>0</posx>
-							<posy>22</posy>
-							<width>140</width>
-							<label>$INFO[ListItem.Episode]</label>
-							<font>Font-Episode-Large</font>
-							<textcolor>77white</textcolor>
-							<scroll>false</scroll>
-							<align>left</align>
-							<visible>Container.Content(episodes) + SubString(ListItem.Episode,S) + ![StringCompare(ListItem.Episode,S1) | StringCompare(ListItem.Episode,S2) | StringCompare(ListItem.Episode,S3) | StringCompare(ListItem.Episode,S4) | StringCompare(ListItem.Episode,S5) | StringCompare(ListItem.Episode,S6) | StringCompare(ListItem.Episode,S7) | StringCompare(ListItem.Episode,S8) | StringCompare(ListItem.Episode,S9)]</visible>
-						</control>
-						<control type="label">
-							<posx>0</posx>
-							<posy>22</posy>
-							<width>120</width>
-							<label>$INFO[ListItem.Season]</label>
-							<font>Font-Episode-Large</font>
-							<textcolor>77white</textcolor>
-							<scroll>false</scroll>
-							<align>left</align>
-							<visible>IntegerGreaterThan(ListItem.Season,9) + Container.Content(seasons)</visible>
-						</control>
-						<control type="label">
-							<posx>0</posx>
-							<posy>22</posy>
-							<width>120</width>
-							<label>$INFO[ListItem.Season,0,]</label>
-							<font>Font-Episode-Large</font>
-							<textcolor>77white</textcolor>
-							<scroll>false</scroll>
-							<align>left</align>
-							<visible>!IntegerGreaterThan(ListItem.Season,9) + Container.Content(seasons)</visible>
-						</control>
-						<control type="label">
-							<posx>0</posx>
-							<posy>22</posy>
-							<width>120</width>
-							<label>SP</label>
-							<font>Font-Episode-Large</font>
-							<textcolor>77white</textcolor>
-							<scroll>false</scroll>
-							<align>left</align>
-							<visible>IsEmpty(ListItem.Season) + Container.Content(seasons)</visible>
 						</control>
 						<control type="group">
-							<animation effect="slide" end="-40" condition="Container.Content(episodes) + SubString(ListItem.Episode,S) + ![StringCompare(ListItem.Episode,S1) | StringCompare(ListItem.Episode,S2) | StringCompare(ListItem.Episode,S3) | StringCompare(ListItem.Episode,S4) | StringCompare(ListItem.Episode,S5) | StringCompare(ListItem.Episode,S6) | StringCompare(ListItem.Episode,S7) | StringCompare(ListItem.Episode,S8) | StringCompare(ListItem.Episode,S9)]">Conditional</animation>
+							<animation effect="slide" end="40" condition="Container.Content(episodes) + SubString(ListItem.Episode,S) + ![StringCompare(ListItem.Episode,S1) | StringCompare(ListItem.Episode,S2) | StringCompare(ListItem.Episode,S3) | StringCompare(ListItem.Episode,S4) | StringCompare(ListItem.Episode,S5) | StringCompare(ListItem.Episode,S6) | StringCompare(ListItem.Episode,S7) | StringCompare(ListItem.Episode,S8) | StringCompare(ListItem.Episode,S9)]">Conditional</animation>
 							<animation effect="slide" end="-100" condition="Container.Content(tvshows) | Container.Content(movies)">Conditional</animation>
 							<control type="label">
 								<posx>100</posx>
 								<posy>4</posy>
 								<width>705</width>
-								<label>$INFO[ListItem.Title]</label>
+								<label>$VAR[MainTitle]</label>
 								<font>Font-Alaska-S34-BL</font>
 								<textcolor>77white</textcolor>
 								<scroll>false</scroll>
 								<align>left</align>
-								<visible>!Container.Content(Seasons)</visible>
 							</control>
 							<control type="label">
 								<posx>100</posx>
 								<posy>34</posy>
 								<width>705</width>
-								<label>$INFO[ListItem.Premiered,, • ]$INFO[ListItem.Duration,, $LOCALIZE[12391]]$INFO[ListItem.Genre, • ,]</label>
+								<label>$VAR[UnderTitle]</label>
 								<font>Font-Alaska-S25-L</font>
 								<textcolor>55ffffff</textcolor>
 								<scroll>false</scroll>
 								<align>left</align>
-								<visible>Container.Content(episodes) | Container.Content(movies)</visible>
-							</control>	
-							<control type="label">
-								<posx>100</posx>
-								<posy>4</posy>
-								<width>705</width>
-								<label>20373</label>
-								<font>Font-Alaska-S34-BL</font>
-								<textcolor>77white</textcolor>
-								<scroll>false</scroll>
-								<align>left</align>
-								<visible>Container.Content(Seasons)</visible>
-							</control>
-							<control type="label">
-								<posx>100</posx>
-								<posy>34</posy>
-								<width>705</width>
-								<label>$INFO[ListItem.Property(TotalEpisodes),, $LOCALIZE[20360]]$INFO[ListItem.Property(UnWatchedEpisodes),  •  , $LOCALIZE[16101]]</label>
-								<font>Font-Alaska-S25-L</font>
-								<textcolor>55ffffff</textcolor>
-								<scroll>false</scroll>
-								<align>left</align>
-								<visible>!Container.Content(episodes)</visible>
 							</control>	
 						</control>	
 					</control>
@@ -241,126 +150,35 @@
 							<control type="label">
 								<posx>0</posx>
 								<posy>22</posy>
-								<width>120</width>
-								<label>$INFO[ListItem.Episode]</label>
+								<width>150</width>
+								<label>$VAR[EpisodeNumber]</label>
 								<font>Font-Episode-Large</font>
 								<textcolor>mod-infotags-alt</textcolor>
 								<scroll>false</scroll>
 								<align>left</align>
-								<visible>IntegerGreaterThan(ListItem.Episode,9) + Container.Content(episodes) + !SubString(ListItem.Episode,S)</visible>
-							</control>
-							<control type="label">
-								<posx>0</posx>
-								<posy>22</posy>
-								<width>120</width>
-								<label>$INFO[ListItem.Episode,0,]</label>
-								<font>Font-Episode-Large</font>
-								<textcolor>mod-infotags-alt</textcolor>
-								<scroll>false</scroll>
-								<align>left</align>
-								<visible>!IntegerGreaterThan(ListItem.Episode,9) + Container.Content(episodes) + !SubString(ListItem.Episode,S)</visible>
-							</control>
-							<control type="label">
-								<posx>0</posx>
-								<posy>22</posy>
-								<width>120</width>
-								<label>$INFO[ListItem.Episode]</label>
-								<font>Font-Episode-Large</font>
-								<textcolor>mod-infotags-alt</textcolor>
-								<scroll>false</scroll>
-								<align>left</align>
-								<visible>Container.Content(episodes) + SubString(ListItem.Episode,S) + [StringCompare(ListItem.Episode,S1) | StringCompare(ListItem.Episode,S2) | StringCompare(ListItem.Episode,S3) | StringCompare(ListItem.Episode,S4) | StringCompare(ListItem.Episode,S5) | StringCompare(ListItem.Episode,S6) | StringCompare(ListItem.Episode,S7) | StringCompare(ListItem.Episode,S8) | StringCompare(ListItem.Episode,S9)]</visible>
-							</control>
-							<control type="label">
-								<posx>0</posx>
-								<posy>22</posy>
-								<width>140</width>
-								<label>$INFO[ListItem.Episode]</label>
-								<font>Font-Episode-Large</font>
-								<textcolor>mod-infotags-alt</textcolor>
-								<scroll>false</scroll>
-								<align>left</align>
-								<visible>Container.Content(episodes) + SubString(ListItem.Episode,S) + ![StringCompare(ListItem.Episode,S1) | StringCompare(ListItem.Episode,S2) | StringCompare(ListItem.Episode,S3) | StringCompare(ListItem.Episode,S4) | StringCompare(ListItem.Episode,S5) | StringCompare(ListItem.Episode,S6) | StringCompare(ListItem.Episode,S7) | StringCompare(ListItem.Episode,S8) | StringCompare(ListItem.Episode,S9)]</visible>
-							</control>
-							<control type="label">
-								<posx>0</posx>
-								<posy>22</posy>
-								<width>120</width>
-								<label>$INFO[ListItem.Season]</label>
-								<font>Font-Episode-Large</font>
-								<textcolor>mod-infotags-alt</textcolor>
-								<scroll>false</scroll>
-								<align>left</align>
-								<visible>IntegerGreaterThan(ListItem.Season,9) + Container.Content(seasons)</visible>
-							</control>
-							<control type="label">
-								<posx>0</posx>
-								<posy>22</posy>
-								<width>120</width>
-								<label>$INFO[ListItem.Season,0,]</label>
-								<font>Font-Episode-Large</font>
-								<textcolor>mod-infotags-alt</textcolor>
-								<scroll>false</scroll>
-								<align>left</align>
-								<visible>!IntegerGreaterThan(ListItem.Season,9) + Container.Content(seasons)</visible>
-							</control>
-							<control type="label">
-								<posx>0</posx>
-								<posy>22</posy>
-								<width>120</width>
-								<label>SP</label>
-								<font>Font-Episode-Large</font>
-								<textcolor>mod-infotags-alt</textcolor>
-								<scroll>false</scroll>
-								<align>left</align>
-								<visible>IsEmpty(ListItem.Season) + Container.Content(seasons)</visible>
 							</control>
 							<control type="group">
-								<animation effect="slide" end="-40" condition="Container.Content(episodes) + SubString(ListItem.Episode,S) + ![StringCompare(ListItem.Episode,S1) | StringCompare(ListItem.Episode,S2) | StringCompare(ListItem.Episode,S3) | StringCompare(ListItem.Episode,S4) | StringCompare(ListItem.Episode,S5) | StringCompare(ListItem.Episode,S6) | StringCompare(ListItem.Episode,S7) | StringCompare(ListItem.Episode,S8) | StringCompare(ListItem.Episode,S9)]">Conditional</animation>
+								<animation effect="slide" end="40" condition="Container.Content(episodes) + SubString(ListItem.Episode,S) + ![StringCompare(ListItem.Episode,S1) | StringCompare(ListItem.Episode,S2) | StringCompare(ListItem.Episode,S3) | StringCompare(ListItem.Episode,S4) | StringCompare(ListItem.Episode,S5) | StringCompare(ListItem.Episode,S6) | StringCompare(ListItem.Episode,S7) | StringCompare(ListItem.Episode,S8) | StringCompare(ListItem.Episode,S9)]">Conditional</animation>
 								<animation effect="slide" end="-100" condition="Container.Content(tvshows) | Container.Content(movies)">Conditional</animation>
 								<control type="label">
 									<posx>100</posx>
 									<posy>4</posy>
 									<width>705</width>
-									<label>$INFO[ListItem.Title]</label>
+									<label>$VAR[MainTitle]</label>
 									<font>Font-Alaska-S34-BL</font>
 									<textcolor>mod-infotags-alt</textcolor>
 									<scroll>false</scroll>
 									<align>left</align>
-									<visible>!Container.Content(Seasons)</visible>
 								</control>
 								<control type="label">
 									<posx>100</posx>
 									<posy>34</posy>
 									<width>705</width>
-									<label>$INFO[ListItem.Premiered,, • ]$INFO[ListItem.Duration,, $LOCALIZE[12391]]$INFO[ListItem.Genre, • ,]</label>
+									<label>$VAR[UnderTitle]</label>
 									<font>Font-Alaska-S25-L</font>
 									<textcolor>mod-infotags-alt2</textcolor>
 									<scroll>false</scroll>
 									<align>left</align>
-									<visible>Container.Content(episodes) | Container.Content(movies)</visible>
-								</control>	
-								<control type="label">
-									<posx>100</posx>
-									<posy>4</posy>
-									<width>705</width>
-									<label>20373</label>
-									<font>Font-Alaska-S34-BL</font>
-									<textcolor>mod-infotags-alt</textcolor>
-									<scroll>false</scroll>
-									<align>left</align>
-									<visible>Container.Content(Seasons)</visible>
-								</control>
-								<control type="label">
-									<posx>100</posx>
-									<posy>34</posy>
-									<width>705</width>
-									<label>$INFO[ListItem.Property(TotalEpisodes),, $LOCALIZE[20360]]$INFO[ListItem.Property(UnWatchedEpisodes),  •  , $LOCALIZE[16101]]</label>
-									<font>Font-Alaska-S25-L</font>
-									<textcolor>mod-infotags-alt2</textcolor>
-									<scroll>false</scroll>
-									<align>left</align>
-									<visible>!Container.Content(episodes)</visible>
 								</control>	
 							</control>	
 						</control>

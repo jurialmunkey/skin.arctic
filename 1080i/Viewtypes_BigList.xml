@@ -110,7 +110,8 @@
 							<posy>10</posy>
 							<width>1520</width>
 							<height>180</height>
-							<texture background="true" border="10">arctic/common/panel.png</texture>
+							<texture background="true" border="10">views/other/focus-mod.png</texture>
+							<colordiffuse>ffdddddd</colordiffuse>
 						</control>
 						<!-- Overlay -->
 						<control type="image">
@@ -120,6 +121,7 @@
 							<height>100</height>
 							<aspect>keepaspect</aspect>
 							<texture>$VAR[DefaultListOverlay]</texture>
+							<colordiffuse>mod-infotags-d</colordiffuse>
 						</control>
 						<!-- Episode Thumb -->
 						<control type="image">
@@ -158,7 +160,7 @@
 								<width>680</width>
 								<font>Font-Alaska-S25-L</font>
 								<textcolor>bbwhite</textcolor>
-								<shadowcolor>44000000</shadowcolor>
+								<shadowcolor>22000000</shadowcolor>
 								<label>$VAR[UnderTitle]</label>
 								<align>left</align>
 								<scroll>false</scroll>
@@ -170,7 +172,7 @@
 								<height>108</height>
 								<font>Font-Condensed-S25</font>
 								<textcolor>bbwhite</textcolor>
-								<shadowcolor>44000000</shadowcolor>
+								<shadowcolor>22000000</shadowcolor>
 								<label>$INFO[ListItem.Plot]</label>
 								<align>justify</align>
 							</control>

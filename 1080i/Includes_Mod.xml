@@ -187,6 +187,7 @@
     </variable>
     
     <variable name="SeasonalYear">
+    	<value condition="Container.Content(artists) + !IsEmpty(Window(home).Property(Artist.Albums.Count))">$INFO[Window(home).Property(Artist.Albums.Count),, $LOCALIZE[132]]</value>
         <value condition="Container.Content(episodes) + !IsEmpty(ListItem.Season)">$INFO[ListItem.Season,$LOCALIZE[20373]  ,]</value>
         <value condition="Container.Content(seasons) + !IsEmpty(ListItem.Season)">$INFO[ListItem.Season,$LOCALIZE[20373]  ,]</value>
         <value condition="Container.Content(seasons) + IsEmpty(ListItem.Season) + SubString(ListItem.Label,$LOCALIZE[20366]">$LOCALIZE[593]</value>
@@ -207,10 +208,9 @@
         <value condition="Container.Content(seasons) + IsEmpty(ListItem.Season) + SubString(ListItem.Label,$LOCALIZE[20381]">00</value>
     </variable>
     
-    <variable name="MusicBottomGenre">
+    <variable name="ClearLogoGenre">
         <value condition="Container.Content(artists) + !IsEmpty(ListItem.Property(Artist_Genre))">$INFO[ListItem.Property(Artist_Genre)]</value>
-        <value condition="Container.Content(albums) + !IsEmpty(ListItem.Album)">$INFO[ListItem.Album]</value>
-        <value condition="Container.Content(songs) + !IsEmpty(ListItem.Album)">$INFO[ListItem.Album]</value>
+        <value condition="!IsEmpty(ListItem.Genre)">$INFO[ListItem.Genre]</value>
         <value>N/A</value>
     </variable>
     
@@ -2186,7 +2186,8 @@
 			<visible>!Skin.HasSetting(disable.movies)</visible>
 			<property name="single">$INFO[Skin.String(HomeMoviesSingleImage)]</property>
 			<property name="multi">$INFO[Skin.String(HomeMoviesMultiImage)]</property>
-			<onclick>ActivateWindow(videos,movietitles,return)</onclick>
+			<onclick condition="!Skin.HasSetting(HomeClicksSubmenu)">ActivateWindow(videos,movietitles,return)</onclick>
+			<onclick condition="Skin.HasSetting(HomeClicksSubmenu)">SetFocus(83,0)</onclick>
 			<icon>DefaultMovies.png</icon>
 		</item>
 		<item id="2">
@@ -2194,7 +2195,8 @@
 			<visible>!Skin.HasSetting(disable.tvshows)</visible>
 			<property name="single">$INFO[Skin.String(HomeTVShowsSingleImage)]</property>
 			<property name="multi">$INFO[Skin.String(HomeTVShowsMultiImage)]</property>
-			<onclick>ActivateWindow(videos,tvshowtitles,return)</onclick>
+			<onclick condition="!Skin.HasSetting(HomeClicksSubmenu)">ActivateWindow(videos,tvshowtitles,return)</onclick>
+			<onclick condition="Skin.HasSetting(HomeClicksSubmenu)">SetFocus(83,0)</onclick>
 			<icon>DefaultTVShows.png</icon>
 		</item>
 		<item id="3">
@@ -2202,9 +2204,10 @@
 			<visible>!Skin.HasSetting(disable.music)</visible>
 			<property name="single">$INFO[Skin.String(HomeMusicSingleImage)]</property>
 			<property name="multi">$INFO[Skin.String(HomeMusicMultiImage)]</property>
-			<onclick condition="!Library.HasContent(music)">ActivateWindow(musicfiles)</onclick>
-			<onclick condition="Library.HasContent(music) + IsEmpty(Skin.String(music.path))">ActivateWindow(musiclibrary)</onclick>
-			<onclick condition="Library.HasContent(music) + !IsEmpty(Skin.String(music.path))">ActivateWindow(musiclibrary,$INFO[Skin.String(music.path)],return)</onclick>
+			<onclick condition="!Skin.HasSetting(HomeClicksSubmenu) + !Library.HasContent(music)">ActivateWindow(musicfiles)</onclick>
+			<onclick condition="!Skin.HasSetting(HomeClicksSubmenu) + Library.HasContent(music) + IsEmpty(Skin.String(music.path))">ActivateWindow(musiclibrary)</onclick>
+			<onclick condition="!Skin.HasSetting(HomeClicksSubmenu) + Library.HasContent(music) + !IsEmpty(Skin.String(music.path))">ActivateWindow(musiclibrary,$INFO[Skin.String(music.path)],return)</onclick>
+			<onclick condition="Skin.HasSetting(HomeClicksSubmenu)">SetFocus(83,0)</onclick>
 			<icon>DefaultAudio.png</icon>
 		</item>
 		<item id="4">
@@ -2212,9 +2215,10 @@
 			<visible>!Skin.HasSetting(disable.pvr) + System.GetBool(pvrmanager.enabled)</visible>
 			<property name="single">$INFO[Skin.String(HomeLiveTVSingleImage)]</property>
 			<property name="multi">$INFO[Skin.String(HomeLiveTVMultiImage)]</property>
-			<onclick>ActivateWindow(PVR)</onclick>
-			<onclick>SetFocus(32)</onclick>
-			<onclick>SetFocus(11)</onclick>
+			<onclick condition="!Skin.HasSetting(HomeClicksSubmenu)">ActivateWindow(PVR)</onclick>
+			<onclick condition="!Skin.HasSetting(HomeClicksSubmenu)">SetFocus(32)</onclick>
+			<onclick condition="!Skin.HasSetting(HomeClicksSubmenu)">SetFocus(11)</onclick>
+			<onclick condition="Skin.HasSetting(HomeClicksSubmenu)">SetFocus(83,0)</onclick>
 			<icon>DefaultTVGuide.png</icon>
 		</item>
 		<item id="5">
@@ -2244,7 +2248,8 @@
 			<visible>!Skin.HasSetting(disable.programs)</visible>
 			<property name="single">$INFO[Skin.String(HomeProgramsSingleImage)]</property>
 			<property name="multi">$INFO[Skin.String(HomeProgramsMultiImage)]</property>
-			<onclick>ActivateWindow(programs)</onclick>
+			<onclick condition="!Skin.HasSetting(HomeClicksSubmenu)">ActivateWindow(programs)</onclick>
+			<onclick condition="Skin.HasSetting(HomeClicksSubmenu)">SetFocus(83,0)</onclick>
 			<icon>DefaultAddonProgram.png</icon>
 		</item>
 		<item id="8">
@@ -2260,7 +2265,7 @@
 			<visible>true</visible>
 			<property name="single">$INFO[Skin.String(HomeSettingsSingleImage)]</property>
 			<property name="multi">$INFO[Skin.String(HomeSettingsMultiImage)]</property>
-			<onclick>SetFocus(83)</onclick>
+			<onclick>SetFocus(83,0)</onclick>
 			<icon>DefaultAddonService.png</icon>
 		</item>
 		<item id="10">
@@ -2268,21 +2273,17 @@
 			<visible>true</visible>
 			<property name="single">$INFO[Skin.String(HomeHomeSingleImage)]</property>
 			<property name="multi">$INFO[Skin.String(HomeHomeMultiImage)]</property>
-			
 			<onclick>SetFocus(525)</onclick>
 			<onclick>ActivateWindow(Favourites)</onclick>
 			<visible>!Skin.HasSetting(disable.favourites)</visible>
 			<icon>DefaultFavourites.png</icon>
 		</item>
 	</include>
-
+	
 	<variable name="Metadata.Actors.InLibrary">
 		<value condition="Container(150).ListItem.Property(LibraryHasMovie)">  ★</value>
 		<value></value>
 	</variable>
-
-	
-	
 	<include name="metro-favourites">
 		<control type="group">
 			<animation type="WindowOpen" reversible="false">
@@ -2779,7 +2780,7 @@
 				<height>48</height>
 				<align>center</align>
 				<aligny>center</aligny>
-				<label>$INFO[ListItem.Genre]</label>
+				<label>$VAR[ClearLogoGenre]</label>
 				<scroll>false</scroll>
 				<visible>!Container.Content(episodes) + !Container.Content(movies)</visible>
 			</control>
@@ -2902,7 +2903,7 @@
 			<control type="image">
 				<posx>50</posx>
 				<posy>31</posy>
-				<width>920</width>
+				<width>660</width>
 				<height>120</height>
 				<aspectratio align="center" aligny="top">keep</aspectratio>
 				<texture>$INFO[Skin.String(cdartlocation)]$INFO[ListItem.Artist,,/logo.png]</texture>
@@ -2910,33 +2911,14 @@
 				<colordiffuse>Mod_Tags_Logo_Shadow</colordiffuse>
 			</control>
 			<control type="image">
-				<posx>-921</posx>
+				<posx>-661</posx>
 				<posy>30</posy>
-				<width>920</width>
+				<width>660</width>
 				<height>120</height>
 				<aspectratio align="center" aligny="top">keep</aspectratio>
 				<texture>$INFO[Skin.String(cdartlocation)]$INFO[ListItem.Artist,,/logo.png]</texture>
 				<visible>Skin.HasSetting(ShowLowerLogo) + [Container.Content(albums) | Container.Content(artists) | Container.Content(songs)]</visible>
 			</control>
-			<!--<control type="image">
-				<posx>50</posx>
-				<posy>31</posy>
-				<width>860</width>
-				<height>120</height>
-				<aspectratio align="center" aligny="top">keep</aspectratio>
-				<texture>$VAR[ClearLogosVar]</texture>
-				<visible>Skin.HasSetting(ShowLowerLogo) + ![Container.Content(episodes) | Container.Content(movies) | Container.Content(songs) | Container.Content(albums) | Container.Content(artists)]</visible>
-				<colordiffuse>Mod_Tags_Logo_Shadow</colordiffuse>
-			</control>
-			<control type="image">
-				<posx>-861</posx>
-				<posy>30</posy>
-				<width>860</width>
-				<height>120</height>
-				<aspectratio align="center" aligny="top">keep</aspectratio>
-				<texture>$VAR[ClearLogosVar]</texture>
-				<visible>Skin.HasSetting(ShowLowerLogo) + ![Container.Content(episodes) | Container.Content(movies) | Container.Content(songs) | Container.Content(albums) | Container.Content(artists)]</visible>
-			</control>-->
 		</control>
 	</include>
 </includes>

@@ -315,26 +315,7 @@
                         <label>$LOCALIZE[41140]</label>
                         <visible>!StringCompare(Skin.String(homescreen.style),metro)</visible>
                     </control>              
-					<control type="button" id="2009">
-                        <width>1210</width>
-                        <include>SettingsCategoryDefaultButtonVars</include>
-                        <onclick>Skin.SetPath(pictures.slideshowpath)</onclick>
-                        <label>Programs slideshow path</label>
-                        <label2>$INFO[Skin.String(pictures.slideshowpath)]</label2>
-                        <onup>1007</onup>
-						<ondown>1001</ondown>
-						<visible>StringCompare(Skin.String(homescreen.style),panel) + !Skin.HasSetting(disable.programs) + stringcompare(Skin.String(defaultpanel.widget.type),$LOCALIZE[10511])</visible>
-                    </control>
-                    <control type="button" id="2010">
-                        <width>1210</width>
-                        <include>SettingsCategoryDefaultButtonVars</include>
-                        <onclick>Skin.SetPath(pictures.slideshowpath2)</onclick>
-                        <label>Pictures slideshow path</label>
-                        <label2>$INFO[Skin.String(pictures.slideshowpath2)]</label2>
-                        <onup>1007</onup>
-						<ondown>1001</ondown>
-						<visible>StringCompare(Skin.String(homescreen.style),panel) + [!Skin.HasSetting(disable.pictures) | stringcompare(Skin.String(defaultpanel.widget.type),$LOCALIZE[129])]</visible>
-                    </control>
+					
 					
                     <control type="radiobutton" id="2004">
                         <width>1210</width>
@@ -346,10 +327,9 @@
                     <control type="radiobutton" id="2005">
                         <width>1210</width>
                         <include>SettingsCategoryRadioButtonVars</include>
-                        <selected>!Skin.HasSetting(HideHomeSubmenuArrow)</selected>
-                        <onclick>Skin.ToggleSetting(HideHomeSubmenuArrow)</onclick>
-                        <label>$LOCALIZE[41135]</label>
-                        <visible>StringCompare(Skin.String(homescreen.style),metro)</visible>
+                        <selected>Skin.HasSetting(HomeClicksSubmenu)</selected>
+                        <onclick>Skin.ToggleSetting(HomeClicksSubmenu)</onclick>
+                        <label>Open submenu on click</label>
                     </control>
                     
                     <control type="button" id="2006">

@@ -541,6 +541,13 @@
                         <onclick>Skin.ToggleSetting(PlayTrailer.Minimized)</onclick>
                         <label>$LOCALIZE[41203]</label>
                     </control>
+                    <control type="radiobutton" id="3008">
+                        <width>1210</width>
+                        <include>SettingsCategoryRadioButtonVars</include>
+                        <selected>Skin.HasSetting(PreferLandscapeArt)</selected>
+                        <onclick>Skin.ToggleSetting(PreferLandscapeArt)</onclick>
+                        <label>Prefer landscape art</label>
+                    </control>
                 </control>
                 
                 <!-- OSD Settings -->

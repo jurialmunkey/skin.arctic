@@ -109,6 +109,13 @@
 					<control type="image">
 						<width>30</width>
 						<height>30</height>
+						<texture>osd/fullscreen/cd.png</texture>
+						<animation effect="fade" start="100" end="30" time="250" condition="!Control.HasFocus(525) | !Container(525).HasFocus(11)">Conditional</animation>
+						<visible>System.HasMediaDVD</visible>
+					</control>
+					<control type="image">
+						<width>30</width>
+						<height>30</height>
 						<texture>windows/home/favourites.png</texture>
 						<animation effect="fade" start="100" end="30" time="250" condition="!Control.HasFocus(525) | !Container(525).HasFocus(10)">Conditional</animation>
 						<visible>!Skin.HasSetting(disable.favourites)</visible>
@@ -231,7 +238,7 @@
 				<control type="list" id="525">
 					<onup condition="!Container(525).HasFocus(5)">SetFocus(83,0)</onup>
 					<ondown condition="Container(525).HasFocus(1) | Container(525).HasFocus(2) | Container(525).HasFocus(3)">SetFocus(82)</ondown>
-					<ondown condition="Container(525).HasFocus(9) | Container(525).HasFocus(10)">SetFocus(84,0)</ondown>
+					<ondown condition="Container(525).HasFocus(9) | Container(525).HasFocus(10) | Container(525).HasFocus(11)">SetFocus(84,0)</ondown>
 					<ondown condition="Container(525).HasFocus(4) | Container(525).HasFocus(5) | Container(525).HasFocus(6) | Container(525).HasFocus(7)  | Container(525).HasFocus(8)">SetFocus(84,0)</ondown>
 					<onleft>525</onleft>
 					<onright>525</onright>
@@ -605,6 +612,14 @@
 						<include>Mod_GreyPanelDimensions</include>
 					</control>
 					<!-- HEADER FOR PANEL -->
+					<!-- dvd -->
+					<control type="label">
+						<posx>48</posx>
+						<posy>260</posy>
+						<label>$LOCALIZE[446]</label>
+						<include>Mod_RecentLabel</include>
+						<visible>Container(525).HasFocus(11) + !Control.HasFocus(84)</visible>
+					</control>
 					<!-- favs -->
 					<control type="label">
 						<posx>48</posx>
@@ -693,7 +708,7 @@
 					<control type="group">
 						<posx>48</posx>
 						<posy>330</posy>
-						<visible>[Container(525).HasFocus(5) + !Control.HasFocus(84) + !IsEmpty(Skin.String(pictures.slideshowpath2))] | [stringcompare(Skin.String(defaultpanel.widget.type),$LOCALIZE[129]) + [!Control.HasFocus(84) + [[Container(525).HasFocus(5) + IsEmpty(Skin.String(pictures.slideshowpath2))] | Container(525).HasFocus(10) | Container(525).HasFocus(7) | [Container(525).HasFocus(9) + Skin.HasSetting(settings.widget.usedefault)]]]]</visible>
+						<visible>[Container(525).HasFocus(5) + !Control.HasFocus(84) + !IsEmpty(Skin.String(pictures.slideshowpath2))] | [stringcompare(Skin.String(defaultpanel.widget.type),$LOCALIZE[129]) + [!Control.HasFocus(84) + [[Container(525).HasFocus(5) + IsEmpty(Skin.String(pictures.slideshowpath2))] | Container(525).HasFocus(10) | Container(525).HasFocus(11) | Container(525).HasFocus(7) | [Container(525).HasFocus(9) + Skin.HasSetting(settings.widget.usedefault)]]]]</visible>
 						<animation effect="fade" start="0" end="100" time="350">Visible</animation>
 						<animation effect="fade" start="100" end="0" time="450" condition="Window.IsActive(favourites)">Conditional</animation>
 						<animation effect="fade" start="0" end="100" delay="150" time="450" condition="!Window.IsActive(favourites)">Conditional</animation>
@@ -776,7 +791,7 @@
 					<control type="group">
 						<posx>48</posx>
 						<posy>330</posy>
-						<visible>stringcompare(Skin.String(defaultpanel.widget.type),$LOCALIZE[10511]) + [!Control.HasFocus(84) + [[Container(525).HasFocus(5) + IsEmpty(Skin.String(pictures.slideshowpath2))] | [Container(525).HasFocus(5) + IsEmpty(Skin.String(pictures.slideshowpath2))] | Container(525).HasFocus(10) | Container(525).HasFocus(7) | [Container(525).HasFocus(9) + Skin.HasSetting(settings.widget.usedefault)]]] | [Control.HasFocus(84) + !Container(84).HasFocus(0)] | [Container(525).HasFocus(9) + !Control.HasFocus(84) + !Skin.HasSetting(settings.widget.usedefault)]</visible>
+						<visible>stringcompare(Skin.String(defaultpanel.widget.type),$LOCALIZE[10511]) + [!Control.HasFocus(84) + [[Container(525).HasFocus(5) + IsEmpty(Skin.String(pictures.slideshowpath2))] | [Container(525).HasFocus(5) + IsEmpty(Skin.String(pictures.slideshowpath2))] | Container(525).HasFocus(10) | Container(525).HasFocus(11) | Container(525).HasFocus(7) | [Container(525).HasFocus(9) + Skin.HasSetting(settings.widget.usedefault)]]] | [Control.HasFocus(84) + !Container(84).HasFocus(0)] | [Container(525).HasFocus(9) + !Control.HasFocus(84) + !Skin.HasSetting(settings.widget.usedefault)]</visible>
 						<animation effect="fade" start="0" end="100" time="350">Visible</animation>
 						<animation effect="fade" start="100" end="0" time="450" condition="Window.IsActive(favourites)">Conditional</animation>
 						<animation effect="fade" start="0" end="100" delay="150" time="450" condition="!Window.IsActive(favourites)">Conditional</animation>
@@ -977,7 +992,7 @@
 					<control type="group">
 						<posx>35</posx>
 						<posy>325</posy>
-						<visible>[Control.HasFocus(84) + Container(84).HasFocus(0)] | [stringcompare(Skin.String(defaultpanel.widget.type),$LOCALIZE[12600]) + [!Control.HasFocus(84) + [[Container(525).HasFocus(5) + IsEmpty(Skin.String(pictures.slideshowpath2))] | Container(525).HasFocus(10) | Container(525).HasFocus(7) | [Container(525).HasFocus(9) + Skin.HasSetting(settings.widget.usedefault)]]]]</visible>
+						<visible>[Control.HasFocus(84) + Container(84).HasFocus(0)] | [stringcompare(Skin.String(defaultpanel.widget.type),$LOCALIZE[12600]) + [!Control.HasFocus(84) + [[Container(525).HasFocus(5) + IsEmpty(Skin.String(pictures.slideshowpath2))] | Container(525).HasFocus(10) | Container(525).HasFocus(11) | Container(525).HasFocus(7) | [Container(525).HasFocus(9) + Skin.HasSetting(settings.widget.usedefault)]]]]</visible>
 						<animation effect="fade" start="0" end="100" time="250">Visible</animation>
 						<animation effect="fade" start="100" end="0" time="450" condition="Window.IsActive(favourites)">Conditional</animation>
 						<animation effect="fade" start="0" end="100" delay="150" time="450" condition="!Window.IsActive(favourites)">Conditional</animation>

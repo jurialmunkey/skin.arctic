@@ -752,7 +752,7 @@
 			<property name="Poster">windows/home/icons/folder.png</property>
 			<label>$LOCALIZE[1214]</label>
 			<onclick>SetFocus(525)</onclick>
-			<onclick>ActivateWindow(musiclibrary,files,return)</onclick>
+			<onclick>ActivateWindow(musicfiles)</onclick>
 			<visible>Container(525).HasFocus(3)</visible>
 		</item>
 		<item id="5">
@@ -2268,9 +2268,16 @@
 			<onclick>SetFocus(83,0)</onclick>
 			<icon>DefaultAddonService.png</icon>
 		</item>
+		<item id="11">
+			<label>PlayDVD</label>
+			<property name="single">$INFO[Skin.String(HomeHomeSingleImage)]</property>
+			<property name="multi">$INFO[Skin.String(HomeHomeMultiImage)]</property>
+			<onclick>SetFocus(525)</onclick>
+			<onclick>PlayDVD</onclick>
+			<visible>System.HasMediaDVD</visible>
+		</item>
 		<item id="10">
 			<label>Favourites</label>
-			<visible>true</visible>
 			<property name="single">$INFO[Skin.String(HomeHomeSingleImage)]</property>
 			<property name="multi">$INFO[Skin.String(HomeHomeMultiImage)]</property>
 			<onclick>SetFocus(525)</onclick>
@@ -2278,6 +2285,7 @@
 			<visible>!Skin.HasSetting(disable.favourites)</visible>
 			<icon>DefaultFavourites.png</icon>
 		</item>
+		
 	</include>
 	
 	<variable name="Metadata.Actors.InLibrary">

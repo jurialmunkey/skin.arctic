@@ -5,10 +5,10 @@
             <control type="group">
                 <include>KeyboardAnimations</include>
                 <control type="image">
-					<posx>618</posx>
+					<posx>608</posx>
                 	<posy>230</posy>
-                	<width>684</width>
-                	<height>621</height>
+                	<width>704</width>
+                	<height>631</height>
 					<bordertexture border="40">arctic/common/border-20.png</bordertexture>
 					<bordersize>20</bordersize>
 					<texture border="40">arctic/common/panel.png</texture>
@@ -153,7 +153,7 @@
     
                 <control type="group" id="8000">
                     <posx>626</posx>
-                    <posy>755</posy>
+                    <posy>760</posy>
                     <control type="button" id="7">
                         <description>Close</description>
                         <label>$LOCALIZE[42002]</label>

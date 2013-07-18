@@ -7,24 +7,17 @@
             <visible>!Window.IsVisible(filebrowser)</visible>
             <control type="image">
                 <posx>525</posx>
-                <posy>270</posy>
+                <posy>285</posy>
                 <width>870</width>
-                <height>550</height>
+                <height>529</height>
                 <bordertexture border="40">arctic/common/border-20.png</bordertexture>
                 <bordersize>20</bordersize>
                 <texture border="40">arctic/common/panel.png</texture>
             </control>
-            <control type="image">
-                <posx>545</posx>
-                <posy>340</posy>
-                <width>830</width>
-                <height>400</height>
-                <texture border="40">arctic/common/whitepanel8.png</texture>
-            </control>
             <control type="label">
                 <description>Heading</description>
-                <posx>473</posx>
-                <posy>300</posy>
+                <posx>463</posx>
+                <posy>313</posy>
                 <width>974</width>
                 <include>DialogHeaderMod</include>
                 <label>$INFO[Window(skinsettings).property(Dialog)]</label>
@@ -33,12 +26,12 @@
             </control>
             <control type="label">
                 <description>Heading</description>
-                <posx>473</posx>
-                <posy>300</posy>
+                <posx>1350</posx>
+                <posy>313</posy>
                 <width>974</width>
                 <include>DialogHeaderMod</include>
                 <label>$INFO[Window(skinsettings).property(CustomDialog)]</label>
-                <align>center</align>
+                <align>right</align>
                 <visible>!IsEmpty(Window(skinsettings).property(CustomDialog))</visible>
             </control>
             <control type="image">
@@ -46,21 +39,21 @@
             	<posy>353</posy>
             	<width>532</width>
             	<height>301</height>
-            	<texture border="5">dialogs/default/inner.png</texture>
+            	<texture border="15">arctic/common/whitepanel8.png</texture>
             </control>
             <control type="image">
             	<posx>1104</posx>
             	<posy>353</posy>
             	<width>258</width>
             	<height>301</height>
-            	<texture border="5">dialogs/default/inner.png</texture>
+            	<texture border="15">arctic/common/whitepanel8.png</texture>
             </control>
             <control type="image">
             	<posx>558</posx>
             	<posy>667</posy>
             	<width>804</width>
             	<height>61</height>
-            	<texture border="5">dialogs/default/inner.png</texture>
+            	<texture border="15">arctic/common/whitepanel8.png</texture>
             </control>
             
             <include condition="stringcompare(Window(skinsettings).property(Dialog),$LOCALIZE[41251])">SettingsBackgroundDialogGlobal</include>
@@ -75,8 +68,8 @@
             <include condition="stringcompare(Window(skinsettings).property(Dialog),$LOCALIZE[12600])">SettingsBackgroundDialogWeather</include>
             
             <control type="group">
-                <posx>547</posx>
-                <posy>718</posy>
+                <posx>540</posx>
+                <posy>710</posy>
                 <control type="button" id="5">
                     <description>Close</description>
                     <texturefocus>buttons/cancel-fo.png</texturefocus>

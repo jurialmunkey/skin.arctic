@@ -109,14 +109,7 @@
                 <bordertexture border="40">arctic/common/border-20.png</bordertexture>
                 <bordersize>20</bordersize>
                 <texture border="40">arctic/common/panel.png</texture>
-            </control>
-            <control type="image">
-                <posx>305</posx>
-                <posy>293</posy>
-                <width>1310</width>
-                <height>493</height>
-                <texture border="40">arctic/common/whitepanel8.png</texture>
-            </control>     
+            </control>  
             <control type="label" id="20">
                 <description>Heading</description>
                 <posx>1600</posx>
@@ -131,13 +124,6 @@
                 <control type="group">
                     <posx>318</posx>
                     <posy>303</posy>
-                    <control type="image">
-                    	<posx>0</posx>
-                    	<posy>0</posy>
-                    	<width>310</width>
-                    	<height>473</height>
-                    	<texture border="5">dialogs/default/inner.png</texture>
-                    </control>
                     <control type="grouplist" id="9">
                         <description>button area</description>
                         <posx>0</posx>
@@ -157,25 +143,17 @@
                         <font>Font-Condensed-S32</font>
                         <textoffsetx>20</textoffsetx>
                         <align>right</align>
-                        <textcolor>FF585858</textcolor>
-                        <focusedcolor>eewhite</focusedcolor>
-                        <disabledcolor>77585858</disabledcolor>
+                        <textcolor>mod-infotags-alt</textcolor>
+                        <focusedcolor>white</focusedcolor>
+                        <disabledcolor>mod-infotags-li</disabledcolor>
                         <shadowcolor>20FFFFFF</shadowcolor>
-                        <texturefocus border="2">dialogs/default/highlight-grey.png</texturefocus>
-                        <texturenofocus>dialogs/default/separator.png</texturenofocus>
+						<texturefocus border="8">views/other/focus-mod8.png</texturefocus>
                     </control>
                 </control>
                 <!-- right group -->
                 <control type="group" >
                     <posx>642</posx>
                     <posy>303</posy>
-                    <control type="image">
-                    	<posx>0</posx>
-                    	<posy>0</posy>
-                    	<width>960</width>
-                    	<height>473</height>
-                    	<texture border="5">dialogs/default/inner.png</texture>
-                    </control>
                     <control type="grouplist" id="2">
                         <description>control area</description>
                         <posx>0</posx>
@@ -199,12 +177,11 @@
                 <font>Font-Condensed-S32</font>
                 <textoffsetx>20</textoffsetx>
                 <align>left</align>
-                <textcolor>FF585858</textcolor>
-                <focusedcolor>eewhite</focusedcolor>
-                <disabledcolor>77585858</disabledcolor>
+                <textcolor>mod-infotags-alt</textcolor>
+                <focusedcolor>white</focusedcolor>
+                <disabledcolor>mod-infotags-li</disabledcolor>
                 <shadowcolor>20FFFFFF</shadowcolor>
-                <texturefocus border="2">dialogs/default/highlight.png</texturefocus>
-                <texturenofocus>dialogs/default/separator.png</texturenofocus>
+                <texturefocus border="8">views/other/focus-mod8.png</texturefocus>
             </control>
             
             <control type="radiobutton" id="4">
@@ -214,14 +191,13 @@
                 <textoffsetx>20</textoffsetx>
                 <textwidth>844</textwidth>
                 <radioposx>852</radioposx>
-                <textcolor>FF585858</textcolor>
-                <focusedcolor>eewhite</focusedcolor>
-                <disabledcolor>77585858</disabledcolor>
+                <textcolor>mod-infotags-alt</textcolor>
+                <focusedcolor>white</focusedcolor>
+                <disabledcolor>mod-infotags-li</disabledcolor>
                 <shadowcolor>20FFFFFF</shadowcolor>
                 <textureradioon>buttons/radio/radio-light-fo.png</textureradioon>
                 <textureradiooff>buttons/radio/radio-light-nf.png</textureradiooff>
-                <texturefocus border="2">dialogs/default/highlight.png</texturefocus>
-                <texturenofocus>dialogs/default/separator.png</texturenofocus>
+                <texturefocus border="8">views/other/focus-mod8.png</texturefocus>
             </control>
             
             <control type="spincontrolex" id="5">
@@ -230,11 +206,10 @@
                 <texturedown>buttons/spinctrl/arrow-light-down-nf.png</texturedown>
                 <textureupfocus>buttons/spinctrl/arrow-light-up-fo.png</textureupfocus>
                 <texturedownfocus>buttons/spinctrl/arrow-light-down-fo.png</texturedownfocus>
-                <texturefocus border="2">dialogs/default/highlight.png</texturefocus>
-                <texturenofocus>dialogs/default/separator.png</texturenofocus>
-                <textcolor>FF585858</textcolor>
-                <focusedcolor>eewhite</focusedcolor>
-                <disabledcolor>77585858</disabledcolor>
+                <texturefocus border="8">views/other/focus-mod8.png</texturefocus>
+                <textcolor>mod-infotags-alt</textcolor>
+                <focusedcolor>white</focusedcolor>
+                <disabledcolor>mod-infotags-li</disabledcolor>
                 <shadowcolor>20FFFFFF</shadowcolor>
                 <textoffsetx>20</textoffsetx>
                 <spinposx>5</spinposx>
@@ -248,7 +223,7 @@
                 <font>Font-Condensed-S30-B</font>
                 <textoffsetx>20</textoffsetx>
                 <textoffsety>14</textoffsety>
-                <textcolor>AA585858</textcolor>
+                <textcolor>mod-infotags-alt</textcolor>
                 <shadowcolor>20FFFFFF</shadowcolor>
             </control>
             
@@ -264,9 +239,9 @@
                 <texturesliderbar>dialogs/mediasource/slider-back.png</texturesliderbar>
                 <textureslidernib>dialogs/mediasource/slider-nib-nf.png</textureslidernib>
                 <textureslidernibfocus>dialogs/mediasource/slider-nib-fo.png</textureslidernibfocus>
-                <textcolor>FF585858</textcolor>
-                <focusedcolor>eewhite</focusedcolor>
-                <disabledcolor>77585858</disabledcolor>
+                <textcolor>mod-infotags-alt</textcolor>
+                <focusedcolor>white</focusedcolor>
+                <disabledcolor>mod-infotags-li</disabledcolor>
                 <shadowcolor>20FFFFFF</shadowcolor>
                 <textoffsetx>20</textoffsetx>
                 <pulseonselect>false</pulseonselect>
@@ -302,7 +277,7 @@
 
             <control type="group" id="8004">
                 <posx>628</posx>
-                <posy>764</posy>
+                <posy>762</posy>
                 <control type="button" id="10">
                     <description>Select</description>
                     <label>$LOCALIZE[42000]</label>
@@ -608,34 +583,6 @@
                     <texture border="39">arctic/common/panel.png</texture>
                 </control>
                 <control type="image">
-                    <posx>407</posx>
-                    <posy>286</posy>
-                    <width>1106</width>
-                    <height>508</height>
-                    <texture border="39">arctic/common/whitepanel8.png</texture>
-                </control>
-                <control type="image">
-                	<posx>421</posx>
-                	<posy>300</posy>
-                	<width>644</width>
-                	<height>481</height>
-                	<texture border="5">dialogs/default/inner.png</texture>
-                </control>
-                <control type="image">
-                	<posx>1079</posx>
-                	<posy>300</posy>
-                	<width>420</width>
-                	<height>421</height>
-                	<texture border="5">dialogs/default/inner-dark.png</texture>
-                </control>
-                <control type="image">
-                	<posx>1079</posx>
-                	<posy>719</posy>
-                	<width>420</width>
-                	<height>62</height>
-                	<texture border="5">dialogs/default/inner.png</texture>
-                </control>
-                <control type="image">
                     <posx>1089</posx>
                     <posy>310</posy>
                     <width>400</width>
@@ -650,11 +597,11 @@
                     <height>60</height>
                     <textoffsetx>20</textoffsetx>
                     <align>left</align>
-                    <label>[COLOR=FF787878]$LOCALIZE[21863][/COLOR]</label>
+                    <label>[COLOR=mod-infotags-alt]$LOCALIZE[21863][/COLOR]</label>
                     <label2>$INFO[Container(6).ListItem.Property(Addon.Creator)]</label2>
                     <font>Font-Condensed-S29</font>
-                    <textcolor>FF585858</textcolor>
-                    <disabledcolor>FF585858</disabledcolor>
+                    <textcolor>mod-infotags-alt</textcolor>
+                    <disabledcolor>mod-infotags-alt</disabledcolor>
                     <enable>false</enable>
                 </control>
             </control>
@@ -662,7 +609,7 @@
             <control type="label" id="1">
                 <description>Heading</description>
                 <posx>473</posx>
-                <posy>245</posy>
+                <posy>248</posy>
                 <width>974</width>
                 <include>DialogHeaderMod</include>
                 <label>-</label>
@@ -934,14 +881,15 @@
                         <width>644</width>
                         <height>60</height>
                         <texture>dialogs/default/separator.png</texture>
+                        <colordiffuse>99ffffff</colordiffuse>
                     </control>
                     <control type="image">
-                        <posx>0</posx>
+                        <posx>5</posx>
                         <posy>0</posy>
                         <width>60</width>
                         <height>60</height>
                         <aspectratio>keep</aspectratio>
-                        <texture background="true" fallback="dialogs/select/icons/DefaultAddon.png">$INFO[ListItem.Icon]</texture>
+                        <texture background="true" fallback="dialogs/select/icons/DefaultAddon.png"  diffuse="arctic/common/whitepanel.png">$INFO[ListItem.Icon]</texture>
                     </control>
                     <control type="label">
                         <posx>80</posx>
@@ -953,7 +901,7 @@
                         <align>left</align>
                         <aligny>center</aligny>
                         <selectedcolor>DialogSelected</selectedcolor>
-                        <textcolor>FF585858</textcolor>
+                        <textcolor>mod-infotags-alt</textcolor>
                         <scroll>false</scroll>
                     </control>
                     <control type="label">
@@ -966,7 +914,7 @@
                         <align>right</align>
                         <aligny>center</aligny>
                         <selectedcolor>DialogSelected</selectedcolor>
-                        <textcolor>FF585858</textcolor>
+                        <textcolor>mod-infotags-alt</textcolor>
                         <scroll>false</scroll>
                     </control>
                 </itemlayout>
@@ -996,7 +944,7 @@
                             <align>left</align>
                             <aligny>center</aligny>
                             <selectedcolor>DialogSelected</selectedcolor>
-                            <textcolor>FF585858</textcolor>
+                            <textcolor>mod-infotags-alt</textcolor>
                             <scroll>false</scroll>
                         </control>
                         <control type="label">
@@ -1009,7 +957,7 @@
                             <align>right</align>
                             <aligny>center</aligny>
                             <selectedcolor>DialogSelected</selectedcolor>
-                            <textcolor>FF585858</textcolor>
+                            <textcolor>mod-infotags-alt</textcolor>
                             <scroll>false</scroll>
                         </control>
                     </control>
@@ -1020,7 +968,7 @@
                         <control type="image">
                             <width>644</width>
                             <height>60</height>
-                            <texture border="2">dialogs/default/highlight.png</texture>
+                            <texture border="10">views/other/focus-mod8.png</texture>
                         </control>
                         <control type="label">
                             <posx>80</posx>
@@ -1047,12 +995,12 @@
                         </control>
                     </control>
                     <control type="image">
-                        <posx>0</posx>
+                        <posx>5</posx>
                         <posy>0</posy>
                         <width>60</width>
                         <height>60</height>
                         <aspectratio>keep</aspectratio>
-                        <texture background="true" fallback="dialogs/select/icons/DefaultAddon.png">$INFO[ListItem.Icon]</texture>
+                        <texture background="true" fallback="dialogs/select/icons/DefaultAddon.png" diffuse="arctic/common/whitepanel.png">$INFO[ListItem.Icon]</texture>
                     </control>
                 </focusedlayout>
             </control>
@@ -1090,7 +1038,7 @@
 
             <control type="group" id="8000">
                 <posx>626</posx>
-                <posy>772</posy>
+                <posy>768</posy>
                 <animation effect="slide" end="-217" time="0" condition="Control.IsVisible(6)">Conditional</animation>
                 <control type="button" id="5">
                     <description>Select</description>
@@ -2100,7 +2048,7 @@
 					<bordersize>20</bordersize>
                 	<texture border="40">arctic/common/panel.png</texture>
                 </control>
-                <control type="image">
+                <!--<control type="image">
                 	<posx>469</posx>
                 	<posy>290</posy>
                 	<width>983</width>
@@ -2120,16 +2068,16 @@
                 	<width>319</width>
                 	<height>481</height>
                 	<texture border="5">dialogs/default/inner-dark.png</texture>
-                </control>
+                </control>-->
                             
                 <control type="label" id="411">
                     <description>Heading</description>
-                    <posx>473</posx>
+                    <posx>1440</posx>
                     <posy>250</posy>
                     <width>974</width>
                     <include>DialogHeaderMod</include>
                     <label>-</label>
-                    <align>center</align>
+                    <align>right</align>
                 </control>
                 
                 <control type="image">
@@ -2182,13 +2130,14 @@
                             <width>644</width>
                             <height>60</height>
                             <texture>dialogs/default/separator.png</texture>
+                            <colordiffuse>77white</colordiffuse>
                         </control>
                         <control type="image">
                             <posx>5</posx>
                             <posy>0</posy>
                             <width>60</width>
                             <height>60</height>
-                            <texture>$INFO[ListItem.ActualIcon,windows/filemanager/icons/,/nf.png]</texture>
+                            <texture>$INFO[ListItem.ActualIcon,windows/filemanager/icons/,/fo.png]</texture>
                             <aspectratio>keep</aspectratio>
                         </control>
                         <control type="label">
@@ -2200,7 +2149,7 @@
                             <font>Font-Condensed-S32</font>
                             <align>left</align>
                             <aligny>center</aligny>
-                            <textcolor>FF585858</textcolor>
+                            <textcolor>mod-infotags-alt</textcolor>
                             <scroll>false</scroll>
                             <animation effect="slide" end="-50" time="0" condition="IsEmpty(ListItem.Icon)">Conditional</animation>
                         </control>
@@ -2216,13 +2165,14 @@
                                 <width>644</width>
                                 <height>60</height>
                                 <texture>dialogs/default/separator.png</texture>
+                                <colordiffuse>77white</colordiffuse>
                             </control>
                             <control type="image">
                                 <posx>5</posx>
                                 <posy>0</posy>
                                 <width>60</width>
                                 <height>60</height>
-                                <texture>$INFO[ListItem.ActualIcon,windows/filemanager/icons/,/nf.png]</texture>
+                                <texture>$INFO[ListItem.ActualIcon,windows/filemanager/icons/,/fo.png]</texture>
                                 <aspectratio>keep</aspectratio>
                             </control>
                             <control type="label">
@@ -2234,7 +2184,7 @@
                                 <font>Font-Condensed-S32</font>
                                 <align>left</align>
                                 <aligny>center</aligny>
-                                <textcolor>FF585858</textcolor>
+                                <textcolor>mod-infotags-alt</textcolor>
                                 <scroll>false</scroll>
                                 <animation effect="slide" end="-50" time="0" condition="IsEmpty(ListItem.Icon)">Conditional</animation>
                             </control>  
@@ -2246,7 +2196,7 @@
                             <control type="image">
                                 <width>644</width>
                                 <height>60</height>
-                                <texture border="2">dialogs/default/highlight.png</texture>
+								<texture border="8">views/other/focus-mod8.png</texture>
                             </control>
                             <control type="image">
                                 <posx>5</posx>
@@ -2289,13 +2239,14 @@
                             <width>644</width>
                             <height>60</height>
                             <texture>dialogs/default/separator.png</texture>
+                            <colordiffuse>77white</colordiffuse>
                         </control>
                         <control type="image">
                             <posx>5</posx>
                             <posy>0</posy>
                             <width>60</width>
                             <height>60</height>
-                            <texture>$INFO[ListItem.ActualIcon,windows/filemanager/icons/,/nf.png]</texture>
+                            <texture>$INFO[ListItem.ActualIcon,windows/filemanager/icons/,/fo.png]</texture>
                             <aspectratio>keep</aspectratio>
                         </control>
                         <control type="label">
@@ -2307,7 +2258,7 @@
                             <font>Font-Condensed-S32</font>
                             <align>left</align>
                             <aligny>center</aligny>
-                            <textcolor>FF585858</textcolor>
+                            <textcolor>mod-infotags-alt</textcolor>
                             <scroll>false</scroll>
                         </control>
                     </itemlayout>
@@ -2322,13 +2273,14 @@
                                 <width>644</width>
                                 <height>60</height>
                                 <texture>dialogs/default/separator.png</texture>
+                                <colordiffuse>77white</colordiffuse>
                             </control>
                             <control type="image">
                                 <posx>5</posx>
                                 <posy>0</posy>
                                 <width>60</width>
                                 <height>60</height>
-                                <texture>$INFO[ListItem.ActualIcon,windows/filemanager/icons/,/nf.png]</texture>
+                                <texture>$INFO[ListItem.ActualIcon,windows/filemanager/icons/,/fo.png]</texture>
                                 <aspectratio>keep</aspectratio>
                             </control>
                             <control type="label">
@@ -2340,7 +2292,7 @@
                                 <font>Font-Condensed-S32</font>
                                 <align>left</align>
                                 <aligny>center</aligny>
-                                <textcolor>FF585858</textcolor>
+                                <textcolor>mod-infotags-alt</textcolor>
                                 <scroll>false</scroll>
                                 <animation effect="slide" end="-50" time="0" condition="IsEmpty(ListItem.Icon)">Conditional</animation>
                             </control>  
@@ -2352,7 +2304,7 @@
                             <control type="image">
                                 <width>644</width>
                                 <height>60</height>
-                                <texture border="2">dialogs/default/highlight.png</texture>
+								<texture border="8">views/other/focus-mod8.png</texture>
                             </control>
                             <control type="image">
                                 <posx>5</posx>
@@ -2410,7 +2362,7 @@
                 
                 <control type="group" id="8000">
                     <posx>466</posx>
-                    <posy>768</posy>
+                    <posy>766</posy>
                     <control type="button" id="413">
                         <description>Select</description>
                         <label>$LOCALIZE[42000]</label>

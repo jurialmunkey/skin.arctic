@@ -16,9 +16,9 @@
             	<bordersize>20</bordersize>
             </control>
             <control type="image">
-            	<posx>638</posx>
+            	<posx>637</posx>
             	<posy>300</posy>
-            	<width>644</width>
+            	<width>648</width>
             	<height>462</height>
             	<texture border="15">arctic/common/whitepanel8.png</texture>
             </control>    

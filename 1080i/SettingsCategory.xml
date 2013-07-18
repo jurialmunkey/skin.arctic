@@ -58,7 +58,7 @@
                 <control type="image">
                     <posx>180</posx>
                     <posy>270</posy>
-                    <width>1563</width>
+                    <width>1562</width>
                     <height>628</height>
                     <texture border="35">arctic/common/panel.png</texture>
                     <animation type="WindowOpen">

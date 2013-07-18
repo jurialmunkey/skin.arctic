@@ -577,7 +577,7 @@
     </include>
     
     <include name="SettingsHeader">
-        <control type="group">
+    	<control type="group">
             <posx>75</posx>
             <posy>26</posy>
             <visible>!Window.IsActive(favourites)</visible>

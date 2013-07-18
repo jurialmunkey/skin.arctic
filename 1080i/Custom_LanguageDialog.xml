@@ -4,36 +4,30 @@
         <control type="group">
             <control type="group">
                 <include>KeyboardAnimations</include>
+                <control type="image">
+					<posx>618</posx>
+                	<posy>230</posy>
+                	<width>684</width>
+                	<height>621</height>
+					<bordertexture border="40">arctic/common/border-20.png</bordertexture>
+					<bordersize>20</bordersize>
+					<texture border="40">arctic/common/panel.png</texture>
+				</control>
+				<control type="image">
+					<posx>638</posx>
+                	<posy>300</posy>
+                	<width>644</width>
+                	<height>481</height>
+					<texture border="40">arctic/common/whitepanel8.png</texture>
+				</control>
                 <control type="label">
                     <description>Heading</description>
                     <posx>473</posx>
-                    <posy>218</posy>
+                    <posy>260</posy>
                     <width>974</width>
                     <include>DialogHeaderMod</include>
                     <label>$LOCALIZE[41193]</label>
                     <align>center</align>
-                </control>
-                
-                <control type="image">
-                    <posx>920</posx>
-                    <posy>246</posy>
-                    <width>80</width>
-                    <height>60</height>
-                    <texture>dialogs/default/arrow.png</texture>
-                </control>
-                <control type="image">
-                    <posx>604</posx>
-                    <posy>266</posy>
-                    <width>712</width>
-                    <height>548</height>
-                    <texture border="39">dialogs/default/bg.png</texture>
-                </control>
-                <control type="image">
-                	<posx>638</posx>
-                	<posy>300</posy>
-                	<width>644</width>
-                	<height>481</height>
-                	<texture border="5">dialogs/default/inner.png</texture>
                 </control>
                             
                 <control type="list" id="3">
@@ -109,7 +103,7 @@
                             <control type="image">
                                 <width>644</width>
                                 <height>60</height>
-                                <texture border="2">dialogs/default/highlight.png</texture>
+                                <texture border="8">views/other/focus-mod8.png</texture>
                             </control>
                             <control type="label">
                                 <posx>20</posx>
@@ -140,13 +134,6 @@
                             <onclick>Skin.SetString(MovieMPAALang,DE)</onclick>
                             <onclick>PreviousMenu</onclick>
                         </item>
-                        <!--<item id="2">
-                            <description>IT</description>
-                            <label>Italia</label>
-                            <label2>IT</label2>
-                            <onclick>Skin.SetString(MovieMPAALang,IT)</onclick>
-                            <onclick>PreviousMenu</onclick>
-                        </item>-->
                         <item id="39">
                             <description>UK</description>
                             <label>United Kingdom</label>
@@ -166,7 +153,7 @@
     
                 <control type="group" id="8000">
                     <posx>626</posx>
-                    <posy>776</posy>
+                    <posy>755</posy>
                     <control type="button" id="7">
                         <description>Close</description>
                         <label>$LOCALIZE[42002]</label>

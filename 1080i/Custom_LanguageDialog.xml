@@ -14,9 +14,9 @@
 					<texture border="40">arctic/common/panel.png</texture>
 				</control>
 				<control type="image">
-					<posx>638</posx>
+					<posx>637</posx>
                 	<posy>300</posy>
-                	<width>644</width>
+                	<width>646</width>
                 	<height>481</height>
 					<texture border="40">arctic/common/whitepanel8.png</texture>
 				</control>

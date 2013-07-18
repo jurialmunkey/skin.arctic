@@ -35,9 +35,9 @@
                 <visible>!IsEmpty(Window(skinsettings).property(CustomDialog))</visible>
             </control>
             <control type="image">
-            	<posx>558</posx>
+            	<posx>557</posx>
             	<posy>353</posy>
-            	<width>532</width>
+            	<width>534</width>
             	<height>301</height>
             	<texture border="15">arctic/common/whitepanel8.png</texture>
             </control>

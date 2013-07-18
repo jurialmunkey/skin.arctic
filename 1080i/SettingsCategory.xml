@@ -9,9 +9,10 @@
         
         <control type="group">
             <include>OptionsShutdownAnimation</include>
+            <posy>-10</posy>
             <animation type="WindowClose">
-                <effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
-                <effect type="zoom" start="100" end="85" time="300" center="960,600" tween="sine" easing="out" />
+                <effect type="fade" start="100" end="0" time="300" delay="450" tween="sine" easing="out" />
+                <effect type="zoom" start="100" end="85" time="400" delay="350" center="960,600" tween="sine" easing="out" />
             </animation>
             <animation type="Visible">
                 <effect type="fade" start="0" end="100" time="300" delay="300" tween="sine" easing="out" />
@@ -22,40 +23,72 @@
                 <effect type="zoom" start="100" end="85" time="300" center="960,600" tween="sine" easing="out" />
             </animation>
             <visible>!Window.IsActive(favourites)</visible>
+            <control type="image">
+                <description>Shadow</description>
+                <posx>150</posx>
+                <posy>840</posy>
+                <width>1620</width>
+                <height>150</height>
+                <texture>windows/home/item-shadow.png</texture>
+                <animation type="WindowOpen">
+            		<effect type="fade" start="0" end="100" tween="sine" easing="inout" time="550" delay="350" />
+				</animation>
+				<animation type="WindowClose">
+            		<effect type="fade" start="100" end="0" tween="sine" easing="inout" time="350" delay="0" />
+				</animation>
+            </control>
+            <!-- Dark Panel -->
+            <control type="group">
+                <control type="image">
+                    <posx>170</posx>
+                    <posy>260</posy>
+                    <width>1583</width>
+                    <height>648</height>
+                    <texture border="35">arctic/common/border-20.png</texture>
+                    <animation type="WindowOpen">
+						<effect type="fade" start="0" end="100" tween="sine" easing="inout" time="350" delay="0" />
+						<effect type="zoom" start="76" end="100" center="1344,560" tween="cubic" easing="out" time="400" delay="75" /> 
+						<effect type="zoom" start="319,260,1253,648" end="170,260,1583,648" tween="cubic" easing="out" time="545" delay="350" />
+					</animation>
+					<animation type="WindowClose">
+						<effect type="fade" end="0" start="100" tween="sine" easing="inout" time="450" delay="0" />
+						<effect type="zoom" end="319,260,1253,648" start="170,260,1583,648" tween="cubic" easing="out" time="545" delay="0" />
+					</animation>
+                </control>
+                <control type="image">
+                    <posx>190</posx>
+                    <posy>280</posy>
+                    <width>1543</width>
+                    <height>608</height>
+                    <texture border="35">arctic/common/panel.png</texture>
+                    <animation type="WindowOpen">
+						<effect type="fade" start="0" end="100" tween="sine" easing="inout" time="0" delay="350" />
+						<effect type="zoom" start="76" end="100" center="1344,560" tween="cubic" easing="out" time="400" delay="75" /> 
+						<effect type="zoom" start="339,280,1213,608" end="190,280,1543,608" tween="cubic" easing="out" time="545" delay="350" />
+					</animation>
+					<animation type="WindowClose">
+						<effect type="fade" end="0" start="100" tween="sine" easing="inout" time="450" delay="0" />
+						<effect type="zoom" end="339,280,1213,608" start="190,280,1543,608" tween="cubic" easing="out" time="545" delay="0" />
+					</animation>
+                </control>
+            </control>
+            <!-- Categories -->
             <control type="group">
                 <animation type="WindowOpen">
-                    <effect type="slide" start="200" end="0" tween="cubic" easing="out" time="650" />
-                    <effect type="fade" start="0" end="100" tween="sine" easing="inout" time="300" />
-                    <effect type="zoom" start="88" end="100" center="576,560" tween="cubic" easing="out" time="400" />
-                </animation>
-                            
-                <control type="label">
-                    <description>Category</description>
-                    <posx>483</posx>
-                    <posy>235</posy>
-                    <height>40</height>
-                    <width>338</width>
-                    <align>right</align>
-                    <font>Font-Alaska-S25-BL</font>
-                    <label>[UPPERCASE]$LOCALIZE[42130][/UPPERCASE]</label>
-                    <textcolor>Mod_Tags</textcolor>
-                </control>
-                
-                <!-- Panel -->
-                <control type="image">
-                    <posx>164</posx>
-                    <posy>265</posy>
-                    <height>638</height>
-                    <width>370</width>
-                    <texture border="35">views/newgloss/whitepanel-15.png</texture>
-                </control>
-                
+            		<effect type="fade" start="0" end="100" tween="sine" easing="inout" time="0" delay="350" />
+					<effect type="zoom" start="76" end="100" center="1344,560" tween="cubic" easing="out" time="400" delay="75" /> 
+					<effect type="slide" start="190" end="10" tween="cubic" easing="out" time="545" delay="320" />
+				</animation>
+				<animation type="WindowClose">
+					<effect type="slide" end="190" start="10" tween="cubic" easing="out" time="745" delay="0" />
+					<effect type="fade" end="0" start="100" time="0" delay="450" />
+				</animation>
                 <!-- Side Buttons -->
                 <control type="grouplist" id="3">
                     <description>Button Area</description>
                     <posx>180</posx>
                     <posy>281</posy>
-                    <width>338</width>
+                    <width>360</width>
                     <height>609</height>
                     <itemgap>-1</itemgap>
                     <onleft>5</onleft>
@@ -64,45 +97,34 @@
                     <ondown>3</ondown>
                     <scrolltime tween="cubic" easing="out">500</scrolltime>
                     <orientation>vertical</orientation>
+                    <visible allowhiddenfocus="true">true</visible>
                 </control>
             </control>
             <control type="group">
+            	<animation type="WindowOpen">
+            		<effect type="fade" start="0" end="100" tween="sine" easing="inout" time="350" delay="0" />
+					<effect type="zoom" start="76" end="100" center="1344,560" tween="cubic" easing="out" time="400" delay="75" /> 
+					<effect type="slide" start="-190" end="-10" tween="cubic" easing="out" time="545" delay="350" />
+				</animation>
+				<animation type="WindowClose">
+					<effect type="slide" end="-190" start="-10" tween="cubic" easing="out" time="545" delay="0" />
+				</animation>
                 <posx>175</posx> 
-                <animation type="WindowOpen">
-                    <effect type="slide" start="200" end="0" tween="cubic" easing="out" time="545" delay="75" />
-                    <effect type="fade" start="0" end="100" tween="sine" easing="inout" time="300" delay="75" />
-                    <effect type="zoom" start="76" end="100" center="1344,560" tween="cubic" easing="out" time="400" delay="75" /> 
-                </animation>
-                
-                <control type="label">
-                    <description>Settings info</description>
-                    <posx>390</posx>
-                    <posy>235</posy>
-                    <height>40</height>
-                    <width>338</width>
-                    <align>left</align>
-                    <font>Font-Alaska-S25-BL</font>
-                    <label>[UPPERCASE]$LOCALIZE[5][/UPPERCASE]</label>
-                    <textcolor>Mod_Tags</textcolor>
-                </control>
-                          
                 <!-- Panel -->
                 <control type="image">
-                    <posx>339</posx>
-                    <posy>265</posy>
-                    <height>638</height>
-                    <width>1243</width>
-                    <texture border="35">views/newgloss/whitepanel-15.png</texture>
+                    <posx>354</posx>
+                    <posy>280</posy>
+                    <height>608</height>
+                    <width>1213</width>
+                    <texture border="35">arctic/common/panel.png</texture>
                 </control>
                 <control type="image">
-                    <description>Shadow</description>
-                    <posx>-45</posx>
-                    <posy>883</posy>
-                    <width>1710</width>
-                    <height>150</height>
-                    <texture>windows/home/item-shadow.png</texture>
+                    <posx>354</posx>
+                    <posy>280</posy>
+                    <height>608</height>
+                    <width>1213</width>
+                    <texture border="35">arctic/common/whitepanel8.png</texture>
                 </control>
-                
                 <control type="grouplist" id="5">
                     <description>Control Area</description>
                     <posx>355</posx>
@@ -118,7 +140,6 @@
                     <scrolltime tween="cubic" easing="out">500</scrolltime>
                     <orientation>vertical</orientation>
                 </control>
-                
                 <control type="image" id="42">
                     <animation effect="fade" start="100" end="0" time="0" delay="1500">WindowOpen</animation>
                 </control>
@@ -142,6 +163,7 @@
                     <showonepage>false</showonepage>
                     <orientation>vertical</orientation>
                     <animation effect="fade" start="45" end="0" time="300" tween="sine" easing="inout" condition="!Control.IsVisible(41)">Conditional</animation>
+                    <visible allowhiddenfocus="true">Control.HasFocus(40)</visible>
                 </control>
             </control>
         </control>
@@ -200,9 +222,18 @@
         </control>
         <control type="button" id="10">
             <description>Default Category Button</description>
-            <include>SettingsCategoryButtonVars</include>
+            <height>77</height>
+            <width>360</width>
+            <align>left</align>
+            <aligny>center</aligny>
+            <texturefocus border="10">views/other/focus-mod8.png</texturefocus>
+            <texturenofocus border="90,3,90,3">views/list/other/separator-l.png</texturenofocus>
+            <textcolor>mod-infotags-alt</textcolor>
+            <focusedcolor>white</focusedcolor>
+            <disabledcolor>mod-infotags-vl</disabledcolor>
+            <font>Font-Condensed-S30-B</font>
+            <textoffsetx>35</textoffsetx>
         </control>
-        
         <include>FadeBackground</include>
         <include>Common-Info-NoOptions</include>
     </controls>

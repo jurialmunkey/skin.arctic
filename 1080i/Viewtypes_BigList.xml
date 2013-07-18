@@ -51,7 +51,6 @@
 							<height>100</height>
 							<aspect>keepaspect</aspect>
 							<texture>$VAR[DefaultListOverlay]</texture>
-							<colordiffuse>Mod_Tags_Light</colordiffuse>
 						</control>
 						<!-- Info -->
 						<control type="group">
@@ -104,6 +103,7 @@
 							<width>1540</width>
 							<height>200</height>
 							<texture background="true" border="35">arctic/common/border.png</texture>
+							<colordiffuse>99ffffff</colordiffuse>
 						</control>
 						<control type="image">
 							<posx>10</posx>
@@ -111,7 +111,7 @@
 							<width>1520</width>
 							<height>180</height>
 							<texture background="true" border="10">views/other/focus-mod.png</texture>
-							<colordiffuse>ffdddddd</colordiffuse>
+							<colordiffuse>55ffffff</colordiffuse>
 						</control>
 						<!-- Overlay -->
 						<control type="image">
@@ -121,7 +121,6 @@
 							<height>100</height>
 							<aspect>keepaspect</aspect>
 							<texture>$VAR[DefaultListOverlay]</texture>
-							<colordiffuse>mod-infotags-d</colordiffuse>
 						</control>
 						<!-- Episode Thumb -->
 						<control type="image">
@@ -148,8 +147,8 @@
 								<posy>20</posy>
 								<width>680</width>
 								<font>Font-Alaska-S32-BL</font>
-								<textcolor>ddwhite</textcolor>
-								<shadowcolor>44000000</shadowcolor>
+								<textcolor>Mod_Tags_Dark</textcolor>
+								<shadowcolor>33ffffff</shadowcolor>
 								<label>$INFO[ListItem.Title]</label>
 								<align>left</align>
 								<scroll>false</scroll>
@@ -159,8 +158,8 @@
 								<posy>50</posy>
 								<width>680</width>
 								<font>Font-Alaska-S25-L</font>
-								<textcolor>bbwhite</textcolor>
-								<shadowcolor>22000000</shadowcolor>
+								<textcolor>Mod_Tags</textcolor>
+								<shadowcolor>33ffffff</shadowcolor>
 								<label>$VAR[UnderTitle]</label>
 								<align>left</align>
 								<scroll>false</scroll>
@@ -171,8 +170,8 @@
 								<width>1190</width>
 								<height>108</height>
 								<font>Font-Condensed-S25</font>
-								<textcolor>bbwhite</textcolor>
-								<shadowcolor>22000000</shadowcolor>
+								<textcolor>Mod_Tags</textcolor>
+								<shadowcolor>33ffffff</shadowcolor>
 								<label>$INFO[ListItem.Plot]</label>
 								<align>justify</align>
 							</control>

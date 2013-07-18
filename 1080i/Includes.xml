@@ -17,9 +17,14 @@
     <include file="Includes_SongInfo.xml" />
     <include file="Includes_Weather.xml" />
     
+    <!-- PANEL -->
     <include file="Includes_Mod.xml" />
     <include file="Includes_Mod_Home.xml" />
     <include file="Includes_Mod_Home_Simple.xml" />
+    
+    <!-- METRO -->
+    <include file="Includes_Home.xml" />
+    <include file="Includes_HomeWidgets.xml" />
     
     <constant name="FanartCrossfadeTime">400</constant>
     <constant name="IconCrossfadeTime">400</constant>

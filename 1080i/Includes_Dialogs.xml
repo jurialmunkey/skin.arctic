@@ -2,9 +2,9 @@
 
     <include name="DialogButtonDimensions">
     	<font>Font-Alaska-S25-L</font>
-        <textcolor>mod-infotags-d</textcolor>
-        <focusedcolor>mod-infotags-d</focusedcolor>
-        <disabledcolor>mod-infotags-l</disabledcolor>
+        <textcolor>bbwhite</textcolor>
+        <focusedcolor>white</focusedcolor>
+        <disabledcolor>77white</disabledcolor>
         <shadowcolor>mod-shadow</shadowcolor>
         <align>left</align>
         <textoffsetx>85</textoffsetx>
@@ -14,9 +14,9 @@
     
     <include name="DialogButtonDimensionsRightAlign">
     	<font>Font-Alaska-S25-L</font>
-        <textcolor>mod-infotags-d</textcolor>
-        <focusedcolor>mod-infotags-d</focusedcolor>
-        <disabledcolor>mod-infotags-l</disabledcolor>
+        <textcolor>bbwhite</textcolor>
+        <focusedcolor>white</focusedcolor>
+        <disabledcolor>77white</disabledcolor>
         <shadowcolor>mod-shadow</shadowcolor>
         <align>right</align>
         <textoffsetx>85</textoffsetx>
@@ -101,29 +101,30 @@
             <include>KeyboardAnimations</include>
             <include>OptionsShutdownAnimation</include>
             <visible>!Window.IsVisible(virtualkeyboard) + !Window.IsVisible(filebrowser) + !Window.IsVisible(selectdialog) + !Window.IsVisible(DialogSelect.xml) + !Window.IsVisible(progressdialog) + !Window.IsVisible(textviewer)</visible>
-            <control type="image">
-                <posx>920</posx>
-                <posy>249</posy>
-                <width>80</width>
-                <height>60</height>
-                <texture>dialogs/default/arrow.png</texture>
+			<control type="image">
+                <posx>285</posx>
+                <posy>223</posy>
+                <width>1350</width>
+                <height>643</height>
+                <bordertexture border="40">arctic/common/border-20.png</bordertexture>
+                <bordersize>20</bordersize>
+                <texture border="40">arctic/common/panel.png</texture>
             </control>
             <control type="image">
-                <posx>284</posx>
-                <posy>269</posy>
-                <width>1352</width>
-                <height>541</height>
-                <texture border="39">dialogs/default/bg.png</texture>
-            </control>       
+                <posx>305</posx>
+                <posy>293</posy>
+                <width>1310</width>
+                <height>493</height>
+                <texture border="40">arctic/common/whitepanel8.png</texture>
+            </control>     
             <control type="label" id="20">
                 <description>Heading</description>
-                <posx>560</posx>
-                <posy>221</posy>
+                <posx>1600</posx>
+                <posy>252</posy>
                 <width>800</width>
                 <label>-</label>
-                <font>Font-Alaska-S32-BL</font>
-                <textcolor>Mod_Tags</textcolor>
-                <align>center</align>
+                <include>DialogHeaderMod</include>
+                <align>right</align>
             </control>
             <control type="group" id="8003">
                 <!-- left group -->
@@ -301,7 +302,7 @@
 
             <control type="group" id="8004">
                 <posx>628</posx>
-                <posy>772</posy>
+                <posy>764</posy>
                 <control type="button" id="10">
                     <description>Select</description>
                     <label>$LOCALIZE[42000]</label>
@@ -576,34 +577,15 @@
         <control type="group">
             <include>KeyboardAnimations</include>
             <visible>!Window.IsVisible(yesnodialog) + !Window.IsVisible(virtualkeyboard) + !Window.IsVisible(numericinput) + ![Window.IsVisible(script-LibraryEditor-genre.xml) + IsEmpty(Window.Property(ShowDialog))] + !Window.IsVisible(script-LibraryEditor-dialogs.xml)</visible>
-            
-            <control type="label" id="1">
-                <description>Heading</description>
-                <posx>473</posx>
-                <posy>218</posy>
-                <width>974</width>
-                <font>Font-Alaska-S32-BL</font>
-                <textcolor>Mod_Tags</textcolor>
-                <label>-</label>
-                <align>center</align>
-            </control>
-            
-            <control type="image">
-                <posx>920</posx>
-                <posy>246</posy>
-                <width>80</width>
-                <height>60</height>
-                <texture>dialogs/default/arrow.png</texture>
-            </control>
     
             <control type="group">
                 <visible>Control.IsVisible(3)</visible>
                 <control type="image">
-                    <posx>604</posx>
-                    <posy>266</posy>
-                    <width>712</width>
-                    <height>548</height>
-                    <texture border="39">dialogs/default/bg.png</texture>
+                    <posx>584</posx>
+                    <posy>246</posy>
+                    <width>672</width>
+                    <height>508</height>
+                    <texture border="39">arctic/common/whitepanel8.png</texture>
                 </control>
                 <control type="image">
                 	<posx>638</posx>
@@ -618,10 +600,19 @@
                 <visible>Control.IsVisible(6)</visible>
                 <control type="image">
                     <posx>387</posx>
-                    <posy>266</posy>
+                    <posy>216</posy>
                     <width>1146</width>
-                    <height>548</height>
-                    <texture border="39">dialogs/default/bg.png</texture>
+                    <height>658</height>
+                    <bordertexture border="40">arctic/common/border-20.png</bordertexture>
+					<bordersize>20</bordersize>
+                    <texture border="39">arctic/common/panel.png</texture>
+                </control>
+                <control type="image">
+                    <posx>407</posx>
+                    <posy>286</posy>
+                    <width>1106</width>
+                    <height>508</height>
+                    <texture border="39">arctic/common/whitepanel8.png</texture>
                 </control>
                 <control type="image">
                 	<posx>421</posx>
@@ -668,6 +659,15 @@
                 </control>
             </control>
             
+            <control type="label" id="1">
+                <description>Heading</description>
+                <posx>473</posx>
+                <posy>245</posy>
+                <width>974</width>
+                <include>DialogHeaderMod</include>
+                <label>-</label>
+                <align>center</align>
+            </control>
             <include>SortLetterSelectDialog</include>
                         
             <control type="list" id="3">
@@ -1090,7 +1090,7 @@
 
             <control type="group" id="8000">
                 <posx>626</posx>
-                <posy>776</posy>
+                <posy>772</posy>
                 <animation effect="slide" end="-217" time="0" condition="Control.IsVisible(6)">Conditional</animation>
                 <control type="button" id="5">
                     <description>Select</description>
@@ -1543,8 +1543,7 @@
                     <posx>473</posx>
                     <posy>183</posy>
                     <width>974</width>
-                    <font>Font-Alaska-S32-BL</font>
-					<textcolor>Mod_Tags</textcolor>
+                    <include>DialogHeaderMod</include>
                     <label>-</label>
                     <align>center</align>
                 </control>
@@ -2092,20 +2091,21 @@
                 <include>KeyboardAnimations</include>
                 <include>OptionsShutdownAnimation</include>
                 <visible>!Window.IsVisible(virtualkeyboard) + ![Window.IsVisible(networksetup) + IsEmpty(Window.Property(ShowDialog))]</visible>
-                
-                <control type="image">
-                    <posx>920</posx>
-                    <posy>246</posy>
-                    <width>80</width>
-                    <height>60</height>
-                    <texture>dialogs/default/arrow.png</texture>
+				<control type="image">
+                	<posx>449</posx>
+                	<posy>220</posy>
+                	<width>1023</width>
+                	<height>651</height>
+                	<bordertexture border="40">arctic/common/border-20.png</bordertexture>
+					<bordersize>20</bordersize>
+                	<texture border="40">arctic/common/panel.png</texture>
                 </control>
                 <control type="image">
-                    <posx>445</posx>
-                    <posy>266</posy>
-                    <width>1030</width>
-                    <height>548</height>
-                    <texture border="39">dialogs/default/bg.png</texture>
+                	<posx>469</posx>
+                	<posy>290</posy>
+                	<width>983</width>
+                	<height>501</height>
+                	<texture border="40">arctic/common/whitepanel8.png</texture>
                 </control>
                 <control type="image">
                 	<posx>479</posx>
@@ -2125,7 +2125,7 @@
                 <control type="label" id="411">
                     <description>Heading</description>
                     <posx>473</posx>
-                    <posy>218</posy>
+                    <posy>250</posy>
                     <width>974</width>
                     <include>DialogHeaderMod</include>
                     <label>-</label>
@@ -2410,7 +2410,7 @@
                 
                 <control type="group" id="8000">
                     <posx>466</posx>
-                    <posy>776</posy>
+                    <posy>768</posy>
                     <control type="button" id="413">
                         <description>Select</description>
                         <label>$LOCALIZE[42000]</label>

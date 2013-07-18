@@ -12,9 +12,10 @@
         
         <control type="group">
             <include>OptionsShutdownAnimation</include>
+            <posy>-10</posy>
             <animation type="WindowClose">
-                <effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
-                <effect type="zoom" start="100" end="85" time="300" center="960,600" tween="sine" easing="out" />
+                <effect type="fade" start="100" end="0" time="300" delay="450" tween="sine" easing="out" />
+                <effect type="zoom" start="100" end="85" time="400" delay="350" center="960,600" tween="sine" easing="out" />
             </animation>
             <animation type="Visible">
                 <effect type="fade" start="0" end="100" time="300" delay="300" tween="sine" easing="out" />
@@ -24,50 +25,71 @@
                 <effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
                 <effect type="zoom" start="100" end="85" time="300" center="960,600" tween="sine" easing="out" />
             </animation>
+            <control type="image">
+                <description>Shadow</description>
+                <posx>150</posx>
+                <posy>840</posy>
+                <width>1620</width>
+                <height>150</height>
+                <texture>windows/home/item-shadow.png</texture>
+                <animation type="WindowOpen">
+            		<effect type="fade" start="0" end="100" tween="sine" easing="inout" time="550" delay="350" />
+				</animation>
+				<animation type="WindowClose">
+            		<effect type="fade" start="100" end="0" tween="sine" easing="inout" time="350" delay="0" />
+				</animation>
+            </control>
             <visible>!Window.IsActive(favourites)</visible>
+            <!-- Dark Panel -->
+            <control type="group">
+                <control type="image">
+                    <posx>170</posx>
+                    <posy>260</posy>
+                    <width>1583</width>
+                    <height>648</height>
+                    <texture border="35">arctic/common/border-20.png</texture>
+                    <animation type="WindowOpen">
+						<effect type="fade" start="0" end="100" tween="sine" easing="inout" time="350" delay="0" />
+						<effect type="zoom" start="76" end="100" center="1344,560" tween="cubic" easing="out" time="400" delay="75" /> 
+						<effect type="zoom" start="319,260,1253,648" end="170,260,1583,648" tween="cubic" easing="out" time="545" delay="350" />
+					</animation>
+					<animation type="WindowClose">
+						<effect type="fade" end="0" start="100" tween="sine" easing="inout" time="450" delay="0" />
+						<effect type="zoom" end="319,260,1253,648" start="170,260,1583,648" tween="cubic" easing="out" time="545" delay="0" />
+					</animation>
+                </control>
+                <control type="image">
+                    <posx>190</posx>
+                    <posy>280</posy>
+                    <width>1543</width>
+                    <height>608</height>
+                    <texture border="35">arctic/common/panel.png</texture>
+                    <animation type="WindowOpen">
+						<effect type="fade" start="0" end="100" tween="sine" easing="inout" time="0" delay="350" />
+						<effect type="zoom" start="76" end="100" center="1344,560" tween="cubic" easing="out" time="400" delay="75" /> 
+						<effect type="zoom" start="339,280,1213,608" end="190,280,1543,608" tween="cubic" easing="out" time="545" delay="350" />
+					</animation>
+					<animation type="WindowClose">
+						<effect type="fade" end="0" start="100" tween="sine" easing="inout" time="450" delay="0" />
+						<effect type="zoom" end="339,280,1213,608" start="190,280,1543,608" tween="cubic" easing="out" time="545" delay="0" />
+					</animation>
+                </control>
+            </control>
+            <!-- Categories -->
             <control type="group">
                 <animation type="WindowOpen">
-                    <effect type="slide" start="200" end="0" tween="cubic" easing="out" time="650" />
-                    <effect type="fade" start="0" end="100" tween="sine" easing="inout" time="300" />
-                    <effect type="zoom" start="88" end="100" center="576,560" tween="cubic" easing="out" time="400" />
-                </animation>
-                            
-                <control type="label">
-                    <description>Category</description>
-                    <posx>483</posx>
-                    <posy>235</posy>
-                    <height>40</height>
-                    <width>338</width>
-                    <align>right</align>
-                    <font>Font-Alaska-S25-BL</font>
-                    <label>$LOCALIZE[42130]</label>
-                    <textcolor>Mod_Tags</textcolor>
-                </control>
-                
-                
-                <!-- Panel -->
-                <control type="image">
-                    <posx>160</posx>
-                    <posy>262</posy>
-                    <height>645</height>
-                    <width>1601</width>
-                    <texture border="25">views/newgloss/border-glass.png</texture>
-                    <animation effect="fade" end="100" start="0" time="300" delay="350">WindowOpen</animation>
-                    <colordiffuse>77ffffff</colordiffuse>
-                    <visible>!Skin.HasSetting(hide.glass)</visible>
-                </control>
-                <control type="image">
-                    <posx>164</posx>
-                    <posy>265</posy>
-                    <height>638</height>
-                    <width>370</width>
-                    <texture border="35">views/newgloss/whitepanel-15.png</texture>
-                </control>
-                
+            		<effect type="fade" start="0" end="100" tween="sine" easing="inout" time="0" delay="350" />
+					<effect type="zoom" start="76" end="100" center="1344,560" tween="cubic" easing="out" time="400" delay="75" /> 
+					<effect type="slide" start="190" end="10" tween="cubic" easing="out" time="545" delay="320" />
+				</animation>
+				<animation type="WindowClose">
+					<effect type="slide" end="190" start="10" tween="cubic" easing="out" time="745" delay="0" />
+					<effect type="fade" end="0" start="100" time="0" delay="450" />
+				</animation>
                 <control type="list" id="30">
                     <posx>180</posx>
                     <posy>281</posy>
-                    <width>338</width>
+                    <width>360</width>
                     <height>609</height>
                     <onleft>5</onleft>
                     <onright>5</onright>
@@ -78,19 +100,21 @@
                         <control type="image">
                             <posx>0</posx>
                             <posy>0</posy>
-                            <width>338</width>
+                            <width>360</width>
                             <height>77</height>
                             <texture border="90,3,90,3">views/list/other/separator-l.png</texture>
                         </control>
                         <control type="label">
-                            <posx>338</posx>
+                            <posx>0</posx>
                             <posy>0</posy>
-                            <width>338</width>
+                            <width>360</width>
                             <height>77</height>
-                            <align>right</align>
+                            <align>left</align>
                             <aligny>center</aligny>
                             <label>$INFO[ListItem.Label]</label>
-                            <textcolor>mod-infotags-l</textcolor>
+                            <textcolor>mod-infotags-alt</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<disabledcolor>mod-infotags-vl</disabledcolor>
                             <font>Font-Condensed-S30-B</font>
                             <textoffsetx>35</textoffsetx>
                         </control>
@@ -99,17 +123,17 @@
                         <control type="image">
                             <posx>0</posx>
                             <posy>0</posy>
-                            <width>338</width>
+                            <width>360</width>
                             <height>77</height>
-                            <texture border="5">views/other/focus-mod.png</texture>
+                            <texture border="10">views/other/focus-mod8.png</texture>
                             <animation effect="fade" start="100" end="50" time="0" condition="!Control.HasFocus(30)">Conditional</animation>
                         </control>
                         <control type="label">
-                            <posx>338</posx>
+                            <posx>0</posx>
                             <posy>0</posy>
-                            <width>338</width>
+                            <width>360</width>
                             <height>77</height>
-                            <align>right</align>
+                            <align>left</align>
                             <aligny>center</aligny>
                             <label>$INFO[ListItem.Label]</label>
                             <textcolor>white</textcolor>
@@ -165,38 +189,28 @@
             <control type="group">
                 <posx>175</posx> 
                 <animation type="WindowOpen">
-                    <effect type="slide" start="200" end="0" tween="cubic" easing="out" time="545" delay="75" />
-                    <effect type="fade" start="0" end="100" tween="sine" easing="inout" time="300" delay="75" />
-                    <effect type="zoom" start="76" end="100" center="1344,560" tween="cubic" easing="out" time="400" delay="75" /> 
-                </animation>
-                <control type="label">
-                    <description>Category</description>
-                    <posx>390</posx>
-                    <posy>235</posy>
-                    <height>40</height>
-                    <width>400</width>
-                    <align>left</align>
-                    <font>Font-Alaska-S25-BL</font>
-                    <label>[UPPERCASE]$LOCALIZE[5]:[/UPPERCASE]$INFO[Container(30).ListItem.Label, ,]</label>
-                    <textcolor>Mod_Tags</textcolor>
-                </control>
-                          
-                <!-- Panel -->
-                <control type="image">
-                    <posx>339</posx>
-                    <posy>265</posy>
-                    <height>638</height>
-                    <width>1243</width>
-                    <texture border="35">views/newgloss/whitepanel-15.png</texture>
+            		<effect type="fade" start="0" end="100" tween="sine" easing="inout" time="350" delay="0" />
+					<effect type="zoom" start="76" end="100" center="1344,560" tween="cubic" easing="out" time="400" delay="75" /> 
+					<effect type="slide" start="-190" end="-10" tween="cubic" easing="out" time="545" delay="350" />
+				</animation>
+				<animation type="WindowClose">
+					<effect type="slide" end="-190" start="-10" tween="cubic" easing="out" time="545" delay="0" />
+				</animation>
+				<control type="image">
+                    <posx>354</posx>
+                    <posy>280</posy>
+                    <height>608</height>
+                    <width>1213</width>
+                    <texture border="35">arctic/common/panel.png</texture>
                 </control>
                 <control type="image">
-                    <description>Shadow</description>
-                    <posx>-45</posx>
-                    <posy>883</posy>
-                    <width>1710</width>
-                    <height>150</height>
-                    <texture>windows/home/item-shadow.png</texture>
+                    <posx>354</posx>
+                    <posy>280</posy>
+                    <height>608</height>
+                    <width>1213</width>
+                    <texture border="35">arctic/common/whitepanel8.png</texture>
                 </control>
+                
                 
                 <!-- =============== -->    
                 <!-- General Settings -->
@@ -279,7 +293,8 @@
 						<font>Font-Condensed-S30-B</font>
 						<include>SettingsCategoryDefaultButtonVars</include>
                         <onclick condition="StringCompare(Skin.String(homescreen.style),simple)">Skin.SetString(homescreen.style,panel)</onclick>
-                        <onclick condition="StringCompare(Skin.String(homescreen.style),panel)">Skin.SetString(homescreen.style,simple)</onclick>
+                        <onclick condition="StringCompare(Skin.String(homescreen.style),metro)">Skin.SetString(homescreen.style,simple)</onclick>
+                        <onclick condition="StringCompare(Skin.String(homescreen.style),panel)">Skin.SetString(homescreen.style,metro)</onclick>
                         <onclick condition="StringCompare(Skin.String(homescreen.style),simple)">Skin.SetString(homescreen.style,panel)</onclick>
                         <label>Home screen style</label>
 						<label2>[UPPERCASE]$INFO[Skin.String(homescreen.style)][/UPPERCASE]</label2>
@@ -821,7 +836,194 @@
                     </control>
                 </control>
                 
-                
+                <!-- =================== -->    
+                <!-- Home Tiles Settings -->
+                <!-- =================== -->
+                <control type="grouplist" id="5">
+                    <onleft>30</onleft>
+                    <include>SettingsCategoryGrouplistVars</include>
+                    <visible>Container(30).HasFocus(37)</visible>
+                    <!--<control type="radiobutton" id="10002">
+                        <width>1210</width>
+                        <include>SettingsCategoryRadioButtonVars</include>
+                        <selected>!Skin.HasSetting(AddonTilesColored)</selected>
+                        <onclick>Skin.ToggleSetting(AddonTilesColored)</onclick>
+                        <label>Addon tiles share color</label>
+                    </control>-->
+                    <control type="button" id="10003">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>1210</width>
+						<height>77</height>
+						<align>left</align>
+						<aligny>center</aligny>
+						<textoffsetx>35</textoffsetx>
+						<font>Font-Condensed-S30-B</font>
+						<include>SettingsCategoryDefaultButtonVars</include>
+						<onclick condition="stringcompare(Skin.String(musiccolor.name),Grey Tiles)">Skin.SetString(musiccolor.name,Purple Tiles)</onclick>
+						<onclick condition="stringcompare(Skin.String(musiccolor.name),White Tiles)">Skin.SetString(musiccolor.name,Grey Tiles)</onclick>
+						<onclick condition="stringcompare(Skin.String(musiccolor.name),Lime Tiles)">Skin.SetString(musiccolor.name,White Tiles)</onclick>
+						<onclick condition="stringcompare(Skin.String(musiccolor.name),Green Tiles)">Skin.SetString(musiccolor.name,Lime Tiles)</onclick>
+						<onclick condition="stringcompare(Skin.String(musiccolor.name),Blue Tiles)">Skin.SetString(musiccolor.name,Green Tiles)</onclick>
+						<onclick condition="stringcompare(Skin.String(musiccolor.name),Red Tiles)">Skin.SetString(musiccolor.name,Blue Tiles)</onclick>
+						<onclick condition="stringcompare(Skin.String(musiccolor.name),Pink Tiles)">Skin.SetString(musiccolor.name,Red Tiles)</onclick>
+						<onclick condition="stringcompare(Skin.String(musiccolor.name),Purple Tiles)">Skin.SetString(musiccolor.name,Pink Tiles)</onclick>
+						<onclick condition="stringcompare(Skin.String(musiccolor.name),Grey Tiles)">Skin.SetString(musiccolor.name,Purple Tiles)</onclick>
+                        <label>$LOCALIZE[2]</label>
+						<label2>$INFO[Skin.String(musiccolor.name)]</label2>
+					</control>
+					<control type="button" id="10004">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>1210</width>
+						<height>77</height>
+						<align>left</align>
+						<aligny>center</aligny>
+						<textoffsetx>35</textoffsetx>
+						<font>Font-Condensed-S30-B</font>
+						<include>SettingsCategoryDefaultButtonVars</include>
+						<onclick condition="stringcompare(Skin.String(tvcolor.name),Grey Tiles)">Skin.SetString(tvcolor.name,Purple Tiles)</onclick>
+						<onclick condition="stringcompare(Skin.String(tvcolor.name),White Tiles)">Skin.SetString(tvcolor.name,Grey Tiles)</onclick>
+						<onclick condition="stringcompare(Skin.String(tvcolor.name),Lime Tiles)">Skin.SetString(tvcolor.name,White Tiles)</onclick>
+						<onclick condition="stringcompare(Skin.String(tvcolor.name),Green Tiles)">Skin.SetString(tvcolor.name,Lime Tiles)</onclick>
+						<onclick condition="stringcompare(Skin.String(tvcolor.name),Blue Tiles)">Skin.SetString(tvcolor.name,Green Tiles)</onclick>
+						<onclick condition="stringcompare(Skin.String(tvcolor.name),Red Tiles)">Skin.SetString(tvcolor.name,Blue Tiles)</onclick>
+						<onclick condition="stringcompare(Skin.String(tvcolor.name),Pink Tiles)">Skin.SetString(tvcolor.name,Red Tiles)</onclick>
+						<onclick condition="stringcompare(Skin.String(tvcolor.name),Purple Tiles)">Skin.SetString(tvcolor.name,Pink Tiles)</onclick>
+						<onclick condition="stringcompare(Skin.String(tvcolor.name),Grey Tiles)">Skin.SetString(tvcolor.name,Purple Tiles)</onclick>
+                        <label>$LOCALIZE[19020]</label>
+						<label2>$INFO[Skin.String(tvcolor.name)]</label2>
+					</control>
+					<control type="button" id="10005">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>1210</width>
+						<height>77</height>
+						<align>left</align>
+						<aligny>center</aligny>
+						<textoffsetx>35</textoffsetx>
+						<font>Font-Condensed-S30-B</font>
+						<include>SettingsCategoryDefaultButtonVars</include>
+						<onclick condition="stringcompare(Skin.String(moviecolor.name),Grey Tiles)">Skin.SetString(moviecolor.name,Purple Tiles)</onclick>
+						<onclick condition="stringcompare(Skin.String(moviecolor.name),White Tiles)">Skin.SetString(moviecolor.name,Grey Tiles)</onclick>
+						<onclick condition="stringcompare(Skin.String(moviecolor.name),Lime Tiles)">Skin.SetString(moviecolor.name,White Tiles)</onclick>
+						<onclick condition="stringcompare(Skin.String(moviecolor.name),Green Tiles)">Skin.SetString(moviecolor.name,Lime Tiles)</onclick>
+						<onclick condition="stringcompare(Skin.String(moviecolor.name),Blue Tiles)">Skin.SetString(moviecolor.name,Green Tiles)</onclick>
+						<onclick condition="stringcompare(Skin.String(moviecolor.name),Red Tiles)">Skin.SetString(moviecolor.name,Blue Tiles)</onclick>
+						<onclick condition="stringcompare(Skin.String(moviecolor.name),Pink Tiles)">Skin.SetString(moviecolor.name,Red Tiles)</onclick>
+						<onclick condition="stringcompare(Skin.String(moviecolor.name),Purple Tiles)">Skin.SetString(moviecolor.name,Pink Tiles)</onclick>
+						<onclick condition="stringcompare(Skin.String(moviecolor.name),Grey Tiles)">Skin.SetString(moviecolor.name,Purple Tiles)</onclick>
+                        <label>$LOCALIZE[342]</label>
+						<label2>$INFO[Skin.String(moviecolor.name)]</label2>
+					</control>
+					<control type="button" id="10006">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>1210</width>
+						<height>77</height>
+						<align>left</align>
+						<aligny>center</aligny>
+						<textoffsetx>35</textoffsetx>
+						<font>Font-Condensed-S30-B</font>
+						<include>SettingsCategoryDefaultButtonVars</include>
+						<onclick condition="stringcompare(Skin.String(homecolor.name),Grey Tiles)">Skin.SetString(homecolor.name,Purple Tiles)</onclick>
+						<onclick condition="stringcompare(Skin.String(homecolor.name),White Tiles)">Skin.SetString(homecolor.name,Grey Tiles)</onclick>
+						<onclick condition="stringcompare(Skin.String(homecolor.name),Lime Tiles)">Skin.SetString(homecolor.name,White Tiles)</onclick>
+						<onclick condition="stringcompare(Skin.String(homecolor.name),Green Tiles)">Skin.SetString(homecolor.name,Lime Tiles)</onclick>
+						<onclick condition="stringcompare(Skin.String(homecolor.name),Blue Tiles)">Skin.SetString(homecolor.name,Green Tiles)</onclick>
+						<onclick condition="stringcompare(Skin.String(homecolor.name),Red Tiles)">Skin.SetString(homecolor.name,Blue Tiles)</onclick>
+						<onclick condition="stringcompare(Skin.String(homecolor.name),Pink Tiles)">Skin.SetString(homecolor.name,Red Tiles)</onclick>
+						<onclick condition="stringcompare(Skin.String(homecolor.name),Purple Tiles)">Skin.SetString(homecolor.name,Pink Tiles)</onclick>
+						<onclick condition="stringcompare(Skin.String(homecolor.name),Grey Tiles)">Skin.SetString(homecolor.name,Purple Tiles)</onclick>
+                        <label>$LOCALIZE[10000]</label>
+						<label2>$INFO[Skin.String(homecolor.name)]</label2>
+					</control>
+					<control type="button" id="10007">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>1210</width>
+						<height>77</height>
+						<align>left</align>
+						<aligny>center</aligny>
+						<textoffsetx>35</textoffsetx>
+						<font>Font-Condensed-S30-B</font>
+						<include>SettingsCategoryDefaultButtonVars</include>
+						<onclick condition="stringcompare(Skin.String(appcolor.name),Grey Tiles)">Skin.SetString(appcolor.name,Purple Tiles)</onclick>
+						<onclick condition="stringcompare(Skin.String(appcolor.name),White Tiles)">Skin.SetString(appcolor.name,Grey Tiles)</onclick>						
+						<onclick condition="stringcompare(Skin.String(appcolor.name),Lime Tiles)">Skin.SetString(appcolor.name,White Tiles)</onclick>						
+						<onclick condition="stringcompare(Skin.String(appcolor.name),Green Tiles)">Skin.SetString(appcolor.name,Lime Tiles)</onclick>
+						<onclick condition="stringcompare(Skin.String(appcolor.name),Blue Tiles)">Skin.SetString(appcolor.name,Green Tiles)</onclick>
+						<onclick condition="stringcompare(Skin.String(appcolor.name),Red Tiles)">Skin.SetString(appcolor.name,Blue Tiles)</onclick>
+						<onclick condition="stringcompare(Skin.String(appcolor.name),Pink Tiles)">Skin.SetString(appcolor.name,Red Tiles)</onclick>
+						<onclick condition="stringcompare(Skin.String(appcolor.name),Purple Tiles)">Skin.SetString(appcolor.name,Pink Tiles)</onclick>
+						<onclick condition="stringcompare(Skin.String(appcolor.name),Grey Tiles)">Skin.SetString(appcolor.name,Purple Tiles)</onclick>
+                        <label>$LOCALIZE[10001]</label>
+						<label2>$INFO[Skin.String(appcolor.name)]</label2>
+					</control>
+					<control type="button" id="10008">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>1210</width>
+						<height>77</height>
+						<align>left</align>
+						<aligny>center</aligny>
+						<textoffsetx>35</textoffsetx>
+						<font>Font-Condensed-S30-B</font>
+						<include>SettingsCategoryDefaultButtonVars</include>
+						<onclick condition="stringcompare(Skin.String(pvrcolor.name),Grey Tiles)">Skin.SetString(pvrcolor.name,Purple Tiles)</onclick>
+						<onclick condition="stringcompare(Skin.String(pvrcolor.name),White Tiles)">Skin.SetString(pvrcolor.name,Grey Tiles)</onclick>
+						<onclick condition="stringcompare(Skin.String(pvrcolor.name),Lime Tiles)">Skin.SetString(pvrcolor.name,White Tiles)</onclick>
+						<onclick condition="stringcompare(Skin.String(pvrcolor.name),Green Tiles)">Skin.SetString(pvrcolor.name,Lime Tiles)</onclick>
+						<onclick condition="stringcompare(Skin.String(pvrcolor.name),Blue Tiles)">Skin.SetString(pvrcolor.name,Green Tiles)</onclick>
+						<onclick condition="stringcompare(Skin.String(pvrcolor.name),Red Tiles)">Skin.SetString(pvrcolor.name,Blue Tiles)</onclick>
+						<onclick condition="stringcompare(Skin.String(pvrcolor.name),Pink Tiles)">Skin.SetString(pvrcolor.name,Red Tiles)</onclick>
+						<onclick condition="stringcompare(Skin.String(pvrcolor.name),Purple Tiles)">Skin.SetString(pvrcolor.name,Pink Tiles)</onclick>
+						<onclick condition="stringcompare(Skin.String(pvrcolor.name),Grey Tiles)">Skin.SetString(pvrcolor.name,Purple Tiles)</onclick>
+                        <label>$LOCALIZE[41220]</label>
+						<label2>$INFO[Skin.String(pvrcolor.name)]</label2>
+					</control>
+					<control type="button" id="10009">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>1210</width>
+						<height>77</height>
+						<align>left</align>
+						<aligny>center</aligny>
+						<textoffsetx>35</textoffsetx>
+						<font>Font-Condensed-S30-B</font>
+						<include>SettingsCategoryDefaultButtonVars</include>
+						<onclick condition="stringcompare(Skin.String(weathercolor.name),Grey Tiles)">Skin.SetString(weathercolor.name,Purple Tiles)</onclick>
+						<onclick condition="stringcompare(Skin.String(weathercolor.name),White Tiles)">Skin.SetString(weathercolor.name,Grey Tiles)</onclick>
+						<onclick condition="stringcompare(Skin.String(weathercolor.name),Lime Tiles)">Skin.SetString(weathercolor.name,White Tiles)</onclick>
+						<onclick condition="stringcompare(Skin.String(weathercolor.name),Green Tiles)">Skin.SetString(weathercolor.name,Lime Tiles)</onclick>
+						<onclick condition="stringcompare(Skin.String(weathercolor.name),Blue Tiles)">Skin.SetString(weathercolor.name,Green Tiles)</onclick>
+						<onclick condition="stringcompare(Skin.String(weathercolor.name),Red Tiles)">Skin.SetString(weathercolor.name,Blue Tiles)</onclick>
+						<onclick condition="stringcompare(Skin.String(weathercolor.name),Pink Tiles)">Skin.SetString(weathercolor.name,Red Tiles)</onclick>
+						<onclick condition="stringcompare(Skin.String(weathercolor.name),Purple Tiles)">Skin.SetString(weathercolor.name,Pink Tiles)</onclick>
+						<onclick condition="stringcompare(Skin.String(weathercolor.name),Grey Tiles)">Skin.SetString(weathercolor.name,Purple Tiles)</onclick>
+                        <label>$LOCALIZE[24027]</label>
+						<label2>$INFO[Skin.String(weathercolor.name)]</label2>
+					</control>
+					<control type="button" id="10012">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>1210</width>
+						<height>77</height>
+						<align>left</align>
+						<aligny>center</aligny>
+						<textoffsetx>35</textoffsetx>
+						<font>Font-Condensed-S30-B</font>
+						<include>SettingsCategoryDefaultButtonVars</include>
+						<onclick>Skin.SetString(appcolor.name,Grey Tiles)</onclick>
+						<onclick>Skin.SetString(homecolor.name,White Tiles)</onclick>
+						<onclick>Skin.SetString(weathercolor.name,White Tiles)</onclick>
+						<onclick>Skin.SetString(pvrcolor.name,White Tiles)</onclick>
+						<onclick>Skin.SetString(moviecolor.name,Grey Tiles)</onclick>
+						<onclick>Skin.SetString(tvcolor.name,Grey Tiles)</onclick>
+						<onclick>Skin.SetString(musiccolor.name,Grey Tiles)</onclick>
+                        <label>$LOCALIZE[409]</label>
+					</control>
+                </control>
                 
                 <!-- =============== -->    
                 <!-- Add-on Settings -->

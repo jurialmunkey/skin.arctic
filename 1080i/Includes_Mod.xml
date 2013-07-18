@@ -353,8 +353,8 @@
     </variable>
     
     <include name="DialogHeaderMod">
-    	<font>Font-Alaska-S34-L</font>
-    	<textcolor>mod-infotags-d</textcolor>
+    	<textcolor>ddwhite</textcolor>
+		<font>Font-Alaska-S28-L</font>
     </include>
 
 	<include name="Mod_83Content">

@@ -7,9 +7,9 @@
             <include>KeyboardAnimations</include>  
                    
             <control type="image">
-            	<posx>618</posx>
+            	<posx>608</posx>
             	<posy>230</posy>
-            	<width>684</width>
+            	<width>704</width>
             	<height>620</height>
             	<texture border="15">arctic/common/panel.png</texture>
             	<bordertexture border="35">arctic/common/border-20.png</bordertexture>
@@ -24,12 +24,12 @@
             </control>    
             <control type="label">
                 <description>Heading</description>
-                <posx>1265</posx>
+                <posx>638</posx>
                 <posy>260</posy>
-                <width>974</width>
+                <width>644</width>
                 <include>DialogHeaderMod</include>
                 <label>41140</label>
-                <align>right</align>
+                <align>center</align>
             </control>
             
             <control type="grouplist" id="3">

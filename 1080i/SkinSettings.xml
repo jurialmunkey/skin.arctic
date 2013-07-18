@@ -43,35 +43,35 @@
             <!-- Dark Panel -->
             <control type="group">
                 <control type="image">
-                    <posx>170</posx>
-                    <posy>260</posy>
-                    <width>1583</width>
-                    <height>648</height>
+                    <posx>160</posx>
+                    <posy>250</posy>
+                    <width>1603</width>
+                    <height>668</height>
                     <texture border="35">arctic/common/border-20.png</texture>
                     <animation type="WindowOpen">
 						<effect type="fade" start="0" end="100" tween="sine" easing="inout" time="350" delay="0" />
 						<effect type="zoom" start="76" end="100" center="1344,560" tween="cubic" easing="out" time="400" delay="75" /> 
-						<effect type="zoom" start="319,260,1253,648" end="170,260,1583,648" tween="cubic" easing="out" time="545" delay="350" />
+						<effect type="zoom" start="309,250,1273,668" end="160,250,1603,668" tween="cubic" easing="out" time="545" delay="350" />
 					</animation>
 					<animation type="WindowClose">
-						<effect type="fade" end="0" start="100" tween="sine" easing="inout" time="450" delay="0" />
-						<effect type="zoom" end="319,260,1253,648" start="170,260,1583,648" tween="cubic" easing="out" time="545" delay="0" />
+						<effect type="fade" end="0" start="100" tween="sine" easing="inout" time="545" delay="0" />
+						<effect type="zoom" end="309,250,1273,668" start="160,250,1603,668" tween="cubic" easing="out" time="545" delay="0" />
 					</animation>
                 </control>
                 <control type="image">
-                    <posx>190</posx>
-                    <posy>280</posy>
-                    <width>1543</width>
-                    <height>608</height>
+                    <posx>180</posx>
+                    <posy>270</posy>
+                    <width>1563</width>
+                    <height>628</height>
                     <texture border="35">arctic/common/panel.png</texture>
                     <animation type="WindowOpen">
-						<effect type="fade" start="0" end="100" tween="sine" easing="inout" time="0" delay="350" />
+						<effect type="fade" start="0" end="100" tween="sine" easing="inout" time="350" delay="0" />
 						<effect type="zoom" start="76" end="100" center="1344,560" tween="cubic" easing="out" time="400" delay="75" /> 
-						<effect type="zoom" start="339,280,1213,608" end="190,280,1543,608" tween="cubic" easing="out" time="545" delay="350" />
+						<effect type="zoom" start="329,270,1233,628" end="180,270,1563,628" tween="cubic" easing="out" time="545" delay="350" />
 					</animation>
 					<animation type="WindowClose">
-						<effect type="fade" end="0" start="100" tween="sine" easing="inout" time="450" delay="0" />
-						<effect type="zoom" end="339,280,1213,608" start="190,280,1543,608" tween="cubic" easing="out" time="545" delay="0" />
+						<effect type="fade" end="0" start="100" tween="sine" easing="inout" time="545" delay="0" />
+						<effect type="zoom" end="329,270,1233,628" start="180,270,1563,628" tween="cubic" easing="out" time="545" delay="0" />
 					</animation>
                 </control>
             </control>
@@ -204,11 +204,13 @@
                     <texture border="35">arctic/common/panel.png</texture>
                 </control>
                 <control type="image">
-                    <posx>354</posx>
-                    <posy>280</posy>
-                    <height>608</height>
-                    <width>1213</width>
+                    <posx>334</posx>
+                    <posy>260</posy>
+                    <height>648</height>
+                    <width>1253</width>
                     <texture border="35">arctic/common/whitepanel8.png</texture>
+                    <bordertexture border="40">arctic/common/border-20.png</bordertexture>
+                    <bordersize>20</bordersize>
                 </control>
                 
                 

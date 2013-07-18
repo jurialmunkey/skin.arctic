@@ -8,31 +8,27 @@
             <include>KeyboardAnimations</include>
             <visible>!Window.IsVisible(3003)</visible> 
             <control type="image">
-            	<posx>638</posx>
-            	<posy>250</posy>
-            	<width>644</width>
-            	<height>590</height>
-            	<texture border="15">arctic/common/panel.png</texture>
-            </control>
+            	<posx>608</posx>
+            	<posy>230</posy>
+            	<width>704</width>
+            	<height>630</height>
+            	<bordertexture border="35">arctic/common/border-20.png</bordertexture>
+            	<bordersize>20</bordersize>
+            	<texture border="35">arctic/common/panel.png</texture>
+            </control>   
             <control type="image">
-            	<posx>638</posx>
-            	<posy>300</posy>
-            	<width>644</width>
-            	<height>480</height>
+            	<posx>637</posx>
+            	<posy>299</posy>
+            	<width>646</width>
+            	<height>482</height>
             	<texture border="15">arctic/common/whitepanel8.png</texture>
             </control>
-            <control type="image">
-            	<posx>618</posx>
-            	<posy>230</posy>
-            	<width>684</width>
-            	<height>630</height>
-            	<texture border="35">arctic/common/border-20.png</texture>
-            </control>     
+              
             <control type="label">
                 <description>Heading</description>
-                <posx>473</posx>
+                <posx>637</posx>
                 <posy>260</posy>
-                <width>974</width>
+                <width>646</width>
                 <include>DialogHeaderMod</include>
                 <label>$INFO[Window(skinsettings).property(Dialog)]</label>
                 <align>center</align>

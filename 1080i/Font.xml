@@ -390,6 +390,12 @@
             <size>28</size>
         </font>
         <font>
+            <name>Font-Alaska-S28-L-B</name>
+            <filename>alaska_regular.ttf</filename>
+            <size>28</size>
+            <style>bold</style>
+        </font>
+        <font>
             <name>Font-Alaska-S28</name>
             <filename>alaska_cond.ttf</filename>
             <size>28</size>

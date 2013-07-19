@@ -354,7 +354,7 @@
     
     <include name="DialogHeaderMod">
     	<textcolor>ddwhite</textcolor>
-		<font>Font-Alaska-S28-L</font>
+		<font>Font-Alaska-S28-L-B</font>
     </include>
 
 	<include name="Mod_83Content">
@@ -2176,6 +2176,108 @@
 			<label>$INFO[Window.Property(RandomAlbum.8.Artist)]</label>
 			<label2>$INFO[Window.Property(RandomAlbum.8.Title)]$INFO[Window.Property(RandomAlbum.8.Year), • ,]</label2>
 			<visible>Container(525).HasFocus(3) + StringCompare(Skin.String(music.widget.type),$LOCALIZE[41550] + !IsEmpty(Window.Property(RandomAlbum.8.Title))</visible>
+		</item>
+		
+		<!-- Games -->
+		<item id="1">
+			<onclick>SetFocus(525)</onclick>
+			<onclick>RunScript(script.games.rom.collection.browser,launchid=$INFO[Window(Home).Property(MostPlayedROM.1.Id)])</onclick>
+			<icon>$INFO[Window(Home).Property(MostPlayedROM.1.Fanart)]</icon>
+			<property name="Poster">$INFO[Window(Home).Property(MostPlayedROM.1.Thumb)]</property>
+			<property name="Plot">$INFO[Window(Home).Property(MostPlayedROM.1.Plot)]</property>
+			<label>$INFO[Window(Home).Property(MostPlayedROM.1.Title)]</label>
+			<label2>$INFO[Window(Home).Property(MostPlayedROM.1.Console)]</label2>
+			<visible>Container(525).HasFocus(7) + !IsEmpty(Window(Home).Property(MostPlayedROM.1.Title))</visible>
+		</item>
+		<item id="2">
+			<onclick>SetFocus(525)</onclick>
+			<onclick>RunScript(script.games.rom.collection.browser,launchid=$INFO[Window(Home).Property(MostPlayedROM.2.Id)])</onclick>
+			<icon>$INFO[Window(Home).Property(MostPlayedROM.2.Fanart)]</icon>
+			<property name="Poster">$INFO[Window(Home).Property(MostPlayedROM.2.Thumb)]</property>
+			<property name="Plot">$INFO[Window(Home).Property(MostPlayedROM.2.Plot)]</property>
+			<label>$INFO[Window(Home).Property(MostPlayedROM.2.Title)]</label>
+			<label2>$INFO[Window(Home).Property(MostPlayedROM.2.Console)]</label2>
+			<visible>Container(525).HasFocus(7) + !IsEmpty(Window(Home).Property(MostPlayedROM.2.Title))</visible>
+		</item>
+		<item id="3">
+			<onclick>SetFocus(525)</onclick>
+			<onclick>RunScript(script.games.rom.collection.browser,launchid=$INFO[Window(Home).Property(MostPlayedROM.3.Id)])</onclick>
+			<icon>$INFO[Window(Home).Property(MostPlayedROM.3.Fanart)]</icon>
+			<property name="Poster">$INFO[Window(Home).Property(MostPlayedROM.3.Thumb)]</property>
+			<property name="Plot">$INFO[Window(Home).Property(MostPlayedROM.3.Plot)]</property>
+			<label>$INFO[Window(Home).Property(MostPlayedROM.3.Title)]</label>
+			<label3>$INFO[Window(Home).Property(MostPlayedROM.3.Console)]</label3>
+			<visible>Container(525).HasFocus(7) + !IsEmpty(Window(Home).Property(MostPlayedROM.3.Title))</visible>
+		</item>
+		<item id="4">
+			<onclick>SetFocus(525)</onclick>
+			<onclick>RunScript(script.games.rom.collection.browser,launchid=$INFO[Window(Home).Property(MostPlayedROM.4.Id)])</onclick>
+			<icon>$INFO[Window(Home).Property(MostPlayedROM.4.Fanart)]</icon>
+			<property name="Poster">$INFO[Window(Home).Property(MostPlayedROM.4.Thumb)]</property>
+			<property name="Plot">$INFO[Window(Home).Property(MostPlayedROM.4.Plot)]</property>
+			<label>$INFO[Window(Home).Property(MostPlayedROM.4.Title)]</label>
+			<label4>$INFO[Window(Home).Property(MostPlayedROM.4.Console)]</label4>
+			<visible>Container(525).HasFocus(7) + !IsEmpty(Window(Home).Property(MostPlayedROM.4.Title))</visible>
+		</item>
+		<item id="5">
+			<onclick>SetFocus(525)</onclick>
+			<onclick>RunScript(script.games.rom.collection.browser,launchid=$INFO[Window(Home).Property(MostPlayedROM.5.Id)])</onclick>
+			<icon>$INFO[Window(Home).Property(MostPlayedROM.5.Fanart)]</icon>
+			<property name="Poster">$INFO[Window(Home).Property(MostPlayedROM.5.Thumb)]</property>
+			<property name="Plot">$INFO[Window(Home).Property(MostPlayedROM.5.Plot)]</property>
+			<label>$INFO[Window(Home).Property(MostPlayedROM.5.Title)]</label>
+			<label5>$INFO[Window(Home).Property(MostPlayedROM.5.Console)]</label5>
+			<visible>Container(525).HasFocus(7) + !IsEmpty(Window(Home).Property(MostPlayedROM.5.Title))</visible>
+		</item>
+		<item id="6">
+			<onclick>SetFocus(525)</onclick>
+			<onclick>RunScript(script.games.rom.collection.browser,launchid=$INFO[Window(Home).Property(MostPlayedROM.6.Id)])</onclick>
+			<icon>$INFO[Window(Home).Property(MostPlayedROM.6.Fanart)]</icon>
+			<property name="Poster">$INFO[Window(Home).Property(MostPlayedROM.6.Thumb)]</property>
+			<property name="Plot">$INFO[Window(Home).Property(MostPlayedROM.6.Plot)]</property>
+			<label>$INFO[Window(Home).Property(MostPlayedROM.6.Title)]</label>
+			<label6>$INFO[Window(Home).Property(MostPlayedROM.6.Console)]</label6>
+			<visible>Container(525).HasFocus(7) + !IsEmpty(Window(Home).Property(MostPlayedROM.6.Title))</visible>
+		</item>
+		<item id="7">
+			<onclick>SetFocus(525)</onclick>
+			<onclick>RunScript(script.games.rom.collection.browser,launchid=$INFO[Window(Home).Property(MostPlayedROM.7.Id)])</onclick>
+			<icon>$INFO[Window(Home).Property(MostPlayedROM.7.Fanart)]</icon>
+			<property name="Poster">$INFO[Window(Home).Property(MostPlayedROM.7.Thumb)]</property>
+			<property name="Plot">$INFO[Window(Home).Property(MostPlayedROM.7.Plot)]</property>
+			<label>$INFO[Window(Home).Property(MostPlayedROM.7.Title)]</label>
+			<label7>$INFO[Window(Home).Property(MostPlayedROM.7.Console)]</label7>
+			<visible>Container(525).HasFocus(7) + !IsEmpty(Window(Home).Property(MostPlayedROM.7.Title))</visible>
+		</item>
+		<item id="8">
+			<onclick>SetFocus(525)</onclick>
+			<onclick>RunScript(script.games.rom.collection.browser,launchid=$INFO[Window(Home).Property(MostPlayedROM.8.Id)])</onclick>
+			<icon>$INFO[Window(Home).Property(MostPlayedROM.8.Fanart)]</icon>
+			<property name="Poster">$INFO[Window(Home).Property(MostPlayedROM.8.Thumb)]</property>
+			<property name="Plot">$INFO[Window(Home).Property(MostPlayedROM.8.Plot)]</property>
+			<label>$INFO[Window(Home).Property(MostPlayedROM.8.Title)]</label>
+			<label8>$INFO[Window(Home).Property(MostPlayedROM.8.Console)]</label8>
+			<visible>Container(525).HasFocus(7) + !IsEmpty(Window(Home).Property(MostPlayedROM.8.Title))</visible>
+		</item>
+		<item id="9">
+			<onclick>SetFocus(525)</onclick>
+			<onclick>RunScript(script.games.rom.collection.browser,launchid=$INFO[Window(Home).Property(MostPlayedROM.9.Id)])</onclick>
+			<icon>$INFO[Window(Home).Property(MostPlayedROM.9.Fanart)]</icon>
+			<property name="Poster">$INFO[Window(Home).Property(MostPlayedROM.9.Thumb)]</property>
+			<property name="Plot">$INFO[Window(Home).Property(MostPlayedROM.9.Plot)]</property>
+			<label>$INFO[Window(Home).Property(MostPlayedROM.9.Title)]</label>
+			<label9>$INFO[Window(Home).Property(MostPlayedROM.9.Console)]</label9>
+			<visible>Container(525).HasFocus(7) + !IsEmpty(Window(Home).Property(MostPlayedROM.9.Title))</visible>
+		</item>
+		<item id="10">
+			<onclick>SetFocus(525)</onclick>
+			<onclick>RunScript(script.games.rom.collection.browser,launchid=$INFO[Window(Home).Property(MostPlayedROM.10.Id)])</onclick>
+			<icon>$INFO[Window(Home).Property(MostPlayedROM.10.Fanart)]</icon>
+			<property name="Poster">$INFO[Window(Home).Property(MostPlayedROM.10.Thumb)]</property>
+			<property name="Plot">$INFO[Window(Home).Property(MostPlayedROM.10.Plot)]</property>
+			<label>$INFO[Window(Home).Property(MostPlayedROM.10.Title)]</label>
+			<label10>$INFO[Window(Home).Property(MostPlayedROM.10.Console)]</label10>
+			<visible>Container(525).HasFocus(7) + !IsEmpty(Window(Home).Property(MostPlayedROM.10.Title))</visible>
 		</item>
 
 

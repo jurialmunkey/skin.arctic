@@ -37,38 +37,37 @@
             		<effect type="fade" start="100" end="0" tween="sine" easing="inout" time="350" delay="0" />
 				</animation>
             </control>
-            <!-- Dark Panel -->
             <control type="group">
                 <control type="image">
                     <posx>160</posx>
-                    <posy>250</posy>
-                    <width>1603</width>
-                    <height>668</height>
+                    <posy>260</posy>
+                    <width>1593</width>
+                    <height>648</height>
                     <texture border="35">arctic/common/border-20.png</texture>
                     <animation type="WindowOpen">
 						<effect type="fade" start="0" end="100" tween="sine" easing="inout" time="350" delay="0" />
 						<effect type="zoom" start="76" end="100" center="1344,560" tween="cubic" easing="out" time="400" delay="75" /> 
-						<effect type="zoom" start="309,250,1273,668" end="160,250,1603,668" tween="cubic" easing="out" time="545" delay="350" />
+						<effect type="zoom" start="309,260,1263,648" end="160,260,1593,648" tween="cubic" easing="out" time="545" delay="350" />
 					</animation>
 					<animation type="WindowClose">
 						<effect type="fade" end="0" start="100" tween="sine" easing="inout" time="545" delay="0" />
-						<effect type="zoom" end="309,250,1273,668" start="160,250,1603,668" tween="cubic" easing="out" time="545" delay="0" />
+						<effect type="zoom" end="309,260,1263,648" start="160,260,1593,648" tween="cubic" easing="out" time="545" delay="0" />
 					</animation>
                 </control>
                 <control type="image">
                     <posx>180</posx>
-                    <posy>270</posy>
-                    <width>1562</width>
-                    <height>628</height>
+                    <posy>280</posy>
+                    <width>1553</width>
+                    <height>608</height>
                     <texture border="35">arctic/common/panel.png</texture>
                     <animation type="WindowOpen">
 						<effect type="fade" start="0" end="100" tween="sine" easing="inout" time="350" delay="0" />
 						<effect type="zoom" start="76" end="100" center="1344,560" tween="cubic" easing="out" time="400" delay="75" /> 
-						<effect type="zoom" start="329,270,1233,628" end="180,270,1563,628" tween="cubic" easing="out" time="545" delay="350" />
+						<effect type="zoom" start="329,280,1223,608" end="180,280,1553,608" tween="cubic" easing="out" time="545" delay="350" />
 					</animation>
 					<animation type="WindowClose">
 						<effect type="fade" end="0" start="100" tween="sine" easing="inout" time="545" delay="0" />
-						<effect type="zoom" end="329,270,1233,628" start="180,270,1563,628" tween="cubic" easing="out" time="545" delay="0" />
+						<effect type="zoom" end="329,280,1223,608" start="180,280,1553,608" tween="cubic" easing="out" time="545" delay="0" />
 					</animation>
                 </control>
             </control>
@@ -86,10 +85,10 @@
                 <!-- Side Buttons -->
                 <control type="grouplist" id="3">
                     <description>Button Area</description>
-                    <posx>180</posx>
-                    <posy>281</posy>
+                    <posx>181</posx>
+                    <posy>291</posy>
                     <width>360</width>
-                    <height>609</height>
+                    <height>533</height>
                     <itemgap>-1</itemgap>
                     <onleft>5</onleft>
                     <onright>5</onright>
@@ -112,24 +111,29 @@
                 <posx>175</posx> 
                 <!-- Panel -->
                 <control type="image">
-                    <posx>354</posx>
+                    <posx>335</posx>
                     <posy>280</posy>
                     <height>608</height>
-                    <width>1213</width>
+                    <width>70</width>
+                    <texture border="35">arctic/common/border-20.png</texture>
+                </control>
+                <control type="image">
+                    <posx>355</posx>
+                    <posy>280</posy>
+                    <height>608</height>
+                    <width>1212</width>
                     <texture border="35">arctic/common/panel.png</texture>
                 </control>
                 <control type="image">
-                    <posx>334</posx>
-                    <posy>260</posy>
-                    <height>648</height>
-                    <width>1252</width>
+                    <posx>355</posx>
+                    <posy>280</posy>
+                    <height>608</height>
+                    <width>1212</width>
                     <texture border="35">arctic/common/whitepanel8.png</texture>
-                    <bordertexture border="40">arctic/common/border-20.png</bordertexture>
-                    <bordersize>20</bordersize>
                 </control>
                 <control type="grouplist" id="5">
                     <description>Control Area</description>
-                    <posx>355</posx>
+                    <posx>356</posx>
                     <posy>281</posy>
                     <width>1210</width>
                     <height>609</height>

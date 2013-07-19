@@ -19,7 +19,7 @@
             <control type="image">
             	<posx>636</posx>
             	<posy>299</posy>
-            	<width>648</width>
+            	<width>647</width>
             	<height>482</height>
             	<texture border="15">arctic/common/whitepanel8.png</texture>
             </control>

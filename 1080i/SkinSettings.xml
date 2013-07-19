@@ -44,34 +44,34 @@
             <control type="group">
                 <control type="image">
                     <posx>160</posx>
-                    <posy>250</posy>
-                    <width>1603</width>
-                    <height>668</height>
+                    <posy>260</posy>
+                    <width>1593</width>
+                    <height>648</height>
                     <texture border="35">arctic/common/border-20.png</texture>
                     <animation type="WindowOpen">
 						<effect type="fade" start="0" end="100" tween="sine" easing="inout" time="350" delay="0" />
 						<effect type="zoom" start="76" end="100" center="1344,560" tween="cubic" easing="out" time="400" delay="75" /> 
-						<effect type="zoom" start="309,250,1273,668" end="160,250,1603,668" tween="cubic" easing="out" time="545" delay="350" />
+						<effect type="zoom" start="309,260,1263,648" end="160,260,1593,648" tween="cubic" easing="out" time="545" delay="350" />
 					</animation>
 					<animation type="WindowClose">
 						<effect type="fade" end="0" start="100" tween="sine" easing="inout" time="545" delay="0" />
-						<effect type="zoom" end="309,250,1273,668" start="160,250,1603,668" tween="cubic" easing="out" time="545" delay="0" />
+						<effect type="zoom" end="309,260,1263,648" start="160,260,1593,648" tween="cubic" easing="out" time="545" delay="0" />
 					</animation>
                 </control>
                 <control type="image">
                     <posx>180</posx>
-                    <posy>270</posy>
-                    <width>1563</width>
-                    <height>628</height>
+                    <posy>280</posy>
+                    <width>1553</width>
+                    <height>608</height>
                     <texture border="35">arctic/common/panel.png</texture>
                     <animation type="WindowOpen">
 						<effect type="fade" start="0" end="100" tween="sine" easing="inout" time="350" delay="0" />
 						<effect type="zoom" start="76" end="100" center="1344,560" tween="cubic" easing="out" time="400" delay="75" /> 
-						<effect type="zoom" start="329,270,1233,628" end="180,270,1563,628" tween="cubic" easing="out" time="545" delay="350" />
+						<effect type="zoom" start="329,280,1223,608" end="180,280,1553,608" tween="cubic" easing="out" time="545" delay="350" />
 					</animation>
 					<animation type="WindowClose">
 						<effect type="fade" end="0" start="100" tween="sine" easing="inout" time="545" delay="0" />
-						<effect type="zoom" end="329,270,1233,628" start="180,270,1563,628" tween="cubic" easing="out" time="545" delay="0" />
+						<effect type="zoom" end="329,280,1223,608" start="180,280,1553,608" tween="cubic" easing="out" time="545" delay="0" />
 					</animation>
                 </control>
             </control>
@@ -87,10 +87,10 @@
 					<effect type="fade" end="0" start="100" time="0" delay="450" />
 				</animation>
                 <control type="list" id="30">
-                    <posx>180</posx>
-                    <posy>281</posy>
+                    <posx>181</posx>
+                    <posy>290</posy>
                     <width>360</width>
-                    <height>609</height>
+                    <height>533</height>
                     <onleft>5</onleft>
                     <onright>5</onright>
                     <onup>30</onup>
@@ -104,8 +104,16 @@
                             <height>77</height>
                             <texture border="90,3,90,3">views/list/other/separator-l.png</texture>
                         </control>
+                        <control type="image">
+                            <posx>-6</posx>
+                            <posy>-2</posy>
+                            <width>100</width>
+                            <height>100</height>
+                            <texture>$INFO[ListItem.Icon]</texture>
+                            <aspectratio align="left">keep</aspectratio>
+                        </control>
                         <control type="label">
-                            <posx>0</posx>
+                            <posx>60</posx>
                             <posy>0</posy>
                             <width>360</width>
                             <height>77</height>
@@ -128,8 +136,16 @@
                             <texture border="10">views/other/focus-mod8.png</texture>
                             <animation effect="fade" start="100" end="50" time="0" condition="!Control.HasFocus(30)">Conditional</animation>
                         </control>
+                        <control type="image">
+                            <posx>-6</posx>
+                            <posy>-2</posy>
+                            <width>100</width>
+                            <height>100</height>
+                            <texture>$INFO[ListItem.Icon]</texture>
+                            <aspectratio align="left">keep</aspectratio>
+                        </control>
                         <control type="label">
-                            <posx>0</posx>
+                            <posx>60</posx>
                             <posy>0</posy>
                             <width>360</width>
                             <height>77</height>
@@ -146,11 +162,13 @@
                             <description>General Settings</description>
                             <label>$LOCALIZE[41100]</label>
                             <onclick>noop</onclick>
+							<icon>windows/home/icons/config.png</icon>
                         </item>
                         <item id="32">
                             <description>Home Settings</description>
                             <label>$LOCALIZE[41130]</label>
                             <onclick>noop</onclick>
+							<icon>windows/home/icons/settings.png</icon>
                         </item>
                         <item id="37">
                             <description>Home Tile Settings</description>
@@ -162,26 +180,31 @@
                             <description>Media Settings</description>
                             <label>$LOCALIZE[41190]</label>
                             <onclick>noop</onclick>
+							<icon>windows/home/icons/photos2.png</icon>
                         </item>
                         <item id="34">
                             <description>OSD Settings</description>
                             <label>$LOCALIZE[478]</label>
                             <onclick>noop</onclick>
+							<icon>windows/home/icons/musicvideos.png</icon>
                         </item>
                         <item id="35">
                             <description>Background Settings</description>
                             <label>$LOCALIZE[41250]</label>
                             <onclick>noop</onclick>
+                            <icon>windows/home/icons/skin.png</icon>
                         </item>
                         <item id="36">
                             <description>Guide menu Settings</description>
                             <label>$LOCALIZE[41460]</label>
                             <onclick>noop</onclick>
+							<icon>windows/home/icons/tvguide.png</icon>
                         </item>
                         <item id="38">
                             <description>Add-on Settings</description>
                             <label>$LOCALIZE[41280]</label>
                             <onclick>noop</onclick>
+							<icon>windows/home/icons/addons.png</icon>
                         </item>
                     </content>
                 </control>
@@ -197,902 +220,910 @@
 					<effect type="slide" end="-190" start="-10" tween="cubic" easing="out" time="545" delay="0" />
 				</animation>
 				<control type="image">
-                    <posx>354</posx>
+                    <posx>335</posx>
+                    <posy>280</posy>
+                    <height>608</height>
+                    <width>70</width>
+                    <texture border="35">arctic/common/border-20.png</texture>
+                </control>
+				<control type="image">
+                    <posx>355</posx>
                     <posy>280</posy>
                     <height>608</height>
                     <width>1213</width>
                     <texture border="35">arctic/common/panel.png</texture>
                 </control>
                 <control type="image">
-                    <posx>334</posx>
-                    <posy>260</posy>
-                    <height>648</height>
-                    <width>1252</width>
+                    <posx>355</posx>
+                    <posy>280</posy>
+                    <height>608</height>
+                    <width>1212</width>
                     <texture border="35">arctic/common/whitepanel8.png</texture>
-                    <bordertexture border="40">arctic/common/border-20.png</bordertexture>
-                    <bordersize>20</bordersize>
                 </control>
                 
-                
-                <!-- =============== -->    
-                <!-- General Settings -->
-                <!-- =============== -->
-                <control type="grouplist" id="5">
-                    <visible>Container(30).HasFocus(31)</visible>
-                    <onleft>30</onleft>
-                    <include>SettingsCategoryGrouplistVars</include>
-                    <control type="radiobutton" id="1001">
-                        <width>1210</width>
-                        <include>SettingsCategoryRadioButtonVars</include>
-                        <selected>Skin.HasSetting(KioskMode)</selected>
-                        <onclick>Skin.ToggleSetting(KioskMode)</onclick>
-                        <label>$LOCALIZE[41101]</label>
-                    </control>
-                    <control type="radiobutton" id="1002">
-                        <width>1210</width>
-                        <include>SettingsCategoryRadioButtonVars</include>
-                        <selected>Skin.HasSetting(BackgroundVideo)</selected>
-                        <onclick>Skin.ToggleSetting(BackgroundVideo)</onclick>
-                        <label>$LOCALIZE[41102]</label>
-                    </control>
-                    <control type="radiobutton" id="1012">
-                        <width>1210</width>
-                        <include>SettingsCategoryRadioButtonVars</include>
-                        <selected>!Skin.HasSetting(SpinControl.Default)</selected>
-                        <onclick>Skin.ToggleSetting(SpinControl.Default)</onclick>
-                        <label>$LOCALIZE[41112]</label>
-                    </control>
-                    <control type="radiobutton" id="1008">
-                        <width>1210</width>
-                        <include>SettingsCategoryRadioButtonVars</include>
-                        <selected>Skin.HasSetting(StartupPlaylist)</selected>
-                        <onclick>Skin.ToggleSetting(StartupPlaylist)</onclick>
-                        <label>$LOCALIZE[21398]</label>
-                    </control>
-                    <control type="button" id="1009">
-                        <width>1210</width>
-                        <label> • $LOCALIZE[559]:</label>
-                        <label2>$INFO[Skin.String(StartupPlaylist.Path)]</label2>
-                        <include>SettingsCategoryDefaultButtonVars</include>
-                        <onclick>Skin.SetFile(StartupPlaylist.Path,.m3u|.xsp,special://profile/playlists/music/)</onclick>
-                        <enable>Skin.HasSetting(StartupPlaylist)</enable>
-                        <animation effect="fade" start="100" end="42" time="0" condition="!Control.IsEnabled(1009)">Conditional</animation>
-                    </control>
-                    <control type="radiobutton" id="1007">
-                        <width>1210</width>
-                        <include>SettingsCategoryRadioButtonVars</include>
-                        <selected>Skin.HasSetting(rss.enabled)</selected>
-                        <onclick>Skin.ToggleSetting(rss.enabled)</onclick>
-                        <label>$LOCALIZE[20304]</label>
-                    </control>
-                    
-                    <control type="button" id="1013">
-                        <width>1210</width>
-                        <include>SettingsCategoryDefaultButtonVars</include>
-                        <onclick>Skin.SetPath(cdartlocation)</onclick>
-                        <label>Music clearlogos path</label>
-                        <label2>$INFO[Skin.String(cdartlocation)]</label2>
-                        <onup>1007</onup>
-						<ondown>1001</ondown>
-                    </control>
-                </control>
-            
-                <!-- ============= -->  
-                <!-- Home Settings -->
-                <!-- ============= -->
-                <control type="grouplist" id="5">
-                    <visible>Container(30).HasFocus(32)</visible>
-                    <onleft>30</onleft>
-                    <include>SettingsCategoryGrouplistVars</include>
-                    <control type="button" id="2000">
-						<posx>0</posx>
-						<posy>0</posy>
-						<width>1210</width>
-						<height>77</height>
-						<align>left</align>
-						<aligny>center</aligny>
-						<textoffsetx>35</textoffsetx>
-						<font>Font-Condensed-S30-B</font>
-						<include>SettingsCategoryDefaultButtonVars</include>
-                        <onclick condition="StringCompare(Skin.String(homescreen.style),simple)">Skin.SetString(homescreen.style,panel)</onclick>
-                        <onclick condition="StringCompare(Skin.String(homescreen.style),metro)">Skin.SetString(homescreen.style,simple)</onclick>
-                        <onclick condition="StringCompare(Skin.String(homescreen.style),panel)">Skin.SetString(homescreen.style,metro)</onclick>
-                        <onclick condition="StringCompare(Skin.String(homescreen.style),simple)">Skin.SetString(homescreen.style,panel)</onclick>
-                        <label>Home screen style</label>
-						<label2>[UPPERCASE]$INFO[Skin.String(homescreen.style)][/UPPERCASE]</label2>
+                <control type="group">
+                	<posx>1</posx>
+					<!-- =============== -->    
+					<!-- General Settings -->
+					<!-- =============== -->
+					<control type="grouplist" id="5">
+						<visible>Container(30).HasFocus(31)</visible>
+						<onleft>30</onleft>
+						<include>SettingsCategoryGrouplistVars</include>
+						<control type="radiobutton" id="1001">
+							<width>1210</width>
+							<include>SettingsCategoryRadioButtonVars</include>
+							<selected>Skin.HasSetting(KioskMode)</selected>
+							<onclick>Skin.ToggleSetting(KioskMode)</onclick>
+							<label>$LOCALIZE[41101]</label>
+						</control>
+						<control type="radiobutton" id="1002">
+							<width>1210</width>
+							<include>SettingsCategoryRadioButtonVars</include>
+							<selected>Skin.HasSetting(BackgroundVideo)</selected>
+							<onclick>Skin.ToggleSetting(BackgroundVideo)</onclick>
+							<label>$LOCALIZE[41102]</label>
+						</control>
+						<control type="radiobutton" id="1012">
+							<width>1210</width>
+							<include>SettingsCategoryRadioButtonVars</include>
+							<selected>!Skin.HasSetting(SpinControl.Default)</selected>
+							<onclick>Skin.ToggleSetting(SpinControl.Default)</onclick>
+							<label>$LOCALIZE[41112]</label>
+						</control>
+						<control type="radiobutton" id="1008">
+							<width>1210</width>
+							<include>SettingsCategoryRadioButtonVars</include>
+							<selected>Skin.HasSetting(StartupPlaylist)</selected>
+							<onclick>Skin.ToggleSetting(StartupPlaylist)</onclick>
+							<label>$LOCALIZE[21398]</label>
+						</control>
+						<control type="button" id="1009">
+							<width>1210</width>
+							<label> • $LOCALIZE[559]:</label>
+							<label2>$INFO[Skin.String(StartupPlaylist.Path)]</label2>
+							<include>SettingsCategoryDefaultButtonVars</include>
+							<onclick>Skin.SetFile(StartupPlaylist.Path,.m3u|.xsp,special://profile/playlists/music/)</onclick>
+							<enable>Skin.HasSetting(StartupPlaylist)</enable>
+							<animation effect="fade" start="100" end="42" time="0" condition="!Control.IsEnabled(1009)">Conditional</animation>
+						</control>
+						<control type="radiobutton" id="1007">
+							<width>1210</width>
+							<include>SettingsCategoryRadioButtonVars</include>
+							<selected>Skin.HasSetting(rss.enabled)</selected>
+							<onclick>Skin.ToggleSetting(rss.enabled)</onclick>
+							<label>$LOCALIZE[20304]</label>
+						</control>
+					
+						<control type="button" id="1013">
+							<width>1210</width>
+							<font>Font-Condensed-S30</font>
+							<include>SettingsCategoryDefaultButtonVars</include>
+							<onclick>Skin.SetPath(cdartlocation)</onclick>
+							<label>[B]Music clearlogos path[/B]</label>
+							<label2>$INFO[Skin.String(cdartlocation)]</label2>
+							<onup>1007</onup>
+							<ondown>1001</ondown>
+						</control>
 					</control>
-                    <control type="button" id="2001">
-                        <width>1210</width>
-                        <include>SettingsCategoryDefaultButtonVars</include>
-                        <onclick>SetProperty(Dialog,$LOCALIZE[41131])</onclick>
-                        <onclick>ActivateWindow(3001)</onclick>
-                        <onfocus condition="!IsEmpty(Window(Home).Property(ReloadSkin))">ReloadSkin</onfocus>
-                        <onfocus condition="!IsEmpty(Window(Home).Property(ReloadSkin))">ClearProperty(ReloadSkin,Home)</onfocus>
-                        <label>$LOCALIZE[41131]</label>
-                    </control>
-                    <control type="button" id="2002">
-                        <width>1210</width>
-                        <include>SettingsCategoryDefaultButtonVars</include>
-                        <onclick>SetProperty(Dialog,$LOCALIZE[41136])</onclick>
-                        <onclick>ActivateWindow(3003)</onclick>
-                        <label>$LOCALIZE[41136]</label>
-                    </control>
-                    <control type="button" id="2003">
-                        <width>1210</width>
-                        <include>SettingsCategoryDefaultButtonVars</include>
-                        <onclick>SetProperty(Dialog,$LOCALIZE[41140])</onclick>
-                        <onclick>ActivateWindow(3003)</onclick>
-                        <label>$LOCALIZE[41140]</label>
-                        <visible>StringCompare(Skin.String(homescreen.style),metro)</visible>
-                    </control>          
-                    <control type="button" id="2008">
-                        <width>1210</width>
-                        <include>SettingsCategoryDefaultButtonVars</include>
-                        <onclick>ActivateWindow(3051)</onclick>
-                        <label>$LOCALIZE[41140]</label>
-                        <visible>!StringCompare(Skin.String(homescreen.style),metro)</visible>
-                    </control>              
+			
+					<!-- ============= -->  
+					<!-- Home Settings -->
+					<!-- ============= -->
+					<control type="grouplist" id="5">
+						<visible>Container(30).HasFocus(32)</visible>
+						<onleft>30</onleft>
+						<include>SettingsCategoryGrouplistVars</include>
+						<control type="button" id="2000">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>1210</width>
+							<height>77</height>
+							<align>left</align>
+							<aligny>center</aligny>
+							<textoffsetx>35</textoffsetx>
+							<font>Font-Condensed-S30</font>
+							<include>SettingsCategoryDefaultButtonVars</include>
+							<onclick condition="StringCompare(Skin.String(homescreen.style),simple)">Skin.SetString(homescreen.style,panel)</onclick>
+							<!--<onclick condition="StringCompare(Skin.String(homescreen.style),metro)">Skin.SetString(homescreen.style,simple)</onclick>
+							<onclick condition="StringCompare(Skin.String(homescreen.style),panel)">Skin.SetString(homescreen.style,metro)</onclick>-->
+							<onclick condition="StringCompare(Skin.String(homescreen.style),panel)">Skin.SetString(homescreen.style,simple)</onclick>
+							<onclick condition="StringCompare(Skin.String(homescreen.style),simple)">Skin.SetString(homescreen.style,panel)</onclick>
+							<label>[B]Home screen style[/B]</label>
+							<label2>[UPPERCASE]$INFO[Skin.String(homescreen.style)][/UPPERCASE]</label2>
+						</control>
+						<control type="button" id="2001">
+							<width>1210</width>
+							<include>SettingsCategoryDefaultButtonVars</include>
+							<onclick>SetProperty(Dialog,$LOCALIZE[41131])</onclick>
+							<onclick>ActivateWindow(3001)</onclick>
+							<onfocus condition="!IsEmpty(Window(Home).Property(ReloadSkin))">ReloadSkin</onfocus>
+							<onfocus condition="!IsEmpty(Window(Home).Property(ReloadSkin))">ClearProperty(ReloadSkin,Home)</onfocus>
+							<label>$LOCALIZE[41131]</label>
+						</control>
+						<control type="button" id="2002">
+							<width>1210</width>
+							<include>SettingsCategoryDefaultButtonVars</include>
+							<onclick>SetProperty(Dialog,$LOCALIZE[41136])</onclick>
+							<onclick>ActivateWindow(3003)</onclick>
+							<label>$LOCALIZE[41136]</label>
+						</control>
+						<control type="button" id="2003">
+							<width>1210</width>
+							<include>SettingsCategoryDefaultButtonVars</include>
+							<onclick>SetProperty(Dialog,$LOCALIZE[41140])</onclick>
+							<onclick>ActivateWindow(3003)</onclick>
+							<label>$LOCALIZE[41140]</label>
+							<visible>StringCompare(Skin.String(homescreen.style),metro)</visible>
+						</control>          
+						<control type="button" id="2008">
+							<width>1210</width>
+							<include>SettingsCategoryDefaultButtonVars</include>
+							<onclick>ActivateWindow(3051)</onclick>
+							<label>$LOCALIZE[41140]</label>
+							<visible>!StringCompare(Skin.String(homescreen.style),metro)</visible>
+						</control>              
 					
 					
-                    <control type="radiobutton" id="2004">
-                        <width>1210</width>
-                        <include>SettingsCategoryRadioButtonVars</include>
-                        <selected>!Skin.HasSetting(HideHomeProfileInfo)</selected>
-                        <onclick>Skin.ToggleSetting(HideHomeProfileInfo)</onclick>
-                        <label>$LOCALIZE[41134]</label>
-                    </control>
-                    <control type="radiobutton" id="2005">
-                        <width>1210</width>
-                        <include>SettingsCategoryRadioButtonVars</include>
-                        <selected>Skin.HasSetting(HomeClicksSubmenu)</selected>
-                        <onclick>Skin.ToggleSetting(HomeClicksSubmenu)</onclick>
-                        <label>Open submenu on click</label>
-                    </control>
-                    
-                    <control type="button" id="2006">
-						<posx>0</posx>
-						<posy>0</posy>
-						<width>1210</width>
-						<height>77</height>
-						<align>left</align>
-						<aligny>center</aligny>
-						<textoffsetx>35</textoffsetx>
-						<font>Font-Condensed-S30-B</font>
-						<include>SettingsCategoryDefaultButtonVars</include>
-                        <onclick>Skin.ToggleSetting(UseRCB)</onclick>
-                        <onclick condition="Skin.HasSetting(UseRCB)">Skin.SetString(UseRCB.name,Rom Collection Browser)</onclick>
-                        <onclick condition="!Skin.HasSetting(UseRCB)">Skin.SetString(UseRCB.name,Advanced Launcher)</onclick>
-                        <label>Games tile opens</label>
-						<label2>$INFO[Skin.String(UseRCB.name)]</label2>
+						<control type="radiobutton" id="2004">
+							<width>1210</width>
+							<include>SettingsCategoryRadioButtonVars</include>
+							<selected>!Skin.HasSetting(HideHomeProfileInfo)</selected>
+							<onclick>Skin.ToggleSetting(HideHomeProfileInfo)</onclick>
+							<label>$LOCALIZE[41134]</label>
+						</control>
+						<control type="radiobutton" id="2005">
+							<width>1210</width>
+							<include>SettingsCategoryRadioButtonVars</include>
+							<selected>Skin.HasSetting(HomeClicksSubmenu)</selected>
+							<onclick>Skin.ToggleSetting(HomeClicksSubmenu)</onclick>
+							<label>Open submenu on click</label>
+						</control>
+					
+						<control type="button" id="2006">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>1210</width>
+							<height>77</height>
+							<align>left</align>
+							<aligny>center</aligny>
+							<textoffsetx>35</textoffsetx>
+							<font>Font-Condensed-S30</font>
+							<include>SettingsCategoryDefaultButtonVars</include>
+							<onclick>Skin.ToggleSetting(UseRCB)</onclick>
+							<onclick condition="Skin.HasSetting(UseRCB)">Skin.SetString(UseRCB.name,Rom Collection Browser)</onclick>
+							<onclick condition="!Skin.HasSetting(UseRCB)">Skin.SetString(UseRCB.name,Advanced Launcher)</onclick>
+							<label>[B]Games tile opens[/B]</label>
+							<label2>$INFO[Skin.String(UseRCB.name)]</label2>
+						</control>
+						<control type="group" id="2007">
+							<description>Fake spin control</description>
+							<width>1210</width>
+							<height>77</height>
+							<control type="image">
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>1210</width>
+								<height>77</height>
+								<texture border="90,3,90,3">views/list/other/separator-l.png</texture>
+								<visible>!ControlGroup(2007).HasFocus</visible>
+							</control>
+							<control type="image">
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>1210</width>
+								<height>77</height>
+								<texture border="5">views/other/focus-mod.png</texture>
+								<visible>ControlGroup(2007).HasFocus</visible>
+							</control>
+							<control type="button" id="20071">
+								<posx>1104</posx>
+								<posy>8</posy>
+								<width>43</width>
+								<height>60</height>
+								<onleft>20072</onleft>
+								<onright>20072</onright>
+								<onup>2006</onup>
+								<ondown>2001</ondown>
+								<texturefocus>buttons/spinctrl/arrow-down-fo.png</texturefocus>
+								<texturenofocus>buttons/spinctrl/arrow-down-nf.png</texturenofocus>
+								<onclick condition="stringcompare(Skin.String(music.name),$LOCALIZE[1038])">Skin.SetString(music.name,$LOCALIZE[14022])</onclick>
+								<onclick condition="stringcompare(Skin.String(music.name),$LOCALIZE[1038])">Skin.Reset(music.path)</onclick>
+								<onclick condition="stringcompare(Skin.String(music.name),$LOCALIZE[136])">Skin.SetString(music.name,$LOCALIZE[1038])</onclick>
+								<onclick condition="stringcompare(Skin.String(music.name),$LOCALIZE[136])">Skin.SetString(music.path,plugins)</onclick>
+								<onclick condition="stringcompare(Skin.String(music.name),$LOCALIZE[521])">Skin.SetString(music.name,$LOCALIZE[136])</onclick>
+								<onclick condition="stringcompare(Skin.String(music.name),$LOCALIZE[521])">Skin.SetString(music.path,playlists)</onclick>
+								<onclick condition="stringcompare(Skin.String(music.name),$LOCALIZE[517])">Skin.SetString(music.name,$LOCALIZE[521])</onclick>
+								<onclick condition="stringcompare(Skin.String(music.name),$LOCALIZE[517])">Skin.SetString(music.path,compilations)</onclick>
+								<onclick condition="stringcompare(Skin.String(music.name),$LOCALIZE[359])">Skin.SetString(music.name,$LOCALIZE[517])</onclick>
+								<onclick condition="stringcompare(Skin.String(music.name),$LOCALIZE[359])">Skin.SetString(music.path,recentlyplayedalbums)</onclick>
+								<onclick condition="stringcompare(Skin.String(music.name),$LOCALIZE[10505])">Skin.SetString(music.name,$LOCALIZE[359])</onclick>
+								<onclick condition="stringcompare(Skin.String(music.name),$LOCALIZE[10505])">Skin.SetString(music.path,recentlyaddedalbums)</onclick>
+								<onclick condition="stringcompare(Skin.String(music.name),$LOCALIZE[10504])">Skin.SetString(music.name,$LOCALIZE[10505])</onclick>
+								<onclick condition="stringcompare(Skin.String(music.name),$LOCALIZE[10504])">Skin.SetString(music.path,top100albums)</onclick>
+								<onclick condition="stringcompare(Skin.String(music.name),$LOCALIZE[652])">Skin.SetString(music.name,$LOCALIZE[10504])</onclick>
+								<onclick condition="stringcompare(Skin.String(music.name),$LOCALIZE[652])">Skin.SetString(music.path,top100songs)</onclick>
+								<onclick condition="stringcompare(Skin.String(music.name),$LOCALIZE[134])">Skin.SetString(music.name,$LOCALIZE[652])</onclick>
+								<onclick condition="stringcompare(Skin.String(music.name),$LOCALIZE[134])">Skin.SetString(music.path,years)</onclick>
+								<onclick condition="stringcompare(Skin.String(music.name),$LOCALIZE[1050])">Skin.SetString(music.name,$LOCALIZE[134])</onclick>
+								<onclick condition="stringcompare(Skin.String(music.name),$LOCALIZE[1050])">Skin.SetString(music.path,songs)</onclick>
+								<onclick condition="stringcompare(Skin.String(music.name),$LOCALIZE[132])">Skin.SetString(music.name,$LOCALIZE[1050])</onclick>
+								<onclick condition="stringcompare(Skin.String(music.name),$LOCALIZE[132])">Skin.SetString(music.path,singles)</onclick>
+								<onclick condition="stringcompare(Skin.String(music.name),$LOCALIZE[133])">Skin.SetString(music.name,$LOCALIZE[132])</onclick>
+								<onclick condition="stringcompare(Skin.String(music.name),$LOCALIZE[133])">Skin.SetString(music.path,albums)</onclick>
+								<onclick condition="stringcompare(Skin.String(music.name),$LOCALIZE[135])">Skin.SetString(music.name,$LOCALIZE[133])</onclick>
+								<onclick condition="stringcompare(Skin.String(music.name),$LOCALIZE[135])">Skin.SetString(music.path,artists)</onclick>
+								<onclick condition="stringcompare(Skin.String(music.name),$LOCALIZE[14022])">Skin.SetString(music.name,$LOCALIZE[135])</onclick>
+								<onclick condition="stringcompare(Skin.String(music.name),$LOCALIZE[14022])">Skin.SetString(music.path,genres)</onclick>
+								<onclick condition="stringcompare(Skin.String(music.name),$LOCALIZE[1038])">Skin.SetString(music.name,$LOCALIZE[14022])</onclick>
+								<onclick condition="stringcompare(Skin.String(music.name),$LOCALIZE[1038])">Skin.Reset(music.path)</onclick>
+							</control>
+							<control type="button" id="20072">
+								<posx>1147</posx>
+								<posy>8</posy>
+								<width>43</width>
+								<height>60</height>
+								<onleft>20071</onleft>
+								<onright>20071</onright>
+								<onup>2004</onup>
+								<ondown>2008</ondown>
+								<texturefocus>buttons/spinctrl/arrow-up-fo.png</texturefocus>
+								<texturenofocus>buttons/spinctrl/arrow-up-nf.png</texturenofocus>
+								<onclick condition="stringcompare(Skin.String(music.name),$LOCALIZE[14022])">Skin.SetString(music.name,$LOCALIZE[1038])</onclick>
+								<onclick condition="stringcompare(Skin.String(music.name),$LOCALIZE[14022])">Skin.SetString(music.path,plugins)</onclick>
+								<onclick condition="stringcompare(Skin.String(music.name),$LOCALIZE[135])">Skin.SetString(music.name,$LOCALIZE[14022])</onclick>
+								<onclick condition="stringcompare(Skin.String(music.name),$LOCALIZE[135])">Skin.Reset(music.path)</onclick>
+								<onclick condition="stringcompare(Skin.String(music.name),$LOCALIZE[133])">Skin.SetString(music.name,$LOCALIZE[135])</onclick>
+								<onclick condition="stringcompare(Skin.String(music.name),$LOCALIZE[133])">Skin.SetString(music.path,genre)</onclick>
+								<onclick condition="stringcompare(Skin.String(music.name),$LOCALIZE[132])">Skin.SetString(music.name,$LOCALIZE[133])</onclick>
+								<onclick condition="stringcompare(Skin.String(music.name),$LOCALIZE[132])">Skin.SetString(music.path,artists)</onclick>
+								<onclick condition="stringcompare(Skin.String(music.name),$LOCALIZE[1050])">Skin.SetString(music.name,$LOCALIZE[132])</onclick>
+								<onclick condition="stringcompare(Skin.String(music.name),$LOCALIZE[1050])">Skin.SetString(music.path,albums)</onclick>
+								<onclick condition="stringcompare(Skin.String(music.name),$LOCALIZE[134])">Skin.SetString(music.name,$LOCALIZE[1050])</onclick>
+								<onclick condition="stringcompare(Skin.String(music.name),$LOCALIZE[134])">Skin.SetString(music.path,singles)</onclick>
+								<onclick condition="stringcompare(Skin.String(music.name),$LOCALIZE[652])">Skin.SetString(music.name,$LOCALIZE[134])</onclick>
+								<onclick condition="stringcompare(Skin.String(music.name),$LOCALIZE[652])">Skin.SetString(music.path,songs)</onclick>
+								<onclick condition="stringcompare(Skin.String(music.name),$LOCALIZE[10504])">Skin.SetString(music.name,$LOCALIZE[652])</onclick>
+								<onclick condition="stringcompare(Skin.String(music.name),$LOCALIZE[10504])">Skin.SetString(music.path,years)</onclick>
+								<onclick condition="stringcompare(Skin.String(music.name),$LOCALIZE[10505])">Skin.SetString(music.name,$LOCALIZE[10504])</onclick>
+								<onclick condition="stringcompare(Skin.String(music.name),$LOCALIZE[10505])">Skin.SetString(music.path,top100songs)</onclick>
+								<onclick condition="stringcompare(Skin.String(music.name),$LOCALIZE[359])">Skin.SetString(music.name,$LOCALIZE[10505])</onclick>
+								<onclick condition="stringcompare(Skin.String(music.name),$LOCALIZE[359])">Skin.SetString(music.path,top100albums)</onclick>
+								<onclick condition="stringcompare(Skin.String(music.name),$LOCALIZE[517])">Skin.SetString(music.name,$LOCALIZE[359])</onclick>
+								<onclick condition="stringcompare(Skin.String(music.name),$LOCALIZE[517])">Skin.SetString(music.path,recentlyaddedalbums)</onclick>
+								<onclick condition="stringcompare(Skin.String(music.name),$LOCALIZE[521])">Skin.SetString(music.name,$LOCALIZE[517])</onclick>
+								<onclick condition="stringcompare(Skin.String(music.name),$LOCALIZE[521])">Skin.SetString(music.path,recentlyplayedalbums)</onclick>
+								<onclick condition="stringcompare(Skin.String(music.name),$LOCALIZE[136])">Skin.SetString(music.name,$LOCALIZE[521])</onclick>
+								<onclick condition="stringcompare(Skin.String(music.name),$LOCALIZE[136])">Skin.SetString(music.path,compilations)</onclick>
+								<onclick condition="stringcompare(Skin.String(music.name),$LOCALIZE[1038])">Skin.SetString(music.name,$LOCALIZE[136])</onclick>
+								<onclick condition="stringcompare(Skin.String(music.name),$LOCALIZE[1038])">Skin.SetString(music.path,playlists)</onclick>
+								<onclick condition="stringcompare(Skin.String(music.name),$LOCALIZE[14022])">Skin.SetString(music.name,$LOCALIZE[1038])</onclick>
+								<onclick condition="stringcompare(Skin.String(music.name),$LOCALIZE[14022])">Skin.SetString(music.path,plugins)</onclick>
+							</control>
+							<control type="button">
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>1120</width>
+								<height>77</height>
+								<align>left</align>
+								<aligny>center</aligny>
+								<textoffsetx>35</textoffsetx>
+								<font>Font-Condensed-S30</font>
+								<textcolor>mod-infotags-l</textcolor>
+								<label>[B]$LOCALIZE[41152][/B]</label>
+								<label2>$INFO[Skin.String(music.name)]</label2>
+								<visible>!ControlGroup(2007).HasFocus</visible>
+							</control>
+							<control type="button">
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>1120</width>
+								<height>77</height>
+								<align>left</align>
+								<aligny>center</aligny>
+								<textoffsetx>35</textoffsetx>
+								<font>Font-Condensed-S30</font>
+								<textcolor>white</textcolor>
+								<label>[B]$LOCALIZE[41152][/B]</label>
+								<label2>$INFO[Skin.String(music.name)]</label2>
+								<visible>ControlGroup(2007).HasFocus</visible>
+							</control>
+						</control>    
+					</control>              
+				
+					<!-- ============== --> 
+					<!-- View Settings  -->
+					<!-- ============== -->
+					<control type="grouplist" id="5">
+						<onleft>30</onleft>
+						<include>SettingsCategoryGrouplistVars</include>
+						<visible>Container(30).HasFocus(33)</visible>
+						<control type="radiobutton" id="3001">
+							<width>1210</width>
+							<include>SettingsCategoryRadioButtonVars</include>
+							<selected>!Skin.HasSetting(HideFanart)</selected>
+							<onclick>Skin.ToggleSetting(HideFanart)</onclick>
+							<label>$LOCALIZE[41191]</label>
+						</control>
+						<control type="radiobutton" id="3002">
+							<width>1210</width>
+							<include>SettingsCategoryRadioButtonVars</include>
+							<selected>!Skin.HasSetting(HideInfoTags)</selected>
+							<onclick>Skin.ToggleSetting(HideInfoTags)</onclick>
+							<label>Show info tags</label>
+						</control>
+						<control type="radiobutton" id="3003">
+							<width>1210</width>
+							<include>SettingsCategoryRadioButtonVars</include>
+							<selected>Skin.HasSetting(ShowLowerLogo)</selected>
+							<onclick>Skin.ToggleSetting(ShowLowerLogo)</onclick>
+							<label>Show clearlogo</label>
+							<enable>!Skin.HasSetting(HideInfoTags)</enable>
+							<animation effect="fade" start="100" end="42" time="0" condition="!Control.IsEnabled(3003)">Conditional</animation>
+						</control>
+						<control type="button" id="3005">
+							<width>1210</width>
+							<include>SettingsCategoryDefaultButtonVars</include>
+							<label>$LOCALIZE[41192]</label>
+							<label2 fallback="US">[COLOR=ff181818]$VAR[MovieMPAALangLabel][/COLOR]</label2>
+							<onclick>ActivateWindow(3006)</onclick>
+						</control>
+						<control type="radiobutton" id="3004">
+							<width>1210</width>
+							<include>SettingsCategoryRadioButtonVars</include>
+							<selected>!Skin.HasSetting(info.hideflags)</selected>
+							<onclick>Skin.ToggleSetting(info.hideflags)</onclick>
+							<label>Show language flags in movie info</label>
+						</control>
+						<control type="radiobutton" id="3006">
+							<width>1210</width>
+							<include>SettingsCategoryRadioButtonVars</include>
+							<selected>Skin.HasSetting(MovieInformation.PlayTrailer)</selected>
+							<onclick>Skin.ToggleSetting(MovieInformation.PlayTrailer)</onclick>
+							<label>$LOCALIZE[41202]</label>
+						</control>
+						<control type="radiobutton" id="3007">
+							<width>1210</width>
+							<include>SettingsCategoryRadioButtonVars</include>
+							<selected>Skin.HasSetting(PlayTrailer.Minimized)</selected>
+							<onclick>Skin.ToggleSetting(PlayTrailer.Minimized)</onclick>
+							<label>$LOCALIZE[41203]</label>
+						</control>
+						<control type="radiobutton" id="3008">
+							<width>1210</width>
+							<include>SettingsCategoryRadioButtonVars</include>
+							<selected>Skin.HasSetting(PreferLandscapeArt)</selected>
+							<onclick>Skin.ToggleSetting(PreferLandscapeArt)</onclick>
+							<label>Prefer landscape art</label>
+						</control>
 					</control>
-                    <control type="group" id="2007">
-                        <description>Fake spin control</description>
-                        <width>1210</width>
-                        <height>77</height>
-                        <control type="image">
-                            <posx>0</posx>
-                            <posy>0</posy>
-                            <width>1210</width>
-                            <height>77</height>
-                            <texture border="90,3,90,3">views/list/other/separator-l.png</texture>
-                            <visible>!ControlGroup(2007).HasFocus</visible>
-                        </control>
-                        <control type="image">
-                            <posx>0</posx>
-                            <posy>0</posy>
-                            <width>1210</width>
-                            <height>77</height>
-                            <texture border="5">views/other/focus-mod.png</texture>
-                            <visible>ControlGroup(2007).HasFocus</visible>
-                        </control>
-                        <control type="button" id="20071">
-                            <posx>1104</posx>
-                            <posy>8</posy>
-                            <width>43</width>
-                            <height>60</height>
-                            <onleft>20072</onleft>
-                            <onright>20072</onright>
-                            <onup>2006</onup>
-                            <ondown>2001</ondown>
-                            <texturefocus>buttons/spinctrl/arrow-down-fo.png</texturefocus>
-                            <texturenofocus>buttons/spinctrl/arrow-down-nf.png</texturenofocus>
-                            <onclick condition="stringcompare(Skin.String(music.name),$LOCALIZE[1038])">Skin.SetString(music.name,$LOCALIZE[14022])</onclick>
-                            <onclick condition="stringcompare(Skin.String(music.name),$LOCALIZE[1038])">Skin.Reset(music.path)</onclick>
-                            <onclick condition="stringcompare(Skin.String(music.name),$LOCALIZE[136])">Skin.SetString(music.name,$LOCALIZE[1038])</onclick>
-                            <onclick condition="stringcompare(Skin.String(music.name),$LOCALIZE[136])">Skin.SetString(music.path,plugins)</onclick>
-                            <onclick condition="stringcompare(Skin.String(music.name),$LOCALIZE[521])">Skin.SetString(music.name,$LOCALIZE[136])</onclick>
-                            <onclick condition="stringcompare(Skin.String(music.name),$LOCALIZE[521])">Skin.SetString(music.path,playlists)</onclick>
-                            <onclick condition="stringcompare(Skin.String(music.name),$LOCALIZE[517])">Skin.SetString(music.name,$LOCALIZE[521])</onclick>
-                            <onclick condition="stringcompare(Skin.String(music.name),$LOCALIZE[517])">Skin.SetString(music.path,compilations)</onclick>
-                            <onclick condition="stringcompare(Skin.String(music.name),$LOCALIZE[359])">Skin.SetString(music.name,$LOCALIZE[517])</onclick>
-                            <onclick condition="stringcompare(Skin.String(music.name),$LOCALIZE[359])">Skin.SetString(music.path,recentlyplayedalbums)</onclick>
-                            <onclick condition="stringcompare(Skin.String(music.name),$LOCALIZE[10505])">Skin.SetString(music.name,$LOCALIZE[359])</onclick>
-                            <onclick condition="stringcompare(Skin.String(music.name),$LOCALIZE[10505])">Skin.SetString(music.path,recentlyaddedalbums)</onclick>
-                            <onclick condition="stringcompare(Skin.String(music.name),$LOCALIZE[10504])">Skin.SetString(music.name,$LOCALIZE[10505])</onclick>
-                            <onclick condition="stringcompare(Skin.String(music.name),$LOCALIZE[10504])">Skin.SetString(music.path,top100albums)</onclick>
-                            <onclick condition="stringcompare(Skin.String(music.name),$LOCALIZE[652])">Skin.SetString(music.name,$LOCALIZE[10504])</onclick>
-                            <onclick condition="stringcompare(Skin.String(music.name),$LOCALIZE[652])">Skin.SetString(music.path,top100songs)</onclick>
-                            <onclick condition="stringcompare(Skin.String(music.name),$LOCALIZE[134])">Skin.SetString(music.name,$LOCALIZE[652])</onclick>
-                            <onclick condition="stringcompare(Skin.String(music.name),$LOCALIZE[134])">Skin.SetString(music.path,years)</onclick>
-                            <onclick condition="stringcompare(Skin.String(music.name),$LOCALIZE[1050])">Skin.SetString(music.name,$LOCALIZE[134])</onclick>
-                            <onclick condition="stringcompare(Skin.String(music.name),$LOCALIZE[1050])">Skin.SetString(music.path,songs)</onclick>
-                            <onclick condition="stringcompare(Skin.String(music.name),$LOCALIZE[132])">Skin.SetString(music.name,$LOCALIZE[1050])</onclick>
-                            <onclick condition="stringcompare(Skin.String(music.name),$LOCALIZE[132])">Skin.SetString(music.path,singles)</onclick>
-                            <onclick condition="stringcompare(Skin.String(music.name),$LOCALIZE[133])">Skin.SetString(music.name,$LOCALIZE[132])</onclick>
-                            <onclick condition="stringcompare(Skin.String(music.name),$LOCALIZE[133])">Skin.SetString(music.path,albums)</onclick>
-                            <onclick condition="stringcompare(Skin.String(music.name),$LOCALIZE[135])">Skin.SetString(music.name,$LOCALIZE[133])</onclick>
-                            <onclick condition="stringcompare(Skin.String(music.name),$LOCALIZE[135])">Skin.SetString(music.path,artists)</onclick>
-                            <onclick condition="stringcompare(Skin.String(music.name),$LOCALIZE[14022])">Skin.SetString(music.name,$LOCALIZE[135])</onclick>
-                            <onclick condition="stringcompare(Skin.String(music.name),$LOCALIZE[14022])">Skin.SetString(music.path,genres)</onclick>
-                            <onclick condition="stringcompare(Skin.String(music.name),$LOCALIZE[1038])">Skin.SetString(music.name,$LOCALIZE[14022])</onclick>
-                            <onclick condition="stringcompare(Skin.String(music.name),$LOCALIZE[1038])">Skin.Reset(music.path)</onclick>
-                        </control>
-                        <control type="button" id="20072">
-                            <posx>1147</posx>
-                            <posy>8</posy>
-                            <width>43</width>
-                            <height>60</height>
-                            <onleft>20071</onleft>
-                            <onright>20071</onright>
-                            <onup>2004</onup>
-                            <ondown>2008</ondown>
-                            <texturefocus>buttons/spinctrl/arrow-up-fo.png</texturefocus>
-                            <texturenofocus>buttons/spinctrl/arrow-up-nf.png</texturenofocus>
-                            <onclick condition="stringcompare(Skin.String(music.name),$LOCALIZE[14022])">Skin.SetString(music.name,$LOCALIZE[1038])</onclick>
-                            <onclick condition="stringcompare(Skin.String(music.name),$LOCALIZE[14022])">Skin.SetString(music.path,plugins)</onclick>
-                            <onclick condition="stringcompare(Skin.String(music.name),$LOCALIZE[135])">Skin.SetString(music.name,$LOCALIZE[14022])</onclick>
-                            <onclick condition="stringcompare(Skin.String(music.name),$LOCALIZE[135])">Skin.Reset(music.path)</onclick>
-                            <onclick condition="stringcompare(Skin.String(music.name),$LOCALIZE[133])">Skin.SetString(music.name,$LOCALIZE[135])</onclick>
-                            <onclick condition="stringcompare(Skin.String(music.name),$LOCALIZE[133])">Skin.SetString(music.path,genre)</onclick>
-                            <onclick condition="stringcompare(Skin.String(music.name),$LOCALIZE[132])">Skin.SetString(music.name,$LOCALIZE[133])</onclick>
-                            <onclick condition="stringcompare(Skin.String(music.name),$LOCALIZE[132])">Skin.SetString(music.path,artists)</onclick>
-                            <onclick condition="stringcompare(Skin.String(music.name),$LOCALIZE[1050])">Skin.SetString(music.name,$LOCALIZE[132])</onclick>
-                            <onclick condition="stringcompare(Skin.String(music.name),$LOCALIZE[1050])">Skin.SetString(music.path,albums)</onclick>
-                            <onclick condition="stringcompare(Skin.String(music.name),$LOCALIZE[134])">Skin.SetString(music.name,$LOCALIZE[1050])</onclick>
-                            <onclick condition="stringcompare(Skin.String(music.name),$LOCALIZE[134])">Skin.SetString(music.path,singles)</onclick>
-                            <onclick condition="stringcompare(Skin.String(music.name),$LOCALIZE[652])">Skin.SetString(music.name,$LOCALIZE[134])</onclick>
-                            <onclick condition="stringcompare(Skin.String(music.name),$LOCALIZE[652])">Skin.SetString(music.path,songs)</onclick>
-                            <onclick condition="stringcompare(Skin.String(music.name),$LOCALIZE[10504])">Skin.SetString(music.name,$LOCALIZE[652])</onclick>
-                            <onclick condition="stringcompare(Skin.String(music.name),$LOCALIZE[10504])">Skin.SetString(music.path,years)</onclick>
-                            <onclick condition="stringcompare(Skin.String(music.name),$LOCALIZE[10505])">Skin.SetString(music.name,$LOCALIZE[10504])</onclick>
-                            <onclick condition="stringcompare(Skin.String(music.name),$LOCALIZE[10505])">Skin.SetString(music.path,top100songs)</onclick>
-                            <onclick condition="stringcompare(Skin.String(music.name),$LOCALIZE[359])">Skin.SetString(music.name,$LOCALIZE[10505])</onclick>
-                            <onclick condition="stringcompare(Skin.String(music.name),$LOCALIZE[359])">Skin.SetString(music.path,top100albums)</onclick>
-                            <onclick condition="stringcompare(Skin.String(music.name),$LOCALIZE[517])">Skin.SetString(music.name,$LOCALIZE[359])</onclick>
-                            <onclick condition="stringcompare(Skin.String(music.name),$LOCALIZE[517])">Skin.SetString(music.path,recentlyaddedalbums)</onclick>
-                            <onclick condition="stringcompare(Skin.String(music.name),$LOCALIZE[521])">Skin.SetString(music.name,$LOCALIZE[517])</onclick>
-                            <onclick condition="stringcompare(Skin.String(music.name),$LOCALIZE[521])">Skin.SetString(music.path,recentlyplayedalbums)</onclick>
-                            <onclick condition="stringcompare(Skin.String(music.name),$LOCALIZE[136])">Skin.SetString(music.name,$LOCALIZE[521])</onclick>
-                            <onclick condition="stringcompare(Skin.String(music.name),$LOCALIZE[136])">Skin.SetString(music.path,compilations)</onclick>
-                            <onclick condition="stringcompare(Skin.String(music.name),$LOCALIZE[1038])">Skin.SetString(music.name,$LOCALIZE[136])</onclick>
-                            <onclick condition="stringcompare(Skin.String(music.name),$LOCALIZE[1038])">Skin.SetString(music.path,playlists)</onclick>
-                            <onclick condition="stringcompare(Skin.String(music.name),$LOCALIZE[14022])">Skin.SetString(music.name,$LOCALIZE[1038])</onclick>
-                            <onclick condition="stringcompare(Skin.String(music.name),$LOCALIZE[14022])">Skin.SetString(music.path,plugins)</onclick>
-                        </control>
-                        <control type="button">
-                            <posx>0</posx>
-                            <posy>0</posy>
-                            <width>1120</width>
-                            <height>77</height>
-                            <align>left</align>
-                            <aligny>center</aligny>
-                            <textoffsetx>35</textoffsetx>
-                            <font>Font-Condensed-S30-B</font>
-                            <textcolor>mod-infotags-l</textcolor>
-                            <label>$LOCALIZE[41152]</label>
-                            <label2>$INFO[Skin.String(music.name)]</label2>
-                            <visible>!ControlGroup(2007).HasFocus</visible>
-                        </control>
-                        <control type="button">
-                            <posx>0</posx>
-                            <posy>0</posy>
-                            <width>1120</width>
-                            <height>77</height>
-                            <align>left</align>
-                            <aligny>center</aligny>
-                            <textoffsetx>35</textoffsetx>
-                            <font>Font-Condensed-S30-B</font>
-                            <textcolor>white</textcolor>
-                            <label>$LOCALIZE[41152]</label>
-                            <label2>$INFO[Skin.String(music.name)]</label2>
-                            <visible>ControlGroup(2007).HasFocus</visible>
-                        </control>
-                    </control>    
-                </control>              
-                
-                <!-- ============== --> 
-                <!-- View Settings  -->
-                <!-- ============== -->
-                <control type="grouplist" id="5">
-                    <onleft>30</onleft>
-                    <include>SettingsCategoryGrouplistVars</include>
-                    <visible>Container(30).HasFocus(33)</visible>
-                    <control type="radiobutton" id="3001">
-                        <width>1210</width>
-                        <include>SettingsCategoryRadioButtonVars</include>
-                        <selected>!Skin.HasSetting(HideFanart)</selected>
-                        <onclick>Skin.ToggleSetting(HideFanart)</onclick>
-                        <label>$LOCALIZE[41191]</label>
-                    </control>
-                    <control type="radiobutton" id="3002">
-                        <width>1210</width>
-                        <include>SettingsCategoryRadioButtonVars</include>
-                        <selected>!Skin.HasSetting(HideInfoTags)</selected>
-                        <onclick>Skin.ToggleSetting(HideInfoTags)</onclick>
-                        <label>Show info tags</label>
-                    </control>
-                    <control type="radiobutton" id="3003">
-                        <width>1210</width>
-                        <include>SettingsCategoryRadioButtonVars</include>
-                        <selected>Skin.HasSetting(ShowLowerLogo)</selected>
-                        <onclick>Skin.ToggleSetting(ShowLowerLogo)</onclick>
-                        <label>Show clearlogo</label>
-                        <enable>!Skin.HasSetting(HideInfoTags)</enable>
-                        <animation effect="fade" start="100" end="42" time="0" condition="!Control.IsEnabled(3003)">Conditional</animation>
-                    </control>
-                    <control type="button" id="3005">
-                        <width>1210</width>
-                        <include>SettingsCategoryDefaultButtonVars</include>
-                        <label>$LOCALIZE[41192]</label>
-                        <label2 fallback="US">[COLOR=ff181818]$VAR[MovieMPAALangLabel][/COLOR]</label2>
-                        <onclick>ActivateWindow(3006)</onclick>
-                    </control>
-                    <control type="radiobutton" id="3004">
-                        <width>1210</width>
-                        <include>SettingsCategoryRadioButtonVars</include>
-                        <selected>!Skin.HasSetting(info.hideflags)</selected>
-                        <onclick>Skin.ToggleSetting(info.hideflags)</onclick>
-                        <label>Show language flags in movie info</label>
-                    </control>
-                    <control type="radiobutton" id="3006">
-                        <width>1210</width>
-                        <include>SettingsCategoryRadioButtonVars</include>
-                        <selected>Skin.HasSetting(MovieInformation.PlayTrailer)</selected>
-                        <onclick>Skin.ToggleSetting(MovieInformation.PlayTrailer)</onclick>
-                        <label>$LOCALIZE[41202]</label>
-                    </control>
-                    <control type="radiobutton" id="3007">
-                        <width>1210</width>
-                        <include>SettingsCategoryRadioButtonVars</include>
-                        <selected>Skin.HasSetting(PlayTrailer.Minimized)</selected>
-                        <onclick>Skin.ToggleSetting(PlayTrailer.Minimized)</onclick>
-                        <label>$LOCALIZE[41203]</label>
-                    </control>
-                    <control type="radiobutton" id="3008">
-                        <width>1210</width>
-                        <include>SettingsCategoryRadioButtonVars</include>
-                        <selected>Skin.HasSetting(PreferLandscapeArt)</selected>
-                        <onclick>Skin.ToggleSetting(PreferLandscapeArt)</onclick>
-                        <label>Prefer landscape art</label>
-                    </control>
+				
+					<!-- OSD Settings -->
+					<control type="grouplist" id="5">
+						<onleft>30</onleft>
+						<include>SettingsCategoryGrouplistVars</include>
+						<visible>Container(30).HasFocus(34)</visible>
+						<control type="radiobutton" id="8001">
+							<width>1210</width>
+							<include>SettingsCategoryRadioButtonVars</include>
+							<selected>Skin.HasSetting(OSDVisualisation.Enabled)</selected>
+							<onclick condition="Skin.HasSetting(OSDVisualisation.Enabled)">Skin.Reset(OSDVisualisation.ShowFanart)</onclick>
+							<onclick>Skin.ToggleSetting(OSDVisualisation.Enabled)</onclick>
+							<label>$LOCALIZE[41240]</label>
+						</control>
+						<control type="radiobutton" id="8002">
+							<width>1210</width>
+							<include>SettingsCategoryRadioButtonVars</include>
+							<selected>Skin.HasSetting(OSDVisualisation.ShowFanart)</selected>
+							<onclick>Skin.ToggleSetting(OSDVisualisation.ShowFanart)</onclick>
+							<visible>Skin.HasSetting(OSDVisualisation.Enabled)</visible>
+							<label> • $LOCALIZE[41106]</label>
+						</control>
+						<control type="radiobutton" id="8003">
+							<width>1210</width>
+							<include>SettingsCategoryRadioButtonVars</include>
+							<selected>Skin.HasSetting(ArtistSlideShow.Enabled)</selected>
+							<onclick>Skin.ToggleSetting(ArtistSlideShow.Enabled)</onclick>
+							<enable>System.HasAddon(script.artistslideshow)</enable>
+							<label>$LOCALIZE[41103]</label>
+							<animation effect="fade" start="100" end="42" time="0" condition="!Control.IsEnabled(8002)">Conditional</animation>
+						</control>
+						<control type="radiobutton" id="8004">
+							<width>1210</width>
+							<include>SettingsCategoryRadioButtonVars</include>
+							<selected>Skin.HasSetting(ArtistSlideShow.Animate)</selected>
+							<onclick>Skin.ToggleSetting(ArtistSlideShow.Animate)</onclick>
+							<visible>Skin.HasSetting(ArtistSlideShow.Enabled)</visible>
+							<label> • $LOCALIZE[41105]</label>
+						</control>
+						<control type="radiobutton" id="8005">
+							<width>1210</width>
+							<include>SettingsCategoryRadioButtonVars</include>
+							<selected>Skin.HasSetting(CDArt.Enabled)</selected>
+							<onclick>Skin.ToggleSetting(CDArt.Enabled)</onclick>
+							<label>$LOCALIZE[41107]</label>
+						</control>
+						<control type="radiobutton" id="8006">
+							<width>1210</width>
+							<include>SettingsCategoryRadioButtonVars</include>
+							<selected>Skin.HasSetting(OSDDefaultSubtitleButton.Enabled)</selected>
+							<onclick>Skin.ToggleSetting(OSDDefaultSubtitleButton.Enabled)</onclick>
+							<enable>!IsEmpty(Skin.String(SubtitleScript_Path))</enable>
+							<label>$LOCALIZE[41242]</label>
+							<animation effect="fade" start="100" end="42" time="0" condition="!Control.IsEnabled(8005)">Conditional</animation>
+						</control>
+					</control>
+				
+					<!-- Background Settings -->
+					<control type="grouplist" id="5">
+						<onleft>30</onleft>
+						<include>SettingsCategoryGrouplistVars</include>
+						<visible>Container(30).HasFocus(35)</visible>
+						<control type="button" id="5000">
+							<width>1210</width>
+							<include>SettingsCategoryDefaultButtonVars</include>
+							<label>$LOCALIZE[41251]</label>
+							<onclick>ClearProperty(CustomDialogType)</onclick>
+							<onclick>ClearProperty(CustomDialog)</onclick>
+							<onclick>SetProperty(Dialog,$LOCALIZE[41251])</onclick>
+							<onclick>ActivateWindow(3002)</onclick>
+						</control>
+						<control type="button" id="5001">
+							<width>1210</width>
+							<include>SettingsCategoryDefaultButtonVars</include>
+							<label>$LOCALIZE[5]</label>
+							<onclick>ClearProperty(CustomDialogType)</onclick>
+							<onclick>ClearProperty(CustomDialog)</onclick>
+							<onclick>SetProperty(Dialog,$LOCALIZE[5])</onclick>
+							<onclick>ActivateWindow(3002)</onclick>
+						</control>
+						<control type="button" id="5002">
+							<width>1210</width>
+							<include>SettingsCategoryDefaultButtonVars</include>
+							<label>$LOCALIZE[342]</label>
+							<onclick>ClearProperty(CustomDialogType)</onclick>
+							<onclick>ClearProperty(CustomDialog)</onclick>
+							<onclick>SetProperty(Dialog,$LOCALIZE[342])</onclick>
+							<onclick>ActivateWindow(3002)</onclick>
+						</control>
+						<control type="button" id="5003">
+							<width>1210</width>
+							<include>SettingsCategoryDefaultButtonVars</include>
+							<label>$LOCALIZE[20343]</label>
+							<onclick>ClearProperty(CustomDialogType)</onclick>
+							<onclick>ClearProperty(CustomDialog)</onclick>
+							<onclick>SetProperty(Dialog,$LOCALIZE[20343])</onclick>
+							<onclick>ActivateWindow(3002)</onclick>
+						</control>
+						<control type="button" id="5006">
+							<width>1210</width>
+							<include>SettingsCategoryDefaultButtonVars</include>
+							<label>$LOCALIZE[2]</label>
+							<onclick>ClearProperty(CustomDialogType)</onclick>
+							<onclick>ClearProperty(CustomDialog)</onclick>
+							<onclick>SetProperty(Dialog,$LOCALIZE[2])</onclick>
+							<onclick>ActivateWindow(3002)</onclick>
+						</control>
+						<control type="button" id="5009">
+							<width>1210</width>
+							<include>SettingsCategoryDefaultButtonVars</include>
+							<label>$LOCALIZE[41504]</label>
+							<onclick>ClearProperty(CustomDialogType)</onclick>
+							<onclick>ClearProperty(CustomDialog)</onclick>
+							<onclick>SetProperty(Dialog,$LOCALIZE[41504])</onclick>
+							<onclick>ActivateWindow(3002)</onclick>
+						</control>
+						<control type="button" id="5010">
+							<width>1210</width>
+							<include>SettingsCategoryDefaultButtonVars</include>
+							<label>$LOCALIZE[12600]</label>
+							<onclick>ClearProperty(CustomDialogType)</onclick>
+							<onclick>ClearProperty(CustomDialog)</onclick>
+							<onclick>SetProperty(Dialog,$LOCALIZE[12600])</onclick>
+							<onclick>ActivateWindow(3002)</onclick>
+						</control>
+						<!-- USE WEATHER FANART -->
+						<control type="radiobutton" id="5014">
+							<width>1210</width>
+							<include>SettingsCategoryRadioButtonVars</include>
+							<selected>Skin.HasSetting(weather.usefanart)</selected>
+							<onclick>Skin.ToggleSetting(weather.usefanart)</onclick>
+							<label>Use weather fanart</label>
+							<visible>!StringCompare(Skin.String(homescreen.style),metro)</visible>
+						</control>
+						<!-- LIVE TV BACKGROUND -->
+						<control type="button" id="5011">
+							<width>1210</width>
+							<include>SettingsCategoryDefaultButtonVars</include>
+							<label>$LOCALIZE[41220]</label>
+							<onclick>ClearProperty(CustomDialogType)</onclick>
+							<onclick>ClearProperty(CustomDialog)</onclick>
+							<onclick>SetProperty(Dialog,$LOCALIZE[41220])</onclick>
+							<onclick>ActivateWindow(3002)</onclick>
+							<visible>!StringCompare(Skin.String(homescreen.style),metro)</visible>
+						</control>
+						<!-- Pictures BACKGROUND -->
+						<control type="button" id="5012">
+							<width>1210</width>
+							<include>SettingsCategoryDefaultButtonVars</include>
+							<label>$LOCALIZE[10002]</label>
+							<onclick>ClearProperty(CustomDialogType)</onclick>
+							<onclick>ClearProperty(CustomDialog)</onclick>
+							<onclick>SetProperty(Dialog,$LOCALIZE[10002])</onclick>
+							<onclick>ActivateWindow(3002)</onclick>
+							<visible>!StringCompare(Skin.String(homescreen.style),metro)</visible>
+						</control>
+						<!-- Games BACKGROUND -->
+						<control type="button" id="5013">
+							<width>1210</width>
+							<include>SettingsCategoryDefaultButtonVars</include>
+							<label>$LOCALIZE[20190]</label>
+							<onclick>ClearProperty(CustomDialogType)</onclick>
+							<onclick>ClearProperty(CustomDialog)</onclick>
+							<onclick>SetProperty(Dialog,$LOCALIZE[15016])</onclick>
+							<onclick>ActivateWindow(3002)</onclick>
+							<visible>!StringCompare(Skin.String(homescreen.style),metro)</visible>
+						</control>
+					</control>
+				
+					<!-- =================== -->    
+					<!-- Guide menu Settings -->
+					<!-- =================== -->
+					<control type="grouplist" id="5">
+						<onleft>30</onleft>
+						<include>SettingsCategoryGrouplistVars</include>
+						<visible>Container(30).HasFocus(36)</visible>
+						<control type="radiobutton" id="6001">
+							<width>1210</width>
+							<include>SettingsCategoryRadioButtonVars</include>
+							<selected>!Skin.HasSetting(Guide.HideClock)</selected>
+							<onclick>Skin.ToggleSetting(Guide.HideClock)</onclick>
+							<label>$LOCALIZE[41270]</label>
+						</control>
+						<control type="radiobutton" id="6002">
+							<width>1210</width>
+							<include>SettingsCategoryRadioButtonVars</include>
+							<selected>!Skin.HasSetting(Guide.HideUserImage)</selected>
+							<onclick>Skin.ToggleSetting(Guide.HideUserImage)</onclick>
+							<label>$LOCALIZE[41271]</label>
+						</control>
+						<control type="radiobutton" id="6003">
+							<width>1210</width>
+							<include>SettingsCategoryRadioButtonVars</include>
+							<selected>Skin.HasSetting(Guide.Custom1)</selected>
+							<onclick>Skin.Reset(Guide.Custom1.Label)</onclick>
+							<onclick>Skin.Reset(Guide.Custom1.Path)</onclick>
+							<onclick>Skin.Reset(Guide.Custom1.Type)</onclick>
+							<onclick>Skin.ToggleSetting(Guide.Custom1)</onclick>
+							<label>$LOCALIZE[41272]</label>
+						</control>
+						<control type="button" id="6004">
+							<width>1210</width>
+							<include>SettingsCategoryDefaultButtonVars</include>
+							<onclick>SetProperty(Dialog,$LOCALIZE[41272])</onclick>
+							<onclick>SetProperty(Guide.Custom,1)</onclick>
+							<onclick>ActivateWindow(3001)</onclick>
+							<label> • $LOCALIZE[41276]</label>
+							<label2>$INFO[Skin.String(Guide.Custom1.Label)]</label2>
+							<visible>Skin.HasSetting(Guide.Custom1)</visible>
+						</control>
+						<control type="radiobutton" id="6005">
+							<width>1210</width>
+							<include>SettingsCategoryRadioButtonVars</include>
+							<selected>Skin.HasSetting(Guide.Custom2)</selected>
+							<onclick>Skin.Reset(Guide.Custom2.Label)</onclick>
+							<onclick>Skin.Reset(Guide.Custom2.Path)</onclick>
+							<onclick>Skin.Reset(Guide.Custom2.Type)</onclick>
+							<onclick>Skin.ToggleSetting(Guide.Custom2)</onclick>
+							<label>$LOCALIZE[41273]</label>
+						</control>
+						<control type="button" id="6006">
+							<width>1210</width>
+							<include>SettingsCategoryDefaultButtonVars</include>
+							<onclick>SetProperty(Dialog,$LOCALIZE[41273])</onclick>
+							<onclick>SetProperty(Guide.Custom,2)</onclick>
+							<onclick>ActivateWindow(3001)</onclick>
+							<label> • $LOCALIZE[41276]</label>
+							<label2>$INFO[Skin.String(Guide.Custom2.Label)]</label2>
+							<visible>Skin.HasSetting(Guide.Custom2)</visible>
+						</control>
+						<control type="radiobutton" id="6007">
+							<width>1210</width>
+							<include>SettingsCategoryRadioButtonVars</include>
+							<selected>Skin.HasSetting(Guide.Custom3)</selected>
+							<onclick>Skin.Reset(Guide.Custom3.Label)</onclick>
+							<onclick>Skin.Reset(Guide.Custom3.Path)</onclick>
+							<onclick>Skin.Reset(Guide.Custom3.Type)</onclick>
+							<onclick>Skin.ToggleSetting(Guide.Custom3)</onclick>
+							<label>$LOCALIZE[41274]</label>
+						</control>
+						<control type="button" id="6008">
+							<width>1210</width>
+							<include>SettingsCategoryDefaultButtonVars</include>
+							<onclick>SetProperty(Dialog,$LOCALIZE[41274])</onclick>
+							<onclick>SetProperty(Guide.Custom,3)</onclick>
+							<onclick>ActivateWindow(3001)</onclick>
+							<label> • $LOCALIZE[41276]</label>
+							<label2>$INFO[Skin.String(Guide.Custom3.Label)]</label2>
+							<visible>Skin.HasSetting(Guide.Custom3)</visible>
+						</control>
+						<control type="radiobutton" id="6009">
+							<width>1210</width>
+							<include>SettingsCategoryRadioButtonVars</include>
+							<selected>Skin.HasSetting(Guide.Custom4)</selected>
+							<onclick>Skin.Reset(Guide.Custom4.Label)</onclick>
+							<onclick>Skin.Reset(Guide.Custom4.Path)</onclick>
+							<onclick>Skin.Reset(Guide.Custom4.Type)</onclick>
+							<onclick>Skin.ToggleSetting(Guide.Custom4)</onclick>
+							<label>$LOCALIZE[41275]</label>
+						</control>
+						<control type="button" id="6010">
+							<width>1210</width>
+							<include>SettingsCategoryDefaultButtonVars</include>
+							<onclick>SetProperty(Dialog,$LOCALIZE[41275])</onclick>
+							<onclick>SetProperty(Guide.Custom,4)</onclick>
+							<onclick>ActivateWindow(3001)</onclick>
+							<label> • $LOCALIZE[41276]</label>
+							<label2>$INFO[Skin.String(Guide.Custom4.Label)]</label2>
+							<visible>Skin.HasSetting(Guide.Custom4)</visible>
+						</control>
+					</control>
+				
+					<!-- =================== -->    
+					<!-- Home Tiles Settings -->
+					<!-- =================== -->
+					<control type="grouplist" id="5">
+						<onleft>30</onleft>
+						<include>SettingsCategoryGrouplistVars</include>
+						<visible>Container(30).HasFocus(37)</visible>
+						<!--<control type="radiobutton" id="10002">
+							<width>1210</width>
+							<include>SettingsCategoryRadioButtonVars</include>
+							<selected>!Skin.HasSetting(AddonTilesColored)</selected>
+							<onclick>Skin.ToggleSetting(AddonTilesColored)</onclick>
+							<label>Addon tiles share color</label>
+						</control>-->
+						<control type="button" id="10003">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>1210</width>
+							<height>77</height>
+							<align>left</align>
+							<aligny>center</aligny>
+							<textoffsetx>35</textoffsetx>
+							<font>Font-Condensed-S30-B</font>
+							<include>SettingsCategoryDefaultButtonVars</include>
+							<onclick condition="stringcompare(Skin.String(musiccolor.name),Grey Tiles)">Skin.SetString(musiccolor.name,Purple Tiles)</onclick>
+							<onclick condition="stringcompare(Skin.String(musiccolor.name),White Tiles)">Skin.SetString(musiccolor.name,Grey Tiles)</onclick>
+							<onclick condition="stringcompare(Skin.String(musiccolor.name),Lime Tiles)">Skin.SetString(musiccolor.name,White Tiles)</onclick>
+							<onclick condition="stringcompare(Skin.String(musiccolor.name),Green Tiles)">Skin.SetString(musiccolor.name,Lime Tiles)</onclick>
+							<onclick condition="stringcompare(Skin.String(musiccolor.name),Blue Tiles)">Skin.SetString(musiccolor.name,Green Tiles)</onclick>
+							<onclick condition="stringcompare(Skin.String(musiccolor.name),Red Tiles)">Skin.SetString(musiccolor.name,Blue Tiles)</onclick>
+							<onclick condition="stringcompare(Skin.String(musiccolor.name),Pink Tiles)">Skin.SetString(musiccolor.name,Red Tiles)</onclick>
+							<onclick condition="stringcompare(Skin.String(musiccolor.name),Purple Tiles)">Skin.SetString(musiccolor.name,Pink Tiles)</onclick>
+							<onclick condition="stringcompare(Skin.String(musiccolor.name),Grey Tiles)">Skin.SetString(musiccolor.name,Purple Tiles)</onclick>
+							<label>$LOCALIZE[2]</label>
+							<label2>$INFO[Skin.String(musiccolor.name)]</label2>
+						</control>
+						<control type="button" id="10004">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>1210</width>
+							<height>77</height>
+							<align>left</align>
+							<aligny>center</aligny>
+							<textoffsetx>35</textoffsetx>
+							<font>Font-Condensed-S30-B</font>
+							<include>SettingsCategoryDefaultButtonVars</include>
+							<onclick condition="stringcompare(Skin.String(tvcolor.name),Grey Tiles)">Skin.SetString(tvcolor.name,Purple Tiles)</onclick>
+							<onclick condition="stringcompare(Skin.String(tvcolor.name),White Tiles)">Skin.SetString(tvcolor.name,Grey Tiles)</onclick>
+							<onclick condition="stringcompare(Skin.String(tvcolor.name),Lime Tiles)">Skin.SetString(tvcolor.name,White Tiles)</onclick>
+							<onclick condition="stringcompare(Skin.String(tvcolor.name),Green Tiles)">Skin.SetString(tvcolor.name,Lime Tiles)</onclick>
+							<onclick condition="stringcompare(Skin.String(tvcolor.name),Blue Tiles)">Skin.SetString(tvcolor.name,Green Tiles)</onclick>
+							<onclick condition="stringcompare(Skin.String(tvcolor.name),Red Tiles)">Skin.SetString(tvcolor.name,Blue Tiles)</onclick>
+							<onclick condition="stringcompare(Skin.String(tvcolor.name),Pink Tiles)">Skin.SetString(tvcolor.name,Red Tiles)</onclick>
+							<onclick condition="stringcompare(Skin.String(tvcolor.name),Purple Tiles)">Skin.SetString(tvcolor.name,Pink Tiles)</onclick>
+							<onclick condition="stringcompare(Skin.String(tvcolor.name),Grey Tiles)">Skin.SetString(tvcolor.name,Purple Tiles)</onclick>
+							<label>$LOCALIZE[19020]</label>
+							<label2>$INFO[Skin.String(tvcolor.name)]</label2>
+						</control>
+						<control type="button" id="10005">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>1210</width>
+							<height>77</height>
+							<align>left</align>
+							<aligny>center</aligny>
+							<textoffsetx>35</textoffsetx>
+							<font>Font-Condensed-S30-B</font>
+							<include>SettingsCategoryDefaultButtonVars</include>
+							<onclick condition="stringcompare(Skin.String(moviecolor.name),Grey Tiles)">Skin.SetString(moviecolor.name,Purple Tiles)</onclick>
+							<onclick condition="stringcompare(Skin.String(moviecolor.name),White Tiles)">Skin.SetString(moviecolor.name,Grey Tiles)</onclick>
+							<onclick condition="stringcompare(Skin.String(moviecolor.name),Lime Tiles)">Skin.SetString(moviecolor.name,White Tiles)</onclick>
+							<onclick condition="stringcompare(Skin.String(moviecolor.name),Green Tiles)">Skin.SetString(moviecolor.name,Lime Tiles)</onclick>
+							<onclick condition="stringcompare(Skin.String(moviecolor.name),Blue Tiles)">Skin.SetString(moviecolor.name,Green Tiles)</onclick>
+							<onclick condition="stringcompare(Skin.String(moviecolor.name),Red Tiles)">Skin.SetString(moviecolor.name,Blue Tiles)</onclick>
+							<onclick condition="stringcompare(Skin.String(moviecolor.name),Pink Tiles)">Skin.SetString(moviecolor.name,Red Tiles)</onclick>
+							<onclick condition="stringcompare(Skin.String(moviecolor.name),Purple Tiles)">Skin.SetString(moviecolor.name,Pink Tiles)</onclick>
+							<onclick condition="stringcompare(Skin.String(moviecolor.name),Grey Tiles)">Skin.SetString(moviecolor.name,Purple Tiles)</onclick>
+							<label>$LOCALIZE[342]</label>
+							<label2>$INFO[Skin.String(moviecolor.name)]</label2>
+						</control>
+						<control type="button" id="10006">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>1210</width>
+							<height>77</height>
+							<align>left</align>
+							<aligny>center</aligny>
+							<textoffsetx>35</textoffsetx>
+							<font>Font-Condensed-S30-B</font>
+							<include>SettingsCategoryDefaultButtonVars</include>
+							<onclick condition="stringcompare(Skin.String(homecolor.name),Grey Tiles)">Skin.SetString(homecolor.name,Purple Tiles)</onclick>
+							<onclick condition="stringcompare(Skin.String(homecolor.name),White Tiles)">Skin.SetString(homecolor.name,Grey Tiles)</onclick>
+							<onclick condition="stringcompare(Skin.String(homecolor.name),Lime Tiles)">Skin.SetString(homecolor.name,White Tiles)</onclick>
+							<onclick condition="stringcompare(Skin.String(homecolor.name),Green Tiles)">Skin.SetString(homecolor.name,Lime Tiles)</onclick>
+							<onclick condition="stringcompare(Skin.String(homecolor.name),Blue Tiles)">Skin.SetString(homecolor.name,Green Tiles)</onclick>
+							<onclick condition="stringcompare(Skin.String(homecolor.name),Red Tiles)">Skin.SetString(homecolor.name,Blue Tiles)</onclick>
+							<onclick condition="stringcompare(Skin.String(homecolor.name),Pink Tiles)">Skin.SetString(homecolor.name,Red Tiles)</onclick>
+							<onclick condition="stringcompare(Skin.String(homecolor.name),Purple Tiles)">Skin.SetString(homecolor.name,Pink Tiles)</onclick>
+							<onclick condition="stringcompare(Skin.String(homecolor.name),Grey Tiles)">Skin.SetString(homecolor.name,Purple Tiles)</onclick>
+							<label>$LOCALIZE[10000]</label>
+							<label2>$INFO[Skin.String(homecolor.name)]</label2>
+						</control>
+						<control type="button" id="10007">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>1210</width>
+							<height>77</height>
+							<align>left</align>
+							<aligny>center</aligny>
+							<textoffsetx>35</textoffsetx>
+							<font>Font-Condensed-S30-B</font>
+							<include>SettingsCategoryDefaultButtonVars</include>
+							<onclick condition="stringcompare(Skin.String(appcolor.name),Grey Tiles)">Skin.SetString(appcolor.name,Purple Tiles)</onclick>
+							<onclick condition="stringcompare(Skin.String(appcolor.name),White Tiles)">Skin.SetString(appcolor.name,Grey Tiles)</onclick>						
+							<onclick condition="stringcompare(Skin.String(appcolor.name),Lime Tiles)">Skin.SetString(appcolor.name,White Tiles)</onclick>						
+							<onclick condition="stringcompare(Skin.String(appcolor.name),Green Tiles)">Skin.SetString(appcolor.name,Lime Tiles)</onclick>
+							<onclick condition="stringcompare(Skin.String(appcolor.name),Blue Tiles)">Skin.SetString(appcolor.name,Green Tiles)</onclick>
+							<onclick condition="stringcompare(Skin.String(appcolor.name),Red Tiles)">Skin.SetString(appcolor.name,Blue Tiles)</onclick>
+							<onclick condition="stringcompare(Skin.String(appcolor.name),Pink Tiles)">Skin.SetString(appcolor.name,Red Tiles)</onclick>
+							<onclick condition="stringcompare(Skin.String(appcolor.name),Purple Tiles)">Skin.SetString(appcolor.name,Pink Tiles)</onclick>
+							<onclick condition="stringcompare(Skin.String(appcolor.name),Grey Tiles)">Skin.SetString(appcolor.name,Purple Tiles)</onclick>
+							<label>$LOCALIZE[10001]</label>
+							<label2>$INFO[Skin.String(appcolor.name)]</label2>
+						</control>
+						<control type="button" id="10008">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>1210</width>
+							<height>77</height>
+							<align>left</align>
+							<aligny>center</aligny>
+							<textoffsetx>35</textoffsetx>
+							<font>Font-Condensed-S30-B</font>
+							<include>SettingsCategoryDefaultButtonVars</include>
+							<onclick condition="stringcompare(Skin.String(pvrcolor.name),Grey Tiles)">Skin.SetString(pvrcolor.name,Purple Tiles)</onclick>
+							<onclick condition="stringcompare(Skin.String(pvrcolor.name),White Tiles)">Skin.SetString(pvrcolor.name,Grey Tiles)</onclick>
+							<onclick condition="stringcompare(Skin.String(pvrcolor.name),Lime Tiles)">Skin.SetString(pvrcolor.name,White Tiles)</onclick>
+							<onclick condition="stringcompare(Skin.String(pvrcolor.name),Green Tiles)">Skin.SetString(pvrcolor.name,Lime Tiles)</onclick>
+							<onclick condition="stringcompare(Skin.String(pvrcolor.name),Blue Tiles)">Skin.SetString(pvrcolor.name,Green Tiles)</onclick>
+							<onclick condition="stringcompare(Skin.String(pvrcolor.name),Red Tiles)">Skin.SetString(pvrcolor.name,Blue Tiles)</onclick>
+							<onclick condition="stringcompare(Skin.String(pvrcolor.name),Pink Tiles)">Skin.SetString(pvrcolor.name,Red Tiles)</onclick>
+							<onclick condition="stringcompare(Skin.String(pvrcolor.name),Purple Tiles)">Skin.SetString(pvrcolor.name,Pink Tiles)</onclick>
+							<onclick condition="stringcompare(Skin.String(pvrcolor.name),Grey Tiles)">Skin.SetString(pvrcolor.name,Purple Tiles)</onclick>
+							<label>$LOCALIZE[41220]</label>
+							<label2>$INFO[Skin.String(pvrcolor.name)]</label2>
+						</control>
+						<control type="button" id="10009">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>1210</width>
+							<height>77</height>
+							<align>left</align>
+							<aligny>center</aligny>
+							<textoffsetx>35</textoffsetx>
+							<font>Font-Condensed-S30-B</font>
+							<include>SettingsCategoryDefaultButtonVars</include>
+							<onclick condition="stringcompare(Skin.String(weathercolor.name),Grey Tiles)">Skin.SetString(weathercolor.name,Purple Tiles)</onclick>
+							<onclick condition="stringcompare(Skin.String(weathercolor.name),White Tiles)">Skin.SetString(weathercolor.name,Grey Tiles)</onclick>
+							<onclick condition="stringcompare(Skin.String(weathercolor.name),Lime Tiles)">Skin.SetString(weathercolor.name,White Tiles)</onclick>
+							<onclick condition="stringcompare(Skin.String(weathercolor.name),Green Tiles)">Skin.SetString(weathercolor.name,Lime Tiles)</onclick>
+							<onclick condition="stringcompare(Skin.String(weathercolor.name),Blue Tiles)">Skin.SetString(weathercolor.name,Green Tiles)</onclick>
+							<onclick condition="stringcompare(Skin.String(weathercolor.name),Red Tiles)">Skin.SetString(weathercolor.name,Blue Tiles)</onclick>
+							<onclick condition="stringcompare(Skin.String(weathercolor.name),Pink Tiles)">Skin.SetString(weathercolor.name,Red Tiles)</onclick>
+							<onclick condition="stringcompare(Skin.String(weathercolor.name),Purple Tiles)">Skin.SetString(weathercolor.name,Pink Tiles)</onclick>
+							<onclick condition="stringcompare(Skin.String(weathercolor.name),Grey Tiles)">Skin.SetString(weathercolor.name,Purple Tiles)</onclick>
+							<label>$LOCALIZE[24027]</label>
+							<label2>$INFO[Skin.String(weathercolor.name)]</label2>
+						</control>
+						<control type="button" id="10012">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>1210</width>
+							<height>77</height>
+							<align>left</align>
+							<aligny>center</aligny>
+							<textoffsetx>35</textoffsetx>
+							<font>Font-Condensed-S30-B</font>
+							<include>SettingsCategoryDefaultButtonVars</include>
+							<onclick>Skin.SetString(appcolor.name,Grey Tiles)</onclick>
+							<onclick>Skin.SetString(homecolor.name,White Tiles)</onclick>
+							<onclick>Skin.SetString(weathercolor.name,White Tiles)</onclick>
+							<onclick>Skin.SetString(pvrcolor.name,White Tiles)</onclick>
+							<onclick>Skin.SetString(moviecolor.name,Grey Tiles)</onclick>
+							<onclick>Skin.SetString(tvcolor.name,Grey Tiles)</onclick>
+							<onclick>Skin.SetString(musiccolor.name,Grey Tiles)</onclick>
+							<label>$LOCALIZE[409]</label>
+						</control>
+					</control>
+				
+					<!-- =============== -->    
+					<!-- Add-on Settings -->
+					<!-- =============== -->
+					<control type="grouplist" id="5">
+						<onleft>30</onleft>
+						<include>SettingsCategoryGrouplistVars</include>
+						<visible>Container(30).HasFocus(38)</visible>
+						<control type="button" id="7001">
+							<width>1210</width>
+							<include>SettingsCategoryDefaultButtonVars</include>
+							<label>$LOCALIZE[41281]</label>
+							<label2>[COLOR=SettingsBlue]$INFO[system.addontitle(Skin.String(SubtitleScript_Path))][/COLOR]</label2>
+							<onclick>Skin.SetAddon(SubtitleScript_Path,xbmc.python.subtitles)</onclick>
+						</control>
+						<control type="button" id="7002">
+							<width>1210</width>
+							<include>SettingsCategoryDefaultButtonVars</include>
+							<label>$LOCALIZE[41282]</label>
+							<label2>[COLOR=SettingsBlue]$INFO[system.addontitle(Skin.String(LyricScript_Path))][/COLOR]</label2>
+							<onclick>Skin.SetAddon(LyricScript_Path,xbmc.python.lyrics)</onclick>
+						</control>
+						<control type="radiobutton" id="7005">
+							<width>1210</width>
+							<include>SettingsCategoryRadioButtonVars</include>
+							<selected>Skin.HasSetting(TVTunes.Enabled)</selected>
+							<onclick>Skin.ToggleSetting(TVTunes.Enabled)</onclick>
+							<label>$LOCALIZE[41283]</label>
+						</control>
+						<control type="button" id="7006">
+							<width>1210</width>
+							<include>SettingsCategoryDefaultButtonVars</include>
+							<onclick>XBMC.RunScript(script.tvtunes)</onclick>
+							<label> • $LOCALIZE[41284]</label>
+							<visible>Skin.HasSetting(TVTunes.Enabled)</visible>
+						</control>
+						<control type="radiobutton" id="7007">
+							<width>1210</width>
+							<include>SettingsCategoryRadioButtonVars</include>
+							<selected>Skin.HasSetting(NextAired.Enabled)</selected>
+							<onclick>Skin.ToggleSetting(NextAired.Enabled)</onclick>
+							<label>$LOCALIZE[41285]</label>
+						</control>
+						<control type="radiobutton" id="7008">
+							<width>1210</width>
+							<include>SettingsCategoryRadioButtonVars</include>
+							<selected>Skin.HasSetting(NextAired.Update)</selected>
+							<onclick>Skin.ToggleSetting(NextAired.Update)</onclick>
+							<label> • $LOCALIZE[41293]</label>
+						</control>
+						<control type="button" id="7009">
+							<width>1210</width>
+							<include>SettingsCategoryDefaultButtonVars</include>
+							<onclick>Addon.OpenSettings(script.tv.show.next.aired)</onclick>
+							<label> • $LOCALIZE[41290]</label>
+							<visible>Skin.HasSetting(NextAired.Enabled)</visible>
+						</control>
+						<control type="radiobutton" id="7010">
+							<width>1210</width>
+							<include>SettingsCategoryRadioButtonVars</include>
+							<selected>Skin.HasSetting(UpdateArt.Enabled)</selected>
+							<onclick>Skin.ToggleSetting(UpdateArt.Enabled)</onclick>
+							<label>$LOCALIZE[41294]</label>
+							<visible>System.HasAddon(script.artwork.downloader)</visible>
+						</control>
+					</control>
                 </control>
-                
-                <!-- OSD Settings -->
-                <control type="grouplist" id="5">
-                    <onleft>30</onleft>
-                    <include>SettingsCategoryGrouplistVars</include>
-                    <visible>Container(30).HasFocus(34)</visible>
-                    <control type="radiobutton" id="8001">
-                        <width>1210</width>
-                        <include>SettingsCategoryRadioButtonVars</include>
-                        <selected>Skin.HasSetting(OSDVisualisation.Enabled)</selected>
-                        <onclick condition="Skin.HasSetting(OSDVisualisation.Enabled)">Skin.Reset(OSDVisualisation.ShowFanart)</onclick>
-                        <onclick>Skin.ToggleSetting(OSDVisualisation.Enabled)</onclick>
-                        <label>$LOCALIZE[41240]</label>
-                    </control>
-                    <control type="radiobutton" id="8002">
-                        <width>1210</width>
-                        <include>SettingsCategoryRadioButtonVars</include>
-                        <selected>Skin.HasSetting(OSDVisualisation.ShowFanart)</selected>
-                        <onclick>Skin.ToggleSetting(OSDVisualisation.ShowFanart)</onclick>
-                        <visible>Skin.HasSetting(OSDVisualisation.Enabled)</visible>
-                        <label> • $LOCALIZE[41106]</label>
-                    </control>
-                    <control type="radiobutton" id="8003">
-                        <width>1210</width>
-                        <include>SettingsCategoryRadioButtonVars</include>
-                        <selected>Skin.HasSetting(ArtistSlideShow.Enabled)</selected>
-                        <onclick>Skin.ToggleSetting(ArtistSlideShow.Enabled)</onclick>
-                        <enable>System.HasAddon(script.artistslideshow)</enable>
-                        <label>$LOCALIZE[41103]</label>
-                        <animation effect="fade" start="100" end="42" time="0" condition="!Control.IsEnabled(8002)">Conditional</animation>
-                    </control>
-                    <control type="radiobutton" id="8004">
-                        <width>1210</width>
-                        <include>SettingsCategoryRadioButtonVars</include>
-                        <selected>Skin.HasSetting(ArtistSlideShow.Animate)</selected>
-                        <onclick>Skin.ToggleSetting(ArtistSlideShow.Animate)</onclick>
-                        <visible>Skin.HasSetting(ArtistSlideShow.Enabled)</visible>
-                        <label> • $LOCALIZE[41105]</label>
-                    </control>
-                    <control type="radiobutton" id="8005">
-                        <width>1210</width>
-                        <include>SettingsCategoryRadioButtonVars</include>
-                        <selected>Skin.HasSetting(CDArt.Enabled)</selected>
-                        <onclick>Skin.ToggleSetting(CDArt.Enabled)</onclick>
-                        <label>$LOCALIZE[41107]</label>
-                    </control>
-                    <control type="radiobutton" id="8006">
-                        <width>1210</width>
-                        <include>SettingsCategoryRadioButtonVars</include>
-                        <selected>Skin.HasSetting(OSDDefaultSubtitleButton.Enabled)</selected>
-                        <onclick>Skin.ToggleSetting(OSDDefaultSubtitleButton.Enabled)</onclick>
-                        <enable>!IsEmpty(Skin.String(SubtitleScript_Path))</enable>
-                        <label>$LOCALIZE[41242]</label>
-                        <animation effect="fade" start="100" end="42" time="0" condition="!Control.IsEnabled(8005)">Conditional</animation>
-                    </control>
-                </control>
-                
-                <!-- Background Settings -->
-                <control type="grouplist" id="5">
-                    <onleft>30</onleft>
-                    <include>SettingsCategoryGrouplistVars</include>
-                    <visible>Container(30).HasFocus(35)</visible>
-                    <control type="button" id="5000">
-                        <width>1210</width>
-                        <include>SettingsCategoryDefaultButtonVars</include>
-                        <label>$LOCALIZE[41251]</label>
-                        <onclick>ClearProperty(CustomDialogType)</onclick>
-                        <onclick>ClearProperty(CustomDialog)</onclick>
-                        <onclick>SetProperty(Dialog,$LOCALIZE[41251])</onclick>
-                        <onclick>ActivateWindow(3002)</onclick>
-                    </control>
-                    <control type="button" id="5001">
-                        <width>1210</width>
-                        <include>SettingsCategoryDefaultButtonVars</include>
-                        <label>$LOCALIZE[5]</label>
-                        <onclick>ClearProperty(CustomDialogType)</onclick>
-                        <onclick>ClearProperty(CustomDialog)</onclick>
-                        <onclick>SetProperty(Dialog,$LOCALIZE[5])</onclick>
-                        <onclick>ActivateWindow(3002)</onclick>
-                    </control>
-                    <control type="button" id="5002">
-                        <width>1210</width>
-                        <include>SettingsCategoryDefaultButtonVars</include>
-                        <label>$LOCALIZE[342]</label>
-                        <onclick>ClearProperty(CustomDialogType)</onclick>
-                        <onclick>ClearProperty(CustomDialog)</onclick>
-                        <onclick>SetProperty(Dialog,$LOCALIZE[342])</onclick>
-                        <onclick>ActivateWindow(3002)</onclick>
-                    </control>
-                    <control type="button" id="5003">
-                        <width>1210</width>
-                        <include>SettingsCategoryDefaultButtonVars</include>
-                        <label>$LOCALIZE[20343]</label>
-                        <onclick>ClearProperty(CustomDialogType)</onclick>
-                        <onclick>ClearProperty(CustomDialog)</onclick>
-                        <onclick>SetProperty(Dialog,$LOCALIZE[20343])</onclick>
-                        <onclick>ActivateWindow(3002)</onclick>
-                    </control>
-                    <control type="button" id="5006">
-                        <width>1210</width>
-                        <include>SettingsCategoryDefaultButtonVars</include>
-                        <label>$LOCALIZE[2]</label>
-                        <onclick>ClearProperty(CustomDialogType)</onclick>
-                        <onclick>ClearProperty(CustomDialog)</onclick>
-                        <onclick>SetProperty(Dialog,$LOCALIZE[2])</onclick>
-                        <onclick>ActivateWindow(3002)</onclick>
-                    </control>
-                    <control type="button" id="5009">
-                        <width>1210</width>
-                        <include>SettingsCategoryDefaultButtonVars</include>
-                        <label>$LOCALIZE[41504]</label>
-                        <onclick>ClearProperty(CustomDialogType)</onclick>
-                        <onclick>ClearProperty(CustomDialog)</onclick>
-                        <onclick>SetProperty(Dialog,$LOCALIZE[41504])</onclick>
-                        <onclick>ActivateWindow(3002)</onclick>
-                    </control>
-                    <control type="button" id="5010">
-                        <width>1210</width>
-                        <include>SettingsCategoryDefaultButtonVars</include>
-                        <label>$LOCALIZE[12600]</label>
-                        <onclick>ClearProperty(CustomDialogType)</onclick>
-                        <onclick>ClearProperty(CustomDialog)</onclick>
-                        <onclick>SetProperty(Dialog,$LOCALIZE[12600])</onclick>
-                        <onclick>ActivateWindow(3002)</onclick>
-                    </control>
-                    <!-- USE WEATHER FANART -->
-                    <control type="radiobutton" id="5014">
-                        <width>1210</width>
-                        <include>SettingsCategoryRadioButtonVars</include>
-                        <selected>Skin.HasSetting(weather.usefanart)</selected>
-                        <onclick>Skin.ToggleSetting(weather.usefanart)</onclick>
-                        <label>Use weather fanart</label>
-                        <visible>!StringCompare(Skin.String(homescreen.style),metro)</visible>
-                    </control>
-                    <!-- LIVE TV BACKGROUND -->
-                    <control type="button" id="5011">
-                        <width>1210</width>
-                        <include>SettingsCategoryDefaultButtonVars</include>
-                        <label>$LOCALIZE[41220]</label>
-                        <onclick>ClearProperty(CustomDialogType)</onclick>
-                        <onclick>ClearProperty(CustomDialog)</onclick>
-                        <onclick>SetProperty(Dialog,$LOCALIZE[41220])</onclick>
-                        <onclick>ActivateWindow(3002)</onclick>
-                        <visible>!StringCompare(Skin.String(homescreen.style),metro)</visible>
-                    </control>
-                    <!-- Pictures BACKGROUND -->
-                    <control type="button" id="5012">
-                        <width>1210</width>
-                        <include>SettingsCategoryDefaultButtonVars</include>
-                        <label>$LOCALIZE[10002]</label>
-                        <onclick>ClearProperty(CustomDialogType)</onclick>
-                        <onclick>ClearProperty(CustomDialog)</onclick>
-                        <onclick>SetProperty(Dialog,$LOCALIZE[10002])</onclick>
-                        <onclick>ActivateWindow(3002)</onclick>
-                        <visible>!StringCompare(Skin.String(homescreen.style),metro)</visible>
-                    </control>
-                    <!-- Games BACKGROUND -->
-                    <control type="button" id="5013">
-                        <width>1210</width>
-                        <include>SettingsCategoryDefaultButtonVars</include>
-                        <label>$LOCALIZE[20190]</label>
-                        <onclick>ClearProperty(CustomDialogType)</onclick>
-                        <onclick>ClearProperty(CustomDialog)</onclick>
-                        <onclick>SetProperty(Dialog,$LOCALIZE[15016])</onclick>
-                        <onclick>ActivateWindow(3002)</onclick>
-                        <visible>!StringCompare(Skin.String(homescreen.style),metro)</visible>
-                    </control>
-                </control>
-                
-                <!-- =================== -->    
-                <!-- Guide menu Settings -->
-                <!-- =================== -->
-                <control type="grouplist" id="5">
-                    <onleft>30</onleft>
-                    <include>SettingsCategoryGrouplistVars</include>
-                    <visible>Container(30).HasFocus(36)</visible>
-                    <control type="radiobutton" id="6001">
-                        <width>1210</width>
-                        <include>SettingsCategoryRadioButtonVars</include>
-                        <selected>!Skin.HasSetting(Guide.HideClock)</selected>
-                        <onclick>Skin.ToggleSetting(Guide.HideClock)</onclick>
-                        <label>$LOCALIZE[41270]</label>
-                    </control>
-                    <control type="radiobutton" id="6002">
-                        <width>1210</width>
-                        <include>SettingsCategoryRadioButtonVars</include>
-                        <selected>!Skin.HasSetting(Guide.HideUserImage)</selected>
-                        <onclick>Skin.ToggleSetting(Guide.HideUserImage)</onclick>
-                        <label>$LOCALIZE[41271]</label>
-                    </control>
-                    <control type="radiobutton" id="6003">
-                        <width>1210</width>
-                        <include>SettingsCategoryRadioButtonVars</include>
-                        <selected>Skin.HasSetting(Guide.Custom1)</selected>
-                        <onclick>Skin.Reset(Guide.Custom1.Label)</onclick>
-                        <onclick>Skin.Reset(Guide.Custom1.Path)</onclick>
-                        <onclick>Skin.Reset(Guide.Custom1.Type)</onclick>
-                        <onclick>Skin.ToggleSetting(Guide.Custom1)</onclick>
-                        <label>$LOCALIZE[41272]</label>
-                    </control>
-                    <control type="button" id="6004">
-                        <width>1210</width>
-                        <include>SettingsCategoryDefaultButtonVars</include>
-                        <onclick>SetProperty(Dialog,$LOCALIZE[41272])</onclick>
-                        <onclick>SetProperty(Guide.Custom,1)</onclick>
-                        <onclick>ActivateWindow(3001)</onclick>
-                        <label> • $LOCALIZE[41276]</label>
-                        <label2>$INFO[Skin.String(Guide.Custom1.Label)]</label2>
-                        <visible>Skin.HasSetting(Guide.Custom1)</visible>
-                    </control>
-                    <control type="radiobutton" id="6005">
-                        <width>1210</width>
-                        <include>SettingsCategoryRadioButtonVars</include>
-                        <selected>Skin.HasSetting(Guide.Custom2)</selected>
-                        <onclick>Skin.Reset(Guide.Custom2.Label)</onclick>
-                        <onclick>Skin.Reset(Guide.Custom2.Path)</onclick>
-                        <onclick>Skin.Reset(Guide.Custom2.Type)</onclick>
-                        <onclick>Skin.ToggleSetting(Guide.Custom2)</onclick>
-                        <label>$LOCALIZE[41273]</label>
-                    </control>
-                    <control type="button" id="6006">
-                        <width>1210</width>
-                        <include>SettingsCategoryDefaultButtonVars</include>
-                        <onclick>SetProperty(Dialog,$LOCALIZE[41273])</onclick>
-                        <onclick>SetProperty(Guide.Custom,2)</onclick>
-                        <onclick>ActivateWindow(3001)</onclick>
-                        <label> • $LOCALIZE[41276]</label>
-                        <label2>$INFO[Skin.String(Guide.Custom2.Label)]</label2>
-                        <visible>Skin.HasSetting(Guide.Custom2)</visible>
-                    </control>
-                    <control type="radiobutton" id="6007">
-                        <width>1210</width>
-                        <include>SettingsCategoryRadioButtonVars</include>
-                        <selected>Skin.HasSetting(Guide.Custom3)</selected>
-                        <onclick>Skin.Reset(Guide.Custom3.Label)</onclick>
-                        <onclick>Skin.Reset(Guide.Custom3.Path)</onclick>
-                        <onclick>Skin.Reset(Guide.Custom3.Type)</onclick>
-                        <onclick>Skin.ToggleSetting(Guide.Custom3)</onclick>
-                        <label>$LOCALIZE[41274]</label>
-                    </control>
-                    <control type="button" id="6008">
-                        <width>1210</width>
-                        <include>SettingsCategoryDefaultButtonVars</include>
-                        <onclick>SetProperty(Dialog,$LOCALIZE[41274])</onclick>
-                        <onclick>SetProperty(Guide.Custom,3)</onclick>
-                        <onclick>ActivateWindow(3001)</onclick>
-                        <label> • $LOCALIZE[41276]</label>
-                        <label2>$INFO[Skin.String(Guide.Custom3.Label)]</label2>
-                        <visible>Skin.HasSetting(Guide.Custom3)</visible>
-                    </control>
-                    <control type="radiobutton" id="6009">
-                        <width>1210</width>
-                        <include>SettingsCategoryRadioButtonVars</include>
-                        <selected>Skin.HasSetting(Guide.Custom4)</selected>
-                        <onclick>Skin.Reset(Guide.Custom4.Label)</onclick>
-                        <onclick>Skin.Reset(Guide.Custom4.Path)</onclick>
-                        <onclick>Skin.Reset(Guide.Custom4.Type)</onclick>
-                        <onclick>Skin.ToggleSetting(Guide.Custom4)</onclick>
-                        <label>$LOCALIZE[41275]</label>
-                    </control>
-                    <control type="button" id="6010">
-                        <width>1210</width>
-                        <include>SettingsCategoryDefaultButtonVars</include>
-                        <onclick>SetProperty(Dialog,$LOCALIZE[41275])</onclick>
-                        <onclick>SetProperty(Guide.Custom,4)</onclick>
-                        <onclick>ActivateWindow(3001)</onclick>
-                        <label> • $LOCALIZE[41276]</label>
-                        <label2>$INFO[Skin.String(Guide.Custom4.Label)]</label2>
-                        <visible>Skin.HasSetting(Guide.Custom4)</visible>
-                    </control>
-                </control>
-                
-                <!-- =================== -->    
-                <!-- Home Tiles Settings -->
-                <!-- =================== -->
-                <control type="grouplist" id="5">
-                    <onleft>30</onleft>
-                    <include>SettingsCategoryGrouplistVars</include>
-                    <visible>Container(30).HasFocus(37)</visible>
-                    <!--<control type="radiobutton" id="10002">
-                        <width>1210</width>
-                        <include>SettingsCategoryRadioButtonVars</include>
-                        <selected>!Skin.HasSetting(AddonTilesColored)</selected>
-                        <onclick>Skin.ToggleSetting(AddonTilesColored)</onclick>
-                        <label>Addon tiles share color</label>
-                    </control>-->
-                    <control type="button" id="10003">
-						<posx>0</posx>
-						<posy>0</posy>
-						<width>1210</width>
-						<height>77</height>
-						<align>left</align>
-						<aligny>center</aligny>
-						<textoffsetx>35</textoffsetx>
-						<font>Font-Condensed-S30-B</font>
-						<include>SettingsCategoryDefaultButtonVars</include>
-						<onclick condition="stringcompare(Skin.String(musiccolor.name),Grey Tiles)">Skin.SetString(musiccolor.name,Purple Tiles)</onclick>
-						<onclick condition="stringcompare(Skin.String(musiccolor.name),White Tiles)">Skin.SetString(musiccolor.name,Grey Tiles)</onclick>
-						<onclick condition="stringcompare(Skin.String(musiccolor.name),Lime Tiles)">Skin.SetString(musiccolor.name,White Tiles)</onclick>
-						<onclick condition="stringcompare(Skin.String(musiccolor.name),Green Tiles)">Skin.SetString(musiccolor.name,Lime Tiles)</onclick>
-						<onclick condition="stringcompare(Skin.String(musiccolor.name),Blue Tiles)">Skin.SetString(musiccolor.name,Green Tiles)</onclick>
-						<onclick condition="stringcompare(Skin.String(musiccolor.name),Red Tiles)">Skin.SetString(musiccolor.name,Blue Tiles)</onclick>
-						<onclick condition="stringcompare(Skin.String(musiccolor.name),Pink Tiles)">Skin.SetString(musiccolor.name,Red Tiles)</onclick>
-						<onclick condition="stringcompare(Skin.String(musiccolor.name),Purple Tiles)">Skin.SetString(musiccolor.name,Pink Tiles)</onclick>
-						<onclick condition="stringcompare(Skin.String(musiccolor.name),Grey Tiles)">Skin.SetString(musiccolor.name,Purple Tiles)</onclick>
-                        <label>$LOCALIZE[2]</label>
-						<label2>$INFO[Skin.String(musiccolor.name)]</label2>
-					</control>
-					<control type="button" id="10004">
-						<posx>0</posx>
-						<posy>0</posy>
-						<width>1210</width>
-						<height>77</height>
-						<align>left</align>
-						<aligny>center</aligny>
-						<textoffsetx>35</textoffsetx>
-						<font>Font-Condensed-S30-B</font>
-						<include>SettingsCategoryDefaultButtonVars</include>
-						<onclick condition="stringcompare(Skin.String(tvcolor.name),Grey Tiles)">Skin.SetString(tvcolor.name,Purple Tiles)</onclick>
-						<onclick condition="stringcompare(Skin.String(tvcolor.name),White Tiles)">Skin.SetString(tvcolor.name,Grey Tiles)</onclick>
-						<onclick condition="stringcompare(Skin.String(tvcolor.name),Lime Tiles)">Skin.SetString(tvcolor.name,White Tiles)</onclick>
-						<onclick condition="stringcompare(Skin.String(tvcolor.name),Green Tiles)">Skin.SetString(tvcolor.name,Lime Tiles)</onclick>
-						<onclick condition="stringcompare(Skin.String(tvcolor.name),Blue Tiles)">Skin.SetString(tvcolor.name,Green Tiles)</onclick>
-						<onclick condition="stringcompare(Skin.String(tvcolor.name),Red Tiles)">Skin.SetString(tvcolor.name,Blue Tiles)</onclick>
-						<onclick condition="stringcompare(Skin.String(tvcolor.name),Pink Tiles)">Skin.SetString(tvcolor.name,Red Tiles)</onclick>
-						<onclick condition="stringcompare(Skin.String(tvcolor.name),Purple Tiles)">Skin.SetString(tvcolor.name,Pink Tiles)</onclick>
-						<onclick condition="stringcompare(Skin.String(tvcolor.name),Grey Tiles)">Skin.SetString(tvcolor.name,Purple Tiles)</onclick>
-                        <label>$LOCALIZE[19020]</label>
-						<label2>$INFO[Skin.String(tvcolor.name)]</label2>
-					</control>
-					<control type="button" id="10005">
-						<posx>0</posx>
-						<posy>0</posy>
-						<width>1210</width>
-						<height>77</height>
-						<align>left</align>
-						<aligny>center</aligny>
-						<textoffsetx>35</textoffsetx>
-						<font>Font-Condensed-S30-B</font>
-						<include>SettingsCategoryDefaultButtonVars</include>
-						<onclick condition="stringcompare(Skin.String(moviecolor.name),Grey Tiles)">Skin.SetString(moviecolor.name,Purple Tiles)</onclick>
-						<onclick condition="stringcompare(Skin.String(moviecolor.name),White Tiles)">Skin.SetString(moviecolor.name,Grey Tiles)</onclick>
-						<onclick condition="stringcompare(Skin.String(moviecolor.name),Lime Tiles)">Skin.SetString(moviecolor.name,White Tiles)</onclick>
-						<onclick condition="stringcompare(Skin.String(moviecolor.name),Green Tiles)">Skin.SetString(moviecolor.name,Lime Tiles)</onclick>
-						<onclick condition="stringcompare(Skin.String(moviecolor.name),Blue Tiles)">Skin.SetString(moviecolor.name,Green Tiles)</onclick>
-						<onclick condition="stringcompare(Skin.String(moviecolor.name),Red Tiles)">Skin.SetString(moviecolor.name,Blue Tiles)</onclick>
-						<onclick condition="stringcompare(Skin.String(moviecolor.name),Pink Tiles)">Skin.SetString(moviecolor.name,Red Tiles)</onclick>
-						<onclick condition="stringcompare(Skin.String(moviecolor.name),Purple Tiles)">Skin.SetString(moviecolor.name,Pink Tiles)</onclick>
-						<onclick condition="stringcompare(Skin.String(moviecolor.name),Grey Tiles)">Skin.SetString(moviecolor.name,Purple Tiles)</onclick>
-                        <label>$LOCALIZE[342]</label>
-						<label2>$INFO[Skin.String(moviecolor.name)]</label2>
-					</control>
-					<control type="button" id="10006">
-						<posx>0</posx>
-						<posy>0</posy>
-						<width>1210</width>
-						<height>77</height>
-						<align>left</align>
-						<aligny>center</aligny>
-						<textoffsetx>35</textoffsetx>
-						<font>Font-Condensed-S30-B</font>
-						<include>SettingsCategoryDefaultButtonVars</include>
-						<onclick condition="stringcompare(Skin.String(homecolor.name),Grey Tiles)">Skin.SetString(homecolor.name,Purple Tiles)</onclick>
-						<onclick condition="stringcompare(Skin.String(homecolor.name),White Tiles)">Skin.SetString(homecolor.name,Grey Tiles)</onclick>
-						<onclick condition="stringcompare(Skin.String(homecolor.name),Lime Tiles)">Skin.SetString(homecolor.name,White Tiles)</onclick>
-						<onclick condition="stringcompare(Skin.String(homecolor.name),Green Tiles)">Skin.SetString(homecolor.name,Lime Tiles)</onclick>
-						<onclick condition="stringcompare(Skin.String(homecolor.name),Blue Tiles)">Skin.SetString(homecolor.name,Green Tiles)</onclick>
-						<onclick condition="stringcompare(Skin.String(homecolor.name),Red Tiles)">Skin.SetString(homecolor.name,Blue Tiles)</onclick>
-						<onclick condition="stringcompare(Skin.String(homecolor.name),Pink Tiles)">Skin.SetString(homecolor.name,Red Tiles)</onclick>
-						<onclick condition="stringcompare(Skin.String(homecolor.name),Purple Tiles)">Skin.SetString(homecolor.name,Pink Tiles)</onclick>
-						<onclick condition="stringcompare(Skin.String(homecolor.name),Grey Tiles)">Skin.SetString(homecolor.name,Purple Tiles)</onclick>
-                        <label>$LOCALIZE[10000]</label>
-						<label2>$INFO[Skin.String(homecolor.name)]</label2>
-					</control>
-					<control type="button" id="10007">
-						<posx>0</posx>
-						<posy>0</posy>
-						<width>1210</width>
-						<height>77</height>
-						<align>left</align>
-						<aligny>center</aligny>
-						<textoffsetx>35</textoffsetx>
-						<font>Font-Condensed-S30-B</font>
-						<include>SettingsCategoryDefaultButtonVars</include>
-						<onclick condition="stringcompare(Skin.String(appcolor.name),Grey Tiles)">Skin.SetString(appcolor.name,Purple Tiles)</onclick>
-						<onclick condition="stringcompare(Skin.String(appcolor.name),White Tiles)">Skin.SetString(appcolor.name,Grey Tiles)</onclick>						
-						<onclick condition="stringcompare(Skin.String(appcolor.name),Lime Tiles)">Skin.SetString(appcolor.name,White Tiles)</onclick>						
-						<onclick condition="stringcompare(Skin.String(appcolor.name),Green Tiles)">Skin.SetString(appcolor.name,Lime Tiles)</onclick>
-						<onclick condition="stringcompare(Skin.String(appcolor.name),Blue Tiles)">Skin.SetString(appcolor.name,Green Tiles)</onclick>
-						<onclick condition="stringcompare(Skin.String(appcolor.name),Red Tiles)">Skin.SetString(appcolor.name,Blue Tiles)</onclick>
-						<onclick condition="stringcompare(Skin.String(appcolor.name),Pink Tiles)">Skin.SetString(appcolor.name,Red Tiles)</onclick>
-						<onclick condition="stringcompare(Skin.String(appcolor.name),Purple Tiles)">Skin.SetString(appcolor.name,Pink Tiles)</onclick>
-						<onclick condition="stringcompare(Skin.String(appcolor.name),Grey Tiles)">Skin.SetString(appcolor.name,Purple Tiles)</onclick>
-                        <label>$LOCALIZE[10001]</label>
-						<label2>$INFO[Skin.String(appcolor.name)]</label2>
-					</control>
-					<control type="button" id="10008">
-						<posx>0</posx>
-						<posy>0</posy>
-						<width>1210</width>
-						<height>77</height>
-						<align>left</align>
-						<aligny>center</aligny>
-						<textoffsetx>35</textoffsetx>
-						<font>Font-Condensed-S30-B</font>
-						<include>SettingsCategoryDefaultButtonVars</include>
-						<onclick condition="stringcompare(Skin.String(pvrcolor.name),Grey Tiles)">Skin.SetString(pvrcolor.name,Purple Tiles)</onclick>
-						<onclick condition="stringcompare(Skin.String(pvrcolor.name),White Tiles)">Skin.SetString(pvrcolor.name,Grey Tiles)</onclick>
-						<onclick condition="stringcompare(Skin.String(pvrcolor.name),Lime Tiles)">Skin.SetString(pvrcolor.name,White Tiles)</onclick>
-						<onclick condition="stringcompare(Skin.String(pvrcolor.name),Green Tiles)">Skin.SetString(pvrcolor.name,Lime Tiles)</onclick>
-						<onclick condition="stringcompare(Skin.String(pvrcolor.name),Blue Tiles)">Skin.SetString(pvrcolor.name,Green Tiles)</onclick>
-						<onclick condition="stringcompare(Skin.String(pvrcolor.name),Red Tiles)">Skin.SetString(pvrcolor.name,Blue Tiles)</onclick>
-						<onclick condition="stringcompare(Skin.String(pvrcolor.name),Pink Tiles)">Skin.SetString(pvrcolor.name,Red Tiles)</onclick>
-						<onclick condition="stringcompare(Skin.String(pvrcolor.name),Purple Tiles)">Skin.SetString(pvrcolor.name,Pink Tiles)</onclick>
-						<onclick condition="stringcompare(Skin.String(pvrcolor.name),Grey Tiles)">Skin.SetString(pvrcolor.name,Purple Tiles)</onclick>
-                        <label>$LOCALIZE[41220]</label>
-						<label2>$INFO[Skin.String(pvrcolor.name)]</label2>
-					</control>
-					<control type="button" id="10009">
-						<posx>0</posx>
-						<posy>0</posy>
-						<width>1210</width>
-						<height>77</height>
-						<align>left</align>
-						<aligny>center</aligny>
-						<textoffsetx>35</textoffsetx>
-						<font>Font-Condensed-S30-B</font>
-						<include>SettingsCategoryDefaultButtonVars</include>
-						<onclick condition="stringcompare(Skin.String(weathercolor.name),Grey Tiles)">Skin.SetString(weathercolor.name,Purple Tiles)</onclick>
-						<onclick condition="stringcompare(Skin.String(weathercolor.name),White Tiles)">Skin.SetString(weathercolor.name,Grey Tiles)</onclick>
-						<onclick condition="stringcompare(Skin.String(weathercolor.name),Lime Tiles)">Skin.SetString(weathercolor.name,White Tiles)</onclick>
-						<onclick condition="stringcompare(Skin.String(weathercolor.name),Green Tiles)">Skin.SetString(weathercolor.name,Lime Tiles)</onclick>
-						<onclick condition="stringcompare(Skin.String(weathercolor.name),Blue Tiles)">Skin.SetString(weathercolor.name,Green Tiles)</onclick>
-						<onclick condition="stringcompare(Skin.String(weathercolor.name),Red Tiles)">Skin.SetString(weathercolor.name,Blue Tiles)</onclick>
-						<onclick condition="stringcompare(Skin.String(weathercolor.name),Pink Tiles)">Skin.SetString(weathercolor.name,Red Tiles)</onclick>
-						<onclick condition="stringcompare(Skin.String(weathercolor.name),Purple Tiles)">Skin.SetString(weathercolor.name,Pink Tiles)</onclick>
-						<onclick condition="stringcompare(Skin.String(weathercolor.name),Grey Tiles)">Skin.SetString(weathercolor.name,Purple Tiles)</onclick>
-                        <label>$LOCALIZE[24027]</label>
-						<label2>$INFO[Skin.String(weathercolor.name)]</label2>
-					</control>
-					<control type="button" id="10012">
-						<posx>0</posx>
-						<posy>0</posy>
-						<width>1210</width>
-						<height>77</height>
-						<align>left</align>
-						<aligny>center</aligny>
-						<textoffsetx>35</textoffsetx>
-						<font>Font-Condensed-S30-B</font>
-						<include>SettingsCategoryDefaultButtonVars</include>
-						<onclick>Skin.SetString(appcolor.name,Grey Tiles)</onclick>
-						<onclick>Skin.SetString(homecolor.name,White Tiles)</onclick>
-						<onclick>Skin.SetString(weathercolor.name,White Tiles)</onclick>
-						<onclick>Skin.SetString(pvrcolor.name,White Tiles)</onclick>
-						<onclick>Skin.SetString(moviecolor.name,Grey Tiles)</onclick>
-						<onclick>Skin.SetString(tvcolor.name,Grey Tiles)</onclick>
-						<onclick>Skin.SetString(musiccolor.name,Grey Tiles)</onclick>
-                        <label>$LOCALIZE[409]</label>
-					</control>
-                </control>
-                
-                <!-- =============== -->    
-                <!-- Add-on Settings -->
-                <!-- =============== -->
-                <control type="grouplist" id="5">
-                    <onleft>30</onleft>
-                    <include>SettingsCategoryGrouplistVars</include>
-                    <visible>Container(30).HasFocus(38)</visible>
-                    <control type="button" id="7001">
-                        <width>1210</width>
-                        <include>SettingsCategoryDefaultButtonVars</include>
-                        <label>$LOCALIZE[41281]</label>
-                        <label2>[COLOR=SettingsBlue]$INFO[system.addontitle(Skin.String(SubtitleScript_Path))][/COLOR]</label2>
-                        <onclick>Skin.SetAddon(SubtitleScript_Path,xbmc.python.subtitles)</onclick>
-                    </control>
-                    <control type="button" id="7002">
-                        <width>1210</width>
-                        <include>SettingsCategoryDefaultButtonVars</include>
-                        <label>$LOCALIZE[41282]</label>
-                        <label2>[COLOR=SettingsBlue]$INFO[system.addontitle(Skin.String(LyricScript_Path))][/COLOR]</label2>
-                        <onclick>Skin.SetAddon(LyricScript_Path,xbmc.python.lyrics)</onclick>
-                    </control>
-                    <control type="radiobutton" id="7005">
-                        <width>1210</width>
-                        <include>SettingsCategoryRadioButtonVars</include>
-                        <selected>Skin.HasSetting(TVTunes.Enabled)</selected>
-                        <onclick>Skin.ToggleSetting(TVTunes.Enabled)</onclick>
-                        <label>$LOCALIZE[41283]</label>
-                    </control>
-                    <control type="button" id="7006">
-                        <width>1210</width>
-                        <include>SettingsCategoryDefaultButtonVars</include>
-                        <onclick>XBMC.RunScript(script.tvtunes)</onclick>
-                        <label> • $LOCALIZE[41284]</label>
-                        <visible>Skin.HasSetting(TVTunes.Enabled)</visible>
-                    </control>
-                    <control type="radiobutton" id="7007">
-                        <width>1210</width>
-                        <include>SettingsCategoryRadioButtonVars</include>
-                        <selected>Skin.HasSetting(NextAired.Enabled)</selected>
-                        <onclick>Skin.ToggleSetting(NextAired.Enabled)</onclick>
-                        <label>$LOCALIZE[41285]</label>
-                    </control>
-                    <control type="radiobutton" id="7008">
-                        <width>1210</width>
-                        <include>SettingsCategoryRadioButtonVars</include>
-                        <selected>Skin.HasSetting(NextAired.Update)</selected>
-                        <onclick>Skin.ToggleSetting(NextAired.Update)</onclick>
-                        <label> • $LOCALIZE[41293]</label>
-                    </control>
-                    <control type="button" id="7009">
-                        <width>1210</width>
-                        <include>SettingsCategoryDefaultButtonVars</include>
-                        <onclick>Addon.OpenSettings(script.tv.show.next.aired)</onclick>
-                        <label> • $LOCALIZE[41290]</label>
-                        <visible>Skin.HasSetting(NextAired.Enabled)</visible>
-                    </control>
-                    <control type="radiobutton" id="7010">
-                        <width>1210</width>
-                        <include>SettingsCategoryRadioButtonVars</include>
-                        <selected>Skin.HasSetting(UpdateArt.Enabled)</selected>
-                        <onclick>Skin.ToggleSetting(UpdateArt.Enabled)</onclick>
-                        <label>$LOCALIZE[41294]</label>
-                        <visible>System.HasAddon(script.artwork.downloader)</visible>
-                    </control>
-                </control>
-                
                 <control type="image" id="42">
                     <animation effect="fade" start="100" end="0" time="0" delay="1500">WindowOpen</animation>
                 </control>

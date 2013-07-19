@@ -5,7 +5,7 @@
         <textcolor>bbwhite</textcolor>
         <focusedcolor>white</focusedcolor>
         <disabledcolor>77white</disabledcolor>
-        <shadowcolor>mod-shadow</shadowcolor>
+        <shadowcolor>22000000</shadowcolor>
         <align>left</align>
         <textoffsetx>85</textoffsetx>
         <width>350</width>
@@ -17,7 +17,7 @@
         <textcolor>bbwhite</textcolor>
         <focusedcolor>white</focusedcolor>
         <disabledcolor>77white</disabledcolor>
-        <shadowcolor>mod-shadow</shadowcolor>
+        <shadowcolor>22000000</shadowcolor>
         <align>right</align>
         <textoffsetx>85</textoffsetx>
         <width>350</width>
@@ -583,12 +583,26 @@
                     <texture border="39">arctic/common/panel.png</texture>
                 </control>
                 <control type="image">
+                    <posx>1079</posx>
+                    <posy>300</posy>
+                    <width>420</width>
+                    <height>500</height>
+                    <texture border="39">arctic/common/whitepanel8.png</texture>
+                </control>
+                <control type="image">
                     <posx>1089</posx>
                     <posy>310</posy>
                     <width>400</width>
                     <height>400</height>
                     <aspectratio>keep</aspectratio>
                     <texture background="true" fallback="dialogs/select/iconsbig/DefaultAddon.png">$INFO[Container(6).ListItem.Icon]</texture>
+                </control>
+                <control type="image">
+                    <posx>1089</posx>
+                    <posy>310</posy>
+                    <width>400</width>
+                    <height>400</height>
+                	<texture border="5">dialogs/default/inner.png</texture>
                 </control>
                 <control type="button">
                     <posx>1079</posx>
@@ -600,8 +614,8 @@
                     <label>[COLOR=mod-infotags-alt]$LOCALIZE[21863][/COLOR]</label>
                     <label2>$INFO[Container(6).ListItem.Property(Addon.Creator)]</label2>
                     <font>Font-Condensed-S29</font>
-                    <textcolor>mod-infotags-alt</textcolor>
-                    <disabledcolor>mod-infotags-alt</disabledcolor>
+                    <textcolor>mod-infotags</textcolor>
+                    <disabledcolor>mod-infotags-li</disabledcolor>
                     <enable>false</enable>
                 </control>
             </control>
@@ -1031,6 +1045,7 @@
                 <onleft>3</onleft>
                 <onright>8000</onright>
                 <showonepage>false</showonepage>
+                <visible>false</visible>
                 <orientation>vertical</orientation>
                 <animation effect="fade" start="75" end="0" time="300" tween="sine" easing="inout" condition="!Control.IsVisible(62)">Conditional</animation>
                 <animation effect="slide" end="-217" time="0" condition="Control.IsVisible(6)">Conditional</animation>

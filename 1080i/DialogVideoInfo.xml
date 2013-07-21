@@ -615,7 +615,7 @@
 							<posx>0</posx>
 							<posy>40</posy>
 							<width>1200</width>
-							<height>198</height>
+							<height>170</height>
 							<label>[B]$INFO[ListItem.Tagline,,[CR]][/B]$INFO[ListItem.Plot]</label>
 							<font>Font-Condensed-S29</font>
 							<textcolor>Mod_Tags</textcolor>

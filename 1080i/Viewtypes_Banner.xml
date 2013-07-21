@@ -92,9 +92,9 @@
 							<control type="textbox">
                                 <description>Plot</description>
                                 <posx>50</posx>
-                                <posy>267</posy>
+                                <posy>275</posy>
                                 <width>1210</width>
-                                <height>145</height>
+                                <height>128</height>
                                 <info>ListItem.Plot</info>
                                 <align>justify</align>
                                 <textcolor>bbwhite</textcolor>

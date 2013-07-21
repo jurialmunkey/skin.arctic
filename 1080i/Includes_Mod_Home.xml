@@ -575,13 +575,13 @@
 					</control>
 					<control type="textbox">
 						<posx>440</posx>
-						<posy>96</posy>
+						<posy>86</posy>
 						<label>$INFO[Container(82).ListItem.Property(Plot)]</label>
 						<align>justify</align>
 						<font>Font-Condensed-S28</font>
 						<textcolor>eebbbbbb</textcolor>
 						<width>1010</width>
-						<height>120</height>
+						<height>135</height>
 						<autoscroll delay="13000" time="3000" repeat="13000" />
 					</control>
 					<control type="image">

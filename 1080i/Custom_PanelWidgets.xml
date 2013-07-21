@@ -21,16 +21,24 @@
             	<width>647</width>
             	<height>462</height>
             	<texture border="15">arctic/common/whitepanel8.png</texture>
-            </control>    
+            </control>  
+            <control type="image">
+            	<posx>620</posx>
+            	<posy>242</posy>
+            	<width>80</width>
+            	<height>80</height>
+            	<texture>windows/home/icons/config.png</texture>
+            	<aspectratio>keep</aspectratio>
+            </control>
             <control type="label">
                 <description>Heading</description>
-                <posx>638</posx>
-                <posy>260</posy>
-                <width>644</width>
+                <posx>692</posx>
+                <posy>259</posy>
+                <width>646</width>
                 <include>DialogHeaderMod</include>
                 <label>41140</label>
-                <align>center</align>
-            </control>
+                <align>left</align>
+            </control>  
             
             <control type="grouplist" id="3">
                 <include>SettingsDialogGrouplistVars</include>

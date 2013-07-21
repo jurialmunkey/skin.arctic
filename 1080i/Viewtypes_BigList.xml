@@ -79,9 +79,9 @@
 							</control>
 							<control type="textbox">
 								<posx>0</posx>
-								<posy>78</posy>
+								<posy>82</posy>
 								<width>1190</width>
-								<height>108</height>
+								<height>90</height>
 								<font>Font-Condensed-S25</font>
 								<textcolor>Mod_Tags_Light</textcolor>
 								<shadowcolor>44000000</shadowcolor>
@@ -166,9 +166,9 @@
 							</control>
 							<control type="textbox">
 								<posx>0</posx>
-								<posy>78</posy>
+								<posy>82</posy>
 								<width>1190</width>
-								<height>108</height>
+								<height>90</height>
 								<font>Font-Condensed-S25</font>
 								<textcolor>Mod_Tags</textcolor>
 								<shadowcolor>33ffffff</shadowcolor>

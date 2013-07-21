@@ -39,6 +39,7 @@
                     <posy>-75</posy>
                     <width>1000</width>
                     <height>22</height>
+                    <textcolor>mod-infotags</textcolor>
                     <include>DialogHeaderMod</include>
                     <align>center</align>
                 </control>

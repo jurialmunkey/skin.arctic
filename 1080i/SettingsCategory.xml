@@ -37,40 +37,6 @@
             		<effect type="fade" start="100" end="0" tween="sine" easing="inout" time="350" delay="0" />
 				</animation>
             </control>
-            <control type="group">
-                <control type="image">
-                    <posx>160</posx>
-                    <posy>260</posy>
-                    <width>1593</width>
-                    <height>648</height>
-                    <texture border="35">arctic/common/border-20.png</texture>
-                    <animation type="WindowOpen">
-						<effect type="fade" start="0" end="100" tween="sine" easing="inout" time="350" delay="0" />
-						<effect type="zoom" start="76" end="100" center="1344,560" tween="cubic" easing="out" time="400" delay="75" /> 
-						<effect type="zoom" start="309,260,1263,648" end="160,260,1593,648" tween="cubic" easing="out" time="545" delay="350" />
-					</animation>
-					<animation type="WindowClose">
-						<effect type="fade" end="0" start="100" tween="sine" easing="inout" time="545" delay="0" />
-						<effect type="zoom" end="309,260,1263,648" start="160,260,1593,648" tween="cubic" easing="out" time="545" delay="0" />
-					</animation>
-                </control>
-                <control type="image">
-                    <posx>180</posx>
-                    <posy>280</posy>
-                    <width>1553</width>
-                    <height>608</height>
-                    <texture border="35">arctic/common/panel.png</texture>
-                    <animation type="WindowOpen">
-						<effect type="fade" start="0" end="100" tween="sine" easing="inout" time="350" delay="0" />
-						<effect type="zoom" start="76" end="100" center="1344,560" tween="cubic" easing="out" time="400" delay="75" /> 
-						<effect type="zoom" start="329,280,1223,608" end="180,280,1553,608" tween="cubic" easing="out" time="545" delay="350" />
-					</animation>
-					<animation type="WindowClose">
-						<effect type="fade" end="0" start="100" tween="sine" easing="inout" time="545" delay="0" />
-						<effect type="zoom" end="329,280,1223,608" start="180,280,1553,608" tween="cubic" easing="out" time="545" delay="0" />
-					</animation>
-                </control>
-            </control>
             <!-- Categories -->
             <control type="group">
                 <animation type="WindowOpen">
@@ -82,11 +48,20 @@
 					<effect type="slide" end="190" start="10" tween="cubic" easing="out" time="745" delay="0" />
 					<effect type="fade" end="0" start="100" time="0" delay="450" />
 				</animation>
+				<control type="image">
+                    <posx>160</posx>
+                    <posy>290</posy>
+                    <width>450</width>
+                    <height>593</height>
+                    <texture border="35">arctic/common/panel.png</texture>
+                    <bordertexture border="35">arctic/common/border-20.png</bordertexture>
+                    <bordersize>20</bordersize>
+                </control>
                 <!-- Side Buttons -->
                 <control type="grouplist" id="3">
                     <description>Button Area</description>
-                    <posx>181</posx>
-                    <posy>291</posy>
+                    <posx>192</posx>
+                    <posy>320</posy>
                     <width>360</width>
                     <height>533</height>
                     <itemgap>-1</itemgap>
@@ -109,14 +84,6 @@
 					<effect type="slide" end="-190" start="-10" tween="cubic" easing="out" time="545" delay="0" />
 				</animation>
                 <posx>175</posx> 
-                <!-- Panel -->
-                <control type="image">
-                    <posx>335</posx>
-                    <posy>280</posy>
-                    <height>608</height>
-                    <width>70</width>
-                    <texture border="35">arctic/common/border-20.png</texture>
-                </control>
                 <control type="image">
                     <posx>355</posx>
                     <posy>280</posy>
@@ -125,11 +92,13 @@
                     <texture border="35">arctic/common/panel.png</texture>
                 </control>
                 <control type="image">
-                    <posx>355</posx>
-                    <posy>280</posy>
-                    <height>608</height>
-                    <width>1212</width>
+                    <posx>335</posx>
+                    <posy>260</posy>
+                    <height>648</height>
+                    <width>1252</width>
                     <texture border="35">arctic/common/whitepanel8.png</texture>
+                    <bordertexture border="35">arctic/common/border-20.png</bordertexture>
+                    <bordersize>20</bordersize>
                 </control>
                 <control type="grouplist" id="5">
                     <description>Control Area</description>
@@ -193,7 +162,7 @@
             <textcolor>mod-infotags-l</textcolor>
             <focusedcolor>white</focusedcolor>
             <disabledcolor>mod-infotags-vl</disabledcolor>
-            <font>Font-Condensed-S30-B</font>
+            <font>Font-Condensed-S30</font>
             <textoffsetx>35</textoffsetx>
         </control>
         <control type="radiobutton" id="8">
@@ -209,7 +178,7 @@
             <textcolor>mod-infotags-l</textcolor>
             <focusedcolor>white</focusedcolor>
             <disabledcolor>mod-infotags-vl</disabledcolor>
-            <font>Font-Condensed-S30-B</font>
+            <font>Font-Condensed-S30</font>
             <textoffsetx>35</textoffsetx>
         </control>
         <control type="spincontrolex" id="9">
@@ -223,7 +192,7 @@
             <textcolor>mod-infotags-l</textcolor>
             <focusedcolor>white</focusedcolor>
             <disabledcolor>mod-infotags-vl</disabledcolor>
-            <font>Font-Condensed-S30-B</font>
+            <font>Font-Condensed-S30</font>
             <textoffsetx>35</textoffsetx>
         </control>
         <control type="button" id="10">

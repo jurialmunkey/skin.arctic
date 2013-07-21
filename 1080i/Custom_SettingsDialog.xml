@@ -24,14 +24,22 @@
             	<texture border="15">arctic/common/whitepanel8.png</texture>
             </control>
               
+            <control type="image">
+            	<posx>620</posx>
+            	<posy>242</posy>
+            	<width>80</width>
+            	<height>80</height>
+            	<texture>windows/home/icons/config.png</texture>
+            	<aspectratio>keep</aspectratio>
+            </control>
             <control type="label">
                 <description>Heading</description>
-                <posx>637</posx>
+                <posx>692</posx>
                 <posy>260</posy>
                 <width>646</width>
                 <include>DialogHeaderMod</include>
                 <label>$INFO[Window(skinsettings).property(Dialog)]</label>
-                <align>center</align>
+                <align>left</align>
             </control>
             
             <control type="grouplist" id="3">

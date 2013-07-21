@@ -250,7 +250,7 @@
 			<include condition="!Skin.HasSetting(viewtype.classicposterinfo.wrap)">Viewtype-ClassicPosterInfo-Fixed</include>
             <include condition="Skin.HasSetting(viewtype.classicposterinfo.wrap)">Viewtype-ClassicPosterInfo-Wrap</include>
             <control type="group">
-            	<posy>693</posy>
+            	<posy>698</posy>
             	<posx>502</posx>
             	<visible>![Container(514).OnNext | Container(514).OnPrevious]</visible>
             	<animation effect="fade" start="0" end="100" delay="450" time="250" reversible="false">Visible</animation>
@@ -266,9 +266,9 @@
 				</control>
 				<control type="textbox">
 					<posx>24</posx>
-					<posy>65</posy>
+					<posy>70</posy>
 					<width>1140</width>
-					<height>110</height>
+					<height>100</height>
 					<label>$INFO[ListItem.Plot]</label>
 					<font>Font-Alaska-S25-NC</font>
 					<textcolor>Mod_Tags</textcolor>
@@ -279,9 +279,9 @@
 				<control type="textbox">
 					<description>Plot</description>
 					<posx>24</posx>
-					<posy>65</posy>
+					<posy>70</posy>
 					<width>1140</width>
-					<height>110</height>
+					<height>100</height>
 					<font>Font-Alaska-S25-NC</font>
 					<textcolor>Mod_Tags</textcolor>
 					<align>justify</align>

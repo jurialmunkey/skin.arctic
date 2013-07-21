@@ -1647,40 +1647,44 @@
         <control type="group">
             <include>KeyboardAnimations</include>
             <visible>!Window.IsVisible(yesnodialog)</visible>
-            <control type="image">
-                <posx>920</posx>
-                <posy>180</posy>
-                <width>80</width>
-                <height>60</height>
-                <texture>dialogs/default/arrow.png</texture>
-            </control>
+
             <control type="image">
                 <posx>526</posx>
-                <posy>200</posy>
+                <posy>170</posy>
                 <width>868</width>
-                <height>680</height>
-                <texture border="39">dialogs/default/bg.png</texture>
+                <height>760</height>
+                <texture border="39">arctic/common/panel.png</texture>
+                <bordertexture border="35">arctic/common/border-20.png</bordertexture>
+            	<bordersize>20</bordersize>
             </control>       
+            <control type="image">
+            	<posx>545</posx>
+            	<posy>184</posy>
+            	<width>70</width>
+            	<height>70</height>
+            	<texture>windows/home/icons/info.png</texture>
+            	<aspectratio>keep</aspectratio>
+            </control>
             <control type="label">
                 <description>Heading</description>
-                <posx>560</posx>
-                <posy>152</posy>
+                <posx>614</posx>
+                <posy>198</posy>
                 <width>800</width>
                 <label>$INFO[ListItem.Title]</label>
                 <font>Font-Alaska-S32-BL</font>
-                <textcolor>Mod_Tags</textcolor>
-                <align>center</align>
+                <textcolor>mod-infotags-alt</textcolor>
+                <align>left</align>
             </control>
             <control type="group">
                 <posx>560</posx>
                 <posy>234</posy>
-                <control type="image">
+                <!--<control type="image">
                 	<posx>0</posx>
                 	<posy>0</posy>
                 	<width>800</width>
                 	<height>239</height>
-                	<texture border="5">dialogs/default/inner.png</texture>
-                </control>
+                	<texture border="15">arctic/common/whitepanel8.png</texture>
+                </control>-->
                 <control type="button">
                 	<description>Time</description>
                 	<posx>0</posx>
@@ -1691,8 +1695,8 @@
                 	<textoffsetx>20</textoffsetx>
                 	<textwidth>540</textwidth>
                 	<font>Font-Condensed-S32</font>
-                	<textcolor>FF585858</textcolor>
-                	<disabledcolor>FF585858</disabledcolor>
+                	<textcolor>mod-infotags-alt</textcolor>
+                	<disabledcolor>mod-infotags-alt</disabledcolor>
                 	<shadowcolor>20FFFFFF</shadowcolor>
                 	<texturenofocus>dialogs/default/separator.png</texturenofocus>
                 	<label>$LOCALIZE[142]</label>
@@ -1709,8 +1713,8 @@
                 	<textoffsetx>20</textoffsetx>
                 	<textwidth>540</textwidth>
                 	<font>Font-Condensed-S32</font>
-                	<textcolor>FF585858</textcolor>
-                	<disabledcolor>FF585858</disabledcolor>
+                	<textcolor>mod-infotags-alt</textcolor>
+                	<disabledcolor>mod-infotags-alt</disabledcolor>
                 	<shadowcolor>20FFFFFF</shadowcolor>
                 	<texturenofocus>dialogs/default/separator.png</texturenofocus>
                 	<label>$LOCALIZE[180]</label>
@@ -1727,8 +1731,8 @@
                 	<textoffsetx>20</textoffsetx>
                 	<textwidth>540</textwidth>
                 	<font>Font-Condensed-S32</font>
-                	<textcolor>FF585858</textcolor>
-                	<disabledcolor>FF585858</disabledcolor>
+                	<textcolor>mod-infotags-alt</textcolor>
+                	<disabledcolor>mod-infotags-alt</disabledcolor>
                 	<shadowcolor>20FFFFFF</shadowcolor>
                 	<texturenofocus>dialogs/default/separator.png</texturenofocus>
                 	<label>$LOCALIZE[19148]</label>
@@ -1745,8 +1749,8 @@
                 	<textoffsetx>20</textoffsetx>
                 	<textwidth>540</textwidth>
                 	<font>Font-Condensed-S32</font>
-                	<textcolor>FF585858</textcolor>
-                	<disabledcolor>FF585858</disabledcolor>
+                	<textcolor>mod-infotags-alt</textcolor>
+                	<disabledcolor>mod-infotags-alt</disabledcolor>
                 	<shadowcolor>20FFFFFF</shadowcolor>
                 	<label>$LOCALIZE[135]</label>
                 	<label2 fallback="161">$INFO[ListItem.Genre]</label2>
@@ -1758,7 +1762,7 @@
             	<posy>486</posy>
             	<width>800</width>
             	<height>360</height>
-            	<texture border="5">dialogs/default/inner.png</texture>
+				<texture border="15">arctic/common/whitepanel8.png</texture>
             </control>
             <control type="textbox" id="400">
             	<description>Plot value</description>
@@ -1766,7 +1770,7 @@
             	<posy>506</posy>
             	<width>760</width>
             	<height>320</height>
-            	<font>Font-Condensed-S34</font>
+            	<font>Font-Condensed-S29</font>
             	<align>justify</align>
             	<textcolor>FF585858</textcolor>
             	<shadowcolor>20FFFFFF</shadowcolor>
@@ -1795,7 +1799,7 @@
             <control type="group" id="8000">
             	<visible>Window.IsActive(pvrguideinfo)</visible>
                 <posx>549</posx>
-                <posy>843</posy>
+                <posy>828</posy>
                 <defaultcontrol>5</defaultcontrol>
                 <control type="button" id="7">
                     <description>Cancel</description>
@@ -1836,7 +1840,7 @@
             <control type="group" id="8000">
             	<visible>Window.IsActive(pvrrecordinginfo)</visible>
                 <posx>549</posx>
-                <posy>843</posy>
+                <posy>828</posy>
                 <control type="button" id="10">
                     <description>Select</description>
                     <texturefocus>buttons/cancel-fo.png</texturefocus>
@@ -2063,36 +2067,31 @@
 					<bordersize>20</bordersize>
                 	<texture border="40">arctic/common/panel.png</texture>
                 </control>
-                <!--<control type="image">
-                	<posx>469</posx>
-                	<posy>290</posy>
-                	<width>983</width>
-                	<height>501</height>
-                	<texture border="40">arctic/common/whitepanel8.png</texture>
-                </control>
-                <control type="image">
-                	<posx>479</posx>
-                	<posy>300</posy>
-                	<width>644</width>
-                	<height>481</height>
-                	<texture border="5">dialogs/default/inner.png</texture>
-                </control>
                 <control type="image">
                 	<posx>1122</posx>
                 	<posy>300</posy>
                 	<width>319</width>
                 	<height>481</height>
-                	<texture border="5">dialogs/default/inner-dark.png</texture>
-                </control>-->
-                            
+                	<texture border="15">arctic/common/whitepanel8.png</texture>
+                	<visible>IsEmpty(Container(450).ListItem.Thumb)</visible>
+                </control>
+                           
+            	<control type="image">
+					<posx>473</posx>
+					<posy>237</posy>
+					<width>80</width>
+					<height>80</height>
+					<texture>windows/home/icons/recordings.png</texture>
+					<aspectratio>keep</aspectratio>
+				</control> 
                 <control type="label" id="411">
                     <description>Heading</description>
-                    <posx>1440</posx>
-                    <posy>250</posy>
+                    <posx>550</posx>
+                    <posy>254</posy>
                     <width>974</width>
                     <include>DialogHeaderMod</include>
                     <label>-</label>
-                    <align>right</align>
+                    <align>left</align>
                 </control>
                 
                 <control type="image">
@@ -2209,7 +2208,7 @@
                             <animation effect="fade" start="0" end="100" time="300" tween="sine" easing="inout" condition="![Container(450).Scrolling | Container(450).OnScrollNext | Container(450).OnScrollPrevious]">Visible</animation>
                             <animation effect="fade" start="100" end="0" time="300" tween="sine" easing="inout" condition="![Container(450).Scrolling | Container(450).OnScrollNext | Container(450).OnScrollPrevious]">Hidden</animation>
                             <control type="image">
-                                <width>644</width>
+                                <width>634</width>
                                 <height>60</height>
 								<texture border="8">views/other/focus-mod8.png</texture>
                             </control>

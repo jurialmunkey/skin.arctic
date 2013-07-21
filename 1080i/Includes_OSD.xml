@@ -117,59 +117,17 @@
 					<texture>osd/fullscreen/clock-pm.png</texture>
 					<visible>substring(System.Time,Pm,right)</visible>
 				</control>
-				<control type="group">
-					<visible>!Skin.HasSetting(old.clock)</visible>
-					<control type="label">
-						<description>Clock label</description>
-						<posx>5</posx>
-						<posy>63</posy>
-						<width>100</width>
-						<height>78</height>
-						<label>$INFO[System.Time(hh)]</label>
-						<font>Font-OSD-Clock-Large</font>
-						<textcolor>mod-infotags-d</textcolor>
-						<align>right</align>
-						<scroll>false</scroll>
-					</control>
-					<control type="label">
-						<description>Clock label</description>
-						<posx>0</posx>
-						<posy>47</posy>
-						<width>50</width>
-						<height>78</height>
-						<label>$INFO[System.Time(mm)]</label>
-						<font>Font-OSD-Clock</font>
-						<textcolor>mod-infotags</textcolor>
-						<align>center</align>
-						<scroll>false</scroll>
-					</control>
-					<control type="label">
-						<description>Clock label</description>
-						<posx>0</posx>
-						<posy>74</posy>
-						<width>50</width>
-						<height>78</height>
-						<label>$INFO[System.Time(xx)]</label>
-						<font>Font-OSD-Clock</font>
-						<textcolor>mod-infotags-l</textcolor>
-						<align>center</align>
-						<scroll>false</scroll>
-					</control>
-				</control>
-				<control type="group">
-					<visible>Skin.HasSetting(old.clock)</visible>
-					<control type="label">
-						<description>Clock label</description>
-						<posx>34</posx>
-						<posy>59</posy>
-						<width>100</width>
-						<height>78</height>
-						<label>$INFO[System.Time(hh:mm)]</label>
-						<font>Font-Alaska-S32-BL</font>
-						<textcolor>mod-infotags-d</textcolor>
-						<align>right</align>
-						<scroll>false</scroll>
-					</control>
+				<control type="label">
+					<description>Clock label</description>
+					<posx>34</posx>
+					<posy>59</posy>
+					<width>100</width>
+					<height>78</height>
+					<label>$INFO[System.Time(hh:mm)]</label>
+					<font>Font-OSD-Clock</font>
+					<textcolor>mod-infotags-d</textcolor>
+					<align>right</align>
+					<scroll>false</scroll>
 				</control>
 			</control>
                 
@@ -185,59 +143,18 @@
 					<height>100</height>
 					<texture>osd/fullscreen/clock-finish.png</texture>
 				</control>
-				<control type="group">
-					<visible>!Skin.HasSetting(old.clock)</visible>
-					<control type="label">
-						<description>Clock label</description>
-						<posx>5</posx>
-						<posy>63</posy>
-						<width>100</width>
-						<height>78</height>
-						<label>$INFO[Player.FinishTime(hh)]</label>
-						<font>Font-OSD-Clock-Large</font>
-						<textcolor>mod-infotags-d</textcolor>
-						<align>right</align>
-						<scroll>false</scroll>
-					</control>
-					<control type="label">
-						<description>Clock label</description>
-						<posx>0</posx>
-						<posy>47</posy>
-						<width>50</width>
-						<height>78</height>
-						<label>$INFO[Player.FinishTime(mm)]</label>
-						<font>Font-OSD-Clock</font>
-						<textcolor>mod-infotags</textcolor>
-						<align>center</align>
-						<scroll>false</scroll>
-					</control>
-					<control type="label">
-						<description>Clock label</description>
-						<posx>0</posx>
-						<posy>74</posy>
-						<width>50</width>
-						<height>78</height>
-						<label>$INFO[Player.FinishTime(xx)]</label>
-						<font>Font-OSD-Clock</font>
-						<textcolor>mod-infotags-l</textcolor>
-						<align>center</align>
-						<scroll>false</scroll>
-					</control>
-				</control>
-				<control type="group">
-					<visible>Skin.HasSetting(old.clock)</visible>
-					<control type="label">
-						<description>Clock label</description>
-						<posx>34</posx>
-						<posy>59</posy>
-						<width>100</width>
-						<height>78</height>
-						<label>$INFO[Player.FinishTime(hh:mm)]</label>
-						<font>Font-Alaska-S32-BL</font>
-						<textcolor>mod-infotags-d</textcolor>
-						<align>right</align>
-						<scroll>false</scroll>
-					</control>
+				
+				<control type="label">
+					<description>Clock label</description>
+					<posx>34</posx>
+					<posy>59</posy>
+					<width>100</width>
+					<height>78</height>
+					<label>$INFO[Player.FinishTime(hh:mm)]</label>
+					<font>Font-OSD-Clock</font>
+					<textcolor>mod-infotags-d</textcolor>
+					<align>right</align>
+					<scroll>false</scroll>
 				</control>
 			</control>
             <control type="group">

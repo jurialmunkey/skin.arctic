@@ -338,7 +338,7 @@
                             <posx>0</posx>
                             <posy>114</posy>
                             <width>565</width>
-                            <height>177</height>
+                            <height>184</height>
                             <label>$INFO[ListItem.Plot]</label>
                             <align>justify</align>
                             <textcolor>cceeeeee</textcolor>
@@ -351,7 +351,7 @@
                             <posx>0</posx>
                             <posy>114</posy>
                             <width>565</width>
-                            <height>177</height>
+                            <height>184</height>
                             <label>$INFO[ListItem.Plot]</label>
                             <align>justify</align>
                             <textcolor>cceeeeee</textcolor>
@@ -417,7 +417,7 @@
 								<posx>0</posx>
 								<posy>114</posy>
 								<width>1450</width>
-								<height>177</height>
+								<height>184</height>
 								<label>$INFO[ListItem.Plot]</label>
 								<align>justify</align>
 								<textcolor>cceeeeee</textcolor>
@@ -431,7 +431,7 @@
 								<posx>0</posx>
 								<posy>114</posy>
 								<width>1450</width>
-								<height>177</height>
+								<height>184</height>
 								<label>$INFO[ListItem.Plot]</label>
 								<align>justify</align>
 								<textcolor>cceeeeee</textcolor>

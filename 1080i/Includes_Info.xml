@@ -53,7 +53,7 @@
 						<width>300</width>
 						<height>78</height>
 						<label>$INFO[System.Date(DDD)]</label>
-						<font>Font-OSD-Clock</font>
+						<font>Font-Simple-Clock-Day</font>
 						<textcolor>Mod_Tags_Light</textcolor>
 						<align>left</align>
 						<scroll>false</scroll>
@@ -65,7 +65,7 @@
 						<width>300</width>
 						<height>78</height>
 						<label>$INFO[System.Date(MMM dd)]</label>
-						<font>Font-OSD-Clock</font>
+						<font>Font-Simple-Clock-Day</font>
 						<textcolor>Mod_Tags</textcolor>
 						<align>left</align>
 						<scroll>false</scroll>

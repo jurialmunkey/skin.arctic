@@ -14,14 +14,22 @@
                 <bordersize>20</bordersize>
                 <texture border="40">arctic/common/panel.png</texture>
             </control>
+            <control type="image">
+            	<posx>540</posx>
+            	<posy>296</posy>
+            	<width>80</width>
+            	<height>80</height>
+            	<texture>windows/home/icons/photos2.png</texture>
+            	<aspectratio>keep</aspectratio>
+            </control>
             <control type="label">
                 <description>Heading</description>
-                <posx>463</posx>
-                <posy>313</posy>
+                <posx>615</posx>
+                <posy>315</posy>
                 <width>974</width>
                 <include>DialogHeaderMod</include>
                 <label>$INFO[Window(skinsettings).property(Dialog)]</label>
-                <align>center</align>
+                <align>left</align>
                 <visible>IsEmpty(Window(skinsettings).property(CustomDialog))</visible>
             </control>
             <control type="label">

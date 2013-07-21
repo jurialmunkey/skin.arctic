@@ -15,27 +15,36 @@
                 <colordiffuse>88ffffff</colordiffuse>
             </control>
             <control type="image">
-                <posx>99</posx>
-				<posy>58</posy>
-				<width>682</width>
-				<height>884</height>
-                <texture border="5">views/newgloss/whitepanel.png</texture>
-                <colordiffuse>cf000000</colordiffuse>
+                <posx>79</posx>
+				<posy>38</posy>
+				<width>722</width>
+				<height>924</height>
+                <texture border="20">arctic/common/panel.png</texture>
+                <bordertexture border="40">arctic/common/border-20.png</bordertexture>
+                <bordersize>20</bordersize>
             </control>
             <control type="image">
-                <posx>84</posx>
-				<posy>108</posy>
-				<width>712</width>
-				<height>790</height>
-                <texture border="35">views/newgloss/whitepanel-15.png</texture>
+                <posx>99</posx>
+				<posy>123</posy>
+				<width>682</width>
+				<height>760</height>
+                <texture border="35">arctic/common/whitepanel8.png</texture>
                 <aspectratio>stretch</aspectratio>
             </control>
             <control type="group">
                 <visible>!Window.IsActive(DialogPVRGuideInfo.xml)</visible>
                 <include>visiblehidefadeinfo</include>
+                <control type="image">
+                	<posx>107</posx>
+                    <posy>50</posy>
+                    <width>100</width>
+                    <height>100</height>
+                    <aspectratio>keep</aspectratio>
+                    <texture>windows/home/icons/tvguide.png</texture>
+                </control>
                 <control type="button">
                     <description>Header</description>
-                    <posx>210</posx>
+                    <posx>220</posx>
                     <posy>73</posy>
                     <width>540</width>
                     <height>38</height>
@@ -225,7 +234,7 @@
                             <posy>0</posy>
                             <width>680</width>
                             <height>94</height>
-                            <texture border="5">views/other/focus-mod.png</texture>
+                            <texture border="15">views/other/focus-mod8.png</texture>
                             <aspectratio>stretch</aspectratio>
                             <include>visiblehidefadeinfo</include>
                         </control>
@@ -402,7 +411,7 @@
                     <posy>861</posy>
                     <width>800</width>
                     <height>100</height>
-                    <font>Font-Alaska-S29-BL</font>
+                    <font>Font-Alaska-S28-L</font>
                     <label>$VAR[PVRChannelsOSDItemsPageLabel]</label>
                     <textcolor>99ffffff</textcolor>
                     <scroll>false</scroll>

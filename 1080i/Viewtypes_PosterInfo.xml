@@ -165,7 +165,7 @@
 						<posx>0</posx>
 						<posy>80</posy>
 						<width>1038</width>
-						<height>180</height>
+						<height>188</height>
 						<label>$INFO[ListItem.Plot]</label>
 						<align>justify</align>
 						<textcolor>mod-infotags-alt2</textcolor>

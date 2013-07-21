@@ -26,9 +26,9 @@
 			<control type="textbox">
 				<description>Plot</description>
 				<posx>1220</posx>
-				<posy>508</posy>
-				<width>565</width>
-				<height>355</height>
+				<posy>514</posy>
+				<width>568</width>
+				<height>340</height>
 				<label>$INFO[ListItem.Plot,[B]$LOCALIZE[207][/B][CR],]</label>
 				<align>justify</align>
 				<textcolor>ddwhite</textcolor>
@@ -39,9 +39,9 @@
 			<control type="textbox">
 				<description>Plot</description>
 				<posx>465</posx>
-				<posy>508</posy>
+				<posy>514</posy>
 				<width>1330</width>
-				<height>355</height>
+				<height>340</height>
 				<label>$INFO[ListItem.Plot,[B]$LOCALIZE[207][/B][CR],]</label>
 				<align>justify</align>
 				<textcolor>ddwhite</textcolor>

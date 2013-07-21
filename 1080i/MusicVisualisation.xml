@@ -4,6 +4,266 @@
     <onload condition="System.HasAddon(script.artistslideshow) + Skin.HasSetting(ArtistSlideShow.Enabled)">RunScript(script.artistslideshow)</onload>
     <controls>
         <include>CommonItemsMusicOSD</include>
+        
+        
+        <!-- OSD TEXT idea from Bello -->
+        <control type="group">
+			<animation effect="fade" time="600">Visible</animation>
+			<animation effect="fade" time="600">Hidden</animation>
+        	<posy>100</posy>
+			<control type="label">
+				<description>Now Playing</description>
+				<posx>0</posx>
+				<posy>280</posy>
+				<width>2070</width>
+				<label>$INFO[MusicPlayer.Artist, ,]$INFO[MusicPlayer.Artist, ,]$INFO[MusicPlayer.Artist,,]$INFO[MusicPlayer.Artist,,]$INFO[MusicPlayer.Artist, ,]$INFO[MusicPlayer.Artist, ,]$INFO[MusicPlayer.Artist, ,]$INFO[MusicPlayer.Artist, ,]$INFO[MusicPlayer.Artist, ,]</label>
+				<scroll>true</scroll>
+				<pauseatend>0</pauseatend>
+				<font>Font-MusicVis-Artist</font>
+				<textcolor>55000000</textcolor>
+				<angle>0</angle>
+				<align>left</align>
+				<scrollspeed>100</scrollspeed>
+			</control>
+			<control type="label">
+				<description>Now Playing</description>
+				<posx>0</posx>
+				<posy>480</posy>
+				<width>2070</width>
+				<label>$INFO[MusicPlayer.Album, ,]$INFO[MusicPlayer.Album, ,]$INFO[MusicPlayer.Album, ,]$INFO[MusicPlayer.Album, ,]$INFO[MusicPlayer.Album, ,]$INFO[MusicPlayer.Album, ,]$INFO[MusicPlayer.Album, ,]$INFO[MusicPlayer.Album, ,]$INFO[MusicPlayer.Album, ,]$INFO[MusicPlayer.Album, ,]</label>
+				<scroll>true</scroll>
+				<pauseatend>0</pauseatend>
+				<font>Font-MusicVis-Album</font>
+				<textcolor>77666666</textcolor>
+				<angle>0</angle>
+				<align>left</align>
+				<scrollspeed>80</scrollspeed>
+				<pauseatend>0</pauseatend>
+			</control>	
+			<control type="label">
+				<description>Now Playing</description>
+				<posx>0</posx>
+				<posy>370</posy>
+				<width>2070</width>
+				<height>25</height>
+				<label>$INFO[MusicPlayer.Title,  ,]$INFO[MusicPlayer.Title,  ,]$INFO[MusicPlayer.Title,  ,]$INFO[MusicPlayer.Title,  ,]$INFO[MusicPlayer.Title,  ,]</label>
+				<scroll>true</scroll>
+				<font>Font-MusicVis-Title</font>
+				<pauseatend>0</pauseatend>
+				<textcolor>77white</textcolor>
+				<angle>0</angle>
+				<align>left</align>
+			</control>
+			<control type="image">
+				<posx>0</posx>
+				<posy>-100</posy>
+				<width>1920</width>
+				<height>1080</height>
+				<texture background="true">arctic/common/vignette.png</texture>
+				<aspectratio scalediffuse="false">stretch</aspectratio>
+			</control>
+			<control type="label">
+				<description>Player Times</description>
+				<posx>1350</posx>
+				<posy>790</posy>
+				<width>1500</width>
+				<label>$INFO[MusicPlayer.Time(mm:ss)]</label>
+				<align>left</align>
+				<font>Font-MusicVis-Time</font>
+				<angle>0</angle>
+				<textcolor>33ffffff</textcolor>
+			</control>
+        </control>
+
+        <!-- SHOW INFO -->
+        <control type="group">
+			<visible>[Player.ShowInfo | Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Window.IsActive(musicosd)]</visible>
+			<animation type="Visible" reversible="false">
+				<effect type="fade" start="0" end="100" time="300" tween="sine" easing="inout" delay="150" />
+			</animation>
+			<animation type="Hidden" reversible="false">
+				<effect type="fade" start="100" end="0" time="200" tween="sine" easing="out" />
+			</animation>
+			<animation effect="slide" end="0,-65" time="300" tween="cubic" easing="inout" condition="Window.IsActive(musicosd)">Conditional</animation>
+			<posx>-365</posx>
+			<posy>760</posy>
+			<control type="group">
+				<!-- Cd Art -->
+				<animation effect="slide" end="-139" condition="!Skin.HasSetting(CDArt.Enabled)">Conditional</animation>
+				<control type="image">
+					<posx>400</posx>
+					<posy>-10</posy>
+					<width>297</width>
+					<height>297</height>
+					<texture background="true" fallback="osd/fullscreen/cd.png">$INFO[Player.Folderpath,,cdart.png]</texture>
+					<aspectratio align="center">keep</aspectratio>
+					<animation effect="rotate" center="auto" reversible="false" start="360" end="0" time="2500" loop="true" condition="Player.Playing">Conditional</animation>
+					<animation effect="slide" start="395" end="0" time="350">Visible</animation>
+					<visible>Skin.HasSetting(CDArt.Enabled)</visible>
+				</control>
+				<control type="image">
+					<posx>539</posx>
+					<posy>-15</posy>
+					<width>1147</width>
+					<height>307</height>
+					<texture border="24">arctic/common/16panel.png</texture>
+					<colordiffuse>ddwhite</colordiffuse>
+				</control>
+				<control type="image">
+					<posx>825</posx>
+					<posy>222</posy>
+					<width>100</width>
+					<height>100</height>
+					<texture>overlays/nowplaying/play.png</texture>
+					<colordiffuse>ff00cf18</colordiffuse>
+					<visible>Player.Playing</visible>
+				</control>
+				<control type="image">
+					<posx>825</posx>
+					<posy>222</posy>
+					<width>100</width>
+					<height>100</height>
+					<texture>overlays/nowplaying/pause.png</texture>
+					<colordiffuse>ff00cf18</colordiffuse>
+					<visible>Player.Paused</visible>
+				</control>
+				<control type="label">
+					<posx>865</posx>
+					<posy>253</posy>
+					<width>661</width>
+					<label>»</label>
+					<font>Font-Alaska-S45-BL</font>
+					<textcolor>ff00cf18</textcolor>
+					<scroll>false</scroll>
+					<align>left</align>
+					<visible>Player.Forwarding</visible>
+				</control>	
+				<control type="label">
+					<posx>865</posx>
+					<posy>253</posy>
+					<width>661</width>
+					<label>«</label>
+					<font>Font-Alaska-S45-BL</font>
+					<textcolor>ff00cf18</textcolor>
+					<scroll>false</scroll>
+					<align>left</align>
+					<visible>Player.Rewinding</visible>
+				</control>	
+				<control type="progress">
+					<posx>900</posx>
+					<posy>264</posy>
+					<width>610</width>
+					<height>18</height>
+					<info>Player.Progress</info>
+					<reveal>true</reveal>
+					<texturebg>osd/fullscreen/progress/back.png</texturebg>
+					<midtexture>osd/fullscreen/progress/mid.png</midtexture>
+					<lefttexture>osd/fullscreen/progress/left.png</lefttexture>
+					<righttexture>osd/fullscreen/progress/right.png</righttexture>
+					<overlaytexture>-</overlaytexture>
+				</control>
+				<control type="label">
+					<posx>1527</posx>
+					<posy>257</posy>
+					<width>661</width>
+					<label>$INFO[MusicPlayer.Time]</label>
+					<font>Font-Alaska-S25-L</font>
+					<textcolor>bbwhite</textcolor>
+					<scroll>false</scroll>
+					<align>left</align>
+				</control>	
+				<control type="label">
+					<posx>1595</posx>
+					<posy>257</posy>
+					<width>661</width>
+					<label>•  $INFO[MusicPlayer.Duration]</label>
+					<font>Font-Alaska-S25-L</font>
+					<textcolor>bbwhite</textcolor>
+					<scroll>false</scroll>
+					<align>left</align>
+				</control>	
+				<control type="image">
+					<description>Thumb</description>
+					<posx>539</posx>
+					<posy>-15</posy>
+					<width>307</width>
+					<height>307</height>
+					<texture background="true" diffuse="arctic/banner/sq-16.png">$INFO[Player.Art(thumb)]</texture>
+					<aspectratio scalediffuse="false">scale</aspectratio>
+				</control>
+				<control type="image">
+					<posx>846</posx>
+					<posy>-15</posy>
+					<width>3</width>
+					<height>307</height>
+					<texture border="1,150,1,150">arctic/common/separator-v.png</texture>
+					<aspectratio>stretch</aspectratio>
+				</control>
+				<control type="image">
+					<posx>475</posx>
+					<posy>-79</posy>
+					<width>1275</width>
+					<height>435</height>
+					<texture border="100">arctic/common/16border64.png</texture>
+				</control>
+				<control type="group">
+					<posy>5</posy>
+					<posx>865</posx>
+					<control type="label">
+						<posx>0</posx>
+						<posy>22</posy>
+						<width>150</width>
+						<label>$INFO[MusicPlayer.TrackNumber]</label>
+						<font>Font-Episode-Large</font>
+						<textcolor>ddwhite</textcolor>
+						<scroll>false</scroll>
+						<align>left</align>
+					</control>
+					<control type="label">
+						<posx>100</posx>
+						<posy>4</posy>
+						<width>700</width>
+						<label>$INFO[MusicPlayer.Title]</label>
+						<font>Font-Alaska-S34-BL</font>
+						<textcolor>ddwhite</textcolor>
+						<scroll>false</scroll>
+						<align>left</align>
+					</control>
+					<control type="label">
+						<posx>100</posx>
+						<posy>34</posy>
+						<width>661</width>
+						<label>$INFO[MusicPlayer.Artist]$INFO[MusicPlayer.Album, • ,]</label>
+						<font>Font-Alaska-S25-L</font>
+						<textcolor>bbwhite</textcolor>
+						<scroll>false</scroll>
+						<align>left</align>
+					</control>			
+					<control type="textbox">
+						<description>Plot</description>
+						<posx>0</posx>
+						<posy>80</posy>
+						<width>796</width>
+						<height>120</height>
+						<label>$INFO[MusicPlayer.Property(Album_Description),[B]$LOCALIZE[41325][/B][CR],[CR][CR]]$INFO[MusicPlayer.Property(Artist_Description),[B]$LOCALIZE[21887][/B][CR],]</label>
+						<align>justify</align>
+						<textcolor>mod-infotags-alt2</textcolor>
+						<autoscroll delay="13000" time="3000" repeat="13000" />
+						<font>Font-Alaska-S25-NC</font>
+					</control>
+					<control type="label">
+						<posx>0</posx>
+						<posy>213</posy>
+						<width>661</width>
+						<label>$INFO[MusicPlayer.offset(1).Title,[B]$LOCALIZE[19031]:[/B] ,]</label>
+						<font>Font-Alaska-S25-L</font>
+						<textcolor>bbwhite</textcolor>
+						<scroll>false</scroll>
+						<align>left</align>
+					</control>	
+				</control>
+			</control>
+		</control>
         <control type="group">
             <animation effect="fade" start="100" end="0" tween="sine" easing="inout" time="300">WindowOpen</animation>
             <animation effect="fade" start="0" end="100" tween="sine" easing="inout" time="300">WindowClose</animation>
@@ -12,277 +272,8 @@
                 <include>FullscreenDimensions</include>
                 <texture>windows/common/overlay.png</texture>
             </control>
-        </control>
+        </control>        
         <include>OSDWeatherClock</include>
-        <control type="group">
-        	<posx>-35</posx>
-            <animation type="WindowOpen">
-                <effect type="fade" start="0" end="100" time="200" tween="sine" easing="inout" />
-                <effect type="slide" start="0,85" end="0,0" time="300" tween="cubic" easing="out" />
-            </animation>
-            <animation type="WindowClose">
-                <effect type="fade" start="100" end="0" time="200" tween="sine" easing="in" />
-                <effect type="slide" start="0,0" end="0,85" time="300" tween="sine" easing="in" />
-            </animation>
-            <animation type="Visible">
-                <effect type="fade" start="0" end="100" time="200" tween="sine" easing="inout" />
-                <effect type="slide" start="0,85" end="0,0" time="300" tween="cubic" easing="out" />
-            </animation>
-            <animation type="Hidden">
-                <effect type="fade" start="100" end="0" time="200" tween="sine" easing="in" />
-                <effect type="slide" start="0,0" end="0,85" time="300" tween="sine" easing="in" />
-            </animation>
-            <visible>Player.ShowInfo | Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Window.IsActive(musicosd)</visible>
-            <control type="group">
-                <animation effect="slide" start="0,0" end="0,-290" time="300" tween="cubic" easing="inout" condition="[Player.ShowInfo | Player.Paused] + !Window.IsActive(musicosd)">Conditional</animation>
-                <animation effect="slide" start="0,0" end="0,-70" time="300" tween="cubic" easing="inout" condition="Window.IsActive(musicosd) + [Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding]">Conditional</animation>
-                <control type="image">
-                    <posx>110</posx>
-                    <posy>1010</posy>
-                    <width>1770</width>
-                    <height>330</height>
-                    <texture border="60">arctic/osd/white-25.png</texture>
-                    <animation effect="slide" start="0,0" end="0,-50" time="300" tween="cubic" easing="inout" condition="Window.IsActive(musicosd)">Conditional</animation>
-                </control>
-                <control type="image">
-                    <posx>150</posx>
-                    <posy>1095</posy>
-                    <width>1690</width>
-                    <height>190</height>
-                    <texture border="15">arctic/osd/dark.png</texture>
-                    <animation effect="slide" start="0,0" end="0,-95" time="300" tween="cubic" easing="inout" condition="Window.IsActive(musicosd)">Conditional</animation>
-                </control>
-                <control type="group">
-                    <animation effect="slide" start="0,0" end="0,213" time="300" tween="cubic" easing="inout" condition="[Player.ShowInfo | Player.Paused] + !Window.IsActive(musicosd)">Conditional</animation>
-                    <animation effect="slide" start="0,0" end="0,72" time="300" tween="cubic" easing="inout" condition="Window.IsActive(musicosd)">Conditional</animation>
-                    <control type="progress">
-                        <posx>548</posx>
-                        <posy>1027</posy>
-                        <width>1014</width>
-                        <height>25</height>
-                        <info>Player.Progress</info>
-                        <reveal>true</reveal>
-                        <texturebg>osd/fullscreen/progress/back.png</texturebg>
-                        <midtexture>osd/fullscreen/progress/mid.png</midtexture>
-                        <lefttexture>osd/fullscreen/progress/left.png</lefttexture>
-                        <righttexture>osd/fullscreen/progress/right.png</righttexture>
-                        <overlaytexture>-</overlaytexture>
-                    </control>
-                    <control type="label">
-                        <posx>1595</posx>
-                        <posy>1027</posy>
-                        <width>360</width>
-                        <height>25</height>
-                        <label>$INFO[Player.Time(hh:mm:ss)]$INFO[Player.Duration(hh:mm:ss), / ,]</label>
-                        <textcolor>aawhite</textcolor>
-                        <font>Font-Condensed-S29-B</font>
-                        <align>left</align>
-                    </control>
-                    <control type="label">
-                        <posx>1850</posx>
-                        <posy>1027</posy>
-                        <width>360</width>
-                        <height>25</height>
-                        <label></label>
-                        <textcolor>aawhite</textcolor>
-                        <font>Font-Condensed-S29-B</font>
-                        <align>right</align>
-                    </control>
-                </control>
-                <control type="group">
-                    <visible>[Player.ShowInfo | Player.Paused] + !Window.IsActive(musicosd)</visible>
-                    <animation type="Visible" reversible="false">
-                        <effect type="fade" start="0" end="100" time="300" tween="sine" easing="inout" delay="150" />
-                    </animation>
-                    <animation type="Hidden" reversible="false">
-                        <effect type="fade" start="100" end="0" time="200" tween="sine" easing="out" />
-                    </animation>
-                    <control type="group">
-                    	<posx>170</posx>
-                        <posy>117</posy>
-                        <control type="image">
-                            <posx>1520</posx>
-                            <posy>963</posy>
-                            <width>140</width>
-                            <height>100</height>
-                            <colordiffuse>bbwhite</colordiffuse>
-                            <texture fallback="flags/audioosd/na.png">$INFO[MusicPlayer.Codec,flags/audioosd/,.png]</texture>
-                        </control>
-                        <control type="image">
-                            <posx>1460</posx>
-                            <posy>921</posy>
-                            <width>200</width>
-                            <height>52</height>
-                            <texture>$INFO[Skin.String(cdartlocation)]$INFO[MusicPlayer.Artist,,/logo.png]</texture>
-                            <aspectratio align="right" aligny="top">keep</aspectratio>
-                        </control>
-                        <control type="label">
-                            <posx>360</posx>
-                            <posy>922</posy>
-                            <width>1360</width>
-                            <height>56</height>
-                            <label>[UPPERCASE]$LOCALIZE[13350][/UPPERCASE]</label>
-                            <textcolor>mod-infotags-d</textcolor>
-                            <font>Font-Alaska-S45-BL</font>
-                            <align>left</align>
-                            <aligny>center</aligny>
-                            <scroll>false</scroll>
-                            <visible>!Pvr.IsPlayingRadio + !Player.Paused</visible>
-                        </control>
-                        <control type="label">
-                            <posx>360</posx>
-                            <posy>922</posy>
-                            <width>1360</width>
-                            <height>56</height>
-                            <label>[UPPERCASE]$LOCALIZE[112][/UPPERCASE]</label>
-                            <textcolor>mod-infotags-d</textcolor>
-                            <font>Font-Alaska-S45-BL</font>
-                            <align>left</align>
-                            <aligny>center</aligny>
-                            <scroll>false</scroll>
-                            <visible>!Pvr.IsPlayingRadio + Player.Paused</visible>
-                        </control>
-                        <!--<control type="grouplist">
-                            <posx>360</posx>
-                            <posy>779</posy>
-                            <width>1300</width>
-                            <height>100</height>
-                            <orientation>horizontal</orientation>
-                            <itemgap>0</itemgap>
-                            <visible>Pvr.IsPlayingRadio</visible>
-                            <usecontrolcoords>true</usecontrolcoords>
-                            <control type="label">
-                                <posx>0</posx>
-                                <posy>0</posy>
-                                <width min="0" max="400">auto</width>
-                                <height>100</height>
-                                <label>[B]$INFO[MusicPlayer.ChannelNumber][/B]</label>
-                                <textcolor>99FFFFFF</textcolor>
-                                <font>Font-Condensed-S100</font>
-                                <align>left</align>
-                                <aligny>center</aligny>
-                                <scroll>false</scroll>
-                            </control>
-                            <control type="label">
-                                <posx>0</posx>
-                                <posy>17</posy>
-                                <width>900</width>
-                                <height>100</height>
-                                <label>[UPPERCASE]$INFO[MusicPlayer.ChannelName, ,][/UPPERCASE]</label>
-                                <textcolor>99FFFFFF</textcolor>
-                                <font>Font-Alaska-S45-BL</font>
-                                <align>left</align>
-                                <aligny>center</aligny>
-                                <scroll>false</scroll>
-                            </control>
-                        </control>-->
-						<control type="group">
-							<posx>-65</posx>
-							<posy>810</posy>
-							<!-- CD ART -->
-							<control type="image">
-								<posx>40</posx>
-								<posy>-125</posy>
-								<width>350</width>
-								<height>350</height>
-								<texture background="true" fallback="osd/fullscreen/cd.png">$INFO[Player.FolderPath,,cdart.png]</texture>
-								<aspectratio align="center">keep</aspectratio>
-								<animation effect="rotate" center="auto" reversible="false" start="360" end="0" time="2500" loop="true" condition="Player.Playing">Conditional</animation>
-								<visible>Skin.HasSetting(CDArt.Enabled)</visible>
-							</control>
-							<!-- LEFT ART POSTER -->
-							<control type="image">
-								<posx>30</posx>
-								<posy>40</posy>
-								<width>370</width>
-								<height>370</height>
-								<texture diffuse="arctic/osd/370.png" background="true">views/fallbacks/DefaultAlbumCover.png/square-large.png</texture>
-								<aspectratio scalediffuse="false">scale</aspectratio>
-							</control>
-							<control type="image">
-								<posx>30</posx>
-								<posy>40</posy>
-								<width>370</width>
-								<height>370</height>
-								<texture diffuse="arctic/osd/370.png" background="true">$INFO[Player.Art(thumb)]</texture>
-								<aspectratio scalediffuse="false">stretch</aspectratio>
-								<fadetime>250</fadetime>
-							</control>
-							<control type="image">
-								<description>Glass</description>
-								<posx>30</posx>
-								<posy>40</posy>
-								<width>370</width>
-								<height>370</height>
-								<texture border="25">arctic/common/glass-ring.png</texture>
-								<visible>Skin.HasSetting(covers.showglass)</visible>
-							</control>
-							<control type="image">
-								<posx>-20</posx>
-								<posy>-10</posy>
-								<width>470</width>
-								<height>470</height>
-								<texture border="75">arctic/osd/370-S50.png</texture>
-								<aspectratio scalediffuse="false">stretch</aspectratio>
-								<fadetime>250</fadetime>
-							</control>
-						</control>    
-                        <control type="group">
-                            <posy>900</posy> 
-                            <posx>0</posx>   
-                            <control type="button">
-                                <posx>360</posx>
-                                <posy>83</posy>
-                                <width>1220</width>
-                                <height>56</height>
-                                <label>$INFO[MusicPlayer.PlaylistPosition,,. ]$INFO[MusicPlayer.Title]</label>
-                                <disabledcolor>bbwhite</disabledcolor>
-                                <font>Font-Alaska-S45-BL</font>
-                                <align>left</align>
-                                <aligny>center</aligny>
-                                <enable>false</enable>
-                            </control>
-                            <control type="label">
-                                <posx>360</posx>
-                                <posy>130</posy>
-                                <width>1220</width>
-                                <height>44</height>
-                                <label>$INFO[MusicPlayer.Artist]$INFO[MusicPlayer.Album, • ,]$INFO[MusicPlayer.Year, • ,]</label>
-                                <textcolor>aawhite</textcolor>
-                                <font>Font-Condensed-S29-B</font>
-                                <align>left</align>
-                                <aligny>center</aligny>
-                                <scroll>false</scroll>
-                            </control>
-                            <control type="label">
-                                <posx>360</posx>
-                                <posy>165</posy>
-                                <width>1220</width>
-                                <height>44</height>
-                                <label>$INFO[MusicPlayer.Genre]</label>
-                                <textcolor>88FFFFFF</textcolor>
-                                <font>Font-Condensed-S29</font>
-                                <align>left</align>
-                                <aligny>center</aligny>
-                                <scroll>false</scroll>
-                            </control>
-                            <control type="label">
-                                <posx>360</posx>
-                                <posy>260</posy>
-                                <width>1220</width>
-                                <height>44</height>
-                                <label>$INFO[MusicPlayer.Offset(1).Artist,$LOCALIZE[19031]: ,]$INFO[MusicPlayer.Offset(1).Title, - ,]</label>
-                                <textcolor>bb181818</textcolor>
-                                <font>Font-Alaska-S22-BL</font>
-                                <align>left</align>
-                                <aligny>center</aligny>
-                                <scroll>false</scroll>
-                                <visible>MusicPlayer.HasNext</visible>
-                            </control>
-                        </control>
-                    </control>
-                </control>
-            </control>
-        </control>
+        
     </controls>
 </window>

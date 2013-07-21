@@ -24,8 +24,8 @@
             <animation effect="slide" start="0,0" end="0,205" time="300" tween="cubic" easing="inout" condition="Window.IsActive(videoosd) | [!Window.IsActive(videoosd) + [Window.IsActive(script-XBMC-Subtitles-main.xml) | Window.IsActive(pvrguideinfo) | Window.IsActive(pvrosdchannels) | Window.IsActive(pvrosdguide) | Window.IsActive(yesnodialog) | Window.IsActive(okdialog) | Window.IsActive(progressdialog) | Window.IsActive(virtualkeyboard) | Window.IsActive(numericinput) | Window.IsActive(shutdownmenu) | Window.IsActive(osdvideosettings) | Window.IsActive(osdaudiosettings) | Window.IsActive(videobookmarks)]]">Conditional</animation>
             <visible>!Window.IsActive(videoosd) + ![!Window.IsActive(videoosd) + [Window.IsActive(script-XBMC-Subtitles-main.xml) | Window.IsActive(pvrguideinfo) | Window.IsActive(pvrosdchannels) | Window.IsActive(pvrosdguide) | Window.IsActive(yesnodialog) | Window.IsActive(okdialog) | Window.IsActive(progressdialog) | Window.IsActive(virtualkeyboard) | Window.IsActive(numericinput) | Window.IsActive(shutdownmenu) | Window.IsActive(osdvideosettings) | Window.IsActive(osdaudiosettings) | Window.IsActive(videobookmarks)]]</visible>
             <control type="grouplist" id="5">
-                <posx>1550</posx>
-                <posy>637</posy>
+                <posx>1430</posx>
+                <posy>617</posy>
                 <width>300</width>
                 <height>100</height>
                 <align>right</align>
@@ -34,6 +34,7 @@
                 <onup condition="IsEmpty(Window(seekbar).Property(ExtendPlot))">SetProperty(ExtendPlot,1,seekbar)</onup>
                 <ondown condition="!IsEmpty(Window(seekbar).Property(ExtendPlot))">ClearProperty(ExtendPlot,seekbar)</ondown>
                 <usecontrolcoords>true</usecontrolcoords>
+				<animation effect="slide" end="70" time="300" tween="cubic" easing="inout" condition="[IsEmpty(Player.Art(clearlogo) | !Skin.HasSetting(videoosd.showlogo)] + !VideoPlayer.Content(LiveTV) + Skin.HasSetting(CDArt.Enabled) + !IsEmpty(Player.Art(discart))">Conditional</animation>
                 <control type="button" id="51">
                     <posx>0</posx>
                     <posy>0</posy>
@@ -69,17 +70,31 @@
                 </control>
             </control>
             <control type="textbox">
-                <posx>405</posx>
+                <posx>500</posx>
                 <posy>720</posy>
-                <width>1415</width>
-                <height>260</height>
-                <label>$VAR[OSDPlot]</label>
+                <width>1202</width>
+                <height>245</height>
+                <label>$INFO[VideoPlayer.Title,[B],[/B][CR]]$VAR[OSDPlot]</label>
                 <textcolor>aawhite</textcolor>
-                <font>Font-Condensed-S38</font>
+                <font>Font-Condensed-S34</font>
                 <align>justify</align>
                 <autoscroll delay="11500" time="5000" repeat="7500" />
-                <visible>!IsEmpty(VideoPlayer.Plot) + !IsEmpty(Window(seekbar).Property(ExtendPlot))</visible>
                 <include>visiblehidefadeinfo</include>
+                <visible>!IsEmpty(VideoPlayer.Plot) + !IsEmpty(Window(seekbar).Property(ExtendPlot)) + ![[IsEmpty(Player.Art(clearlogo) | !Skin.HasSetting(videoosd.showlogo)] + !VideoPlayer.Content(LiveTV)]</visible>
+            </control>
+            <control type="textbox">
+                <posx>398</posx>
+                <posy>720</posy>
+                <width>1304</width>
+                <height>245</height>
+                <label>$INFO[VideoPlayer.Title,[B],[/B][CR]]$VAR[OSDPlot]</label>
+                <textcolor>aawhite</textcolor>
+                <font>Font-Condensed-S34</font>
+                <align>justify</align>
+                <autoscroll delay="11500" time="5000" repeat="7500" />
+                <include>visiblehidefadeinfo</include>
+                <visible>!IsEmpty(VideoPlayer.Plot) + !IsEmpty(Window(seekbar).Property(ExtendPlot)) + [[IsEmpty(Player.Art(clearlogo) | !Skin.HasSetting(videoosd.showlogo)] + !VideoPlayer.Content(LiveTV)]</visible>
+				<animation effect="slide" end="70" time="300" tween="cubic" easing="inout" condition="[IsEmpty(Player.Art(clearlogo) | !Skin.HasSetting(videoosd.showlogo)] + !VideoPlayer.Content(LiveTV) + Skin.HasSetting(CDArt.Enabled) + !IsEmpty(Player.Art(discart))">Conditional</animation>
             </control>
         </control>
     </controls>

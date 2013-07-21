@@ -23,9 +23,9 @@
         <control type="image">
             <description>media info background image</description>
             <posx>-100</posx>
-            <posy>65</posy>
+            <posy>-100</posy>
             <width>2120</width>
-            <height>662</height>
+            <height>862</height>
             <texture>arctic/osd/fade.png</texture>
             <aspectratio>stretch</aspectratio>
             <animation type="WindowOpen">
@@ -36,9 +36,10 @@
                 <effect type="fade" start="100" end="0" tween="sine" easing="inout" time="250" />
                 <effect type="slide" start="0,0" end="0,-600" time="300" tween="quadratic" easing="out" />
             </animation>
-            <animation effect="slide" start="0,0" end="0,-209" time="300" tween="cubic" easing="inout" condition="[Player.ShowInfo | Player.Paused] + !Window.IsActive(musicosd)">Conditional</animation>
+            <!--<animation effect="slide" start="0,0" end="0,-209" time="300" tween="cubic" easing="inout" condition="[Player.ShowInfo | Player.Paused] + !Window.IsActive(musicosd)">Conditional</animation>-->
         </control>
         <control type="group">
+        	<posy>-209</posy>
             <animation type="WindowOpen">
                 <effect type="fade" start="0" end="100" tween="sine" easing="inout" time="250" />
                 <effect type="slide" start="0,0" end="0,209" time="250" tween="quadratic" easing="out" />
@@ -47,13 +48,13 @@
                 <effect type="fade" start="100" end="0" tween="sine" easing="inout" time="250" />
                 <effect type="slide" start="0,0" end="0,-600" time="300" tween="quadratic" easing="out" />
             </animation>
-            <animation effect="slide" start="0,0" end="0,-209" time="300" tween="cubic" easing="inout" condition="[Player.ShowInfo | Player.Paused] + !Window.IsActive(musicosd)">Conditional</animation>
+            <!--<animation effect="slide" start="0,0" end="0,-209" time="300" tween="cubic" easing="inout" condition="[Player.ShowInfo | Player.Paused] + !Window.IsActive(musicosd)">Conditional</animation>-->
             <control type="textbox" id="100">
         		<description>textarea</description>
         		<posx>100</posx>
         		<posy>59</posy>
         		<width>1720</width>
-        		<height>544</height>
+        		<height>370</height>
         		<autoscroll time="2000" delay="10000" repeat="10000">!Control.HasFocus(101)</autoscroll>
         		<font>Font-Condensed-S50</font>
         		<textcolor>aawhite</textcolor>
@@ -63,7 +64,7 @@
         	    <posx>100</posx>
         	    <posy>30</posy>
         	    <width>1720</width>
-        	    <height>415</height>
+        	    <height>350</height>
         		<onleft>112</onleft>
         		<onright>112</onright>
         		<onup>110</onup>
@@ -71,7 +72,7 @@
         		<viewtype label="535">list</viewtype>
         		<pagecontrol>112</pagecontrol>
         		<scrolltime tween="cubic" easing="out">500</scrolltime>
-        		<focusposition>3</focusposition>
+        		<focusposition>2</focusposition>
         		<movement>2</movement>
         		<itemlayout width="1720" height="68">
         		    <control type="label">

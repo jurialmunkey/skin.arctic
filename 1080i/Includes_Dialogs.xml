@@ -103,21 +103,29 @@
             <visible>!Window.IsVisible(virtualkeyboard) + !Window.IsVisible(filebrowser) + !Window.IsVisible(selectdialog) + !Window.IsVisible(DialogSelect.xml) + !Window.IsVisible(progressdialog) + !Window.IsVisible(textviewer)</visible>
 			<control type="image">
                 <posx>285</posx>
-                <posy>223</posy>
+                <posy>224</posy>
                 <width>1350</width>
-                <height>643</height>
+                <height>645</height>
                 <bordertexture border="40">arctic/common/border-20.png</bordertexture>
                 <bordersize>20</bordersize>
                 <texture border="40">arctic/common/panel.png</texture>
             </control>  
+            <control type="image">
+            	<posx>295</posx>
+            	<posy>232</posy>
+            	<width>100</width>
+            	<height>100</height>
+            	<texture>windows/home/icons/addons.png</texture>
+            	<aspectratio>keep</aspectratio>
+            </control>
             <control type="label" id="20">
                 <description>Heading</description>
-                <posx>1600</posx>
-                <posy>252</posy>
+                <posx>384</posx>
+                <posy>258</posy>
                 <width>800</width>
                 <label>-</label>
                 <include>DialogHeaderMod</include>
-                <align>right</align>
+                <align>left</align>
             </control>
             <control type="group" id="8003">
                 <!-- left group -->
@@ -154,6 +162,13 @@
                 <control type="group" >
                     <posx>642</posx>
                     <posy>303</posy>
+                    <control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>960</width>
+						<height>473</height>
+						<texture border="40">arctic/common/whitepanel8.png</texture>
+					</control>  
                     <control type="grouplist" id="2">
                         <description>control area</description>
                         <posx>0</posx>
@@ -177,9 +192,9 @@
                 <font>Font-Condensed-S32</font>
                 <textoffsetx>20</textoffsetx>
                 <align>left</align>
-                <textcolor>mod-infotags-alt</textcolor>
+                <textcolor>mod-infotags</textcolor>
                 <focusedcolor>white</focusedcolor>
-                <disabledcolor>mod-infotags-li</disabledcolor>
+                <disabledcolor>44000000</disabledcolor>
                 <shadowcolor>20FFFFFF</shadowcolor>
                 <texturefocus border="8">views/other/focus-mod8.png</texturefocus>
             </control>
@@ -191,9 +206,9 @@
                 <textoffsetx>20</textoffsetx>
                 <textwidth>844</textwidth>
                 <radioposx>852</radioposx>
-                <textcolor>mod-infotags-alt</textcolor>
+                <textcolor>mod-infotags</textcolor>
                 <focusedcolor>white</focusedcolor>
-                <disabledcolor>mod-infotags-li</disabledcolor>
+                <disabledcolor>44000000</disabledcolor>
                 <shadowcolor>20FFFFFF</shadowcolor>
                 <textureradioon>buttons/radio/radio-light-fo.png</textureradioon>
                 <textureradiooff>buttons/radio/radio-light-nf.png</textureradiooff>
@@ -207,9 +222,9 @@
                 <textureupfocus>buttons/spinctrl/arrow-light-up-fo.png</textureupfocus>
                 <texturedownfocus>buttons/spinctrl/arrow-light-down-fo.png</texturedownfocus>
                 <texturefocus border="8">views/other/focus-mod8.png</texturefocus>
-                <textcolor>mod-infotags-alt</textcolor>
+                <textcolor>mod-infotags</textcolor>
                 <focusedcolor>white</focusedcolor>
-                <disabledcolor>mod-infotags-li</disabledcolor>
+                <disabledcolor>44000000</disabledcolor>
                 <shadowcolor>20FFFFFF</shadowcolor>
                 <textoffsetx>20</textoffsetx>
                 <spinposx>5</spinposx>
@@ -220,11 +235,10 @@
                 <height>60</height>
                 <align>left</align>
                 <aligny>top</aligny>
-                <font>Font-Condensed-S30-B</font>
+                <font>Font-Alaska-S28-L</font>
                 <textoffsetx>20</textoffsetx>
                 <textoffsety>14</textoffsety>
-                <textcolor>mod-infotags-alt</textcolor>
-                <shadowcolor>20FFFFFF</shadowcolor>
+                <textcolor>mod-infotags</textcolor>
             </control>
             
             <control type="sliderex" id="8">
@@ -232,16 +246,15 @@
                 <posx>0</posx>
                 <posy>0</posy>
                 <height>60</height>
-                <texturefocus border="2">dialogs/default/highlight.png</texturefocus>
-                <texturenofocus>dialogs/default/separator.png</texturenofocus>
+                <texturefocus border="10">views/other/focus-mod8.png</texturefocus>
                 <sliderwidth>150</sliderwidth>
                 <sliderheight>28</sliderheight>
                 <texturesliderbar>dialogs/mediasource/slider-back.png</texturesliderbar>
                 <textureslidernib>dialogs/mediasource/slider-nib-nf.png</textureslidernib>
                 <textureslidernibfocus>dialogs/mediasource/slider-nib-fo.png</textureslidernibfocus>
-                <textcolor>mod-infotags-alt</textcolor>
+                <textcolor>mod-infotags</textcolor>
                 <focusedcolor>white</focusedcolor>
-                <disabledcolor>mod-infotags-li</disabledcolor>
+                <disabledcolor>44000000</disabledcolor>
                 <shadowcolor>20FFFFFF</shadowcolor>
                 <textoffsetx>20</textoffsetx>
                 <pulseonselect>false</pulseonselect>
@@ -1678,13 +1691,6 @@
             <control type="group">
                 <posx>560</posx>
                 <posy>234</posy>
-                <!--<control type="image">
-                	<posx>0</posx>
-                	<posy>0</posy>
-                	<width>800</width>
-                	<height>239</height>
-                	<texture border="15">arctic/common/whitepanel8.png</texture>
-                </control>-->
                 <control type="button">
                 	<description>Time</description>
                 	<posx>0</posx>
@@ -1698,7 +1704,7 @@
                 	<textcolor>mod-infotags-alt</textcolor>
                 	<disabledcolor>mod-infotags-alt</disabledcolor>
                 	<shadowcolor>20FFFFFF</shadowcolor>
-                	<texturenofocus>dialogs/default/separator.png</texturenofocus>
+					<texturenofocus border="90,3,90,3">views/list/other/separator.png</texturenofocus>
                 	<label>$LOCALIZE[142]</label>
                 	<label2>$INFO[ListItem.StartTime]$INFO[ListItem.EndTime, - ] ($INFO[ListItem.StartDate])</label2>
                 	<enable>false</enable>
@@ -1716,7 +1722,7 @@
                 	<textcolor>mod-infotags-alt</textcolor>
                 	<disabledcolor>mod-infotags-alt</disabledcolor>
                 	<shadowcolor>20FFFFFF</shadowcolor>
-                	<texturenofocus>dialogs/default/separator.png</texturenofocus>
+                	<texturenofocus border="90,3,90,3">views/list/other/separator.png</texturenofocus>
                 	<label>$LOCALIZE[180]</label>
                 	<label2>$INFO[ListItem.Duration]</label2>
                 	<enable>false</enable>
@@ -1734,7 +1740,7 @@
                 	<textcolor>mod-infotags-alt</textcolor>
                 	<disabledcolor>mod-infotags-alt</disabledcolor>
                 	<shadowcolor>20FFFFFF</shadowcolor>
-                	<texturenofocus>dialogs/default/separator.png</texturenofocus>
+                	<texturenofocus border="90,3,90,3">views/list/other/separator.png</texturenofocus>
                 	<label>$LOCALIZE[19148]</label>
                 	<label2>$INFO[ListItem.ChannelName]</label2>
                 	<enable>false</enable>
@@ -1898,10 +1904,10 @@
                 	<align>left</align>
                 	<textoffsetx>30</textoffsetx>
                 	<textwidth>540</textwidth>
-                	<font>Font-Condensed-S34</font>
+                	<font>Font-Condensed-S32</font>
                 	<textcolor>mod-infotags-l</textcolor>
                 	<disabledcolor>mod-infotags-l</disabledcolor>
-                	<texturenofocus border="90,3,90,3">views/list/other/separator-l.png</texturenofocus>
+                	<texturenofocus border="90,3,90,3">views/list/other/separator.png</texturenofocus>
                 	<label>[B]$LOCALIZE[142][/B]</label>
                 	<label2>[COLOR=mod-infotags-l]$INFO[ListItem.StartTime] - $INFO[ListItem.EndTime] ($INFO[ListItem.StartDate])[/COLOR]</label2>
                 	<enable>false</enable>
@@ -1915,10 +1921,10 @@
                 	<align>left</align>
                 	<textoffsetx>30</textoffsetx>
                 	<textwidth>540</textwidth>
-                	<font>Font-Condensed-S34</font>
+                	<font>Font-Condensed-S32</font>
                 	<textcolor>mod-infotags-l</textcolor>
                 	<disabledcolor>mod-infotags-l</disabledcolor>
-                	<texturenofocus border="90,3,90,3">views/list/other/separator-l.png</texturenofocus>
+                	<texturenofocus border="90,3,90,3">views/list/other/separator.png</texturenofocus>
                 	<label>[B]$LOCALIZE[180]:[/B]</label>
                 	<label2>[COLOR=mod-infotags-l]$INFO[ListItem.Duration][/COLOR]</label2>
                 	<enable>false</enable>
@@ -1932,10 +1938,10 @@
                 	<align>left</align>
                 	<textoffsetx>30</textoffsetx>
                 	<textwidth>540</textwidth>
-                	<font>Font-Condensed-S34</font>
+                	<font>Font-Condensed-S32</font>
                 	<textcolor>mod-infotags-l</textcolor>
                 	<disabledcolor>mod-infotags-l</disabledcolor>
-                	<texturenofocus border="90,3,90,3">views/list/other/separator-l.png</texturenofocus>
+                	<texturenofocus border="90,3,90,3">views/list/other/separator.png</texturenofocus>
                 	<label>[B]$LOCALIZE[19148]:[/B]</label>
                 	<label2>[COLOR=mod-infotags-l]$INFO[ListItem.ChannelName][/COLOR]</label2>
                 	<enable>false</enable>
@@ -1949,10 +1955,10 @@
                 	<align>left</align>
                 	<textoffsetx>30</textoffsetx>
                 	<textwidth>540</textwidth>
-                	<font>Font-Condensed-S34</font>
+                	<font>Font-Condensed-S32</font>
                 	<textcolor>mod-infotags-l</textcolor>
                 	<disabledcolor>mod-infotags-l</disabledcolor>
-                	<texturenofocus border="90,3,90,3">views/list/other/separator-l.png</texturenofocus>
+                	<texturenofocus border="90,3,90,3">views/list/other/separator.png</texturenofocus>
                 	<label>[B]$LOCALIZE[135]:[/B]</label>
                 	<label2 fallback="161">[COLOR=mod-infotags-l]$INFO[ListItem.Genre][/COLOR]</label2>
                 	<enable>false</enable>
@@ -2143,7 +2149,7 @@
                             <posy>1</posy>
                             <width>644</width>
                             <height>60</height>
-                            <texture>dialogs/default/separator.png</texture>
+                            <texture border="90,3,90,3">views/list/other/separator.png</texture>
                             <colordiffuse>77white</colordiffuse>
                         </control>
                         <control type="image">
@@ -2178,7 +2184,7 @@
                                 <posy>1</posy>
                                 <width>644</width>
                                 <height>60</height>
-                                <texture>dialogs/default/separator.png</texture>
+                                <texture border="90,3,90,3">views/list/other/separator.png</texture>
                                 <colordiffuse>77white</colordiffuse>
                             </control>
                             <control type="image">
@@ -2252,7 +2258,7 @@
                             <posy>1</posy>
                             <width>644</width>
                             <height>60</height>
-                            <texture>dialogs/default/separator.png</texture>
+                            <texture border="90,3,90,3">views/list/other/separator.png</texture>
                             <colordiffuse>77white</colordiffuse>
                         </control>
                         <control type="image">
@@ -2286,7 +2292,7 @@
                                 <posy>1</posy>
                                 <width>644</width>
                                 <height>60</height>
-                                <texture>dialogs/default/separator.png</texture>
+                                <texture border="90,3,90,3">views/list/other/separator.png</texture>
                                 <colordiffuse>77white</colordiffuse>
                             </control>
                             <control type="image">
@@ -2913,48 +2919,6 @@
                 <scroll>false</scroll>
                 <visible>StringCompare(Window(3004).Property(ChooseArt),poster)</visible>
             </control>
-            
-            <control type="image">
-				<posx>80</posx>
-				<posy>200</posy>
-				<width>1243</width>
-				<height>726</height>
-				<texture border="25">views/newgloss/border-glass.png</texture>
-				<colordiffuse>77ffffff</colordiffuse>
-				<visible>StringCompare(Window(3004).Property(ChooseArt),fanart) | StringCompare(Window(3004).Property(ChooseArt),landscape) + !Skin.HasSetting(hide.glass)</visible>
-			</control>
-			
-			<control type="image">
-				<posx>80</posx>
-				<posy>200</posy>
-				<width>1445</width>
-				<height>726</height>
-				<texture border="25">views/newgloss/border-glass.png</texture>
-				<colordiffuse>77ffffff</colordiffuse>
-				<visible>![StringCompare(Window(3004).Property(ChooseArt),fanart) | StringCompare(Window(3004).Property(ChooseArt),landscape) | StringCompare(Window(3004).Property(ChooseArt),poster)] + !Skin.HasSetting(hide.glass)</visible>
-			</control>
-			
-			<control type="image">
-				<posx>80</posx>
-				<posy>200</posy>
-				<width>1490</width>
-				<height>726</height>
-				<texture border="25">views/newgloss/border-glass.png</texture>
-				<colordiffuse>77ffffff</colordiffuse>
-				<visible>StringCompare(Window(3004).Property(ChooseArt),poster) + !Skin.HasSetting(hide.glass)</visible>
-			</control>
-            
-            <!--<control type="image">
-                <description>Shadow</description>
-                <posx>57</posx>
-                <posy>900</posy>
-                <height>125</height>
-                <texture>windows/home/item-shadow.png</texture>
-                <include condition="!StringCompare(Window(3004).Property(ChooseArt),poster) + !StringCompare(Window(3004).Property(ChooseArt),fanart) + !StringCompare(Window(3004).Property(ChooseArt),banner) + !StringCompare(Window(3004).Property(ChooseArt),landscape)">ArtDialogShadowWidthSquare</include>
-                <include condition="StringCompare(Window(3004).Property(ChooseArt),poster)">ArtDialogShadowWidthPoster</include>
-                <include condition="StringCompare(Window(3004).Property(ChooseArt),banner)">ArtDialogShadowWidthBanner</include>
-                <include condition="StringCompare(Window(3004).Property(ChooseArt),fanart) | StringCompare(Window(3004).Property(ChooseArt),landscape)">ArtDialogShadowWidthLandscape</include>
-            </control>-->
             
             <control type="image">
                 <posx>1091</posx>

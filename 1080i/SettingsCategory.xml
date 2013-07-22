@@ -22,7 +22,6 @@
                 <effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
                 <effect type="zoom" start="100" end="85" time="300" center="960,600" tween="sine" easing="out" />
             </animation>
-            <visible>!Window.IsActive(favourites)</visible>
             <control type="image">
                 <description>Shadow</description>
                 <posx>150</posx>
@@ -37,6 +36,42 @@
             		<effect type="fade" start="100" end="0" tween="sine" easing="inout" time="350" delay="0" />
 				</animation>
             </control>
+            <visible>!Window.IsActive(favourites)</visible>
+            <!-- Dark Panel -->
+            <control type="group">
+                <control type="image">
+                    <posx>160</posx>
+                    <posy>250</posy>
+                    <width>1603</width>
+                    <height>668</height>
+                    <texture border="35">arctic/common/border-20.png</texture>
+                    <animation type="WindowOpen">
+						<effect type="fade" start="0" end="100" tween="sine" easing="inout" time="350" delay="0" />
+						<effect type="zoom" start="76" end="100" center="1344,560" tween="cubic" easing="out" time="400" delay="75" /> 
+						<effect type="zoom" start="309,250,1273,668" end="160,250,1603,668" tween="cubic" easing="out" time="545" delay="350" />
+					</animation>
+					<animation type="WindowClose">
+						<effect type="fade" end="0" start="100" tween="sine" easing="inout" time="545" delay="0" />
+						<effect type="zoom" end="309,250,1273,668" start="160,250,1603,668" tween="cubic" easing="out" time="545" delay="0" />
+					</animation>
+                </control>
+                <control type="image">
+                    <posx>180</posx>
+                    <posy>270</posy>
+                    <width>1563</width>
+                    <height>628</height>
+                    <texture border="35">arctic/common/panel.png</texture>
+                    <animation type="WindowOpen">
+						<effect type="fade" start="0" end="100" tween="sine" easing="inout" time="350" delay="0" />
+						<effect type="zoom" start="76" end="100" center="1344,560" tween="cubic" easing="out" time="400" delay="75" /> 
+						<effect type="zoom" start="329,270,1233,628" end="180,270,1563,628" tween="cubic" easing="out" time="545" delay="350" />
+					</animation>
+					<animation type="WindowClose">
+						<effect type="fade" end="0" start="100" tween="sine" easing="inout" time="545" delay="0" />
+						<effect type="zoom" end="329,270,1233,628" start="180,270,1563,628" tween="cubic" easing="out" time="545" delay="0" />
+					</animation>
+                </control>
+            </control>
             <!-- Categories -->
             <control type="group">
                 <animation type="WindowOpen">
@@ -48,22 +83,13 @@
 					<effect type="slide" end="190" start="10" tween="cubic" easing="out" time="745" delay="0" />
 					<effect type="fade" end="0" start="100" time="0" delay="450" />
 				</animation>
-				<control type="image">
-                    <posx>160</posx>
-                    <posy>290</posy>
-                    <width>450</width>
-                    <height>593</height>
-                    <texture border="35">arctic/common/panel.png</texture>
-                    <bordertexture border="35">arctic/common/border-20.png</bordertexture>
-                    <bordersize>20</bordersize>
-                </control>
                 <!-- Side Buttons -->
                 <control type="grouplist" id="3">
                     <description>Button Area</description>
-                    <posx>192</posx>
-                    <posy>320</posy>
-                    <width>360</width>
-                    <height>533</height>
+                    <posx>180</posx>
+                    <posy>281</posy>
+                    <width>338</width>
+                    <height>609</height>
                     <itemgap>-1</itemgap>
                     <onleft>5</onleft>
                     <onright>5</onright>
@@ -85,20 +111,18 @@
 				</animation>
                 <posx>175</posx> 
                 <control type="image">
-                    <posx>355</posx>
-                    <posy>280</posy>
-                    <height>608</height>
-                    <width>1212</width>
-                    <texture border="35">arctic/common/panel.png</texture>
+                    <posx>356</posx>
+                    <posy>281</posy>
+                    <height>609</height>
+                    <width>1210</width>
+                    <texture border="50">arctic/common/panel.png</texture>
                 </control>
                 <control type="image">
-                    <posx>335</posx>
-                    <posy>260</posy>
-                    <height>648</height>
-                    <width>1252</width>
-                    <texture border="35">arctic/common/whitepanel8.png</texture>
-                    <bordertexture border="35">arctic/common/border-20.png</bordertexture>
-                    <bordersize>20</bordersize>
+                    <posx>355</posx>
+                    <posy>280</posy>
+                    <height>611</height>
+                    <width>1212</width>
+                    <texture border="50">arctic/common/whitepanel8.png</texture>
                 </control>
                 <control type="grouplist" id="5">
                     <description>Control Area</description>
@@ -140,6 +164,13 @@
                     <animation effect="fade" start="45" end="0" time="300" tween="sine" easing="inout" condition="!Control.IsVisible(41)">Conditional</animation>
                     <visible allowhiddenfocus="true">Control.HasFocus(40)</visible>
                 </control>
+                <control type="image">
+                    <posx>335</posx>
+                    <posy>260</posy>
+                    <height>651</height>
+                    <width>1252</width>
+                    <texture border="70">arctic/common/border-20.png</texture>
+                </control>
             </control>
         </control>
         
@@ -158,7 +189,6 @@
             <align>left</align>
             <aligny>center</aligny>
             <texturefocus border="5">views/other/focus-mod.png</texturefocus>
-            <texturenofocus border="90,3,90,3">views/list/other/separator-l.png</texturenofocus>
             <textcolor>mod-infotags-l</textcolor>
             <focusedcolor>white</focusedcolor>
             <disabledcolor>mod-infotags-vl</disabledcolor>
@@ -174,7 +204,6 @@
             <textureradiofocus>buttons/radio/radio-light-fo.png</textureradiofocus>
 			<textureradionofocus>buttons/radio/radio-light-nf.png</textureradionofocus>
 			<texturefocus border="5">views/other/focus-mod.png</texturefocus>
-            <texturenofocus border="90,3,90,3">views/list/other/separator-l.png</texturenofocus>
             <textcolor>mod-infotags-l</textcolor>
             <focusedcolor>white</focusedcolor>
             <disabledcolor>mod-infotags-vl</disabledcolor>
@@ -188,7 +217,6 @@
             <align>left</align>
             <aligny>center</aligny>
             <texturefocus border="5">views/other/focus-mod.png</texturefocus>
-            <texturenofocus border="90,3,90,3">views/list/other/separator-l.png</texturenofocus>
             <textcolor>mod-infotags-l</textcolor>
             <focusedcolor>white</focusedcolor>
             <disabledcolor>mod-infotags-vl</disabledcolor>
@@ -202,7 +230,7 @@
             <align>left</align>
             <aligny>center</aligny>
             <texturefocus border="10">views/other/focus-mod8.png</texturefocus>
-            <texturenofocus border="90,3,90,3">views/list/other/separator-l.png</texturenofocus>
+			<texturenofocus border="90,3,90,3">views/list/other/separator.png</texturenofocus>
             <textcolor>mod-infotags-alt</textcolor>
             <focusedcolor>white</focusedcolor>
             <disabledcolor>mod-infotags-vl</disabledcolor>

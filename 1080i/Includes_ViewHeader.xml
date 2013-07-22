@@ -605,7 +605,7 @@
                         <scroll>false</scroll>
                         <align>left</align>
                     </control>
-                    <control type="label">
+                    <!--<control type="label">
                         <width min="0" max="500">auto</width>
                         <height>120</height>
                         <label>: $VAR[SettingsHeaderLabel]</label>
@@ -613,7 +613,7 @@
                         <textcolor>Mod_Tags</textcolor>
                         <scroll>false</scroll>
                         <align>left</align>
-                    </control>
+                    </control>-->
                 </control>
             </control>
             <control type="label">
@@ -621,7 +621,8 @@
                 <posy>32</posy>
                 <width>765</width>
                 <height>120</height>
-                <label>$VAR[SettingsHeaderSubLabel]</label>
+                <!--<label>$VAR[SettingsHeaderSubLabel]</label>-->
+                <label>$VAR[SettingsHeaderLabel]</label>
                 <font>Font-Alaska-S28-L</font>
                 <textcolor>Mod_Tags</textcolor>
                 <scroll>false</scroll>
@@ -652,13 +653,13 @@
                     <control type="label">
                         <width min="0" max="500">auto</width>
                         <height>120</height>
-                        <label>$LOCALIZE[19020]</label>
+                        <label>$LOCALIZE[41220]</label>
                         <font>Font-Alaska-S36-BL</font>
                         <textcolor>Mod_Tags</textcolor>
                         <scroll>false</scroll>
                         <align>left</align>
                     </control>
-                    <control type="label">
+                    <!--<control type="label">
                         <width min="0" max="500">auto</width>
                         <height>120</height>
                         <label>$INFO[Control.GetLabel(29),: ,]</label>
@@ -666,8 +667,8 @@
                         <textcolor>Mod_Tags</textcolor>
                         <scroll>false</scroll>
                         <align>left</align>
-                    </control>
-                    <control type="label">
+                    </control>-->
+                    <!--<control type="label">
                         <width min="0" max="500">auto</width>
                         <height>120</height>
                         <label>$INFO[Control.GetLabel(30),: ,]</label>
@@ -675,7 +676,7 @@
                         <textcolor>Mod_Tags</textcolor>
                         <scroll>false</scroll>
                         <align>left</align>
-                    </control>
+                    </control>-->
                 </control>
             </control>
             <control type="grouplist">
@@ -687,14 +688,15 @@
                 <orientation>horizontal</orientation>
                 <control type="label">
                 	<include>PVRSubLabel</include>
-                	<label>$INFO[ListItem.Label]</label>
-                	<visible>!ControlGroup(9001).HasFocus</visible>
+                	<label>$INFO[Control.GetLabel(29)]$INFO[Control.GetLabel(30),: ,]</label>
+                	<!--<label>$INFO[ListItem.Label]</label>-->
+                	<!--<visible>!ControlGroup(9001).HasFocus</visible>-->
                 </control>
-                <control type="label">
+                <!--<control type="label">
                 	<include>PVRSubLabel</include>
                 	<label>33061</label>
                 	<visible>ControlGroup(9001).HasFocus</visible>
-                </control>
+                </control>-->
             </control>
         </control>
     </include>

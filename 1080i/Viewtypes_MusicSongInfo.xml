@@ -250,7 +250,7 @@
 							<posx>0</posx>
 							<posy>77</posy>
 							<width>796</width>
-							<height>180</height>
+							<height>184</height>
 							<label>$VAR[MusicPlotBox]</label>
 							<align>justify</align>
 							<textcolor>mod-infotags-alt2</textcolor>

@@ -44,10 +44,10 @@
 			</control>
 			<control type="textbox">
 				<description>Plot</description>
-				<posx>1220</posx>
-				<posy>508</posy>
+				<posx>1225</posx>
+				<posy>518</posy>
 				<width>565</width>
-				<height>355</height>
+				<height>342</height>
 				<label>$VAR[MusicPlotBox]</label>
 				<align>justify</align>
 				<textcolor>mod-infotags-alt2</textcolor>
@@ -58,9 +58,9 @@
 			<control type="textbox">
 				<description>Plot</description>
 				<posx>465</posx>
-				<posy>508</posy>
+				<posy>518</posy>
 				<width>1330</width>
-				<height>355</height>
+				<height>342</height>
 				<label>$VAR[MusicPlotBox]</label>
 				<align>justify</align>
 				<textcolor>mod-infotags-alt2</textcolor>

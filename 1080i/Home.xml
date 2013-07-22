@@ -2,12 +2,10 @@
     <defaultcontrol>525</defaultcontrol>
     <allowoverlay>yes</allowoverlay>
     <backgroundcolor>0</backgroundcolor>
-	<onload>Skin.SetBool(hide.glass)</onload>
-	
-	<!-- SKIN INIT -->
 	<onload condition="!Skin.HasSetting(Skin.Initialization)">SetProperty(Skin.Initialization,1,startup)</onload>
     <onload condition="!Skin.HasSetting(Skin.Initialization) | IsEmpty(Window(startup).Property(Started))">AlarmClock(Skin.Initialization,ReplaceWindow(startup),00:01,silent)</onload>
-	
+	<onload>Skin.SetBool(hide.glass)</onload>
+
 	<!-- PANEL AND SIMPLE -->
 	<onload condition="IsEmpty(Skin.String(homescreen.style))">Skin.SetString(homescreen.style,panel)</onload>
 	<onload condition="![stringcompare(Skin.String(movie.widget.type),$LOCALIZE[41550]) | stringcompare(Skin.String(movie.widget.type),$LOCALIZE[41552]) | stringcompare(Skin.String(movie.widget.type),$LOCALIZE[575])]">Skin.SetString(movie.widget.type,$LOCALIZE[41552])</onload>
@@ -17,7 +15,7 @@
 	<onload condition="Skin.HasSetting(UseRCB)">RunScript(script.games.rom.collection.browser,limit=10)</onload>
 	
 	<!-- METRO -->
-    <onload condition="StringCompare(Skin.String(homescreen.style),metro) + Container(20).HasFocus(2)">AlarmClock(HomeTileMoveThree,Control.Move(5032,1),00:04,silent,loop)</onload>
+    <!--<onload condition="StringCompare(Skin.String(homescreen.style),metro) + Container(20).HasFocus(2)">AlarmClock(HomeTileMoveThree,Control.Move(5032,1),00:04,silent,loop)</onload>
     <onload condition="StringCompare(Skin.String(homescreen.style),metro) + Container(20).HasFocus(2)">AlarmClock(HomeTileMoveTwo,Control.Move(5022,1),00:07,silent,loop)</onload>
     <onload condition="StringCompare(Skin.String(homescreen.style),metro) + Container(20).HasFocus(3)">AlarmClock(HomeTileMove,Control.Move(2022,1),00:07,silent,loop)</onload>
     <onload condition="StringCompare(Skin.String(homescreen.style),metro) + Container(20).HasFocus(4)">AlarmClock(HomeTileMove,Control.Move(3022,1),00:07,silent,loop)</onload>
@@ -28,7 +26,7 @@
 	<onload condition="StringCompare(Skin.String(homescreen.style),metro) + IsEmpty(Skin.String(appcolor.name)) | !SubString(Skin.String(appcolor.name),Tiles)">Skin.SetString(appcolor.name,Grey Tiles)</onload>
 	<onload condition="StringCompare(Skin.String(homescreen.style),metro) + IsEmpty(Skin.String(homecolor.name)) | !SubString(Skin.String(homecolor.name),Tiles)">Skin.SetString(homecolor.name,Grey Tiles)</onload>
 	<onload condition="StringCompare(Skin.String(homescreen.style),metro) + IsEmpty(Skin.String(pvrcolor.name)) | !SubString(Skin.String(pvrcolor.name),Tiles)">Skin.SetString(pvrcolor.name,Grey Tiles)</onload>
-	<onload condition="StringCompare(Skin.String(homescreen.style),metro) + IsEmpty(Skin.String(weathercolor.name)) | !SubString(Skin.String(weathercolor.name),Tiles)">Skin.SetString(weathercolor.name,Grey Tiles)</onload>
+	<onload condition="StringCompare(Skin.String(homescreen.style),metro) + IsEmpty(Skin.String(weathercolor.name)) | !SubString(Skin.String(weathercolor.name),Tiles)">Skin.SetString(weathercolor.name,Grey Tiles)</onload>-->
 	
 	<!-- PROFILE SWITCH -->
 	<onload condition="!Skin.HasSetting(HideHomeProfileInfo)">AlarmClock(ProfileMove,Control.Move(30,1),00:10,silent,loop)</onload>
@@ -69,5 +67,6 @@
 		
 		<!-- COMMON ITEMS-->
 		<include>Common-Home-Info</include>
+	
     </controls>
 </window>

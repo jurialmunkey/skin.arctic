@@ -16,23 +16,28 @@
 			</animation>
 			<animation effect="slide" end="0,-55" time="300" tween="cubic" easing="inout" condition="Window.IsActive(videoosd)">Conditional</animation>
 			
-			<posx>-365</posx>
+			<posx>-354</posx>
 			<posy>760</posy>
 			<!-- Clear Logo Group -->
 			<control type="group">
-				<visible>[!IsEmpty(Player.Art(tvshow.clearlogo) + Skin.HasSetting(videoosd.showlogo) + VideoPlayer.Content(episodes)] | [!IsEmpty(Player.Art(clearlogo) + Skin.HasSetting(videoosd.showlogo) + !VideoPlayer.Content(episodes)] | VideoPlayer.Content(LiveTV)</visible>
-				<!-- Cd Art -->
 				<control type="image">
 					<posx>539</posx>
-					<posy>-15</posy>
+					<posy>-40</posy>
 					<width>1547</width>
-					<height>307</height>
-					<texture border="24">arctic/common/16panel-osd.png</texture>
-					<colordiffuse>ddwhite</colordiffuse>
+					<height>325</height>
+					<texture border="24">arctic/osd/panel.png</texture>
+					<colordiffuse>eeeeeeee</colordiffuse>
+				</control>
+				<control type="image">
+					<posx>475</posx>
+					<posy>-104</posy>
+					<width>1675</width>
+					<height>453</height>
+					<texture border="80">arctic/common/border-64.png</texture>
 				</control>
 				<control type="image">
 					<posx>825</posx>
-					<posy>222</posy>
+					<posy>212</posy>
 					<width>100</width>
 					<height>100</height>
 					<texture>overlays/nowplaying/play.png</texture>
@@ -41,7 +46,7 @@
 				</control>
 				<control type="image">
 					<posx>825</posx>
-					<posy>222</posy>
+					<posy>212</posy>
 					<width>100</width>
 					<height>100</height>
 					<texture>overlays/nowplaying/pause.png</texture>
@@ -50,7 +55,7 @@
 				</control>
 				<control type="label">
 					<posx>865</posx>
-					<posy>253</posy>
+					<posy>243</posy>
 					<width>661</width>
 					<label>»</label>
 					<font>Font-Alaska-S45-BL</font>
@@ -61,7 +66,7 @@
 				</control>	
 				<control type="label">
 					<posx>865</posx>
-					<posy>253</posy>
+					<posy>243</posy>
 					<width>661</width>
 					<label>«</label>
 					<font>Font-Alaska-S45-BL</font>
@@ -72,9 +77,9 @@
 				</control>	
 				<control type="progress">
 					<posx>900</posx>
-					<posy>264</posy>
-					<width>950</width>
-					<height>18</height>
+					<posy>251</posy>
+					<width>940</width>
+					<height>24</height>
 					<info>Player.Progress</info>
 					<reveal>true</reveal>
 					<texturebg>osd/fullscreen/progress/back.png</texturebg>
@@ -84,9 +89,9 @@
 					<overlaytexture>-</overlaytexture>
 				</control>
 				<control type="label">
-					<posx>1874</posx>
-					<posy>257</posy>
-					<width>661</width>
+					<posx>1860</posx>
+					<posy>249</posy>
+					<width>210</width>
 					<label>$INFO[Player.Time(hh:mm:ss)]</label>
 					<font>Font-Alaska-S25-L</font>
 					<textcolor>bbwhite</textcolor>
@@ -94,59 +99,89 @@
 					<align>left</align>
 				</control>	
 				<control type="label">
-					<posx>1965</posx>
-					<posy>257</posy>
-					<width>661</width>
-					<label>•  $INFO[Player.Duration(hh:mm:ss)]</label>
+					<posx>1861</posx>
+					<posy>249</posy>
+					<width>210</width>
+					<label>•</label>
 					<font>Font-Alaska-S25-L</font>
 					<textcolor>bbwhite</textcolor>
 					<scroll>false</scroll>
-					<align>left</align>
+					<align>center</align>
+				</control>	
+				<control type="label">
+					<posx>2070</posx>
+					<posy>249</posy>
+					<width>210</width>
+					<label>$INFO[Player.Duration(hh:mm:ss)]</label>
+					<font>Font-Alaska-S25-L</font>
+					<textcolor>bbwhite</textcolor>
+					<scroll>false</scroll>
+					<align>right</align>
 				</control>	
 				<control type="image">
 					<description>Thumb</description>
-					<posx>556</posx>
+					<posx>570</posx>
 					<posy>-15</posy>
-					<width>287</width>
-					<height>307</height>
+					<width>257</width>
+					<height>257</height>
 					<texture background="true">$INFO[Player.Art(thumb)]</texture>
 					<aspectratio scalediffuse="false" align="center">keep</aspectratio>
 					<visible>VideoPlayer.Content(LiveTV)</visible>
 				</control>
-				<control type="image">
-					<description>Thumb</description>
-					<posx>556</posx>
-					<posy>-15</posy>
-					<width>287</width>
-					<height>307</height>
-					<texture background="true">$INFO[Player.Art(clearlogo)]</texture>
-					<aspectratio scalediffuse="false" align="center">keep</aspectratio>
-					<visible>!VideoPlayer.Content(LiveTV) + !VideoPlayer.Content(episodes)</visible>
+				<control type="group">
+					<visible>!VideoPlayer.Content(LiveTV) + !Skin.HasSetting(videoosd.showposter)</visible>
+					<control type="image">
+						<description>Thumb</description>
+						<posx>565</posx>
+						<posy>-15</posy>
+						<width>257</width>
+						<height>257</height>
+						<texture background="true">$INFO[Player.Art(clearlogo)]</texture>
+						<aspectratio scalediffuse="false" align="center">keep</aspectratio>
+						<visible>!VideoPlayer.Content(episodes)</visible>
+					</control>
+					<control type="image">
+						<description>Thumb</description>
+						<posx>565</posx>
+						<posy>-15</posy>
+						<width>257</width>
+						<height>257</height>
+						<texture background="true">$INFO[Player.Art(tvshow.clearlogo)]</texture>
+						<aspectratio scalediffuse="false" align="center">keep</aspectratio>
+						<visible>VideoPlayer.Content(episodes)</visible>
+					</control>
 				</control>
-				<control type="image">
-					<description>Thumb</description>
-					<posx>556</posx>
-					<posy>-15</posy>
-					<width>287</width>
-					<height>307</height>
-					<texture background="true">$INFO[Player.Art(tvshow.clearlogo)]</texture>
-					<aspectratio scalediffuse="false" align="center">keep</aspectratio>
-					<visible>!VideoPlayer.Content(LiveTV) + VideoPlayer.Content(episodes)</visible>
-				</control>
-				<control type="image">
-					<posx>846</posx>
-					<posy>-15</posy>
-					<width>3</width>
-					<height>307</height>
-					<texture border="1,150,1,150">arctic/common/separator-v.png</texture>
-					<aspectratio>stretch</aspectratio>
-				</control>
-				<control type="image">
-					<posx>475</posx>
-					<posy>-79</posy>
-					<width>1675</width>
-					<height>435</height>
-					<texture border="100">arctic/common/16border64.png</texture>
+				<control type="group">
+					<visible>!VideoPlayer.Content(LiveTV) + [Skin.HasSetting(videoosd.showposter) | [VideoPlayer.Content(episodes) + IsEmpty(Player.Art(tvshow.poster)] | [!VideoPlayer.Content(episodes) + IsEmpty(Player.Art(poster)]]</visible>
+					<control type="image">
+						<posx>549</posx>
+						<posy>-285</posy>
+						<width>280</width>
+						<height>290</height>
+						<texture background="true" fallback="osd/fullscreen/cd.png">$INFO[Player.Art(discart)]</texture>
+						<aspectratio align="center">keep</aspectratio>
+						<animation effect="rotate" center="auto" reversible="false" start="360" end="0" time="2500" loop="true" condition="Player.Playing">Conditional</animation>
+						<animation effect="slide" start="395" end="0" time="350">Visible</animation>
+						<visible>Skin.HasSetting(CDArt.Enabled)</visible>
+					</control>
+					<control type="image">
+						<description>Thumb</description>
+						<posx>475</posx>
+						<posy>-214</posy>
+						<width>428</width>
+						<height>578</height>
+						<texture background="true" border="128">arctic/common/16border64.png</texture>
+						<aspectratio scalediffuse="false">stretch</aspectratio>
+					</control>
+					<control type="image">
+						<description>Thumb</description>
+						<posx>539</posx>
+						<posy>-150</posy>
+						<width>300</width>
+						<height>450</height>
+						<texture background="true" diffuse="arctic/osd/poster.png">$VAR[ArcticOSDPoster]</texture>
+						<aspectratio scalediffuse="false">scale</aspectratio>
+					</control>
 				</control>
 				<control type="group">
 					<include>visiblehidefadeinfo</include>
@@ -163,7 +198,7 @@
 							<posy>0</posy>
 							<width>35</width>
 							<height>28</height>
-							<colordiffuse>bbwhite</colordiffuse>
+							<colordiffuse>mod-infotags-d</colordiffuse>
 							<texture>flags/other/3d-osd.png</texture>
 							<include>visiblehidefadeflags</include>
 							<visible>substring(Player.FileNameAndPath,.3D.) | substring(Player.FileNameAndPath,-3D.)</visible>
@@ -173,7 +208,7 @@
 							<posy>0</posy>
 							<width>84</width>
 							<height>28</height>
-							<colordiffuse>bbwhite</colordiffuse>
+							<colordiffuse>mod-infotags-d</colordiffuse>
 							<texture>$INFO[VideoPlayer.VideoResolution,flags/res/osd/,.png]</texture>
 							<include>visiblehidefadeflags</include>
 							<visible>!IsEmpty(VideoPlayer.VideoResolution)</visible>
@@ -183,7 +218,7 @@
 							<posy>0</posy>
 							<width>68</width>
 							<height>28</height>
-							<colordiffuse>bbwhite</colordiffuse>
+							<colordiffuse>mod-infotags-d</colordiffuse>
 							<texture>$INFO[VideoPlayer.AudioCodec,flags/audio/osd/,.png]</texture>
 							<include>visiblehidefadeflags</include>
 							<visible>!IsEmpty(VideoPlayer.AudioCodec)</visible>
@@ -204,9 +239,10 @@
 							<posx>0</posx>
 							<posy>4</posy>
 							<width>1100</width>
-							<label>$INFO[Player.Title]</label>
+							<label>$VAR[OSDTitle]</label>
 							<font>Font-Alaska-S34-BL</font>
-							<textcolor>ddwhite</textcolor>
+							<textcolor>mod-infotags-d</textcolor>
+							<shadowcolor>22ffffff</shadowcolor>
 							<scroll>false</scroll>
 							<align>left</align>
 						</control>
@@ -217,10 +253,24 @@
 							<label>$INFO[VideoPlayer.Year]$INFO[VideoPlayer.Genre, • ,]</label>
 							<label2>$INFO[VideoPlayer.Rating, ★ ,]</label2>
 							<font>Font-Alaska-S25-L</font>
-							<textcolor>bbwhite</textcolor>
+							<textcolor>mod-infotags</textcolor>
+							<shadowcolor>22ffffff</shadowcolor>
 							<scroll>false</scroll>
 							<align>left</align>
-							<visible>!VideoPlayer.Content(LiveTV)</visible>
+							<visible>!VideoPlayer.Content(LiveTV) + !VideoPlayer.Content(episodes)</visible>
+						</control>	
+						<control type="button">
+							<posx>0</posx>
+							<posy>34</posy>
+							<width>1201</width>
+							<label>$INFO[VideoPlayer.Season,$LOCALIZE[20373] , • ]$INFO[VideoPlayer.Episode,$LOCALIZE[20359] ,]$INFO[VideoPlayer.TVShowTitle, • ,]</label>
+							<label2>$INFO[VideoPlayer.Rating, ★ ,]</label2>
+							<font>Font-Alaska-S25-L</font>
+							<textcolor>mod-infotags</textcolor>
+							<shadowcolor>22ffffff</shadowcolor>
+							<scroll>false</scroll>
+							<align>left</align>
+							<visible>VideoPlayer.Content(episodes)</visible>
 						</control>	
 						<control type="button">
 							<posx>0</posx>
@@ -229,7 +279,8 @@
 							<label>$INFO[VideoPlayer.ChannelNumber,$LOCALIZE[19029] ,]$INFO[VideoPlayer.ChannelName, • ,]</label>
 							<label2>$INFO[VideoPlayer.Rating, ★ ,]</label2>
 							<font>Font-Alaska-S25-L</font>
-							<textcolor>bbwhite</textcolor>
+							<textcolor>mod-infotags</textcolor>
+							<shadowcolor>22ffffff</shadowcolor>
 							<scroll>false</scroll>
 							<align>left</align>
 							<visible>VideoPlayer.Content(LiveTV)</visible>
@@ -237,246 +288,27 @@
 						<control type="textbox">
 							<description>Plot</description>
 							<posx>0</posx>
-							<posy>80</posy>
+							<posy>76</posy>
 							<width>1200</width>
-							<height>120</height>
+							<height>124</height>
 							<label>[B]$LOCALIZE[207][/B][CR]$VAR[OSDPlot]</label>
 							<align>justify</align>
-							<textcolor>mod-infotags-alt2</textcolor>
+							<textcolor>mod-infotags-d</textcolor>
+							<shadowcolor>22ffffff</shadowcolor>
 							<autoscroll delay="13000" time="3000" repeat="13000" />
 							<font>Font-Alaska-S25-NC</font>
 							<visible>VideoPlayer.Content(LiveTV) | [!IsEmpty(VideoPlayer.PlayCount) | [system.getbool(videolibrary.showunwatchedplots) + IsEmpty(VideoPlayer.PlayCount)]]</visible>
 						</control>
 						<control type="label">
-							<posx>0</posx>
-							<posy>213</posy>
+							<posx>1200</posx>
+							<posy>202</posy>
 							<width>661</width>
 							<label>$VAR[OSDNextTitle]</label>
 							<font>Font-Alaska-S25-L</font>
-							<textcolor>bbwhite</textcolor>
+							<textcolor>mod-infotags</textcolor>
+							<shadowcolor>22ffffff</shadowcolor>
 							<scroll>false</scroll>
-							<align>left</align>
-						</control>
-					</control>
-				</control>
-			</control>
-			<!-- Poster Group -->
-			<control type="group">
-				<visible>[[IsEmpty(Player.Art(clearlogo) + !VideoPlayer.Content(episodes)] | [IsEmpty(Player.Art(tvshow.clearlogo) + VideoPlayer.Content(episodes)] | !Skin.HasSetting(videoosd.showlogo)] + !VideoPlayer.Content(LiveTV)</visible>
-				<animation effect="slide" end="70" time="300" tween="cubic" easing="inout" condition="Skin.HasSetting(CDArt.Enabled) + !IsEmpty(Player.Art(discart))">Conditional</animation>
-				<!-- Cd Art -->
-				<control type="image">
-					<posx>400</posx>
-					<posy>-10</posy>
-					<width>297</width>
-					<height>297</height>
-					<texture background="true" fallback="osd/fullscreen/cd.png">$INFO[Player.Art(discart)]</texture>
-					<aspectratio align="center">keep</aspectratio>
-					<animation effect="rotate" center="auto" reversible="false" start="360" end="0" time="2500" loop="true" condition="Player.Playing">Conditional</animation>
-					<animation effect="slide" start="395" end="0" time="350">Visible</animation>
-					<visible>Skin.HasSetting(CDArt.Enabled) + !IsEmpty(Player.Art(discart))</visible>
-				</control>
-				<control type="image">
-					<posx>539</posx>
-					<posy>-15</posy>
-					<width>1547</width>
-					<height>307</height>
-					<texture border="24">arctic/common/16panel-osd.png</texture>
-					<colordiffuse>ddwhite</colordiffuse>
-				</control>
-				<control type="image">
-					<posx>723</posx>
-					<posy>222</posy>
-					<width>100</width>
-					<height>100</height>
-					<texture>overlays/nowplaying/play.png</texture>
-					<colordiffuse>ff00cf18</colordiffuse>
-					<visible>Player.Playing</visible>
-				</control>
-				<control type="image">
-					<posx>723</posx>
-					<posy>222</posy>
-					<width>100</width>
-					<height>100</height>
-					<texture>overlays/nowplaying/pause.png</texture>
-					<colordiffuse>ff00cf18</colordiffuse>
-					<visible>Player.Paused</visible>
-				</control>
-				<control type="label">
-					<posx>763</posx>
-					<posy>253</posy>
-					<width>661</width>
-					<label>»</label>
-					<font>Font-Alaska-S45-BL</font>
-					<textcolor>ff00cf18</textcolor>
-					<scroll>false</scroll>
-					<align>left</align>
-					<visible>Player.Forwarding</visible>
-				</control>	
-				<control type="label">
-					<posx>763</posx>
-					<posy>253</posy>
-					<width>661</width>
-					<label>«</label>
-					<font>Font-Alaska-S45-BL</font>
-					<textcolor>ff00cf18</textcolor>
-					<scroll>false</scroll>
-					<align>left</align>
-					<visible>Player.Rewinding</visible>
-				</control>	
-				<control type="progress">
-					<posx>798</posx>
-					<posy>264</posy>
-					<width>1052</width>
-					<height>18</height>
-					<info>Player.Progress</info>
-					<reveal>true</reveal>
-					<texturebg>osd/fullscreen/progress/back.png</texturebg>
-					<midtexture>osd/fullscreen/progress/mid.png</midtexture>
-					<lefttexture>osd/fullscreen/progress/left.png</lefttexture>
-					<righttexture>osd/fullscreen/progress/right.png</righttexture>
-					<overlaytexture>-</overlaytexture>
-				</control>
-				<control type="label">
-					<posx>1874</posx>
-					<posy>257</posy>
-					<width>661</width>
-					<label>$INFO[Player.Time(hh:mm:ss)]</label>
-					<font>Font-Alaska-S25-L</font>
-					<textcolor>bbwhite</textcolor>
-					<scroll>false</scroll>
-					<align>left</align>
-				</control>	
-				<control type="label">
-					<posx>1965</posx>
-					<posy>257</posy>
-					<width>661</width>
-					<label>•  $INFO[Player.Duration(hh:mm:ss)]</label>
-					<font>Font-Alaska-S25-L</font>
-					<textcolor>bbwhite</textcolor>
-					<scroll>false</scroll>
-					<align>left</align>
-				</control>	
-				<control type="image">
-					<description>Thumb</description>
-					<posx>536</posx>
-					<posy>-15</posy>
-					<width>205</width>
-					<height>307</height>
-					<texture background="true" diffuse="arctic/osd/poster.png">$INFO[Player.Art(poster)]</texture>
-					<aspectratio scalediffuse="true" align="left">stretch</aspectratio>
-					<visible>!VideoPlayer.Content(episodes)</visible>
-				</control>
-				<control type="image">
-					<description>Thumb</description>
-					<posx>536</posx>
-					<posy>-15</posy>
-					<width>205</width>
-					<height>307</height>
-					<texture background="true" diffuse="arctic/osd/poster.png">$INFO[Player.Art(tvshow.poster)]</texture>
-					<aspectratio scalediffuse="true" align="left">stretch</aspectratio>
-					<visible>VideoPlayer.Content(episodes)</visible>
-				</control>
-				<control type="image">
-					<posx>744</posx>
-					<posy>-15</posy>
-					<width>3</width>
-					<height>307</height>
-					<texture border="1,150,1,150">arctic/common/separator-v.png</texture>
-					<aspectratio>stretch</aspectratio>
-				</control>
-				<control type="image">
-					<posx>475</posx>
-					<posy>-79</posy>
-					<width>1675</width>
-					<height>435</height>
-					<texture border="100">arctic/common/16border64.png</texture>
-				</control>
-				<control type="group">
-					<include>visiblehidefadeinfo</include>
-					<!-- FLAGS -->
-					<control type="grouplist">
-						<posx>1765</posx>
-						<posy>5</posy>
-						<width>300</width>
-						<orientation>horizontal</orientation>
-						<itemgap>10</itemgap>
-						<align>right</align>
-						<control type="image">
-							<posx>0</posx>
-							<posy>0</posy>
-							<width>35</width>
-							<height>28</height>
-							<colordiffuse>bbwhite</colordiffuse>
-							<texture>flags/other/3d-osd.png</texture>
-							<include>visiblehidefadeflags</include>
-							<visible>substring(Player.FileNameAndPath,.3D.) | substring(Player.FileNameAndPath,-3D.)</visible>
-						</control>
-						<control type="image">
-							<posx>0</posx>
-							<posy>0</posy>
-							<width>84</width>
-							<height>28</height>
-							<colordiffuse>bbwhite</colordiffuse>
-							<texture>$INFO[VideoPlayer.VideoResolution,flags/res/osd/,.png]</texture>
-							<include>visiblehidefadeflags</include>
-							<visible>!IsEmpty(VideoPlayer.VideoResolution)</visible>
-						</control>
-						<control type="image">
-							<posx>0</posx>
-							<posy>0</posy>
-							<width>68</width>
-							<height>28</height>
-							<colordiffuse>bbwhite</colordiffuse>
-							<texture>$INFO[VideoPlayer.AudioCodec,flags/audio/osd/,.png]</texture>
-							<include>visiblehidefadeflags</include>
-							<visible>!IsEmpty(VideoPlayer.AudioCodec)</visible>
-						</control>
-					</control>
-					<!-- INFO -->
-					<control type="group">
-						<posy>5</posy>
-						<posx>763</posx>
-						<animation type="Visible" reversible="false">
-							<effect type="fade" start="0" end="100" time="300" tween="sine" easing="inout" delay="150" />
-						</animation>
-						<animation type="Hidden" reversible="false">
-							<effect type="fade" start="100" end="0" time="200" tween="sine" easing="out" />
-						</animation>
-						<visible>IsEmpty(Window(seekbar).Property(ExtendPlot))</visible>
-						<control type="label">
-							<posx>0</posx>
-							<posy>4</posy>
-							<width>1052</width>
-							<label>$INFO[Player.Title]</label>
-							<font>Font-Alaska-S34-BL</font>
-							<textcolor>ddwhite</textcolor>
-							<scroll>false</scroll>
-							<align>left</align>
-						</control>
-						<control type="button">
-							<posx>0</posx>
-							<posy>34</posy>
-							<width>1303</width>
-							<label>$INFO[VideoPlayer.Year]$INFO[VideoPlayer.Genre, • ,]</label>
-							<label2>$INFO[VideoPlayer.Rating, ★ ,]</label2>
-							<font>Font-Alaska-S25-L</font>
-							<textcolor>bbwhite</textcolor>
-							<scroll>false</scroll>
-							<align>left</align>
-						</control>			
-						<control type="textbox">
-							<description>Plot</description>
-							<posx>0</posx>
-							<posy>80</posy>
-							<width>1302</width>
-							<height>155</height>
-							<label>$INFO[VideoPlayer.Plot,[B]$LOCALIZE[207][/B][CR],]</label>
-							<align>justify</align>
-							<textcolor>mod-infotags-alt2</textcolor>
-							<autoscroll delay="13000" time="3000" repeat="13000" />
-							<font>Font-Alaska-S25-NC</font>
-							<visible>!IsEmpty(VideoPlayer.PlayCount) | [system.getbool(videolibrary.showunwatchedplots) + IsEmpty(VideoPlayer.PlayCount)]</visible>
+							<align>right</align>
 						</control>
 					</control>
 				</control>

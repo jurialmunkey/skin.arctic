@@ -98,6 +98,8 @@
                     <posy>699</posy>
                     <description>Cancel</description>
                     <label>$LOCALIZE[42001]</label>
+                    <textcolor>Mod_Tags</textcolor>
+                    <focusedcolor>Mod_Tags_Dark</focusedcolor>
                     <texturefocus>buttons/cancel-fo.png</texturefocus>
                     <texturenofocus>buttons/cancel-nf.png</texturenofocus>
                     <include>DialogButtonDimensions</include>

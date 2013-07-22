@@ -21,6 +21,7 @@
     <include file="Includes_Mod.xml" />
     <include file="Includes_Mod_Home.xml" />
     <include file="Includes_Mod_Home_Simple.xml" />
+    <include file="Includes_Mod_Panel_Items.xml" />
     
     <!-- METRO -->
     <include file="Includes_Home.xml" />

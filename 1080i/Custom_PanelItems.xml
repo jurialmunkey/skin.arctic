@@ -1,0 +1,310 @@
+<window type="dialog" id="3054">
+    <defaultcontrol always="true">3</defaultcontrol>
+    <allowoverlay>no</allowoverlay>
+    <controls>
+        <control type="group">
+        	<visible>!Window.IsActive(FileBrowser)</visible>
+            <include>KeyboardAnimations</include>  
+            <posx>78</posx>
+            
+            <!-- Back -->
+            <control type="image">
+            	<posx>490</posx>
+            	<posy>290</posy>
+            	<width>784</width>
+            	<height>520</height>
+            	<texture border="15">arctic/common/panel.png</texture>
+            </control>
+            <control type="image">
+            	<posx>470</posx>
+            	<posy>270</posy>
+            	<width>824</width>
+            	<height>560</height>
+            	<texture border="50">arctic/common/border-20.png</texture>
+            </control> 
+            
+            <!-- Category -->
+            <control type="group">
+            	<animation effect="slide" end="180" time="425" tween="cubic" easing="out"  condition="!Control.HasFocus(40)">Conditional</animation>
+				<control type="image">
+					<posx>200</posx>
+					<posy>310</posy>
+					<width>500</width>
+					<height>364</height>
+					<texture border="35">arctic/common/panel.png</texture>
+					<bordertexture border="35">arctic/common/border-20.png</bordertexture>
+					<bordersize>20</bordersize>
+				</control>
+				<control type="list" id="40">
+					<posx>230</posx>
+					<posy>340</posy>
+					<width>300</width>
+					<height>304</height>
+					<onleft>3</onleft>
+					<onright>3</onright>
+					<onup>40</onup>
+					<ondown>40</ondown>
+					<scrolltime>0</scrolltime>
+					<itemlayout height="76">
+						<control type="image">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>360</width>
+							<height>77</height>
+							<texture border="90,3,90,3">views/list/other/separator.png</texture>
+						</control>
+						<control type="image">
+							<posx>-6</posx>
+							<posy>-2</posy>
+							<width>100</width>
+							<height>100</height>
+							<texture>$INFO[ListItem.Icon]</texture>
+							<aspectratio align="left">keep</aspectratio>
+						</control>
+						<control type="label">
+							<posx>60</posx>
+							<posy>0</posy>
+							<width>360</width>
+							<height>77</height>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+							<textcolor>mod-infotags-alt</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<disabledcolor>mod-infotags-vl</disabledcolor>
+							<font>Font-Condensed-S30-B</font>
+							<textoffsetx>35</textoffsetx>
+						</control>
+					</itemlayout>
+					<focusedlayout height="76">
+						<control type="image">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>360</width>
+							<height>77</height>
+							<texture border="10">views/other/focus-mod8.png</texture>
+							<animation effect="fade" start="100" end="50" time="0" condition="!Control.HasFocus(40)">Conditional</animation>
+						</control>
+						<control type="image">
+							<posx>-6</posx>
+							<posy>-2</posy>
+							<width>100</width>
+							<height>100</height>
+							<texture>$INFO[ListItem.Icon]</texture>
+							<aspectratio align="left">keep</aspectratio>
+						</control>
+						<control type="label">
+							<posx>60</posx>
+							<posy>0</posy>
+							<width>360</width>
+							<height>77</height>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+							<textcolor>white</textcolor>
+							<font>Font-Condensed-S30-B</font>
+							<textoffsetx>35</textoffsetx>
+						</control>
+					</focusedlayout>
+					<content>
+						<item id="41">
+							<description>Movies</description>
+							<label>$LOCALIZE[20342]</label>
+							<onclick>SetFocus(3)</onclick>
+							<icon>windows/home/icons/video.png</icon>
+						</item>
+						<item id="42">
+							<description>Tv shows</description>
+							<label>$LOCALIZE[20343]</label>
+							<onclick>SetFocus(3)</onclick>
+							<icon>windows/home/icons/tvshows.png</icon>
+						</item>
+						<item id="43">
+							<description>Music</description>
+							<label>$LOCALIZE[2]</label>
+							<onclick>SetFocus(3)</onclick>
+							<icon>windows/home/icons/music.png</icon>
+						</item>
+						<item id="44">
+							<description>Programs</description>
+							<label>$LOCALIZE[0]</label>
+							<onclick>SetFocus(3)</onclick>
+							<icon>windows/home/icons/appearance.png</icon>
+						</item>
+					</content>
+				</control>
+            </control>       
+            <!-- Control List -->
+            <control type="image">
+            	<posx>500</posx>
+            	<posy>300</posy>
+            	<width>774</width>
+            	<height>500</height>
+            	<texture border="15">arctic/common/panel.png</texture>
+            </control>
+            <control type="image">
+            	<posx>500</posx>
+            	<posy>300</posy>
+            	<width>220</width>
+            	<height>500</height>
+            	<texture border="15">arctic/common/whitepanel8.png</texture>
+            </control>  
+            <control type="grouplist" id="3">
+            	<posx>500</posx>
+            	<onleft>40</onleft>
+            	<onright>4</onright>
+            	<height>500</height>
+                <include>SettingsDialogGrouplistVars</include>
+				<control type="radiobutton" id="2101">
+                    <width>220</width>
+                    <height>50</height>
+                    <include>SettingsBackgroundDialogRadioButtonVars</include>
+                    <selected>StringCompare(Skin.String(customitem.pos),1)</selected>
+                    <onclick>Skin.SetString(customitem.pos,1)</onclick>
+                    <label>$LOCALIZE[41822] 1</label>
+                </control>
+                <control type="radiobutton" id="2102">
+                    <width>220</width>
+                    <height>50</height>
+                    <include>SettingsBackgroundDialogRadioButtonVars</include>
+                    <selected>StringCompare(Skin.String(customitem.pos),2)</selected>
+                    <onclick>Skin.SetString(customitem.pos,2)</onclick>
+                    <label>$LOCALIZE[41822] 2</label>
+                </control>
+                <control type="radiobutton" id="2103">
+                    <width>220</width>
+                    <height>50</height>
+                    <include>SettingsBackgroundDialogRadioButtonVars</include>
+                    <selected>StringCompare(Skin.String(customitem.pos),3)</selected>
+                    <onclick>Skin.SetString(customitem.pos,3)</onclick>
+                    <label>$LOCALIZE[41822] 3</label>
+                </control>
+                <control type="radiobutton" id="2104">
+                    <width>220</width>
+                    <height>50</height>
+                    <include>SettingsBackgroundDialogRadioButtonVars</include>
+                    <selected>StringCompare(Skin.String(customitem.pos),4)</selected>
+                    <onclick>Skin.SetString(customitem.pos,4)</onclick>
+                    <label>$LOCALIZE[41822] 4</label>
+                </control>
+                <control type="radiobutton" id="2105">
+                    <width>220</width>
+                    <height>50</height>
+                    <include>SettingsBackgroundDialogRadioButtonVars</include>
+                    <selected>StringCompare(Skin.String(customitem.pos),5)</selected>
+                    <onclick>Skin.SetString(customitem.pos,5)</onclick>
+                    <label>$LOCALIZE[41822] 5</label>
+                </control>
+                <control type="radiobutton" id="2106">
+                    <width>220</width>
+                    <height>50</height>
+                    <include>SettingsBackgroundDialogRadioButtonVars</include>
+                    <selected>StringCompare(Skin.String(customitem.pos),6)</selected>
+                    <onclick>Skin.SetString(customitem.pos,6)</onclick>
+                    <label>$LOCALIZE[41822] 6</label>
+                </control>
+                <control type="radiobutton" id="2107">
+                    <width>220</width>
+                    <height>50</height>
+                    <include>SettingsBackgroundDialogRadioButtonVars</include>
+                    <selected>StringCompare(Skin.String(customitem.pos),7)</selected>
+                    <onclick>Skin.SetString(customitem.pos,7)</onclick>
+                    <label>$LOCALIZE[41822] 7</label>
+                </control>
+                <control type="radiobutton" id="2108">
+                    <width>220</width>
+                    <height>50</height>
+                    <include>SettingsBackgroundDialogRadioButtonVars</include>
+                    <selected>StringCompare(Skin.String(customitem.pos),8)</selected>
+                    <onclick>Skin.SetString(customitem.pos,8)</onclick>
+                    <label>$LOCALIZE[41822] 8</label>
+                </control>
+                <control type="radiobutton" id="2109">
+                    <width>220</width>
+                    <height>50</height>
+                    <include>SettingsBackgroundDialogRadioButtonVars</include>
+                    <selected>StringCompare(Skin.String(customitem.pos),9)</selected>
+                    <onclick>Skin.SetString(customitem.pos,9)</onclick>
+                    <label>$LOCALIZE[41822] 9</label>
+                </control>
+                <control type="radiobutton" id="2110">
+                    <width>220</width>
+                    <height>50</height>
+                    <include>SettingsBackgroundDialogRadioButtonVars</include>
+                    <selected>StringCompare(Skin.String(customitem.pos),10)</selected>
+                    <onclick>Skin.SetString(customitem.pos,10)</onclick>
+                    <label>$LOCALIZE[41822] 10</label>
+                </control>
+            </control>
+            
+            <control type="group">
+            	<posx>730</posx>
+            	<posy>300</posy>
+				<include>PanelDialogHome.Movies.Tile.1</include>
+				<include>PanelDialogHome.Movies.Tile.2</include>
+				<include>PanelDialogHome.Movies.Tile.3</include>
+				<include>PanelDialogHome.Movies.Tile.4</include>
+				<include>PanelDialogHome.Movies.Tile.5</include>
+				<include>PanelDialogHome.Movies.Tile.6</include>
+				<include>PanelDialogHome.Movies.Tile.7</include>
+				<include>PanelDialogHome.Movies.Tile.8</include>
+				<include>PanelDialogHome.Movies.Tile.9</include>
+				<include>PanelDialogHome.Movies.Tile.10</include>
+				<include>PanelDialogHome.Tvshows.Tile.1</include>
+				<include>PanelDialogHome.Tvshows.Tile.2</include>
+				<include>PanelDialogHome.Tvshows.Tile.3</include>
+				<include>PanelDialogHome.Tvshows.Tile.4</include>
+				<include>PanelDialogHome.Tvshows.Tile.5</include>
+				<include>PanelDialogHome.Tvshows.Tile.6</include>
+				<include>PanelDialogHome.Tvshows.Tile.7</include>
+				<include>PanelDialogHome.Tvshows.Tile.8</include>
+				<include>PanelDialogHome.Tvshows.Tile.9</include>
+				<include>PanelDialogHome.Tvshows.Tile.10</include>
+				<include>PanelDialogHome.Music.Tile.1</include>
+				<include>PanelDialogHome.Music.Tile.2</include>
+				<include>PanelDialogHome.Music.Tile.3</include>
+				<include>PanelDialogHome.Music.Tile.4</include>
+				<include>PanelDialogHome.Music.Tile.5</include>
+				<include>PanelDialogHome.Music.Tile.6</include>
+				<include>PanelDialogHome.Music.Tile.7</include>
+				<include>PanelDialogHome.Music.Tile.8</include>
+				<include>PanelDialogHome.Music.Tile.9</include>
+				<include>PanelDialogHome.Music.Tile.10</include>
+				<include>PanelDialogHome.Programs.Tile.1</include>
+				<include>PanelDialogHome.Programs.Tile.2</include>
+				<include>PanelDialogHome.Programs.Tile.3</include>
+				<include>PanelDialogHome.Programs.Tile.4</include>
+				<include>PanelDialogHome.Programs.Tile.5</include>
+				<include>PanelDialogHome.Programs.Tile.6</include>
+				<include>PanelDialogHome.Programs.Tile.7</include>
+				<include>PanelDialogHome.Programs.Tile.8</include>
+				<include>PanelDialogHome.Programs.Tile.9</include>
+				<include>PanelDialogHome.Programs.Tile.10</include>
+            </control>
+            <control type="image">
+            	<posx>480</posx>
+            	<posy>280</posy>
+            	<width>260</width>
+            	<height>540</height>
+            	<texture border="50">arctic/common/border-20.png</texture>
+            </control> 
+            
+            <control type="group" id="10">
+                <posx>1100</posx>
+                <posy>730</posy>
+                <control type="button" id="5">
+                    <description>Close</description>
+                    <texturefocus>buttons/cancel-fo.png</texturefocus>
+                    <texturenofocus>buttons/cancel-nf.png</texturenofocus>
+                    <include>DialogButtonDimensions</include>
+                    <onleft>4</onleft>
+                    <onright>3</onright>
+                    <onup>4</onup>
+                    <ondown>4</ondown>
+                    <label>$LOCALIZE[42002]</label>
+                    <onclick>PreviousMenu</onclick>
+                </control>
+            </control>
+        </control>
+    </controls>
+</window>

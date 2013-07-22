@@ -1,4 +1,10 @@
 <includes>
+	<variable name="ArcticOSDPoster">
+		<value condition="!IsEmpty(Player.Art(poster)">$INFO[Player.Art(poster)]</value>
+		<value condition="!IsEmpty(Player.Art(tvshow.poster)">$INFO[Player.Art(tvshow.poster)]</value>
+		<value condition="!IsEmpty(Player.Art(thumb)">$INFO[Player.Art(thumb)]</value>
+		<value>views/fallbacks/DefaultVideo.png/large.png</value>
+	</variable>
 	<variable name="UnderTitle">
 		<value condition="Container.Content(seasons) | Container.Content(tvshows)">$INFO[ListItem.Property(TotalEpisodes),, $LOCALIZE[20360]]$INFO[ListItem.Property(UnWatchedEpisodes),  •  , $LOCALIZE[16101]]</value>
 		<value condition="Container.Content(episodes)">$INFO[ListItem.Premiered]$INFO[ListItem.Duration, • , $LOCALIZE[12391]]</value>
@@ -358,461 +364,429 @@
     </include>
 
 	<include name="Mod_83Content">
-	<!-- Favourites -->
-		<item id="0">
-			<label>$INFO[Skin.String(HomeVideoTile1.Label)]</label>
-			<onclick condition="IsEmpty(Window.Property(EditTile)) + !stringcompare(Skin.String(HomeVideoTile1.Type),4) + !stringcompare(Skin.String(HomeVideoTile1.Type),5) + !stringcompare(Skin.String(HomeVideoTile1.Type),6) + !stringcompare(Skin.String(HomeVideoTile1.Type),7)">RunAddon($INFO[Skin.String(HomeVideoTile1.Path)])</onclick>
-			<onclick condition="IsEmpty(Window.Property(EditTile)) + stringcompare(Skin.String(HomeVideoTile1.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(HomeVideoTile1.Path)],return)</onclick>
-			<onclick condition="IsEmpty(Window.Property(EditTile)) + stringcompare(Skin.String(HomeVideoTile1.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(HomeVideoTile1.Path)],return)</onclick>
-			<onclick condition="IsEmpty(Window.Property(EditTile)) + [stringcompare(Skin.String(HomeVideoTile1.Type),6) | stringcompare(Skin.String(HomeVideoTile1.Type),7)]">$INFO[Skin.String(HomeVideoTile1.Path)]</onclick>
-			<property name="Poster">$INFO[Skin.String(HomeVideoTile1.Icon)]</property>
-			<property name="pos">top</property>
-			<property name="showlabel">$INFO[Skin.String(HomeVideoTile1.ShowLabel)]</property>
-			<property name="path">$INFO[Skin.String(HomeVideoTile1.Path)]</property>
-			<property name="animate">$INFO[Skin.String(HomeVideoTile1.Animate)]</property>
-			<visible>Container(525).HasFocus(10)</visible>
-		</item>
-		<item id="1">
-			<label>$INFO[Skin.String(HomeVideoTile2.Label)]</label>
-			<onclick condition="IsEmpty(Window.Property(EditTile)) + !stringcompare(Skin.String(HomeVideoTile2.Type),4) + !stringcompare(Skin.String(HomeVideoTile2.Type),5) + !stringcompare(Skin.String(HomeVideoTile2.Type),6) + !stringcompare(Skin.String(HomeVideoTile2.Type),7)">RunAddon($INFO[Skin.String(HomeVideoTile2.Path)])</onclick>
-			<onclick condition="IsEmpty(Window.Property(EditTile)) + stringcompare(Skin.String(HomeVideoTile2.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(HomeVideoTile2.Path)],return)</onclick>
-			<onclick condition="IsEmpty(Window.Property(EditTile)) + stringcompare(Skin.String(HomeVideoTile2.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(HomeVideoTile2.Path)],return)</onclick>
-			<onclick condition="IsEmpty(Window.Property(EditTile)) + [stringcompare(Skin.String(HomeVideoTile2.Type),6) | stringcompare(Skin.String(HomeVideoTile2.Type),7)]">$INFO[Skin.String(HomeVideoTile2.Path)]</onclick>
-			<property name="Poster">$INFO[Skin.String(HomeVideoTile2.Icon)]</property>
-			<property name="pos">top</property>
-			<property name="showlabel">$INFO[Skin.String(HomeVideoTile2.ShowLabel)]</property>
-			<property name="path">$INFO[Skin.String(HomeVideoTile2.Path)]</property>
-			<property name="animate">$INFO[Skin.String(HomeVideoTile2.Animate)]</property>
-			<visible>Container(525).HasFocus(10)</visible>
-		</item>
-		<item id="2">
-			<label>$INFO[Skin.String(HomeVideoTile3.Label)]</label>
-			<onclick condition="IsEmpty(Window.Property(EditTile)) + !stringcompare(Skin.String(HomeVideoTile3.Type),4) + !stringcompare(Skin.String(HomeVideoTile3.Type),5) + !stringcompare(Skin.String(HomeVideoTile3.Type),6) + !stringcompare(Skin.String(HomeVideoTile3.Type),7)">RunAddon($INFO[Skin.String(HomeVideoTile3.Path)])</onclick>
-			<onclick condition="IsEmpty(Window.Property(EditTile)) + stringcompare(Skin.String(HomeVideoTile3.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(HomeVideoTile3.Path)],return)</onclick>
-			<onclick condition="IsEmpty(Window.Property(EditTile)) + stringcompare(Skin.String(HomeVideoTile3.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(HomeVideoTile3.Path)],return)</onclick>
-			<onclick condition="IsEmpty(Window.Property(EditTile)) + [stringcompare(Skin.String(HomeVideoTile3.Type),6) | stringcompare(Skin.String(HomeVideoTile3.Type),7)]">$INFO[Skin.String(HomeVideoTile3.Path)]</onclick>
-			<property name="Poster">$INFO[Skin.String(HomeVideoTile3.Icon)]</property>
-			<property name="pos">bottom</property>
-			<property name="showlabel">$INFO[Skin.String(HomeVideoTile3.ShowLabel)]</property>
-			<property name="path">$INFO[Skin.String(HomeVideoTile3.Path)]</property>
-			<property name="animate">$INFO[Skin.String(HomeVideoTile3.Animate)]</property>
-			<visible>Container(525).HasFocus(10)</visible>
-		</item>
-		<item id="3">
-			<label>$INFO[Skin.String(HomeVideoTile4.Label)]</label>
-			<onclick condition="IsEmpty(Window.Property(EditTile)) + !stringcompare(Skin.String(HomeVideoTile4.Type),4) + !stringcompare(Skin.String(HomeVideoTile4.Type),5) + !stringcompare(Skin.String(HomeVideoTile4.Type),6) + !stringcompare(Skin.String(HomeVideoTile4.Type),7)">RunAddon($INFO[Skin.String(HomeVideoTile4.Path)])</onclick>
-			<onclick condition="IsEmpty(Window.Property(EditTile)) + stringcompare(Skin.String(HomeVideoTile4.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(HomeVideoTile4.Path)],return)</onclick>
-			<onclick condition="IsEmpty(Window.Property(EditTile)) + stringcompare(Skin.String(HomeVideoTile4.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(HomeVideoTile4.Path)],return)</onclick>
-			<onclick condition="IsEmpty(Window.Property(EditTile)) + [stringcompare(Skin.String(HomeVideoTile4.Type),6) | stringcompare(Skin.String(HomeVideoTile4.Type),7)]">$INFO[Skin.String(HomeVideoTile4.Path)]</onclick>
-			<property name="Poster">$INFO[Skin.String(HomeVideoTile4.Icon)]</property>
-			<property name="pos">bottom</property>
-			<property name="showlabel">$INFO[Skin.String(HomeVideoTile4.ShowLabel)]</property>
-			<property name="path">$INFO[Skin.String(HomeVideoTile4.Path)]</property>
-			<property name="animate">$INFO[Skin.String(HomeVideoTile4.Animate)]</property>
-			<visible>Container(525).HasFocus(10)</visible>
-		</item>
-		<item id="4">
-			<label>$INFO[Skin.String(HomeTVShowTile1.Label)]</label>
-			<onclick condition="IsEmpty(Window.Property(EditTile)) + !stringcompare(Skin.String(HomeTVShowTile1.Type),4) + !stringcompare(Skin.String(HomeTVShowTile1.Type),5) + !stringcompare(Skin.String(HomeTVShowTile1.Type),6) + !stringcompare(Skin.String(HomeTVShowTile1.Type),7)">RunAddon($INFO[Skin.String(HomeTVShowTile1.Path)])</onclick>
-			<onclick condition="IsEmpty(Window.Property(EditTile)) + stringcompare(Skin.String(HomeTVShowTile1.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(HomeTVShowTile1.Path)],return)</onclick>
-			<onclick condition="IsEmpty(Window.Property(EditTile)) + stringcompare(Skin.String(HomeTVShowTile1.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(HomeTVShowTile1.Path)],return)</onclick>
-			<onclick condition="IsEmpty(Window.Property(EditTile)) + [stringcompare(Skin.String(HomeTVShowTile1.Type),6) | stringcompare(Skin.String(HomeTVShowTile1.Type),7)]">$INFO[Skin.String(HomeTVShowTile1.Path)]</onclick>
-			
-			<property name="Poster">$INFO[Skin.String(HomeTVShowTile1.Icon)]</property>
-			<property name="showlabel">$INFO[Skin.String(HomeTVShowTile1.ShowLabel)]</property>
-			<property name="path">$INFO[Skin.String(HomeTVShowTile1.Path)]</property>
-			<property name="animate">$INFO[Skin.String(HomeTVShowTile1.Animate)]</property>
-			<visible>Container(525).HasFocus(10)</visible>
-		</item>
-		<item id="5">
-			<label>$INFO[Skin.String(HomeTVShowTile2.Label)]</label>
-			<onclick condition="IsEmpty(Window.Property(EditTile)) + !stringcompare(Skin.String(HomeTVShowTile2.Type),4) + !stringcompare(Skin.String(HomeTVShowTile2.Type),5) + !stringcompare(Skin.String(HomeTVShowTile2.Type),6) + !stringcompare(Skin.String(HomeTVShowTile2.Type),7)">RunAddon($INFO[Skin.String(HomeTVShowTile2.Path)])</onclick>
-			<onclick condition="IsEmpty(Window.Property(EditTile)) + stringcompare(Skin.String(HomeTVShowTile2.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(HomeTVShowTile2.Path)],return)</onclick>
-			<onclick condition="IsEmpty(Window.Property(EditTile)) + stringcompare(Skin.String(HomeTVShowTile2.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(HomeTVShowTile2.Path)],return)</onclick>
-			<onclick condition="IsEmpty(Window.Property(EditTile)) + [stringcompare(Skin.String(HomeTVShowTile2.Type),6) | stringcompare(Skin.String(HomeTVShowTile2.Type),7)]">$INFO[Skin.String(HomeTVShowTile2.Path)]</onclick>
-			
-			<property name="Poster">$INFO[Skin.String(HomeTVShowTile2.Icon)]</property>
-			<property name="showlabel">$INFO[Skin.String(HomeTVShowTile2.ShowLabel)]</property>
-			<property name="path">$INFO[Skin.String(HomeTVShowTile2.Path)]</property>
-			<property name="animate">$INFO[Skin.String(HomeTVShowTile2.Animate)]</property>
-			<visible>Container(525).HasFocus(10)</visible>
-		</item>
-		<item id="6">
-			<label>$INFO[Skin.String(HomeMusicTile1.Label)]</label>
-			<onclick condition="IsEmpty(Window.Property(EditTile)) + !stringcompare(Skin.String(HomeMusicTile1.Type),4) + !stringcompare(Skin.String(HomeMusicTile1.Type),5) + !stringcompare(Skin.String(HomeMusicTile1.Type),6) + !stringcompare(Skin.String(HomeMusicTile1.Type),7)">RunAddon($INFO[Skin.String(HomeMusicTile1.Path)])</onclick>
-			<onclick condition="IsEmpty(Window.Property(EditTile)) + stringcompare(Skin.String(HomeMusicTile1.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(HomeMusicTile1.Path)],return)</onclick>
-			<onclick condition="IsEmpty(Window.Property(EditTile)) + stringcompare(Skin.String(HomeMusicTile1.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(HomeMusicTile1.Path)],return)</onclick>
-			<onclick condition="IsEmpty(Window.Property(EditTile)) + [stringcompare(Skin.String(HomeMusicTile1.Type),6) | stringcompare(Skin.String(HomeMusicTile1.Type),7)]">$INFO[Skin.String(HomeMusicTile1.Path)]</onclick>
-			
-			<property name="Poster">$INFO[Skin.String(HomeMusicTile1.Icon)]</property>
-			<property name="showlabel">$INFO[Skin.String(HomeMusicTile1.ShowLabel)]</property>
-			<property name="path">$INFO[Skin.String(HomeMusicTile1.Path)]</property>
-			<property name="animate">$INFO[Skin.String(HomeMusicTile1.Animate)]</property>
-			<visible>Container(525).HasFocus(10)</visible>
-		</item>
-		<item id="7">
-			<label>$INFO[Skin.String(HomeMusicTile2.Label)]</label>
-			<onclick condition="IsEmpty(Window.Property(EditTile)) + !stringcompare(Skin.String(HomeMusicTile2.Type),4) + !stringcompare(Skin.String(HomeMusicTile2.Type),5) + !stringcompare(Skin.String(HomeMusicTile2.Type),6) + !stringcompare(Skin.String(HomeMusicTile2.Type),7)">RunAddon($INFO[Skin.String(HomeMusicTile2.Path)])</onclick>
-			<onclick condition="IsEmpty(Window.Property(EditTile)) + stringcompare(Skin.String(HomeMusicTile2.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(HomeMusicTile1.Path)],return)</onclick>
-			<onclick condition="IsEmpty(Window.Property(EditTile)) + stringcompare(Skin.String(HomeMusicTile2.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(HomeMusicTile2.Path)],return)</onclick>
-			<onclick condition="IsEmpty(Window.Property(EditTile)) + [stringcompare(Skin.String(HomeMusicTile2.Type),6) | stringcompare(Skin.String(HomeMusicTile2.Type),7)]">$INFO[Skin.String(HomeMusicTile2.Path)]</onclick>
-			
-			<property name="Poster">$INFO[Skin.String(HomeMusicTile2.Icon)]</property>
-			<property name="showlabel">$INFO[Skin.String(HomeMusicTile2.ShowLabel)]</property>
-			<property name="path">$INFO[Skin.String(HomeMusicTile2.Path)]</property>
-			<property name="animate">$INFO[Skin.String(HomeMusicTile2.Animate)]</property>
-			<visible>Container(525).HasFocus(10)</visible>
-		</item>
-		<item id="8">
-			<label>$INFO[Skin.String(HomeProgramTile1.Label)]</label>
-			<onclick condition="IsEmpty(Window.Property(EditTile)) + !stringcompare(Skin.String(HomeProgramTile1.Type),4) + !stringcompare(Skin.String(HomeProgramTile1.Type),5) + !stringcompare(Skin.String(HomeProgramTile1.Type),6) + !stringcompare(Skin.String(HomeProgramTile1.Type),7)">RunAddon($INFO[Skin.String(HomeProgramTile1.Path)])</onclick>
-			<onclick condition="IsEmpty(Window.Property(EditTile)) + stringcompare(Skin.String(HomeProgramTile1.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(HomeProgramTile1.Path)],return)</onclick>
-			<onclick condition="IsEmpty(Window.Property(EditTile)) + stringcompare(Skin.String(HomeProgramTile1.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(HomeProgramTile1.Path)],return)</onclick>
-			<onclick condition="IsEmpty(Window.Property(EditTile)) + [stringcompare(Skin.String(HomeProgramTile1.Type),6) | stringcompare(Skin.String(HomeProgramTile1.Type),7)]">$INFO[Skin.String(HomeProgramTile1.Path)]</onclick>
-			
-			<property name="Poster">$INFO[Skin.String(HomeProgramTile1.Icon)]</property>
-			<property name="showlabel">$INFO[Skin.String(HomeProgramTile1.ShowLabel)]</property>
-			<property name="path">$INFO[Skin.String(HomeProgramTile1.Path)]</property>
-			<property name="animate">$INFO[Skin.String(HomeProgramTile1.Animate)]</property>
-			<property name="custom">1</property>
-			<visible>Container(525).HasFocus(10)</visible>
-		</item>
-		<item id="9">
-			<label>$INFO[Skin.String(HomeProgramTile2.Label)]</label>
-			<onclick condition="IsEmpty(Window.Property(EditTile)) + !stringcompare(Skin.String(HomeProgramTile2.Type),4) + !stringcompare(Skin.String(HomeProgramTile2.Type),5) + !stringcompare(Skin.String(HomeProgramTile2.Type),6) + !stringcompare(Skin.String(HomeProgramTile2.Type),7)">RunAddon($INFO[Skin.String(HomeProgramTile2.Path)])</onclick>
-			<onclick condition="IsEmpty(Window.Property(EditTile)) + stringcompare(Skin.String(HomeProgramTile2.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(HomeProgramTile2.Path)],return)</onclick>
-			<onclick condition="IsEmpty(Window.Property(EditTile)) + stringcompare(Skin.String(HomeProgramTile2.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(HomeProgramTile2.Path)],return)</onclick>
-			<onclick condition="IsEmpty(Window.Property(EditTile)) + [stringcompare(Skin.String(HomeProgramTile2.Type),6) | stringcompare(Skin.String(HomeProgramTile2.Type),7)]">$INFO[Skin.String(HomeProgramTile2.Path)]</onclick>
-			
-			<property name="Poster">$INFO[Skin.String(HomeProgramTile2.Icon)]</property>
-			<property name="showlabel">$INFO[Skin.String(HomeProgramTile2.ShowLabel)]</property>
-			<property name="path">$INFO[Skin.String(HomeProgramTile2.Path)]</property>
-			<property name="animate">$INFO[Skin.String(HomeProgramTile2.Animate)]</property>
-			<property name="custom">1</property>
-			<visible>Container(525).HasFocus(10)</visible>
-		</item>
 		<!-- MOVIES CONTENT -->
 		<item id="0">
-			<description>Movies</description>
-			<property name="Poster">windows/home/icons/video.png</property>
-			<label>$LOCALIZE[342]</label>
+			<label>$INFO[Skin.String(Home.Movies.Tile.1.Label)]</label>
 			<onclick>SetFocus(525)</onclick>
-			<onclick>ActivateWindow(videos,movietitles,return)</onclick>
+			<onclick condition="!stringcompare(Skin.String(Home.Movies.Tile.1.Type),4) + !stringcompare(Skin.String(Home.Movies.Tile.1.Type),5) + !stringcompare(Skin.String(Home.Movies.Tile.1.Type),6) + !stringcompare(Skin.String(Home.Movies.Tile.1.Type),7)">RunAddon($INFO[Skin.String(Home.Movies.Tile.1.Path)])</onclick>
+			<onclick condition="stringcompare(Skin.String(Home.Movies.Tile.1.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(Home.Movies.Tile.1.Path)],return)</onclick>
+			<onclick condition="stringcompare(Skin.String(Home.Movies.Tile.1.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(Home.Movies.Tile.1.Path)],return)</onclick>
+			<onclick condition="[stringcompare(Skin.String(Home.Movies.Tile.1.Type),6) | stringcompare(Skin.String(Home.Movies.Tile.1.Type),7)]">$INFO[Skin.String(Home.Movies.Tile.1.Path)]</onclick>
+			<property name="Poster">$INFO[Skin.String(Home.Movies.Tile.1.Icon)]</property>
+			<property name="showlabel">$INFO[Skin.String(Home.Movies.Tile.1.ShowLabel)]</property>
+			<property name="path">$INFO[Skin.String(Home.Movies.Tile.1.Path)]</property>
+			<property name="animate">$INFO[Skin.String(Home.Movies.Tile.1.Animate)]</property>
+			<property name="custom">1</property>
 			<visible>Container(525).HasFocus(1)</visible>
 		</item>
 		<item id="1">
 			<onclick>SetFocus(525)</onclick>
-			<onclick>ActivateWindow(videos,recentlyaddedmovies,return)</onclick>
-			<property name="Poster">windows/home/icons/newmovies.png</property>
-			<label>$LOCALIZE[41450]</label>
+			<label>$INFO[Skin.String(Home.Movies.Tile.2.Label)]</label>
+			<onclick condition="IsEmpty(Window.Property(EditTile)) + !stringcompare(Skin.String(Home.Movies.Tile.2.Type),4) + !stringcompare(Skin.String(Home.Movies.Tile.2.Type),5) + !stringcompare(Skin.String(Home.Movies.Tile.2.Type),6) + !stringcompare(Skin.String(Home.Movies.Tile.2.Type),7)">RunAddon($INFO[Skin.String(Home.Movies.Tile.2.Path)])</onclick>
+			<onclick condition="IsEmpty(Window.Property(EditTile)) + stringcompare(Skin.String(Home.Movies.Tile.2.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(Home.Movies.Tile.2.Path)],return)</onclick>
+			<onclick condition="IsEmpty(Window.Property(EditTile)) + stringcompare(Skin.String(Home.Movies.Tile.2.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(Home.Movies.Tile.2.Path)],return)</onclick>
+			<onclick condition="IsEmpty(Window.Property(EditTile)) + [stringcompare(Skin.String(Home.Movies.Tile.2.Type),6) | stringcompare(Skin.String(Home.Movies.Tile.2.Type),7)]">$INFO[Skin.String(Home.Movies.Tile.2.Path)]</onclick>
+			<property name="Poster">$INFO[Skin.String(Home.Movies.Tile.2.Icon)]</property>
+			<property name="showlabel">$INFO[Skin.String(Home.Movies.Tile.2.ShowLabel)]</property>
+			<property name="path">$INFO[Skin.String(Home.Movies.Tile.2.Path)]</property>
+			<property name="animate">$INFO[Skin.String(Home.Movies.Tile.2.Animate)]</property>
+			<property name="custom">1</property>
 			<visible>Container(525).HasFocus(1)</visible>
 		</item>
 		<item id="2">
-			<description>Playlists</description>
-			<property name="Poster">windows/home/icons/videoplaylist.png</property>
-			<label>$LOCALIZE[136]</label>
+			<label>$INFO[Skin.String(Home.Movies.Tile.3.Label)]</label>
 			<onclick>SetFocus(525)</onclick>
-			<onclick>ActivateWindow(videolibrary,playlists,return)</onclick>
+			<onclick condition="!stringcompare(Skin.String(Home.Movies.Tile.3.Type),4) + !stringcompare(Skin.String(Home.Movies.Tile.3.Type),5) + !stringcompare(Skin.String(Home.Movies.Tile.3.Type),6) + !stringcompare(Skin.String(Home.Movies.Tile.3.Type),7)">RunAddon($INFO[Skin.String(Home.Movies.Tile.3.Path)])</onclick>
+			<onclick condition="stringcompare(Skin.String(Home.Movies.Tile.3.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(Home.Movies.Tile.3.Path)],return)</onclick>
+			<onclick condition="stringcompare(Skin.String(Home.Movies.Tile.3.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(Home.Movies.Tile.3.Path)],return)</onclick>
+			<onclick condition="[stringcompare(Skin.String(Home.Movies.Tile.3.Type),6) | stringcompare(Skin.String(Home.Movies.Tile.3.Type),7)]">$INFO[Skin.String(Home.Movies.Tile.3.Path)]</onclick>
+			<property name="Poster">$INFO[Skin.String(Home.Movies.Tile.3.Icon)]</property>
+			<property name="showlabel">$INFO[Skin.String(Home.Movies.Tile.3.ShowLabel)]</property>
+			<property name="path">$INFO[Skin.String(Home.Movies.Tile.3.Path)]</property>
+			<property name="animate">$INFO[Skin.String(Home.Movies.Tile.3.Animate)]</property>
+			<property name="custom">1</property>
 			<visible>Container(525).HasFocus(1)</visible>
 		</item>
 		<item id="3">
-			<description>Files</description>
-			<property name="Poster">windows/home/icons/folder.png</property>
-			<label>$LOCALIZE[1214]</label>
+			<label>$INFO[Skin.String(Home.Movies.Tile.4.Label)]</label>
 			<onclick>SetFocus(525)</onclick>
-			<onclick>ActivateWindow(videolibrary,files,return)</onclick>
+			<onclick condition="!stringcompare(Skin.String(Home.Movies.Tile.4.Type),4) + !stringcompare(Skin.String(Home.Movies.Tile.4.Type),5) + !stringcompare(Skin.String(Home.Movies.Tile.4.Type),6) + !stringcompare(Skin.String(Home.Movies.Tile.4.Type),7)">RunAddon($INFO[Skin.String(Home.Movies.Tile.4.Path)])</onclick>
+			<onclick condition="stringcompare(Skin.String(Home.Movies.Tile.4.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(Home.Movies.Tile.4.Path)],return)</onclick>
+			<onclick condition="stringcompare(Skin.String(Home.Movies.Tile.4.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(Home.Movies.Tile.4.Path)],return)</onclick>
+			<onclick condition="[stringcompare(Skin.String(Home.Movies.Tile.4.Type),6) | stringcompare(Skin.String(Home.Movies.Tile.4.Type),7)]">$INFO[Skin.String(Home.Movies.Tile.4.Path)]</onclick>
+			<property name="Poster">$INFO[Skin.String(Home.Movies.Tile.4.Icon)]</property>
+			<property name="showlabel">$INFO[Skin.String(Home.Movies.Tile.4.ShowLabel)]</property>
+			<property name="path">$INFO[Skin.String(Home.Movies.Tile.4.Path)]</property>
+			<property name="animate">$INFO[Skin.String(Home.Movies.Tile.4.Animate)]</property>
+			<property name="custom">1</property>
 			<visible>Container(525).HasFocus(1)</visible>
 		</item>
 		<item id="4">
-			<description>Directors</description>
-			<property name="Poster">windows/home/icons/thumbup.png</property>
-			<label>$LOCALIZE[20348]</label>
+			<label>$INFO[Skin.String(Home.Movies.Tile.5.Label)]</label>
 			<onclick>SetFocus(525)</onclick>
-			<onclick>ActivateWindow(videos,moviedirectors,return)</onclick>
+			<onclick condition="!stringcompare(Skin.String(Home.Movies.Tile.5.Type),4) + !stringcompare(Skin.String(Home.Movies.Tile.5.Type),5) + !stringcompare(Skin.String(Home.Movies.Tile.5.Type),6) + !stringcompare(Skin.String(Home.Movies.Tile.5.Type),7)">RunAddon($INFO[Skin.String(Home.Movies.Tile.5.Path)])</onclick>
+			<onclick condition="stringcompare(Skin.String(Home.Movies.Tile.5.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(Home.Movies.Tile.5.Path)],return)</onclick>
+			<onclick condition="stringcompare(Skin.String(Home.Movies.Tile.5.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(Home.Movies.Tile.5.Path)],return)</onclick>
+			<onclick condition="[stringcompare(Skin.String(Home.Movies.Tile.5.Type),6) | stringcompare(Skin.String(Home.Movies.Tile.5.Type),7)]">$INFO[Skin.String(Home.Movies.Tile.5.Path)]</onclick>
+			<property name="Poster">$INFO[Skin.String(Home.Movies.Tile.5.Icon)]</property>
+			<property name="showlabel">$INFO[Skin.String(Home.Movies.Tile.5.ShowLabel)]</property>
+			<property name="path">$INFO[Skin.String(Home.Movies.Tile.5.Path)]</property>
+			<property name="animate">$INFO[Skin.String(Home.Movies.Tile.5.Animate)]</property>
+			<property name="custom">1</property>
 			<visible>Container(525).HasFocus(1)</visible>
 		</item>
 		<item id="5">
-			<description>Genres</description>
-			<property name="Poster">windows/home/icons/film.png</property>
-			<label>$LOCALIZE[135]</label>
+			<label>$INFO[Skin.String(Home.Movies.Tile.6.Label)]</label>
 			<onclick>SetFocus(525)</onclick>
-			<onclick>ActivateWindow(videos,moviegenres,return)</onclick>   
+			<onclick condition="!stringcompare(Skin.String(Home.Movies.Tile.6.Type),4) + !stringcompare(Skin.String(Home.Movies.Tile.6.Type),5) + !stringcompare(Skin.String(Home.Movies.Tile.6.Type),6) + !stringcompare(Skin.String(Home.Movies.Tile.6.Type),7)">RunAddon($INFO[Skin.String(Home.Movies.Tile.6.Path)])</onclick>
+			<onclick condition="stringcompare(Skin.String(Home.Movies.Tile.6.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(Home.Movies.Tile.6.Path)],return)</onclick>
+			<onclick condition="stringcompare(Skin.String(Home.Movies.Tile.6.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(Home.Movies.Tile.6.Path)],return)</onclick>
+			<onclick condition="[stringcompare(Skin.String(Home.Movies.Tile.6.Type),6) | stringcompare(Skin.String(Home.Movies.Tile.6.Type),7)]">$INFO[Skin.String(Home.Movies.Tile.6.Path)]</onclick>
+			<property name="Poster">$INFO[Skin.String(Home.Movies.Tile.6.Icon)]</property>
+			<property name="showlabel">$INFO[Skin.String(Home.Movies.Tile.6.ShowLabel)]</property>
+			<property name="path">$INFO[Skin.String(Home.Movies.Tile.6.Path)]</property>
+			<property name="animate">$INFO[Skin.String(Home.Movies.Tile.6.Animate)]</property>
+			<property name="custom">1</property>  
 			<visible>Container(525).HasFocus(1)</visible>
 		</item>
 		<item id="6">
-			<label>$INFO[Skin.String(HomeVideoTile1.Label)]</label>
-			<onclick condition="IsEmpty(Window.Property(EditTile)) + !stringcompare(Skin.String(HomeVideoTile1.Type),4) + !stringcompare(Skin.String(HomeVideoTile1.Type),5) + !stringcompare(Skin.String(HomeVideoTile1.Type),6) + !stringcompare(Skin.String(HomeVideoTile1.Type),7)">RunAddon($INFO[Skin.String(HomeVideoTile1.Path)])</onclick>
-			<onclick condition="IsEmpty(Window.Property(EditTile)) + stringcompare(Skin.String(HomeVideoTile1.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(HomeVideoTile1.Path)],return)</onclick>
-			<onclick condition="IsEmpty(Window.Property(EditTile)) + stringcompare(Skin.String(HomeVideoTile1.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(HomeVideoTile1.Path)],return)</onclick>
-			<onclick condition="IsEmpty(Window.Property(EditTile)) + [stringcompare(Skin.String(HomeVideoTile1.Type),6) | stringcompare(Skin.String(HomeVideoTile1.Type),7)]">$INFO[Skin.String(HomeVideoTile1.Path)]</onclick>
-			<onclick condition="IsEmpty(Skin.String(HomeVideoTile1.Path)) | !IsEmpty(Window.Property(EditTile))">Skin.SetBool(HomeVideoTile1)</onclick>
-			<onclick condition="[IsEmpty(Skin.String(HomeVideoTile1.Path)) | !IsEmpty(Window.Property(EditTile))] + IsEmpty(Skin.String(HomeVideoTile1.Type))">Skin.SetString(HomeVideoTile1.Type,0)</onclick>
-			<onclick condition="[IsEmpty(Skin.String(HomeVideoTile1.Path)) | !IsEmpty(Window.Property(EditTile))] + IsEmpty(Skin.String(HomeVideoTile1.TypeName))">Skin.SetString(HomeVideoTile1.TypeName,$LOCALIZE[41145])</onclick>
-			<onclick condition="IsEmpty(Skin.String(HomeVideoTile1.Path)) | !IsEmpty(Window.Property(EditTile))">SetProperty(SingleDialog,one,3003)</onclick>
-			<onclick condition="IsEmpty(Skin.String(HomeVideoTile1.Path)) | !IsEmpty(Window.Property(EditTile))">SetProperty(Dialog,$LOCALIZE[41136],skinsettings)</onclick>
-			<onclick condition="IsEmpty(Skin.String(HomeVideoTile1.Path)) | !IsEmpty(Window.Property(EditTile))">ActivateWindow(3003)</onclick>
-			<onclick condition="!IsEmpty(Window.Property(EditTile))">ClearProperty(EditTile)</onclick>
-			<property name="Poster">$INFO[Skin.String(HomeVideoTile1.Icon)]</property>
-			<property name="pos">top</property>
-			<property name="showlabel">$INFO[Skin.String(HomeVideoTile1.ShowLabel)]</property>
-			<property name="path">$INFO[Skin.String(HomeVideoTile1.Path)]</property>
-			<property name="animate">$INFO[Skin.String(HomeVideoTile1.Animate)]</property>
+			<label>$INFO[Skin.String(Home.Movies.Tile.7.Label)]</label>
+			<onclick>SetFocus(525)</onclick>
+			<onclick condition="!stringcompare(Skin.String(Home.Movies.Tile.7.Type),4) + !stringcompare(Skin.String(Home.Movies.Tile.7.Type),5) + !stringcompare(Skin.String(Home.Movies.Tile.7.Type),6) + !stringcompare(Skin.String(Home.Movies.Tile.7.Type),7)">RunAddon($INFO[Skin.String(Home.Movies.Tile.7.Path)])</onclick>
+			<onclick condition="stringcompare(Skin.String(Home.Movies.Tile.7.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(Home.Movies.Tile.7.Path)],return)</onclick>
+			<onclick condition="stringcompare(Skin.String(Home.Movies.Tile.7.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(Home.Movies.Tile.7.Path)],return)</onclick>
+			<onclick condition="[stringcompare(Skin.String(Home.Movies.Tile.7.Type),6) | stringcompare(Skin.String(Home.Movies.Tile.7.Type),7)]">$INFO[Skin.String(Home.Movies.Tile.7.Path)]</onclick>
+			<property name="Poster">$INFO[Skin.String(Home.Movies.Tile.7.Icon)]</property>
+			<property name="showlabel">$INFO[Skin.String(Home.Movies.Tile.7.ShowLabel)]</property>
+			<property name="path">$INFO[Skin.String(Home.Movies.Tile.7.Path)]</property>
+			<property name="animate">$INFO[Skin.String(Home.Movies.Tile.7.Animate)]</property>
+			<property name="custom">1</property>
 			<visible>Container(525).HasFocus(1)</visible>
 		</item>
 		<item id="7">
-			<label>$INFO[Skin.String(HomeVideoTile2.Label)]</label>
-			<onclick condition="IsEmpty(Window.Property(EditTile)) + !stringcompare(Skin.String(HomeVideoTile2.Type),4) + !stringcompare(Skin.String(HomeVideoTile2.Type),5) + !stringcompare(Skin.String(HomeVideoTile2.Type),6) + !stringcompare(Skin.String(HomeVideoTile2.Type),7)">RunAddon($INFO[Skin.String(HomeVideoTile2.Path)])</onclick>
-			<onclick condition="IsEmpty(Window.Property(EditTile)) + stringcompare(Skin.String(HomeVideoTile2.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(HomeVideoTile2.Path)],return)</onclick>
-			<onclick condition="IsEmpty(Window.Property(EditTile)) + stringcompare(Skin.String(HomeVideoTile2.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(HomeVideoTile2.Path)],return)</onclick>
-			<onclick condition="IsEmpty(Window.Property(EditTile)) + [stringcompare(Skin.String(HomeVideoTile2.Type),6) | stringcompare(Skin.String(HomeVideoTile2.Type),7)]">$INFO[Skin.String(HomeVideoTile2.Path)]</onclick>
-			<onclick condition="IsEmpty(Skin.String(HomeVideoTile2.Path)) | !IsEmpty(Window.Property(EditTile))">Skin.SetBool(HomeVideoTile2)</onclick>
-			<onclick condition="[IsEmpty(Skin.String(HomeVideoTile2.Path)) | !IsEmpty(Window.Property(EditTile))] + IsEmpty(Skin.String(HomeVideoTile2.Type))">Skin.SetString(HomeVideoTile2.Type,0)</onclick>
-			<onclick condition="[IsEmpty(Skin.String(HomeVideoTile2.Path)) | !IsEmpty(Window.Property(EditTile))] + IsEmpty(Skin.String(HomeVideoTile2.TypeName))">Skin.SetString(HomeVideoTile2.TypeName,$LOCALIZE[41145])</onclick>
-			<onclick condition="IsEmpty(Skin.String(HomeVideoTile2.Path)) | !IsEmpty(Window.Property(EditTile))">SetProperty(SingleDialog,two,3003)</onclick>
-			<onclick condition="IsEmpty(Skin.String(HomeVideoTile2.Path)) | !IsEmpty(Window.Property(EditTile))">SetProperty(Dialog,$LOCALIZE[41136],skinsettings)</onclick>
-			<onclick condition="IsEmpty(Skin.String(HomeVideoTile2.Path)) | !IsEmpty(Window.Property(EditTile))">ActivateWindow(3003)</onclick>
-			<onclick condition="!IsEmpty(Window.Property(EditTile))">ClearProperty(EditTile)</onclick>
-			<property name="Poster">$INFO[Skin.String(HomeVideoTile2.Icon)]</property>
-			<property name="pos">top</property>
-			<property name="showlabel">$INFO[Skin.String(HomeVideoTile2.ShowLabel)]</property>
-			<property name="path">$INFO[Skin.String(HomeVideoTile2.Path)]</property>
-			<property name="animate">$INFO[Skin.String(HomeVideoTile2.Animate)]</property>
+			<label>$INFO[Skin.String(Home.Movies.Tile.8.Label)]</label>
+			<onclick>SetFocus(525)</onclick>
+			<onclick condition="!stringcompare(Skin.String(Home.Movies.Tile.8.Type),4) + !stringcompare(Skin.String(Home.Movies.Tile.8.Type),5) + !stringcompare(Skin.String(Home.Movies.Tile.8.Type),6) + !stringcompare(Skin.String(Home.Movies.Tile.8.Type),7)">RunAddon($INFO[Skin.String(Home.Movies.Tile.8.Path)])</onclick>
+			<onclick condition="stringcompare(Skin.String(Home.Movies.Tile.8.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(Home.Movies.Tile.8.Path)],return)</onclick>
+			<onclick condition="stringcompare(Skin.String(Home.Movies.Tile.8.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(Home.Movies.Tile.8.Path)],return)</onclick>
+			<onclick condition="[stringcompare(Skin.String(Home.Movies.Tile.8.Type),6) | stringcompare(Skin.String(Home.Movies.Tile.8.Type),7)]">$INFO[Skin.String(Home.Movies.Tile.8.Path)]</onclick>
+			<property name="Poster">$INFO[Skin.String(Home.Movies.Tile.8.Icon)]</property>
+			<property name="showlabel">$INFO[Skin.String(Home.Movies.Tile.8.ShowLabel)]</property>
+			<property name="path">$INFO[Skin.String(Home.Movies.Tile.8.Path)]</property>
+			<property name="animate">$INFO[Skin.String(Home.Movies.Tile.8.Animate)]</property>
+			<property name="custom">1</property>
 			<visible>Container(525).HasFocus(1)</visible>
 		</item>
 		<item id="8">
-			<label>$INFO[Skin.String(HomeVideoTile3.Label)]</label>
-			<onclick condition="IsEmpty(Window.Property(EditTile)) + !stringcompare(Skin.String(HomeVideoTile3.Type),4) + !stringcompare(Skin.String(HomeVideoTile3.Type),5) + !stringcompare(Skin.String(HomeVideoTile3.Type),6) + !stringcompare(Skin.String(HomeVideoTile3.Type),7)">RunAddon($INFO[Skin.String(HomeVideoTile3.Path)])</onclick>
-			<onclick condition="IsEmpty(Window.Property(EditTile)) + stringcompare(Skin.String(HomeVideoTile3.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(HomeVideoTile3.Path)],return)</onclick>
-			<onclick condition="IsEmpty(Window.Property(EditTile)) + stringcompare(Skin.String(HomeVideoTile3.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(HomeVideoTile3.Path)],return)</onclick>
-			<onclick condition="IsEmpty(Window.Property(EditTile)) + [stringcompare(Skin.String(HomeVideoTile3.Type),6) | stringcompare(Skin.String(HomeVideoTile3.Type),7)]">$INFO[Skin.String(HomeVideoTile3.Path)]</onclick>
-			<onclick condition="IsEmpty(Skin.String(HomeVideoTile3.Path)) | !IsEmpty(Window.Property(EditTile))">Skin.SetBool(HomeVideoTile3)</onclick>
-			<onclick condition="[IsEmpty(Skin.String(HomeVideoTile3.Path)) | !IsEmpty(Window.Property(EditTile))] + IsEmpty(Skin.String(HomeVideoTile3.Type))">Skin.SetString(HomeVideoTile3.Type,0)</onclick>
-			<onclick condition="[IsEmpty(Skin.String(HomeVideoTile3.Path)) | !IsEmpty(Window.Property(EditTile))] + IsEmpty(Skin.String(HomeVideoTile3.TypeName))">Skin.SetString(HomeVideoTile3.TypeName,$LOCALIZE[41145])</onclick>
-			<onclick condition="IsEmpty(Skin.String(HomeVideoTile3.Path)) | !IsEmpty(Window.Property(EditTile))">SetProperty(SingleDialog,three,3003)</onclick>
-			<onclick condition="IsEmpty(Skin.String(HomeVideoTile3.Path)) | !IsEmpty(Window.Property(EditTile))">SetProperty(Dialog,$LOCALIZE[41136],skinsettings)</onclick>
-			<onclick condition="IsEmpty(Skin.String(HomeVideoTile3.Path)) | !IsEmpty(Window.Property(EditTile))">ActivateWindow(3003)</onclick>
-			<onclick condition="!IsEmpty(Window.Property(EditTile))">ClearProperty(EditTile)</onclick>
-			<property name="Poster">$INFO[Skin.String(HomeVideoTile3.Icon)]</property>
-			<property name="pos">bottom</property>
-			<property name="showlabel">$INFO[Skin.String(HomeVideoTile3.ShowLabel)]</property>
-			<property name="path">$INFO[Skin.String(HomeVideoTile3.Path)]</property>
-			<property name="animate">$INFO[Skin.String(HomeVideoTile3.Animate)]</property>
+			<label>$INFO[Skin.String(Home.Movies.Tile.9.Label)]</label>
+			<onclick>SetFocus(525)</onclick>
+			<onclick condition="!stringcompare(Skin.String(Home.Movies.Tile.9.Type),4) + !stringcompare(Skin.String(Home.Movies.Tile.9.Type),5) + !stringcompare(Skin.String(Home.Movies.Tile.9.Type),6) + !stringcompare(Skin.String(Home.Movies.Tile.9.Type),7)">RunAddon($INFO[Skin.String(Home.Movies.Tile.9.Path)])</onclick>
+			<onclick condition="stringcompare(Skin.String(Home.Movies.Tile.9.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(Home.Movies.Tile.9.Path)],return)</onclick>
+			<onclick condition="stringcompare(Skin.String(Home.Movies.Tile.9.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(Home.Movies.Tile.9.Path)],return)</onclick>
+			<onclick condition="[stringcompare(Skin.String(Home.Movies.Tile.9.Type),6) | stringcompare(Skin.String(Home.Movies.Tile.9.Type),7)]">$INFO[Skin.String(Home.Movies.Tile.9.Path)]</onclick>
+			<property name="Poster">$INFO[Skin.String(Home.Movies.Tile.9.Icon)]</property>
+			<property name="showlabel">$INFO[Skin.String(Home.Movies.Tile.9.ShowLabel)]</property>
+			<property name="path">$INFO[Skin.String(Home.Movies.Tile.9.Path)]</property>
+			<property name="animate">$INFO[Skin.String(Home.Movies.Tile.9.Animate)]</property>
+			<property name="custom">1</property>
 			<visible>Container(525).HasFocus(1)</visible>
 		</item>
 		<item id="9">
-			<label>$INFO[Skin.String(HomeVideoTile4.Label)]</label>
-			<onclick condition="IsEmpty(Window.Property(EditTile)) + !stringcompare(Skin.String(HomeVideoTile4.Type),4) + !stringcompare(Skin.String(HomeVideoTile4.Type),5) + !stringcompare(Skin.String(HomeVideoTile4.Type),6) + !stringcompare(Skin.String(HomeVideoTile4.Type),7)">RunAddon($INFO[Skin.String(HomeVideoTile4.Path)])</onclick>
-			<onclick condition="IsEmpty(Window.Property(EditTile)) + stringcompare(Skin.String(HomeVideoTile4.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(HomeVideoTile4.Path)],return)</onclick>
-			<onclick condition="IsEmpty(Window.Property(EditTile)) + stringcompare(Skin.String(HomeVideoTile4.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(HomeVideoTile4.Path)],return)</onclick>
-			<onclick condition="IsEmpty(Window.Property(EditTile)) + [stringcompare(Skin.String(HomeVideoTile4.Type),6) | stringcompare(Skin.String(HomeVideoTile4.Type),7)]">$INFO[Skin.String(HomeVideoTile4.Path)]</onclick>
-			<onclick condition="IsEmpty(Skin.String(HomeVideoTile4.Path)) | !IsEmpty(Window.Property(EditTile))">Skin.SetBool(HomeVideoTile4)</onclick>
-			<onclick condition="[IsEmpty(Skin.String(HomeVideoTile4.Path)) | !IsEmpty(Window.Property(EditTile))] + IsEmpty(Skin.String(HomeVideoTile4.Type))">Skin.SetString(HomeVideoTile4.Type,0)</onclick>
-			<onclick condition="[IsEmpty(Skin.String(HomeVideoTile4.Path)) | !IsEmpty(Window.Property(EditTile))] + IsEmpty(Skin.String(HomeVideoTile4.TypeName))">Skin.SetString(HomeVideoTile4.TypeName,$LOCALIZE[41145])</onclick>
-			<onclick condition="IsEmpty(Skin.String(HomeVideoTile4.Path)) | !IsEmpty(Window.Property(EditTile))">SetProperty(SingleDialog,four,3003)</onclick>
-			<onclick condition="IsEmpty(Skin.String(HomeVideoTile4.Path)) | !IsEmpty(Window.Property(EditTile))">SetProperty(Dialog,$LOCALIZE[41136],skinsettings)</onclick>
-			<onclick condition="IsEmpty(Skin.String(HomeVideoTile4.Path)) | !IsEmpty(Window.Property(EditTile))">ActivateWindow(3003)</onclick>
-			<onclick condition="!IsEmpty(Window.Property(EditTile))">ClearProperty(EditTile)</onclick>
-			<property name="Poster">$INFO[Skin.String(HomeVideoTile4.Icon)]</property>
-			<property name="pos">bottom</property>
-			<property name="showlabel">$INFO[Skin.String(HomeVideoTile4.ShowLabel)]</property>
-			<property name="path">$INFO[Skin.String(HomeVideoTile4.Path)]</property>
-			<property name="animate">$INFO[Skin.String(HomeVideoTile4.Animate)]</property>
+			<label>$INFO[Skin.String(Home.Movies.Tile.10.Label)]</label>
+			<onclick>SetFocus(525)</onclick>
+			<onclick condition="!stringcompare(Skin.String(Home.Movies.Tile.10.Type),4) + !stringcompare(Skin.String(Home.Movies.Tile.10.Type),5) + !stringcompare(Skin.String(Home.Movies.Tile.10.Type),6) + !stringcompare(Skin.String(Home.Movies.Tile.10.Type),7)">RunAddon($INFO[Skin.String(Home.Movies.Tile.10.Path)])</onclick>
+			<onclick condition="stringcompare(Skin.String(Home.Movies.Tile.10.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(Home.Movies.Tile.10.Path)],return)</onclick>
+			<onclick condition="stringcompare(Skin.String(Home.Movies.Tile.10.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(Home.Movies.Tile.10.Path)],return)</onclick>
+			<onclick condition="[stringcompare(Skin.String(Home.Movies.Tile.10.Type),6) | stringcompare(Skin.String(Home.Movies.Tile.10.Type),7)]">$INFO[Skin.String(Home.Movies.Tile.10.Path)]</onclick>
+			<property name="Poster">$INFO[Skin.String(Home.Movies.Tile.10.Icon)]</property>
+			<property name="showlabel">$INFO[Skin.String(Home.Movies.Tile.10.ShowLabel)]</property>
+			<property name="path">$INFO[Skin.String(Home.Movies.Tile.10.Path)]</property>
+			<property name="animate">$INFO[Skin.String(Home.Movies.Tile.10.Animate)]</property>
+			<property name="custom">1</property>
 			<visible>Container(525).HasFocus(1)</visible>
 		</item>
 		
 		<!--TVSHOW ITEMS-->
 		<item id="0">
+			<label>$INFO[Skin.String(Home.Tvshows.Tile.1.Label)]</label>
 			<onclick>SetFocus(525)</onclick>
-			<onclick>ActivateWindow(videos,tvshowtitles,return)</onclick>
-			<property name="Poster">windows/home/icons/tv2.png</property>
-			<label>$LOCALIZE[20343]</label>
+			<onclick condition="!stringcompare(Skin.String(Home.Tvshows.Tile.1.Type),4) + !stringcompare(Skin.String(Home.Tvshows.Tile.1.Type),5) + !stringcompare(Skin.String(Home.Tvshows.Tile.1.Type),6) + !stringcompare(Skin.String(Home.Tvshows.Tile.1.Type),7)">RunAddon($INFO[Skin.String(Home.Tvshows.Tile.1.Path)])</onclick>
+			<onclick condition="stringcompare(Skin.String(Home.Tvshows.Tile.1.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(Home.Tvshows.Tile.1.Path)],return)</onclick>
+			<onclick condition="stringcompare(Skin.String(Home.Tvshows.Tile.1.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(Home.Tvshows.Tile.1.Path)],return)</onclick>
+			<onclick condition="[stringcompare(Skin.String(Home.Tvshows.Tile.1.Type),6) | stringcompare(Skin.String(Home.Tvshows.Tile.1.Type),7)]">$INFO[Skin.String(Home.Tvshows.Tile.1.Path)]</onclick>
+			<property name="Poster">$INFO[Skin.String(Home.Tvshows.Tile.1.Icon)]</property>
+			<property name="showlabel">$INFO[Skin.String(Home.Tvshows.Tile.1.ShowLabel)]</property>
+			<property name="path">$INFO[Skin.String(Home.Tvshows.Tile.1.Path)]</property>
+			<property name="animate">$INFO[Skin.String(Home.Tvshows.Tile.1.Animate)]</property>
+			<property name="custom">1</property>
 			<visible>Container(525).HasFocus(2)</visible>
 		</item>
 		<item id="1">
+			<label>$INFO[Skin.String(Home.Tvshows.Tile.2.Label)]</label>
 			<onclick>SetFocus(525)</onclick>
-			<onclick>ActivateWindow(videos,recentlyaddedepisodes,return)</onclick>
-			<property name="Poster">windows/home/icons/newepisodes.png</property>
-			<label>41451</label>
+			<onclick condition="!stringcompare(Skin.String(Home.Tvshows.Tile.2.Type),4) + !stringcompare(Skin.String(Home.Tvshows.Tile.2.Type),5) + !stringcompare(Skin.String(Home.Tvshows.Tile.2.Type),6) + !stringcompare(Skin.String(Home.Tvshows.Tile.2.Type),7)">RunAddon($INFO[Skin.String(Home.Tvshows.Tile.2.Path)])</onclick>
+			<onclick condition="stringcompare(Skin.String(Home.Tvshows.Tile.2.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(Home.Tvshows.Tile.2.Path)],return)</onclick>
+			<onclick condition="stringcompare(Skin.String(Home.Tvshows.Tile.2.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(Home.Tvshows.Tile.2.Path)],return)</onclick>
+			<onclick condition="[stringcompare(Skin.String(Home.Tvshows.Tile.2.Type),6) | stringcompare(Skin.String(Home.Tvshows.Tile.2.Type),7)]">$INFO[Skin.String(Home.Tvshows.Tile.2.Path)]</onclick>
+			<property name="Poster">$INFO[Skin.String(Home.Tvshows.Tile.2.Icon)]</property>
+			<property name="showlabel">$INFO[Skin.String(Home.Tvshows.Tile.2.ShowLabel)]</property>
+			<property name="path">$INFO[Skin.String(Home.Tvshows.Tile.2.Path)]</property>
+			<property name="animate">$INFO[Skin.String(Home.Tvshows.Tile.2.Animate)]</property>
+			<property name="custom">1</property>
 			<visible>Container(525).HasFocus(2)</visible>
 		</item>
 		<item id="2">
-			<description>Playlists</description>
-			<property name="Poster">windows/home/icons/videoplaylist.png</property>
-			<label>$LOCALIZE[136]</label>
+			<label>$INFO[Skin.String(Home.Tvshows.Tile.3.Label)]</label>
 			<onclick>SetFocus(525)</onclick>
-			<onclick>ActivateWindow(videolibrary,playlists,return)</onclick>
+			<onclick condition="!stringcompare(Skin.String(Home.Tvshows.Tile.3.Type),4) + !stringcompare(Skin.String(Home.Tvshows.Tile.3.Type),5) + !stringcompare(Skin.String(Home.Tvshows.Tile.3.Type),6) + !stringcompare(Skin.String(Home.Tvshows.Tile.3.Type),7)">RunAddon($INFO[Skin.String(Home.Tvshows.Tile.3.Path)])</onclick>
+			<onclick condition="stringcompare(Skin.String(Home.Tvshows.Tile.3.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(Home.Tvshows.Tile.3.Path)],return)</onclick>
+			<onclick condition="stringcompare(Skin.String(Home.Tvshows.Tile.3.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(Home.Tvshows.Tile.3.Path)],return)</onclick>
+			<onclick condition="[stringcompare(Skin.String(Home.Tvshows.Tile.3.Type),6) | stringcompare(Skin.String(Home.Tvshows.Tile.3.Type),7)]">$INFO[Skin.String(Home.Tvshows.Tile.3.Path)]</onclick>
+			<property name="Poster">$INFO[Skin.String(Home.Tvshows.Tile.3.Icon)]</property>
+			<property name="showlabel">$INFO[Skin.String(Home.Tvshows.Tile.3.ShowLabel)]</property>
+			<property name="path">$INFO[Skin.String(Home.Tvshows.Tile.3.Path)]</property>
+			<property name="animate">$INFO[Skin.String(Home.Tvshows.Tile.3.Animate)]</property>
+			<property name="custom">1</property>
 			<visible>Container(525).HasFocus(2)</visible>
 		</item>
 		<item id="3">
-			<description>Files</description>
-			<property name="Poster">windows/home/icons/folder.png</property>
-			<label>$LOCALIZE[1214]</label>
+			<label>$INFO[Skin.String(Home.Tvshows.Tile.4.Label)]</label>
 			<onclick>SetFocus(525)</onclick>
-			<onclick>ActivateWindow(videolibrary,files,return)</onclick>
+			<onclick condition="!stringcompare(Skin.String(Home.Tvshows.Tile.4.Type),4) + !stringcompare(Skin.String(Home.Tvshows.Tile.4.Type),5) + !stringcompare(Skin.String(Home.Tvshows.Tile.4.Type),6) + !stringcompare(Skin.String(Home.Tvshows.Tile.4.Type),7)">RunAddon($INFO[Skin.String(Home.Tvshows.Tile.4.Path)])</onclick>
+			<onclick condition="stringcompare(Skin.String(Home.Tvshows.Tile.4.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(Home.Tvshows.Tile.4.Path)],return)</onclick>
+			<onclick condition="stringcompare(Skin.String(Home.Tvshows.Tile.4.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(Home.Tvshows.Tile.4.Path)],return)</onclick>
+			<onclick condition="[stringcompare(Skin.String(Home.Tvshows.Tile.4.Type),6) | stringcompare(Skin.String(Home.Tvshows.Tile.4.Type),7)]">$INFO[Skin.String(Home.Tvshows.Tile.4.Path)]</onclick>
+			<property name="Poster">$INFO[Skin.String(Home.Tvshows.Tile.4.Icon)]</property>
+			<property name="showlabel">$INFO[Skin.String(Home.Tvshows.Tile.4.ShowLabel)]</property>
+			<property name="path">$INFO[Skin.String(Home.Tvshows.Tile.4.Path)]</property>
+			<property name="animate">$INFO[Skin.String(Home.Tvshows.Tile.4.Animate)]</property>
+			<property name="custom">1</property>
 			<visible>Container(525).HasFocus(2)</visible>
 		</item>
 		<item id="4">
-			<description>Genres</description>
-			<property name="Poster">windows/home/icons/film.png</property>
-			<label>$LOCALIZE[135]</label>
+			<label>$INFO[Skin.String(Home.Tvshows.Tile.5.Label)]</label>
 			<onclick>SetFocus(525)</onclick>
-			<onclick>ActivateWindow(videos,tvshowgenres,return)</onclick>   
+			<onclick condition="!stringcompare(Skin.String(Home.Tvshows.Tile.5.Type),4) + !stringcompare(Skin.String(Home.Tvshows.Tile.5.Type),5) + !stringcompare(Skin.String(Home.Tvshows.Tile.5.Type),6) + !stringcompare(Skin.String(Home.Tvshows.Tile.5.Type),7)">RunAddon($INFO[Skin.String(Home.Tvshows.Tile.5.Path)])</onclick>
+			<onclick condition="stringcompare(Skin.String(Home.Tvshows.Tile.5.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(Home.Tvshows.Tile.5.Path)],return)</onclick>
+			<onclick condition="stringcompare(Skin.String(Home.Tvshows.Tile.5.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(Home.Tvshows.Tile.5.Path)],return)</onclick>
+			<onclick condition="[stringcompare(Skin.String(Home.Tvshows.Tile.5.Type),6) | stringcompare(Skin.String(Home.Tvshows.Tile.5.Type),7)]">$INFO[Skin.String(Home.Tvshows.Tile.5.Path)]</onclick>
+			<property name="Poster">$INFO[Skin.String(Home.Tvshows.Tile.5.Icon)]</property>
+			<property name="showlabel">$INFO[Skin.String(Home.Tvshows.Tile.5.ShowLabel)]</property>
+			<property name="path">$INFO[Skin.String(Home.Tvshows.Tile.5.Path)]</property>
+			<property name="animate">$INFO[Skin.String(Home.Tvshows.Tile.5.Animate)]</property>
+			<property name="custom">1</property>  
 			<visible>Container(525).HasFocus(2)</visible>
 		</item>
 		<item id="5">
-			<description>Studios</description>
-			<property name="Poster">windows/home/icons/appletrailers.png</property>
-			<label>$LOCALIZE[20388]</label>
+			<label>$INFO[Skin.String(Home.Tvshows.Tile.6.Label)]</label>
 			<onclick>SetFocus(525)</onclick>
-			<onclick>ActivateWindow(videos,tvshowstudios,return)</onclick>
+			<onclick condition="!stringcompare(Skin.String(Home.Tvshows.Tile.6.Type),4) + !stringcompare(Skin.String(Home.Tvshows.Tile.6.Type),5) + !stringcompare(Skin.String(Home.Tvshows.Tile.6.Type),6) + !stringcompare(Skin.String(Home.Tvshows.Tile.6.Type),7)">RunAddon($INFO[Skin.String(Home.Tvshows.Tile.6.Path)])</onclick>
+			<onclick condition="stringcompare(Skin.String(Home.Tvshows.Tile.6.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(Home.Tvshows.Tile.6.Path)],return)</onclick>
+			<onclick condition="stringcompare(Skin.String(Home.Tvshows.Tile.6.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(Home.Tvshows.Tile.6.Path)],return)</onclick>
+			<onclick condition="[stringcompare(Skin.String(Home.Tvshows.Tile.6.Type),6) | stringcompare(Skin.String(Home.Tvshows.Tile.6.Type),7)]">$INFO[Skin.String(Home.Tvshows.Tile.6.Path)]</onclick>
+			<property name="Poster">$INFO[Skin.String(Home.Tvshows.Tile.6.Icon)]</property>
+			<property name="showlabel">$INFO[Skin.String(Home.Tvshows.Tile.6.ShowLabel)]</property>
+			<property name="path">$INFO[Skin.String(Home.Tvshows.Tile.6.Path)]</property>
+			<property name="animate">$INFO[Skin.String(Home.Tvshows.Tile.6.Animate)]</property>
+			<property name="custom">1</property>
 			<visible>Container(525).HasFocus(2)</visible>
 		</item>
 		<item id="6">
-			<description>TV Guide</description>
+			<label>$INFO[Skin.String(Home.Tvshows.Tile.7.Label)]</label>
 			<onclick>SetFocus(525)</onclick>
-			<onclick>RunAddon(script.tv.show.next.aired)</onclick>
-			<property name="Poster">windows/home/icons/tvguide.png</property>
-			<label>$LOCALIZE[42160] ($INFO[Window.Property(NextAired.TodayTotal)])</label>
+			<onclick condition="!stringcompare(Skin.String(Home.Tvshows.Tile.7.Type),4) + !stringcompare(Skin.String(Home.Tvshows.Tile.7.Type),5) + !stringcompare(Skin.String(Home.Tvshows.Tile.7.Type),6) + !stringcompare(Skin.String(Home.Tvshows.Tile.7.Type),7)">RunAddon($INFO[Skin.String(Home.Tvshows.Tile.7.Path)])</onclick>
+			<onclick condition="stringcompare(Skin.String(Home.Tvshows.Tile.7.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(Home.Tvshows.Tile.7.Path)],return)</onclick>
+			<onclick condition="stringcompare(Skin.String(Home.Tvshows.Tile.7.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(Home.Tvshows.Tile.7.Path)],return)</onclick>
+			<onclick condition="[stringcompare(Skin.String(Home.Tvshows.Tile.7.Type),6) | stringcompare(Skin.String(Home.Tvshows.Tile.7.Type),7)]">$INFO[Skin.String(Home.Tvshows.Tile.7.Path)]</onclick>
+			<property name="Poster">$INFO[Skin.String(Home.Tvshows.Tile.7.Icon)]</property>
+			<property name="showlabel">$INFO[Skin.String(Home.Tvshows.Tile.7.ShowLabel)]</property>
+			<property name="path">$INFO[Skin.String(Home.Tvshows.Tile.7.Path)]</property>
+			<property name="animate">$INFO[Skin.String(Home.Tvshows.Tile.7.Animate)]</property>
+			<property name="custom">1</property>
 			<visible>Container(525).HasFocus(2)</visible>
 		</item>
 		<item id="7">
-			<description>Video Addons</description>
+			<label>$INFO[Skin.String(Home.Tvshows.Tile.8.Label)]</label>
 			<onclick>SetFocus(525)</onclick>
-			<onclick>ActivateWindow(videos,addons,return)</onclick>
-			<property name="Poster">windows/home/icons/videoaddons.png</property>
-			<label>$LOCALIZE[24001]</label>
+			<onclick condition="!stringcompare(Skin.String(Home.Tvshows.Tile.8.Type),4) + !stringcompare(Skin.String(Home.Tvshows.Tile.8.Type),5) + !stringcompare(Skin.String(Home.Tvshows.Tile.8.Type),6) + !stringcompare(Skin.String(Home.Tvshows.Tile.8.Type),7)">RunAddon($INFO[Skin.String(Home.Tvshows.Tile.8.Path)])</onclick>
+			<onclick condition="stringcompare(Skin.String(Home.Tvshows.Tile.8.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(Home.Tvshows.Tile.8.Path)],return)</onclick>
+			<onclick condition="stringcompare(Skin.String(Home.Tvshows.Tile.8.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(Home.Tvshows.Tile.8.Path)],return)</onclick>
+			<onclick condition="[stringcompare(Skin.String(Home.Tvshows.Tile.8.Type),6) | stringcompare(Skin.String(Home.Tvshows.Tile.8.Type),7)]">$INFO[Skin.String(Home.Tvshows.Tile.8.Path)]</onclick>
+			<property name="Poster">$INFO[Skin.String(Home.Tvshows.Tile.8.Icon)]</property>
+			<property name="showlabel">$INFO[Skin.String(Home.Tvshows.Tile.8.ShowLabel)]</property>
+			<property name="path">$INFO[Skin.String(Home.Tvshows.Tile.8.Path)]</property>
+			<property name="animate">$INFO[Skin.String(Home.Tvshows.Tile.8.Animate)]</property>
+			<property name="custom">1</property>
 			<visible>Container(525).HasFocus(2)</visible>
 		</item>
 		<item id="8">
-			<label>$INFO[Skin.String(HomeTVShowTile1.Label)]</label>
-			<onclick condition="IsEmpty(Window.Property(EditTile)) + !stringcompare(Skin.String(HomeTVShowTile1.Type),4) + !stringcompare(Skin.String(HomeTVShowTile1.Type),5) + !stringcompare(Skin.String(HomeTVShowTile1.Type),6) + !stringcompare(Skin.String(HomeTVShowTile1.Type),7)">RunAddon($INFO[Skin.String(HomeTVShowTile1.Path)])</onclick>
-			<onclick condition="IsEmpty(Window.Property(EditTile)) + stringcompare(Skin.String(HomeTVShowTile1.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(HomeTVShowTile1.Path)],return)</onclick>
-			<onclick condition="IsEmpty(Window.Property(EditTile)) + stringcompare(Skin.String(HomeTVShowTile1.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(HomeTVShowTile1.Path)],return)</onclick>
-			<onclick condition="IsEmpty(Window.Property(EditTile)) + [stringcompare(Skin.String(HomeTVShowTile1.Type),6) | stringcompare(Skin.String(HomeTVShowTile1.Type),7)]">$INFO[Skin.String(HomeTVShowTile1.Path)]</onclick>
-			<onclick condition="IsEmpty(Skin.String(HomeTVShowTile1.Path)) | !IsEmpty(Window.Property(EditTile))">Skin.SetBool(HomeTVShowTile1)</onclick>
-			<onclick condition="[IsEmpty(Skin.String(HomeTVShowTile1.Path)) | !IsEmpty(Window.Property(EditTile))] + IsEmpty(Skin.String(HomeTVShowTile1.Type))">Skin.SetString(HomeTVShowTile1.Type,0)</onclick>
-			<onclick condition="[IsEmpty(Skin.String(HomeTVShowTile1.Path)) | !IsEmpty(Window.Property(EditTile))] + IsEmpty(Skin.String(HomeTVShowTile1.TypeName))">Skin.SetString(HomeTVShowTile1.TypeName,$LOCALIZE[41145])</onclick>
-			<onclick condition="IsEmpty(Skin.String(HomeTVShowTile1.Path)) | !IsEmpty(Window.Property(EditTile))">SetProperty(SingleDialog,five,3003)</onclick>
-			<onclick condition="IsEmpty(Skin.String(HomeTVShowTile1.Path)) | !IsEmpty(Window.Property(EditTile))">SetProperty(Dialog,$LOCALIZE[41136],skinsettings)</onclick>
-			<onclick condition="IsEmpty(Skin.String(HomeTVShowTile1.Path)) | !IsEmpty(Window.Property(EditTile))">ActivateWindow(3003)</onclick>
-			<onclick condition="!IsEmpty(Window.Property(EditTile))">ClearProperty(EditTile)</onclick>
-			<property name="Poster">$INFO[Skin.String(HomeTVShowTile1.Icon)]</property>
-			<property name="showlabel">$INFO[Skin.String(HomeTVShowTile1.ShowLabel)]</property>
-			<property name="path">$INFO[Skin.String(HomeTVShowTile1.Path)]</property>
-			<property name="animate">$INFO[Skin.String(HomeTVShowTile1.Animate)]</property>
+			<label>$INFO[Skin.String(Home.Tvshows.Tile.9.Label)]</label>
+			<onclick>SetFocus(525)</onclick>
+			<onclick condition="!stringcompare(Skin.String(Home.Tvshows.Tile.9.Type),4) + !stringcompare(Skin.String(Home.Tvshows.Tile.9.Type),5) + !stringcompare(Skin.String(Home.Tvshows.Tile.9.Type),6) + !stringcompare(Skin.String(Home.Tvshows.Tile.9.Type),7)">RunAddon($INFO[Skin.String(Home.Tvshows.Tile.9.Path)])</onclick>
+			<onclick condition="stringcompare(Skin.String(Home.Tvshows.Tile.9.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(Home.Tvshows.Tile.9.Path)],return)</onclick>
+			<onclick condition="stringcompare(Skin.String(Home.Tvshows.Tile.9.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(Home.Tvshows.Tile.9.Path)],return)</onclick>
+			<onclick condition="[stringcompare(Skin.String(Home.Tvshows.Tile.9.Type),6) | stringcompare(Skin.String(Home.Tvshows.Tile.9.Type),7)]">$INFO[Skin.String(Home.Tvshows.Tile.9.Path)]</onclick>
+			<property name="Poster">$INFO[Skin.String(Home.Tvshows.Tile.9.Icon)]</property>
+			<property name="showlabel">$INFO[Skin.String(Home.Tvshows.Tile.9.ShowLabel)]</property>
+			<property name="path">$INFO[Skin.String(Home.Tvshows.Tile.9.Path)]</property>
+			<property name="animate">$INFO[Skin.String(Home.Tvshows.Tile.9.Animate)]</property>
+			<property name="custom">1</property>
 			<visible>Container(525).HasFocus(2)</visible>
 		</item>
 		<item id="9">
-			<label>$INFO[Skin.String(HomeTVShowTile2.Label)]</label>
-			<onclick condition="IsEmpty(Window.Property(EditTile)) + !stringcompare(Skin.String(HomeTVShowTile2.Type),4) + !stringcompare(Skin.String(HomeTVShowTile2.Type),5) + !stringcompare(Skin.String(HomeTVShowTile2.Type),6) + !stringcompare(Skin.String(HomeTVShowTile2.Type),7)">RunAddon($INFO[Skin.String(HomeTVShowTile2.Path)])</onclick>
-			<onclick condition="IsEmpty(Window.Property(EditTile)) + stringcompare(Skin.String(HomeTVShowTile2.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(HomeTVShowTile2.Path)],return)</onclick>
-			<onclick condition="IsEmpty(Window.Property(EditTile)) + stringcompare(Skin.String(HomeTVShowTile2.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(HomeTVShowTile2.Path)],return)</onclick>
-			<onclick condition="IsEmpty(Window.Property(EditTile)) + [stringcompare(Skin.String(HomeTVShowTile2.Type),6) | stringcompare(Skin.String(HomeTVShowTile2.Type),7)]">$INFO[Skin.String(HomeTVShowTile2.Path)]</onclick>
-			<onclick condition="IsEmpty(Skin.String(HomeTVShowTile2.Path)) | !IsEmpty(Window.Property(EditTile))">Skin.SetBool(HomeTVShowTile2)</onclick>
-			<onclick condition="[IsEmpty(Skin.String(HomeTVShowTile2.Path)) | !IsEmpty(Window.Property(EditTile))] + IsEmpty(Skin.String(HomeTVShowTile2.Type))">Skin.SetString(HomeTVShowTile2.Type,0)</onclick>
-			<onclick condition="[IsEmpty(Skin.String(HomeTVShowTile2.Path)) | !IsEmpty(Window.Property(EditTile))] + IsEmpty(Skin.String(HomeTVShowTile2.TypeName))">Skin.SetString(HomeTVShowTile2.TypeName,$LOCALIZE[41145])</onclick>
-			<onclick condition="IsEmpty(Skin.String(HomeTVShowTile2.Path)) | !IsEmpty(Window.Property(EditTile))">SetProperty(SingleDialog,five,3003)</onclick>
-			<onclick condition="IsEmpty(Skin.String(HomeTVShowTile2.Path)) | !IsEmpty(Window.Property(EditTile))">SetProperty(Dialog,$LOCALIZE[41136],skinsettings)</onclick>
-			<onclick condition="IsEmpty(Skin.String(HomeTVShowTile2.Path)) | !IsEmpty(Window.Property(EditTile))">ActivateWindow(3003)</onclick>
-			<onclick condition="!IsEmpty(Window.Property(EditTile))">ClearProperty(EditTile)</onclick>
-			<property name="Poster">$INFO[Skin.String(HomeTVShowTile2.Icon)]</property>
-			<property name="showlabel">$INFO[Skin.String(HomeTVShowTile2.ShowLabel)]</property>
-			<property name="path">$INFO[Skin.String(HomeTVShowTile2.Path)]</property>
-			<property name="animate">$INFO[Skin.String(HomeTVShowTile2.Animate)]</property>
+			<label>$INFO[Skin.String(Home.Tvshows.Tile.10.Label)]</label>
+			<onclick>SetFocus(525)</onclick>
+			<onclick condition="!stringcompare(Skin.String(Home.Tvshows.Tile.10.Type),4) + !stringcompare(Skin.String(Home.Tvshows.Tile.10.Type),5) + !stringcompare(Skin.String(Home.Tvshows.Tile.10.Type),6) + !stringcompare(Skin.String(Home.Tvshows.Tile.10.Type),7)">RunAddon($INFO[Skin.String(Home.Tvshows.Tile.10.Path)])</onclick>
+			<onclick condition="stringcompare(Skin.String(Home.Tvshows.Tile.10.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(Home.Tvshows.Tile.10.Path)],return)</onclick>
+			<onclick condition="stringcompare(Skin.String(Home.Tvshows.Tile.10.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(Home.Tvshows.Tile.10.Path)],return)</onclick>
+			<onclick condition="[stringcompare(Skin.String(Home.Tvshows.Tile.10.Type),6) | stringcompare(Skin.String(Home.Tvshows.Tile.10.Type),7)]">$INFO[Skin.String(Home.Tvshows.Tile.10.Path)]</onclick>
+			<property name="Poster">$INFO[Skin.String(Home.Tvshows.Tile.10.Icon)]</property>
+			<property name="showlabel">$INFO[Skin.String(Home.Tvshows.Tile.10.ShowLabel)]</property>
+			<property name="path">$INFO[Skin.String(Home.Tvshows.Tile.10.Path)]</property>
+			<property name="animate">$INFO[Skin.String(Home.Tvshows.Tile.10.Animate)]</property>
+			<property name="custom">1</property>
 			<visible>Container(525).HasFocus(2)</visible>
 		</item>
 		
 		<!--MUSIC ITEMS-->
 		<item id="1">
-			<description>Artists</description>
-			<property name="Poster">windows/home/icons/profiles.png</property>
-			<label>$LOCALIZE[133] $INFO[Window.Property(Music.ArtistsCount)]</label>
+			<label>$INFO[Skin.String(Home.Music.Tile.1.Label)]</label>
 			<onclick>SetFocus(525)</onclick>
-			<onclick>ActivateWindow(musiclibrary,artists,return)</onclick>
+			<onclick condition="!stringcompare(Skin.String(Home.Music.Tile.1.Type),4) + !stringcompare(Skin.String(Home.Music.Tile.1.Type),5) + !stringcompare(Skin.String(Home.Music.Tile.1.Type),6) + !stringcompare(Skin.String(Home.Music.Tile.1.Type),7)">RunAddon($INFO[Skin.String(Home.Music.Tile.1.Path)])</onclick>
+			<onclick condition="stringcompare(Skin.String(Home.Music.Tile.1.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(Home.Music.Tile.1.Path)],return)</onclick>
+			<onclick condition="stringcompare(Skin.String(Home.Music.Tile.1.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(Home.Music.Tile.1.Path)],return)</onclick>
+			<onclick condition="[stringcompare(Skin.String(Home.Music.Tile.1.Type),6) | stringcompare(Skin.String(Home.Music.Tile.1.Type),7)]">$INFO[Skin.String(Home.Music.Tile.1.Path)]</onclick>
+			<property name="Poster">$INFO[Skin.String(Home.Music.Tile.1.Icon)]</property>
+			<property name="showlabel">$INFO[Skin.String(Home.Music.Tile.1.ShowLabel)]</property>
+			<property name="path">$INFO[Skin.String(Home.Music.Tile.1.Path)]</property>
+			<property name="animate">$INFO[Skin.String(Home.Music.Tile.1.Animate)]</property>
+			<property name="custom">1</property>
 			<visible>Container(525).HasFocus(3)</visible>
 		</item>
 		<item id="2">
-			<description>Albums</description>
-			<property name="Poster">windows/home/icons/dvd.png</property>
-			<label>$LOCALIZE[132] $INFO[Window.Property(Music.AlbumsCount)]</label>
+			<label>$INFO[Skin.String(Home.Music.Tile.2.Label)]</label>
 			<onclick>SetFocus(525)</onclick>
-			<onclick>ActivateWindow(musiclibrary,albums,return)</onclick>
+			<onclick condition="!stringcompare(Skin.String(Home.Music.Tile.2.Type),4) + !stringcompare(Skin.String(Home.Music.Tile.2.Type),5) + !stringcompare(Skin.String(Home.Music.Tile.2.Type),6) + !stringcompare(Skin.String(Home.Music.Tile.2.Type),7)">RunAddon($INFO[Skin.String(Home.Music.Tile.2.Path)])</onclick>
+			<onclick condition="stringcompare(Skin.String(Home.Music.Tile.2.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(Home.Music.Tile.2.Path)],return)</onclick>
+			<onclick condition="stringcompare(Skin.String(Home.Music.Tile.2.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(Home.Music.Tile.2.Path)],return)</onclick>
+			<onclick condition="[stringcompare(Skin.String(Home.Music.Tile.2.Type),6) | stringcompare(Skin.String(Home.Music.Tile.2.Type),7)]">$INFO[Skin.String(Home.Music.Tile.2.Path)]</onclick>
+			<property name="Poster">$INFO[Skin.String(Home.Music.Tile.2.Icon)]</property>
+			<property name="showlabel">$INFO[Skin.String(Home.Music.Tile.2.ShowLabel)]</property>
+			<property name="path">$INFO[Skin.String(Home.Music.Tile.2.Path)]</property>
+			<property name="animate">$INFO[Skin.String(Home.Music.Tile.2.Animate)]</property>
+			<property name="custom">1</property>
 			<visible>Container(525).HasFocus(3)</visible>
 		</item>
 		<item id="3">
-			<description>Playlists</description>
-			<property name="Poster">windows/home/icons/epg.png</property>
-			<label>$LOCALIZE[136]</label>
+			<label>$INFO[Skin.String(Home.Music.Tile.3.Label)]</label>
 			<onclick>SetFocus(525)</onclick>
-			<onclick>ActivateWindow(musiclibrary,playlists,return)</onclick>
+			<onclick condition="!stringcompare(Skin.String(Home.Music.Tile.3.Type),4) + !stringcompare(Skin.String(Home.Music.Tile.3.Type),5) + !stringcompare(Skin.String(Home.Music.Tile.3.Type),6) + !stringcompare(Skin.String(Home.Music.Tile.3.Type),7)">RunAddon($INFO[Skin.String(Home.Music.Tile.3.Path)])</onclick>
+			<onclick condition="stringcompare(Skin.String(Home.Music.Tile.3.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(Home.Music.Tile.3.Path)],return)</onclick>
+			<onclick condition="stringcompare(Skin.String(Home.Music.Tile.3.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(Home.Music.Tile.3.Path)],return)</onclick>
+			<onclick condition="[stringcompare(Skin.String(Home.Music.Tile.3.Type),6) | stringcompare(Skin.String(Home.Music.Tile.3.Type),7)]">$INFO[Skin.String(Home.Music.Tile.3.Path)]</onclick>
+			<property name="Poster">$INFO[Skin.String(Home.Music.Tile.3.Icon)]</property>
+			<property name="showlabel">$INFO[Skin.String(Home.Music.Tile.3.ShowLabel)]</property>
+			<property name="path">$INFO[Skin.String(Home.Music.Tile.3.Path)]</property>
+			<property name="animate">$INFO[Skin.String(Home.Music.Tile.3.Animate)]</property>
+			<property name="custom">1</property>
 			<visible>Container(525).HasFocus(3)</visible>
 		</item>
 		<item id="4">
-			<description>Files</description>
-			<property name="Poster">windows/home/icons/folder.png</property>
-			<label>$LOCALIZE[1214]</label>
+			<label>$INFO[Skin.String(Home.Music.Tile.4.Label)]</label>
 			<onclick>SetFocus(525)</onclick>
-			<onclick>ActivateWindow(musicfiles)</onclick>
+			<onclick condition="!stringcompare(Skin.String(Home.Music.Tile.4.Type),4) + !stringcompare(Skin.String(Home.Music.Tile.4.Type),5) + !stringcompare(Skin.String(Home.Music.Tile.4.Type),6) + !stringcompare(Skin.String(Home.Music.Tile.4.Type),7)">RunAddon($INFO[Skin.String(Home.Music.Tile.4.Path)])</onclick>
+			<onclick condition="stringcompare(Skin.String(Home.Music.Tile.4.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(Home.Music.Tile.4.Path)],return)</onclick>
+			<onclick condition="stringcompare(Skin.String(Home.Music.Tile.4.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(Home.Music.Tile.4.Path)],return)</onclick>
+			<onclick condition="[stringcompare(Skin.String(Home.Music.Tile.4.Type),6) | stringcompare(Skin.String(Home.Music.Tile.4.Type),7)]">$INFO[Skin.String(Home.Music.Tile.4.Path)]</onclick>
+			<property name="Poster">$INFO[Skin.String(Home.Music.Tile.4.Icon)]</property>
+			<property name="showlabel">$INFO[Skin.String(Home.Music.Tile.4.ShowLabel)]</property>
+			<property name="path">$INFO[Skin.String(Home.Music.Tile.4.Path)]</property>
+			<property name="animate">$INFO[Skin.String(Home.Music.Tile.4.Animate)]</property>
+			<property name="custom">1</property>
 			<visible>Container(525).HasFocus(3)</visible>
 		</item>
 		<item id="5">
-			<description>Genres</description>
-			<property name="Poster">windows/home/icons/radio.png</property>
-			<label>$LOCALIZE[135]</label>
+			<label>$INFO[Skin.String(Home.Music.Tile.5.Label)]</label>
 			<onclick>SetFocus(525)</onclick>
-			<onclick>ActivateWindow(musiclibrary,genres,return)</onclick>
+			<onclick condition="!stringcompare(Skin.String(Home.Music.Tile.5.Type),4) + !stringcompare(Skin.String(Home.Music.Tile.5.Type),5) + !stringcompare(Skin.String(Home.Music.Tile.5.Type),6) + !stringcompare(Skin.String(Home.Music.Tile.5.Type),7)">RunAddon($INFO[Skin.String(Home.Music.Tile.5.Path)])</onclick>
+			<onclick condition="stringcompare(Skin.String(Home.Music.Tile.5.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(Home.Music.Tile.5.Path)],return)</onclick>
+			<onclick condition="stringcompare(Skin.String(Home.Music.Tile.5.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(Home.Music.Tile.5.Path)],return)</onclick>
+			<onclick condition="[stringcompare(Skin.String(Home.Music.Tile.5.Type),6) | stringcompare(Skin.String(Home.Music.Tile.5.Type),7)]">$INFO[Skin.String(Home.Music.Tile.5.Path)]</onclick>
+			<property name="Poster">$INFO[Skin.String(Home.Music.Tile.5.Icon)]</property>
+			<property name="showlabel">$INFO[Skin.String(Home.Music.Tile.5.ShowLabel)]</property>
+			<property name="path">$INFO[Skin.String(Home.Music.Tile.5.Path)]</property>
+			<property name="animate">$INFO[Skin.String(Home.Music.Tile.5.Animate)]</property>
+			<property name="custom">1</property>
 			<visible>Container(525).HasFocus(3)</visible>
 		</item>
 		<item id="6">
-			<description>Top 100</description>
-			<property name="Poster">windows/home/icons/star.png</property>
-			<label>$LOCALIZE[271]</label>
+			<label>$INFO[Skin.String(Home.Music.Tile.6.Label)]</label>
 			<onclick>SetFocus(525)</onclick>
-			<onclick>ActivateWindow(musiclibrary,top100albums,return)</onclick>
+			<onclick condition="!stringcompare(Skin.String(Home.Music.Tile.6.Type),4) + !stringcompare(Skin.String(Home.Music.Tile.6.Type),5) + !stringcompare(Skin.String(Home.Music.Tile.6.Type),6) + !stringcompare(Skin.String(Home.Music.Tile.6.Type),7)">RunAddon($INFO[Skin.String(Home.Music.Tile.6.Path)])</onclick>
+			<onclick condition="stringcompare(Skin.String(Home.Music.Tile.6.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(Home.Music.Tile.6.Path)],return)</onclick>
+			<onclick condition="stringcompare(Skin.String(Home.Music.Tile.6.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(Home.Music.Tile.6.Path)],return)</onclick>
+			<onclick condition="[stringcompare(Skin.String(Home.Music.Tile.6.Type),6) | stringcompare(Skin.String(Home.Music.Tile.6.Type),7)]">$INFO[Skin.String(Home.Music.Tile.6.Path)]</onclick>
+			<property name="Poster">$INFO[Skin.String(Home.Music.Tile.6.Icon)]</property>
+			<property name="showlabel">$INFO[Skin.String(Home.Music.Tile.6.ShowLabel)]</property>
+			<property name="path">$INFO[Skin.String(Home.Music.Tile.6.Path)]</property>
+			<property name="animate">$INFO[Skin.String(Home.Music.Tile.6.Animate)]</property>
+			<property name="custom">1</property>
 			<visible>Container(525).HasFocus(3)</visible>
 		</item>
 		<item id="7">
-			<description>New Albums</description>
-			<property name="Poster">windows/home/icons/ipod.png</property>
-			<label>$LOCALIZE[41554]</label>
+			<label>$INFO[Skin.String(Home.Music.Tile.7.Label)]</label>
 			<onclick>SetFocus(525)</onclick>
-			<onclick>ActivateWindow(musiclibrary,recentlyaddedalbums,return)</onclick>
+			<onclick condition="!stringcompare(Skin.String(Home.Music.Tile.7.Type),4) + !stringcompare(Skin.String(Home.Music.Tile.7.Type),5) + !stringcompare(Skin.String(Home.Music.Tile.7.Type),6) + !stringcompare(Skin.String(Home.Music.Tile.7.Type),7)">RunAddon($INFO[Skin.String(Home.Music.Tile.7.Path)])</onclick>
+			<onclick condition="stringcompare(Skin.String(Home.Music.Tile.7.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(Home.Music.Tile.7.Path)],return)</onclick>
+			<onclick condition="stringcompare(Skin.String(Home.Music.Tile.7.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(Home.Music.Tile.7.Path)],return)</onclick>
+			<onclick condition="[stringcompare(Skin.String(Home.Music.Tile.7.Type),6) | stringcompare(Skin.String(Home.Music.Tile.7.Type),7)]">$INFO[Skin.String(Home.Music.Tile.7.Path)]</onclick>
+			<property name="Poster">$INFO[Skin.String(Home.Music.Tile.7.Icon)]</property>
+			<property name="showlabel">$INFO[Skin.String(Home.Music.Tile.7.ShowLabel)]</property>
+			<property name="path">$INFO[Skin.String(Home.Music.Tile.7.Path)]</property>
+			<property name="animate">$INFO[Skin.String(Home.Music.Tile.7.Animate)]</property>
+			<property name="custom">1</property>
 			<visible>Container(525).HasFocus(3)</visible>
 		</item>
 		<item id="8">
-			<description>Recently Played</description>
-			<property name="Poster">windows/home/icons/music.png</property>
-			<label>$LOCALIZE[568]</label>
+			<label>$INFO[Skin.String(Home.Music.Tile.8.Label)]</label>
 			<onclick>SetFocus(525)</onclick>
-			<onclick>ActivateWindow(musiclibrary,recentlyplayedalbums,return)</onclick>
+			<onclick condition="!stringcompare(Skin.String(Home.Music.Tile.8.Type),4) + !stringcompare(Skin.String(Home.Music.Tile.8.Type),5) + !stringcompare(Skin.String(Home.Music.Tile.8.Type),6) + !stringcompare(Skin.String(Home.Music.Tile.8.Type),7)">RunAddon($INFO[Skin.String(Home.Music.Tile.8.Path)])</onclick>
+			<onclick condition="stringcompare(Skin.String(Home.Music.Tile.8.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(Home.Music.Tile.8.Path)],return)</onclick>
+			<onclick condition="stringcompare(Skin.String(Home.Music.Tile.8.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(Home.Music.Tile.8.Path)],return)</onclick>
+			<onclick condition="[stringcompare(Skin.String(Home.Music.Tile.8.Type),6) | stringcompare(Skin.String(Home.Music.Tile.8.Type),7)]">$INFO[Skin.String(Home.Music.Tile.8.Path)]</onclick>
+			<property name="Poster">$INFO[Skin.String(Home.Music.Tile.8.Icon)]</property>
+			<property name="showlabel">$INFO[Skin.String(Home.Music.Tile.8.ShowLabel)]</property>
+			<property name="path">$INFO[Skin.String(Home.Music.Tile.8.Path)]</property>
+			<property name="animate">$INFO[Skin.String(Home.Music.Tile.8.Animate)]</property>
+			<property name="custom">1</property>
 			<visible>Container(525).HasFocus(3)</visible>
 		</item>
 		<item id="9">
-			<description>Now Playing</description>
-			<property name="Poster">windows/home/icons/musicplaylist.png</property>
-			<label>$LOCALIZE[41443]</label>
+			<label>$INFO[Skin.String(Home.Music.Tile.9.Label)]</label>
 			<onclick>SetFocus(525)</onclick>
-			<onclick>ActivateWindow(musicplaylist)</onclick>
+			<onclick condition="!stringcompare(Skin.String(Home.Music.Tile.9.Type),4) + !stringcompare(Skin.String(Home.Music.Tile.9.Type),5) + !stringcompare(Skin.String(Home.Music.Tile.9.Type),6) + !stringcompare(Skin.String(Home.Music.Tile.9.Type),7)">RunAddon($INFO[Skin.String(Home.Music.Tile.9.Path)])</onclick>
+			<onclick condition="stringcompare(Skin.String(Home.Music.Tile.9.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(Home.Music.Tile.9.Path)],return)</onclick>
+			<onclick condition="stringcompare(Skin.String(Home.Music.Tile.9.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(Home.Music.Tile.9.Path)],return)</onclick>
+			<onclick condition="[stringcompare(Skin.String(Home.Music.Tile.9.Type),6) | stringcompare(Skin.String(Home.Music.Tile.9.Type),7)]">$INFO[Skin.String(Home.Music.Tile.9.Path)]</onclick>
+			<property name="Poster">$INFO[Skin.String(Home.Music.Tile.9.Icon)]</property>
+			<property name="showlabel">$INFO[Skin.String(Home.Music.Tile.9.ShowLabel)]</property>
+			<property name="path">$INFO[Skin.String(Home.Music.Tile.9.Path)]</property>
+			<property name="animate">$INFO[Skin.String(Home.Music.Tile.9.Animate)]</property>
+			<property name="custom">1</property>
 			<visible>Container(525).HasFocus(3)</visible>
 		</item>
 		<item id="10">
-			<label>$INFO[Skin.String(HomeMusicTile1.Label)]</label>
-			<onclick condition="IsEmpty(Window.Property(EditTile)) + !stringcompare(Skin.String(HomeMusicTile1.Type),4) + !stringcompare(Skin.String(HomeMusicTile1.Type),5) + !stringcompare(Skin.String(HomeMusicTile1.Type),6) + !stringcompare(Skin.String(HomeMusicTile1.Type),7)">RunAddon($INFO[Skin.String(HomeMusicTile1.Path)])</onclick>
-			<onclick condition="IsEmpty(Window.Property(EditTile)) + stringcompare(Skin.String(HomeMusicTile1.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(HomeMusicTile1.Path)],return)</onclick>
-			<onclick condition="IsEmpty(Window.Property(EditTile)) + stringcompare(Skin.String(HomeMusicTile1.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(HomeMusicTile1.Path)],return)</onclick>
-			<onclick condition="IsEmpty(Window.Property(EditTile)) + [stringcompare(Skin.String(HomeMusicTile1.Type),6) | stringcompare(Skin.String(HomeMusicTile1.Type),7)]">$INFO[Skin.String(HomeMusicTile1.Path)]</onclick>
-			<onclick condition="IsEmpty(Skin.String(HomeMusicTile1.Path)) | !IsEmpty(Window.Property(EditTile))">Skin.SetBool(HomeMusicTile1)</onclick>
-			<onclick condition="[IsEmpty(Skin.String(HomeMusicTile1.Path)) | !IsEmpty(Window.Property(EditTile))] + IsEmpty(Skin.String(HomeMusicTile1.Type))">Skin.SetString(HomeMusicTile1.Type,0)</onclick>
-			<onclick condition="[IsEmpty(Skin.String(HomeMusicTile1.Path)) | !IsEmpty(Window.Property(EditTile))] + IsEmpty(Skin.String(HomeMusicTile1.TypeName))">Skin.SetString(HomeMusicTile1.TypeName,$LOCALIZE[41145])</onclick>
-			<onclick condition="IsEmpty(Skin.String(HomeMusicTile1.Path)) | !IsEmpty(Window.Property(EditTile))">SetProperty(SingleDialog,eleven,3003)</onclick>
-			<onclick condition="IsEmpty(Skin.String(HomeMusicTile1.Path)) | !IsEmpty(Window.Property(EditTile))">SetProperty(Dialog,$LOCALIZE[41136],skinsettings)</onclick>
-			<onclick condition="IsEmpty(Skin.String(HomeMusicTile1.Path)) | !IsEmpty(Window.Property(EditTile))">ActivateWindow(3003)</onclick>
-			<onclick condition="!IsEmpty(Window.Property(EditTile))">ClearProperty(EditTile)</onclick>
-			<property name="Poster">$INFO[Skin.String(HomeMusicTile1.Icon)]</property>
-			<property name="showlabel">$INFO[Skin.String(HomeMusicTile1.ShowLabel)]</property>
-			<property name="path">$INFO[Skin.String(HomeMusicTile1.Path)]</property>
-			<property name="animate">$INFO[Skin.String(HomeMusicTile1.Animate)]</property>
-			<property name="musictile">1</property>
+			<label>$INFO[Skin.String(Home.Music.Tile.10.Label)]</label>
+			<onclick>SetFocus(525)</onclick>
+			<onclick condition="!stringcompare(Skin.String(Home.Music.Tile.10.Type),4) + !stringcompare(Skin.String(Home.Music.Tile.10.Type),5) + !stringcompare(Skin.String(Home.Music.Tile.10.Type),6) + !stringcompare(Skin.String(Home.Music.Tile.10.Type),7)">RunAddon($INFO[Skin.String(Home.Music.Tile.10.Path)])</onclick>
+			<onclick condition="stringcompare(Skin.String(Home.Music.Tile.10.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(Home.Music.Tile.10.Path)],return)</onclick>
+			<onclick condition="stringcompare(Skin.String(Home.Music.Tile.10.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(Home.Music.Tile.10.Path)],return)</onclick>
+			<onclick condition="[stringcompare(Skin.String(Home.Music.Tile.10.Type),6) | stringcompare(Skin.String(Home.Music.Tile.10.Type),7)]">$INFO[Skin.String(Home.Music.Tile.10.Path)]</onclick>
+			<property name="Poster">$INFO[Skin.String(Home.Music.Tile.10.Icon)]</property>
+			<property name="showlabel">$INFO[Skin.String(Home.Music.Tile.10.ShowLabel)]</property>
+			<property name="path">$INFO[Skin.String(Home.Music.Tile.10.Path)]</property>
+			<property name="animate">$INFO[Skin.String(Home.Music.Tile.10.Animate)]</property>
+			<property name="custom">1</property>
 			<visible>Container(525).HasFocus(3)</visible>
 		</item>
 		
@@ -888,134 +862,142 @@
 		
 		<!--PROGRAMS ITEMS-->
 		<item id="1">
-			<description>Programs</description>
-			<property name="Poster">windows/home/icons/appearance.png</property>
-			<label>$LOCALIZE[41504]</label>
+			<label>$INFO[Skin.String(Home.Programs.Tile.1.Label)]</label>
 			<onclick>SetFocus(525)</onclick>
-			<onclick>ActivateWindow(programs)</onclick>
+			<onclick condition="!stringcompare(Skin.String(Home.Programs.Tile.1.Type),4) + !stringcompare(Skin.String(Home.Programs.Tile.1.Type),5) + !stringcompare(Skin.String(Home.Programs.Tile.1.Type),6) + !stringcompare(Skin.String(Home.Programs.Tile.1.Type),7)">RunAddon($INFO[Skin.String(Home.Programs.Tile.1.Path)])</onclick>
+			<onclick condition="stringcompare(Skin.String(Home.Programs.Tile.1.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(Home.Programs.Tile.1.Path)],return)</onclick>
+			<onclick condition="stringcompare(Skin.String(Home.Programs.Tile.1.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(Home.Programs.Tile.1.Path)],return)</onclick>
+			<onclick condition="[stringcompare(Skin.String(Home.Programs.Tile.1.Type),6) | stringcompare(Skin.String(Home.Programs.Tile.1.Type),7)]">$INFO[Skin.String(Home.Programs.Tile.1.Path)]</onclick>
+			<property name="Poster">$INFO[Skin.String(Home.Programs.Tile.1.Icon)]</property>
+			<property name="showlabel">$INFO[Skin.String(Home.Programs.Tile.1.ShowLabel)]</property>
+			<property name="path">$INFO[Skin.String(Home.Programs.Tile.1.Path)]</property>
+			<property name="animate">$INFO[Skin.String(Home.Programs.Tile.1.Animate)]</property>
+			<property name="custom">1</property>
 			<visible>Container(525).HasFocus(7)</visible>
 		</item>
 		<item id="5">
-			<description>Games</description>
-			<property name="Poster">windows/home/icons/games.png</property>
-			<label>$LOCALIZE[15016]</label>
+			<label>$INFO[Skin.String(Home.Programs.Tile.2.Label)]</label>
 			<onclick>SetFocus(525)</onclick>
-			<onclick condition="IsEmpty(Skin.String(GameTile.Path)) + !Skin.HasSetting(UseRCB)">ActivateWindow(10001,plugin://plugin.program.advanced.launcher,return)</onclick>
-			<onclick condition="!IsEmpty(Skin.String(GameTile.Path)) + !Skin.HasSetting(UseRCB)">ActivateWindow(10001,$INFO[Skin.String(GameTile.Path)],return)</onclick>
-			<onclick condition="Skin.HasSetting(UseRCB)">RunScript(script.games.rom.collection.browser)</onclick>
+			<onclick condition="!stringcompare(Skin.String(Home.Programs.Tile.2.Type),4) + !stringcompare(Skin.String(Home.Programs.Tile.2.Type),5) + !stringcompare(Skin.String(Home.Programs.Tile.2.Type),6) + !stringcompare(Skin.String(Home.Programs.Tile.2.Type),7)">RunAddon($INFO[Skin.String(Home.Programs.Tile.2.Path)])</onclick>
+			<onclick condition="stringcompare(Skin.String(Home.Programs.Tile.2.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(Home.Programs.Tile.2.Path)],return)</onclick>
+			<onclick condition="stringcompare(Skin.String(Home.Programs.Tile.2.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(Home.Programs.Tile.2.Path)],return)</onclick>
+			<onclick condition="[stringcompare(Skin.String(Home.Programs.Tile.2.Type),6) | stringcompare(Skin.String(Home.Programs.Tile.2.Type),7)]">$INFO[Skin.String(Home.Programs.Tile.2.Path)]</onclick>
+			<property name="Poster">$INFO[Skin.String(Home.Programs.Tile.2.Icon)]</property>
+			<property name="showlabel">$INFO[Skin.String(Home.Programs.Tile.2.ShowLabel)]</property>
+			<property name="path">$INFO[Skin.String(Home.Programs.Tile.2.Path)]</property>
+			<property name="animate">$INFO[Skin.String(Home.Programs.Tile.2.Animate)]</property>
+			<property name="custom">1</property>
 			<visible>Container(525).HasFocus(7)</visible>
 		</item>
 		<item id="6">
-			<description>Pictures</description>
-			<property name="Poster">windows/home/icons/pictures.png</property>
-			<label>$LOCALIZE[1]</label>
+			<label>$INFO[Skin.String(Home.Programs.Tile.3.Label)]</label>
 			<onclick>SetFocus(525)</onclick>
-			<onclick>ActivateWindow(pictures)</onclick>
+			<onclick condition="!stringcompare(Skin.String(Home.Programs.Tile.3.Type),4) + !stringcompare(Skin.String(Home.Programs.Tile.3.Type),5) + !stringcompare(Skin.String(Home.Programs.Tile.3.Type),6) + !stringcompare(Skin.String(Home.Programs.Tile.3.Type),7)">RunAddon($INFO[Skin.String(Home.Programs.Tile.3.Path)])</onclick>
+			<onclick condition="stringcompare(Skin.String(Home.Programs.Tile.3.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(Home.Programs.Tile.3.Path)],return)</onclick>
+			<onclick condition="stringcompare(Skin.String(Home.Programs.Tile.3.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(Home.Programs.Tile.3.Path)],return)</onclick>
+			<onclick condition="[stringcompare(Skin.String(Home.Programs.Tile.3.Type),6) | stringcompare(Skin.String(Home.Programs.Tile.3.Type),7)]">$INFO[Skin.String(Home.Programs.Tile.3.Path)]</onclick>
+			<property name="Poster">$INFO[Skin.String(Home.Programs.Tile.3.Icon)]</property>
+			<property name="showlabel">$INFO[Skin.String(Home.Programs.Tile.3.ShowLabel)]</property>
+			<property name="path">$INFO[Skin.String(Home.Programs.Tile.3.Path)]</property>
+			<property name="animate">$INFO[Skin.String(Home.Programs.Tile.3.Animate)]</property>
+			<property name="custom">1</property>
 			<visible>Container(525).HasFocus(7)</visible>
 		</item>
 		<item id="2">
-			<description>Addons</description>
-			<property name="Poster">windows/home/icons/addons.png</property>
-			<label>$LOCALIZE[24001]</label>
+			<label>$INFO[Skin.String(Home.Programs.Tile.4.Label)]</label>
 			<onclick>SetFocus(525)</onclick>
-			<onclick>ActivateWindow(programs,addons,return)</onclick>
+			<onclick condition="!stringcompare(Skin.String(Home.Programs.Tile.4.Type),4) + !stringcompare(Skin.String(Home.Programs.Tile.4.Type),5) + !stringcompare(Skin.String(Home.Programs.Tile.4.Type),6) + !stringcompare(Skin.String(Home.Programs.Tile.4.Type),7)">RunAddon($INFO[Skin.String(Home.Programs.Tile.4.Path)])</onclick>
+			<onclick condition="stringcompare(Skin.String(Home.Programs.Tile.4.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(Home.Programs.Tile.4.Path)],return)</onclick>
+			<onclick condition="stringcompare(Skin.String(Home.Programs.Tile.4.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(Home.Programs.Tile.4.Path)],return)</onclick>
+			<onclick condition="[stringcompare(Skin.String(Home.Programs.Tile.4.Type),6) | stringcompare(Skin.String(Home.Programs.Tile.4.Type),7)]">$INFO[Skin.String(Home.Programs.Tile.4.Path)]</onclick>
+			<property name="Poster">$INFO[Skin.String(Home.Programs.Tile.4.Icon)]</property>
+			<property name="showlabel">$INFO[Skin.String(Home.Programs.Tile.4.ShowLabel)]</property>
+			<property name="path">$INFO[Skin.String(Home.Programs.Tile.4.Path)]</property>
+			<property name="animate">$INFO[Skin.String(Home.Programs.Tile.4.Animate)]</property>
+			<property name="custom">1</property>
 			<visible>Container(525).HasFocus(7)</visible>
 		</item>
 		<item id="3">
-			<description>File Manager</description>
-			<label>$LOCALIZE[7]</label>
+			<label>$INFO[Skin.String(Home.Programs.Tile.5.Label)]</label>
 			<onclick>SetFocus(525)</onclick>
-			<onclick>ActivateWindow(filemanager)</onclick>
-			<visible>System.Loggedon</visible>
-			<property name="Poster">windows/home/icons/folder.png</property>
+			<onclick condition="!stringcompare(Skin.String(Home.Programs.Tile.5.Type),4) + !stringcompare(Skin.String(Home.Programs.Tile.5.Type),5) + !stringcompare(Skin.String(Home.Programs.Tile.5.Type),6) + !stringcompare(Skin.String(Home.Programs.Tile.5.Type),7)">RunAddon($INFO[Skin.String(Home.Programs.Tile.5.Path)])</onclick>
+			<onclick condition="stringcompare(Skin.String(Home.Programs.Tile.5.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(Home.Programs.Tile.5.Path)],return)</onclick>
+			<onclick condition="stringcompare(Skin.String(Home.Programs.Tile.5.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(Home.Programs.Tile.5.Path)],return)</onclick>
+			<onclick condition="[stringcompare(Skin.String(Home.Programs.Tile.5.Type),6) | stringcompare(Skin.String(Home.Programs.Tile.5.Type),7)]">$INFO[Skin.String(Home.Programs.Tile.5.Path)]</onclick>
+			<property name="Poster">$INFO[Skin.String(Home.Programs.Tile.5.Icon)]</property>
+			<property name="showlabel">$INFO[Skin.String(Home.Programs.Tile.5.ShowLabel)]</property>
+			<property name="path">$INFO[Skin.String(Home.Programs.Tile.5.Path)]</property>
+			<property name="animate">$INFO[Skin.String(Home.Programs.Tile.5.Animate)]</property>
+			<property name="custom">1</property>
 			<visible>Container(525).HasFocus(7)</visible>                    
 		</item>
 		<item id="4">
-			<description>Favourites</description>
-			<property name="Poster">windows/home/icons/star.png</property>
-			<label>$LOCALIZE[1036]</label>
+			<label>$INFO[Skin.String(Home.Programs.Tile.6.Label)]</label>
 			<onclick>SetFocus(525)</onclick>
-			<onclick>ActivateWindow(Favourites)</onclick>
-			<visible>true</visible>
+			<onclick condition="!stringcompare(Skin.String(Home.Programs.Tile.6.Type),4) + !stringcompare(Skin.String(Home.Programs.Tile.6.Type),5) + !stringcompare(Skin.String(Home.Programs.Tile.6.Type),6) + !stringcompare(Skin.String(Home.Programs.Tile.6.Type),7)">RunAddon($INFO[Skin.String(Home.Programs.Tile.6.Path)])</onclick>
+			<onclick condition="stringcompare(Skin.String(Home.Programs.Tile.6.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(Home.Programs.Tile.6.Path)],return)</onclick>
+			<onclick condition="stringcompare(Skin.String(Home.Programs.Tile.6.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(Home.Programs.Tile.6.Path)],return)</onclick>
+			<onclick condition="[stringcompare(Skin.String(Home.Programs.Tile.6.Type),6) | stringcompare(Skin.String(Home.Programs.Tile.6.Type),7)]">$INFO[Skin.String(Home.Programs.Tile.6.Path)]</onclick>
+			<property name="Poster">$INFO[Skin.String(Home.Programs.Tile.6.Icon)]</property>
+			<property name="showlabel">$INFO[Skin.String(Home.Programs.Tile.6.ShowLabel)]</property>
+			<property name="path">$INFO[Skin.String(Home.Programs.Tile.6.Path)]</property>
+			<property name="animate">$INFO[Skin.String(Home.Programs.Tile.6.Animate)]</property>
+			<property name="custom">1</property>
 			<visible>Container(525).HasFocus(7)</visible>
 		</item>
 		<item id="7">
-			<label>$INFO[Skin.String(HomeProgramTile1.Label)]</label>
-			<onclick condition="IsEmpty(Window.Property(EditTile)) + !stringcompare(Skin.String(HomeProgramTile1.Type),4) + !stringcompare(Skin.String(HomeProgramTile1.Type),5) + !stringcompare(Skin.String(HomeProgramTile1.Type),6) + !stringcompare(Skin.String(HomeProgramTile1.Type),7)">RunAddon($INFO[Skin.String(HomeProgramTile1.Path)])</onclick>
-			<onclick condition="IsEmpty(Window.Property(EditTile)) + stringcompare(Skin.String(HomeProgramTile1.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(HomeProgramTile1.Path)],return)</onclick>
-			<onclick condition="IsEmpty(Window.Property(EditTile)) + stringcompare(Skin.String(HomeProgramTile1.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(HomeProgramTile1.Path)],return)</onclick>
-			<onclick condition="IsEmpty(Window.Property(EditTile)) + [stringcompare(Skin.String(HomeProgramTile1.Type),6) | stringcompare(Skin.String(HomeProgramTile1.Type),7)]">$INFO[Skin.String(HomeProgramTile1.Path)]</onclick>
-			<onclick condition="IsEmpty(Skin.String(HomeProgramTile1.Path)) | !IsEmpty(Window.Property(EditTile))">Skin.SetBool(HomeProgramTile1)</onclick>
-			<onclick condition="[IsEmpty(Skin.String(HomeProgramTile1.Path)) | !IsEmpty(Window.Property(EditTile))] + IsEmpty(Skin.String(HomeProgramTile1.Type))">Skin.SetString(HomeProgramTile1.Type,0)</onclick>
-			<onclick condition="[IsEmpty(Skin.String(HomeProgramTile1.Path)) | !IsEmpty(Window.Property(EditTile))] + IsEmpty(Skin.String(HomeProgramTile1.TypeName))">Skin.SetString(HomeProgramTile1.TypeName,$LOCALIZE[41145])</onclick>
-			<onclick condition="IsEmpty(Skin.String(HomeProgramTile1.Path)) | !IsEmpty(Window.Property(EditTile))">SetProperty(SingleDialog,seven,3003)</onclick>
-			<onclick condition="IsEmpty(Skin.String(HomeProgramTile1.Path)) | !IsEmpty(Window.Property(EditTile))">SetProperty(Dialog,$LOCALIZE[41136],skinsettings)</onclick>
-			<onclick condition="IsEmpty(Skin.String(HomeProgramTile1.Path)) | !IsEmpty(Window.Property(EditTile))">ActivateWindow(3003)</onclick>
-			<onclick condition="!IsEmpty(Window.Property(EditTile))">ClearProperty(EditTile)</onclick>
-			<property name="Poster">$INFO[Skin.String(HomeProgramTile1.Icon)]</property>
-			<property name="showlabel">$INFO[Skin.String(HomeProgramTile1.ShowLabel)]</property>
-			<property name="path">$INFO[Skin.String(HomeProgramTile1.Path)]</property>
-			<property name="animate">$INFO[Skin.String(HomeProgramTile1.Animate)]</property>
+			<label>$INFO[Skin.String(Home.Programs.Tile.7.Label)]</label>
+			<onclick>SetFocus(525)</onclick>
+			<onclick condition="!stringcompare(Skin.String(Home.Programs.Tile.7.Type),4) + !stringcompare(Skin.String(Home.Programs.Tile.7.Type),5) + !stringcompare(Skin.String(Home.Programs.Tile.7.Type),6) + !stringcompare(Skin.String(Home.Programs.Tile.7.Type),7)">RunAddon($INFO[Skin.String(Home.Programs.Tile.7.Path)])</onclick>
+			<onclick condition="stringcompare(Skin.String(Home.Programs.Tile.7.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(Home.Programs.Tile.7.Path)],return)</onclick>
+			<onclick condition="stringcompare(Skin.String(Home.Programs.Tile.7.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(Home.Programs.Tile.7.Path)],return)</onclick>
+			<onclick condition="[stringcompare(Skin.String(Home.Programs.Tile.7.Type),6) | stringcompare(Skin.String(Home.Programs.Tile.7.Type),7)]">$INFO[Skin.String(Home.Programs.Tile.7.Path)]</onclick>
+			<property name="Poster">$INFO[Skin.String(Home.Programs.Tile.7.Icon)]</property>
+			<property name="showlabel">$INFO[Skin.String(Home.Programs.Tile.7.ShowLabel)]</property>
+			<property name="path">$INFO[Skin.String(Home.Programs.Tile.7.Path)]</property>
+			<property name="animate">$INFO[Skin.String(Home.Programs.Tile.7.Animate)]</property>
 			<property name="custom">1</property>
 			<visible>Container(525).HasFocus(7)</visible>
 		</item>
 		<item id="8">
-			<label>$INFO[Skin.String(HomeProgramTile2.Label)]</label>
-			<onclick condition="IsEmpty(Window.Property(EditTile)) + !stringcompare(Skin.String(HomeProgramTile2.Type),4) + !stringcompare(Skin.String(HomeProgramTile2.Type),5) + !stringcompare(Skin.String(HomeProgramTile2.Type),6) + !stringcompare(Skin.String(HomeProgramTile2.Type),7)">RunAddon($INFO[Skin.String(HomeProgramTile2.Path)])</onclick>
-			<onclick condition="IsEmpty(Window.Property(EditTile)) + stringcompare(Skin.String(HomeProgramTile2.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(HomeProgramTile2.Path)],return)</onclick>
-			<onclick condition="IsEmpty(Window.Property(EditTile)) + stringcompare(Skin.String(HomeProgramTile2.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(HomeProgramTile2.Path)],return)</onclick>
-			<onclick condition="IsEmpty(Window.Property(EditTile)) + [stringcompare(Skin.String(HomeProgramTile2.Type),6) | stringcompare(Skin.String(HomeProgramTile2.Type),7)]">$INFO[Skin.String(HomeProgramTile2.Path)]</onclick>
-			<onclick condition="IsEmpty(Skin.String(HomeProgramTile2.Path)) | !IsEmpty(Window.Property(EditTile))">Skin.SetBool(HomeProgramTile2)</onclick>
-			<onclick condition="[IsEmpty(Skin.String(HomeProgramTile2.Path)) | !IsEmpty(Window.Property(EditTile))] + IsEmpty(Skin.String(HomeProgramTile2.Type))">Skin.SetString(HomeProgramTile2.Type,0)</onclick>
-			<onclick condition="[IsEmpty(Skin.String(HomeProgramTile2.Path)) | !IsEmpty(Window.Property(EditTile))] + IsEmpty(Skin.String(HomeProgramTile2.TypeName))">Skin.SetString(HomeProgramTile2.TypeName,$LOCALIZE[41145])</onclick>
-			<onclick condition="IsEmpty(Skin.String(HomeProgramTile2.Path)) | !IsEmpty(Window.Property(EditTile))">SetProperty(SingleDialog,eight,3003)</onclick>
-			<onclick condition="IsEmpty(Skin.String(HomeProgramTile2.Path)) | !IsEmpty(Window.Property(EditTile))">SetProperty(Dialog,$LOCALIZE[41136],skinsettings)</onclick>
-			<onclick condition="IsEmpty(Skin.String(HomeProgramTile2.Path)) | !IsEmpty(Window.Property(EditTile))">ActivateWindow(3003)</onclick>
-			<onclick condition="!IsEmpty(Window.Property(EditTile))">ClearProperty(EditTile)</onclick>
-			<property name="Poster">$INFO[Skin.String(HomeProgramTile2.Icon)]</property>
-			<property name="showlabel">$INFO[Skin.String(HomeProgramTile2.ShowLabel)]</property>
-			<property name="path">$INFO[Skin.String(HomeProgramTile2.Path)]</property>
-			<property name="animate">$INFO[Skin.String(HomeProgramTile2.Animate)]</property>
+			<label>$INFO[Skin.String(Home.Programs.Tile.8.Label)]</label>
+			<onclick>SetFocus(525)</onclick>
+			<onclick condition="!stringcompare(Skin.String(Home.Programs.Tile.8.Type),4) + !stringcompare(Skin.String(Home.Programs.Tile.8.Type),5) + !stringcompare(Skin.String(Home.Programs.Tile.8.Type),6) + !stringcompare(Skin.String(Home.Programs.Tile.8.Type),7)">RunAddon($INFO[Skin.String(Home.Programs.Tile.8.Path)])</onclick>
+			<onclick condition="stringcompare(Skin.String(Home.Programs.Tile.8.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(Home.Programs.Tile.8.Path)],return)</onclick>
+			<onclick condition="stringcompare(Skin.String(Home.Programs.Tile.8.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(Home.Programs.Tile.8.Path)],return)</onclick>
+			<onclick condition="[stringcompare(Skin.String(Home.Programs.Tile.8.Type),6) | stringcompare(Skin.String(Home.Programs.Tile.8.Type),7)]">$INFO[Skin.String(Home.Programs.Tile.8.Path)]</onclick>
+			<property name="Poster">$INFO[Skin.String(Home.Programs.Tile.8.Icon)]</property>
+			<property name="showlabel">$INFO[Skin.String(Home.Programs.Tile.8.ShowLabel)]</property>
+			<property name="path">$INFO[Skin.String(Home.Programs.Tile.8.Path)]</property>
+			<property name="animate">$INFO[Skin.String(Home.Programs.Tile.8.Animate)]</property>
 			<property name="custom">1</property>
 			<visible>Container(525).HasFocus(7)</visible>
 		</item>
 		<item id="9">
-			<label>$INFO[Skin.String(HomeProgramTile3.Label)]</label>
-			<onclick condition="IsEmpty(Window.Property(EditTile)) + !stringcompare(Skin.String(HomeProgramTile3.Type),4) + !stringcompare(Skin.String(HomeProgramTile3.Type),5) + !stringcompare(Skin.String(HomeProgramTile3.Type),6) + !stringcompare(Skin.String(HomeProgramTile3.Type),7)">RunAddon($INFO[Skin.String(HomeProgramTile3.Path)])</onclick>
-			<onclick condition="IsEmpty(Window.Property(EditTile)) + stringcompare(Skin.String(HomeProgramTile3.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(HomeProgramTile3.Path)],return)</onclick>
-			<onclick condition="IsEmpty(Window.Property(EditTile)) + stringcompare(Skin.String(HomeProgramTile3.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(HomeProgramTile3.Path)],return)</onclick>
-			<onclick condition="IsEmpty(Window.Property(EditTile)) + [stringcompare(Skin.String(HomeProgramTile3.Type),6) | stringcompare(Skin.String(HomeProgramTile3.Type),7)]">$INFO[Skin.String(HomeProgramTile3.Path)]</onclick>
-			<onclick condition="IsEmpty(Skin.String(HomeProgramTile3.Path)) | !IsEmpty(Window.Property(EditTile))">Skin.SetBool(HomeProgramTile3)</onclick>
-			<onclick condition="[IsEmpty(Skin.String(HomeProgramTile3.Path)) | !IsEmpty(Window.Property(EditTile))] + IsEmpty(Skin.String(HomeProgramTile3.Type))">Skin.SetString(HomeProgramTile3.Type,0)</onclick>
-			<onclick condition="[IsEmpty(Skin.String(HomeProgramTile3.Path)) | !IsEmpty(Window.Property(EditTile))] + IsEmpty(Skin.String(HomeProgramTile3.TypeName))">Skin.SetString(HomeProgramTile3.TypeName,$LOCALIZE[41145])</onclick>
-			<onclick condition="IsEmpty(Skin.String(HomeProgramTile3.Path)) | !IsEmpty(Window.Property(EditTile))">SetProperty(SingleDialog,nine,3003)</onclick>
-			<onclick condition="IsEmpty(Skin.String(HomeProgramTile3.Path)) | !IsEmpty(Window.Property(EditTile))">SetProperty(Dialog,$LOCALIZE[41136],skinsettings)</onclick>
-			<onclick condition="IsEmpty(Skin.String(HomeProgramTile3.Path)) | !IsEmpty(Window.Property(EditTile))">ActivateWindow(3003)</onclick>
-			<onclick condition="!IsEmpty(Window.Property(EditTile))">ClearProperty(EditTile)</onclick>
-			<property name="Poster">$INFO[Skin.String(HomeProgramTile3.Icon)]</property>
-			<property name="showlabel">$INFO[Skin.String(HomeProgramTile3.ShowLabel)]</property>
-			<property name="path">$INFO[Skin.String(HomeProgramTile3.Path)]</property>
-			<property name="animate">$INFO[Skin.String(HomeProgramTile3.Animate)]</property>
+			<label>$INFO[Skin.String(Home.Programs.Tile.9.Label)]</label>
+			<onclick>SetFocus(525)</onclick>
+			<onclick condition="!stringcompare(Skin.String(Home.Programs.Tile.9.Type),4) + !stringcompare(Skin.String(Home.Programs.Tile.9.Type),5) + !stringcompare(Skin.String(Home.Programs.Tile.9.Type),6) + !stringcompare(Skin.String(Home.Programs.Tile.9.Type),7)">RunAddon($INFO[Skin.String(Home.Programs.Tile.9.Path)])</onclick>
+			<onclick condition="stringcompare(Skin.String(Home.Programs.Tile.9.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(Home.Programs.Tile.9.Path)],return)</onclick>
+			<onclick condition="stringcompare(Skin.String(Home.Programs.Tile.9.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(Home.Programs.Tile.9.Path)],return)</onclick>
+			<onclick condition="[stringcompare(Skin.String(Home.Programs.Tile.9.Type),6) | stringcompare(Skin.String(Home.Programs.Tile.9.Type),7)]">$INFO[Skin.String(Home.Programs.Tile.9.Path)]</onclick>
+			<property name="Poster">$INFO[Skin.String(Home.Programs.Tile.9.Icon)]</property>
+			<property name="showlabel">$INFO[Skin.String(Home.Programs.Tile.9.ShowLabel)]</property>
+			<property name="path">$INFO[Skin.String(Home.Programs.Tile.9.Path)]</property>
+			<property name="animate">$INFO[Skin.String(Home.Programs.Tile.9.Animate)]</property>
 			<property name="custom">1</property>
 			<visible>Container(525).HasFocus(7)</visible>
 		</item>
 		<item id="10">
-			<label>$INFO[Skin.String(HomeProgramTile4.Label)]</label>
-			<onclick condition="IsEmpty(Window.Property(EditTile)) + !stringcompare(Skin.String(HomeProgramTile4.Type),4) + !stringcompare(Skin.String(HomeProgramTile4.Type),5) + !stringcompare(Skin.String(HomeProgramTile4.Type),6) + !stringcompare(Skin.String(HomeProgramTile4.Type),7)">RunAddon($INFO[Skin.String(HomeProgramTile4.Path)])</onclick>
-			<onclick condition="IsEmpty(Window.Property(EditTile)) + stringcompare(Skin.String(HomeProgramTile4.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(HomeProgramTile4.Path)],return)</onclick>
-			<onclick condition="IsEmpty(Window.Property(EditTile)) + stringcompare(Skin.String(HomeProgramTile4.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(HomeProgramTile4.Path)],return)</onclick>
-			<onclick condition="IsEmpty(Window.Property(EditTile)) + [stringcompare(Skin.String(HomeProgramTile4.Type),6) | stringcompare(Skin.String(HomeProgramTile4.Type),7)]">$INFO[Skin.String(HomeProgramTile4.Path)]</onclick>
-			<onclick condition="IsEmpty(Skin.String(HomeProgramTile4.Path)) | !IsEmpty(Window.Property(EditTile))">Skin.SetBool(HomeProgramTile4)</onclick>
-			<onclick condition="[IsEmpty(Skin.String(HomeProgramTile4.Path)) | !IsEmpty(Window.Property(EditTile))] + IsEmpty(Skin.String(HomeProgramTile4.Type))">Skin.SetString(HomeProgramTile4.Type,0)</onclick>
-			<onclick condition="[IsEmpty(Skin.String(HomeProgramTile4.Path)) | !IsEmpty(Window.Property(EditTile))] + IsEmpty(Skin.String(HomeProgramTile4.TypeName))">Skin.SetString(HomeProgramTile4.TypeName,$LOCALIZE[41145])</onclick>
-			<onclick condition="IsEmpty(Skin.String(HomeProgramTile4.Path)) | !IsEmpty(Window.Property(EditTile))">SetProperty(SingleDialog,ten,3003)</onclick>
-			<onclick condition="IsEmpty(Skin.String(HomeProgramTile4.Path)) | !IsEmpty(Window.Property(EditTile))">SetProperty(Dialog,$LOCALIZE[41136],skinsettings)</onclick>
-			<onclick condition="IsEmpty(Skin.String(HomeProgramTile4.Path)) | !IsEmpty(Window.Property(EditTile))">ActivateWindow(3003)</onclick>
-			<onclick condition="!IsEmpty(Window.Property(EditTile))">ClearProperty(EditTile)</onclick>
-			<property name="Poster">$INFO[Skin.String(HomeProgramTile4.Icon)]</property>
-			<property name="showlabel">$INFO[Skin.String(HomeProgramTile4.ShowLabel)]</property>
-			<property name="path">$INFO[Skin.String(HomeProgramTile4.Path)]</property>
-			<property name="animate">$INFO[Skin.String(HomeProgramTile4.Animate)]</property>
+			<label>$INFO[Skin.String(Home.Programs.Tile.10.Label)]</label>
+			<onclick>SetFocus(525)</onclick>
+			<onclick condition="!stringcompare(Skin.String(Home.Programs.Tile.10.Type),4) + !stringcompare(Skin.String(Home.Programs.Tile.10.Type),5) + !stringcompare(Skin.String(Home.Programs.Tile.10.Type),6) + !stringcompare(Skin.String(Home.Programs.Tile.10.Type),7)">RunAddon($INFO[Skin.String(Home.Programs.Tile.10.Path)])</onclick>
+			<onclick condition="stringcompare(Skin.String(Home.Programs.Tile.10.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(Home.Programs.Tile.10.Path)],return)</onclick>
+			<onclick condition="stringcompare(Skin.String(Home.Programs.Tile.10.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(Home.Programs.Tile.10.Path)],return)</onclick>
+			<onclick condition="[stringcompare(Skin.String(Home.Programs.Tile.10.Type),6) | stringcompare(Skin.String(Home.Programs.Tile.10.Type),7)]">$INFO[Skin.String(Home.Programs.Tile.10.Path)]</onclick>
+			<property name="Poster">$INFO[Skin.String(Home.Programs.Tile.10.Icon)]</property>
+			<property name="showlabel">$INFO[Skin.String(Home.Programs.Tile.10.ShowLabel)]</property>
+			<property name="path">$INFO[Skin.String(Home.Programs.Tile.10.Path)]</property>
+			<property name="animate">$INFO[Skin.String(Home.Programs.Tile.10.Animate)]</property>
 			<property name="custom">1</property>
 			<visible>Container(525).HasFocus(7)</visible>
 		</item>

@@ -7,21 +7,14 @@
 	        <include>FullscreenDimensions</include>
 	        <animation effect="slide" end="0,42" time="0" condition="!Window.IsActive(videoosd)">Conditional</animation>
             <control type="image">
-                <posx>81</posx>
-				<posy>40</posy>
-				<width>718</width>
-				<height>920</height>
-                <texture border="25">views/newgloss/border-glass.png</texture>
-                <colordiffuse>88ffffff</colordiffuse>
-            </control>
-            <control type="image">
                 <posx>79</posx>
 				<posy>38</posy>
 				<width>722</width>
 				<height>924</height>
                 <texture border="20">arctic/common/panel.png</texture>
-                <bordertexture border="40">arctic/common/border-20.png</bordertexture>
+                <bordertexture border="40">arctic/common/banner-20.png</bordertexture>
                 <bordersize>20</bordersize>
+                <colordiffuse>bbwhite</colordiffuse>
             </control>
             <control type="image">
                 <posx>99</posx>
@@ -30,6 +23,14 @@
 				<height>760</height>
                 <texture border="35">arctic/common/whitepanel8.png</texture>
                 <aspectratio>stretch</aspectratio>
+                <colordiffuse>ddwhite</colordiffuse>
+            </control>
+            <control type="image">
+                <posx>35</posx>
+				<posy>-6</posy>
+				<width>810</width>
+				<height>1012</height>
+                <texture border="80">arctic/common/border-64.png</texture>
             </control>
             <control type="group">
                 <visible>!Window.IsActive(DialogPVRGuideInfo.xml)</visible>
@@ -72,7 +73,7 @@
                             <width>680</width>
                             <height>96</height>
                             <texture border="90,3,90,3">views/list/other/separator.png</texture>
-                            <colordiffuse>55ffffff</colordiffuse>
+                            <colordiffuse>2Fffffff</colordiffuse>
                         </control>
                         <control type="image">
                             <posx>0</posx>
@@ -227,7 +228,7 @@
                             <width>680</width>
                             <height>96</height>
                             <texture border="90,3,90,3">views/list/other/separator.png</texture>
-                            <colordiffuse>55ffffff</colordiffuse>
+                            <colordiffuse>2Fffffff</colordiffuse>
                         </control>
                         <control type="image">
                             <posx>0</posx>

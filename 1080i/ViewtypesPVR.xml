@@ -54,15 +54,6 @@
                     <effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
                     <effect type="zoom" start="100" end="85" time="300" center="960,600" tween="sine" easing="out" />
                 </animation>
-				<control type="image">
-					<posx>130</posx>
-					<posy>200</posy>
-					<height>707</height>
-					<width>1650</width>
-					<texture border="25">views/newgloss/border-glass.png</texture>
-					<colordiffuse>77ffffff</colordiffuse>
-					<visible>!Skin.HasSetting(hide.glass)</visible>
-				</control>
 
                 <control type="group">
                     <description>Channel Preview + Info</description>
@@ -1157,7 +1148,7 @@
 						<posx>0</posx>
 						<posy>70</posy>
 						<width>1030</width>
-						<height>135</height>
+						<height>160</height>
 						<font>Font-Condensed-S33</font>
 						<align>justify</align>
 						<textcolor>mod-infotags-alt</textcolor>

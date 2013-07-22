@@ -146,9 +146,9 @@
 							<control type="textbox">
 								<description>Plot</description>
 								<posx>0</posx>
-								<posy>62</posy>
+								<posy>70</posy>
 								<width>660</width>
-								<height>140</height>
+								<height>130</height>
 								<label>$INFO[ListItem.Property(Album_Description)]</label>
 								<align>justify</align>
 								<textcolor>mod-infotags-alt2</textcolor>
@@ -159,9 +159,9 @@
 							<control type="textbox">
 								<description>Plot</description>
 								<posx>0</posx>
-								<posy>62</posy>
+								<posy>70</posy>
 								<width>660</width>
-								<height>140</height>
+								<height>130</height>
 								<label>$INFO[ListItem.Property(Artist_Description)]</label>
 								<align>justify</align>
 								<textcolor>mod-infotags-alt2</textcolor>
@@ -223,9 +223,9 @@
 							<control type="textbox">
 								<description>Plot</description>
 								<posx>0</posx>
-								<posy>62</posy>
+								<posy>70</posy>
 								<width>660</width>
-								<height>140</height>
+								<height>130</height>
 								<label>$INFO[ListItem.Property(Album_Description)]</label>
 								<align>justify</align>
 								<textcolor>mod-infotags-alt2</textcolor>
@@ -236,9 +236,9 @@
 							<control type="textbox">
 								<description>Plot</description>
 								<posx>0</posx>
-								<posy>62</posy>
+								<posy>70</posy>
 								<width>660</width>
-								<height>140</height>
+								<height>130</height>
 								<label>$INFO[ListItem.Property(Artist_Description)]</label>
 								<align>justify</align>
 								<textcolor>mod-infotags-alt2</textcolor>

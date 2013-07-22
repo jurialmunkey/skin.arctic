@@ -25,7 +25,8 @@
                 <effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
                 <effect type="zoom" start="100" end="85" time="300" center="960,600" tween="sine" easing="out" />
             </animation>
-           
+            <animation effect="slide" end="-115" time="425" tween="cubic" easing="out" condition="!Control.HasFocus(30)">Conditional</animation>
+
             <visible>!Window.IsActive(favourites)</visible>
             <!-- Categories -->
             <control type="group">
@@ -38,6 +39,7 @@
 					<effect type="slide" end="190" start="10" tween="cubic" easing="out" time="745" delay="0" />
 					<effect type="fade" end="0" start="100" time="0" delay="450" />
 				</animation>
+				<animation effect="slide" end="230" time="425" tween="cubic" easing="out"  condition="!Control.HasFocus(30)">Conditional</animation>
 				<control type="image">
                     <posx>160</posx>
                     <posy>290</posy>
@@ -63,7 +65,7 @@
                             <posy>0</posy>
                             <width>360</width>
                             <height>77</height>
-                            <texture border="90,3,90,3">views/list/other/separator-l.png</texture>
+                            <texture border="90,3,90,3">views/list/other/separator.png</texture>
                         </control>
                         <control type="image">
                             <posx>-6</posx>
@@ -177,24 +179,25 @@
 					<effect type="zoom" start="76" end="100" center="1344,560" tween="cubic" easing="out" time="400" delay="75" /> 
 					<effect type="slide" start="-190" end="-10" tween="cubic" easing="out" time="545" delay="350" />
 				</animation>
-				<animation type="WindowClose">
+				<animation type="WindowClose" condition="Control.HasFocus(30)">
 					<effect type="slide" end="-190" start="-10" tween="cubic" easing="out" time="545" delay="0" />
+				</animation>
+				<animation type="WindowClose" condition="!Control.HasFocus(30)">
+					<effect type="slide" end="-75" start="-10" tween="cubic" easing="out" time="545" delay="0" />
 				</animation>
 				<control type="image">
                     <posx>356</posx>
                     <posy>281</posy>
-                    <height>606</height>
-                    <width>1211</width>
-                    <texture border="35">arctic/common/panel.png</texture>
+                    <height>609</height>
+                    <width>1210</width>
+                    <texture border="50">arctic/common/panel.png</texture>
                 </control>
                 <control type="image">
-                    <posx>335</posx>
-                    <posy>260</posy>
-                    <height>648</height>
-                    <width>1252</width>
-                    <texture border="35">arctic/common/whitepanel8.png</texture>
-                    <bordertexture border="35">arctic/common/border-20.png</bordertexture>
-                    <bordersize>20</bordersize>
+                    <posx>355</posx>
+                    <posy>280</posy>
+                    <height>611</height>
+                    <width>1212</width>
+                    <texture border="50">arctic/common/whitepanel8.png</texture>
                 </control>
                 
                 <control type="group">
@@ -301,7 +304,7 @@
 							<width>1210</width>
 							<include>SettingsCategoryDefaultButtonVars</include>
 							<onclick>SetProperty(Dialog,$LOCALIZE[41136])</onclick>
-							<onclick>ActivateWindow(3003)</onclick>
+							<onclick>ActivateWindow(3054)</onclick>
 							<label>$LOCALIZE[41136]</label>
 						</control>
 						<control type="button" id="2003">
@@ -593,6 +596,13 @@
 							<label> • $LOCALIZE[41105]</label>
 						</control>
 						<control type="radiobutton" id="8005">
+							<width>1210</width>
+							<include>SettingsCategoryRadioButtonVars</include>
+							<selected>!Skin.HasSetting(videoosd.showposter)</selected>
+							<onclick>Skin.ToggleSetting(videoosd.showposter)</onclick>
+							<label>Prefer logo for video osd</label>
+						</control>
+						<control type="radiobutton" id="8007">
 							<width>1210</width>
 							<include>SettingsCategoryRadioButtonVars</include>
 							<selected>Skin.HasSetting(CDArt.Enabled)</selected>
@@ -1095,6 +1105,13 @@
                     <showonepage>false</showonepage>
                     <orientation>vertical</orientation>
                     <animation effect="fade" start="45" end="0" time="300" tween="sine" easing="inout" condition="!Control.IsVisible(41)">Conditional</animation>
+                </control>
+                <control type="image">
+                    <posx>335</posx>
+                    <posy>260</posy>
+                    <height>651</height>
+                    <width>1252</width>
+                    <texture border="70">arctic/common/border-20.png</texture>
                 </control>
             </control>
         </control>

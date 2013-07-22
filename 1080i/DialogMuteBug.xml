@@ -22,16 +22,18 @@
             </animation>
 
             <control type="image">
-                <posx>1726</posx>
-                <posy>43</posy>
-                <width>108</width>
-                <height>108</height>
-                <texture border="35">views/newgloss/whitepanel-15.png</texture>
+                <posx>1721</posx>
+                <posy>38</posy>
+                <width>118</width>
+                <height>118</height>
+                <bordertexture border="40">arctic/common/border-20.png</bordertexture>
+                <bordersize>20</bordersize>
+                <texture border="25">arctic/common/whitepanel8.png</texture>
                 <aspectratio>stretch</aspectratio>
-                <colordiffuse>mod-osd</colordiffuse>
+                <colordiffuse>bbeeeeee</colordiffuse>
             </control>
             <control type="image">
-                <description>Cock image</description>
+                <description>Mute image</description>
                 <posx>1730</posx>
                 <posy>47</posy>
                 <width>100</width>

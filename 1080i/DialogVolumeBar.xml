@@ -96,13 +96,15 @@
             <control type="group">
                 <visible>!Player.Passthrough</visible>
                 <control type="image">
-					<posx>1606</posx>
-					<posy>43</posy>
-					<width>238</width>
-					<height>108</height>
-					<texture border="35">views/newgloss/whitepanel-15.png</texture>
+					<posx>1601</posx>
+					<posy>38</posy>
+					<width>248</width>
+					<height>118</height>
+					<bordertexture border="40">arctic/common/border-20.png</bordertexture>
+					<bordersize>20</bordersize>
+					<texture border="25">arctic/common/whitepanel8.png</texture>
 					<aspectratio>stretch</aspectratio>
-					<colordiffuse>mod-osd</colordiffuse>
+					<colordiffuse>bbeeeeee</colordiffuse>
 				</control>
                 <control type="label">
                     <description>Volume label</description>

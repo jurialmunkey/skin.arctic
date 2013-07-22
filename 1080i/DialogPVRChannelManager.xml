@@ -6,29 +6,31 @@
         <control type="group">
     	    <include>KeyboardAnimations</include>
     	    <visible>!Window.IsVisible(virtualkeyboard) + !Window.IsVisible(pvrgroupmanager) + !Window.IsVisible(filebrowser) + !Window.IsVisible(yesnodialog) + !Window.IsVisible(okdialog) + !Window.IsVisible(progressdialog)</visible>
-    	    <control type="image">
-    	        <posx>920</posx>
-    	        <posy>151</posy>
-    	        <width>80</width>
-    	        <height>60</height>
-    	        <texture>dialogs/default/arrow.png</texture>
-    	    </control>
+
     	    <control type="image">
     	        <posx>319</posx>
-    	        <posy>171</posy>
+    	        <posy>150</posy>
     	        <width>1282</width>
-    	        <height>738</height>
-    	        <texture border="39">dialogs/default/bg.png</texture>
+    	        <height>810</height>
+    	        <texture border="39">arctic/common/panel.png</texture>
     	    </control>       
+    	    <control type="image">
+            	<posx>302</posx>
+            	<posy>138</posy>
+            	<width>140</width>
+            	<height>140</height>
+            	<texture>windows/home/icons/tvshows.png</texture>
+            	<aspectratio>keep</aspectratio>
+            </control>
     	    <control type="label">
     	        <description>Heading</description>
-    	        <posx>353</posx>
-    	        <posy>123</posy>
+    	        <posx>420</posx>
+    	        <posy>164</posy>
     	        <width>1214</width>
     	        <label>$LOCALIZE[19199] • $LOCALIZE[19023]</label>
-    	        <font>Font-Condensed-S34</font>
+    	        <font>Font-Alaska-S32-BL</font>
     	        <textcolor>ddwhite</textcolor>
-    	        <align>center</align>
+    	        <align>left</align>
     	    </control>
     	    <control type="group" id="8000">
     	        <posx>353</posx>
@@ -36,24 +38,17 @@
                 <control type="group" id="8001">
                     <control type="label">
                         <description>Items / page label</description>
-                        <posx>0</posx>
-                        <posy>0</posy>
+                        <posx>48</posx>
+                        <posy>-10</posy>
                         <width>600</width>
                         <height>34</height>
                         <align>left</align>
                         <textoffsetx>20</textoffsetx>
                         <label>$VAR[PVRChannelManagerItemsPageLabel]</label>
-                        <textcolor>FF585858</textcolor>
+                        <textcolor>mod-infotags-alt</textcolor>
                         <shadowcolor>20FFFFFF</shadowcolor>
-                        <font>Font-Condensed-S30</font>
+                        <font>Font-Alaska-S28-L</font>
                     </control>
-        	    	<control type="image">
-        	    		<posx>0</posx>
-        	    		<posy>40</posy>
-        	    		<width>600</width>
-        	    		<height>631</height>
-        	    		<texture border="5">dialogs/default/inner.png</texture>
-        	    	</control>
         	    	<control type="list" id="20">
         	    		<posx>0</posx>
         	    		<posy>40</posy>
@@ -73,7 +68,7 @@
         	    		        <posy>1</posy>
         	    		        <width>600</width>
         	    		        <height>60</height>
-        	    		        <texture>dialogs/default/separator.png</texture>
+        	    		        <texture border="90,3,90,3">views/list/other/separator.png</texture>
         	    		    </control>
         	    		    <control type="group">
         	    		        <animation effect="fade" start="100" end="50" time="300" tween="sine" easing="inout" condition="!ListItem.Property(ActiveChannel)">Conditional</animation>
@@ -82,8 +77,8 @@
         	    		            <posy>10</posy>
         	    		        	<width>40</width>
         	    		        	<height>40</height>
-        	    		        	<bordertexture border="1">windows/common/darkgrey.png</bordertexture>
         	    		        	<texture background="true" fallback="windows/pvr/defaultchannel.png">$VAR[PvrListIcon]</texture>
+        	    		        	<aspectratio>keep</aspectratio>
         	    		        </control>
         	    		        <control type="label">
         	    		            <posx>70</posx>
@@ -91,8 +86,8 @@
         	    		            <width>510</width>
         	    		            <height>60</height>
         	    		            <label>$INFO[ListItem.Property(Number),(,) ]$INFO[ListItem.Property(Name)]</label>
-        	    		            <textcolor>FF585858</textcolor>
-        	    		            <selectedcolor>FF585858</selectedcolor>
+        	    		            <textcolor>mod-infotags-alt</textcolor>
+        	    		            <selectedcolor>mod-infotags-alt</selectedcolor>
         	    		            <scroll>false</scroll>
         	    		            <visible>!ListItem.Property(Changed)</visible>
         	    		        </control>
@@ -102,8 +97,8 @@
         	    		            <width>460</width>
         	    		            <height>60</height>
         	    		            <label>$INFO[ListItem.Property(Number),(,) ]$INFO[ListItem.Property(Name)]</label>
-        	    		            <textcolor>FF585858</textcolor>
-        	    		            <selectedcolor>FF585858</selectedcolor>
+        	    		            <textcolor>mod-infotags-alt</textcolor>
+        	    		            <selectedcolor>mod-infotags-alt</selectedcolor>
         	    		            <scroll>false</scroll>
         	    		            <visible>ListItem.Property(Changed)</visible>
         	    		        </control>
@@ -125,7 +120,7 @@
         	    		            <posy>1</posy>
         	    		            <width>600</width>
         	    		            <height>90</height>
-        	    		            <texture>dialogs/default/separator.png</texture>
+        	    		            <texture border="90,3,90,3">views/list/other/separator.png</texture>
         	    		        </control>
         	    		        <control type="group">
         	    		            <animation effect="fade" start="100" end="50" time="300" tween="sine" easing="inout" condition="!ListItem.Property(ActiveChannel)">Conditional</animation>
@@ -137,8 +132,8 @@
         	    		                    <width>480</width>
         	    		                    <height>56</height>
         	    		                    <label>$INFO[ListItem.Property(Number),(,) ]$INFO[ListItem.Property(Name)]</label>
-        	    		                    <textcolor>FF585858</textcolor>
-        	    		                    <selectedcolor>FF585858</selectedcolor>
+        	    		                    <textcolor>mod-infotags-alt</textcolor>
+        	    		                    <selectedcolor>mod-infotags-alt</selectedcolor>
         	    		                    <scroll>false</scroll>
         	    		                </control>
         	    		                <control type="label">
@@ -148,8 +143,8 @@
         	    		                    <height>56</height>
         	    		                    <label>$INFO[ListItem.Property(ClientName),$LOCALIZE[19210]: ,]</label>
         	    		                    <font>Font-Condensed-S28</font>
-        	    		                    <textcolor>FF787878</textcolor>
-        	    		                    <selectedcolor>FF787878</selectedcolor>
+        	    		                    <textcolor>mod-infotags-alt</textcolor>
+        	    		                    <selectedcolor>mod-infotags-alt</selectedcolor>
         	    		                    <scroll>false</scroll>
         	    		                </control>
         	    		            </control>
@@ -161,8 +156,8 @@
             	    		                <width>430</width>
             	    		                <height>56</height>
             	    		                <label>$INFO[ListItem.Property(Number),(,) ]$INFO[ListItem.Property(Name)]</label>
-            	    		                <textcolor>FF585858</textcolor>
-            	    		                <selectedcolor>FF585858</selectedcolor>
+            	    		                <textcolor>mod-infotags-alt</textcolor>
+            	    		                <selectedcolor>mod-infotags-alt</selectedcolor>
             	    		                <scroll>false</scroll>
             	    		            </control>
             	    		            <control type="label">
@@ -172,8 +167,8 @@
             	    		                <height>56</height>
             	    		                <label>$INFO[ListItem.Property(ClientName),$LOCALIZE[19210]: ,]</label>
             	    		                <font>Font-Condensed-S28</font>
-            	    		                <textcolor>FF787878</textcolor>
-            	    		                <selectedcolor>FF787878</selectedcolor>
+            	    		                <textcolor>mod-infotags-alt</textcolor>
+            	    		                <selectedcolor>mod-infotags-alt</selectedcolor>
             	    		                <scroll>false</scroll>
             	    		            </control>
             	    		        </control>
@@ -186,7 +181,7 @@
         	    		            <posy>0</posy>
         	    		            <width>600</width>
         	    		            <height>90</height>
-        	    		            <texture border="2">dialogs/default/highlight.png</texture>
+        	    		            <texture border="8">views/other/focus-mod8.png</texture>
         	    		            <visible>!ListItem.IsSelected</visible>
         	    		        </control>
         	    		        <control type="image">
@@ -262,9 +257,9 @@
         	    		        <posy>10</posy>
         	    		    	<width>70</width>
         	    		    	<height>70</height>
-        	    		    	<bordertexture border="1">windows/common/darkgrey.png</bordertexture>
         	    		    	<texture background="true" fallback="windows/pvr/defaultchannel.png">$VAR[PvrListIcon]</texture>
         	    		    	<animation effect="fade" start="100" end="50" time="300" tween="sine" easing="inout" condition="!ListItem.Property(ActiveChannel)">Conditional</animation>
+								<aspectratio>keep</aspectratio>
         	    		    </control>
         	    		</focusedlayout>
         	    	</control>
@@ -282,7 +277,7 @@
         	    	    <visible>!Control.HasFocus(60) + [Container(20).Scrolling | Container(20).OnScrollNext | Container(20).OnScrollPrevious]</visible>
         	    	</control>
         	    	<control type="scrollbar" id="60">
-        	    	    <posx>3</posx>
+        	    	    <posx>-20</posx>
         	    	    <posy>43</posy>
         	    	    <width>11</width>
         	    	    <height>624</height>
@@ -313,16 +308,15 @@
             	    	    <align>left</align>
             	    	    <textoffsetx>20</textoffsetx>
             	    	    <label>$LOCALIZE[42184]</label>
-            	    	    <textcolor>FF585858</textcolor>
-            	    	    <shadowcolor>20FFFFFF</shadowcolor>
-            	    	    <font>Font-Condensed-S30</font>
+            	    	    <textcolor>mod-infotags-alt</textcolor>
+            	    	    <font>Font-Alaska-S25-BL</font>
             	    	</control>
             	    	<control type="image">
             	    		<posx>0</posx>
             	    		<posy>40</posy>
             	    		<width>600</width>
             	    		<height>356</height>
-            	    		<texture border="5">dialogs/default/inner.png</texture>
+            	    		<texture border="10">arctic/common/whitepanel8.png</texture>
             	    	</control>
             	    	<control type="radiobutton" id="7">
             	    		<description>Channel activated</description>
@@ -340,8 +334,7 @@
             	    		<shadowcolor>20FFFFFF</shadowcolor>
             	    		<textureradioon>buttons/radio/radio-light-fo.png</textureradioon>
             	    		<textureradiooff>buttons/radio/radio-light-nf.png</textureradiooff>
-            	    		<texturefocus border="2">dialogs/default/highlight.png</texturefocus>
-            	    		<texturenofocus>dialogs/default/separator.png</texturenofocus>
+            	    		<texturefocus border="10">views/other/focus-mod8.png</texturefocus>
             	    		<label>19074</label>
             	    		<onleft>20</onleft>
             	    		<onright>8003</onright>
@@ -364,8 +357,7 @@
             	    		<shadowcolor>20FFFFFF</shadowcolor>
             	    		<font>Font-Condensed-S32</font>
             	    		<pulseonselect>false</pulseonselect>
-            	    		<texturefocus border="2">dialogs/default/highlight.png</texturefocus>
-            	    		<texturenofocus>dialogs/default/separator.png</texturenofocus>
+            	    		<texturefocus border="10">views/other/focus-mod8.png</texturefocus>
             	    		<label>19201</label>
             	    		<onright>8003</onright>
             	    		<onleft>20</onleft>
@@ -386,8 +378,7 @@
             	    		<focusedcolor>eewhite</focusedcolor>
             	    		<disabledcolor>77585858</disabledcolor>
             	    		<shadowcolor>20FFFFFF</shadowcolor>
-            	    		<texturefocus border="2">dialogs/default/highlight.png</texturefocus>
-            	    		<texturenofocus>dialogs/default/separator.png</texturenofocus>
+            	    		<texturefocus border="10">views/other/focus-mod8.png</texturefocus>
             	    		<label>19202</label>
             	    		<onleft>20</onleft>
             	    		<onright>8003</onright>
@@ -400,8 +391,7 @@
             	    		<posy>168</posy>
             	    		<width>40</width>
             	    		<height>40</height>
-            	    		<aspectratio>scale</aspectratio>
-            	    		<bordertexture border="1">windows/common/darkgrey.png</bordertexture>
+            	    		<aspectratio>keep</aspectratio>
             	    		<texture background="true" fallback="windows/pvr/defaultchannel.png">$VAR[PvrListIcon]</texture>
             	    	</control>
             	    	<control type="radiobutton" id="12">
@@ -420,8 +410,7 @@
             	    		<shadowcolor>20FFFFFF</shadowcolor>
             	    		<textureradioon>buttons/radio/radio-light-fo.png</textureradioon>
             	    		<textureradiooff>buttons/radio/radio-light-nf.png</textureradiooff>
-            	    		<texturefocus border="2">dialogs/default/highlight.png</texturefocus>
-            	    		<texturenofocus>dialogs/default/separator.png</texturenofocus>
+            	    		<texturefocus border="10">views/other/focus-mod8.png</texturefocus>
             	    		<label>19206</label>
             	    		<onleft>20</onleft>
             	    		<onright>8003</onright>
@@ -438,8 +427,7 @@
             	    		<texturedown>buttons/spinctrl/arrow-light-down-nf.png</texturedown>
             	    		<textureupfocus>buttons/spinctrl/arrow-light-up-fo.png</textureupfocus>
             	    		<texturedownfocus>buttons/spinctrl/arrow-light-down-fo.png</texturedownfocus>
-            	    		<texturefocus border="2">dialogs/default/highlight.png</texturefocus>
-            	    		<texturenofocus>dialogs/default/separator.png</texturenofocus>
+            	    		<texturefocus border="10">views/other/focus-mod8.png</texturefocus>
             	    		<textcolor>FF585858</textcolor>
             	    		<focusedcolor>eewhite</focusedcolor>
             	    		<disabledcolor>77585858</disabledcolor>
@@ -468,7 +456,7 @@
             	    		<shadowcolor>20FFFFFF</shadowcolor>
             	    		<textureradioon>buttons/radio/radio-light-fo.png</textureradioon>
             	    		<textureradiooff>buttons/radio/radio-light-nf.png</textureradiooff>
-            	    		<texturefocus border="2">dialogs/default/highlight.png</texturefocus>
+            	    		<texturefocus border="10">views/other/focus-mod8.png</texturefocus>
             	    		<label>19267</label>
             	    		<onleft>20</onleft>
             	    		<onright>8003</onright>
@@ -488,30 +476,29 @@
             	    	    <align>left</align>
             	    	    <textoffsetx>20</textoffsetx>
             	    	    <label>$LOCALIZE[42185]</label>
-            	    	    <textcolor>FF585858</textcolor>
-            	    	    <shadowcolor>20FFFFFF</shadowcolor>
-            	    	    <font>Font-Condensed-S30</font>
+            	    	    <textcolor>mod-infotags-alt</textcolor>
+            	    	    <font>Font-Alaska-S25-BL</font>
             	    	</control>
             	    	<control type="image">
             	    		<posx>0</posx>
             	    		<posy>40</posy>
             	    		<width>293</width>
             	    		<height>51</height>
-            	    		<texture border="5">dialogs/default/inner.png</texture>
+            	    		<texture border="10">arctic/common/whitepanel8.png</texture>
             	    	</control>
             	    	<control type="image">
             	    		<posx>307</posx>
             	    		<posy>40</posy>
             	    		<width>293</width>
             	    		<height>51</height>
-            	    		<texture border="5">dialogs/default/inner.png</texture>
+            	    		<texture border="10">arctic/common/whitepanel8.png</texture>
             	    	</control>
             	    	<control type="image">
             	    		<posx>0</posx>
             	    		<posy>104</posy>
             	    		<width>600</width>
             	    		<height>149</height>
-            	    		<texture border="5">dialogs/default/inner.png</texture>
+            	    		<texture border="10">arctic/common/whitepanel8.png</texture>
             	    	</control>
             	    	<control type="button" id="30">
             	    		<description>Group Manager Button</description>
@@ -526,7 +513,7 @@
             	    		<focusedcolor>eewhite</focusedcolor>
             	    		<disabledcolor>77585858</disabledcolor>
             	    		<shadowcolor>20FFFFFF</shadowcolor>
-            	    		<texturefocus border="2">dialogs/default/highlight.png</texturefocus>
+            	    		<texturefocus border="8">views/other/focus-mod8.png</texturefocus>
             	    		<label>19205</label>
             	    		<onleft>20</onleft>
             	    		<onright>34</onright>
@@ -546,7 +533,7 @@
             	    		<focusedcolor>eewhite</focusedcolor>
             	    		<disabledcolor>77585858</disabledcolor>
             	    		<shadowcolor>20FFFFFF</shadowcolor>
-            	    		<texturefocus border="2">dialogs/default/highlight.png</texturefocus>
+            	    		<texturefocus border="8">views/other/focus-mod8.png</texturefocus>
             	    		<label>19024</label>
             	    		<onleft>30</onleft>
             	    		<onright>8003</onright>
@@ -567,7 +554,7 @@
             	    		<focusedcolor>eewhite</focusedcolor>
             	    		<disabledcolor>77585858</disabledcolor>
             	    		<shadowcolor>20FFFFFF</shadowcolor>
-            	    		<texturefocus border="2">dialogs/default/highlight.png</texturefocus>
+            	    		<texturefocus border="8">views/other/focus-mod8.png</texturefocus>
             	    		<label>19023</label>
             	    		<onleft>30</onleft>
             	    		<onright>8003</onright>
@@ -588,8 +575,7 @@
             	    		<focusedcolor>eewhite</focusedcolor>
             	    		<disabledcolor>77585858</disabledcolor>
             	    		<shadowcolor>20FFFFFF</shadowcolor>
-            	    		<texturefocus border="2">dialogs/default/highlight.png</texturefocus>
-            	    		<texturenofocus>dialogs/default/separator.png</texturenofocus>
+            	    		<texturefocus border="8">views/other/focus-mod8.png</texturefocus>
             	    		<label>19203</label>
             	    		<onleft>20</onleft>
             	    		<onright>8003</onright>
@@ -609,8 +595,7 @@
             	    		<focusedcolor>eewhite</focusedcolor>
             	    		<disabledcolor>77585858</disabledcolor>
             	    		<shadowcolor>20FFFFFF</shadowcolor>
-            	    		<texturefocus border="2">dialogs/default/highlight.png</texturefocus>
-            	    		<texturenofocus>dialogs/default/separator.png</texturenofocus>
+            	    		<texturefocus border="8">views/other/focus-mod8.png</texturefocus>
             	    		<label>19211</label>
             	    		<onleft>20</onleft>
             	    		<onright>8003</onright>
@@ -630,7 +615,7 @@
             	    		<focusedcolor>eewhite</focusedcolor>
             	    		<disabledcolor>77585858</disabledcolor>
             	    		<shadowcolor>20FFFFFF</shadowcolor>
-            	    		<texturefocus border="2">dialogs/default/highlight.png</texturefocus>
+            	    		<texturefocus border="8">views/other/focus-mod8.png</texturefocus>
             	    		<label>19204</label>
             	    		<onleft>20</onleft>
             	    		<onright>8003</onright>

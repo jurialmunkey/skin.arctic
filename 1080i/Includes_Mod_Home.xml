@@ -442,6 +442,16 @@
 								<texture fallback="windows/home/icons/addtile.png">$INFO[ListItem.Property(poster)]</texture>
 								<colordiffuse>mod-infotags-d</colordiffuse>
 								<aspectratio scalediffuse="false" align="center" aligny="center">keep</aspectratio>
+								<visible>IsEmpty(ListItem.Property(animate))</visible>
+							</control>
+							<control type="image">
+								<posx>10</posx>
+								<posy>10</posy>
+								<width>169</width>
+								<height>169</height>
+								<texture fallback="windows/home/icons/addtile.png">$INFO[ListItem.Property(poster)]</texture>
+								<aspectratio scalediffuse="false" align="center" aligny="center">keep</aspectratio>
+								<visible>!IsEmpty(ListItem.Property(animate))</visible>
 							</control>
 							<control type="label">
 								<posx>92</posx>
@@ -452,6 +462,7 @@
 								<textcolor>mod-infotags</textcolor>
 								<width>149</width>
 								<scroll>false</scroll>
+								<visible>IsEmpty(ListItem.Property(showlabel))</visible>
 							</control>
 						</control>
 					</itemlayout>
@@ -483,6 +494,7 @@
 								<textcolor>mod-infotags-alt</textcolor>
 								<width>149</width>
 								<scroll>false</scroll>
+								<visible>IsEmpty(ListItem.Property(showlabel))</visible>
 							</control>
 						</control>
 						<control type="group">
@@ -513,6 +525,7 @@
 								<textcolor>mod-infotags</textcolor>
 								<width>149</width>
 								<scroll>false</scroll>
+								<visible>IsEmpty(ListItem.Property(showlabel))</visible>
 							</control>
 						</control>
 					</focusedlayout>

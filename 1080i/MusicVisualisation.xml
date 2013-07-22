@@ -102,16 +102,16 @@
 					<visible>Skin.HasSetting(CDArt.Enabled)</visible>
 				</control>
 				<control type="image">
-					<posx>539</posx>
+					<posx>549</posx>
 					<posy>-15</posy>
-					<width>1147</width>
+					<width>1137</width>
 					<height>307</height>
-					<texture border="24">arctic/common/16panel.png</texture>
-					<colordiffuse>ddwhite</colordiffuse>
+					<texture border="24">arctic/common/whitepanel8.png</texture>
+					<colordiffuse>e0e0e0e0</colordiffuse>
 				</control>
 				<control type="image">
 					<posx>825</posx>
-					<posy>222</posy>
+					<posy>220</posy>
 					<width>100</width>
 					<height>100</height>
 					<texture>overlays/nowplaying/play.png</texture>
@@ -120,7 +120,7 @@
 				</control>
 				<control type="image">
 					<posx>825</posx>
-					<posy>222</posy>
+					<posy>220</posy>
 					<width>100</width>
 					<height>100</height>
 					<texture>overlays/nowplaying/pause.png</texture>
@@ -129,7 +129,7 @@
 				</control>
 				<control type="label">
 					<posx>865</posx>
-					<posy>253</posy>
+					<posy>251</posy>
 					<width>661</width>
 					<label>»</label>
 					<font>Font-Alaska-S45-BL</font>
@@ -140,7 +140,7 @@
 				</control>	
 				<control type="label">
 					<posx>865</posx>
-					<posy>253</posy>
+					<posy>251</posy>
 					<width>661</width>
 					<label>«</label>
 					<font>Font-Alaska-S45-BL</font>
@@ -151,44 +151,44 @@
 				</control>	
 				<control type="progress">
 					<posx>900</posx>
-					<posy>264</posy>
+					<posy>258</posy>
 					<width>610</width>
-					<height>18</height>
+					<height>24</height>
 					<info>Player.Progress</info>
 					<reveal>true</reveal>
-					<texturebg>osd/fullscreen/progress/back.png</texturebg>
-					<midtexture>osd/fullscreen/progress/mid.png</midtexture>
-					<lefttexture>osd/fullscreen/progress/left.png</lefttexture>
-					<righttexture>osd/fullscreen/progress/right.png</righttexture>
+					<texturebg border="6">osd/fullscreen/progress/back.png</texturebg>
+					<midtexture border="6">osd/fullscreen/progress/mid.png</midtexture>
+					<lefttexture border="6">osd/fullscreen/progress/left.png</lefttexture>
+					<righttexture border="6">osd/fullscreen/progress/right.png</righttexture>
 					<overlaytexture>-</overlaytexture>
 				</control>
 				<control type="label">
 					<posx>1527</posx>
-					<posy>257</posy>
+					<posy>255</posy>
 					<width>661</width>
 					<label>$INFO[MusicPlayer.Time]</label>
 					<font>Font-Alaska-S25-L</font>
-					<textcolor>bbwhite</textcolor>
+					<textcolor>mod-infotags</textcolor>
 					<scroll>false</scroll>
 					<align>left</align>
 				</control>	
 				<control type="label">
 					<posx>1595</posx>
-					<posy>257</posy>
+					<posy>255</posy>
 					<width>661</width>
 					<label>•  $INFO[MusicPlayer.Duration]</label>
 					<font>Font-Alaska-S25-L</font>
-					<textcolor>bbwhite</textcolor>
+					<textcolor>mod-infotags</textcolor>
 					<scroll>false</scroll>
 					<align>left</align>
 				</control>	
 				<control type="image">
 					<description>Thumb</description>
-					<posx>539</posx>
-					<posy>-15</posy>
-					<width>307</width>
-					<height>307</height>
-					<texture background="true" diffuse="arctic/banner/sq-16.png">$INFO[Player.Art(thumb)]</texture>
+					<posx>559</posx>
+					<posy>-5</posy>
+					<width>287</width>
+					<height>287</height>
+					<texture background="true" diffuse="arctic/osd/287.png">$INFO[MusicPlayer.Cover]</texture>
 					<aspectratio scalediffuse="false">scale</aspectratio>
 				</control>
 				<control type="image">
@@ -200,11 +200,11 @@
 					<aspectratio>stretch</aspectratio>
 				</control>
 				<control type="image">
-					<posx>475</posx>
+					<posx>485</posx>
 					<posy>-79</posy>
-					<width>1275</width>
+					<width>1265</width>
 					<height>435</height>
-					<texture border="100">arctic/common/16border64.png</texture>
+					<texture border="100">arctic/common/border-64.png</texture>
 				</control>
 				<control type="group">
 					<posy>5</posy>
@@ -215,7 +215,7 @@
 						<width>150</width>
 						<label>$INFO[MusicPlayer.TrackNumber]</label>
 						<font>Font-Episode-Large</font>
-						<textcolor>ddwhite</textcolor>
+						<textcolor>mod-infotags-d</textcolor>
 						<scroll>false</scroll>
 						<align>left</align>
 					</control>
@@ -225,7 +225,7 @@
 						<width>700</width>
 						<label>$INFO[MusicPlayer.Title]</label>
 						<font>Font-Alaska-S34-BL</font>
-						<textcolor>ddwhite</textcolor>
+						<textcolor>mod-infotags-d</textcolor>
 						<scroll>false</scroll>
 						<align>left</align>
 					</control>
@@ -235,7 +235,7 @@
 						<width>661</width>
 						<label>$INFO[MusicPlayer.Artist]$INFO[MusicPlayer.Album, • ,]</label>
 						<font>Font-Alaska-S25-L</font>
-						<textcolor>bbwhite</textcolor>
+						<textcolor>mod-infotags</textcolor>
 						<scroll>false</scroll>
 						<align>left</align>
 					</control>			
@@ -247,7 +247,7 @@
 						<height>120</height>
 						<label>$INFO[MusicPlayer.Property(Album_Description),[B]$LOCALIZE[41325][/B][CR],[CR][CR]]$INFO[MusicPlayer.Property(Artist_Description),[B]$LOCALIZE[21887][/B][CR],]</label>
 						<align>justify</align>
-						<textcolor>mod-infotags-alt2</textcolor>
+						<textcolor>mod-infotags</textcolor>
 						<autoscroll delay="13000" time="3000" repeat="13000" />
 						<font>Font-Alaska-S25-NC</font>
 					</control>
@@ -257,7 +257,7 @@
 						<width>661</width>
 						<label>$INFO[MusicPlayer.offset(1).Title,[B]$LOCALIZE[19031]:[/B] ,]</label>
 						<font>Font-Alaska-S25-L</font>
-						<textcolor>bbwhite</textcolor>
+						<textcolor>mod-infotags</textcolor>
 						<scroll>false</scroll>
 						<align>left</align>
 					</control>	

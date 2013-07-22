@@ -147,7 +147,6 @@
         <font>Font-Condensed-S30</font>
         <textoffsetx>35</textoffsetx>
         <texturefocus border="5">views/other/focus-mod.png</texturefocus>
-        <texturenofocus border="90,3,90,3">views/list/other/separator-l.png</texturenofocus>
     </include>
     
     <include name="SettingsCategoryDefaultButtonVars">
@@ -155,7 +154,6 @@
         <align>left</align>
         <aligny>center</aligny>
         <texturefocus border="5">views/other/focus-mod.png</texturefocus>
-        <texturenofocus border="90,3,90,3">views/list/other/separator-l.png</texturenofocus>
         <textcolor>mod-infotags-l</textcolor>
         <focusedcolor>white</focusedcolor>
         <selectedcolor>white</selectedcolor>
@@ -172,7 +170,6 @@
         <textureradiofocus>buttons/radio/radio-light-fo.png</textureradiofocus>
         <textureradionofocus>buttons/radio/radio-light-nf.png</textureradionofocus>
         <texturefocus border="5">views/other/focus-mod.png</texturefocus>
-        <texturenofocus border="90,3,90,3">views/list/other/separator-l.png</texturenofocus>
         <textcolor>mod-infotags-l</textcolor>
         <focusedcolor>white</focusedcolor>
         <disabledcolor>mod-infotags-vl</disabledcolor>
@@ -188,7 +185,6 @@
         <textureradiofocus>buttons/radio/radio-light-fo.png</textureradiofocus>
         <textureradionofocus>buttons/radio/radio-light-nf.png</textureradionofocus>
         <texturefocus border="5">views/other/focus-mod.png</texturefocus>
-        <texturenofocus border="90,3,90,3">views/list/other/separator-l.png</texturenofocus>
         <textcolor>mod-infotags-l</textcolor>
         <focusedcolor>white</focusedcolor>
         <disabledcolor>mod-infotags-vl</disabledcolor>
@@ -249,12 +245,11 @@
         <align>left</align>
         <textoffsetx>20</textoffsetx>
         <font>Font-Condensed-S32</font>
-        <textcolor>FF585858</textcolor>
+        <textcolor>mod-infotags-alt</textcolor>
         <focusedcolor>eewhite</focusedcolor>
         <disabledcolor>77585858</disabledcolor>
         <shadowcolor>20FFFFFF</shadowcolor>
         <texturefocus border="8">views/other/focus-mod8.png</texturefocus>
-        <texturenofocus>dialogs/default/separator-btn.png</texturenofocus>
     </include>
     
     <include name="SettingsCustomDialogRadioButtonVars">
@@ -264,14 +259,13 @@
         <textoffsetx>20</textoffsetx>
         <radioposx>422</radioposx>
         <font>Font-Condensed-S32</font>
-        <textcolor>FF585858</textcolor>
+        <textcolor>mod-infotags-alt</textcolor>
         <focusedcolor>eewhite</focusedcolor>
         <disabledcolor>77585858</disabledcolor>
         <shadowcolor>20FFFFFF</shadowcolor>
         <textureradiofocus>buttons/radio/radio-light-fo.png</textureradiofocus>
         <textureradionofocus>buttons/radio/radio-light-nf.png</textureradionofocus>
         <texturefocus border="8">views/other/focus-mod8.png</texturefocus>
-        <texturenofocus>dialogs/default/separator-btn.png</texturenofocus>
     </include>
     
     <include name="SettingsBackgroundDialogButtonVars">
@@ -309,7 +303,6 @@
         <textureradiofocus>buttons/radio/options-radio-button-fo.png</textureradiofocus>
         <textureradionofocus>buttons/radio/options-radio-button-nf.png</textureradionofocus>
         <texturefocus border="8">views/other/focus-mod8.png</texturefocus>
-        <texturenofocus>dialogs/default/separator-btn.png</texturenofocus>
     </include>
     
     <include name="SettingsBackgroundDialogImageVars">

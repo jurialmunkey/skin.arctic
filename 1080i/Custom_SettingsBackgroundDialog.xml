@@ -16,7 +16,7 @@
             </control>
             <control type="image">
             	<posx>540</posx>
-            	<posy>296</posy>
+            	<posy>295</posy>
             	<width>80</width>
             	<height>80</height>
             	<texture>windows/home/icons/photos2.png</texture>
@@ -43,24 +43,10 @@
                 <visible>!IsEmpty(Window(skinsettings).property(CustomDialog))</visible>
             </control>
             <control type="image">
-            	<posx>557</posx>
-            	<posy>353</posy>
-            	<width>534</width>
-            	<height>301</height>
-            	<texture border="15">arctic/common/whitepanel8.png</texture>
-            </control>
-            <control type="image">
             	<posx>1104</posx>
             	<posy>353</posy>
             	<width>258</width>
             	<height>301</height>
-            	<texture border="15">arctic/common/whitepanel8.png</texture>
-            </control>
-            <control type="image">
-            	<posx>558</posx>
-            	<posy>667</posy>
-            	<width>804</width>
-            	<height>61</height>
             	<texture border="15">arctic/common/whitepanel8.png</texture>
             </control>
             

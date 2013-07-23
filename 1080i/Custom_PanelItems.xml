@@ -151,6 +151,7 @@
             </control>  
             <control type="grouplist" id="3">
             	<posx>500</posx>
+            	<onleft>Skin.Reset(customitem.pos)</onleft>
             	<onleft>40</onleft>
             	<onright>4</onright>
             	<height>500</height>
@@ -160,7 +161,7 @@
                     <height>50</height>
                     <include>SettingsBackgroundDialogRadioButtonVars</include>
                     <selected>StringCompare(Skin.String(customitem.pos),1)</selected>
-                    <onclick>Skin.SetString(customitem.pos,1)</onclick>
+                    <onfocus>Skin.SetString(customitem.pos,1)</onfocus>
                     <label>$LOCALIZE[41822] 1</label>
                 </control>
                 <control type="radiobutton" id="2102">
@@ -168,7 +169,7 @@
                     <height>50</height>
                     <include>SettingsBackgroundDialogRadioButtonVars</include>
                     <selected>StringCompare(Skin.String(customitem.pos),2)</selected>
-                    <onclick>Skin.SetString(customitem.pos,2)</onclick>
+                    <onfocus>Skin.SetString(customitem.pos,2)</onfocus>
                     <label>$LOCALIZE[41822] 2</label>
                 </control>
                 <control type="radiobutton" id="2103">
@@ -176,7 +177,7 @@
                     <height>50</height>
                     <include>SettingsBackgroundDialogRadioButtonVars</include>
                     <selected>StringCompare(Skin.String(customitem.pos),3)</selected>
-                    <onclick>Skin.SetString(customitem.pos,3)</onclick>
+                    <onfocus>Skin.SetString(customitem.pos,3)</onfocus>
                     <label>$LOCALIZE[41822] 3</label>
                 </control>
                 <control type="radiobutton" id="2104">
@@ -184,7 +185,7 @@
                     <height>50</height>
                     <include>SettingsBackgroundDialogRadioButtonVars</include>
                     <selected>StringCompare(Skin.String(customitem.pos),4)</selected>
-                    <onclick>Skin.SetString(customitem.pos,4)</onclick>
+                    <onfocus>Skin.SetString(customitem.pos,4)</onfocus>
                     <label>$LOCALIZE[41822] 4</label>
                 </control>
                 <control type="radiobutton" id="2105">
@@ -192,7 +193,7 @@
                     <height>50</height>
                     <include>SettingsBackgroundDialogRadioButtonVars</include>
                     <selected>StringCompare(Skin.String(customitem.pos),5)</selected>
-                    <onclick>Skin.SetString(customitem.pos,5)</onclick>
+                    <onfocus>Skin.SetString(customitem.pos,5)</onfocus>
                     <label>$LOCALIZE[41822] 5</label>
                 </control>
                 <control type="radiobutton" id="2106">
@@ -200,7 +201,7 @@
                     <height>50</height>
                     <include>SettingsBackgroundDialogRadioButtonVars</include>
                     <selected>StringCompare(Skin.String(customitem.pos),6)</selected>
-                    <onclick>Skin.SetString(customitem.pos,6)</onclick>
+                    <onfocus>Skin.SetString(customitem.pos,6)</onfocus>
                     <label>$LOCALIZE[41822] 6</label>
                 </control>
                 <control type="radiobutton" id="2107">
@@ -208,7 +209,7 @@
                     <height>50</height>
                     <include>SettingsBackgroundDialogRadioButtonVars</include>
                     <selected>StringCompare(Skin.String(customitem.pos),7)</selected>
-                    <onclick>Skin.SetString(customitem.pos,7)</onclick>
+                    <onfocus>Skin.SetString(customitem.pos,7)</onfocus>
                     <label>$LOCALIZE[41822] 7</label>
                 </control>
                 <control type="radiobutton" id="2108">
@@ -216,7 +217,7 @@
                     <height>50</height>
                     <include>SettingsBackgroundDialogRadioButtonVars</include>
                     <selected>StringCompare(Skin.String(customitem.pos),8)</selected>
-                    <onclick>Skin.SetString(customitem.pos,8)</onclick>
+                    <onfocus>Skin.SetString(customitem.pos,8)</onfocus>
                     <label>$LOCALIZE[41822] 8</label>
                 </control>
                 <control type="radiobutton" id="2109">
@@ -224,7 +225,7 @@
                     <height>50</height>
                     <include>SettingsBackgroundDialogRadioButtonVars</include>
                     <selected>StringCompare(Skin.String(customitem.pos),9)</selected>
-                    <onclick>Skin.SetString(customitem.pos,9)</onclick>
+                    <onfocus>Skin.SetString(customitem.pos,9)</onfocus>
                     <label>$LOCALIZE[41822] 9</label>
                 </control>
                 <control type="radiobutton" id="2110">
@@ -232,7 +233,7 @@
                     <height>50</height>
                     <include>SettingsBackgroundDialogRadioButtonVars</include>
                     <selected>StringCompare(Skin.String(customitem.pos),10)</selected>
-                    <onclick>Skin.SetString(customitem.pos,10)</onclick>
+                    <onfocus>Skin.SetString(customitem.pos,10)</onfocus>
                     <label>$LOCALIZE[41822] 10</label>
                 </control>
             </control>

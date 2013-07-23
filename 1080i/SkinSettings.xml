@@ -133,12 +133,6 @@
                             <onclick>noop</onclick>
 							<icon>windows/home/icons/settings.png</icon>
                         </item>
-                        <item id="37">
-                            <description>Home Tile Settings</description>
-                            <label>Tile Colors</label>
-                            <onclick>noop</onclick>
-                            <visible>StringCompare(Skin.String(homescreen.style),metro)</visible>
-                        </item>
                         <item id="33">
                             <description>Media Settings</description>
                             <label>$LOCALIZE[41190]</label>
@@ -223,6 +217,13 @@
 							<onclick>Skin.ToggleSetting(BackgroundVideo)</onclick>
 							<label>$LOCALIZE[41102]</label>
 						</control>
+						<control type="radiobutton" id="1014">
+							<width>1210</width>
+							<include>SettingsCategoryRadioButtonVars</include>
+							<selected>Skin.HasSetting(OSDVisualation.Background)</selected>
+							<onclick>Skin.ToggleSetting(OSDVisualation.Background)</onclick>
+							<label>Show music visualisation in background</label>
+						</control>
 						<control type="radiobutton" id="1012">
 							<width>1210</width>
 							<include>SettingsCategoryRadioButtonVars</include>
@@ -284,8 +285,6 @@
 							<font>Font-Condensed-S30</font>
 							<include>SettingsCategoryDefaultButtonVars</include>
 							<onclick condition="StringCompare(Skin.String(homescreen.style),simple)">Skin.SetString(homescreen.style,panel)</onclick>
-							<!--<onclick condition="StringCompare(Skin.String(homescreen.style),metro)">Skin.SetString(homescreen.style,simple)</onclick>
-							<onclick condition="StringCompare(Skin.String(homescreen.style),panel)">Skin.SetString(homescreen.style,metro)</onclick>-->
 							<onclick condition="StringCompare(Skin.String(homescreen.style),panel)">Skin.SetString(homescreen.style,simple)</onclick>
 							<onclick condition="StringCompare(Skin.String(homescreen.style),simple)">Skin.SetString(homescreen.style,panel)</onclick>
 							<label>Home screen style</label>
@@ -306,21 +305,12 @@
 							<onclick>SetProperty(Dialog,$LOCALIZE[41136])</onclick>
 							<onclick>ActivateWindow(3054)</onclick>
 							<label>$LOCALIZE[41136]</label>
-						</control>
-						<control type="button" id="2003">
-							<width>1210</width>
-							<include>SettingsCategoryDefaultButtonVars</include>
-							<onclick>SetProperty(Dialog,$LOCALIZE[41140])</onclick>
-							<onclick>ActivateWindow(3003)</onclick>
-							<label>$LOCALIZE[41140]</label>
-							<visible>StringCompare(Skin.String(homescreen.style),metro)</visible>
-						</control>          
+						</control>       
 						<control type="button" id="2008">
 							<width>1210</width>
 							<include>SettingsCategoryDefaultButtonVars</include>
 							<onclick>ActivateWindow(3051)</onclick>
 							<label>$LOCALIZE[41140]</label>
-							<visible>!StringCompare(Skin.String(homescreen.style),metro)</visible>
 						</control>              
 					
 					
@@ -695,7 +685,6 @@
 							<selected>Skin.HasSetting(weather.usefanart)</selected>
 							<onclick>Skin.ToggleSetting(weather.usefanart)</onclick>
 							<label>Use weather fanart</label>
-							<visible>!StringCompare(Skin.String(homescreen.style),metro)</visible>
 						</control>
 						<!-- LIVE TV BACKGROUND -->
 						<control type="button" id="5011">
@@ -706,7 +695,6 @@
 							<onclick>ClearProperty(CustomDialog)</onclick>
 							<onclick>SetProperty(Dialog,$LOCALIZE[41220])</onclick>
 							<onclick>ActivateWindow(3002)</onclick>
-							<visible>!StringCompare(Skin.String(homescreen.style),metro)</visible>
 						</control>
 						<!-- Pictures BACKGROUND -->
 						<control type="button" id="5012">
@@ -717,7 +705,6 @@
 							<onclick>ClearProperty(CustomDialog)</onclick>
 							<onclick>SetProperty(Dialog,$LOCALIZE[10002])</onclick>
 							<onclick>ActivateWindow(3002)</onclick>
-							<visible>!StringCompare(Skin.String(homescreen.style),metro)</visible>
 						</control>
 						<!-- Games BACKGROUND -->
 						<control type="button" id="5013">
@@ -728,7 +715,6 @@
 							<onclick>ClearProperty(CustomDialog)</onclick>
 							<onclick>SetProperty(Dialog,$LOCALIZE[15016])</onclick>
 							<onclick>ActivateWindow(3002)</onclick>
-							<visible>!StringCompare(Skin.String(homescreen.style),metro)</visible>
 						</control>
 					</control>
 				
@@ -832,187 +818,6 @@
 							<label> • $LOCALIZE[41276]</label>
 							<label2>$INFO[Skin.String(Guide.Custom4.Label)]</label2>
 							<visible>Skin.HasSetting(Guide.Custom4)</visible>
-						</control>
-					</control>
-				
-					<!-- =================== -->    
-					<!-- Home Tiles Settings -->
-					<!-- =================== -->
-					<control type="grouplist" id="5">
-						<onleft>30</onleft>
-						<include>SettingsCategoryGrouplistVars</include>
-						<visible>Container(30).HasFocus(37)</visible>
-						<!--<control type="radiobutton" id="10002">
-							<width>1210</width>
-							<include>SettingsCategoryRadioButtonVars</include>
-							<selected>!Skin.HasSetting(AddonTilesColored)</selected>
-							<onclick>Skin.ToggleSetting(AddonTilesColored)</onclick>
-							<label>Addon tiles share color</label>
-						</control>-->
-						<control type="button" id="10003">
-							<posx>0</posx>
-							<posy>0</posy>
-							<width>1210</width>
-							<height>77</height>
-							<align>left</align>
-							<aligny>center</aligny>
-							<textoffsetx>35</textoffsetx>
-							<include>SettingsCategoryDefaultButtonVars</include>
-							<onclick condition="stringcompare(Skin.String(musiccolor.name),Grey Tiles)">Skin.SetString(musiccolor.name,Purple Tiles)</onclick>
-							<onclick condition="stringcompare(Skin.String(musiccolor.name),White Tiles)">Skin.SetString(musiccolor.name,Grey Tiles)</onclick>
-							<onclick condition="stringcompare(Skin.String(musiccolor.name),Lime Tiles)">Skin.SetString(musiccolor.name,White Tiles)</onclick>
-							<onclick condition="stringcompare(Skin.String(musiccolor.name),Green Tiles)">Skin.SetString(musiccolor.name,Lime Tiles)</onclick>
-							<onclick condition="stringcompare(Skin.String(musiccolor.name),Blue Tiles)">Skin.SetString(musiccolor.name,Green Tiles)</onclick>
-							<onclick condition="stringcompare(Skin.String(musiccolor.name),Red Tiles)">Skin.SetString(musiccolor.name,Blue Tiles)</onclick>
-							<onclick condition="stringcompare(Skin.String(musiccolor.name),Pink Tiles)">Skin.SetString(musiccolor.name,Red Tiles)</onclick>
-							<onclick condition="stringcompare(Skin.String(musiccolor.name),Purple Tiles)">Skin.SetString(musiccolor.name,Pink Tiles)</onclick>
-							<onclick condition="stringcompare(Skin.String(musiccolor.name),Grey Tiles)">Skin.SetString(musiccolor.name,Purple Tiles)</onclick>
-							<label>$LOCALIZE[2]</label>
-							<label2>$INFO[Skin.String(musiccolor.name)]</label2>
-						</control>
-						<control type="button" id="10004">
-							<posx>0</posx>
-							<posy>0</posy>
-							<width>1210</width>
-							<height>77</height>
-							<align>left</align>
-							<aligny>center</aligny>
-							<textoffsetx>35</textoffsetx>
-							<include>SettingsCategoryDefaultButtonVars</include>
-							<onclick condition="stringcompare(Skin.String(tvcolor.name),Grey Tiles)">Skin.SetString(tvcolor.name,Purple Tiles)</onclick>
-							<onclick condition="stringcompare(Skin.String(tvcolor.name),White Tiles)">Skin.SetString(tvcolor.name,Grey Tiles)</onclick>
-							<onclick condition="stringcompare(Skin.String(tvcolor.name),Lime Tiles)">Skin.SetString(tvcolor.name,White Tiles)</onclick>
-							<onclick condition="stringcompare(Skin.String(tvcolor.name),Green Tiles)">Skin.SetString(tvcolor.name,Lime Tiles)</onclick>
-							<onclick condition="stringcompare(Skin.String(tvcolor.name),Blue Tiles)">Skin.SetString(tvcolor.name,Green Tiles)</onclick>
-							<onclick condition="stringcompare(Skin.String(tvcolor.name),Red Tiles)">Skin.SetString(tvcolor.name,Blue Tiles)</onclick>
-							<onclick condition="stringcompare(Skin.String(tvcolor.name),Pink Tiles)">Skin.SetString(tvcolor.name,Red Tiles)</onclick>
-							<onclick condition="stringcompare(Skin.String(tvcolor.name),Purple Tiles)">Skin.SetString(tvcolor.name,Pink Tiles)</onclick>
-							<onclick condition="stringcompare(Skin.String(tvcolor.name),Grey Tiles)">Skin.SetString(tvcolor.name,Purple Tiles)</onclick>
-							<label>$LOCALIZE[19020]</label>
-							<label2>$INFO[Skin.String(tvcolor.name)]</label2>
-						</control>
-						<control type="button" id="10005">
-							<posx>0</posx>
-							<posy>0</posy>
-							<width>1210</width>
-							<height>77</height>
-							<align>left</align>
-							<aligny>center</aligny>
-							<textoffsetx>35</textoffsetx>
-							<include>SettingsCategoryDefaultButtonVars</include>
-							<onclick condition="stringcompare(Skin.String(moviecolor.name),Grey Tiles)">Skin.SetString(moviecolor.name,Purple Tiles)</onclick>
-							<onclick condition="stringcompare(Skin.String(moviecolor.name),White Tiles)">Skin.SetString(moviecolor.name,Grey Tiles)</onclick>
-							<onclick condition="stringcompare(Skin.String(moviecolor.name),Lime Tiles)">Skin.SetString(moviecolor.name,White Tiles)</onclick>
-							<onclick condition="stringcompare(Skin.String(moviecolor.name),Green Tiles)">Skin.SetString(moviecolor.name,Lime Tiles)</onclick>
-							<onclick condition="stringcompare(Skin.String(moviecolor.name),Blue Tiles)">Skin.SetString(moviecolor.name,Green Tiles)</onclick>
-							<onclick condition="stringcompare(Skin.String(moviecolor.name),Red Tiles)">Skin.SetString(moviecolor.name,Blue Tiles)</onclick>
-							<onclick condition="stringcompare(Skin.String(moviecolor.name),Pink Tiles)">Skin.SetString(moviecolor.name,Red Tiles)</onclick>
-							<onclick condition="stringcompare(Skin.String(moviecolor.name),Purple Tiles)">Skin.SetString(moviecolor.name,Pink Tiles)</onclick>
-							<onclick condition="stringcompare(Skin.String(moviecolor.name),Grey Tiles)">Skin.SetString(moviecolor.name,Purple Tiles)</onclick>
-							<label>$LOCALIZE[342]</label>
-							<label2>$INFO[Skin.String(moviecolor.name)]</label2>
-						</control>
-						<control type="button" id="10006">
-							<posx>0</posx>
-							<posy>0</posy>
-							<width>1210</width>
-							<height>77</height>
-							<align>left</align>
-							<aligny>center</aligny>
-							<textoffsetx>35</textoffsetx>
-							<include>SettingsCategoryDefaultButtonVars</include>
-							<onclick condition="stringcompare(Skin.String(homecolor.name),Grey Tiles)">Skin.SetString(homecolor.name,Purple Tiles)</onclick>
-							<onclick condition="stringcompare(Skin.String(homecolor.name),White Tiles)">Skin.SetString(homecolor.name,Grey Tiles)</onclick>
-							<onclick condition="stringcompare(Skin.String(homecolor.name),Lime Tiles)">Skin.SetString(homecolor.name,White Tiles)</onclick>
-							<onclick condition="stringcompare(Skin.String(homecolor.name),Green Tiles)">Skin.SetString(homecolor.name,Lime Tiles)</onclick>
-							<onclick condition="stringcompare(Skin.String(homecolor.name),Blue Tiles)">Skin.SetString(homecolor.name,Green Tiles)</onclick>
-							<onclick condition="stringcompare(Skin.String(homecolor.name),Red Tiles)">Skin.SetString(homecolor.name,Blue Tiles)</onclick>
-							<onclick condition="stringcompare(Skin.String(homecolor.name),Pink Tiles)">Skin.SetString(homecolor.name,Red Tiles)</onclick>
-							<onclick condition="stringcompare(Skin.String(homecolor.name),Purple Tiles)">Skin.SetString(homecolor.name,Pink Tiles)</onclick>
-							<onclick condition="stringcompare(Skin.String(homecolor.name),Grey Tiles)">Skin.SetString(homecolor.name,Purple Tiles)</onclick>
-							<label>$LOCALIZE[10000]</label>
-							<label2>$INFO[Skin.String(homecolor.name)]</label2>
-						</control>
-						<control type="button" id="10007">
-							<posx>0</posx>
-							<posy>0</posy>
-							<width>1210</width>
-							<height>77</height>
-							<align>left</align>
-							<aligny>center</aligny>
-							<textoffsetx>35</textoffsetx>
-							<include>SettingsCategoryDefaultButtonVars</include>
-							<onclick condition="stringcompare(Skin.String(appcolor.name),Grey Tiles)">Skin.SetString(appcolor.name,Purple Tiles)</onclick>
-							<onclick condition="stringcompare(Skin.String(appcolor.name),White Tiles)">Skin.SetString(appcolor.name,Grey Tiles)</onclick>						
-							<onclick condition="stringcompare(Skin.String(appcolor.name),Lime Tiles)">Skin.SetString(appcolor.name,White Tiles)</onclick>						
-							<onclick condition="stringcompare(Skin.String(appcolor.name),Green Tiles)">Skin.SetString(appcolor.name,Lime Tiles)</onclick>
-							<onclick condition="stringcompare(Skin.String(appcolor.name),Blue Tiles)">Skin.SetString(appcolor.name,Green Tiles)</onclick>
-							<onclick condition="stringcompare(Skin.String(appcolor.name),Red Tiles)">Skin.SetString(appcolor.name,Blue Tiles)</onclick>
-							<onclick condition="stringcompare(Skin.String(appcolor.name),Pink Tiles)">Skin.SetString(appcolor.name,Red Tiles)</onclick>
-							<onclick condition="stringcompare(Skin.String(appcolor.name),Purple Tiles)">Skin.SetString(appcolor.name,Pink Tiles)</onclick>
-							<onclick condition="stringcompare(Skin.String(appcolor.name),Grey Tiles)">Skin.SetString(appcolor.name,Purple Tiles)</onclick>
-							<label>$LOCALIZE[10001]</label>
-							<label2>$INFO[Skin.String(appcolor.name)]</label2>
-						</control>
-						<control type="button" id="10008">
-							<posx>0</posx>
-							<posy>0</posy>
-							<width>1210</width>
-							<height>77</height>
-							<align>left</align>
-							<aligny>center</aligny>
-							<textoffsetx>35</textoffsetx>
-							<include>SettingsCategoryDefaultButtonVars</include>
-							<onclick condition="stringcompare(Skin.String(pvrcolor.name),Grey Tiles)">Skin.SetString(pvrcolor.name,Purple Tiles)</onclick>
-							<onclick condition="stringcompare(Skin.String(pvrcolor.name),White Tiles)">Skin.SetString(pvrcolor.name,Grey Tiles)</onclick>
-							<onclick condition="stringcompare(Skin.String(pvrcolor.name),Lime Tiles)">Skin.SetString(pvrcolor.name,White Tiles)</onclick>
-							<onclick condition="stringcompare(Skin.String(pvrcolor.name),Green Tiles)">Skin.SetString(pvrcolor.name,Lime Tiles)</onclick>
-							<onclick condition="stringcompare(Skin.String(pvrcolor.name),Blue Tiles)">Skin.SetString(pvrcolor.name,Green Tiles)</onclick>
-							<onclick condition="stringcompare(Skin.String(pvrcolor.name),Red Tiles)">Skin.SetString(pvrcolor.name,Blue Tiles)</onclick>
-							<onclick condition="stringcompare(Skin.String(pvrcolor.name),Pink Tiles)">Skin.SetString(pvrcolor.name,Red Tiles)</onclick>
-							<onclick condition="stringcompare(Skin.String(pvrcolor.name),Purple Tiles)">Skin.SetString(pvrcolor.name,Pink Tiles)</onclick>
-							<onclick condition="stringcompare(Skin.String(pvrcolor.name),Grey Tiles)">Skin.SetString(pvrcolor.name,Purple Tiles)</onclick>
-							<label>$LOCALIZE[41220]</label>
-							<label2>$INFO[Skin.String(pvrcolor.name)]</label2>
-						</control>
-						<control type="button" id="10009">
-							<posx>0</posx>
-							<posy>0</posy>
-							<width>1210</width>
-							<height>77</height>
-							<align>left</align>
-							<aligny>center</aligny>
-							<textoffsetx>35</textoffsetx>
-							<include>SettingsCategoryDefaultButtonVars</include>
-							<onclick condition="stringcompare(Skin.String(weathercolor.name),Grey Tiles)">Skin.SetString(weathercolor.name,Purple Tiles)</onclick>
-							<onclick condition="stringcompare(Skin.String(weathercolor.name),White Tiles)">Skin.SetString(weathercolor.name,Grey Tiles)</onclick>
-							<onclick condition="stringcompare(Skin.String(weathercolor.name),Lime Tiles)">Skin.SetString(weathercolor.name,White Tiles)</onclick>
-							<onclick condition="stringcompare(Skin.String(weathercolor.name),Green Tiles)">Skin.SetString(weathercolor.name,Lime Tiles)</onclick>
-							<onclick condition="stringcompare(Skin.String(weathercolor.name),Blue Tiles)">Skin.SetString(weathercolor.name,Green Tiles)</onclick>
-							<onclick condition="stringcompare(Skin.String(weathercolor.name),Red Tiles)">Skin.SetString(weathercolor.name,Blue Tiles)</onclick>
-							<onclick condition="stringcompare(Skin.String(weathercolor.name),Pink Tiles)">Skin.SetString(weathercolor.name,Red Tiles)</onclick>
-							<onclick condition="stringcompare(Skin.String(weathercolor.name),Purple Tiles)">Skin.SetString(weathercolor.name,Pink Tiles)</onclick>
-							<onclick condition="stringcompare(Skin.String(weathercolor.name),Grey Tiles)">Skin.SetString(weathercolor.name,Purple Tiles)</onclick>
-							<label>$LOCALIZE[24027]</label>
-							<label2>$INFO[Skin.String(weathercolor.name)]</label2>
-						</control>
-						<control type="button" id="10012">
-							<posx>0</posx>
-							<posy>0</posy>
-							<width>1210</width>
-							<height>77</height>
-							<align>left</align>
-							<aligny>center</aligny>
-							<textoffsetx>35</textoffsetx>
-							<include>SettingsCategoryDefaultButtonVars</include>
-							<onclick>Skin.SetString(appcolor.name,Grey Tiles)</onclick>
-							<onclick>Skin.SetString(homecolor.name,White Tiles)</onclick>
-							<onclick>Skin.SetString(weathercolor.name,White Tiles)</onclick>
-							<onclick>Skin.SetString(pvrcolor.name,White Tiles)</onclick>
-							<onclick>Skin.SetString(moviecolor.name,Grey Tiles)</onclick>
-							<onclick>Skin.SetString(tvcolor.name,Grey Tiles)</onclick>
-							<onclick>Skin.SetString(musiccolor.name,Grey Tiles)</onclick>
-							<label>$LOCALIZE[409]</label>
 						</control>
 					</control>
 				

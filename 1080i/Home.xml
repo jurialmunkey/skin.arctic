@@ -13,39 +13,14 @@
 	<onload condition="![stringcompare(Skin.String(music.widget.type),$LOCALIZE[41555]) | stringcompare(Skin.String(music.widget.type),$LOCALIZE[41550]) | stringcompare(Skin.String(music.widget.type),$LOCALIZE[41554])]">Skin.SetString(music.widget.type,$LOCALIZE[41555])</onload>
 	<onload condition="![stringcompare(Skin.String(defaultpanel.widget.type),$LOCALIZE[10511]) | stringcompare(Skin.String(defaultpanel.widget.type),$LOCALIZE[129]) | stringcompare(Skin.String(defaultpanel.widget.type),$LOCALIZE[12600])]">Skin.SetString(defaultpanel.widget.type,$LOCALIZE[10511])</onload>
 	<onload condition="Skin.HasSetting(UseRCB)">RunScript(script.games.rom.collection.browser,limit=10)</onload>
-	
-	<!-- METRO -->
-    <!--<onload condition="StringCompare(Skin.String(homescreen.style),metro) + Container(20).HasFocus(2)">AlarmClock(HomeTileMoveThree,Control.Move(5032,1),00:04,silent,loop)</onload>
-    <onload condition="StringCompare(Skin.String(homescreen.style),metro) + Container(20).HasFocus(2)">AlarmClock(HomeTileMoveTwo,Control.Move(5022,1),00:07,silent,loop)</onload>
-    <onload condition="StringCompare(Skin.String(homescreen.style),metro) + Container(20).HasFocus(3)">AlarmClock(HomeTileMove,Control.Move(2022,1),00:07,silent,loop)</onload>
-    <onload condition="StringCompare(Skin.String(homescreen.style),metro) + Container(20).HasFocus(4)">AlarmClock(HomeTileMove,Control.Move(3022,1),00:07,silent,loop)</onload>
-    <onload condition="StringCompare(Skin.String(homescreen.style),metro) + Container(20).HasFocus(5)">AlarmClock(HomeTileMove,Control.Move(4022,1),00:07,silent,loop)</onload>
-    <onload condition="StringCompare(Skin.String(homescreen.style),metro) + IsEmpty(Skin.String(musiccolor.name)) | !SubString(Skin.String(musiccolor.name),Tiles)">Skin.SetString(musiccolor.name,Grey Tiles)</onload>
-	<onload condition="StringCompare(Skin.String(homescreen.style),metro) + IsEmpty(Skin.String(tvcolor.name)) | !SubString(Skin.String(tvcolor.name),Tiles)">Skin.SetString(tvcolor.name,Grey Tiles)</onload>
-	<onload condition="StringCompare(Skin.String(homescreen.style),metro) + IsEmpty(Skin.String(moviecolor.name)) | !SubString(Skin.String(moviecolor.name),Tiles)">Skin.SetString(moviecolor.name,Grey Tiles)</onload>
-	<onload condition="StringCompare(Skin.String(homescreen.style),metro) + IsEmpty(Skin.String(appcolor.name)) | !SubString(Skin.String(appcolor.name),Tiles)">Skin.SetString(appcolor.name,Grey Tiles)</onload>
-	<onload condition="StringCompare(Skin.String(homescreen.style),metro) + IsEmpty(Skin.String(homecolor.name)) | !SubString(Skin.String(homecolor.name),Tiles)">Skin.SetString(homecolor.name,Grey Tiles)</onload>
-	<onload condition="StringCompare(Skin.String(homescreen.style),metro) + IsEmpty(Skin.String(pvrcolor.name)) | !SubString(Skin.String(pvrcolor.name),Tiles)">Skin.SetString(pvrcolor.name,Grey Tiles)</onload>
-	<onload condition="StringCompare(Skin.String(homescreen.style),metro) + IsEmpty(Skin.String(weathercolor.name)) | !SubString(Skin.String(weathercolor.name),Tiles)">Skin.SetString(weathercolor.name,Grey Tiles)</onload>-->
-	
+
 	<!-- PROFILE SWITCH -->
 	<onload condition="!Skin.HasSetting(HideHomeProfileInfo)">AlarmClock(ProfileMove,Control.Move(30,1),00:10,silent,loop)</onload>
 
-	<!-- ALARM CANCEL -->
-    <onunload>CancelAlarm(HomeTileMove,true)</onunload>
-    <onunload>CancelAlarm(HomeTileMoveTwo,true)</onunload>
-    <onunload>CancelAlarm(HomeTileMoveThree,true)</onunload>
-    <onunload condition="!Skin.HasSetting(HideHomeProfileInfo)">CancelAlarm(ProfileMove,true)</onunload>
-    
     <controls>
     	<!-- COMMON ITEMS -->
         <include>CommonItemsHome</include>
-        
-        <!-- METRO HOME -->
-        <include condition="StringCompare(Skin.String(homescreen.style),metro)">HomeControlList</include>
-        <include condition="StringCompare(Skin.String(homescreen.style),metro)">HomeControlListLabels</include>
-        <include condition="StringCompare(Skin.String(homescreen.style),metro)">HomeItems</include> 
-        
+
         <!-- PANEL HOME -->
 		<include condition="StringCompare(Skin.String(homescreen.style),panel)">Mod_HomeList</include>
 		

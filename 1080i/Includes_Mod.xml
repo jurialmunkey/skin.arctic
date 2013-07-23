@@ -360,7 +360,7 @@
     
     <include name="DialogHeaderMod">
     	<textcolor>ddwhite</textcolor>
-		<font>Font-Alaska-S28-L-B</font>
+		<font>Font-Condensed-S34</font>
     </include>
 
 	<include name="Mod_83Content">

@@ -109,7 +109,7 @@
                 <bordertexture border="40">arctic/common/border-20.png</bordertexture>
                 <bordersize>20</bordersize>
                 <texture border="40">arctic/common/panel.png</texture>
-            </control>  
+            </control> 
             <control type="image">
             	<posx>295</posx>
             	<posy>232</posy>
@@ -565,87 +565,64 @@
         <control type="group">
             <include>KeyboardAnimations</include>
             <visible>!Window.IsVisible(yesnodialog) + !Window.IsVisible(virtualkeyboard) + !Window.IsVisible(numericinput) + ![Window.IsVisible(script-LibraryEditor-genre.xml) + IsEmpty(Window.Property(ShowDialog))] + !Window.IsVisible(script-LibraryEditor-dialogs.xml)</visible>
-    
+    		<posx>605</posx>
+            <!-- Back -->
             <control type="group">
-                <visible>Control.IsVisible(3)</visible>
-                <control type="image">
-                    <posx>584</posx>
-                    <posy>246</posy>
-                    <width>672</width>
-                    <height>508</height>
-                    <texture border="39">arctic/common/whitepanel8.png</texture>
-                </control>
-                <control type="image">
-                	<posx>638</posx>
-                	<posy>300</posy>
-                	<width>644</width>
-                	<height>481</height>
-                	<texture border="5">dialogs/default/inner.png</texture>
-                </control>
-            </control>
-            
-            <control type="group">
-                <visible>Control.IsVisible(6)</visible>
-                <control type="image">
-                    <posx>387</posx>
-                    <posy>216</posy>
-                    <width>1146</width>
-                    <height>658</height>
-                    <bordertexture border="40">arctic/common/border-20.png</bordertexture>
+            	<visible>Control.IsVisible(3)</visible>
+            	<control type="image">
+					<posx>0</posx>
+					<posy>232</posy>
+					<width>710</width>
+					<height>628</height>
+					<bordertexture border="40">arctic/common/border-20.png</bordertexture>
 					<bordersize>20</bordersize>
-                    <texture border="39">arctic/common/panel.png</texture>
-                </control>
-                <control type="image">
-                    <posx>1079</posx>
-                    <posy>300</posy>
-                    <width>420</width>
-                    <height>500</height>
-                    <texture border="39">arctic/common/whitepanel8.png</texture>
-                </control>
-                <control type="image">
-                    <posx>1089</posx>
-                    <posy>310</posy>
-                    <width>400</width>
-                    <height>400</height>
-                    <aspectratio>keep</aspectratio>
-                    <texture background="true" fallback="dialogs/select/iconsbig/DefaultAddon.png">$INFO[Container(6).ListItem.Icon]</texture>
-                </control>
-                <control type="image">
-                    <posx>1089</posx>
-                    <posy>310</posy>
-                    <width>400</width>
-                    <height>400</height>
-                	<texture border="5">dialogs/default/inner.png</texture>
-                </control>
-                <control type="button">
-                    <posx>1079</posx>
-                    <posy>720</posy>
-                    <width>420</width>
-                    <height>60</height>
-                    <textoffsetx>20</textoffsetx>
-                    <align>left</align>
-                    <label>[COLOR=mod-infotags-alt]$LOCALIZE[21863][/COLOR]</label>
-                    <label2>$INFO[Container(6).ListItem.Property(Addon.Creator)]</label2>
-                    <font>Font-Condensed-S29</font>
-                    <textcolor>mod-infotags</textcolor>
-                    <disabledcolor>mod-infotags-li</disabledcolor>
-                    <enable>false</enable>
-                </control>
+					<texture border="39">arctic/common/panel.png</texture>
+				</control>
+				<control type="image">
+					<posx>14</posx>
+					<posy>280</posy>
+					<width>684</width>
+					<height>520</height>
+					<bordertexture border="40">arctic/common/border-20.png</bordertexture>
+					<bordersize>20</bordersize>
+					<texture border="39">arctic/common/whitepanel8.png</texture>
+				</control>
+            </control>            	
+			<control type="image">
+				<posx>0</posx>
+				<posy>185</posy>
+				<width>710</width>
+				<height>675</height>
+				<bordertexture border="40">arctic/common/border-20.png</bordertexture>
+				<bordersize>20</bordersize>
+				<texture border="39">arctic/common/panel.png</texture>
+				<visible>Control.IsVisible(6)</visible>
+			</control>
+			<control type="image">
+            	<posx>10</posx>
+            	<posy>244</posy>
+            	<width>80</width>
+            	<height>80</height>
+            	<texture>windows/home/icons/config.png</texture>
+            	<aspectratio>keep</aspectratio>
+            	<animation effect="slide" end="0,-44" condition="Control.IsVisible(6)">Conditional</animation>
             </control>
-            
             <control type="label" id="1">
-                <description>Heading</description>
-                <posx>473</posx>
-                <posy>248</posy>
-                <width>974</width>
-                <include>DialogHeaderMod</include>
-                <label>-</label>
-                <align>center</align>
+				<description>Heading</description>
+				<posx>80</posx>
+				<posy>262</posy>
+				<width>710</width>
+				<include>DialogHeaderMod</include>
+				<label>-</label>
+				<align>left</align>
+				<animation effect="slide" end="0,-44" condition="Control.IsVisible(6)">Conditional</animation>
+			</control>
+            <control type="group">
+            	<posx>-605</posx>
+				<include>SortLetterSelectDialog</include> 
             </control>
-            <include>SortLetterSelectDialog</include>
-                        
             <control type="list" id="3">
-                <posx>638</posx>
+                <posx>34</posx>
                 <posy>300</posy>
                 <width>644</width>
                 <height>480</height>
@@ -656,13 +633,6 @@
                 <pagecontrol>61</pagecontrol>
                 <scrolltime tween="cubic" easing="out">500</scrolltime>
                 <itemlayout height="60">
-                    <control type="image">
-                        <posx>0</posx>
-                        <posy>1</posy>
-                        <width>644</width>
-                        <height>60</height>
-                        <texture>dialogs/default/separator.png</texture>
-                    </control>
                     <control type="group">
                         <visible>!ListItem.IsSelected</visible>
                         <control type="label">
@@ -674,8 +644,8 @@
                             <font>Font-Condensed-S32</font>
                             <align>left</align>
                             <aligny>center</aligny>
-                            <textcolor>FF585858</textcolor>
-                            <selectedcolor>FF585858</selectedcolor>
+                            <textcolor>mod-infotags</textcolor>
+                            <selectedcolor>mod-infotags</selectedcolor>
                             <scroll>false</scroll>
                         </control>
                         <control type="label">
@@ -687,8 +657,8 @@
                             <font>Font-Condensed-S29</font>
                             <align>right</align>
                             <aligny>center</aligny>
-                            <textcolor>FF585858</textcolor>
-                            <selectedcolor>FF585858</selectedcolor>
+                            <textcolor>mod-infotags</textcolor>
+                            <selectedcolor>mod-infotags</selectedcolor>
                             <scroll>false</scroll>
                             <visible>!IsEmpty(ListItem.Label2)</visible>
                         </control>
@@ -704,8 +674,8 @@
                             <font>Font-Condensed-S32</font>
                             <align>left</align>
                             <aligny>center</aligny>
-                            <textcolor>FF585858</textcolor>
-                            <selectedcolor>FF585858</selectedcolor>
+                            <textcolor>mod-infotags</textcolor>
+                            <selectedcolor>mod-infotags</selectedcolor>
                             <scroll>false</scroll>
                         </control>
                         <control type="label">
@@ -717,8 +687,8 @@
                             <font>Font-Condensed-S29</font>
                             <align>right</align>
                             <aligny>center</aligny>
-                            <textcolor>FF585858</textcolor>
-                            <selectedcolor>FF585858</selectedcolor>
+                            <textcolor>mod-infotags</textcolor>
+                            <selectedcolor>mod-infotags</selectedcolor>
                             <scroll>false</scroll>
                             <visible>!IsEmpty(ListItem.Label2)</visible>
                         </control>
@@ -737,13 +707,6 @@
                         <visible>!Control.HasFocus(3)</visible>
                         <animation effect="fade" start="0" end="100" time="300" tween="sine" easing="inout" condition="![Container(3).Scrolling | Container(3).OnScrollNext | Container(3).OnScrollPrevious]">Visible</animation>
                         <animation effect="fade" start="100" end="0" time="300" tween="sine" easing="inout" condition="![Container(3).Scrolling | Container(3).OnScrollNext | Container(3).OnScrollPrevious]">Hidden</animation>
-                        <control type="image">
-                            <posx>0</posx>
-                            <posy>1</posy>
-                            <width>644</width>
-                            <height>60</height>
-                            <texture>dialogs/default/separator.png</texture>
-                        </control>
                         <control type="group">
                             <visible>!ListItem.IsSelected</visible>
                             <control type="label">
@@ -755,8 +718,8 @@
                                 <font>Font-Condensed-S32</font>
                                 <align>left</align>
                                 <aligny>center</aligny>
-                                <textcolor>FF585858</textcolor>
-                                <selectedcolor>FF585858</selectedcolor>
+                                <textcolor>mod-infotags</textcolor>
+                                <selectedcolor>mod-infotags</selectedcolor>
                                 <scroll>false</scroll>
                             </control>
                             <control type="label">
@@ -768,8 +731,8 @@
                                 <font>Font-Condensed-S29</font>
                                 <align>right</align>
                                 <aligny>center</aligny>
-                                <textcolor>FF585858</textcolor>
-                                <selectedcolor>FF585858</selectedcolor>
+                                <textcolor>mod-infotags</textcolor>
+                                <selectedcolor>mod-infotags</selectedcolor>
                                 <scroll>false</scroll>
                                 <visible>!IsEmpty(ListItem.Label2)</visible>
                             </control>
@@ -785,8 +748,8 @@
                                 <font>Font-Condensed-S32</font>
                                 <align>left</align>
                                 <aligny>center</aligny>
-                                <textcolor>FF585858</textcolor>
-                                <selectedcolor>FF585858</selectedcolor>
+                                <textcolor>mod-infotags</textcolor>
+                                <selectedcolor>mod-infotags</selectedcolor>
                                 <scroll>false</scroll>
                             </control>
                             <control type="label">
@@ -798,8 +761,8 @@
                                 <font>Font-Condensed-S29</font>
                                 <align>right</align>
                                 <aligny>center</aligny>
-                                <textcolor>FF585858</textcolor>
-                                <selectedcolor>FF585858</selectedcolor>
+                                <textcolor>mod-infotags</textcolor>
+                                <selectedcolor>mod-infotags</selectedcolor>
                                 <scroll>false</scroll>
                                 <visible>!IsEmpty(ListItem.Label2)</visible>
                             </control>
@@ -820,7 +783,7 @@
                         <control type="image">
                             <width>644</width>
                             <height>60</height>
-                            <texture border="2">dialogs/default/highlight.png</texture>
+                            <texture border="8">views/other/focus-mod8.png</texture>
                         </control>
                         <control type="group">
                             <visible>!ListItem.IsSelected</visible>
@@ -891,61 +854,72 @@
             </control>
             
             <control type="list" id="6">
-                <posx>421</posx>
-                <posy>300</posy>
+                <posx>34</posx>
+                <posy>262</posy>
                 <width>644</width>
-                <height>480</height>
+                <height>520</height>
                 <onleft>8000</onleft>
                 <onright>61</onright>
                 <onup>6</onup>
                 <ondown>6</ondown>
                 <pagecontrol>61</pagecontrol>
                 <scrolltime tween="cubic" easing="out">500</scrolltime>
-                <itemlayout height="60">
+                <itemlayout height="130">
                     <control type="image">
                         <posx>0</posx>
-                        <posy>1</posy>
+                        <posy>66</posy>
                         <width>644</width>
                         <height>60</height>
                         <texture>dialogs/default/separator.png</texture>
-                        <colordiffuse>99ffffff</colordiffuse>
+                        <colordiffuse>33ffffff</colordiffuse>
                     </control>
                     <control type="image">
                         <posx>5</posx>
                         <posy>0</posy>
-                        <width>60</width>
-                        <height>60</height>
+                        <width>120</width>
+                        <height>120</height>
                         <aspectratio>keep</aspectratio>
                         <texture background="true" fallback="dialogs/select/icons/DefaultAddon.png"  diffuse="arctic/common/whitepanel.png">$INFO[ListItem.Icon]</texture>
                     </control>
                     <control type="label">
-                        <posx>80</posx>
-                        <posy>0</posy>
-                        <width>544</width>
-                        <height>60</height>
-                        <info>ListItem.Label</info>
-                        <font>Font-Condensed-S32</font>
-                        <align>left</align>
-                        <aligny>center</aligny>
-                        <selectedcolor>DialogSelected</selectedcolor>
-                        <textcolor>mod-infotags-alt</textcolor>
-                        <scroll>false</scroll>
-                    </control>
-                    <control type="label">
-                        <posx>624</posx>
-                        <posy>0</posy>
-                        <width>544</width>
-                        <height>60</height>
-                        <info>ListItem.Property(Addon.Version)</info>
-                        <font>Font-Condensed-S29</font>
-                        <align>right</align>
-                        <aligny>center</aligny>
-                        <selectedcolor>DialogSelected</selectedcolor>
-                        <textcolor>mod-infotags-alt</textcolor>
-                        <scroll>false</scroll>
-                    </control>
+						<posx>140</posx>
+						<posy>10</posy>
+						<width>544</width>
+						<height>60</height>
+						<info>ListItem.Label</info>
+						<font>Font-Condensed-S38</font>
+						<align>left</align>
+						<aligny>center</aligny>
+						<textcolor>mod-infotags-alt</textcolor>
+						<selectedcolor>DialogSelected</selectedcolor>
+					</control>
+					<control type="label">
+						<posx>624</posx>
+						<posy>10</posy>
+						<width>544</width>
+						<height>60</height>
+						<info>ListItem.Property(Addon.Version)</info>
+						<font>Font-Condensed-S29</font>
+						<align>right</align>
+						<aligny>center</aligny>
+						<textcolor>mod-infotags-alt</textcolor>
+						<selectedcolor>DialogSelected</selectedcolor>
+						<scroll>false</scroll>
+					</control>
+					<control type="label">
+						<posx>140</posx>
+						<posy>50</posy>
+						<width>544</width>
+						<height>60</height>
+						<label>$LOCALIZE[21863] $INFO[ListItem.Property(Addon.Creator)]</label>
+						<font>Font-Condensed-S29</font>
+						<align>left</align>
+						<aligny>center</aligny>
+						<textcolor>mod-infotags-alt</textcolor>
+						<selectedcolor>DialogSelected</selectedcolor>
+					</control>
                 </itemlayout>
-                <focusedlayout height="60">
+                <focusedlayout height="130">
                     <control type="button">
                         <onfocus condition="!IsEmpty(Window(selectdialog).Property(Property))">SetProperty(Label,$INFO[Container(6).ListItem.Label])</onfocus>
                         <onfocus condition="!IsEmpty(Window(selectdialog).Property(Property))">SetProperty(Icon,$INFO[Container(6).ListItem.Icon])</onfocus>
@@ -954,38 +928,42 @@
                         <visible>!Control.HasFocus(6)</visible>
                         <animation effect="fade" start="0" end="100" time="300" tween="sine" easing="inout" condition="![Container(6).Scrolling | Container(6).OnScrollNext | Container(6).OnScrollPrevious]">Visible</animation>
                         <animation effect="fade" start="100" end="0" time="300" tween="sine" easing="inout" condition="![Container(6).Scrolling | Container(6).OnScrollNext | Container(6).OnScrollPrevious]">Hidden</animation>
-                        <control type="image">
-                            <posx>0</posx>
-                            <posy>1</posy>
-                            <width>644</width>
-                            <height>60</height>
-                            <texture>dialogs/default/separator.png</texture>
-                        </control>
                         <control type="label">
-                            <posx>80</posx>
-                            <posy>0</posy>
+                            <posx>140</posx>
+                            <posy>10</posy>
                             <width>544</width>
                             <height>60</height>
                             <info>ListItem.Label</info>
-                            <font>Font-Condensed-S32</font>
+                            <font>Font-Condensed-S38</font>
                             <align>left</align>
                             <aligny>center</aligny>
-                            <selectedcolor>DialogSelected</selectedcolor>
                             <textcolor>mod-infotags-alt</textcolor>
-                            <scroll>false</scroll>
+                            <selectedcolor>DialogSelected</selectedcolor>
                         </control>
                         <control type="label">
                             <posx>624</posx>
-                            <posy>0</posy>
+                            <posy>10</posy>
                             <width>544</width>
                             <height>60</height>
                             <info>ListItem.Property(Addon.Version)</info>
                             <font>Font-Condensed-S29</font>
                             <align>right</align>
                             <aligny>center</aligny>
-                            <selectedcolor>DialogSelected</selectedcolor>
                             <textcolor>mod-infotags-alt</textcolor>
+                            <selectedcolor>DialogSelected</selectedcolor>
                             <scroll>false</scroll>
+                        </control>
+                        <control type="label">
+                            <posx>140</posx>
+                            <posy>50</posy>
+                            <width>544</width>
+                            <height>60</height>
+                            <label>$LOCALIZE[21863] $INFO[ListItem.Property(Addon.Creator)]</label>
+                            <font>Font-Condensed-S29</font>
+                            <align>left</align>
+                            <aligny>center</aligny>
+                            <textcolor>mod-infotags-alt</textcolor>
+                            <selectedcolor>DialogSelected</selectedcolor>
                         </control>
                     </control>
                     <control type="group">
@@ -994,23 +972,23 @@
                         <animation effect="fade" start="100" end="0" time="300" tween="sine" easing="inout" condition="![Container(6).Scrolling | Container(6).OnScrollNext | Container(6).OnScrollPrevious]">Hidden</animation>
                         <control type="image">
                             <width>644</width>
-                            <height>60</height>
+                            <height>120</height>
                             <texture border="10">views/other/focus-mod8.png</texture>
                         </control>
                         <control type="label">
-                            <posx>80</posx>
-                            <posy>0</posy>
+                            <posx>140</posx>
+                            <posy>10</posy>
                             <width>544</width>
                             <height>60</height>
                             <info>ListItem.Label</info>
-                            <font>Font-Condensed-S32</font>
+                            <font>Font-Condensed-S38</font>
                             <align>left</align>
                             <aligny>center</aligny>
                             <textcolor>eewhite</textcolor>
                         </control>
                         <control type="label">
                             <posx>624</posx>
-                            <posy>0</posy>
+                            <posy>10</posy>
                             <width>544</width>
                             <height>60</height>
                             <info>ListItem.Property(Addon.Version)</info>
@@ -1020,12 +998,31 @@
                             <textcolor>eewhite</textcolor>
                             <scroll>false</scroll>
                         </control>
+                        <control type="label">
+                            <posx>140</posx>
+                            <posy>50</posy>
+                            <width>544</width>
+                            <height>60</height>
+                            <label>$LOCALIZE[21863] $INFO[ListItem.Property(Addon.Creator)]</label>
+                            <font>Font-Condensed-S29</font>
+                            <align>left</align>
+                            <aligny>center</aligny>
+                            <textcolor>eewhite</textcolor>
+                        </control>
+                    </control>
+                    <control type="image">
+                        <posx>0</posx>
+                        <posy>66</posy>
+                        <width>644</width>
+                        <height>60</height>
+                        <texture>dialogs/default/separator.png</texture>
+                        <colordiffuse>33ffffff</colordiffuse>
                     </control>
                     <control type="image">
                         <posx>5</posx>
                         <posy>0</posy>
-                        <width>60</width>
-                        <height>60</height>
+                        <width>120</width>
+                        <height>120</height>
                         <aspectratio>keep</aspectratio>
                         <texture background="true" fallback="dialogs/select/icons/DefaultAddon.png" diffuse="arctic/common/whitepanel.png">$INFO[ListItem.Icon]</texture>
                     </control>
@@ -1065,9 +1062,8 @@
             </control>
 
             <control type="group" id="8000">
-                <posx>626</posx>
-                <posy>768</posy>
-                <animation effect="slide" end="-217" time="0" condition="Control.IsVisible(6)">Conditional</animation>
+                <posx>22</posx>
+                <posy>758</posy>
                 <control type="button" id="5">
                     <description>Select</description>
                     <texturefocus>buttons/select-fo.png</texturefocus>

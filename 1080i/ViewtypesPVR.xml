@@ -212,14 +212,7 @@
                     <preloaditems>2</preloaditems>
                     <scrolltime tween="cubic" easing="out">500</scrolltime>
                     <itemlayout height="96">
-                        <control type="image">
-                            <posx>0</posx>
-                            <posy>0</posy>
-                            <width>1022</width>
-                            <height>97</height>
-                            <texture border="90,3,90,3">views/list/other/separator.png</texture>
-                            <colordiffuse>55ffffff</colordiffuse>
-                        </control>
+
                         <control type="image">
                             <posx>0</posx>
                             <posy>1</posy>
@@ -364,14 +357,7 @@
                         </control>
                     </itemlayout>
                     <focusedlayout height="96">
-                        <control type="image">
-                            <posx>0</posx>
-                            <posy>0</posy>
-                            <width>1022</width>
-                            <height>97</height>
-                            <texture border="90,3,90,3">views/list/other/separator.png</texture>
-                            <colordiffuse>55ffffff</colordiffuse>
-                        </control>
+             
                         <control type="image">
                             <posx>0</posx>
                             <posy>0</posy>
@@ -730,14 +716,7 @@
 	                <preloaditems>2</preloaditems>
 	                <scrolltime tween="cubic" easing="out">500</scrolltime>
 	                <itemlayout height="96">
-	                    <control type="image">
-	                        <posx>0</posx>
-	                        <posy>0</posy>
-	                        <width>1022</width>
-	                        <height>97</height>
-	                        <texture border="90,3,90,3">views/list/other/separator.png</texture>
-	                        <colordiffuse>55ffffff</colordiffuse>
-	                    </control>
+	 
 	                    <control type="image">
 	                        <posx>0</posx>
 	                        <posy>1</posy>
@@ -882,14 +861,7 @@
 	                    </control>
 	                </itemlayout>
 	                <focusedlayout height="96">
-	                    <control type="image">
-	                        <posx>0</posx>
-	                        <posy>0</posy>
-	                        <width>1022</width>
-	                        <height>97</height>
-	                        <texture border="90,3,90,3">views/list/other/separator.png</texture>
-	                        <colordiffuse>55ffffff</colordiffuse>
-	                    </control>
+
 	                    <control type="image">
 	                        <posx>0</posx>
 	                        <posy>0</posy>
@@ -1204,14 +1176,7 @@
 					</control>
 				</rulerlayout>
 				<channellayout height="80" width="505">
-				    <!--<control type="image">
-				        <posx>0</posx>
-				        <posy>1</posy>
-				        <width>505</width>
-				        <height>81</height>
-				        <texture border="90,3,90,3">views/list/other/separator.png</texture>
-				        <colordiffuse>55ffffff</colordiffuse>
-				    </control>-->
+	
 				    <control type="image">
 					    <posx>0</posx>
 					    <posy>-1</posy>
@@ -1266,14 +1231,7 @@
 				    </control>
 				</channellayout>
 				<focusedchannellayout height="80" width="505">
-					<!--<control type="image">
-					    <posx>0</posx>
-					    <posy>1</posy>
-					    <width>505</width>
-					    <height>81</height>
-					    <texture border="90,3,90,3">views/list/other/separator.png</texture>
-					    <colordiffuse>55ffffff</colordiffuse>
-					</control>-->
+	
 					<control type="image">
 					    <posx>0</posx>
 					    <posy>-1</posy>
@@ -1646,14 +1604,7 @@
 	                <preloaditems>2</preloaditems>
 	                <scrolltime tween="cubic" easing="out">500</scrolltime>
 	                <itemlayout height="75">
-	                    <control type="image">
-	                        <posx>0</posx>
-	                        <posy>0</posy>
-	                        <width>1022</width>
-	                        <height>76</height>
-	                        <texture border="90,3,90,3">views/list/other/separator.png</texture>
-	                        <colordiffuse>55ffffff</colordiffuse>
-	                    </control>
+	   
 	                    <control type="label">
 	                        <description>Title</description>
 	                        <posx>270</posx>
@@ -1736,14 +1687,7 @@
 	                    </control>
 	                </itemlayout>
 	                <focusedlayout height="75">
-	                    <control type="image">
-	                        <posx>0</posx>
-	                        <posy>0</posy>
-	                        <width>1022</width>
-	                        <height>76</height>
-	                        <texture border="90,3,90,3">views/list/other/separator.png</texture>
-	                        <colordiffuse>55ffffff</colordiffuse>
-	                    </control>
+	        
 	                    <control type="image">
 	                        <posx>0</posx>
 	                        <posy>0</posy>
@@ -2012,14 +1956,7 @@
 	                <preloaditems>2</preloaditems>
 	                <scrolltime tween="cubic" easing="out">500</scrolltime>
 	                <itemlayout height="75">
-	                    <control type="image">
-	                        <posx>0</posx>
-	                        <posy>0</posy>
-	                        <width>1022</width>
-	                        <height>76</height>
-	                        <texture border="90,3,90,3">views/list/other/separator.png</texture>
-	                        <colordiffuse>55ffffff</colordiffuse>
-	                    </control>
+	                
 	                    <control type="label">
 	                        <description>Title</description>
 	                        <posx>145</posx>
@@ -2104,14 +2041,7 @@
 	                    </control>
 	                </itemlayout>
 	                <focusedlayout height="75">
-	                    <control type="image">
-	                        <posx>0</posx>
-	                        <posy>0</posy>
-	                        <width>1022</width>
-	                        <height>76</height>
-	                        <texture border="90,3,90,3">views/list/other/separator.png</texture>
-	                        <colordiffuse>55ffffff</colordiffuse>
-	                    </control>
+	          
 	                    <control type="image">
 	                        <posx>0</posx>
 	                        <posy>0</posy>
@@ -2384,14 +2314,7 @@
 	                <preloaditems>2</preloaditems>
 	                <scrolltime tween="cubic" easing="out">500</scrolltime>
 	                <itemlayout height="75">
-	                    <control type="image">
-	                        <posx>0</posx>
-	                        <posy>0</posy>
-	                        <width>1022</width>
-	                        <height>76</height>
-	                        <texture border="90,3,90,3">views/list/other/separator.png</texture>
-	                        <colordiffuse>55ffffff</colordiffuse>
-	                    </control>
+	             
 	                    <control type="image">
 	                        <posx>0</posx>
 	                        <posy>1</posy>
@@ -2438,14 +2361,7 @@
 	                    </control>
 	                </itemlayout>
 	                <focusedlayout height="75">
-	                    <control type="image">
-	                        <posx>0</posx>
-	                        <posy>0</posy>
-	                        <width>1022</width>
-	                        <height>76</height>
-	                        <texture border="90,3,90,3">views/list/other/separator.png</texture>
-	                        <colordiffuse>55ffffff</colordiffuse>
-	                    </control>
+	         
 	                    <control type="image">
 	                        <posx>0</posx>
 	                        <posy>1</posy>
@@ -2621,14 +2537,7 @@
 	                <preloaditems>2</preloaditems>
 	                <scrolltime tween="cubic" easing="out">500</scrolltime>
 	                <itemlayout height="75">
-	                    <control type="image">
-	                        <posx>0</posx>
-	                        <posy>0</posy>
-	                        <width>1320</width>
-	                        <height>76</height>
-	                        <texture border="90,3,90,3">views/list/other/separator.png</texture>
-	                        <colordiffuse>55ffffff</colordiffuse>
-	                    </control>
+	        
 	                    <control type="label">
 	                        <description>Title</description>
 	                        <posx>285</posx>
@@ -2678,14 +2587,7 @@
 	                    </control>
 	                </itemlayout>
 	                <focusedlayout height="75">
-	                    <control type="image">
-	                        <posx>0</posx>
-	                        <posy>0</posy>
-	                        <width>1320</width>
-	                        <height>76</height>
-	                        <texture border="90,3,90,3">views/list/other/separator.png</texture>
-	                        <colordiffuse>55ffffff</colordiffuse>
-	                    </control>
+	         
 	                    <control type="image">
 	                        <posx>0</posx>
 	                        <posy>0</posy>
@@ -2850,14 +2752,7 @@
 	                <preloaditems>2</preloaditems>
 	                <scrolltime tween="cubic" easing="out">500</scrolltime>
 	                <itemlayout height="75">
-	                    <control type="image">
-	                        <posx>0</posx>
-	                        <posy>0</posy>
-	                        <width>1320</width>
-	                        <height>76</height>
-	                        <texture border="90,3,90,3">views/list/other/separator.png</texture>
-	                        <colordiffuse>55ffffff</colordiffuse>
-	                    </control>
+	           
 	                    <control type="label">
 	                        <description>Title</description>
 	                        <posx>285</posx>
@@ -2949,14 +2844,7 @@
 						</control>
 	                </itemlayout>
 	                <focusedlayout height="75">
-	                    <control type="image">
-	                        <posx>0</posx>
-	                        <posy>0</posy>
-	                        <width>1320</width>
-	                        <height>76</height>
-	                        <texture border="90,3,90,3">views/list/other/separator.png</texture>
-	                        <colordiffuse>55ffffff</colordiffuse>
-	                    </control>
+	          
 	                    <control type="image">
 	                        <posx>0</posx>
 	                        <posy>0</posy>

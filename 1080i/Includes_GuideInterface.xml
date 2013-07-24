@@ -1723,11 +1723,11 @@
         <control type="label">
             <description>Clock</description>
             <posx>560r</posx>
-            <posy>241</posy>
+            <posy>238</posy>
             <width>1700</width>
             <label>[B]$INFO[System.Time][/B]</label>
-            <font>Font-Condensed-S34</font>
-            <textcolor>bbwhite</textcolor>
+            <font>Font-Alaska-S52-BL</font>
+            <textcolor>Mod_Tags</textcolor>
             <align>right</align>
             <scroll>false</scroll>
             <visible>!Skin.HasSetting(Guide.HideClock)</visible>
@@ -1760,19 +1760,6 @@
             <texture>osd/media-guide/line.png</texture>
             <colordiffuse>aawhite</colordiffuse>
             <aspectratio>stretch</aspectratio>
-        </control>
-
-        <!-- current user logo -->
-        <control type="image">
-            <posx>920</posx>
-            <posy>188</posy>
-            <width>80</width>
-            <height>80</height>
-            <info>System.ProfileThumb</info>
-            <texture diffuse="windows/logon/profile_mask.png" />
-            <fadetime>300</fadetime>
-            <aspectratio scalediffuse="false">scale</aspectratio>
-            <visible>!Skin.HasSetting(Guide.HideUserImage)</visible>
         </control>
     </include>
 </includes>

@@ -150,7 +150,7 @@
                         <height>60</height>
                         <font>Font-Condensed-S32</font>
                         <textoffsetx>20</textoffsetx>
-                        <align>right</align>
+                        <align>left</align>
                         <textcolor>mod-infotags-alt</textcolor>
                         <focusedcolor>white</focusedcolor>
                         <disabledcolor>mod-infotags-li</disabledcolor>
@@ -162,13 +162,13 @@
                 <control type="group" >
                     <posx>642</posx>
                     <posy>303</posy>
-                    <control type="image">
+                   <!--<control type="image">
 						<posx>0</posx>
 						<posy>0</posy>
 						<width>960</width>
 						<height>473</height>
 						<texture border="40">arctic/common/whitepanel8.png</texture>
-					</control>  
+					</control>  -->
                     <control type="grouplist" id="2">
                         <description>control area</description>
                         <posx>0</posx>
@@ -192,7 +192,7 @@
                 <font>Font-Condensed-S32</font>
                 <textoffsetx>20</textoffsetx>
                 <align>left</align>
-                <textcolor>mod-infotags</textcolor>
+                <textcolor>mod-infotags-alt</textcolor>
                 <focusedcolor>white</focusedcolor>
                 <disabledcolor>44000000</disabledcolor>
                 <shadowcolor>20FFFFFF</shadowcolor>
@@ -206,7 +206,7 @@
                 <textoffsetx>20</textoffsetx>
                 <textwidth>844</textwidth>
                 <radioposx>852</radioposx>
-                <textcolor>mod-infotags</textcolor>
+                <textcolor>mod-infotags-alt</textcolor>
                 <focusedcolor>white</focusedcolor>
                 <disabledcolor>44000000</disabledcolor>
                 <shadowcolor>20FFFFFF</shadowcolor>
@@ -222,7 +222,7 @@
                 <textureupfocus>buttons/spinctrl/arrow-light-up-fo.png</textureupfocus>
                 <texturedownfocus>buttons/spinctrl/arrow-light-down-fo.png</texturedownfocus>
                 <texturefocus border="8">views/other/focus-mod8.png</texturefocus>
-                <textcolor>mod-infotags</textcolor>
+                <textcolor>mod-infotags-alt</textcolor>
                 <focusedcolor>white</focusedcolor>
                 <disabledcolor>44000000</disabledcolor>
                 <shadowcolor>20FFFFFF</shadowcolor>
@@ -238,7 +238,7 @@
                 <font>Font-Alaska-S28-L</font>
                 <textoffsetx>20</textoffsetx>
                 <textoffsety>14</textoffsety>
-                <textcolor>mod-infotags</textcolor>
+                <textcolor>mod-infotags-alt</textcolor>
             </control>
             
             <control type="sliderex" id="8">
@@ -252,7 +252,7 @@
                 <texturesliderbar>dialogs/mediasource/slider-back.png</texturesliderbar>
                 <textureslidernib>dialogs/mediasource/slider-nib-nf.png</textureslidernib>
                 <textureslidernibfocus>dialogs/mediasource/slider-nib-fo.png</textureslidernibfocus>
-                <textcolor>mod-infotags</textcolor>
+                <textcolor>mod-infotags-alt</textcolor>
                 <focusedcolor>white</focusedcolor>
                 <disabledcolor>44000000</disabledcolor>
                 <shadowcolor>20FFFFFF</shadowcolor>

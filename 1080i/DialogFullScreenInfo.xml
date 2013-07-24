@@ -75,7 +75,7 @@
                 <height>245</height>
                 <label>[B]$LOCALIZE[207][/B][CR]$VAR[OSDPlot]</label>
                 <textcolor>mod-infotags</textcolor>
-                <font>Font-Condensed-S34</font>
+                <font>Font-Condensed-S32</font>
                 <align>justify</align>
                 <autoscroll delay="11500" time="5000" repeat="7500" />
                 <include>visiblehidefadeinfo</include>

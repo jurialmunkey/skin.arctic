@@ -329,34 +329,11 @@
 							<label>Open submenu on click</label>
 						</control>
 					
-						<control type="button" id="2006">
-							<posx>0</posx>
-							<posy>0</posy>
-							<width>1210</width>
-							<height>77</height>
-							<align>left</align>
-							<aligny>center</aligny>
-							<textoffsetx>35</textoffsetx>
-							<font>Font-Condensed-S30</font>
-							<include>SettingsCategoryDefaultButtonVars</include>
-							<onclick>Skin.ToggleSetting(UseRCB)</onclick>
-							<onclick condition="Skin.HasSetting(UseRCB)">Skin.SetString(UseRCB.name,Rom Collection Browser)</onclick>
-							<onclick condition="!Skin.HasSetting(UseRCB)">Skin.SetString(UseRCB.name,Advanced Launcher)</onclick>
-							<label>Games tile opens</label>
-							<label2>$INFO[Skin.String(UseRCB.name)]</label2>
-						</control>
+						
 						<control type="group" id="2007">
 							<description>Fake spin control</description>
 							<width>1210</width>
 							<height>77</height>
-							<control type="image">
-								<posx>0</posx>
-								<posy>0</posy>
-								<width>1210</width>
-								<height>77</height>
-								<texture border="90,3,90,3">views/list/other/separator-l.png</texture>
-								<visible>!ControlGroup(2007).HasFocus</visible>
-							</control>
 							<control type="image">
 								<posx>0</posx>
 								<posy>0</posy>
@@ -731,13 +708,6 @@
 							<selected>!Skin.HasSetting(Guide.HideClock)</selected>
 							<onclick>Skin.ToggleSetting(Guide.HideClock)</onclick>
 							<label>$LOCALIZE[41270]</label>
-						</control>
-						<control type="radiobutton" id="6002">
-							<width>1210</width>
-							<include>SettingsCategoryRadioButtonVars</include>
-							<selected>!Skin.HasSetting(Guide.HideUserImage)</selected>
-							<onclick>Skin.ToggleSetting(Guide.HideUserImage)</onclick>
-							<label>$LOCALIZE[41271]</label>
 						</control>
 						<control type="radiobutton" id="6003">
 							<width>1210</width>

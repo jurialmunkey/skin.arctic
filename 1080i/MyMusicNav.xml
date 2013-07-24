@@ -59,7 +59,7 @@
                     <description>Label</description>
                     <posy>330</posy>
                     <include>optionsbuttonsdimensions</include>
-                    <label>$INFO[Control.GetLabel(2)]</label>
+                    <label>$INFO[Container.ViewMode]</label>
                     <onclick>setfocus(9223)</onclick>
                     <texturefocus border="70,2,2,2">dialogs/options/buttons/view-fo.png</texturefocus>
                     <texturenofocus border="70,2,2,2">dialogs/options/buttons/view-nf.png</texturenofocus>

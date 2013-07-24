@@ -14,7 +14,7 @@
                 <texture border="20">arctic/common/panel.png</texture>
                 <bordertexture border="40">arctic/common/banner-20.png</bordertexture>
                 <bordersize>20</bordersize>
-                <colordiffuse>bbwhite</colordiffuse>
+                <colordiffuse>ddwhite</colordiffuse>
             </control>
             <control type="image">
                 <posx>99</posx>

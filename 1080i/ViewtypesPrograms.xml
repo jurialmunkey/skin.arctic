@@ -8,16 +8,6 @@
             <visible>Control.IsVisible(50) + !Window.IsActive(addoninformation) + !Window.IsActive(1122) + !Window.IsActive(favourites) + !Window.IsActive(script-Actors-DialogInfo.xml) + !Window.IsActive(script-Actors-DialogVideoInfo.xml) + IsEmpty(Window(Home).Property(script.metadata.actors.hasparent)) + !Window.IsActive(favourites)</visible>
             <include>CommonViewAnimations</include>
             <include>OptionsShutdownAnimation</include>
-
-            <control type="image">
-                <posx>230</posx>
-                <posy>171</posy>
-                <height>737</height>
-                <width>1460</width>
-                <texture border="25">views/newgloss/border-glass.png</texture>
-                <colordiffuse>77ffffff</colordiffuse>
-                <visible>!Skin.HasSetting(hide.glass)</visible>
-            </control>
             <control type="image">
                 <posx>235</posx>
                 <posy>176</posy>
@@ -51,14 +41,6 @@
                 <scrolltime tween="cubic" easing="out">500</scrolltime>
                 <preloaditems>2</preloaditems>
                 <itemlayout height="100" condition="!substring(Container.FolderPath,plugin://plugin.program.advanced.launcher/,left)">
-                    <control type="image">
-                        <description>List separator</description>
-                        <posx>0</posx>
-                        <posy>0</posy>
-                        <width>1420</width>
-                        <height>101</height>
-                        <texture border="90,3,90,3">views/list/other/separator-l.png</texture>
-                    </control>
                     <control type="label">
                         <description>Label</description>
                         <posx>120</posx>
@@ -95,14 +77,6 @@
                     </control>
                 </itemlayout>
                 <itemlayout height="100" condition="substring(Container.FolderPath,plugin://plugin.program.advanced.launcher/,left)">
-                    <control type="image">
-                        <description>List separator</description>
-                        <posx>0</posx>
-                        <posy>0</posy>
-                        <width>1420</width>
-                        <height>101</height>
-                        <texture border="90,3,90,3">views/list/other/separator-l.png</texture>
-                    </control>
                     <control type="label">
                         <description>Label</description>
                         <posx>120</posx>
@@ -167,14 +141,7 @@
                     </control>
                 </itemlayout>
                 <focusedlayout height="100" condition="!substring(Container.FolderPath,plugin://plugin.program.advanced.launcher/,left)">
-                    <control type="image">
-                        <description>List separator</description>
-                        <posx>0</posx>
-                        <posy>0</posy>
-                        <width>1420</width>
-                        <height>101</height>
-                        <texture border="90,3,90,3">views/list/other/separator-l.png</texture>
-                    </control>
+
                     <control type="image">
                         <posx>0</posx>
                         <posy>0</posy>
@@ -225,14 +192,6 @@
                     </control>
                 </focusedlayout>
                 <focusedlayout height="100" condition="substring(Container.FolderPath,plugin://plugin.program.advanced.launcher/,left)">
-                    <control type="image">
-                        <description>List separator</description>
-                        <posx>0</posx>
-                        <posy>0</posy>
-                        <width>1420</width>
-                        <height>101</height>
-                        <texture border="90,3,90,3">views/list/other/separator-l.png</texture>
-                    </control>
                     <control type="image">
                         <posx>0</posx>
                         <posy>0</posy>

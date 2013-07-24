@@ -192,19 +192,12 @@
 					<aspectratio scalediffuse="false">scale</aspectratio>
 				</control>
 				<control type="image">
-					<posx>846</posx>
-					<posy>-15</posy>
-					<width>3</width>
-					<height>307</height>
-					<texture border="1,150,1,150">arctic/common/separator-v.png</texture>
-					<aspectratio>stretch</aspectratio>
-				</control>
-				<control type="image">
 					<posx>485</posx>
 					<posy>-79</posy>
 					<width>1265</width>
 					<height>435</height>
 					<texture border="100">arctic/common/border-64.png</texture>
+					<colordiffuse>77white</colordiffuse>
 				</control>
 				<control type="group">
 					<posy>5</posy>

@@ -49,9 +49,7 @@
                 <viewtype label="Big List">list</viewtype>
                 <scrolltime tween="cubic" easing="out">500</scrolltime>
                 <preloaditems>2</preloaditems>
-                <itemlayout height="100" condition="Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(sets) | Container.Content(episodes)">
-                </itemlayout>
-                <itemlayout height="100" condition="!Container.Content(movies) + !Container.Content(tvshows) + !Container.Content(seasons) + !Container.Content(episodes)">
+                <itemlayout height="100">
                     <control type="image">
                         <posx>0</posx>
                         <posy>1</posy>
@@ -158,7 +156,7 @@
                         <visible>Container.Content(genres)</visible>
                     </control>
                 </itemlayout>
-                <focusedlayout height="100" condition="!Container.Content(movies) + !Container.Content(tvshows) + !Container.Content(seasons) + !Container.Content(episodes) + !Container.Content(sets)">
+                <focusedlayout height="100">
                     <control type="image">
                         <posx>0</posx>
                         <posy>1</posy>
@@ -280,11 +278,6 @@
                             <visible>!IsEmpty(ListItem.Rating)</visible>
                         </control>
                     </control>
-                </focusedlayout>
-                <focusedlayout height="100" condition="Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(sets) | Container.Content(episodes)">
-                	<control type="button">
-                		<onfocus>Container.SetViewMode(517)</onfocus>
-                	</control>
                 </focusedlayout>
             </control>
         </control>

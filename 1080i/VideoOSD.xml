@@ -35,21 +35,13 @@
                 <!-- control buttons -->
                 <posx>0</posx>
                 <posy>989</posy>
-                <!--<control type="image">
-					<posx>-100</posx>
-					<posy>-28</posy>
-					<width>2120</width>
-					<height>128</height>
-					<texture>arctic/common/fade.png</texture>
-					<visible>Player.ShowInfo | Window.IsVisible(fullscreeninfo)</visible>
-				</control>-->
                 <control type="button" id="11">
                     <description>Audio Settings</description>
                     <posx>385</posx>
                     <height>100</height>
                     <width>100</width>
                     <texturefocus>osd/fullscreen/buttons/audio-settings-fo.png</texturefocus>
-                    <texturenofocus>osd/fullscreen/buttons/audio-settings-nofo.png</texturenofocus>
+                    <texturenofocus>osd/fullscreen/buttons/audio-settings-nofo-dark.png</texturenofocus>
                     <onclick>activatewindow(124)</onclick>
                     <onup>Close</onup>
                     <ondown>Close</ondown>
@@ -62,7 +54,7 @@
                     <height>100</height>
                     <width>100</width>
                     <texturefocus>osd/fullscreen/buttons/video-settings-fo.png</texturefocus>
-                    <texturenofocus>osd/fullscreen/buttons/video-settings-nofo.png</texturenofocus>
+                    <texturenofocus>osd/fullscreen/buttons/video-settings-nofo-dark.png</texturenofocus>
                     <onclick>activatewindow(123)</onclick>
                     <onup>Close</onup>
                     <ondown>Close</ondown>
@@ -75,9 +67,9 @@
                     <height>100</height>
                     <width>100</width>
                     <texturefocus>osd/fullscreen/buttons/subtitles-fo.png</texturefocus>
-                    <texturenofocus>osd/fullscreen/buttons/subtitles-nofo.png</texturenofocus>
+                    <texturenofocus>osd/fullscreen/buttons/subtitles-nofo-dark.png</texturenofocus>
                     <alttexturefocus>osd/fullscreen/buttons/subtitles-fo.png</alttexturefocus>
-                    <alttexturenofocus>osd/fullscreen/buttons/subtitles-nofo.png</alttexturenofocus>
+                    <alttexturenofocus>osd/fullscreen/buttons/subtitles-nofo-dark.png</alttexturenofocus>
                     <onclick>XBMC.RunScript($INFO[Skin.String(SubtitleScript_Path)])</onclick>
                     <altclick>Skin.SetAddon(SubtitleScript_Path,xbmc.python.subtitles)</altclick>
                     <altclick>XBMC.RunScript($INFO[Skin.String(SubtitleScript_Path)])</altclick>
@@ -93,9 +85,9 @@
     				<height>100</height>
     				<width>100</width>
     				<texturefocus>osd/fullscreen/buttons/record-off-fo.png</texturefocus>
-    				<texturenofocus>osd/fullscreen/buttons/record-off-nofo.png</texturenofocus>
+    				<texturenofocus>osd/fullscreen/buttons/record-off-nofo-dark.png</texturenofocus>
     				<alttexturefocus>osd/fullscreen/buttons/record-fo.png</alttexturefocus>
-    				<alttexturenofocus>osd/fullscreen/buttons/record-nofo.png</alttexturenofocus>
+    				<alttexturenofocus>osd/fullscreen/buttons/record-nofo-dark.png</alttexturenofocus>
     				<usealttexture>Player.Recording</usealttexture>
     				<onleft>12</onleft>
     				<onright>1</onright>
@@ -112,7 +104,7 @@
                     <height>100</height>
                     <width>100</width>
                     <texturefocus>osd/fullscreen/buttons/previous-fo.png</texturefocus>
-                    <texturenofocus>osd/fullscreen/buttons/previous-nofo.png</texturenofocus>
+                    <texturenofocus>osd/fullscreen/buttons/previous-nofo-dark.png</texturenofocus>
                     <onclick>playercontrol(previous)</onclick>
                     <onup>Close</onup>
                     <ondown>Close</ondown>
@@ -126,7 +118,7 @@
                     <height>100</height>
                     <width>100</width>
                     <texturefocus>osd/fullscreen/buttons/up-fo.png</texturefocus>
-                    <texturenofocus>osd/fullscreen/buttons/up-nofo.png</texturenofocus>
+                    <texturenofocus>osd/fullscreen/buttons/up-nofo-dark.png</texturenofocus>
                     <onclick>playercontrol(previous)</onclick>
                     <onup>Close</onup>
                     <ondown>Close</ondown>
@@ -140,7 +132,7 @@
                     <height>100</height>
                     <width>100</width>
                     <texturefocus>osd/fullscreen/buttons/down-fo.png</texturefocus>
-                    <texturenofocus>osd/fullscreen/buttons/down-nofo.png</texturenofocus>
+                    <texturenofocus>osd/fullscreen/buttons/down-nofo-dark.png</texturenofocus>
                     <onclick>playercontrol(next)</onclick>
                     <onup>Close</onup>
                     <ondown>Close</ondown>
@@ -156,10 +148,10 @@
                         <height>100</height>
                         <width>100</width>
                         <texturefocus>osd/fullscreen/buttons/rewind-fo.png</texturefocus>
-                        <texturenofocus>osd/fullscreen/buttons/rewind-nofo.png</texturenofocus>
+                        <texturenofocus>osd/fullscreen/buttons/rewind-nofo-dark.png</texturenofocus>
                         <usealttexture>Player.Rewinding</usealttexture>
                         <alttexturefocus>osd/fullscreen/buttons/rewind-on-fo.png</alttexturefocus>
-                        <alttexturenofocus>osd/fullscreen/buttons/rewind-on-nofo.png</alttexturenofocus>
+                        <alttexturenofocus>osd/fullscreen/buttons/rewind-on-nofo-dark.png</alttexturenofocus>
                         <onclick>playercontrol(rewind)</onclick>
                         <onup>Close</onup>
                         <ondown>Close</ondown>
@@ -175,10 +167,10 @@
                         <height>100</height>
                         <width>100</width>
                         <texturefocus>osd/fullscreen/buttons/pause-fo.png</texturefocus>
-                        <texturenofocus>osd/fullscreen/buttons/pause-nofo.png</texturenofocus>
+                        <texturenofocus>osd/fullscreen/buttons/pause-nofo-dark.png</texturenofocus>
                         <usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
                         <alttexturefocus>osd/fullscreen/buttons/play-fo.png</alttexturefocus>
-                        <alttexturenofocus>osd/fullscreen/buttons/play-nofo.png</alttexturenofocus>
+                        <alttexturenofocus>osd/fullscreen/buttons/play-nofo-dark.png</alttexturenofocus>
                         <onclick>playercontrol(play)</onclick>
                         <onup>Close</onup>
                         <ondown>Close</ondown>
@@ -193,7 +185,7 @@
                         <height>100</height>
                         <width>100</width>
                         <texturefocus>osd/fullscreen/buttons/stop-fo.png</texturefocus>
-                        <texturenofocus>osd/fullscreen/buttons/stop-nofo.png</texturenofocus>
+                        <texturenofocus>osd/fullscreen/buttons/stop-nofo-dark.png</texturenofocus>
                         <onclick>playercontrol(stop)</onclick>
                         <onup>Close</onup>
                         <ondown>Close</ondown>
@@ -206,10 +198,10 @@
                         <height>100</height>
                         <width>100</width>
                         <texturefocus>osd/fullscreen/buttons/fast-forward-fo.png</texturefocus>
-                        <texturenofocus>osd/fullscreen/buttons/fast-forward-nofo.png</texturenofocus>
+                        <texturenofocus>osd/fullscreen/buttons/fast-forward-nofo-dark.png</texturenofocus>
                         <usealttexture>Player.Forwarding</usealttexture>
                         <alttexturefocus>osd/fullscreen/buttons/fast-forward-on-fo.png</alttexturefocus>
-                        <alttexturenofocus>osd/fullscreen/buttons/fast-forward-on-nofo.png</alttexturenofocus>
+                        <alttexturenofocus>osd/fullscreen/buttons/fast-forward-on-nofo-dark.png</alttexturenofocus>
                         <onclick>playercontrol(forward)</onclick>
                         <onup>Close</onup>
                         <ondown>Close</ondown>
@@ -224,7 +216,7 @@
                         <height>100</height>
                         <width>100</width>
                         <texturefocus>osd/fullscreen/buttons/next-fo.png</texturefocus>
-                        <texturenofocus>osd/fullscreen/buttons/next-nofo.png</texturenofocus>
+                        <texturenofocus>osd/fullscreen/buttons/next-nofo-dark.png</texturenofocus>
                         <onclick>playercontrol(next)</onclick>
                         <onup>Close</onup>
                         <ondown>Close</ondown>
@@ -241,7 +233,7 @@
                         <height>100</height>
                         <width>100</width>
                         <texturefocus>osd/fullscreen/buttons/dvd-fo.png</texturefocus>
-                        <texturenofocus>osd/fullscreen/buttons/dvd-nofo.png</texturenofocus>
+                        <texturenofocus>osd/fullscreen/buttons/dvd-nofo-dark.png</texturenofocus>
                         <onclick>PlayerControl(ShowVideoMenu)</onclick>
                         <enable>VideoPlayer.HasMenu</enable>
                         <onleft>6</onleft>
@@ -256,7 +248,7 @@
                         <height>100</height>
                         <width>100</width>
                         <texturefocus>osd/fullscreen/buttons/info-fo.png</texturefocus>
-                        <texturenofocus>osd/fullscreen/buttons/info-nofo.png</texturenofocus>
+                        <texturenofocus>osd/fullscreen/buttons/info-nofo-dark.png</texturenofocus>
                         <onclick>Action(Info)</onclick>
                         <onclick>PreviousMenu</onclick>
                         <onleft>10</onleft>
@@ -272,7 +264,7 @@
                         <height>100</height>
                         <width>100</width>
                         <texturefocus>osd/fullscreen/buttons/bookmarks-fo.png</texturefocus>
-                        <texturenofocus>osd/fullscreen/buttons/bookmarks-nofo.png</texturenofocus>
+                        <texturenofocus>osd/fullscreen/buttons/bookmarks-nofo-dark.png</texturenofocus>
                         <onclick>ActivateWindow(125)</onclick>
                         <onup>Close</onup>
                         <ondown>Close</ondown>
@@ -288,7 +280,7 @@
                         <height>100</height>
                         <width>100</width>
                         <texturefocus>osd/fullscreen/buttons/channel-fo.png</texturefocus>
-                        <texturenofocus>osd/fullscreen/buttons/channel-nofo.png</texturenofocus>
+                        <texturenofocus>osd/fullscreen/buttons/channel-nofo-dark.png</texturenofocus>
                         <onclick>ActivateWindow(PVROSDChannels)</onclick>
                         <onleft>6</onleft>
                         <onright>8</onright>
@@ -301,7 +293,7 @@
                         <height>100</height>
                         <width>100</width>
                         <texturefocus>osd/fullscreen/buttons/epg-fo.png</texturefocus>
-                        <texturenofocus>osd/fullscreen/buttons/epg-nofo.png</texturenofocus>
+                        <texturenofocus>osd/fullscreen/buttons/epg-nofo-dark.png</texturenofocus>
                         <onclick>ActivateWindow(PVROSDGuide)</onclick>
                         <onleft>10</onleft>
                         <onright>9</onright>
@@ -314,7 +306,7 @@
                         <height>100</height>
                         <width>100</width>
                         <texturefocus>osd/fullscreen/buttons/text-fo.png</texturefocus>
-                        <texturenofocus>osd/fullscreen/buttons/text-nofo.png</texturenofocus>
+                        <texturenofocus>osd/fullscreen/buttons/text-nofo-dark.png</texturenofocus>
                         <onclick>ActivateWindow(Teletext)</onclick>
                         <onup>Close</onup>
                         <ondown>Close</ondown>

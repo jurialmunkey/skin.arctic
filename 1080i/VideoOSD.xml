@@ -31,18 +31,18 @@
                 <effect type="fade" start="100" end="0" time="200" tween="sine" easing="out" />
                 <effect type="slide" start="0,0" end="0,70" time="300" tween="cubic" easing="inout" />
             </animation>
-            <!--<animation effect="slide" start="0,0" end="0,-62" time="300" tween="cubic" easing="inout" condition="Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding">Conditional</animation>-->
             <control type="group">
                 <!-- control buttons -->
                 <posx>0</posx>
                 <posy>989</posy>
-                <control type="image">
+                <!--<control type="image">
 					<posx>-100</posx>
 					<posy>-28</posy>
 					<width>2120</width>
 					<height>128</height>
 					<texture>arctic/common/fade.png</texture>
-				</control>
+					<visible>Player.ShowInfo | Window.IsVisible(fullscreeninfo)</visible>
+				</control>-->
                 <control type="button" id="11">
                     <description>Audio Settings</description>
                     <posx>385</posx>

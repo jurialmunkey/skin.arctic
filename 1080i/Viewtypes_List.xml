@@ -53,14 +53,6 @@
                 </itemlayout>
                 <itemlayout height="100" condition="!Container.Content(movies) + !Container.Content(tvshows) + !Container.Content(seasons) + !Container.Content(episodes)">
                     <control type="image">
-                        <description>List separator</description>
-                        <posx>0</posx>
-                        <posy>0</posy>
-                        <width>1420</width>
-                        <height>101</height>
-                        <texture border="90,3,90,3">views/list/other/separator-l.png</texture>
-                    </control>
-                    <control type="image">
                         <posx>0</posx>
                         <posy>1</posy>
                         <width>1420</width>
@@ -167,14 +159,6 @@
                     </control>
                 </itemlayout>
                 <focusedlayout height="100" condition="!Container.Content(movies) + !Container.Content(tvshows) + !Container.Content(seasons) + !Container.Content(episodes) + !Container.Content(sets)">
-                    <control type="image">
-                        <description>List separator</description>
-                        <posx>0</posx>
-                        <posy>0</posy>
-                        <width>1420</width>
-                        <height>101</height>
-                        <texture border="90,3,90,3">views/list/other/separator-l.png</texture>
-                    </control>
                     <control type="image">
                         <posx>0</posx>
                         <posy>1</posy>

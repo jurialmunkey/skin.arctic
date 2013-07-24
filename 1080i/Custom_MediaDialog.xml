@@ -20,17 +20,6 @@
             
             <control type="group">
                 <include>listEndAnimation</include>
-                
-                <control type="image">
-                    <description>Panel</description>
-                    <posx>80</posx>
-                    <posy>200</posy>
-                    <width>499</width>
-                    <height>726</height>
-                    <texture border="35">views/newgloss/border-glass.png</texture>
-                    <colordiffuse>77ffffff</colordiffuse>
-                    <visible>!Skin.HasSetting(hide.glass)</visible>
-                </control>
                 <control type="image">
                     <description>Panel</description>
                     <posx>85</posx>

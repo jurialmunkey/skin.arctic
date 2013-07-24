@@ -26,7 +26,7 @@
 					<width>1547</width>
 					<height>325</height>
 					<texture border="24">arctic/osd/panel.png</texture>
-					<colordiffuse>eeeeeeee</colordiffuse>
+					<colordiffuse>ffbbbbbb</colordiffuse>
 				</control>
 				<control type="image">
 					<posx>475</posx>
@@ -298,6 +298,20 @@
 							<autoscroll delay="13000" time="3000" repeat="13000" />
 							<font>Font-Alaska-S25-NC</font>
 							<visible>VideoPlayer.Content(LiveTV) | [!IsEmpty(VideoPlayer.PlayCount) | [system.getbool(videolibrary.showunwatchedplots) + IsEmpty(VideoPlayer.PlayCount)]]</visible>
+						</control>
+						<control type="textbox">
+							<description>Plot</description>
+							<posx>0</posx>
+							<posy>76</posy>
+							<width>1200</width>
+							<height>124</height>
+							<label>$LOCALIZE[20370]</label>
+							<align>justify</align>
+							<textcolor>mod-infotags-d</textcolor>
+							<shadowcolor>22ffffff</shadowcolor>
+							<autoscroll delay="13000" time="3000" repeat="13000" />
+							<font>Font-Alaska-S25-NC</font>
+							<visible>!VideoPlayer.Content(LiveTV) + IsEmpty(VideoPlayer.PlayCount) + !system.getbool(videolibrary.showunwatchedplots)</visible>
 						</control>
 						<control type="label">
 							<posx>1200</posx>

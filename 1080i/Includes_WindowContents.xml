@@ -34,10 +34,6 @@
             <include>FullscreenDimensions</include>
             <visible>Skin.HasSetting(BackgroundVideo) + Player.HasVideo</visible>
         </control>
-        <control type="group">
-        	<visible>Player.HasAudio + Skin.HasSetting(OSDVisualation.Background)</visible>
-			<include condition="Skin.HasSetting(OSDVisualisation.Enabled)">OSDVisualisation</include>
-        </control>
         <!-- FLOOR -->
         <control type="image">   
             <posx>0</posx>
@@ -231,6 +227,10 @@
 			<include>Animation_FanartFade</include>
 			<visible>![Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(seasons) | Container.Content(albums) | Container.Content(artists) | Container.Content(songs) | Container.Content(sets)] + ![Skin.HasSetting(BackgroundVideo) + Player.HasVideo]</visible>
 		</control>
+		<control type="group">
+        	<visible>Player.HasAudio + Skin.HasSetting(OSDVisualation.Background)</visible>
+			<include condition="Skin.HasSetting(OSDVisualisation.Enabled)">OSDVisualisation</include>
+        </control>
     </include>
     
 <!-- ====== -->

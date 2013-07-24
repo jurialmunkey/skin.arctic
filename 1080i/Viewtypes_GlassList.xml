@@ -99,7 +99,7 @@
 							<control type="label">
 								<posx>100</posx>
 								<posy>4</posy>
-								<width>705</width>
+								<width>605</width>
 								<label>$VAR[MainTitle]</label>
 								<font>Font-Alaska-S34-BL</font>
 								<textcolor>77white</textcolor>
@@ -109,7 +109,7 @@
 							<control type="label">
 								<posx>100</posx>
 								<posy>34</posy>
-								<width>705</width>
+								<width>605</width>
 								<label>$VAR[UnderTitle]</label>
 								<font>Font-Alaska-S25-L</font>
 								<textcolor>55ffffff</textcolor>
@@ -163,7 +163,7 @@
 								<control type="label">
 									<posx>100</posx>
 									<posy>4</posy>
-									<width>705</width>
+									<width>605</width>
 									<label>$VAR[MainTitle]</label>
 									<font>Font-Alaska-S34-BL</font>
 									<textcolor>mod-infotags-alt</textcolor>
@@ -173,7 +173,7 @@
 								<control type="label">
 									<posx>100</posx>
 									<posy>34</posy>
-									<width>705</width>
+									<width>605</width>
 									<label>$VAR[UnderTitle]</label>
 									<font>Font-Alaska-S25-L</font>
 									<textcolor>mod-infotags-alt2</textcolor>

@@ -110,20 +110,6 @@
 						<height>114</height>
 						<texture border="35">views/newgloss/whitepanel-15.png</texture>
 					</control>
-                	<!--<control type="image">
-						<posx>-472</posx>
-						<posy>-83</posy>
-						<width>1680</width>
-						<height>84</height>
-						<texture border="90,3,90,3">views/list/other/separator-l.png</texture>
-					</control>	
-					<control type="image">
-						<posx>-472</posx>
-						<posy>0</posy>
-						<width>1680</width>
-						<height>84</height>
-						<texture border="90,3,90,3">views/list/other/separator-l.png</texture>
-					</control>	-->
 					<control type="list" id="9333">
 						<posx>0</posx>
 						<posy>0</posy>
@@ -232,42 +218,52 @@
 							</control>	
 						</focusedlayout>
 						<content>
-						<item id="1">
-							<description>Play album</description>
-							<label>208</label>
-							<onclick>RunScript(script.playalbum,albumid=$INFO[ListItem.DBID])</onclick>
-							<visible>Container.Content(albums) + System.HasAddon(script.playalbum)</visible>
-							<icon>aeonflags/addition/OSDPlayNF.png</icon>
-							<thumb>aeonflags/addition/OSDPlayFO.png</thumb>
-						</item>
-						<item id="2">
-							<description>Get poster</description>
-							<label>13405</label>
-							<onclick>SetProperty(ChooseArt,1,3004)</onclick>
-							<onclick>SendClick(albuminformation,10)</onclick>
-							<visible>Control.IsEnabled(10)</visible>
-							<icon>aeonflags/addition/OSDInfoNF.png</icon>
-							<thumb>aeonflags/addition/OSDInfoFO.png</thumb>
-						</item>
-						<item id="3">
-							<description>Get fanart</description>
-							<label>20413</label>
-							<onclick>SetProperty(ChooseArt,1,3004)</onclick>
-							<onclick>SendClick(albuminformation,12)</onclick>
-							<visible>Control.IsEnabled(12)</visible>
-							<icon>aeonflags/addition/OSDInfoNF.png</icon>
-							<thumb>aeonflags/addition/OSDInfoFO.png</thumb>
-						</item>
-						<item id="4">
-							<description>Refresh</description>
-							<label>184</label>
-							<onclick>SendClick(albuminformation,6)</onclick>
-							<visible>Control.IsEnabled(6)</visible>
-							<icon>aeonflags/addition/OSDSkinNF.png</icon>
-							<thumb>aeonflags/addition/OSDSkinFO.png</thumb>
-						</item>
-					</content>
-					</control>
+							<item id="1">
+								<description>Play album</description>
+								<label>208</label>
+								<onclick>RunScript(script.playalbum,albumid=$INFO[ListItem.DBID])</onclick>
+								<visible>Container.Content(albums) + System.HasAddon(script.playalbum)</visible>
+								<icon>aeonflags/addition/OSDPlayNF.png</icon>
+								<thumb>aeonflags/addition/OSDPlayFO.png</thumb>
+							</item>
+							<item id="2">
+								<description>Search on Youtube</description>
+								<label>Youtube</label>
+								<onclick>Back</onclick>
+								<onclick condition="Container.Content(artists)">ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$INFO[ListItem.Artist],return)</onclick>
+								<onclick condition="Container.Content(albums)">ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$INFO[ListItem.Artist] $INFO[ListItem.Album],return)</onclick>
+								<visible>System.HasAddon(plugin.video.youtube)</visible>
+								<icon>aeonflags/addition/OSDVideoNF.png</icon>
+								<thumb>aeonflags/addition/OSDVideoFO.png</thumb>
+							</item>
+							<item id="3">
+								<description>Get poster</description>
+								<label>13405</label>
+								<onclick>SetProperty(ChooseArt,1,3004)</onclick>
+								<onclick>SendClick(albuminformation,10)</onclick>
+								<visible>Control.IsEnabled(10)</visible>
+								<icon>aeonflags/addition/OSDInfoNF.png</icon>
+								<thumb>aeonflags/addition/OSDInfoFO.png</thumb>
+							</item>
+							<item id="4">
+								<description>Get fanart</description>
+								<label>20413</label>
+								<onclick>SetProperty(ChooseArt,1,3004)</onclick>
+								<onclick>SendClick(albuminformation,12)</onclick>
+								<visible>Control.IsEnabled(12)</visible>
+								<icon>aeonflags/addition/OSDInfoNF.png</icon>
+								<thumb>aeonflags/addition/OSDInfoFO.png</thumb>
+							</item>
+							<item id="5">
+								<description>Refresh</description>
+								<label>184</label>
+								<onclick>SendClick(albuminformation,6)</onclick>
+								<visible>Control.IsEnabled(6)</visible>
+								<icon>aeonflags/addition/OSDSkinNF.png</icon>
+								<thumb>aeonflags/addition/OSDSkinFO.png</thumb>
+							</item>
+						</content>
+					</control>                
 				</control>
 				<!-- PLOT SEPARATOR -->
 				<control type="group">

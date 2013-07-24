@@ -16,6 +16,7 @@
 		<value condition="Container.Content(seasons) + !IsEmpty(ListItem.Season)">$LOCALIZE[20373]</value>
         <value condition="Container.Content(seasons) + IsEmpty(ListItem.Season) + SubString(ListItem.Label,$LOCALIZE[20366]">$LOCALIZE[20366]</value>
         <value condition="Container.Content(seasons) + IsEmpty(ListItem.Season) + SubString(ListItem.Label,$LOCALIZE[20381]">$LOCALIZE[20381]</value>
+        <value>$INFO[ListItem.Label]</value>
 	</variable>
 	<variable name="MusicPlotBox">
 		<value condition="Container.Content(songs)">$INFO[ListItem.Genre,[CR][B]$LOCALIZE[515]:[/B]  ,]$INFO[ListItem.Year,[CR][B]$LOCALIZE[562]:[/B]  ,]$INFO[ListItem.Duration,[CR][B]$LOCALIZE[180]:[/B]  ,]</value>
@@ -35,8 +36,8 @@
 		<value>Mod_Tags_Dark</value>
 	</variable>
 	<variable name="simple.custom.label">
-		<value condition="!IsEmpty(Skin.String(HomeProgramTile5.Path)) + !IsEmpty(Skin.String(HomeProgramTile5.Label))">$INFO[Skin.String(HomeProgramTile5.Label)]</value>
-		<value condition="!IsEmpty(Skin.String(HomeProgramTile5.Path)) + IsEmpty(Skin.String(HomeProgramTile5.Label))">$LOCALIZE[20190]</value>
+		<value condition="!IsEmpty(Skin.String(HomeCustomItem.Path)) + !IsEmpty(Skin.String(HomeCustomItem.Label))">$INFO[Skin.String(HomeCustomItem.Label)]</value>
+		<value condition="!IsEmpty(Skin.String(HomeCustomItem.Path)) + IsEmpty(Skin.String(HomeCustomItem.Label))">$LOCALIZE[20190]</value>
 		<value>$LOCALIZE[15016]</value>
 	</variable>
 	<variable name="simplehome.dark">
@@ -368,6 +369,7 @@
 		<item id="0">
 			<label>$INFO[Skin.String(Home.Movies.Tile.1.Label)]</label>
 			<onclick>SetFocus(525)</onclick>
+			<onclick condition="IsEmpty(Skin.String(Home.Movies.Tile.1.Path))">ActivateWindow(3054)</onclick>
 			<onclick condition="!stringcompare(Skin.String(Home.Movies.Tile.1.Type),4) + !stringcompare(Skin.String(Home.Movies.Tile.1.Type),5) + !stringcompare(Skin.String(Home.Movies.Tile.1.Type),6) + !stringcompare(Skin.String(Home.Movies.Tile.1.Type),7)">RunAddon($INFO[Skin.String(Home.Movies.Tile.1.Path)])</onclick>
 			<onclick condition="stringcompare(Skin.String(Home.Movies.Tile.1.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(Home.Movies.Tile.1.Path)],return)</onclick>
 			<onclick condition="stringcompare(Skin.String(Home.Movies.Tile.1.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(Home.Movies.Tile.1.Path)],return)</onclick>
@@ -382,6 +384,7 @@
 		<item id="1">
 			<onclick>SetFocus(525)</onclick>
 			<label>$INFO[Skin.String(Home.Movies.Tile.2.Label)]</label>
+			<onclick condition="IsEmpty(Skin.String(Home.Movies.Tile.2.Path))">ActivateWindow(3054)</onclick>
 			<onclick condition="IsEmpty(Window.Property(EditTile)) + !stringcompare(Skin.String(Home.Movies.Tile.2.Type),4) + !stringcompare(Skin.String(Home.Movies.Tile.2.Type),5) + !stringcompare(Skin.String(Home.Movies.Tile.2.Type),6) + !stringcompare(Skin.String(Home.Movies.Tile.2.Type),7)">RunAddon($INFO[Skin.String(Home.Movies.Tile.2.Path)])</onclick>
 			<onclick condition="IsEmpty(Window.Property(EditTile)) + stringcompare(Skin.String(Home.Movies.Tile.2.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(Home.Movies.Tile.2.Path)],return)</onclick>
 			<onclick condition="IsEmpty(Window.Property(EditTile)) + stringcompare(Skin.String(Home.Movies.Tile.2.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(Home.Movies.Tile.2.Path)],return)</onclick>
@@ -396,6 +399,7 @@
 		<item id="2">
 			<label>$INFO[Skin.String(Home.Movies.Tile.3.Label)]</label>
 			<onclick>SetFocus(525)</onclick>
+			<onclick condition="IsEmpty(Skin.String(Home.Movies.Tile.3.Path))">ActivateWindow(3054)</onclick>
 			<onclick condition="!stringcompare(Skin.String(Home.Movies.Tile.3.Type),4) + !stringcompare(Skin.String(Home.Movies.Tile.3.Type),5) + !stringcompare(Skin.String(Home.Movies.Tile.3.Type),6) + !stringcompare(Skin.String(Home.Movies.Tile.3.Type),7)">RunAddon($INFO[Skin.String(Home.Movies.Tile.3.Path)])</onclick>
 			<onclick condition="stringcompare(Skin.String(Home.Movies.Tile.3.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(Home.Movies.Tile.3.Path)],return)</onclick>
 			<onclick condition="stringcompare(Skin.String(Home.Movies.Tile.3.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(Home.Movies.Tile.3.Path)],return)</onclick>
@@ -410,6 +414,7 @@
 		<item id="3">
 			<label>$INFO[Skin.String(Home.Movies.Tile.4.Label)]</label>
 			<onclick>SetFocus(525)</onclick>
+			<onclick condition="IsEmpty(Skin.String(Home.Movies.Tile.4.Path))">ActivateWindow(3054)</onclick>
 			<onclick condition="!stringcompare(Skin.String(Home.Movies.Tile.4.Type),4) + !stringcompare(Skin.String(Home.Movies.Tile.4.Type),5) + !stringcompare(Skin.String(Home.Movies.Tile.4.Type),6) + !stringcompare(Skin.String(Home.Movies.Tile.4.Type),7)">RunAddon($INFO[Skin.String(Home.Movies.Tile.4.Path)])</onclick>
 			<onclick condition="stringcompare(Skin.String(Home.Movies.Tile.4.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(Home.Movies.Tile.4.Path)],return)</onclick>
 			<onclick condition="stringcompare(Skin.String(Home.Movies.Tile.4.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(Home.Movies.Tile.4.Path)],return)</onclick>
@@ -424,6 +429,7 @@
 		<item id="4">
 			<label>$INFO[Skin.String(Home.Movies.Tile.5.Label)]</label>
 			<onclick>SetFocus(525)</onclick>
+			<onclick condition="IsEmpty(Skin.String(Home.Movies.Tile.5.Path))">ActivateWindow(3054)</onclick>
 			<onclick condition="!stringcompare(Skin.String(Home.Movies.Tile.5.Type),4) + !stringcompare(Skin.String(Home.Movies.Tile.5.Type),5) + !stringcompare(Skin.String(Home.Movies.Tile.5.Type),6) + !stringcompare(Skin.String(Home.Movies.Tile.5.Type),7)">RunAddon($INFO[Skin.String(Home.Movies.Tile.5.Path)])</onclick>
 			<onclick condition="stringcompare(Skin.String(Home.Movies.Tile.5.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(Home.Movies.Tile.5.Path)],return)</onclick>
 			<onclick condition="stringcompare(Skin.String(Home.Movies.Tile.5.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(Home.Movies.Tile.5.Path)],return)</onclick>
@@ -438,6 +444,7 @@
 		<item id="5">
 			<label>$INFO[Skin.String(Home.Movies.Tile.6.Label)]</label>
 			<onclick>SetFocus(525)</onclick>
+			<onclick condition="IsEmpty(Skin.String(Home.Movies.Tile.6.Path))">ActivateWindow(3054)</onclick>
 			<onclick condition="!stringcompare(Skin.String(Home.Movies.Tile.6.Type),4) + !stringcompare(Skin.String(Home.Movies.Tile.6.Type),5) + !stringcompare(Skin.String(Home.Movies.Tile.6.Type),6) + !stringcompare(Skin.String(Home.Movies.Tile.6.Type),7)">RunAddon($INFO[Skin.String(Home.Movies.Tile.6.Path)])</onclick>
 			<onclick condition="stringcompare(Skin.String(Home.Movies.Tile.6.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(Home.Movies.Tile.6.Path)],return)</onclick>
 			<onclick condition="stringcompare(Skin.String(Home.Movies.Tile.6.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(Home.Movies.Tile.6.Path)],return)</onclick>
@@ -452,6 +459,7 @@
 		<item id="6">
 			<label>$INFO[Skin.String(Home.Movies.Tile.7.Label)]</label>
 			<onclick>SetFocus(525)</onclick>
+			<onclick condition="IsEmpty(Skin.String(Home.Movies.Tile.7.Path))">ActivateWindow(3054)</onclick>
 			<onclick condition="!stringcompare(Skin.String(Home.Movies.Tile.7.Type),4) + !stringcompare(Skin.String(Home.Movies.Tile.7.Type),5) + !stringcompare(Skin.String(Home.Movies.Tile.7.Type),6) + !stringcompare(Skin.String(Home.Movies.Tile.7.Type),7)">RunAddon($INFO[Skin.String(Home.Movies.Tile.7.Path)])</onclick>
 			<onclick condition="stringcompare(Skin.String(Home.Movies.Tile.7.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(Home.Movies.Tile.7.Path)],return)</onclick>
 			<onclick condition="stringcompare(Skin.String(Home.Movies.Tile.7.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(Home.Movies.Tile.7.Path)],return)</onclick>
@@ -466,6 +474,7 @@
 		<item id="7">
 			<label>$INFO[Skin.String(Home.Movies.Tile.8.Label)]</label>
 			<onclick>SetFocus(525)</onclick>
+			<onclick condition="IsEmpty(Skin.String(Home.Movies.Tile.8.Path))">ActivateWindow(3054)</onclick>
 			<onclick condition="!stringcompare(Skin.String(Home.Movies.Tile.8.Type),4) + !stringcompare(Skin.String(Home.Movies.Tile.8.Type),5) + !stringcompare(Skin.String(Home.Movies.Tile.8.Type),6) + !stringcompare(Skin.String(Home.Movies.Tile.8.Type),7)">RunAddon($INFO[Skin.String(Home.Movies.Tile.8.Path)])</onclick>
 			<onclick condition="stringcompare(Skin.String(Home.Movies.Tile.8.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(Home.Movies.Tile.8.Path)],return)</onclick>
 			<onclick condition="stringcompare(Skin.String(Home.Movies.Tile.8.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(Home.Movies.Tile.8.Path)],return)</onclick>
@@ -480,6 +489,7 @@
 		<item id="8">
 			<label>$INFO[Skin.String(Home.Movies.Tile.9.Label)]</label>
 			<onclick>SetFocus(525)</onclick>
+			<onclick condition="IsEmpty(Skin.String(Home.Movies.Tile.9.Path))">ActivateWindow(3054)</onclick>
 			<onclick condition="!stringcompare(Skin.String(Home.Movies.Tile.9.Type),4) + !stringcompare(Skin.String(Home.Movies.Tile.9.Type),5) + !stringcompare(Skin.String(Home.Movies.Tile.9.Type),6) + !stringcompare(Skin.String(Home.Movies.Tile.9.Type),7)">RunAddon($INFO[Skin.String(Home.Movies.Tile.9.Path)])</onclick>
 			<onclick condition="stringcompare(Skin.String(Home.Movies.Tile.9.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(Home.Movies.Tile.9.Path)],return)</onclick>
 			<onclick condition="stringcompare(Skin.String(Home.Movies.Tile.9.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(Home.Movies.Tile.9.Path)],return)</onclick>
@@ -494,6 +504,7 @@
 		<item id="9">
 			<label>$INFO[Skin.String(Home.Movies.Tile.10.Label)]</label>
 			<onclick>SetFocus(525)</onclick>
+			<onclick condition="IsEmpty(Skin.String(Home.Movies.Tile.10.Path))">ActivateWindow(3054)</onclick>
 			<onclick condition="!stringcompare(Skin.String(Home.Movies.Tile.10.Type),4) + !stringcompare(Skin.String(Home.Movies.Tile.10.Type),5) + !stringcompare(Skin.String(Home.Movies.Tile.10.Type),6) + !stringcompare(Skin.String(Home.Movies.Tile.10.Type),7)">RunAddon($INFO[Skin.String(Home.Movies.Tile.10.Path)])</onclick>
 			<onclick condition="stringcompare(Skin.String(Home.Movies.Tile.10.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(Home.Movies.Tile.10.Path)],return)</onclick>
 			<onclick condition="stringcompare(Skin.String(Home.Movies.Tile.10.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(Home.Movies.Tile.10.Path)],return)</onclick>
@@ -510,6 +521,7 @@
 		<item id="0">
 			<label>$INFO[Skin.String(Home.Tvshows.Tile.1.Label)]</label>
 			<onclick>SetFocus(525)</onclick>
+			<onclick condition="IsEmpty(Skin.String(Home.Tvshows.Tile.1.Path))">ActivateWindow(3054)</onclick>
 			<onclick condition="!stringcompare(Skin.String(Home.Tvshows.Tile.1.Type),4) + !stringcompare(Skin.String(Home.Tvshows.Tile.1.Type),5) + !stringcompare(Skin.String(Home.Tvshows.Tile.1.Type),6) + !stringcompare(Skin.String(Home.Tvshows.Tile.1.Type),7)">RunAddon($INFO[Skin.String(Home.Tvshows.Tile.1.Path)])</onclick>
 			<onclick condition="stringcompare(Skin.String(Home.Tvshows.Tile.1.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(Home.Tvshows.Tile.1.Path)],return)</onclick>
 			<onclick condition="stringcompare(Skin.String(Home.Tvshows.Tile.1.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(Home.Tvshows.Tile.1.Path)],return)</onclick>
@@ -524,6 +536,7 @@
 		<item id="1">
 			<label>$INFO[Skin.String(Home.Tvshows.Tile.2.Label)]</label>
 			<onclick>SetFocus(525)</onclick>
+			<onclick condition="IsEmpty(Skin.String(Home.Tvshows.Tile.2.Path))">ActivateWindow(3054)</onclick>
 			<onclick condition="!stringcompare(Skin.String(Home.Tvshows.Tile.2.Type),4) + !stringcompare(Skin.String(Home.Tvshows.Tile.2.Type),5) + !stringcompare(Skin.String(Home.Tvshows.Tile.2.Type),6) + !stringcompare(Skin.String(Home.Tvshows.Tile.2.Type),7)">RunAddon($INFO[Skin.String(Home.Tvshows.Tile.2.Path)])</onclick>
 			<onclick condition="stringcompare(Skin.String(Home.Tvshows.Tile.2.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(Home.Tvshows.Tile.2.Path)],return)</onclick>
 			<onclick condition="stringcompare(Skin.String(Home.Tvshows.Tile.2.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(Home.Tvshows.Tile.2.Path)],return)</onclick>
@@ -538,6 +551,7 @@
 		<item id="2">
 			<label>$INFO[Skin.String(Home.Tvshows.Tile.3.Label)]</label>
 			<onclick>SetFocus(525)</onclick>
+			<onclick condition="IsEmpty(Skin.String(Home.Tvshows.Tile.3.Path))">ActivateWindow(3054)</onclick>
 			<onclick condition="!stringcompare(Skin.String(Home.Tvshows.Tile.3.Type),4) + !stringcompare(Skin.String(Home.Tvshows.Tile.3.Type),5) + !stringcompare(Skin.String(Home.Tvshows.Tile.3.Type),6) + !stringcompare(Skin.String(Home.Tvshows.Tile.3.Type),7)">RunAddon($INFO[Skin.String(Home.Tvshows.Tile.3.Path)])</onclick>
 			<onclick condition="stringcompare(Skin.String(Home.Tvshows.Tile.3.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(Home.Tvshows.Tile.3.Path)],return)</onclick>
 			<onclick condition="stringcompare(Skin.String(Home.Tvshows.Tile.3.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(Home.Tvshows.Tile.3.Path)],return)</onclick>
@@ -552,6 +566,7 @@
 		<item id="3">
 			<label>$INFO[Skin.String(Home.Tvshows.Tile.4.Label)]</label>
 			<onclick>SetFocus(525)</onclick>
+			<onclick condition="IsEmpty(Skin.String(Home.Tvshows.Tile.4.Path))">ActivateWindow(3054)</onclick>
 			<onclick condition="!stringcompare(Skin.String(Home.Tvshows.Tile.4.Type),4) + !stringcompare(Skin.String(Home.Tvshows.Tile.4.Type),5) + !stringcompare(Skin.String(Home.Tvshows.Tile.4.Type),6) + !stringcompare(Skin.String(Home.Tvshows.Tile.4.Type),7)">RunAddon($INFO[Skin.String(Home.Tvshows.Tile.4.Path)])</onclick>
 			<onclick condition="stringcompare(Skin.String(Home.Tvshows.Tile.4.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(Home.Tvshows.Tile.4.Path)],return)</onclick>
 			<onclick condition="stringcompare(Skin.String(Home.Tvshows.Tile.4.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(Home.Tvshows.Tile.4.Path)],return)</onclick>
@@ -566,6 +581,7 @@
 		<item id="4">
 			<label>$INFO[Skin.String(Home.Tvshows.Tile.5.Label)]</label>
 			<onclick>SetFocus(525)</onclick>
+			<onclick condition="IsEmpty(Skin.String(Home.Tvshows.Tile.5.Path))">ActivateWindow(3054)</onclick>
 			<onclick condition="!stringcompare(Skin.String(Home.Tvshows.Tile.5.Type),4) + !stringcompare(Skin.String(Home.Tvshows.Tile.5.Type),5) + !stringcompare(Skin.String(Home.Tvshows.Tile.5.Type),6) + !stringcompare(Skin.String(Home.Tvshows.Tile.5.Type),7)">RunAddon($INFO[Skin.String(Home.Tvshows.Tile.5.Path)])</onclick>
 			<onclick condition="stringcompare(Skin.String(Home.Tvshows.Tile.5.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(Home.Tvshows.Tile.5.Path)],return)</onclick>
 			<onclick condition="stringcompare(Skin.String(Home.Tvshows.Tile.5.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(Home.Tvshows.Tile.5.Path)],return)</onclick>
@@ -580,6 +596,7 @@
 		<item id="5">
 			<label>$INFO[Skin.String(Home.Tvshows.Tile.6.Label)]</label>
 			<onclick>SetFocus(525)</onclick>
+			<onclick condition="IsEmpty(Skin.String(Home.Tvshows.Tile.6.Path))">ActivateWindow(3054)</onclick>
 			<onclick condition="!stringcompare(Skin.String(Home.Tvshows.Tile.6.Type),4) + !stringcompare(Skin.String(Home.Tvshows.Tile.6.Type),5) + !stringcompare(Skin.String(Home.Tvshows.Tile.6.Type),6) + !stringcompare(Skin.String(Home.Tvshows.Tile.6.Type),7)">RunAddon($INFO[Skin.String(Home.Tvshows.Tile.6.Path)])</onclick>
 			<onclick condition="stringcompare(Skin.String(Home.Tvshows.Tile.6.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(Home.Tvshows.Tile.6.Path)],return)</onclick>
 			<onclick condition="stringcompare(Skin.String(Home.Tvshows.Tile.6.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(Home.Tvshows.Tile.6.Path)],return)</onclick>
@@ -594,6 +611,7 @@
 		<item id="6">
 			<label>$INFO[Skin.String(Home.Tvshows.Tile.7.Label)]</label>
 			<onclick>SetFocus(525)</onclick>
+			<onclick condition="IsEmpty(Skin.String(Home.Tvshows.Tile.7.Path))">ActivateWindow(3054)</onclick>
 			<onclick condition="!stringcompare(Skin.String(Home.Tvshows.Tile.7.Type),4) + !stringcompare(Skin.String(Home.Tvshows.Tile.7.Type),5) + !stringcompare(Skin.String(Home.Tvshows.Tile.7.Type),6) + !stringcompare(Skin.String(Home.Tvshows.Tile.7.Type),7)">RunAddon($INFO[Skin.String(Home.Tvshows.Tile.7.Path)])</onclick>
 			<onclick condition="stringcompare(Skin.String(Home.Tvshows.Tile.7.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(Home.Tvshows.Tile.7.Path)],return)</onclick>
 			<onclick condition="stringcompare(Skin.String(Home.Tvshows.Tile.7.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(Home.Tvshows.Tile.7.Path)],return)</onclick>
@@ -608,6 +626,7 @@
 		<item id="7">
 			<label>$INFO[Skin.String(Home.Tvshows.Tile.8.Label)]</label>
 			<onclick>SetFocus(525)</onclick>
+			<onclick condition="IsEmpty(Skin.String(Home.Tvshows.Tile.8.Path))">ActivateWindow(3054)</onclick>
 			<onclick condition="!stringcompare(Skin.String(Home.Tvshows.Tile.8.Type),4) + !stringcompare(Skin.String(Home.Tvshows.Tile.8.Type),5) + !stringcompare(Skin.String(Home.Tvshows.Tile.8.Type),6) + !stringcompare(Skin.String(Home.Tvshows.Tile.8.Type),7)">RunAddon($INFO[Skin.String(Home.Tvshows.Tile.8.Path)])</onclick>
 			<onclick condition="stringcompare(Skin.String(Home.Tvshows.Tile.8.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(Home.Tvshows.Tile.8.Path)],return)</onclick>
 			<onclick condition="stringcompare(Skin.String(Home.Tvshows.Tile.8.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(Home.Tvshows.Tile.8.Path)],return)</onclick>
@@ -622,6 +641,7 @@
 		<item id="8">
 			<label>$INFO[Skin.String(Home.Tvshows.Tile.9.Label)]</label>
 			<onclick>SetFocus(525)</onclick>
+			<onclick condition="IsEmpty(Skin.String(Home.Tvshows.Tile.9.Path))">ActivateWindow(3054)</onclick>
 			<onclick condition="!stringcompare(Skin.String(Home.Tvshows.Tile.9.Type),4) + !stringcompare(Skin.String(Home.Tvshows.Tile.9.Type),5) + !stringcompare(Skin.String(Home.Tvshows.Tile.9.Type),6) + !stringcompare(Skin.String(Home.Tvshows.Tile.9.Type),7)">RunAddon($INFO[Skin.String(Home.Tvshows.Tile.9.Path)])</onclick>
 			<onclick condition="stringcompare(Skin.String(Home.Tvshows.Tile.9.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(Home.Tvshows.Tile.9.Path)],return)</onclick>
 			<onclick condition="stringcompare(Skin.String(Home.Tvshows.Tile.9.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(Home.Tvshows.Tile.9.Path)],return)</onclick>
@@ -636,6 +656,7 @@
 		<item id="9">
 			<label>$INFO[Skin.String(Home.Tvshows.Tile.10.Label)]</label>
 			<onclick>SetFocus(525)</onclick>
+			<onclick condition="IsEmpty(Skin.String(Home.Tvshows.Tile.10.Path))">ActivateWindow(3054)</onclick>
 			<onclick condition="!stringcompare(Skin.String(Home.Tvshows.Tile.10.Type),4) + !stringcompare(Skin.String(Home.Tvshows.Tile.10.Type),5) + !stringcompare(Skin.String(Home.Tvshows.Tile.10.Type),6) + !stringcompare(Skin.String(Home.Tvshows.Tile.10.Type),7)">RunAddon($INFO[Skin.String(Home.Tvshows.Tile.10.Path)])</onclick>
 			<onclick condition="stringcompare(Skin.String(Home.Tvshows.Tile.10.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(Home.Tvshows.Tile.10.Path)],return)</onclick>
 			<onclick condition="stringcompare(Skin.String(Home.Tvshows.Tile.10.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(Home.Tvshows.Tile.10.Path)],return)</onclick>
@@ -652,6 +673,7 @@
 		<item id="1">
 			<label>$INFO[Skin.String(Home.Music.Tile.1.Label)]</label>
 			<onclick>SetFocus(525)</onclick>
+			<onclick condition="IsEmpty(Skin.String(Home.Music.Tile.1.Path))">ActivateWindow(3054)</onclick>
 			<onclick condition="!stringcompare(Skin.String(Home.Music.Tile.1.Type),4) + !stringcompare(Skin.String(Home.Music.Tile.1.Type),5) + !stringcompare(Skin.String(Home.Music.Tile.1.Type),6) + !stringcompare(Skin.String(Home.Music.Tile.1.Type),7)">RunAddon($INFO[Skin.String(Home.Music.Tile.1.Path)])</onclick>
 			<onclick condition="stringcompare(Skin.String(Home.Music.Tile.1.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(Home.Music.Tile.1.Path)],return)</onclick>
 			<onclick condition="stringcompare(Skin.String(Home.Music.Tile.1.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(Home.Music.Tile.1.Path)],return)</onclick>
@@ -666,6 +688,7 @@
 		<item id="2">
 			<label>$INFO[Skin.String(Home.Music.Tile.2.Label)]</label>
 			<onclick>SetFocus(525)</onclick>
+			<onclick condition="IsEmpty(Skin.String(Home.Music.Tile.2.Path))">ActivateWindow(3054)</onclick>
 			<onclick condition="!stringcompare(Skin.String(Home.Music.Tile.2.Type),4) + !stringcompare(Skin.String(Home.Music.Tile.2.Type),5) + !stringcompare(Skin.String(Home.Music.Tile.2.Type),6) + !stringcompare(Skin.String(Home.Music.Tile.2.Type),7)">RunAddon($INFO[Skin.String(Home.Music.Tile.2.Path)])</onclick>
 			<onclick condition="stringcompare(Skin.String(Home.Music.Tile.2.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(Home.Music.Tile.2.Path)],return)</onclick>
 			<onclick condition="stringcompare(Skin.String(Home.Music.Tile.2.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(Home.Music.Tile.2.Path)],return)</onclick>
@@ -680,6 +703,7 @@
 		<item id="3">
 			<label>$INFO[Skin.String(Home.Music.Tile.3.Label)]</label>
 			<onclick>SetFocus(525)</onclick>
+			<onclick condition="IsEmpty(Skin.String(Home.Music.Tile.3.Path))">ActivateWindow(3054)</onclick>
 			<onclick condition="!stringcompare(Skin.String(Home.Music.Tile.3.Type),4) + !stringcompare(Skin.String(Home.Music.Tile.3.Type),5) + !stringcompare(Skin.String(Home.Music.Tile.3.Type),6) + !stringcompare(Skin.String(Home.Music.Tile.3.Type),7)">RunAddon($INFO[Skin.String(Home.Music.Tile.3.Path)])</onclick>
 			<onclick condition="stringcompare(Skin.String(Home.Music.Tile.3.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(Home.Music.Tile.3.Path)],return)</onclick>
 			<onclick condition="stringcompare(Skin.String(Home.Music.Tile.3.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(Home.Music.Tile.3.Path)],return)</onclick>
@@ -694,6 +718,7 @@
 		<item id="4">
 			<label>$INFO[Skin.String(Home.Music.Tile.4.Label)]</label>
 			<onclick>SetFocus(525)</onclick>
+			<onclick condition="IsEmpty(Skin.String(Home.Music.Tile.4.Path))">ActivateWindow(3054)</onclick>
 			<onclick condition="!stringcompare(Skin.String(Home.Music.Tile.4.Type),4) + !stringcompare(Skin.String(Home.Music.Tile.4.Type),5) + !stringcompare(Skin.String(Home.Music.Tile.4.Type),6) + !stringcompare(Skin.String(Home.Music.Tile.4.Type),7)">RunAddon($INFO[Skin.String(Home.Music.Tile.4.Path)])</onclick>
 			<onclick condition="stringcompare(Skin.String(Home.Music.Tile.4.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(Home.Music.Tile.4.Path)],return)</onclick>
 			<onclick condition="stringcompare(Skin.String(Home.Music.Tile.4.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(Home.Music.Tile.4.Path)],return)</onclick>
@@ -708,6 +733,7 @@
 		<item id="5">
 			<label>$INFO[Skin.String(Home.Music.Tile.5.Label)]</label>
 			<onclick>SetFocus(525)</onclick>
+			<onclick condition="IsEmpty(Skin.String(Home.Music.Tile.5.Path))">ActivateWindow(3054)</onclick>
 			<onclick condition="!stringcompare(Skin.String(Home.Music.Tile.5.Type),4) + !stringcompare(Skin.String(Home.Music.Tile.5.Type),5) + !stringcompare(Skin.String(Home.Music.Tile.5.Type),6) + !stringcompare(Skin.String(Home.Music.Tile.5.Type),7)">RunAddon($INFO[Skin.String(Home.Music.Tile.5.Path)])</onclick>
 			<onclick condition="stringcompare(Skin.String(Home.Music.Tile.5.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(Home.Music.Tile.5.Path)],return)</onclick>
 			<onclick condition="stringcompare(Skin.String(Home.Music.Tile.5.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(Home.Music.Tile.5.Path)],return)</onclick>
@@ -722,6 +748,7 @@
 		<item id="6">
 			<label>$INFO[Skin.String(Home.Music.Tile.6.Label)]</label>
 			<onclick>SetFocus(525)</onclick>
+			<onclick condition="IsEmpty(Skin.String(Home.Music.Tile.6.Path))">ActivateWindow(3054)</onclick>
 			<onclick condition="!stringcompare(Skin.String(Home.Music.Tile.6.Type),4) + !stringcompare(Skin.String(Home.Music.Tile.6.Type),5) + !stringcompare(Skin.String(Home.Music.Tile.6.Type),6) + !stringcompare(Skin.String(Home.Music.Tile.6.Type),7)">RunAddon($INFO[Skin.String(Home.Music.Tile.6.Path)])</onclick>
 			<onclick condition="stringcompare(Skin.String(Home.Music.Tile.6.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(Home.Music.Tile.6.Path)],return)</onclick>
 			<onclick condition="stringcompare(Skin.String(Home.Music.Tile.6.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(Home.Music.Tile.6.Path)],return)</onclick>
@@ -736,6 +763,7 @@
 		<item id="7">
 			<label>$INFO[Skin.String(Home.Music.Tile.7.Label)]</label>
 			<onclick>SetFocus(525)</onclick>
+			<onclick condition="IsEmpty(Skin.String(Home.Music.Tile.7.Path))">ActivateWindow(3054)</onclick>
 			<onclick condition="!stringcompare(Skin.String(Home.Music.Tile.7.Type),4) + !stringcompare(Skin.String(Home.Music.Tile.7.Type),5) + !stringcompare(Skin.String(Home.Music.Tile.7.Type),6) + !stringcompare(Skin.String(Home.Music.Tile.7.Type),7)">RunAddon($INFO[Skin.String(Home.Music.Tile.7.Path)])</onclick>
 			<onclick condition="stringcompare(Skin.String(Home.Music.Tile.7.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(Home.Music.Tile.7.Path)],return)</onclick>
 			<onclick condition="stringcompare(Skin.String(Home.Music.Tile.7.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(Home.Music.Tile.7.Path)],return)</onclick>
@@ -750,6 +778,7 @@
 		<item id="8">
 			<label>$INFO[Skin.String(Home.Music.Tile.8.Label)]</label>
 			<onclick>SetFocus(525)</onclick>
+			<onclick condition="IsEmpty(Skin.String(Home.Music.Tile.8.Path))">ActivateWindow(3054)</onclick>
 			<onclick condition="!stringcompare(Skin.String(Home.Music.Tile.8.Type),4) + !stringcompare(Skin.String(Home.Music.Tile.8.Type),5) + !stringcompare(Skin.String(Home.Music.Tile.8.Type),6) + !stringcompare(Skin.String(Home.Music.Tile.8.Type),7)">RunAddon($INFO[Skin.String(Home.Music.Tile.8.Path)])</onclick>
 			<onclick condition="stringcompare(Skin.String(Home.Music.Tile.8.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(Home.Music.Tile.8.Path)],return)</onclick>
 			<onclick condition="stringcompare(Skin.String(Home.Music.Tile.8.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(Home.Music.Tile.8.Path)],return)</onclick>
@@ -764,6 +793,7 @@
 		<item id="9">
 			<label>$INFO[Skin.String(Home.Music.Tile.9.Label)]</label>
 			<onclick>SetFocus(525)</onclick>
+			<onclick condition="IsEmpty(Skin.String(Home.Music.Tile.9.Path))">ActivateWindow(3054)</onclick>
 			<onclick condition="!stringcompare(Skin.String(Home.Music.Tile.9.Type),4) + !stringcompare(Skin.String(Home.Music.Tile.9.Type),5) + !stringcompare(Skin.String(Home.Music.Tile.9.Type),6) + !stringcompare(Skin.String(Home.Music.Tile.9.Type),7)">RunAddon($INFO[Skin.String(Home.Music.Tile.9.Path)])</onclick>
 			<onclick condition="stringcompare(Skin.String(Home.Music.Tile.9.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(Home.Music.Tile.9.Path)],return)</onclick>
 			<onclick condition="stringcompare(Skin.String(Home.Music.Tile.9.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(Home.Music.Tile.9.Path)],return)</onclick>
@@ -778,6 +808,7 @@
 		<item id="10">
 			<label>$INFO[Skin.String(Home.Music.Tile.10.Label)]</label>
 			<onclick>SetFocus(525)</onclick>
+			<onclick condition="IsEmpty(Skin.String(Home.Music.Tile.10.Path))">ActivateWindow(3054)</onclick>
 			<onclick condition="!stringcompare(Skin.String(Home.Music.Tile.10.Type),4) + !stringcompare(Skin.String(Home.Music.Tile.10.Type),5) + !stringcompare(Skin.String(Home.Music.Tile.10.Type),6) + !stringcompare(Skin.String(Home.Music.Tile.10.Type),7)">RunAddon($INFO[Skin.String(Home.Music.Tile.10.Path)])</onclick>
 			<onclick condition="stringcompare(Skin.String(Home.Music.Tile.10.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(Home.Music.Tile.10.Path)],return)</onclick>
 			<onclick condition="stringcompare(Skin.String(Home.Music.Tile.10.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(Home.Music.Tile.10.Path)],return)</onclick>
@@ -864,6 +895,7 @@
 		<item id="1">
 			<label>$INFO[Skin.String(Home.Programs.Tile.1.Label)]</label>
 			<onclick>SetFocus(525)</onclick>
+			<onclick condition="IsEmpty(Skin.String(Home.Programs.Tile.1.Path))">ActivateWindow(3054)</onclick>
 			<onclick condition="!stringcompare(Skin.String(Home.Programs.Tile.1.Type),4) + !stringcompare(Skin.String(Home.Programs.Tile.1.Type),5) + !stringcompare(Skin.String(Home.Programs.Tile.1.Type),6) + !stringcompare(Skin.String(Home.Programs.Tile.1.Type),7)">RunAddon($INFO[Skin.String(Home.Programs.Tile.1.Path)])</onclick>
 			<onclick condition="stringcompare(Skin.String(Home.Programs.Tile.1.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(Home.Programs.Tile.1.Path)],return)</onclick>
 			<onclick condition="stringcompare(Skin.String(Home.Programs.Tile.1.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(Home.Programs.Tile.1.Path)],return)</onclick>
@@ -878,6 +910,7 @@
 		<item id="5">
 			<label>$INFO[Skin.String(Home.Programs.Tile.2.Label)]</label>
 			<onclick>SetFocus(525)</onclick>
+			<onclick condition="IsEmpty(Skin.String(Home.Programs.Tile.2.Path))">ActivateWindow(3054)</onclick>
 			<onclick condition="!stringcompare(Skin.String(Home.Programs.Tile.2.Type),4) + !stringcompare(Skin.String(Home.Programs.Tile.2.Type),5) + !stringcompare(Skin.String(Home.Programs.Tile.2.Type),6) + !stringcompare(Skin.String(Home.Programs.Tile.2.Type),7)">RunAddon($INFO[Skin.String(Home.Programs.Tile.2.Path)])</onclick>
 			<onclick condition="stringcompare(Skin.String(Home.Programs.Tile.2.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(Home.Programs.Tile.2.Path)],return)</onclick>
 			<onclick condition="stringcompare(Skin.String(Home.Programs.Tile.2.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(Home.Programs.Tile.2.Path)],return)</onclick>
@@ -892,6 +925,7 @@
 		<item id="6">
 			<label>$INFO[Skin.String(Home.Programs.Tile.3.Label)]</label>
 			<onclick>SetFocus(525)</onclick>
+			<onclick condition="IsEmpty(Skin.String(Home.Programs.Tile.3.Path))">ActivateWindow(3054)</onclick>
 			<onclick condition="!stringcompare(Skin.String(Home.Programs.Tile.3.Type),4) + !stringcompare(Skin.String(Home.Programs.Tile.3.Type),5) + !stringcompare(Skin.String(Home.Programs.Tile.3.Type),6) + !stringcompare(Skin.String(Home.Programs.Tile.3.Type),7)">RunAddon($INFO[Skin.String(Home.Programs.Tile.3.Path)])</onclick>
 			<onclick condition="stringcompare(Skin.String(Home.Programs.Tile.3.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(Home.Programs.Tile.3.Path)],return)</onclick>
 			<onclick condition="stringcompare(Skin.String(Home.Programs.Tile.3.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(Home.Programs.Tile.3.Path)],return)</onclick>
@@ -906,6 +940,7 @@
 		<item id="2">
 			<label>$INFO[Skin.String(Home.Programs.Tile.4.Label)]</label>
 			<onclick>SetFocus(525)</onclick>
+			<onclick condition="IsEmpty(Skin.String(Home.Programs.Tile.4.Path))">ActivateWindow(3054)</onclick>
 			<onclick condition="!stringcompare(Skin.String(Home.Programs.Tile.4.Type),4) + !stringcompare(Skin.String(Home.Programs.Tile.4.Type),5) + !stringcompare(Skin.String(Home.Programs.Tile.4.Type),6) + !stringcompare(Skin.String(Home.Programs.Tile.4.Type),7)">RunAddon($INFO[Skin.String(Home.Programs.Tile.4.Path)])</onclick>
 			<onclick condition="stringcompare(Skin.String(Home.Programs.Tile.4.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(Home.Programs.Tile.4.Path)],return)</onclick>
 			<onclick condition="stringcompare(Skin.String(Home.Programs.Tile.4.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(Home.Programs.Tile.4.Path)],return)</onclick>
@@ -920,6 +955,7 @@
 		<item id="3">
 			<label>$INFO[Skin.String(Home.Programs.Tile.5.Label)]</label>
 			<onclick>SetFocus(525)</onclick>
+			<onclick condition="IsEmpty(Skin.String(Home.Programs.Tile.5.Path))">ActivateWindow(3054)</onclick>
 			<onclick condition="!stringcompare(Skin.String(Home.Programs.Tile.5.Type),4) + !stringcompare(Skin.String(Home.Programs.Tile.5.Type),5) + !stringcompare(Skin.String(Home.Programs.Tile.5.Type),6) + !stringcompare(Skin.String(Home.Programs.Tile.5.Type),7)">RunAddon($INFO[Skin.String(Home.Programs.Tile.5.Path)])</onclick>
 			<onclick condition="stringcompare(Skin.String(Home.Programs.Tile.5.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(Home.Programs.Tile.5.Path)],return)</onclick>
 			<onclick condition="stringcompare(Skin.String(Home.Programs.Tile.5.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(Home.Programs.Tile.5.Path)],return)</onclick>
@@ -934,6 +970,7 @@
 		<item id="4">
 			<label>$INFO[Skin.String(Home.Programs.Tile.6.Label)]</label>
 			<onclick>SetFocus(525)</onclick>
+			<onclick condition="IsEmpty(Skin.String(Home.Programs.Tile.6.Path))">ActivateWindow(3054)</onclick>
 			<onclick condition="!stringcompare(Skin.String(Home.Programs.Tile.6.Type),4) + !stringcompare(Skin.String(Home.Programs.Tile.6.Type),5) + !stringcompare(Skin.String(Home.Programs.Tile.6.Type),6) + !stringcompare(Skin.String(Home.Programs.Tile.6.Type),7)">RunAddon($INFO[Skin.String(Home.Programs.Tile.6.Path)])</onclick>
 			<onclick condition="stringcompare(Skin.String(Home.Programs.Tile.6.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(Home.Programs.Tile.6.Path)],return)</onclick>
 			<onclick condition="stringcompare(Skin.String(Home.Programs.Tile.6.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(Home.Programs.Tile.6.Path)],return)</onclick>
@@ -948,6 +985,7 @@
 		<item id="7">
 			<label>$INFO[Skin.String(Home.Programs.Tile.7.Label)]</label>
 			<onclick>SetFocus(525)</onclick>
+			<onclick condition="IsEmpty(Skin.String(Home.Programs.Tile.7.Path))">ActivateWindow(3054)</onclick>
 			<onclick condition="!stringcompare(Skin.String(Home.Programs.Tile.7.Type),4) + !stringcompare(Skin.String(Home.Programs.Tile.7.Type),5) + !stringcompare(Skin.String(Home.Programs.Tile.7.Type),6) + !stringcompare(Skin.String(Home.Programs.Tile.7.Type),7)">RunAddon($INFO[Skin.String(Home.Programs.Tile.7.Path)])</onclick>
 			<onclick condition="stringcompare(Skin.String(Home.Programs.Tile.7.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(Home.Programs.Tile.7.Path)],return)</onclick>
 			<onclick condition="stringcompare(Skin.String(Home.Programs.Tile.7.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(Home.Programs.Tile.7.Path)],return)</onclick>
@@ -962,6 +1000,7 @@
 		<item id="8">
 			<label>$INFO[Skin.String(Home.Programs.Tile.8.Label)]</label>
 			<onclick>SetFocus(525)</onclick>
+			<onclick condition="IsEmpty(Skin.String(Home.Programs.Tile.8.Path))">ActivateWindow(3054)</onclick>
 			<onclick condition="!stringcompare(Skin.String(Home.Programs.Tile.8.Type),4) + !stringcompare(Skin.String(Home.Programs.Tile.8.Type),5) + !stringcompare(Skin.String(Home.Programs.Tile.8.Type),6) + !stringcompare(Skin.String(Home.Programs.Tile.8.Type),7)">RunAddon($INFO[Skin.String(Home.Programs.Tile.8.Path)])</onclick>
 			<onclick condition="stringcompare(Skin.String(Home.Programs.Tile.8.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(Home.Programs.Tile.8.Path)],return)</onclick>
 			<onclick condition="stringcompare(Skin.String(Home.Programs.Tile.8.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(Home.Programs.Tile.8.Path)],return)</onclick>
@@ -976,6 +1015,7 @@
 		<item id="9">
 			<label>$INFO[Skin.String(Home.Programs.Tile.9.Label)]</label>
 			<onclick>SetFocus(525)</onclick>
+			<onclick condition="IsEmpty(Skin.String(Home.Programs.Tile.9.Path))">ActivateWindow(3054)</onclick>
 			<onclick condition="!stringcompare(Skin.String(Home.Programs.Tile.9.Type),4) + !stringcompare(Skin.String(Home.Programs.Tile.9.Type),5) + !stringcompare(Skin.String(Home.Programs.Tile.9.Type),6) + !stringcompare(Skin.String(Home.Programs.Tile.9.Type),7)">RunAddon($INFO[Skin.String(Home.Programs.Tile.9.Path)])</onclick>
 			<onclick condition="stringcompare(Skin.String(Home.Programs.Tile.9.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(Home.Programs.Tile.9.Path)],return)</onclick>
 			<onclick condition="stringcompare(Skin.String(Home.Programs.Tile.9.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(Home.Programs.Tile.9.Path)],return)</onclick>
@@ -990,6 +1030,7 @@
 		<item id="10">
 			<label>$INFO[Skin.String(Home.Programs.Tile.10.Label)]</label>
 			<onclick>SetFocus(525)</onclick>
+			<onclick condition="IsEmpty(Skin.String(Home.Programs.Tile.10.Path))">ActivateWindow(3054)</onclick>
 			<onclick condition="!stringcompare(Skin.String(Home.Programs.Tile.10.Type),4) + !stringcompare(Skin.String(Home.Programs.Tile.10.Type),5) + !stringcompare(Skin.String(Home.Programs.Tile.10.Type),6) + !stringcompare(Skin.String(Home.Programs.Tile.10.Type),7)">RunAddon($INFO[Skin.String(Home.Programs.Tile.10.Path)])</onclick>
 			<onclick condition="stringcompare(Skin.String(Home.Programs.Tile.10.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(Home.Programs.Tile.10.Path)],return)</onclick>
 			<onclick condition="stringcompare(Skin.String(Home.Programs.Tile.10.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(Home.Programs.Tile.10.Path)],return)</onclick>
@@ -2318,13 +2359,13 @@
 			<visible>!Skin.HasSetting(disable.games) + StringCompare(Skin.String(homescreen.style),simple)</visible>
 			<property name="single">$INFO[Skin.String(HomeGamesSingleImage)]</property>
 			<property name="multi">$INFO[Skin.String(HomeGamesMultiImage)]</property>
-			<onclick condition="IsEmpty(Skin.String(HomeProgramTile5.Path)) + IsEmpty(Skin.String(GameTile.Path)) + !Skin.HasSetting(UseRCB)">ActivateWindow(10001,plugin://plugin.program.advanced.launcher,return)</onclick>
-			<onclick condition="IsEmpty(Skin.String(HomeProgramTile5.Path)) + !IsEmpty(Skin.String(GameTile.Path)) + !Skin.HasSetting(UseRCB)">ActivateWindow(10001,$INFO[Skin.String(GameTile.Path)],return)</onclick>
-			<onclick condition="IsEmpty(Skin.String(HomeProgramTile5.Path)) + Skin.HasSetting(UseRCB)">RunScript(script.games.rom.collection.browser)</onclick>
-			<onclick condition="!stringcompare(Skin.String(HomeProgramTile5.Type),4) + !stringcompare(Skin.String(HomeProgramTile5.Type),5) + !stringcompare(Skin.String(HomeProgramTile5.Type),6) + !stringcompare(Skin.String(HomeProgramTile5.Type),7)">RunAddon($INFO[Skin.String(HomeProgramTile5.Path)])</onclick>
-			<onclick condition="stringcompare(Skin.String(HomeProgramTile5.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(HomeProgramTile5.Path)],return)</onclick>
-			<onclick condition="stringcompare(Skin.String(HomeProgramTile5.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(HomeProgramTile5.Path)],return)</onclick>
-			<onclick condition="[stringcompare(Skin.String(HomeProgramTile5.Type),6) | stringcompare(Skin.String(HomeProgramTile5.Type),7)]">$INFO[Skin.String(HomeProgramTile5.Path)]</onclick>
+			<onclick condition="IsEmpty(Skin.String(HomeCustomItem.Path)) + IsEmpty(Skin.String(GameTile.Path)) + !Skin.HasSetting(UseRCB)">ActivateWindow(10001,plugin://plugin.program.advanced.launcher,return)</onclick>
+			<onclick condition="IsEmpty(Skin.String(HomeCustomItem.Path)) + !IsEmpty(Skin.String(GameTile.Path)) + !Skin.HasSetting(UseRCB)">ActivateWindow(10001,$INFO[Skin.String(GameTile.Path)],return)</onclick>
+			<onclick condition="IsEmpty(Skin.String(HomeCustomItem.Path)) + Skin.HasSetting(UseRCB)">RunScript(script.games.rom.collection.browser)</onclick>
+			<onclick condition="!stringcompare(Skin.String(HomeCustomItem.Type),4) + !stringcompare(Skin.String(HomeCustomItem.Type),5) + !stringcompare(Skin.String(HomeCustomItem.Type),6) + !stringcompare(Skin.String(HomeCustomItem.Type),7)">RunAddon($INFO[Skin.String(HomeCustomItem.Path)])</onclick>
+			<onclick condition="stringcompare(Skin.String(HomeCustomItem.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(HomeCustomItem.Path)],return)</onclick>
+			<onclick condition="stringcompare(Skin.String(HomeCustomItem.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(HomeCustomItem.Path)],return)</onclick>
+			<onclick condition="[stringcompare(Skin.String(HomeCustomItem.Type),6) | stringcompare(Skin.String(HomeCustomItem.Type),7)]">$INFO[Skin.String(HomeCustomItem.Path)]</onclick>
 			<icon>DefaultGames.png</icon>
 		</item>
 		<item id="7">

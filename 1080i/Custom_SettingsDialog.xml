@@ -6,7 +6,7 @@
     <controls>
         <control type="group">
             <include>KeyboardAnimations</include>
-            <visible>!Window.IsVisible(3003)</visible> 
+            <visible>!Window.IsVisible(3003) + !Window.IsActive(FileBrowser) + !Window.IsActive(virtualkeyboard)</visible> 
             <control type="image">
             	<posx>608</posx>
             	<posy>230</posy>
@@ -22,6 +22,7 @@
             	<width>647</width>
             	<height>482</height>
             	<texture border="15">arctic/common/whitepanel8.png</texture>
+            	<visible>!Window.IsVisible(3055)</visible>
             </control>
               
             <control type="image">
@@ -36,10 +37,11 @@
                 <description>Heading</description>
                 <posx>692</posx>
                 <posy>260</posy>
-                <width>646</width>
+                <width>586</width>
                 <include>DialogHeaderMod</include>
                 <label>$INFO[Window(skinsettings).property(Dialog)]</label>
                 <align>left</align>
+                <scroll>false</scroll>
             </control>
             
             <control type="grouplist" id="3">
@@ -173,12 +175,9 @@
                     <include>SettingsCategoryPanelRadioButtonVars</include>
                     <label>Edit Custom..</label>
                     <visible>StringCompare(Skin.String(homescreen.style),simple) + !Skin.HasSetting(disable.games)</visible>
-                    <onclick>Skin.SetBool(HomeProgramTile5)</onclick>
-					<onclick condition="IsEmpty(Skin.String(HomeProgramTile5.Type))">Skin.SetString(HomeProgramTile5.Type,0)</onclick>
-					<onclick condition="IsEmpty(Skin.String(HomeProgramTile5.TypeName))">Skin.SetString(HomeProgramTile5.TypeName,$LOCALIZE[41145])</onclick>
-					<onclick>SetProperty(SingleDialog,custom,3003)</onclick>
-					<onclick>SetProperty(Dialog,$LOCALIZE[41136],skinsettings)</onclick>
-					<onclick>ActivateWindow(3003)</onclick>
+					<onclick condition="IsEmpty(Skin.String(HomeCustomItem.Type))">Skin.SetString(HomeCustomItem.Type,0)</onclick>
+					<onclick condition="IsEmpty(Skin.String(HomeCustomItem.TypeName))">Skin.SetString(HomeCustomItem.TypeName,$LOCALIZE[41145])</onclick>
+					<onclick>ActivateWindow(3055)</onclick>
                 </control>
             </control>
             
@@ -255,6 +254,7 @@
             <control type="group" id="10">
                 <posx>626</posx>
                 <posy>758</posy>
+                <visible>!Window.IsActive(3055)</visible>
                 <control type="button" id="5">
                     <description>Close</description>
                     <texturefocus>buttons/cancel-fo.png</texturefocus>

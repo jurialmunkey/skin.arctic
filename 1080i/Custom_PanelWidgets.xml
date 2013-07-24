@@ -129,7 +129,18 @@
 					<label>Use default widget for settings</label>
 					<visible>StringCompare(Skin.String(homescreen.style),panel) + !stringcompare(Skin.String(defaultpanel.widget.type),$LOCALIZE[10511])</visible>
 				</control>
-				<control type="button" id="2105">
+				<control type="radiobutton" id="2105">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>644</width>
+					<height>77</height>
+					<include>SettingsCategoryPanelRadioButtonVars</include>
+					<onclick>Skin.ToggleSetting(UseRCB)</onclick>
+					<selected>Skin.HasSetting(UseRCB)</selected>										
+					<label>Use rom collection widget for programs</label>
+					<visible>StringCompare(Skin.String(homescreen.style),panel) + !Skin.HasSettings(disable.programs) + System.HasAddon(script.games.rom.collection.browser)</visible>
+				</control>
+				<control type="button" id="2106">
 					<posx>0</posx>
 					<posy>0</posy>
 					<width>644</width>
@@ -141,9 +152,9 @@
 					<include>SettingsCategoryDefaultButtonVars</include>
 					<onclick>Skin.SetPath(pictures.slideshowpath)</onclick>
 					<label>[B]Programs slideshow path:[/B]$INFO[Skin.String(pictures.slideshowpath),[CR],]</label>
-					<visible>StringCompare(Skin.String(homescreen.style),panel) + !Skin.HasSetting(disable.programs) + stringcompare(Skin.String(defaultpanel.widget.type),$LOCALIZE[10511])</visible>
+					<visible>StringCompare(Skin.String(homescreen.style),panel) + !Skin.HasSetting(disable.programs) + stringcompare(Skin.String(defaultpanel.widget.type),$LOCALIZE[10511]) + !Skin.HasSetting(UseRCB)</visible>
 				</control>
-				<control type="button" id="2106">
+				<control type="button" id="2107">
 					<posx>0</posx>
 					<posy>0</posy>
 					<width>644</width>
@@ -158,7 +169,6 @@
 					<visible>StringCompare(Skin.String(homescreen.style),panel) + [!Skin.HasSetting(disable.pictures) | stringcompare(Skin.String(defaultpanel.widget.type),$LOCALIZE[129])]</visible>
 				</control>
             </control>
-            
             <control type="group" id="10">
                 <posx>626</posx>
                 <posy>744</posy>

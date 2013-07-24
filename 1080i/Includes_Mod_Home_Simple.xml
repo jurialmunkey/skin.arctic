@@ -76,14 +76,27 @@
 					</control>
 					<control type="textbox">
 						<posx>440</posx>
-						<posy>96</posy>
+						<posy>86</posy>
 						<label>$INFO[Container(82).ListItem.Property(Plot)]</label>
 						<align>justify</align>
 						<font>Font-Condensed-S28</font>
 						<textcolor>eebbbbbb</textcolor>
 						<width>1010</width>
-						<height>120</height>
+						<height>135</height>
 						<autoscroll delay="13000" time="3000" repeat="13000" />
+						<visible>Container(525).HasFocus(3) | system.getbool(videolibrary.showunwatchedplots) | [!Container(525).HasFocus(3) + !system.getbool(videolibrary.showunwatchedplots) + Container(82).ListItem.Property(Overlay)]</visible>
+					</control>
+					<control type="textbox">
+						<posx>440</posx>
+						<posy>86</posy>
+						<label>$LOCALIZE[20370]</label>
+						<align>justify</align>
+						<font>Font-Condensed-S28</font>
+						<textcolor>eebbbbbb</textcolor>
+						<width>1010</width>
+						<height>135</height>
+						<autoscroll delay="13000" time="3000" repeat="13000" />
+						<visible>!Container(525).HasFocus(3) + !Container(82).ListItem.Property(Overlay) + !system.getbool(videolibrary.showunwatchedplots)</visible>
 					</control>
 					<control type="image">
 						<posx>1480</posx>

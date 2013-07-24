@@ -237,9 +237,9 @@
 				</control>
 				<control type="list" id="525">
 					<onup condition="!Container(525).HasFocus(5)">SetFocus(83,0)</onup>
-					<ondown condition="Container(525).HasFocus(1) | Container(525).HasFocus(2) | Container(525).HasFocus(3) | [Container(525).HasFocus(7) + !IsEmpty(Window(Home).Property(MostPlayedROM.1.Title))]">SetFocus(82)</ondown>
+					<ondown condition="Container(525).HasFocus(1) | Container(525).HasFocus(2) | Container(525).HasFocus(3) | [Container(525).HasFocus(7) + !IsEmpty(Window(Home).Property(MostPlayedROM.1.Title)) + Skin.HasSetting(UseRCB)]">SetFocus(82)</ondown>
 					<ondown condition="Container(525).HasFocus(9) | Container(525).HasFocus(10) | Container(525).HasFocus(11)">SetFocus(84,0)</ondown>
-					<ondown condition="Container(525).HasFocus(4) | Container(525).HasFocus(5) | Container(525).HasFocus(6) | [Container(525).HasFocus(7) + IsEmpty(Window(Home).Property(MostPlayedROM.1.Title))] | Container(525).HasFocus(8)">SetFocus(84,0)</ondown>
+					<ondown condition="Container(525).HasFocus(4) | Container(525).HasFocus(5) | Container(525).HasFocus(6) | [Container(525).HasFocus(7) + [IsEmpty(Window(Home).Property(MostPlayedROM.1.Title)) | !Skin.HasSetting(UseRCB)]] | Container(525).HasFocus(8)">SetFocus(84,0)</ondown>
 
 					<onleft>525</onleft>
 					<onright>525</onright>
@@ -596,6 +596,19 @@
 						<width>1010</width>
 						<height>135</height>
 						<autoscroll delay="13000" time="3000" repeat="13000" />
+						<visible>Container(525).HasFocus(3) | system.getbool(videolibrary.showunwatchedplots) | [!Container(525).HasFocus(3) + !system.getbool(videolibrary.showunwatchedplots) + Container(82).ListItem.Property(Overlay)]</visible>
+					</control>
+					<control type="textbox">
+						<posx>440</posx>
+						<posy>86</posy>
+						<label>$LOCALIZE[20370]</label>
+						<align>justify</align>
+						<font>Font-Condensed-S28</font>
+						<textcolor>eebbbbbb</textcolor>
+						<width>1010</width>
+						<height>135</height>
+						<autoscroll delay="13000" time="3000" repeat="13000" />
+						<visible>!Container(525).HasFocus(3) + !Container(82).ListItem.Property(Overlay) + !system.getbool(videolibrary.showunwatchedplots)</visible>
 					</control>
 					<control type="image">
 						<posx>1480</posx>
@@ -722,7 +735,7 @@
 					<control type="group">
 						<posx>48</posx>
 						<posy>330</posy>
-						<visible>[Container(525).HasFocus(5) + !Control.HasFocus(84) + !IsEmpty(Skin.String(pictures.slideshowpath2))] | [stringcompare(Skin.String(defaultpanel.widget.type),$LOCALIZE[129]) + [!Control.HasFocus(84) + [[Container(525).HasFocus(5) + IsEmpty(Skin.String(pictures.slideshowpath2))] | Container(525).HasFocus(10) | Container(525).HasFocus(11) | [Container(525).HasFocus(7) + IsEmpty(Window(Home).Property(MostPlayedROM.1.Title))] | [Container(525).HasFocus(9) + Skin.HasSetting(settings.widget.usedefault)]]]]</visible>
+						<visible>[Container(525).HasFocus(5) + !Control.HasFocus(84) + !IsEmpty(Skin.String(pictures.slideshowpath2))] | [stringcompare(Skin.String(defaultpanel.widget.type),$LOCALIZE[129]) + [!Control.HasFocus(84) + [[Container(525).HasFocus(5) + IsEmpty(Skin.String(pictures.slideshowpath2))] | Container(525).HasFocus(10) | Container(525).HasFocus(11) | [Container(525).HasFocus(7) + [IsEmpty(Window(Home).Property(MostPlayedROM.1.Title)) | !Skin.HasSetting(UseRCB)]] | [Container(525).HasFocus(9) + Skin.HasSetting(settings.widget.usedefault)]]]]</visible>
 						<animation effect="fade" start="0" end="100" time="350">Visible</animation>
 						<animation effect="fade" start="100" end="0" time="450" condition="Window.IsActive(favourites)">Conditional</animation>
 						<animation effect="fade" start="0" end="100" delay="150" time="450" condition="!Window.IsActive(favourites)">Conditional</animation>
@@ -805,12 +818,12 @@
 					<control type="group">
 						<posx>48</posx>
 						<posy>330</posy>
-						<visible>stringcompare(Skin.String(defaultpanel.widget.type),$LOCALIZE[10511]) + [!Control.HasFocus(84) + [[Container(525).HasFocus(5) + IsEmpty(Skin.String(pictures.slideshowpath2))] | [Container(525).HasFocus(5) + IsEmpty(Skin.String(pictures.slideshowpath2))] | Container(525).HasFocus(10) | Container(525).HasFocus(11) | [Container(525).HasFocus(7) + IsEmpty(Window(Home).Property(MostPlayedROM.1.Title))] | [Container(525).HasFocus(9) + Skin.HasSetting(settings.widget.usedefault)]]] | [Control.HasFocus(84) + !Container(84).HasFocus(0)] | [Container(525).HasFocus(9) + !Control.HasFocus(84) + !Skin.HasSetting(settings.widget.usedefault)]</visible>
+						<visible>stringcompare(Skin.String(defaultpanel.widget.type),$LOCALIZE[10511]) + [!Control.HasFocus(84) + [[Container(525).HasFocus(5) + IsEmpty(Skin.String(pictures.slideshowpath2))] | [Container(525).HasFocus(5) + IsEmpty(Skin.String(pictures.slideshowpath2))] | Container(525).HasFocus(10) | Container(525).HasFocus(11) | [Container(525).HasFocus(7) + [IsEmpty(Window(Home).Property(MostPlayedROM.1.Title)) | !Skin.HasSetting(UseRCB)]] | [Container(525).HasFocus(9) + Skin.HasSetting(settings.widget.usedefault)]]] | [Control.HasFocus(84) + !Container(84).HasFocus(0)] | [Container(525).HasFocus(9) + !Control.HasFocus(84) + !Skin.HasSetting(settings.widget.usedefault)]</visible>
 						<animation effect="fade" start="0" end="100" time="350">Visible</animation>
 						<animation effect="fade" start="100" end="0" time="450" condition="Window.IsActive(favourites)">Conditional</animation>
 						<animation effect="fade" start="0" end="100" delay="150" time="450" condition="!Window.IsActive(favourites)">Conditional</animation>
 						<control type="group">
-							<visible>Container(525).HasFocus(7) + !IsEmpty(Skin.String(pictures.slideshowpath)) + !Control.HasFocus(84) + IsEmpty(Window(Home).Property(MostPlayedROM.1.Title))</visible>
+							<visible>Container(525).HasFocus(7) + !IsEmpty(Skin.String(pictures.slideshowpath)) + !Control.HasFocus(84) + [IsEmpty(Window(Home).Property(MostPlayedROM.1.Title)) | !Skin.HasSetting(UseRCB)]</visible>
 							<control type="image">
 								<posx>-15</posx>
 								<posy>-25</posy>
@@ -835,7 +848,7 @@
 							</control>
 						</control>
 						<control type="grouplist">
-							<animation effect="slide" start="0" end="581" condition="Container(525).HasFocus(7) + !IsEmpty(Skin.String(pictures.slideshowpath)) + !Control.HasFocus(84) + IsEmpty(Window(Home).Property(MostPlayedROM.1.Title))">Conditional</animation>
+							<animation effect="slide" start="0" end="581" condition="Container(525).HasFocus(7) + !IsEmpty(Skin.String(pictures.slideshowpath)) + !Control.HasFocus(84) + [IsEmpty(Window(Home).Property(MostPlayedROM.1.Title)) | !Skin.HasSetting(UseRCB)]">Conditional</animation>
 							<orientation>vertical</orientation>
 							<itemgap>10</itemgap>
 							<align>left</align>
@@ -1006,7 +1019,7 @@
 					<control type="group">
 						<posx>35</posx>
 						<posy>325</posy>
-						<visible>[Control.HasFocus(84) + Container(84).HasFocus(0)] | [stringcompare(Skin.String(defaultpanel.widget.type),$LOCALIZE[12600]) + [!Control.HasFocus(84) + [[Container(525).HasFocus(5) + IsEmpty(Skin.String(pictures.slideshowpath2))] | Container(525).HasFocus(10) | Container(525).HasFocus(11) | [Container(525).HasFocus(7) + IsEmpty(Window(Home).Property(MostPlayedROM.1.Title))] | [Container(525).HasFocus(9) + Skin.HasSetting(settings.widget.usedefault)]]]]</visible>
+						<visible>[Control.HasFocus(84) + Container(84).HasFocus(0)] | [stringcompare(Skin.String(defaultpanel.widget.type),$LOCALIZE[12600]) + [!Control.HasFocus(84) + [[Container(525).HasFocus(5) + IsEmpty(Skin.String(pictures.slideshowpath2))] | Container(525).HasFocus(10) | Container(525).HasFocus(11) | [Container(525).HasFocus(7) + [IsEmpty(Window(Home).Property(MostPlayedROM.1.Title)) | !Skin.HasSetting(UseRCB)]] | [Container(525).HasFocus(9) + Skin.HasSetting(settings.widget.usedefault)]]]]</visible>
 						<animation effect="fade" start="0" end="100" time="250">Visible</animation>
 						<animation effect="fade" start="100" end="0" time="450" condition="Window.IsActive(favourites)">Conditional</animation>
 						<animation effect="fade" start="0" end="100" delay="150" time="450" condition="!Window.IsActive(favourites)">Conditional</animation>
@@ -1495,7 +1508,7 @@
 						<height>600</height>
 						<viewtype>list</viewtype>
 						<orientation>horizontal</orientation>
-						<visible>![Control.HasFocus(84) | Control.HasFocus(85) | Window.IsActive(favourites)]</visible>
+						<visible>![Control.HasFocus(84) | Control.HasFocus(85) | Window.IsActive(favourites) | [Container(525).HasFocus(7) + !Skin.HasSetting(UseRCB)]]</visible>
 						<include>Widgets_Slide</include>
 						<itemlayout width="184" condition="!Container(525).HasFocus(3) + !Container(525).HasFocus(7)">
 							<control type="group">

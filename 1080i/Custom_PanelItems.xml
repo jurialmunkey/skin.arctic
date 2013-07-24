@@ -10,18 +10,38 @@
             <!-- Back -->
             <control type="image">
             	<posx>490</posx>
-            	<posy>290</posy>
-            	<width>784</width>
-            	<height>520</height>
+            	<posy>250</posy>
+            	<width>824</width>
+            	<height>560</height>
             	<texture border="15">arctic/common/panel.png</texture>
             </control>
             <control type="image">
             	<posx>470</posx>
-            	<posy>270</posy>
-            	<width>824</width>
-            	<height>560</height>
+            	<posy>230</posy>
+            	<width>864</width>
+            	<height>600</height>
             	<texture border="50">arctic/common/border-20.png</texture>
             </control> 
+            
+            <!-- Heading -->
+            <control type="image">
+            	<posx>480</posx>
+            	<posy>242</posy>
+            	<width>80</width>
+            	<height>80</height>
+            	<texture>windows/home/icons/config.png</texture>
+            	<aspectratio>keep</aspectratio>
+            </control>
+            <control type="label">
+                <description>Heading</description>
+                <posx>550</posx>
+            	<posy>259</posy>
+            	<width>724</width>
+                <include>DialogHeaderMod</include>
+                <label>41136</label>
+                <align>left</align>
+                <scroll>false</scroll>
+            </control>  
             
             <!-- Category -->
             <control type="group">
@@ -138,14 +158,14 @@
             <control type="image">
             	<posx>500</posx>
             	<posy>300</posy>
-            	<width>774</width>
+            	<width>814</width>
             	<height>500</height>
             	<texture border="15">arctic/common/panel.png</texture>
             </control>
             <control type="image">
             	<posx>500</posx>
             	<posy>300</posy>
-            	<width>220</width>
+            	<width>260</width>
             	<height>500</height>
             	<texture border="15">arctic/common/whitepanel8.png</texture>
             </control>  
@@ -157,89 +177,89 @@
             	<height>500</height>
                 <include>SettingsDialogGrouplistVars</include>
 				<control type="radiobutton" id="2101">
-                    <width>220</width>
+                    <width>260</width>
                     <height>50</height>
                     <include>SettingsBackgroundDialogRadioButtonVars</include>
                     <selected>StringCompare(Skin.String(customitem.pos),1)</selected>
                     <onfocus>Skin.SetString(customitem.pos,1)</onfocus>
-                    <label>$LOCALIZE[41822] 1</label>
+                    <label>$INFO[Container(40).ListItem.Label] 1</label>
                 </control>
                 <control type="radiobutton" id="2102">
-                    <width>220</width>
+                    <width>260</width>
                     <height>50</height>
                     <include>SettingsBackgroundDialogRadioButtonVars</include>
                     <selected>StringCompare(Skin.String(customitem.pos),2)</selected>
                     <onfocus>Skin.SetString(customitem.pos,2)</onfocus>
-                    <label>$LOCALIZE[41822] 2</label>
+                    <label>$INFO[Container(40).ListItem.Label] 2</label>
                 </control>
                 <control type="radiobutton" id="2103">
-                    <width>220</width>
+                    <width>260</width>
                     <height>50</height>
                     <include>SettingsBackgroundDialogRadioButtonVars</include>
                     <selected>StringCompare(Skin.String(customitem.pos),3)</selected>
                     <onfocus>Skin.SetString(customitem.pos,3)</onfocus>
-                    <label>$LOCALIZE[41822] 3</label>
+                    <label>$INFO[Container(40).ListItem.Label] 3</label>
                 </control>
                 <control type="radiobutton" id="2104">
-                    <width>220</width>
+                    <width>260</width>
                     <height>50</height>
                     <include>SettingsBackgroundDialogRadioButtonVars</include>
                     <selected>StringCompare(Skin.String(customitem.pos),4)</selected>
                     <onfocus>Skin.SetString(customitem.pos,4)</onfocus>
-                    <label>$LOCALIZE[41822] 4</label>
+                    <label>$INFO[Container(40).ListItem.Label] 4</label>
                 </control>
                 <control type="radiobutton" id="2105">
-                    <width>220</width>
+                    <width>260</width>
                     <height>50</height>
                     <include>SettingsBackgroundDialogRadioButtonVars</include>
                     <selected>StringCompare(Skin.String(customitem.pos),5)</selected>
                     <onfocus>Skin.SetString(customitem.pos,5)</onfocus>
-                    <label>$LOCALIZE[41822] 5</label>
+                    <label>$INFO[Container(40).ListItem.Label] 5</label>
                 </control>
                 <control type="radiobutton" id="2106">
-                    <width>220</width>
+                    <width>260</width>
                     <height>50</height>
                     <include>SettingsBackgroundDialogRadioButtonVars</include>
                     <selected>StringCompare(Skin.String(customitem.pos),6)</selected>
                     <onfocus>Skin.SetString(customitem.pos,6)</onfocus>
-                    <label>$LOCALIZE[41822] 6</label>
+                    <label>$INFO[Container(40).ListItem.Label] 6</label>
                 </control>
                 <control type="radiobutton" id="2107">
-                    <width>220</width>
+                    <width>260</width>
                     <height>50</height>
                     <include>SettingsBackgroundDialogRadioButtonVars</include>
                     <selected>StringCompare(Skin.String(customitem.pos),7)</selected>
                     <onfocus>Skin.SetString(customitem.pos,7)</onfocus>
-                    <label>$LOCALIZE[41822] 7</label>
+                    <label>$INFO[Container(40).ListItem.Label] 7</label>
                 </control>
                 <control type="radiobutton" id="2108">
-                    <width>220</width>
+                    <width>260</width>
                     <height>50</height>
                     <include>SettingsBackgroundDialogRadioButtonVars</include>
                     <selected>StringCompare(Skin.String(customitem.pos),8)</selected>
                     <onfocus>Skin.SetString(customitem.pos,8)</onfocus>
-                    <label>$LOCALIZE[41822] 8</label>
+                    <label>$INFO[Container(40).ListItem.Label] 8</label>
                 </control>
                 <control type="radiobutton" id="2109">
-                    <width>220</width>
+                    <width>260</width>
                     <height>50</height>
                     <include>SettingsBackgroundDialogRadioButtonVars</include>
                     <selected>StringCompare(Skin.String(customitem.pos),9)</selected>
                     <onfocus>Skin.SetString(customitem.pos,9)</onfocus>
-                    <label>$LOCALIZE[41822] 9</label>
+                    <label>$INFO[Container(40).ListItem.Label] 9</label>
                 </control>
                 <control type="radiobutton" id="2110">
-                    <width>220</width>
+                    <width>260</width>
                     <height>50</height>
                     <include>SettingsBackgroundDialogRadioButtonVars</include>
                     <selected>StringCompare(Skin.String(customitem.pos),10)</selected>
                     <onfocus>Skin.SetString(customitem.pos,10)</onfocus>
-                    <label>$LOCALIZE[41822] 10</label>
+                    <label>$INFO[Container(40).ListItem.Label] 10</label>
                 </control>
             </control>
             
             <control type="group">
-            	<posx>730</posx>
+            	<posx>770</posx>
             	<posy>300</posy>
 				<include>PanelDialogHome.Movies.Tile.1</include>
 				<include>PanelDialogHome.Movies.Tile.2</include>
@@ -285,7 +305,7 @@
             <control type="image">
             	<posx>480</posx>
             	<posy>280</posy>
-            	<width>260</width>
+            	<width>300</width>
             	<height>540</height>
             	<texture border="50">arctic/common/border-20.png</texture>
             </control> 

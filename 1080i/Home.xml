@@ -2,8 +2,7 @@
     <defaultcontrol>525</defaultcontrol>
     <allowoverlay>yes</allowoverlay>
     <backgroundcolor>0</backgroundcolor>
-	<onload condition="!Skin.HasSetting(Skin.Initialization)">SetProperty(Skin.Initialization,1,startup)</onload>
-    <onload condition="!Skin.HasSetting(Skin.Initialization) | IsEmpty(Window(startup).Property(Started))">AlarmClock(Skin.Initialization,ReplaceWindow(startup),00:01,silent)</onload>
+	<onload condition="!Skin.HasSetting(Skin.Init.Complete)">AlarmClock(Skin.Initialization,ReplaceWindow(startup),00:01,silent)</onload>
 	<onload>Skin.SetBool(hide.glass)</onload>
 
 	<!-- PANEL AND SIMPLE -->

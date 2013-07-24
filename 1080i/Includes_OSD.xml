@@ -75,6 +75,7 @@
         </control>
     </include>
 
+	<!-- Maybe extend this ? -->
     <include name="OSDWeatherClock">
         <control type="group">
         	<posx>35</posx>

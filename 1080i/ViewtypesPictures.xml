@@ -9,30 +9,12 @@
             <visible>Control.IsVisible(50) + !Window.IsActive(addoninformation) + !Window.IsActive(favourites)</visible>
             <include>CommonViewAnimations</include>
             <include>OptionsShutdownAnimation</include>
-        
-        	<control type="image">
-                <posx>230</posx>
-                <posy>171</posy>
-                <height>737</height>
-                <width>1460</width>
-                <texture border="25">views/newgloss/border-glass.png</texture>
-                <colordiffuse>77ffffff</colordiffuse>
-                <visible>!Skin.HasSetting(hide.glass)</visible>
-            </control>
             <control type="image">
                 <posx>234</posx>
                 <posy>175</posy>
                 <height>729</height>
                 <width>1452</width>
                 <texture border="35">views/newgloss/whitepanel-15.png</texture>
-            </control>
-            <control type="image">
-                <description>Shadow</description>
-                <posx>150</posx>
-                <posy>883</posy>
-                <width>1620</width>
-                <height>150</height>
-                <texture>windows/home/item-shadow.png</texture>
             </control>
             
             <control type="list" id="50">
@@ -50,14 +32,6 @@
                 <scrolltime tween="cubic" easing="out">500</scrolltime>
                 <preloaditems>2</preloaditems>
                 <itemlayout height="100">
-                    <control type="image">
-                        <description>List separator</description>
-                        <posx>0</posx>
-                        <posy>0</posy>
-                        <width>1420</width>
-                        <height>101</height>
-                        <texture border="90,3,90,3">views/list/other/separator-l.png</texture>
-                    </control>
                     <control type="label">
                         <description>Label</description>
                         <posx>120</posx>
@@ -123,14 +97,6 @@
                     </control>
                 </itemlayout>
                 <focusedlayout height="100">
-                    <control type="image">
-                        <description>List separator</description>
-                        <posx>0</posx>
-                        <posy>0</posy>
-                        <width>1420</width>
-                        <height>101</height>
-                        <texture border="90,3,90,3">views/list/other/separator-l.png</texture>
-                    </control>
                     <control type="image">
                         <posx>0</posx>
                         <posy>0</posy>

@@ -10,7 +10,7 @@
 			<onfocus condition="!Skin.HasSetting(Skin.Initialization)">SetProperty(Skin.Initialization,1,startup)</onfocus>
         	<onfocus condition="!Skin.HasSetting(Skin.Initialization)">Skin.SetBool(Skin.Initialization)</onfocus>
         	<onfocus condition="!Skin.HasSetting(Skin.Initialization)">AlarmClock(Skin.Initialization.ItemWait,SetFocus(13),00:02,silent)</onfocus>
-<onfocus condition="IsEmpty(Window(startup).Property(Started)) + IsEmpty(Window(startup).Property(Skin.Initialization))">ReplaceWindow(Home)</onfocus>
+			<onfocus condition="IsEmpty(Window(startup).Property(Started)) + IsEmpty(Window(startup).Property(Skin.Initialization))">ReplaceWindow(Home)</onfocus>
         </control>
         <control type="button" id="11">
         	<onfocus>CancelAlarm(Skin.Initialization.ItemWait,silent)</onfocus>

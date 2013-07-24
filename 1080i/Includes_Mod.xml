@@ -2788,7 +2788,7 @@
 	</include>
 	<include name="Arctic.ClearLogo">
 		<control type="grouplist">
-			<posx>120</posx>
+			<posx>95</posx>
 			<posy>912</posy>
 			<width>1500</width>
 			<height>155</height>

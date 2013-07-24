@@ -1725,8 +1725,8 @@
             <posx>560r</posx>
             <posy>238</posy>
             <width>1700</width>
-            <label>[B]$INFO[System.Time][/B]</label>
-            <font>Font-Alaska-S52-BL</font>
+            <label>$INFO[System.Time]</label>
+            <font>Font-Alaska-S45-BL</font>
             <textcolor>Mod_Tags</textcolor>
             <align>right</align>
             <scroll>false</scroll>

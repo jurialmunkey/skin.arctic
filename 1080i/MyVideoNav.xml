@@ -379,6 +379,30 @@
                         <radioposx>-19</radioposx>
                         <visible>Control.IsVisible(60) + !Container.Content(seasons) + !Container.Content(episodes)</visible>
                     </control>
+                    <!-- Season Panel Show Plot -->
+                    <control type="radiobutton" id="126">
+                        <include>optionsbuttonsdimensions</include>
+                        <selected>Skin.HasSetting(seasonpanel.showplot)</selected>
+                        <onclick>Skin.ToggleSetting(seasonpanel.showplot)</onclick>
+                        <label>Show plot</label>
+                        <texturefocus>dialogs/options/buttons/default-fo.png</texturefocus>
+                        <textureradiofocus>buttons/radio/options-radio-button-fo.png</textureradiofocus>
+                        <textureradionofocus>buttons/radio/options-radio-button-nf.png</textureradionofocus>
+                        <radioposx>-19</radioposx>
+                        <visible>Control.IsVisible(509)</visible>
+                    </control>
+                    <!-- Season Panel Show Number -->
+                    <control type="radiobutton" id="127">
+                        <include>optionsbuttonsdimensions</include>
+                        <selected>Skin.HasSetting(seasonpanel.shownumber)</selected>
+                        <onclick>Skin.ToggleSetting(seasonpanel.shownumber)</onclick>
+                        <label>Show season number</label>
+                        <texturefocus>dialogs/options/buttons/default-fo.png</texturefocus>
+                        <textureradiofocus>buttons/radio/options-radio-button-fo.png</textureradiofocus>
+                        <textureradionofocus>buttons/radio/options-radio-button-nf.png</textureradionofocus>
+                        <radioposx>-19</radioposx>
+                        <visible>Control.IsVisible(509) + Container.Content(seasons)</visible>
+                    </control>
                     
                     <!-- GLOBAL OPTIONS -->
                     <!-- Extrafanart -->
@@ -475,7 +499,7 @@
                         <visible>![Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]</visible>
                     </control>
                     <!-- Medium List -->
-                    <control type="radiobutton" id="215">
+                    <control type="radiobutton" id="203">
                         <include>optionsbuttonsdimensions</include>
                         <label>Medium List</label>
                         <texturefocus>dialogs/options/buttons/default-fo.png</texturefocus>
@@ -487,7 +511,7 @@
                         <visible>Container.Content(episodes) | Container.Content(Seasons) | Container.Content(tvshows) | Container.Content(movies)</visible>
                     </control>
                     <!-- Low List -->
-                    <control type="radiobutton" id="216">
+                    <control type="radiobutton" id="204">
                         <include>optionsbuttonsdimensions</include>
                         <label>Low List</label>
                         <texturefocus>dialogs/options/buttons/default-fo.png</texturefocus>
@@ -499,7 +523,7 @@
                         <visible>Container.Content(episodes) | Container.Content(Seasons) | Container.Content(tvshows) | Container.Content(movies)  | Container.Content(Sets)</visible>
                     </control>
                     <!-- Info List -->
-                    <control type="radiobutton" id="203">
+                    <control type="radiobutton" id="205">
                         <include>optionsbuttonsdimensions</include>
                         <label>Info List</label>
                         <texturefocus>dialogs/options/buttons/default-fo.png</texturefocus>
@@ -511,7 +535,7 @@
                         <visible>[Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]</visible>
                     </control>
                     <!-- Banner List -->
-                    <control type="radiobutton" id="213">
+                    <control type="radiobutton" id="206">
                         <include>optionsbuttonsdimensions</include>
                         <label>Banner List</label>
                         <texturefocus>dialogs/options/buttons/default-fo.png</texturefocus>
@@ -523,7 +547,7 @@
                         <visible>!Container.Content(genres) + !Container.Content(years) + !Container.Content(actors) + !Container.Content(directors) + !Container.Content(studios)</visible>
                     </control>
                     <!-- Banner Wide -->
-                    <control type="radiobutton" id="204">
+                    <control type="radiobutton" id="207">
                         <include>optionsbuttonsdimensions</include>
                         <label>Wide Banner</label>
                         <texturefocus>dialogs/options/buttons/default-fo.png</texturefocus>
@@ -535,7 +559,7 @@
                         <visible>Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(episodes)</visible>
                     </control>
                     <!-- Love Film -->
-                    <control type="radiobutton" id="214">
+                    <control type="radiobutton" id="208">
                         <include>optionsbuttonsdimensions</include>
                         <label>Lovefilm</label>
                         <texturefocus>dialogs/options/buttons/default-fo.png</texturefocus>
@@ -547,7 +571,7 @@
                         <visible>Container.Content(episodes) | Container.Content(Seasons) | Container.Content(tvshows) | Container.Content(movies)</visible>
                     </control>
                     <!-- Reel -->
-                    <control type="radiobutton" id="210">
+                    <control type="radiobutton" id="209">
                         <include>optionsbuttonsdimensions</include>
                         <label>Reel</label>
                         <texturefocus>dialogs/options/buttons/default-fo.png</texturefocus>
@@ -559,7 +583,7 @@
                         <visible>!Container.Content(seasons) + [Container.Content(TVShows) | Container.Content(movies) | Container.Content(episodes)]</visible>
                     </control>
                     <!-- Classic Poster -->
-                    <control type="radiobutton" id="205">
+                    <control type="radiobutton" id="210">
                         <include>optionsbuttonsdimensions</include>
                         <label>Classic Poster</label>
                         <texturefocus>dialogs/options/buttons/default-fo.png</texturefocus>
@@ -571,7 +595,7 @@
                         <visible>Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Sets)</visible>
                     </control>
                     <!-- Classic Info -->
-                    <control type="radiobutton" id="206">
+                    <control type="radiobutton" id="211">
                         <include>optionsbuttonsdimensions</include>
                         <label>Classic Info</label>
                         <texturefocus>dialogs/options/buttons/default-fo.png</texturefocus>
@@ -583,7 +607,7 @@
                         <visible>Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Sets)</visible>
                     </control>
                     <!-- Info Poster -->
-                    <control type="radiobutton" id="207">
+                    <control type="radiobutton" id="212">
                         <include>optionsbuttonsdimensions</include>
                         <label>Info Poster</label>
                         <texturefocus>dialogs/options/buttons/default-fo.png</texturefocus>
@@ -595,7 +619,7 @@
                         <visible>Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Sets)</visible>
                     </control>
                     <!-- Wall -->
-                    <control type="radiobutton" id="208">
+                    <control type="radiobutton" id="213">
                         <include>optionsbuttonsdimensions</include>
                         <label>Wall</label>
                         <texturefocus>dialogs/options/buttons/default-fo.png</texturefocus>
@@ -607,7 +631,7 @@
                         <visible>Container.Content(movies) | Container.Content(tvshows)</visible>
                     </control>
                     <!-- Landscape -->
-                    <control type="radiobutton" id="209">
+                    <control type="radiobutton" id="214">
                         <include>optionsbuttonsdimensions</include>
                         <label>Landscape</label>
                         <texturefocus>dialogs/options/buttons/default-fo.png</texturefocus>
@@ -619,7 +643,7 @@
                         <visible>Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes)</visible>
                     </control>
                     <!-- Wall Panel -->
-                    <control type="radiobutton" id="211">
+                    <control type="radiobutton" id="215">
                         <include>optionsbuttonsdimensions</include>
                         <label>Wall Panel</label>
                         <texturefocus>dialogs/options/buttons/default-fo.png</texturefocus>
@@ -628,10 +652,20 @@
                         <textureradiofocus>buttons/radio/options-radio-button-fo.png</textureradiofocus>
                         <textureradionofocus>buttons/radio/options-radio-button-nf.png</textureradionofocus>
                         <radioposx>-19</radioposx>
-                        <visible>Container.Content(Movies) | Container.Content(TVShows)</visible>
+                        <visible>Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons)</visible>
                     </control>
-                    
-                    
+                    <!-- Season Panel -->
+                    <control type="radiobutton" id="216">
+                        <include>optionsbuttonsdimensions</include>
+                        <label>Season Panel</label>
+                        <texturefocus>dialogs/options/buttons/default-fo.png</texturefocus>
+                        <onclick>Container.SetViewMode(509)</onclick>
+                        <selected>Control.IsVisible(509)</selected>
+                        <textureradiofocus>buttons/radio/options-radio-button-fo.png</textureradiofocus>
+                        <textureradionofocus>buttons/radio/options-radio-button-nf.png</textureradionofocus>
+                        <radioposx>-19</radioposx>
+                        <visible>Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons)</visible>
+                    </control>
                 </control>                      
                 
                 <control type="group">

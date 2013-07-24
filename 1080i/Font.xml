@@ -516,12 +516,6 @@
             <size>100</size>
         </font>
         
-        <font>
-            <name>Font-Season-Panel</name>
-            <filename>alaska_black.ttf</filename>
-            <size>125</size>
-        </font>
-        
         
         <!-- MOD FONTS -->
         <font>

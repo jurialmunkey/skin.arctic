@@ -121,13 +121,6 @@
                 <effect type="slide" end="0,-75" time="700" delay="300" />
             </animation>
 		</control>
-		<control type="image">
-			<include>FullscreenDimensions</include>
-			<texture>arctic/common/nofanart.png</texture>
-			<colordiffuse>Mod_EmptyBG</colordiffuse>
-			<visible>Skin.HasSetting(HideFanart) + ![Skin.HasSetting(BackgroundVideo) + Player.HasVideo] + ![Window.IsVisible(home) + StringCompare(Skin.String(homescreen.style),simple)]</visible>
-			<animation effect="fade" start="100" end="50" condition="true">Conditional</animation>
-		</control>
     </include>
     
     
@@ -225,7 +218,7 @@
 			<loop>yes</loop>
 			<imagepath background="true">$VAR[Mod_BackgroundSingle]</imagepath>
 			<include>Animation_FanartFade</include>
-			<visible>![Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(seasons) | Container.Content(albums) | Container.Content(artists) | Container.Content(songs) | Container.Content(sets)] + ![Skin.HasSetting(BackgroundVideo) + Player.HasVideo]</visible>
+			<visible>![Skin.HasSetting(BackgroundVideo) + Player.HasVideo]</visible>
 		</control>
 		<control type="group">
         	<visible>Player.HasAudio + Skin.HasSetting(OSDVisualation.Background)</visible>

@@ -15,18 +15,21 @@
 				<scrolltime>0</scrolltime>
 				<orientation>vertical</orientation>
 				<control type="button" id="2141">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogButtonVars</include>
 					<label>$LOCALIZE[41138]</label>
 					<label2>$INFO[Skin.String(Home.Movies.Tile.1.Label)]</label2>
 					<onclick>Skin.SetString(Home.Movies.Tile.1.Label)</onclick>
 				</control>
 				<control type="button" id="2142">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogButtonVars</include>
 					<label>$LOCALIZE[41139]</label>
 					<label2>$INFO[Skin.String(Home.Movies.Tile.1.Icon)]</label2>
 					<onclick>Skin.SetFile(Home.Movies.Tile.1.Icon,.png|.jpg|.gif,special://skin/media/windows/home/icons/)</onclick>
 				</control>
 				<control type="radiobutton" id="2403">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogRadioButtonVars</include>
 					<label>$LOCALIZE[41156]</label>
 					<onclick condition="IsEmpty(Skin.String(Home.Movies.Tile.1.ShowLabel))">Skin.SetString(Home.Movies.Tile.1.ShowLabel,on)</onclick>
@@ -34,6 +37,7 @@
 					<selected>IsEmpty(Skin.String(Home.Movies.Tile.1.ShowLabel))</selected>
 				</control>
 				<control type="radiobutton" id="2404">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogRadioButtonVars</include>
 					<label>$LOCALIZE[737]</label>
 					<onclick condition="IsEmpty(Skin.String(Home.Movies.Tile.1.Animate))">Skin.SetString(Home.Movies.Tile.1.Animate,on)</onclick>
@@ -60,7 +64,7 @@
 					<align>left</align>
 					<textoffsetx>20</textoffsetx>
 					<font>Font-Condensed-S30</font>
-					<textcolor>mod-infotags-alt</textcolor>
+					<textcolor>mod-infotags</textcolor>
 					<label>$LOCALIZE[41141]</label>
 					<label2>$INFO[Skin.String(Home.Movies.Tile.1.TypeName)]</label2>
 					<visible>!ControlGroup(2405).HasFocus</visible>
@@ -148,7 +152,8 @@
 				<onright>5</onright>
 				<onup>2405</onup>
 				<ondown>2407</ondown>
-				<include>SettingsCustomDialogButtonVars</include>
+				<textcolor>mod-infotags</textcolor>
+					<include>SettingsCustomDialogButtonVars</include>
 				<label>$LOCALIZE[41142]</label>
 				<label2>$INFO[Skin.String(Home.Movies.Tile.1.Path)]</label2>
 				<onclick condition="stringcompare(Skin.String(Home.Movies.Tile.1.Type),0)|stringcompare(Skin.String(Home.Movies.Tile.1.Type),1)|stringcompare(Skin.String(Home.Movies.Tile.1.Type),2)|stringcompare(Skin.String(Home.Movies.Tile.1.Type),3)">SetProperty(Property,Home.Movies.Tile.1,selectdialog)</onclick>
@@ -168,7 +173,8 @@
 				<onright>5</onright>
 				<onup>2406</onup>
 				<ondown>5</ondown>
-				<include>SettingsCustomDialogButtonVars</include>
+				<textcolor>mod-infotags</textcolor>
+					<include>SettingsCustomDialogButtonVars</include>
 				<label>$LOCALIZE[409]</label>
 				<onclick>Skin.SetString(Home.Movies.Tile.1.Path,ActivateWindow(videos,movietitles,return))</onclick>
 				<onclick>Skin.SetString(Home.Movies.Tile.1.Type,7)</onclick>
@@ -196,18 +202,21 @@
 				<scrolltime>0</scrolltime>
 				<orientation>vertical</orientation>
 				<control type="button" id="2141">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogButtonVars</include>
 					<label>$LOCALIZE[41138]</label>
 					<label2>$INFO[Skin.String(Home.Movies.Tile.2.Label)]</label2>
 					<onclick>Skin.SetString(Home.Movies.Tile.2.Label)</onclick>
 				</control>
 				<control type="button" id="2142">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogButtonVars</include>
 					<label>$LOCALIZE[41139]</label>
 					<label2>$INFO[Skin.String(Home.Movies.Tile.2.Icon)]</label2>
 					<onclick>Skin.SetFile(Home.Movies.Tile.2.Icon,.png|.jpg|.gif,special://skin/media/windows/home/icons/)</onclick>
 				</control>
 				<control type="radiobutton" id="2403">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogRadioButtonVars</include>
 					<label>$LOCALIZE[41156]</label>
 					<onclick condition="IsEmpty(Skin.String(Home.Movies.Tile.2.ShowLabel))">Skin.SetString(Home.Movies.Tile.2.ShowLabel,on)</onclick>
@@ -215,6 +224,7 @@
 					<selected>IsEmpty(Skin.String(Home.Movies.Tile.2.ShowLabel))</selected>
 				</control>
 				<control type="radiobutton" id="2404">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogRadioButtonVars</include>
 					<label>$LOCALIZE[737]</label>
 					<onclick condition="IsEmpty(Skin.String(Home.Movies.Tile.2.Animate))">Skin.SetString(Home.Movies.Tile.2.Animate,on)</onclick>
@@ -241,7 +251,7 @@
 					<align>left</align>
 					<textoffsetx>20</textoffsetx>
 					<font>Font-Condensed-S30</font>
-					<textcolor>mod-infotags-alt</textcolor>
+					<textcolor>mod-infotags</textcolor>
 					<label>$LOCALIZE[41141]</label>
 					<label2>$INFO[Skin.String(Home.Movies.Tile.2.TypeName)]</label2>
 					<visible>!ControlGroup(2405).HasFocus</visible>
@@ -329,7 +339,8 @@
 				<onright>5</onright>
 				<onup>2405</onup>
 				<ondown>2407</ondown>
-				<include>SettingsCustomDialogButtonVars</include>
+				<textcolor>mod-infotags</textcolor>
+					<include>SettingsCustomDialogButtonVars</include>
 				<label>$LOCALIZE[41142]</label>
 				<label2>$INFO[Skin.String(Home.Movies.Tile.2.Path)]</label2>
 				<onclick condition="stringcompare(Skin.String(Home.Movies.Tile.2.Type),0)|stringcompare(Skin.String(Home.Movies.Tile.2.Type),1)|stringcompare(Skin.String(Home.Movies.Tile.2.Type),2)|stringcompare(Skin.String(Home.Movies.Tile.2.Type),3)">SetProperty(Property,Home.Movies.Tile.2,selectdialog)</onclick>
@@ -349,7 +360,8 @@
 				<onright>5</onright>
 				<onup>2406</onup>
 				<ondown>5</ondown>
-				<include>SettingsCustomDialogButtonVars</include>
+				<textcolor>mod-infotags</textcolor>
+					<include>SettingsCustomDialogButtonVars</include>
 				<label>$LOCALIZE[409]</label>
 				<onclick>Skin.SetString(Home.Movies.Tile.2.Path,ActivateWindow(videos,recentlyaddedmovies,return))</onclick>
 				<onclick>Skin.SetString(Home.Movies.Tile.2.Type,7)</onclick>
@@ -377,18 +389,21 @@
 				<scrolltime>0</scrolltime>
 				<orientation>vertical</orientation>
 				<control type="button" id="2141">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogButtonVars</include>
 					<label>$LOCALIZE[41138]</label>
 					<label2>$INFO[Skin.String(Home.Movies.Tile.3.Label)]</label2>
 					<onclick>Skin.SetString(Home.Movies.Tile.3.Label)</onclick>
 				</control>
 				<control type="button" id="2142">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogButtonVars</include>
 					<label>$LOCALIZE[41139]</label>
 					<label2>$INFO[Skin.String(Home.Movies.Tile.3.Icon)]</label2>
 					<onclick>Skin.SetFile(Home.Movies.Tile.3.Icon,.png|.jpg|.gif,special://skin/media/windows/home/icons/)</onclick>
 				</control>
 				<control type="radiobutton" id="2403">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogRadioButtonVars</include>
 					<label>$LOCALIZE[41156]</label>
 					<onclick condition="IsEmpty(Skin.String(Home.Movies.Tile.3.ShowLabel))">Skin.SetString(Home.Movies.Tile.3.ShowLabel,on)</onclick>
@@ -396,6 +411,7 @@
 					<selected>IsEmpty(Skin.String(Home.Movies.Tile.3.ShowLabel))</selected>
 				</control>
 				<control type="radiobutton" id="2404">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogRadioButtonVars</include>
 					<label>$LOCALIZE[737]</label>
 					<onclick condition="IsEmpty(Skin.String(Home.Movies.Tile.3.Animate))">Skin.SetString(Home.Movies.Tile.3.Animate,on)</onclick>
@@ -422,7 +438,7 @@
 					<align>left</align>
 					<textoffsetx>20</textoffsetx>
 					<font>Font-Condensed-S30</font>
-					<textcolor>mod-infotags-alt</textcolor>
+					<textcolor>mod-infotags</textcolor>
 					<label>$LOCALIZE[41141]</label>
 					<label2>$INFO[Skin.String(Home.Movies.Tile.3.TypeName)]</label2>
 					<visible>!ControlGroup(2405).HasFocus</visible>
@@ -510,7 +526,8 @@
 				<onright>5</onright>
 				<onup>2405</onup>
 				<ondown>2407</ondown>
-				<include>SettingsCustomDialogButtonVars</include>
+				<textcolor>mod-infotags</textcolor>
+					<include>SettingsCustomDialogButtonVars</include>
 				<label>$LOCALIZE[41142]</label>
 				<label2>$INFO[Skin.String(Home.Movies.Tile.3.Path)]</label2>
 				<onclick condition="stringcompare(Skin.String(Home.Movies.Tile.3.Type),0)|stringcompare(Skin.String(Home.Movies.Tile.3.Type),1)|stringcompare(Skin.String(Home.Movies.Tile.3.Type),2)|stringcompare(Skin.String(Home.Movies.Tile.3.Type),3)">SetProperty(Property,Home.Movies.Tile.3,selectdialog)</onclick>
@@ -530,7 +547,8 @@
 				<onright>5</onright>
 				<onup>2406</onup>
 				<ondown>5</ondown>
-				<include>SettingsCustomDialogButtonVars</include>
+				<textcolor>mod-infotags</textcolor>
+					<include>SettingsCustomDialogButtonVars</include>
 				<label>$LOCALIZE[409]</label>
 				<onclick>Skin.SetString(Home.Movies.Tile.3.Path,ActivateWindow(videolibrary,playlists,return))</onclick>
 				<onclick>Skin.SetString(Home.Movies.Tile.3.Type,7)</onclick>
@@ -558,18 +576,21 @@
 				<scrolltime>0</scrolltime>
 				<orientation>vertical</orientation>
 				<control type="button" id="2141">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogButtonVars</include>
 					<label>$LOCALIZE[41138]</label>
 					<label2>$INFO[Skin.String(Home.Movies.Tile.4.Label)]</label2>
 					<onclick>Skin.SetString(Home.Movies.Tile.4.Label)</onclick>
 				</control>
 				<control type="button" id="2142">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogButtonVars</include>
 					<label>$LOCALIZE[41139]</label>
 					<label2>$INFO[Skin.String(Home.Movies.Tile.4.Icon)]</label2>
 					<onclick>Skin.SetFile(Home.Movies.Tile.4.Icon,.png|.jpg|.gif,special://skin/media/windows/home/icons/)</onclick>
 				</control>
 				<control type="radiobutton" id="2403">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogRadioButtonVars</include>
 					<label>$LOCALIZE[41156]</label>
 					<onclick condition="IsEmpty(Skin.String(Home.Movies.Tile.4.ShowLabel))">Skin.SetString(Home.Movies.Tile.4.ShowLabel,on)</onclick>
@@ -577,6 +598,7 @@
 					<selected>IsEmpty(Skin.String(Home.Movies.Tile.4.ShowLabel))</selected>
 				</control>
 				<control type="radiobutton" id="2404">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogRadioButtonVars</include>
 					<label>$LOCALIZE[737]</label>
 					<onclick condition="IsEmpty(Skin.String(Home.Movies.Tile.4.Animate))">Skin.SetString(Home.Movies.Tile.4.Animate,on)</onclick>
@@ -603,7 +625,7 @@
 					<align>left</align>
 					<textoffsetx>20</textoffsetx>
 					<font>Font-Condensed-S30</font>
-					<textcolor>mod-infotags-alt</textcolor>
+					<textcolor>mod-infotags</textcolor>
 					<label>$LOCALIZE[41141]</label>
 					<label2>$INFO[Skin.String(Home.Movies.Tile.4.TypeName)]</label2>
 					<visible>!ControlGroup(2405).HasFocus</visible>
@@ -691,7 +713,8 @@
 				<onright>5</onright>
 				<onup>2405</onup>
 				<ondown>2407</ondown>
-				<include>SettingsCustomDialogButtonVars</include>
+				<textcolor>mod-infotags</textcolor>
+					<include>SettingsCustomDialogButtonVars</include>
 				<label>$LOCALIZE[41142]</label>
 				<label2>$INFO[Skin.String(Home.Movies.Tile.4.Path)]</label2>
 				<onclick condition="stringcompare(Skin.String(Home.Movies.Tile.4.Type),0)|stringcompare(Skin.String(Home.Movies.Tile.4.Type),1)|stringcompare(Skin.String(Home.Movies.Tile.4.Type),2)|stringcompare(Skin.String(Home.Movies.Tile.4.Type),3)">SetProperty(Property,Home.Movies.Tile.4,selectdialog)</onclick>
@@ -711,7 +734,8 @@
 				<onright>5</onright>
 				<onup>2406</onup>
 				<ondown>5</ondown>
-				<include>SettingsCustomDialogButtonVars</include>
+				<textcolor>mod-infotags</textcolor>
+					<include>SettingsCustomDialogButtonVars</include>
 				<label>$LOCALIZE[409]</label>
 				<onclick>Skin.SetString(Home.Movies.Tile.4.Path,ActivateWindow(videolibrary,files,return))</onclick>
 				<onclick>Skin.SetString(Home.Movies.Tile.4.Type,7)</onclick>
@@ -739,18 +763,21 @@
 				<scrolltime>0</scrolltime>
 				<orientation>vertical</orientation>
 				<control type="button" id="2141">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogButtonVars</include>
 					<label>$LOCALIZE[41138]</label>
 					<label2>$INFO[Skin.String(Home.Movies.Tile.5.Label)]</label2>
 					<onclick>Skin.SetString(Home.Movies.Tile.5.Label)</onclick>
 				</control>
 				<control type="button" id="2142">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogButtonVars</include>
 					<label>$LOCALIZE[41139]</label>
 					<label2>$INFO[Skin.String(Home.Movies.Tile.5.Icon)]</label2>
 					<onclick>Skin.SetFile(Home.Movies.Tile.5.Icon,.png|.jpg|.gif,special://skin/media/windows/home/icons/)</onclick>
 				</control>
 				<control type="radiobutton" id="2403">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogRadioButtonVars</include>
 					<label>$LOCALIZE[41156]</label>
 					<onclick condition="IsEmpty(Skin.String(Home.Movies.Tile.5.ShowLabel))">Skin.SetString(Home.Movies.Tile.5.ShowLabel,on)</onclick>
@@ -758,6 +785,7 @@
 					<selected>IsEmpty(Skin.String(Home.Movies.Tile.5.ShowLabel))</selected>
 				</control>
 				<control type="radiobutton" id="2404">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogRadioButtonVars</include>
 					<label>$LOCALIZE[737]</label>
 					<onclick condition="IsEmpty(Skin.String(Home.Movies.Tile.5.Animate))">Skin.SetString(Home.Movies.Tile.5.Animate,on)</onclick>
@@ -784,7 +812,7 @@
 					<align>left</align>
 					<textoffsetx>20</textoffsetx>
 					<font>Font-Condensed-S30</font>
-					<textcolor>mod-infotags-alt</textcolor>
+					<textcolor>mod-infotags</textcolor>
 					<label>$LOCALIZE[41141]</label>
 					<label2>$INFO[Skin.String(Home.Movies.Tile.5.TypeName)]</label2>
 					<visible>!ControlGroup(2405).HasFocus</visible>
@@ -872,7 +900,8 @@
 				<onright>5</onright>
 				<onup>2405</onup>
 				<ondown>2407</ondown>
-				<include>SettingsCustomDialogButtonVars</include>
+				<textcolor>mod-infotags</textcolor>
+					<include>SettingsCustomDialogButtonVars</include>
 				<label>$LOCALIZE[41142]</label>
 				<label2>$INFO[Skin.String(Home.Movies.Tile.5.Path)]</label2>
 				<onclick condition="stringcompare(Skin.String(Home.Movies.Tile.5.Type),0)|stringcompare(Skin.String(Home.Movies.Tile.5.Type),1)|stringcompare(Skin.String(Home.Movies.Tile.5.Type),2)|stringcompare(Skin.String(Home.Movies.Tile.5.Type),3)">SetProperty(Property,Home.Movies.Tile.5,selectdialog)</onclick>
@@ -892,7 +921,8 @@
 				<onright>5</onright>
 				<onup>2406</onup>
 				<ondown>5</ondown>
-				<include>SettingsCustomDialogButtonVars</include>
+				<textcolor>mod-infotags</textcolor>
+					<include>SettingsCustomDialogButtonVars</include>
 				<label>$LOCALIZE[409]</label>
 				<onclick>Skin.SetString(Home.Movies.Tile.5.Path,ActivateWindow(videos,moviedirectors,return))</onclick>
 				<onclick>Skin.SetString(Home.Movies.Tile.5.Type,7)</onclick>
@@ -920,18 +950,21 @@
 				<scrolltime>0</scrolltime>
 				<orientation>vertical</orientation>
 				<control type="button" id="2141">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogButtonVars</include>
 					<label>$LOCALIZE[41138]</label>
 					<label2>$INFO[Skin.String(Home.Movies.Tile.6.Label)]</label2>
 					<onclick>Skin.SetString(Home.Movies.Tile.6.Label)</onclick>
 				</control>
 				<control type="button" id="2142">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogButtonVars</include>
 					<label>$LOCALIZE[41139]</label>
 					<label2>$INFO[Skin.String(Home.Movies.Tile.6.Icon)]</label2>
 					<onclick>Skin.SetFile(Home.Movies.Tile.6.Icon,.png|.jpg|.gif,special://skin/media/windows/home/icons/)</onclick>
 				</control>
 				<control type="radiobutton" id="2403">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogRadioButtonVars</include>
 					<label>$LOCALIZE[41156]</label>
 					<onclick condition="IsEmpty(Skin.String(Home.Movies.Tile.6.ShowLabel))">Skin.SetString(Home.Movies.Tile.6.ShowLabel,on)</onclick>
@@ -939,6 +972,7 @@
 					<selected>IsEmpty(Skin.String(Home.Movies.Tile.6.ShowLabel))</selected>
 				</control>
 				<control type="radiobutton" id="2404">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogRadioButtonVars</include>
 					<label>$LOCALIZE[737]</label>
 					<onclick condition="IsEmpty(Skin.String(Home.Movies.Tile.6.Animate))">Skin.SetString(Home.Movies.Tile.6.Animate,on)</onclick>
@@ -965,7 +999,7 @@
 					<align>left</align>
 					<textoffsetx>20</textoffsetx>
 					<font>Font-Condensed-S30</font>
-					<textcolor>mod-infotags-alt</textcolor>
+					<textcolor>mod-infotags</textcolor>
 					<label>$LOCALIZE[41141]</label>
 					<label2>$INFO[Skin.String(Home.Movies.Tile.6.TypeName)]</label2>
 					<visible>!ControlGroup(2405).HasFocus</visible>
@@ -1053,7 +1087,8 @@
 				<onright>5</onright>
 				<onup>2405</onup>
 				<ondown>2407</ondown>
-				<include>SettingsCustomDialogButtonVars</include>
+				<textcolor>mod-infotags</textcolor>
+					<include>SettingsCustomDialogButtonVars</include>
 				<label>$LOCALIZE[41142]</label>
 				<label2>$INFO[Skin.String(Home.Movies.Tile.6.Path)]</label2>
 				<onclick condition="stringcompare(Skin.String(Home.Movies.Tile.6.Type),0)|stringcompare(Skin.String(Home.Movies.Tile.6.Type),1)|stringcompare(Skin.String(Home.Movies.Tile.6.Type),2)|stringcompare(Skin.String(Home.Movies.Tile.6.Type),3)">SetProperty(Property,Home.Movies.Tile.6,selectdialog)</onclick>
@@ -1073,7 +1108,8 @@
 				<onright>5</onright>
 				<onup>2406</onup>
 				<ondown>5</ondown>
-				<include>SettingsCustomDialogButtonVars</include>
+				<textcolor>mod-infotags</textcolor>
+					<include>SettingsCustomDialogButtonVars</include>
 				<label>$LOCALIZE[409]</label>
 				<onclick>Skin.SetString(Home.Movies.Tile.6.Path,ActivateWindow(videos,moviegenres,return))</onclick>
 				<onclick>Skin.SetString(Home.Movies.Tile.6.Type,7)</onclick>
@@ -1101,18 +1137,21 @@
 				<scrolltime>0</scrolltime>
 				<orientation>vertical</orientation>
 				<control type="button" id="2141">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogButtonVars</include>
 					<label>$LOCALIZE[41138]</label>
 					<label2>$INFO[Skin.String(Home.Movies.Tile.7.Label)]</label2>
 					<onclick>Skin.SetString(Home.Movies.Tile.7.Label)</onclick>
 				</control>
 				<control type="button" id="2142">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogButtonVars</include>
 					<label>$LOCALIZE[41139]</label>
 					<label2>$INFO[Skin.String(Home.Movies.Tile.7.Icon)]</label2>
 					<onclick>Skin.SetFile(Home.Movies.Tile.7.Icon,.png|.jpg|.gif,special://skin/media/windows/home/icons/)</onclick>
 				</control>
 				<control type="radiobutton" id="2403">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogRadioButtonVars</include>
 					<label>$LOCALIZE[41156]</label>
 					<onclick condition="IsEmpty(Skin.String(Home.Movies.Tile.7.ShowLabel))">Skin.SetString(Home.Movies.Tile.7.ShowLabel,on)</onclick>
@@ -1120,6 +1159,7 @@
 					<selected>IsEmpty(Skin.String(Home.Movies.Tile.7.ShowLabel))</selected>
 				</control>
 				<control type="radiobutton" id="2404">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogRadioButtonVars</include>
 					<label>$LOCALIZE[737]</label>
 					<onclick condition="IsEmpty(Skin.String(Home.Movies.Tile.7.Animate))">Skin.SetString(Home.Movies.Tile.7.Animate,on)</onclick>
@@ -1146,7 +1186,7 @@
 					<align>left</align>
 					<textoffsetx>20</textoffsetx>
 					<font>Font-Condensed-S30</font>
-					<textcolor>mod-infotags-alt</textcolor>
+					<textcolor>mod-infotags</textcolor>
 					<label>$LOCALIZE[41141]</label>
 					<label2>$INFO[Skin.String(Home.Movies.Tile.7.TypeName)]</label2>
 					<visible>!ControlGroup(2405).HasFocus</visible>
@@ -1234,7 +1274,8 @@
 				<onright>5</onright>
 				<onup>2405</onup>
 				<ondown>2407</ondown>
-				<include>SettingsCustomDialogButtonVars</include>
+				<textcolor>mod-infotags</textcolor>
+					<include>SettingsCustomDialogButtonVars</include>
 				<label>$LOCALIZE[41142]</label>
 				<label2>$INFO[Skin.String(Home.Movies.Tile.7.Path)]</label2>
 				<onclick condition="stringcompare(Skin.String(Home.Movies.Tile.7.Type),0)|stringcompare(Skin.String(Home.Movies.Tile.7.Type),1)|stringcompare(Skin.String(Home.Movies.Tile.7.Type),2)|stringcompare(Skin.String(Home.Movies.Tile.7.Type),3)">SetProperty(Property,Home.Movies.Tile.7,selectdialog)</onclick>
@@ -1254,7 +1295,8 @@
 				<onright>5</onright>
 				<onup>2406</onup>
 				<ondown>5</ondown>
-				<include>SettingsCustomDialogButtonVars</include>
+				<textcolor>mod-infotags</textcolor>
+					<include>SettingsCustomDialogButtonVars</include>
 				<label>$LOCALIZE[409]</label>
 				<onclick>Skin.SetString(Home.Movies.Tile.7.Type,7)</onclick>
 				<onclick>Skin.SetString(Home.Movies.Tile.7.TypeName,$LOCALIZE[41151])</onclick>
@@ -1282,18 +1324,21 @@
 				<scrolltime>0</scrolltime>
 				<orientation>vertical</orientation>
 				<control type="button" id="2141">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogButtonVars</include>
 					<label>$LOCALIZE[41138]</label>
 					<label2>$INFO[Skin.String(Home.Movies.Tile.8.Label)]</label2>
 					<onclick>Skin.SetString(Home.Movies.Tile.8.Label)</onclick>
 				</control>
 				<control type="button" id="2142">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogButtonVars</include>
 					<label>$LOCALIZE[41139]</label>
 					<label2>$INFO[Skin.String(Home.Movies.Tile.8.Icon)]</label2>
 					<onclick>Skin.SetFile(Home.Movies.Tile.8.Icon,.png|.jpg|.gif,special://skin/media/windows/home/icons/)</onclick>
 				</control>
 				<control type="radiobutton" id="2403">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogRadioButtonVars</include>
 					<label>$LOCALIZE[41156]</label>
 					<onclick condition="IsEmpty(Skin.String(Home.Movies.Tile.8.ShowLabel))">Skin.SetString(Home.Movies.Tile.8.ShowLabel,on)</onclick>
@@ -1301,6 +1346,7 @@
 					<selected>IsEmpty(Skin.String(Home.Movies.Tile.8.ShowLabel))</selected>
 				</control>
 				<control type="radiobutton" id="2404">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogRadioButtonVars</include>
 					<label>$LOCALIZE[737]</label>
 					<onclick condition="IsEmpty(Skin.String(Home.Movies.Tile.8.Animate))">Skin.SetString(Home.Movies.Tile.8.Animate,on)</onclick>
@@ -1327,7 +1373,7 @@
 					<align>left</align>
 					<textoffsetx>20</textoffsetx>
 					<font>Font-Condensed-S30</font>
-					<textcolor>mod-infotags-alt</textcolor>
+					<textcolor>mod-infotags</textcolor>
 					<label>$LOCALIZE[41141]</label>
 					<label2>$INFO[Skin.String(Home.Movies.Tile.8.TypeName)]</label2>
 					<visible>!ControlGroup(2405).HasFocus</visible>
@@ -1415,7 +1461,8 @@
 				<onright>5</onright>
 				<onup>2405</onup>
 				<ondown>2407</ondown>
-				<include>SettingsCustomDialogButtonVars</include>
+				<textcolor>mod-infotags</textcolor>
+					<include>SettingsCustomDialogButtonVars</include>
 				<label>$LOCALIZE[41142]</label>
 				<label2>$INFO[Skin.String(Home.Movies.Tile.8.Path)]</label2>
 				<onclick condition="stringcompare(Skin.String(Home.Movies.Tile.8.Type),0)|stringcompare(Skin.String(Home.Movies.Tile.8.Type),1)|stringcompare(Skin.String(Home.Movies.Tile.8.Type),2)|stringcompare(Skin.String(Home.Movies.Tile.8.Type),3)">SetProperty(Property,Home.Movies.Tile.8,selectdialog)</onclick>
@@ -1435,7 +1482,8 @@
 				<onright>5</onright>
 				<onup>2406</onup>
 				<ondown>5</ondown>
-				<include>SettingsCustomDialogButtonVars</include>
+				<textcolor>mod-infotags</textcolor>
+					<include>SettingsCustomDialogButtonVars</include>
 				<label>$LOCALIZE[409]</label>
 				<onclick>Skin.SetString(Home.Movies.Tile.8.Type,7)</onclick>
 				<onclick>Skin.SetString(Home.Movies.Tile.8.TypeName,$LOCALIZE[41151])</onclick>
@@ -1463,18 +1511,21 @@
 				<scrolltime>0</scrolltime>
 				<orientation>vertical</orientation>
 				<control type="button" id="2141">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogButtonVars</include>
 					<label>$LOCALIZE[41138]</label>
 					<label2>$INFO[Skin.String(Home.Movies.Tile.9.Label)]</label2>
 					<onclick>Skin.SetString(Home.Movies.Tile.9.Label)</onclick>
 				</control>
 				<control type="button" id="2142">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogButtonVars</include>
 					<label>$LOCALIZE[41139]</label>
 					<label2>$INFO[Skin.String(Home.Movies.Tile.9.Icon)]</label2>
 					<onclick>Skin.SetFile(Home.Movies.Tile.9.Icon,.png|.jpg|.gif,special://skin/media/windows/home/icons/)</onclick>
 				</control>
 				<control type="radiobutton" id="2403">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogRadioButtonVars</include>
 					<label>$LOCALIZE[41156]</label>
 					<onclick condition="IsEmpty(Skin.String(Home.Movies.Tile.9.ShowLabel))">Skin.SetString(Home.Movies.Tile.9.ShowLabel,on)</onclick>
@@ -1482,6 +1533,7 @@
 					<selected>IsEmpty(Skin.String(Home.Movies.Tile.9.ShowLabel))</selected>
 				</control>
 				<control type="radiobutton" id="2404">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogRadioButtonVars</include>
 					<label>$LOCALIZE[737]</label>
 					<onclick condition="IsEmpty(Skin.String(Home.Movies.Tile.9.Animate))">Skin.SetString(Home.Movies.Tile.9.Animate,on)</onclick>
@@ -1508,7 +1560,7 @@
 					<align>left</align>
 					<textoffsetx>20</textoffsetx>
 					<font>Font-Condensed-S30</font>
-					<textcolor>mod-infotags-alt</textcolor>
+					<textcolor>mod-infotags</textcolor>
 					<label>$LOCALIZE[41141]</label>
 					<label2>$INFO[Skin.String(Home.Movies.Tile.9.TypeName)]</label2>
 					<visible>!ControlGroup(2405).HasFocus</visible>
@@ -1596,7 +1648,8 @@
 				<onright>5</onright>
 				<onup>2405</onup>
 				<ondown>2407</ondown>
-				<include>SettingsCustomDialogButtonVars</include>
+				<textcolor>mod-infotags</textcolor>
+					<include>SettingsCustomDialogButtonVars</include>
 				<label>$LOCALIZE[41142]</label>
 				<label2>$INFO[Skin.String(Home.Movies.Tile.9.Path)]</label2>
 				<onclick condition="stringcompare(Skin.String(Home.Movies.Tile.9.Type),0)|stringcompare(Skin.String(Home.Movies.Tile.9.Type),1)|stringcompare(Skin.String(Home.Movies.Tile.9.Type),2)|stringcompare(Skin.String(Home.Movies.Tile.9.Type),3)">SetProperty(Property,Home.Movies.Tile.9,selectdialog)</onclick>
@@ -1616,7 +1669,8 @@
 				<onright>5</onright>
 				<onup>2406</onup>
 				<ondown>5</ondown>
-				<include>SettingsCustomDialogButtonVars</include>
+				<textcolor>mod-infotags</textcolor>
+					<include>SettingsCustomDialogButtonVars</include>
 				<label>$LOCALIZE[409]</label>
 				<onclick>Skin.SetString(Home.Movies.Tile.9.Type,7)</onclick>
 				<onclick>Skin.SetString(Home.Movies.Tile.9.TypeName,$LOCALIZE[41151])</onclick>
@@ -1644,18 +1698,21 @@
 				<scrolltime>0</scrolltime>
 				<orientation>vertical</orientation>
 				<control type="button" id="2141">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogButtonVars</include>
 					<label>$LOCALIZE[41138]</label>
 					<label2>$INFO[Skin.String(Home.Movies.Tile.10.Label)]</label2>
 					<onclick>Skin.SetString(Home.Movies.Tile.10.Label)</onclick>
 				</control>
 				<control type="button" id="2142">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogButtonVars</include>
 					<label>$LOCALIZE[41139]</label>
 					<label2>$INFO[Skin.String(Home.Movies.Tile.10.Icon)]</label2>
 					<onclick>Skin.SetFile(Home.Movies.Tile.10.Icon,.png|.jpg|.gif,special://skin/media/windows/home/icons/)</onclick>
 				</control>
 				<control type="radiobutton" id="2403">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogRadioButtonVars</include>
 					<label>$LOCALIZE[41156]</label>
 					<onclick condition="IsEmpty(Skin.String(Home.Movies.Tile.10.ShowLabel))">Skin.SetString(Home.Movies.Tile.10.ShowLabel,on)</onclick>
@@ -1663,6 +1720,7 @@
 					<selected>IsEmpty(Skin.String(Home.Movies.Tile.10.ShowLabel))</selected>
 				</control>
 				<control type="radiobutton" id="2404">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogRadioButtonVars</include>
 					<label>$LOCALIZE[737]</label>
 					<onclick condition="IsEmpty(Skin.String(Home.Movies.Tile.10.Animate))">Skin.SetString(Home.Movies.Tile.10.Animate,on)</onclick>
@@ -1689,7 +1747,7 @@
 					<align>left</align>
 					<textoffsetx>20</textoffsetx>
 					<font>Font-Condensed-S30</font>
-					<textcolor>mod-infotags-alt</textcolor>
+					<textcolor>mod-infotags</textcolor>
 					<label>$LOCALIZE[41141]</label>
 					<label2>$INFO[Skin.String(Home.Movies.Tile.10.TypeName)]</label2>
 					<visible>!ControlGroup(2405).HasFocus</visible>
@@ -1777,7 +1835,8 @@
 				<onright>5</onright>
 				<onup>2405</onup>
 				<ondown>2407</ondown>
-				<include>SettingsCustomDialogButtonVars</include>
+				<textcolor>mod-infotags</textcolor>
+					<include>SettingsCustomDialogButtonVars</include>
 				<label>$LOCALIZE[41142]</label>
 				<label2>$INFO[Skin.String(Home.Movies.Tile.10.Path)]</label2>
 				<onclick condition="stringcompare(Skin.String(Home.Movies.Tile.10.Type),0)|stringcompare(Skin.String(Home.Movies.Tile.10.Type),1)|stringcompare(Skin.String(Home.Movies.Tile.10.Type),2)|stringcompare(Skin.String(Home.Movies.Tile.10.Type),3)">SetProperty(Property,Home.Movies.Tile.10,selectdialog)</onclick>
@@ -1797,7 +1856,8 @@
 				<onright>5</onright>
 				<onup>2406</onup>
 				<ondown>5</ondown>
-				<include>SettingsCustomDialogButtonVars</include>
+				<textcolor>mod-infotags</textcolor>
+					<include>SettingsCustomDialogButtonVars</include>
 				<label>$LOCALIZE[409]</label>
 				<onclick>Skin.SetString(Home.Movies.Tile.10.Type,7)</onclick>
 				<onclick>Skin.SetString(Home.Movies.Tile.10.TypeName,$LOCALIZE[41151])</onclick>
@@ -1825,18 +1885,21 @@
 				<scrolltime>0</scrolltime>
 				<orientation>vertical</orientation>
 				<control type="button" id="2141">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogButtonVars</include>
 					<label>$LOCALIZE[41138]</label>
 					<label2>$INFO[Skin.String(Home.Tvshows.Tile.1.Label)]</label2>
 					<onclick>Skin.SetString(Home.Tvshows.Tile.1.Label)</onclick>
 				</control>
 				<control type="button" id="2142">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogButtonVars</include>
 					<label>$LOCALIZE[41139]</label>
 					<label2>$INFO[Skin.String(Home.Tvshows.Tile.1.Icon)]</label2>
 					<onclick>Skin.SetFile(Home.Tvshows.Tile.1.Icon,.png|.jpg|.gif,special://skin/media/windows/home/icons/)</onclick>
 				</control>
 				<control type="radiobutton" id="2403">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogRadioButtonVars</include>
 					<label>$LOCALIZE[41156]</label>
 					<onclick condition="IsEmpty(Skin.String(Home.Tvshows.Tile.1.ShowLabel))">Skin.SetString(Home.Tvshows.Tile.1.ShowLabel,on)</onclick>
@@ -1844,6 +1907,7 @@
 					<selected>IsEmpty(Skin.String(Home.Tvshows.Tile.1.ShowLabel))</selected>
 				</control>
 				<control type="radiobutton" id="2404">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogRadioButtonVars</include>
 					<label>$LOCALIZE[737]</label>
 					<onclick condition="IsEmpty(Skin.String(Home.Tvshows.Tile.1.Animate))">Skin.SetString(Home.Tvshows.Tile.1.Animate,on)</onclick>
@@ -1870,7 +1934,7 @@
 					<align>left</align>
 					<textoffsetx>20</textoffsetx>
 					<font>Font-Condensed-S30</font>
-					<textcolor>mod-infotags-alt</textcolor>
+					<textcolor>mod-infotags</textcolor>
 					<label>$LOCALIZE[41141]</label>
 					<label2>$INFO[Skin.String(Home.Tvshows.Tile.1.TypeName)]</label2>
 					<visible>!ControlGroup(2405).HasFocus</visible>
@@ -1958,7 +2022,8 @@
 				<onright>5</onright>
 				<onup>2405</onup>
 				<ondown>2407</ondown>
-				<include>SettingsCustomDialogButtonVars</include>
+				<textcolor>mod-infotags</textcolor>
+					<include>SettingsCustomDialogButtonVars</include>
 				<label>$LOCALIZE[41142]</label>
 				<label2>$INFO[Skin.String(Home.Tvshows.Tile.1.Path)]</label2>
 				<onclick condition="stringcompare(Skin.String(Home.Tvshows.Tile.1.Type),0)|stringcompare(Skin.String(Home.Tvshows.Tile.1.Type),1)|stringcompare(Skin.String(Home.Tvshows.Tile.1.Type),2)|stringcompare(Skin.String(Home.Tvshows.Tile.1.Type),3)">SetProperty(Property,Home.Tvshows.Tile.1,selectdialog)</onclick>
@@ -1978,7 +2043,8 @@
 				<onright>5</onright>
 				<onup>2406</onup>
 				<ondown>5</ondown>
-				<include>SettingsCustomDialogButtonVars</include>
+				<textcolor>mod-infotags</textcolor>
+					<include>SettingsCustomDialogButtonVars</include>
 				<label>$LOCALIZE[409]</label>
 				<onclick>Skin.SetString(Home.Tvshows.Tile.1.Type,7)</onclick>
 				<onclick>Skin.SetString(Home.Tvshows.Tile.1.TypeName,$LOCALIZE[41151])</onclick>
@@ -2006,18 +2072,21 @@
 				<scrolltime>0</scrolltime>
 				<orientation>vertical</orientation>
 				<control type="button" id="2141">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogButtonVars</include>
 					<label>$LOCALIZE[41138]</label>
 					<label2>$INFO[Skin.String(Home.Tvshows.Tile.2.Label)]</label2>
 					<onclick>Skin.SetString(Home.Tvshows.Tile.2.Label)</onclick>
 				</control>
 				<control type="button" id="2142">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogButtonVars</include>
 					<label>$LOCALIZE[41139]</label>
 					<label2>$INFO[Skin.String(Home.Tvshows.Tile.2.Icon)]</label2>
 					<onclick>Skin.SetFile(Home.Tvshows.Tile.2.Icon,.png|.jpg|.gif,special://skin/media/windows/home/icons/)</onclick>
 				</control>
 				<control type="radiobutton" id="2403">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogRadioButtonVars</include>
 					<label>$LOCALIZE[41156]</label>
 					<onclick condition="IsEmpty(Skin.String(Home.Tvshows.Tile.2.ShowLabel))">Skin.SetString(Home.Tvshows.Tile.2.ShowLabel,on)</onclick>
@@ -2025,6 +2094,7 @@
 					<selected>IsEmpty(Skin.String(Home.Tvshows.Tile.2.ShowLabel))</selected>
 				</control>
 				<control type="radiobutton" id="2404">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogRadioButtonVars</include>
 					<label>$LOCALIZE[737]</label>
 					<onclick condition="IsEmpty(Skin.String(Home.Tvshows.Tile.2.Animate))">Skin.SetString(Home.Tvshows.Tile.2.Animate,on)</onclick>
@@ -2051,7 +2121,7 @@
 					<align>left</align>
 					<textoffsetx>20</textoffsetx>
 					<font>Font-Condensed-S30</font>
-					<textcolor>mod-infotags-alt</textcolor>
+					<textcolor>mod-infotags</textcolor>
 					<label>$LOCALIZE[41141]</label>
 					<label2>$INFO[Skin.String(Home.Tvshows.Tile.2.TypeName)]</label2>
 					<visible>!ControlGroup(2405).HasFocus</visible>
@@ -2139,7 +2209,8 @@
 				<onright>5</onright>
 				<onup>2405</onup>
 				<ondown>2407</ondown>
-				<include>SettingsCustomDialogButtonVars</include>
+				<textcolor>mod-infotags</textcolor>
+					<include>SettingsCustomDialogButtonVars</include>
 				<label>$LOCALIZE[41142]</label>
 				<label2>$INFO[Skin.String(Home.Tvshows.Tile.2.Path)]</label2>
 				<onclick condition="stringcompare(Skin.String(Home.Tvshows.Tile.2.Type),0)|stringcompare(Skin.String(Home.Tvshows.Tile.2.Type),1)|stringcompare(Skin.String(Home.Tvshows.Tile.2.Type),2)|stringcompare(Skin.String(Home.Tvshows.Tile.2.Type),3)">SetProperty(Property,Home.Tvshows.Tile.2,selectdialog)</onclick>
@@ -2159,7 +2230,8 @@
 				<onright>5</onright>
 				<onup>2406</onup>
 				<ondown>5</ondown>
-				<include>SettingsCustomDialogButtonVars</include>
+				<textcolor>mod-infotags</textcolor>
+					<include>SettingsCustomDialogButtonVars</include>
 				<label>$LOCALIZE[409]</label>
 				<onclick>Skin.SetString(Home.Tvshows.Tile.2.Type,7)</onclick>
 				<onclick>Skin.SetString(Home.Tvshows.Tile.2.TypeName,$LOCALIZE[41151])</onclick>
@@ -2187,18 +2259,21 @@
 				<scrolltime>0</scrolltime>
 				<orientation>vertical</orientation>
 				<control type="button" id="2141">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogButtonVars</include>
 					<label>$LOCALIZE[41138]</label>
 					<label2>$INFO[Skin.String(Home.Tvshows.Tile.3.Label)]</label2>
 					<onclick>Skin.SetString(Home.Tvshows.Tile.3.Label)</onclick>
 				</control>
 				<control type="button" id="2142">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogButtonVars</include>
 					<label>$LOCALIZE[41139]</label>
 					<label2>$INFO[Skin.String(Home.Tvshows.Tile.3.Icon)]</label2>
 					<onclick>Skin.SetFile(Home.Tvshows.Tile.3.Icon,.png|.jpg|.gif,special://skin/media/windows/home/icons/)</onclick>
 				</control>
 				<control type="radiobutton" id="2403">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogRadioButtonVars</include>
 					<label>$LOCALIZE[41156]</label>
 					<onclick condition="IsEmpty(Skin.String(Home.Tvshows.Tile.3.ShowLabel))">Skin.SetString(Home.Tvshows.Tile.3.ShowLabel,on)</onclick>
@@ -2206,6 +2281,7 @@
 					<selected>IsEmpty(Skin.String(Home.Tvshows.Tile.3.ShowLabel))</selected>
 				</control>
 				<control type="radiobutton" id="2404">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogRadioButtonVars</include>
 					<label>$LOCALIZE[737]</label>
 					<onclick condition="IsEmpty(Skin.String(Home.Tvshows.Tile.3.Animate))">Skin.SetString(Home.Tvshows.Tile.3.Animate,on)</onclick>
@@ -2232,7 +2308,7 @@
 					<align>left</align>
 					<textoffsetx>20</textoffsetx>
 					<font>Font-Condensed-S30</font>
-					<textcolor>mod-infotags-alt</textcolor>
+					<textcolor>mod-infotags</textcolor>
 					<label>$LOCALIZE[41141]</label>
 					<label2>$INFO[Skin.String(Home.Tvshows.Tile.3.TypeName)]</label2>
 					<visible>!ControlGroup(2405).HasFocus</visible>
@@ -2320,7 +2396,8 @@
 				<onright>5</onright>
 				<onup>2405</onup>
 				<ondown>2407</ondown>
-				<include>SettingsCustomDialogButtonVars</include>
+				<textcolor>mod-infotags</textcolor>
+					<include>SettingsCustomDialogButtonVars</include>
 				<label>$LOCALIZE[41142]</label>
 				<label2>$INFO[Skin.String(Home.Tvshows.Tile.3.Path)]</label2>
 				<onclick condition="stringcompare(Skin.String(Home.Tvshows.Tile.3.Type),0)|stringcompare(Skin.String(Home.Tvshows.Tile.3.Type),1)|stringcompare(Skin.String(Home.Tvshows.Tile.3.Type),2)|stringcompare(Skin.String(Home.Tvshows.Tile.3.Type),3)">SetProperty(Property,Home.Tvshows.Tile.3,selectdialog)</onclick>
@@ -2340,7 +2417,8 @@
 				<onright>5</onright>
 				<onup>2406</onup>
 				<ondown>5</ondown>
-				<include>SettingsCustomDialogButtonVars</include>
+				<textcolor>mod-infotags</textcolor>
+					<include>SettingsCustomDialogButtonVars</include>
 				<label>$LOCALIZE[409]</label>
 				<onclick>Skin.SetString(Home.Tvshows.Tile.3.Type,7)</onclick>
 				<onclick>Skin.SetString(Home.Tvshows.Tile.3.TypeName,$LOCALIZE[41151])</onclick>
@@ -2368,18 +2446,21 @@
 				<scrolltime>0</scrolltime>
 				<orientation>vertical</orientation>
 				<control type="button" id="2141">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogButtonVars</include>
 					<label>$LOCALIZE[41138]</label>
 					<label2>$INFO[Skin.String(Home.Tvshows.Tile.4.Label)]</label2>
 					<onclick>Skin.SetString(Home.Tvshows.Tile.4.Label)</onclick>
 				</control>
 				<control type="button" id="2142">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogButtonVars</include>
 					<label>$LOCALIZE[41139]</label>
 					<label2>$INFO[Skin.String(Home.Tvshows.Tile.4.Icon)]</label2>
 					<onclick>Skin.SetFile(Home.Tvshows.Tile.4.Icon,.png|.jpg|.gif,special://skin/media/windows/home/icons/)</onclick>
 				</control>
 				<control type="radiobutton" id="2403">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogRadioButtonVars</include>
 					<label>$LOCALIZE[41156]</label>
 					<onclick condition="IsEmpty(Skin.String(Home.Tvshows.Tile.4.ShowLabel))">Skin.SetString(Home.Tvshows.Tile.4.ShowLabel,on)</onclick>
@@ -2387,6 +2468,7 @@
 					<selected>IsEmpty(Skin.String(Home.Tvshows.Tile.4.ShowLabel))</selected>
 				</control>
 				<control type="radiobutton" id="2404">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogRadioButtonVars</include>
 					<label>$LOCALIZE[737]</label>
 					<onclick condition="IsEmpty(Skin.String(Home.Tvshows.Tile.4.Animate))">Skin.SetString(Home.Tvshows.Tile.4.Animate,on)</onclick>
@@ -2413,7 +2495,7 @@
 					<align>left</align>
 					<textoffsetx>20</textoffsetx>
 					<font>Font-Condensed-S30</font>
-					<textcolor>mod-infotags-alt</textcolor>
+					<textcolor>mod-infotags</textcolor>
 					<label>$LOCALIZE[41141]</label>
 					<label2>$INFO[Skin.String(Home.Tvshows.Tile.4.TypeName)]</label2>
 					<visible>!ControlGroup(2405).HasFocus</visible>
@@ -2501,7 +2583,8 @@
 				<onright>5</onright>
 				<onup>2405</onup>
 				<ondown>2407</ondown>
-				<include>SettingsCustomDialogButtonVars</include>
+				<textcolor>mod-infotags</textcolor>
+					<include>SettingsCustomDialogButtonVars</include>
 				<label>$LOCALIZE[41142]</label>
 				<label2>$INFO[Skin.String(Home.Tvshows.Tile.4.Path)]</label2>
 				<onclick condition="stringcompare(Skin.String(Home.Tvshows.Tile.4.Type),0)|stringcompare(Skin.String(Home.Tvshows.Tile.4.Type),1)|stringcompare(Skin.String(Home.Tvshows.Tile.4.Type),2)|stringcompare(Skin.String(Home.Tvshows.Tile.4.Type),3)">SetProperty(Property,Home.Tvshows.Tile.4,selectdialog)</onclick>
@@ -2521,7 +2604,8 @@
 				<onright>5</onright>
 				<onup>2406</onup>
 				<ondown>5</ondown>
-				<include>SettingsCustomDialogButtonVars</include>
+				<textcolor>mod-infotags</textcolor>
+					<include>SettingsCustomDialogButtonVars</include>
 				<label>$LOCALIZE[409]</label>
 				<onclick>Skin.SetString(Home.Tvshows.Tile.4.Type,7)</onclick>
 				<onclick>Skin.SetString(Home.Tvshows.Tile.4.TypeName,$LOCALIZE[41151])</onclick>
@@ -2549,18 +2633,21 @@
 				<scrolltime>0</scrolltime>
 				<orientation>vertical</orientation>
 				<control type="button" id="2141">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogButtonVars</include>
 					<label>$LOCALIZE[41138]</label>
 					<label2>$INFO[Skin.String(Home.Tvshows.Tile.5.Label)]</label2>
 					<onclick>Skin.SetString(Home.Tvshows.Tile.5.Label)</onclick>
 				</control>
 				<control type="button" id="2142">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogButtonVars</include>
 					<label>$LOCALIZE[41139]</label>
 					<label2>$INFO[Skin.String(Home.Tvshows.Tile.5.Icon)]</label2>
 					<onclick>Skin.SetFile(Home.Tvshows.Tile.5.Icon,.png|.jpg|.gif,special://skin/media/windows/home/icons/)</onclick>
 				</control>
 				<control type="radiobutton" id="2403">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogRadioButtonVars</include>
 					<label>$LOCALIZE[41156]</label>
 					<onclick condition="IsEmpty(Skin.String(Home.Tvshows.Tile.5.ShowLabel))">Skin.SetString(Home.Tvshows.Tile.5.ShowLabel,on)</onclick>
@@ -2568,6 +2655,7 @@
 					<selected>IsEmpty(Skin.String(Home.Tvshows.Tile.5.ShowLabel))</selected>
 				</control>
 				<control type="radiobutton" id="2404">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogRadioButtonVars</include>
 					<label>$LOCALIZE[737]</label>
 					<onclick condition="IsEmpty(Skin.String(Home.Tvshows.Tile.5.Animate))">Skin.SetString(Home.Tvshows.Tile.5.Animate,on)</onclick>
@@ -2594,7 +2682,7 @@
 					<align>left</align>
 					<textoffsetx>20</textoffsetx>
 					<font>Font-Condensed-S30</font>
-					<textcolor>mod-infotags-alt</textcolor>
+					<textcolor>mod-infotags</textcolor>
 					<label>$LOCALIZE[41141]</label>
 					<label2>$INFO[Skin.String(Home.Tvshows.Tile.5.TypeName)]</label2>
 					<visible>!ControlGroup(2405).HasFocus</visible>
@@ -2682,7 +2770,8 @@
 				<onright>5</onright>
 				<onup>2405</onup>
 				<ondown>2407</ondown>
-				<include>SettingsCustomDialogButtonVars</include>
+				<textcolor>mod-infotags</textcolor>
+					<include>SettingsCustomDialogButtonVars</include>
 				<label>$LOCALIZE[41142]</label>
 				<label2>$INFO[Skin.String(Home.Tvshows.Tile.5.Path)]</label2>
 				<onclick condition="stringcompare(Skin.String(Home.Tvshows.Tile.5.Type),0)|stringcompare(Skin.String(Home.Tvshows.Tile.5.Type),1)|stringcompare(Skin.String(Home.Tvshows.Tile.5.Type),2)|stringcompare(Skin.String(Home.Tvshows.Tile.5.Type),3)">SetProperty(Property,Home.Tvshows.Tile.5,selectdialog)</onclick>
@@ -2702,7 +2791,8 @@
 				<onright>5</onright>
 				<onup>2406</onup>
 				<ondown>5</ondown>
-				<include>SettingsCustomDialogButtonVars</include>
+				<textcolor>mod-infotags</textcolor>
+					<include>SettingsCustomDialogButtonVars</include>
 				<label>$LOCALIZE[409]</label>
 				<onclick>Skin.SetString(Home.Tvshows.Tile.5.Type,7)</onclick>
 				<onclick>Skin.SetString(Home.Tvshows.Tile.5.TypeName,$LOCALIZE[41151])</onclick>
@@ -2730,18 +2820,21 @@
 				<scrolltime>0</scrolltime>
 				<orientation>vertical</orientation>
 				<control type="button" id="2141">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogButtonVars</include>
 					<label>$LOCALIZE[41138]</label>
 					<label2>$INFO[Skin.String(Home.Tvshows.Tile.6.Label)]</label2>
 					<onclick>Skin.SetString(Home.Tvshows.Tile.6.Label)</onclick>
 				</control>
 				<control type="button" id="2142">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogButtonVars</include>
 					<label>$LOCALIZE[41139]</label>
 					<label2>$INFO[Skin.String(Home.Tvshows.Tile.6.Icon)]</label2>
 					<onclick>Skin.SetFile(Home.Tvshows.Tile.6.Icon,.png|.jpg|.gif,special://skin/media/windows/home/icons/)</onclick>
 				</control>
 				<control type="radiobutton" id="2403">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogRadioButtonVars</include>
 					<label>$LOCALIZE[41156]</label>
 					<onclick condition="IsEmpty(Skin.String(Home.Tvshows.Tile.6.ShowLabel))">Skin.SetString(Home.Tvshows.Tile.6.ShowLabel,on)</onclick>
@@ -2749,6 +2842,7 @@
 					<selected>IsEmpty(Skin.String(Home.Tvshows.Tile.6.ShowLabel))</selected>
 				</control>
 				<control type="radiobutton" id="2404">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogRadioButtonVars</include>
 					<label>$LOCALIZE[737]</label>
 					<onclick condition="IsEmpty(Skin.String(Home.Tvshows.Tile.6.Animate))">Skin.SetString(Home.Tvshows.Tile.6.Animate,on)</onclick>
@@ -2775,7 +2869,7 @@
 					<align>left</align>
 					<textoffsetx>20</textoffsetx>
 					<font>Font-Condensed-S30</font>
-					<textcolor>mod-infotags-alt</textcolor>
+					<textcolor>mod-infotags</textcolor>
 					<label>$LOCALIZE[41141]</label>
 					<label2>$INFO[Skin.String(Home.Tvshows.Tile.6.TypeName)]</label2>
 					<visible>!ControlGroup(2405).HasFocus</visible>
@@ -2863,7 +2957,8 @@
 				<onright>5</onright>
 				<onup>2405</onup>
 				<ondown>2407</ondown>
-				<include>SettingsCustomDialogButtonVars</include>
+				<textcolor>mod-infotags</textcolor>
+					<include>SettingsCustomDialogButtonVars</include>
 				<label>$LOCALIZE[41142]</label>
 				<label2>$INFO[Skin.String(Home.Tvshows.Tile.6.Path)]</label2>
 				<onclick condition="stringcompare(Skin.String(Home.Tvshows.Tile.6.Type),0)|stringcompare(Skin.String(Home.Tvshows.Tile.6.Type),1)|stringcompare(Skin.String(Home.Tvshows.Tile.6.Type),2)|stringcompare(Skin.String(Home.Tvshows.Tile.6.Type),3)">SetProperty(Property,Home.Tvshows.Tile.6,selectdialog)</onclick>
@@ -2883,7 +2978,8 @@
 				<onright>5</onright>
 				<onup>2406</onup>
 				<ondown>5</ondown>
-				<include>SettingsCustomDialogButtonVars</include>
+				<textcolor>mod-infotags</textcolor>
+					<include>SettingsCustomDialogButtonVars</include>
 				<label>$LOCALIZE[409]</label>
 				<onclick>Skin.SetString(Home.Tvshows.Tile.6.Type,7)</onclick>
 				<onclick>Skin.SetString(Home.Tvshows.Tile.6.TypeName,$LOCALIZE[41151])</onclick>
@@ -2911,18 +3007,21 @@
 				<scrolltime>0</scrolltime>
 				<orientation>vertical</orientation>
 				<control type="button" id="2141">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogButtonVars</include>
 					<label>$LOCALIZE[41138]</label>
 					<label2>$INFO[Skin.String(Home.Tvshows.Tile.7.Label)]</label2>
 					<onclick>Skin.SetString(Home.Tvshows.Tile.7.Label)</onclick>
 				</control>
 				<control type="button" id="2142">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogButtonVars</include>
 					<label>$LOCALIZE[41139]</label>
 					<label2>$INFO[Skin.String(Home.Tvshows.Tile.7.Icon)]</label2>
 					<onclick>Skin.SetFile(Home.Tvshows.Tile.7.Icon,.png|.jpg|.gif,special://skin/media/windows/home/icons/)</onclick>
 				</control>
 				<control type="radiobutton" id="2403">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogRadioButtonVars</include>
 					<label>$LOCALIZE[41156]</label>
 					<onclick condition="IsEmpty(Skin.String(Home.Tvshows.Tile.7.ShowLabel))">Skin.SetString(Home.Tvshows.Tile.7.ShowLabel,on)</onclick>
@@ -2930,6 +3029,7 @@
 					<selected>IsEmpty(Skin.String(Home.Tvshows.Tile.7.ShowLabel))</selected>
 				</control>
 				<control type="radiobutton" id="2404">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogRadioButtonVars</include>
 					<label>$LOCALIZE[737]</label>
 					<onclick condition="IsEmpty(Skin.String(Home.Tvshows.Tile.7.Animate))">Skin.SetString(Home.Tvshows.Tile.7.Animate,on)</onclick>
@@ -2956,7 +3056,7 @@
 					<align>left</align>
 					<textoffsetx>20</textoffsetx>
 					<font>Font-Condensed-S30</font>
-					<textcolor>mod-infotags-alt</textcolor>
+					<textcolor>mod-infotags</textcolor>
 					<label>$LOCALIZE[41141]</label>
 					<label2>$INFO[Skin.String(Home.Tvshows.Tile.7.TypeName)]</label2>
 					<visible>!ControlGroup(2405).HasFocus</visible>
@@ -3044,7 +3144,8 @@
 				<onright>5</onright>
 				<onup>2405</onup>
 				<ondown>2407</ondown>
-				<include>SettingsCustomDialogButtonVars</include>
+				<textcolor>mod-infotags</textcolor>
+					<include>SettingsCustomDialogButtonVars</include>
 				<label>$LOCALIZE[41142]</label>
 				<label2>$INFO[Skin.String(Home.Tvshows.Tile.7.Path)]</label2>
 				<onclick condition="stringcompare(Skin.String(Home.Tvshows.Tile.7.Type),0)|stringcompare(Skin.String(Home.Tvshows.Tile.7.Type),1)|stringcompare(Skin.String(Home.Tvshows.Tile.7.Type),2)|stringcompare(Skin.String(Home.Tvshows.Tile.7.Type),3)">SetProperty(Property,Home.Tvshows.Tile.7,selectdialog)</onclick>
@@ -3064,7 +3165,8 @@
 				<onright>5</onright>
 				<onup>2406</onup>
 				<ondown>5</ondown>
-				<include>SettingsCustomDialogButtonVars</include>
+				<textcolor>mod-infotags</textcolor>
+					<include>SettingsCustomDialogButtonVars</include>
 				<label>$LOCALIZE[409]</label>
 				<onclick>Skin.SetString(Home.Tvshows.Tile.7.Type,7)</onclick>
 				<onclick>Skin.SetString(Home.Tvshows.Tile.7.TypeName,$LOCALIZE[41151])</onclick>
@@ -3092,18 +3194,21 @@
 				<scrolltime>0</scrolltime>
 				<orientation>vertical</orientation>
 				<control type="button" id="2141">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogButtonVars</include>
 					<label>$LOCALIZE[41138]</label>
 					<label2>$INFO[Skin.String(Home.Tvshows.Tile.8.Label)]</label2>
 					<onclick>Skin.SetString(Home.Tvshows.Tile.8.Label)</onclick>
 				</control>
 				<control type="button" id="2142">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogButtonVars</include>
 					<label>$LOCALIZE[41139]</label>
 					<label2>$INFO[Skin.String(Home.Tvshows.Tile.8.Icon)]</label2>
 					<onclick>Skin.SetFile(Home.Tvshows.Tile.8.Icon,.png|.jpg|.gif,special://skin/media/windows/home/icons/)</onclick>
 				</control>
 				<control type="radiobutton" id="2403">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogRadioButtonVars</include>
 					<label>$LOCALIZE[41156]</label>
 					<onclick condition="IsEmpty(Skin.String(Home.Tvshows.Tile.8.ShowLabel))">Skin.SetString(Home.Tvshows.Tile.8.ShowLabel,on)</onclick>
@@ -3111,6 +3216,7 @@
 					<selected>IsEmpty(Skin.String(Home.Tvshows.Tile.8.ShowLabel))</selected>
 				</control>
 				<control type="radiobutton" id="2404">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogRadioButtonVars</include>
 					<label>$LOCALIZE[737]</label>
 					<onclick condition="IsEmpty(Skin.String(Home.Tvshows.Tile.8.Animate))">Skin.SetString(Home.Tvshows.Tile.8.Animate,on)</onclick>
@@ -3137,7 +3243,7 @@
 					<align>left</align>
 					<textoffsetx>20</textoffsetx>
 					<font>Font-Condensed-S30</font>
-					<textcolor>mod-infotags-alt</textcolor>
+					<textcolor>mod-infotags</textcolor>
 					<label>$LOCALIZE[41141]</label>
 					<label2>$INFO[Skin.String(Home.Tvshows.Tile.8.TypeName)]</label2>
 					<visible>!ControlGroup(2405).HasFocus</visible>
@@ -3225,7 +3331,8 @@
 				<onright>5</onright>
 				<onup>2405</onup>
 				<ondown>2407</ondown>
-				<include>SettingsCustomDialogButtonVars</include>
+				<textcolor>mod-infotags</textcolor>
+					<include>SettingsCustomDialogButtonVars</include>
 				<label>$LOCALIZE[41142]</label>
 				<label2>$INFO[Skin.String(Home.Tvshows.Tile.8.Path)]</label2>
 				<onclick condition="stringcompare(Skin.String(Home.Tvshows.Tile.8.Type),0)|stringcompare(Skin.String(Home.Tvshows.Tile.8.Type),1)|stringcompare(Skin.String(Home.Tvshows.Tile.8.Type),2)|stringcompare(Skin.String(Home.Tvshows.Tile.8.Type),3)">SetProperty(Property,Home.Tvshows.Tile.8,selectdialog)</onclick>
@@ -3245,7 +3352,8 @@
 				<onright>5</onright>
 				<onup>2406</onup>
 				<ondown>5</ondown>
-				<include>SettingsCustomDialogButtonVars</include>
+				<textcolor>mod-infotags</textcolor>
+					<include>SettingsCustomDialogButtonVars</include>
 				<label>$LOCALIZE[409]</label>
 				<onclick>Skin.SetString(Home.Tvshows.Tile.8.Type,7)</onclick>
 				<onclick>Skin.SetString(Home.Tvshows.Tile.8.TypeName,$LOCALIZE[41151])</onclick>
@@ -3273,18 +3381,21 @@
 				<scrolltime>0</scrolltime>
 				<orientation>vertical</orientation>
 				<control type="button" id="2141">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogButtonVars</include>
 					<label>$LOCALIZE[41138]</label>
 					<label2>$INFO[Skin.String(Home.Tvshows.Tile.9.Label)]</label2>
 					<onclick>Skin.SetString(Home.Tvshows.Tile.9.Label)</onclick>
 				</control>
 				<control type="button" id="2142">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogButtonVars</include>
 					<label>$LOCALIZE[41139]</label>
 					<label2>$INFO[Skin.String(Home.Tvshows.Tile.9.Icon)]</label2>
 					<onclick>Skin.SetFile(Home.Tvshows.Tile.9.Icon,.png|.jpg|.gif,special://skin/media/windows/home/icons/)</onclick>
 				</control>
 				<control type="radiobutton" id="2403">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogRadioButtonVars</include>
 					<label>$LOCALIZE[41156]</label>
 					<onclick condition="IsEmpty(Skin.String(Home.Tvshows.Tile.9.ShowLabel))">Skin.SetString(Home.Tvshows.Tile.9.ShowLabel,on)</onclick>
@@ -3292,6 +3403,7 @@
 					<selected>IsEmpty(Skin.String(Home.Tvshows.Tile.9.ShowLabel))</selected>
 				</control>
 				<control type="radiobutton" id="2404">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogRadioButtonVars</include>
 					<label>$LOCALIZE[737]</label>
 					<onclick condition="IsEmpty(Skin.String(Home.Tvshows.Tile.9.Animate))">Skin.SetString(Home.Tvshows.Tile.9.Animate,on)</onclick>
@@ -3318,7 +3430,7 @@
 					<align>left</align>
 					<textoffsetx>20</textoffsetx>
 					<font>Font-Condensed-S30</font>
-					<textcolor>mod-infotags-alt</textcolor>
+					<textcolor>mod-infotags</textcolor>
 					<label>$LOCALIZE[41141]</label>
 					<label2>$INFO[Skin.String(Home.Tvshows.Tile.9.TypeName)]</label2>
 					<visible>!ControlGroup(2405).HasFocus</visible>
@@ -3406,7 +3518,8 @@
 				<onright>5</onright>
 				<onup>2405</onup>
 				<ondown>2407</ondown>
-				<include>SettingsCustomDialogButtonVars</include>
+				<textcolor>mod-infotags</textcolor>
+					<include>SettingsCustomDialogButtonVars</include>
 				<label>$LOCALIZE[41142]</label>
 				<label2>$INFO[Skin.String(Home.Tvshows.Tile.9.Path)]</label2>
 				<onclick condition="stringcompare(Skin.String(Home.Tvshows.Tile.9.Type),0)|stringcompare(Skin.String(Home.Tvshows.Tile.9.Type),1)|stringcompare(Skin.String(Home.Tvshows.Tile.9.Type),2)|stringcompare(Skin.String(Home.Tvshows.Tile.9.Type),3)">SetProperty(Property,Home.Tvshows.Tile.9,selectdialog)</onclick>
@@ -3426,7 +3539,8 @@
 				<onright>5</onright>
 				<onup>2406</onup>
 				<ondown>5</ondown>
-				<include>SettingsCustomDialogButtonVars</include>
+				<textcolor>mod-infotags</textcolor>
+					<include>SettingsCustomDialogButtonVars</include>
 				<label>$LOCALIZE[409]</label>
 				<onclick>Skin.SetString(Home.Tvshows.Tile.9.Type,7)</onclick>
 				<onclick>Skin.SetString(Home.Tvshows.Tile.9.TypeName,$LOCALIZE[41151])</onclick>
@@ -3454,18 +3568,21 @@
 				<scrolltime>0</scrolltime>
 				<orientation>vertical</orientation>
 				<control type="button" id="2141">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogButtonVars</include>
 					<label>$LOCALIZE[41138]</label>
 					<label2>$INFO[Skin.String(Home.Tvshows.Tile.10.Label)]</label2>
 					<onclick>Skin.SetString(Home.Tvshows.Tile.10.Label)</onclick>
 				</control>
 				<control type="button" id="2142">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogButtonVars</include>
 					<label>$LOCALIZE[41139]</label>
 					<label2>$INFO[Skin.String(Home.Tvshows.Tile.10.Icon)]</label2>
 					<onclick>Skin.SetFile(Home.Tvshows.Tile.10.Icon,.png|.jpg|.gif,special://skin/media/windows/home/icons/)</onclick>
 				</control>
 				<control type="radiobutton" id="2403">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogRadioButtonVars</include>
 					<label>$LOCALIZE[41156]</label>
 					<onclick condition="IsEmpty(Skin.String(Home.Tvshows.Tile.10.ShowLabel))">Skin.SetString(Home.Tvshows.Tile.10.ShowLabel,on)</onclick>
@@ -3473,6 +3590,7 @@
 					<selected>IsEmpty(Skin.String(Home.Tvshows.Tile.10.ShowLabel))</selected>
 				</control>
 				<control type="radiobutton" id="2404">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogRadioButtonVars</include>
 					<label>$LOCALIZE[737]</label>
 					<onclick condition="IsEmpty(Skin.String(Home.Tvshows.Tile.10.Animate))">Skin.SetString(Home.Tvshows.Tile.10.Animate,on)</onclick>
@@ -3499,7 +3617,7 @@
 					<align>left</align>
 					<textoffsetx>20</textoffsetx>
 					<font>Font-Condensed-S30</font>
-					<textcolor>mod-infotags-alt</textcolor>
+					<textcolor>mod-infotags</textcolor>
 					<label>$LOCALIZE[41141]</label>
 					<label2>$INFO[Skin.String(Home.Tvshows.Tile.10.TypeName)]</label2>
 					<visible>!ControlGroup(2405).HasFocus</visible>
@@ -3587,7 +3705,8 @@
 				<onright>5</onright>
 				<onup>2405</onup>
 				<ondown>2407</ondown>
-				<include>SettingsCustomDialogButtonVars</include>
+				<textcolor>mod-infotags</textcolor>
+					<include>SettingsCustomDialogButtonVars</include>
 				<label>$LOCALIZE[41142]</label>
 				<label2>$INFO[Skin.String(Home.Tvshows.Tile.10.Path)]</label2>
 				<onclick condition="stringcompare(Skin.String(Home.Tvshows.Tile.10.Type),0)|stringcompare(Skin.String(Home.Tvshows.Tile.10.Type),1)|stringcompare(Skin.String(Home.Tvshows.Tile.10.Type),2)|stringcompare(Skin.String(Home.Tvshows.Tile.10.Type),3)">SetProperty(Property,Home.Tvshows.Tile.10,selectdialog)</onclick>
@@ -3607,7 +3726,8 @@
 				<onright>5</onright>
 				<onup>2406</onup>
 				<ondown>5</ondown>
-				<include>SettingsCustomDialogButtonVars</include>
+				<textcolor>mod-infotags</textcolor>
+					<include>SettingsCustomDialogButtonVars</include>
 				<label>$LOCALIZE[409]</label>
 				<onclick>Skin.SetString(Home.Tvshows.Tile.10.Type,7)</onclick>
 				<onclick>Skin.SetString(Home.Tvshows.Tile.10.TypeName,$LOCALIZE[41151])</onclick>
@@ -3635,18 +3755,21 @@
 				<scrolltime>0</scrolltime>
 				<orientation>vertical</orientation>
 				<control type="button" id="2141">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogButtonVars</include>
 					<label>$LOCALIZE[41138]</label>
 					<label2>$INFO[Skin.String(Home.Music.Tile.1.Label)]</label2>
 					<onclick>Skin.SetString(Home.Music.Tile.1.Label)</onclick>
 				</control>
 				<control type="button" id="2142">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogButtonVars</include>
 					<label>$LOCALIZE[41139]</label>
 					<label2>$INFO[Skin.String(Home.Music.Tile.1.Icon)]</label2>
 					<onclick>Skin.SetFile(Home.Music.Tile.1.Icon,.png|.jpg|.gif,special://skin/media/windows/home/icons/)</onclick>
 				</control>
 				<control type="radiobutton" id="2403">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogRadioButtonVars</include>
 					<label>$LOCALIZE[41156]</label>
 					<onclick condition="IsEmpty(Skin.String(Home.Music.Tile.1.ShowLabel))">Skin.SetString(Home.Music.Tile.1.ShowLabel,on)</onclick>
@@ -3654,6 +3777,7 @@
 					<selected>IsEmpty(Skin.String(Home.Music.Tile.1.ShowLabel))</selected>
 				</control>
 				<control type="radiobutton" id="2404">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogRadioButtonVars</include>
 					<label>$LOCALIZE[737]</label>
 					<onclick condition="IsEmpty(Skin.String(Home.Music.Tile.1.Animate))">Skin.SetString(Home.Music.Tile.1.Animate,on)</onclick>
@@ -3680,7 +3804,7 @@
 					<align>left</align>
 					<textoffsetx>20</textoffsetx>
 					<font>Font-Condensed-S30</font>
-					<textcolor>mod-infotags-alt</textcolor>
+					<textcolor>mod-infotags</textcolor>
 					<label>$LOCALIZE[41141]</label>
 					<label2>$INFO[Skin.String(Home.Music.Tile.1.TypeName)]</label2>
 					<visible>!ControlGroup(2405).HasFocus</visible>
@@ -3768,7 +3892,8 @@
 				<onright>5</onright>
 				<onup>2405</onup>
 				<ondown>2407</ondown>
-				<include>SettingsCustomDialogButtonVars</include>
+				<textcolor>mod-infotags</textcolor>
+					<include>SettingsCustomDialogButtonVars</include>
 				<label>$LOCALIZE[41142]</label>
 				<label2>$INFO[Skin.String(Home.Music.Tile.1.Path)]</label2>
 				<onclick condition="stringcompare(Skin.String(Home.Music.Tile.1.Type),0)|stringcompare(Skin.String(Home.Music.Tile.1.Type),1)|stringcompare(Skin.String(Home.Music.Tile.1.Type),2)|stringcompare(Skin.String(Home.Music.Tile.1.Type),3)">SetProperty(Property,Home.Music.Tile.1,selectdialog)</onclick>
@@ -3788,7 +3913,8 @@
 				<onright>5</onright>
 				<onup>2406</onup>
 				<ondown>5</ondown>
-				<include>SettingsCustomDialogButtonVars</include>
+				<textcolor>mod-infotags</textcolor>
+					<include>SettingsCustomDialogButtonVars</include>
 				<label>$LOCALIZE[409]</label>
 				<onclick>Skin.SetString(Home.Music.Tile.1.Type,7)</onclick>
 				<onclick>Skin.SetString(Home.Music.Tile.1.TypeName,$LOCALIZE[41151])</onclick>
@@ -3816,18 +3942,21 @@
 				<scrolltime>0</scrolltime>
 				<orientation>vertical</orientation>
 				<control type="button" id="2141">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogButtonVars</include>
 					<label>$LOCALIZE[41138]</label>
 					<label2>$INFO[Skin.String(Home.Music.Tile.2.Label)]</label2>
 					<onclick>Skin.SetString(Home.Music.Tile.2.Label)</onclick>
 				</control>
 				<control type="button" id="2142">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogButtonVars</include>
 					<label>$LOCALIZE[41139]</label>
 					<label2>$INFO[Skin.String(Home.Music.Tile.2.Icon)]</label2>
 					<onclick>Skin.SetFile(Home.Music.Tile.2.Icon,.png|.jpg|.gif,special://skin/media/windows/home/icons/)</onclick>
 				</control>
 				<control type="radiobutton" id="2403">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogRadioButtonVars</include>
 					<label>$LOCALIZE[41156]</label>
 					<onclick condition="IsEmpty(Skin.String(Home.Music.Tile.2.ShowLabel))">Skin.SetString(Home.Music.Tile.2.ShowLabel,on)</onclick>
@@ -3835,6 +3964,7 @@
 					<selected>IsEmpty(Skin.String(Home.Music.Tile.2.ShowLabel))</selected>
 				</control>
 				<control type="radiobutton" id="2404">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogRadioButtonVars</include>
 					<label>$LOCALIZE[737]</label>
 					<onclick condition="IsEmpty(Skin.String(Home.Music.Tile.2.Animate))">Skin.SetString(Home.Music.Tile.2.Animate,on)</onclick>
@@ -3861,7 +3991,7 @@
 					<align>left</align>
 					<textoffsetx>20</textoffsetx>
 					<font>Font-Condensed-S30</font>
-					<textcolor>mod-infotags-alt</textcolor>
+					<textcolor>mod-infotags</textcolor>
 					<label>$LOCALIZE[41141]</label>
 					<label2>$INFO[Skin.String(Home.Music.Tile.2.TypeName)]</label2>
 					<visible>!ControlGroup(2405).HasFocus</visible>
@@ -3949,7 +4079,8 @@
 				<onright>5</onright>
 				<onup>2405</onup>
 				<ondown>2407</ondown>
-				<include>SettingsCustomDialogButtonVars</include>
+				<textcolor>mod-infotags</textcolor>
+					<include>SettingsCustomDialogButtonVars</include>
 				<label>$LOCALIZE[41142]</label>
 				<label2>$INFO[Skin.String(Home.Music.Tile.2.Path)]</label2>
 				<onclick condition="stringcompare(Skin.String(Home.Music.Tile.2.Type),0)|stringcompare(Skin.String(Home.Music.Tile.2.Type),1)|stringcompare(Skin.String(Home.Music.Tile.2.Type),2)|stringcompare(Skin.String(Home.Music.Tile.2.Type),3)">SetProperty(Property,Home.Music.Tile.2,selectdialog)</onclick>
@@ -3969,7 +4100,8 @@
 				<onright>5</onright>
 				<onup>2406</onup>
 				<ondown>5</ondown>
-				<include>SettingsCustomDialogButtonVars</include>
+				<textcolor>mod-infotags</textcolor>
+					<include>SettingsCustomDialogButtonVars</include>
 				<label>$LOCALIZE[409]</label>
 				<onclick>Skin.SetString(Home.Music.Tile.2.Type,7)</onclick>
 				<onclick>Skin.SetString(Home.Music.Tile.2.TypeName,$LOCALIZE[41151])</onclick>
@@ -3997,18 +4129,21 @@
 				<scrolltime>0</scrolltime>
 				<orientation>vertical</orientation>
 				<control type="button" id="2141">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogButtonVars</include>
 					<label>$LOCALIZE[41138]</label>
 					<label2>$INFO[Skin.String(Home.Music.Tile.3.Label)]</label2>
 					<onclick>Skin.SetString(Home.Music.Tile.3.Label)</onclick>
 				</control>
 				<control type="button" id="2142">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogButtonVars</include>
 					<label>$LOCALIZE[41139]</label>
 					<label2>$INFO[Skin.String(Home.Music.Tile.3.Icon)]</label2>
 					<onclick>Skin.SetFile(Home.Music.Tile.3.Icon,.png|.jpg|.gif,special://skin/media/windows/home/icons/)</onclick>
 				</control>
 				<control type="radiobutton" id="2403">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogRadioButtonVars</include>
 					<label>$LOCALIZE[41156]</label>
 					<onclick condition="IsEmpty(Skin.String(Home.Music.Tile.3.ShowLabel))">Skin.SetString(Home.Music.Tile.3.ShowLabel,on)</onclick>
@@ -4016,6 +4151,7 @@
 					<selected>IsEmpty(Skin.String(Home.Music.Tile.3.ShowLabel))</selected>
 				</control>
 				<control type="radiobutton" id="2404">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogRadioButtonVars</include>
 					<label>$LOCALIZE[737]</label>
 					<onclick condition="IsEmpty(Skin.String(Home.Music.Tile.3.Animate))">Skin.SetString(Home.Music.Tile.3.Animate,on)</onclick>
@@ -4042,7 +4178,7 @@
 					<align>left</align>
 					<textoffsetx>20</textoffsetx>
 					<font>Font-Condensed-S30</font>
-					<textcolor>mod-infotags-alt</textcolor>
+					<textcolor>mod-infotags</textcolor>
 					<label>$LOCALIZE[41141]</label>
 					<label2>$INFO[Skin.String(Home.Music.Tile.3.TypeName)]</label2>
 					<visible>!ControlGroup(2405).HasFocus</visible>
@@ -4130,7 +4266,8 @@
 				<onright>5</onright>
 				<onup>2405</onup>
 				<ondown>2407</ondown>
-				<include>SettingsCustomDialogButtonVars</include>
+				<textcolor>mod-infotags</textcolor>
+					<include>SettingsCustomDialogButtonVars</include>
 				<label>$LOCALIZE[41142]</label>
 				<label2>$INFO[Skin.String(Home.Music.Tile.3.Path)]</label2>
 				<onclick condition="stringcompare(Skin.String(Home.Music.Tile.3.Type),0)|stringcompare(Skin.String(Home.Music.Tile.3.Type),1)|stringcompare(Skin.String(Home.Music.Tile.3.Type),2)|stringcompare(Skin.String(Home.Music.Tile.3.Type),3)">SetProperty(Property,Home.Music.Tile.3,selectdialog)</onclick>
@@ -4150,7 +4287,8 @@
 				<onright>5</onright>
 				<onup>2406</onup>
 				<ondown>5</ondown>
-				<include>SettingsCustomDialogButtonVars</include>
+				<textcolor>mod-infotags</textcolor>
+					<include>SettingsCustomDialogButtonVars</include>
 				<label>$LOCALIZE[409]</label>
 				<onclick>Skin.SetString(Home.Music.Tile.3.Type,7)</onclick>
 				<onclick>Skin.SetString(Home.Music.Tile.3.TypeName,$LOCALIZE[41151])</onclick>
@@ -4178,18 +4316,21 @@
 				<scrolltime>0</scrolltime>
 				<orientation>vertical</orientation>
 				<control type="button" id="2141">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogButtonVars</include>
 					<label>$LOCALIZE[41138]</label>
 					<label2>$INFO[Skin.String(Home.Music.Tile.4.Label)]</label2>
 					<onclick>Skin.SetString(Home.Music.Tile.4.Label)</onclick>
 				</control>
 				<control type="button" id="2142">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogButtonVars</include>
 					<label>$LOCALIZE[41139]</label>
 					<label2>$INFO[Skin.String(Home.Music.Tile.4.Icon)]</label2>
 					<onclick>Skin.SetFile(Home.Music.Tile.4.Icon,.png|.jpg|.gif,special://skin/media/windows/home/icons/)</onclick>
 				</control>
 				<control type="radiobutton" id="2403">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogRadioButtonVars</include>
 					<label>$LOCALIZE[41156]</label>
 					<onclick condition="IsEmpty(Skin.String(Home.Music.Tile.4.ShowLabel))">Skin.SetString(Home.Music.Tile.4.ShowLabel,on)</onclick>
@@ -4197,6 +4338,7 @@
 					<selected>IsEmpty(Skin.String(Home.Music.Tile.4.ShowLabel))</selected>
 				</control>
 				<control type="radiobutton" id="2404">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogRadioButtonVars</include>
 					<label>$LOCALIZE[737]</label>
 					<onclick condition="IsEmpty(Skin.String(Home.Music.Tile.4.Animate))">Skin.SetString(Home.Music.Tile.4.Animate,on)</onclick>
@@ -4223,7 +4365,7 @@
 					<align>left</align>
 					<textoffsetx>20</textoffsetx>
 					<font>Font-Condensed-S30</font>
-					<textcolor>mod-infotags-alt</textcolor>
+					<textcolor>mod-infotags</textcolor>
 					<label>$LOCALIZE[41141]</label>
 					<label2>$INFO[Skin.String(Home.Music.Tile.4.TypeName)]</label2>
 					<visible>!ControlGroup(2405).HasFocus</visible>
@@ -4311,7 +4453,8 @@
 				<onright>5</onright>
 				<onup>2405</onup>
 				<ondown>2407</ondown>
-				<include>SettingsCustomDialogButtonVars</include>
+				<textcolor>mod-infotags</textcolor>
+					<include>SettingsCustomDialogButtonVars</include>
 				<label>$LOCALIZE[41142]</label>
 				<label2>$INFO[Skin.String(Home.Music.Tile.4.Path)]</label2>
 				<onclick condition="stringcompare(Skin.String(Home.Music.Tile.4.Type),0)|stringcompare(Skin.String(Home.Music.Tile.4.Type),1)|stringcompare(Skin.String(Home.Music.Tile.4.Type),2)|stringcompare(Skin.String(Home.Music.Tile.4.Type),3)">SetProperty(Property,Home.Music.Tile.4,selectdialog)</onclick>
@@ -4331,7 +4474,8 @@
 				<onright>5</onright>
 				<onup>2406</onup>
 				<ondown>5</ondown>
-				<include>SettingsCustomDialogButtonVars</include>
+				<textcolor>mod-infotags</textcolor>
+					<include>SettingsCustomDialogButtonVars</include>
 				<label>$LOCALIZE[409]</label>
 				<onclick>Skin.SetString(Home.Music.Tile.4.Type,7)</onclick>
 				<onclick>Skin.SetString(Home.Music.Tile.4.TypeName,$LOCALIZE[41151])</onclick>
@@ -4359,18 +4503,21 @@
 				<scrolltime>0</scrolltime>
 				<orientation>vertical</orientation>
 				<control type="button" id="2141">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogButtonVars</include>
 					<label>$LOCALIZE[41138]</label>
 					<label2>$INFO[Skin.String(Home.Music.Tile.5.Label)]</label2>
 					<onclick>Skin.SetString(Home.Music.Tile.5.Label)</onclick>
 				</control>
 				<control type="button" id="2142">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogButtonVars</include>
 					<label>$LOCALIZE[41139]</label>
 					<label2>$INFO[Skin.String(Home.Music.Tile.5.Icon)]</label2>
 					<onclick>Skin.SetFile(Home.Music.Tile.5.Icon,.png|.jpg|.gif,special://skin/media/windows/home/icons/)</onclick>
 				</control>
 				<control type="radiobutton" id="2403">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogRadioButtonVars</include>
 					<label>$LOCALIZE[41156]</label>
 					<onclick condition="IsEmpty(Skin.String(Home.Music.Tile.5.ShowLabel))">Skin.SetString(Home.Music.Tile.5.ShowLabel,on)</onclick>
@@ -4378,6 +4525,7 @@
 					<selected>IsEmpty(Skin.String(Home.Music.Tile.5.ShowLabel))</selected>
 				</control>
 				<control type="radiobutton" id="2404">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogRadioButtonVars</include>
 					<label>$LOCALIZE[737]</label>
 					<onclick condition="IsEmpty(Skin.String(Home.Music.Tile.5.Animate))">Skin.SetString(Home.Music.Tile.5.Animate,on)</onclick>
@@ -4404,7 +4552,7 @@
 					<align>left</align>
 					<textoffsetx>20</textoffsetx>
 					<font>Font-Condensed-S30</font>
-					<textcolor>mod-infotags-alt</textcolor>
+					<textcolor>mod-infotags</textcolor>
 					<label>$LOCALIZE[41141]</label>
 					<label2>$INFO[Skin.String(Home.Music.Tile.5.TypeName)]</label2>
 					<visible>!ControlGroup(2405).HasFocus</visible>
@@ -4492,7 +4640,8 @@
 				<onright>5</onright>
 				<onup>2405</onup>
 				<ondown>2407</ondown>
-				<include>SettingsCustomDialogButtonVars</include>
+				<textcolor>mod-infotags</textcolor>
+					<include>SettingsCustomDialogButtonVars</include>
 				<label>$LOCALIZE[41142]</label>
 				<label2>$INFO[Skin.String(Home.Music.Tile.5.Path)]</label2>
 				<onclick condition="stringcompare(Skin.String(Home.Music.Tile.5.Type),0)|stringcompare(Skin.String(Home.Music.Tile.5.Type),1)|stringcompare(Skin.String(Home.Music.Tile.5.Type),2)|stringcompare(Skin.String(Home.Music.Tile.5.Type),3)">SetProperty(Property,Home.Music.Tile.5,selectdialog)</onclick>
@@ -4512,7 +4661,8 @@
 				<onright>5</onright>
 				<onup>2406</onup>
 				<ondown>5</ondown>
-				<include>SettingsCustomDialogButtonVars</include>
+				<textcolor>mod-infotags</textcolor>
+					<include>SettingsCustomDialogButtonVars</include>
 				<label>$LOCALIZE[409]</label>
 				<onclick>Skin.SetString(Home.Music.Tile.5.Type,7)</onclick>
 				<onclick>Skin.SetString(Home.Music.Tile.5.TypeName,$LOCALIZE[41151])</onclick>
@@ -4540,18 +4690,21 @@
 				<scrolltime>0</scrolltime>
 				<orientation>vertical</orientation>
 				<control type="button" id="2141">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogButtonVars</include>
 					<label>$LOCALIZE[41138]</label>
 					<label2>$INFO[Skin.String(Home.Music.Tile.6.Label)]</label2>
 					<onclick>Skin.SetString(Home.Music.Tile.6.Label)</onclick>
 				</control>
 				<control type="button" id="2142">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogButtonVars</include>
 					<label>$LOCALIZE[41139]</label>
 					<label2>$INFO[Skin.String(Home.Music.Tile.6.Icon)]</label2>
 					<onclick>Skin.SetFile(Home.Music.Tile.6.Icon,.png|.jpg|.gif,special://skin/media/windows/home/icons/)</onclick>
 				</control>
 				<control type="radiobutton" id="2403">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogRadioButtonVars</include>
 					<label>$LOCALIZE[41156]</label>
 					<onclick condition="IsEmpty(Skin.String(Home.Music.Tile.6.ShowLabel))">Skin.SetString(Home.Music.Tile.6.ShowLabel,on)</onclick>
@@ -4559,6 +4712,7 @@
 					<selected>IsEmpty(Skin.String(Home.Music.Tile.6.ShowLabel))</selected>
 				</control>
 				<control type="radiobutton" id="2404">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogRadioButtonVars</include>
 					<label>$LOCALIZE[737]</label>
 					<onclick condition="IsEmpty(Skin.String(Home.Music.Tile.6.Animate))">Skin.SetString(Home.Music.Tile.6.Animate,on)</onclick>
@@ -4585,7 +4739,7 @@
 					<align>left</align>
 					<textoffsetx>20</textoffsetx>
 					<font>Font-Condensed-S30</font>
-					<textcolor>mod-infotags-alt</textcolor>
+					<textcolor>mod-infotags</textcolor>
 					<label>$LOCALIZE[41141]</label>
 					<label2>$INFO[Skin.String(Home.Music.Tile.6.TypeName)]</label2>
 					<visible>!ControlGroup(2405).HasFocus</visible>
@@ -4673,7 +4827,8 @@
 				<onright>5</onright>
 				<onup>2405</onup>
 				<ondown>2407</ondown>
-				<include>SettingsCustomDialogButtonVars</include>
+				<textcolor>mod-infotags</textcolor>
+					<include>SettingsCustomDialogButtonVars</include>
 				<label>$LOCALIZE[41142]</label>
 				<label2>$INFO[Skin.String(Home.Music.Tile.6.Path)]</label2>
 				<onclick condition="stringcompare(Skin.String(Home.Music.Tile.6.Type),0)|stringcompare(Skin.String(Home.Music.Tile.6.Type),1)|stringcompare(Skin.String(Home.Music.Tile.6.Type),2)|stringcompare(Skin.String(Home.Music.Tile.6.Type),3)">SetProperty(Property,Home.Music.Tile.6,selectdialog)</onclick>
@@ -4693,7 +4848,8 @@
 				<onright>5</onright>
 				<onup>2406</onup>
 				<ondown>5</ondown>
-				<include>SettingsCustomDialogButtonVars</include>
+				<textcolor>mod-infotags</textcolor>
+					<include>SettingsCustomDialogButtonVars</include>
 				<label>$LOCALIZE[409]</label>
 				<onclick>Skin.SetString(Home.Music.Tile.6.Type,7)</onclick>
 				<onclick>Skin.SetString(Home.Music.Tile.6.TypeName,$LOCALIZE[41151])</onclick>
@@ -4721,18 +4877,21 @@
 				<scrolltime>0</scrolltime>
 				<orientation>vertical</orientation>
 				<control type="button" id="2141">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogButtonVars</include>
 					<label>$LOCALIZE[41138]</label>
 					<label2>$INFO[Skin.String(Home.Music.Tile.7.Label)]</label2>
 					<onclick>Skin.SetString(Home.Music.Tile.7.Label)</onclick>
 				</control>
 				<control type="button" id="2142">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogButtonVars</include>
 					<label>$LOCALIZE[41139]</label>
 					<label2>$INFO[Skin.String(Home.Music.Tile.7.Icon)]</label2>
 					<onclick>Skin.SetFile(Home.Music.Tile.7.Icon,.png|.jpg|.gif,special://skin/media/windows/home/icons/)</onclick>
 				</control>
 				<control type="radiobutton" id="2403">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogRadioButtonVars</include>
 					<label>$LOCALIZE[41156]</label>
 					<onclick condition="IsEmpty(Skin.String(Home.Music.Tile.7.ShowLabel))">Skin.SetString(Home.Music.Tile.7.ShowLabel,on)</onclick>
@@ -4740,6 +4899,7 @@
 					<selected>IsEmpty(Skin.String(Home.Music.Tile.7.ShowLabel))</selected>
 				</control>
 				<control type="radiobutton" id="2404">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogRadioButtonVars</include>
 					<label>$LOCALIZE[737]</label>
 					<onclick condition="IsEmpty(Skin.String(Home.Music.Tile.7.Animate))">Skin.SetString(Home.Music.Tile.7.Animate,on)</onclick>
@@ -4766,7 +4926,7 @@
 					<align>left</align>
 					<textoffsetx>20</textoffsetx>
 					<font>Font-Condensed-S30</font>
-					<textcolor>mod-infotags-alt</textcolor>
+					<textcolor>mod-infotags</textcolor>
 					<label>$LOCALIZE[41141]</label>
 					<label2>$INFO[Skin.String(Home.Music.Tile.7.TypeName)]</label2>
 					<visible>!ControlGroup(2405).HasFocus</visible>
@@ -4854,7 +5014,8 @@
 				<onright>5</onright>
 				<onup>2405</onup>
 				<ondown>2407</ondown>
-				<include>SettingsCustomDialogButtonVars</include>
+				<textcolor>mod-infotags</textcolor>
+					<include>SettingsCustomDialogButtonVars</include>
 				<label>$LOCALIZE[41142]</label>
 				<label2>$INFO[Skin.String(Home.Music.Tile.7.Path)]</label2>
 				<onclick condition="stringcompare(Skin.String(Home.Music.Tile.7.Type),0)|stringcompare(Skin.String(Home.Music.Tile.7.Type),1)|stringcompare(Skin.String(Home.Music.Tile.7.Type),2)|stringcompare(Skin.String(Home.Music.Tile.7.Type),3)">SetProperty(Property,Home.Music.Tile.7,selectdialog)</onclick>
@@ -4874,7 +5035,8 @@
 				<onright>5</onright>
 				<onup>2406</onup>
 				<ondown>5</ondown>
-				<include>SettingsCustomDialogButtonVars</include>
+				<textcolor>mod-infotags</textcolor>
+					<include>SettingsCustomDialogButtonVars</include>
 				<label>$LOCALIZE[409]</label>
 				<onclick>Skin.SetString(Home.Music.Tile.7.Type,7)</onclick>
 				<onclick>Skin.SetString(Home.Music.Tile.7.TypeName,$LOCALIZE[41151])</onclick>
@@ -4902,18 +5064,21 @@
 				<scrolltime>0</scrolltime>
 				<orientation>vertical</orientation>
 				<control type="button" id="2141">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogButtonVars</include>
 					<label>$LOCALIZE[41138]</label>
 					<label2>$INFO[Skin.String(Home.Music.Tile.8.Label)]</label2>
 					<onclick>Skin.SetString(Home.Music.Tile.8.Label)</onclick>
 				</control>
 				<control type="button" id="2142">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogButtonVars</include>
 					<label>$LOCALIZE[41139]</label>
 					<label2>$INFO[Skin.String(Home.Music.Tile.8.Icon)]</label2>
 					<onclick>Skin.SetFile(Home.Music.Tile.8.Icon,.png|.jpg|.gif,special://skin/media/windows/home/icons/)</onclick>
 				</control>
 				<control type="radiobutton" id="2403">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogRadioButtonVars</include>
 					<label>$LOCALIZE[41156]</label>
 					<onclick condition="IsEmpty(Skin.String(Home.Music.Tile.8.ShowLabel))">Skin.SetString(Home.Music.Tile.8.ShowLabel,on)</onclick>
@@ -4921,6 +5086,7 @@
 					<selected>IsEmpty(Skin.String(Home.Music.Tile.8.ShowLabel))</selected>
 				</control>
 				<control type="radiobutton" id="2404">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogRadioButtonVars</include>
 					<label>$LOCALIZE[737]</label>
 					<onclick condition="IsEmpty(Skin.String(Home.Music.Tile.8.Animate))">Skin.SetString(Home.Music.Tile.8.Animate,on)</onclick>
@@ -4947,7 +5113,7 @@
 					<align>left</align>
 					<textoffsetx>20</textoffsetx>
 					<font>Font-Condensed-S30</font>
-					<textcolor>mod-infotags-alt</textcolor>
+					<textcolor>mod-infotags</textcolor>
 					<label>$LOCALIZE[41141]</label>
 					<label2>$INFO[Skin.String(Home.Music.Tile.8.TypeName)]</label2>
 					<visible>!ControlGroup(2405).HasFocus</visible>
@@ -5035,7 +5201,8 @@
 				<onright>5</onright>
 				<onup>2405</onup>
 				<ondown>2407</ondown>
-				<include>SettingsCustomDialogButtonVars</include>
+				<textcolor>mod-infotags</textcolor>
+					<include>SettingsCustomDialogButtonVars</include>
 				<label>$LOCALIZE[41142]</label>
 				<label2>$INFO[Skin.String(Home.Music.Tile.8.Path)]</label2>
 				<onclick condition="stringcompare(Skin.String(Home.Music.Tile.8.Type),0)|stringcompare(Skin.String(Home.Music.Tile.8.Type),1)|stringcompare(Skin.String(Home.Music.Tile.8.Type),2)|stringcompare(Skin.String(Home.Music.Tile.8.Type),3)">SetProperty(Property,Home.Music.Tile.8,selectdialog)</onclick>
@@ -5055,7 +5222,8 @@
 				<onright>5</onright>
 				<onup>2406</onup>
 				<ondown>5</ondown>
-				<include>SettingsCustomDialogButtonVars</include>
+				<textcolor>mod-infotags</textcolor>
+					<include>SettingsCustomDialogButtonVars</include>
 				<label>$LOCALIZE[409]</label>
 				<onclick>Skin.SetString(Home.Music.Tile.8.Type,7)</onclick>
 				<onclick>Skin.SetString(Home.Music.Tile.8.TypeName,$LOCALIZE[41151])</onclick>
@@ -5083,18 +5251,21 @@
 				<scrolltime>0</scrolltime>
 				<orientation>vertical</orientation>
 				<control type="button" id="2141">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogButtonVars</include>
 					<label>$LOCALIZE[41138]</label>
 					<label2>$INFO[Skin.String(Home.Music.Tile.9.Label)]</label2>
 					<onclick>Skin.SetString(Home.Music.Tile.9.Label)</onclick>
 				</control>
 				<control type="button" id="2142">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogButtonVars</include>
 					<label>$LOCALIZE[41139]</label>
 					<label2>$INFO[Skin.String(Home.Music.Tile.9.Icon)]</label2>
 					<onclick>Skin.SetFile(Home.Music.Tile.9.Icon,.png|.jpg|.gif,special://skin/media/windows/home/icons/)</onclick>
 				</control>
 				<control type="radiobutton" id="2403">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogRadioButtonVars</include>
 					<label>$LOCALIZE[41156]</label>
 					<onclick condition="IsEmpty(Skin.String(Home.Music.Tile.9.ShowLabel))">Skin.SetString(Home.Music.Tile.9.ShowLabel,on)</onclick>
@@ -5102,6 +5273,7 @@
 					<selected>IsEmpty(Skin.String(Home.Music.Tile.9.ShowLabel))</selected>
 				</control>
 				<control type="radiobutton" id="2404">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogRadioButtonVars</include>
 					<label>$LOCALIZE[737]</label>
 					<onclick condition="IsEmpty(Skin.String(Home.Music.Tile.9.Animate))">Skin.SetString(Home.Music.Tile.9.Animate,on)</onclick>
@@ -5128,7 +5300,7 @@
 					<align>left</align>
 					<textoffsetx>20</textoffsetx>
 					<font>Font-Condensed-S30</font>
-					<textcolor>mod-infotags-alt</textcolor>
+					<textcolor>mod-infotags</textcolor>
 					<label>$LOCALIZE[41141]</label>
 					<label2>$INFO[Skin.String(Home.Music.Tile.9.TypeName)]</label2>
 					<visible>!ControlGroup(2405).HasFocus</visible>
@@ -5216,7 +5388,8 @@
 				<onright>5</onright>
 				<onup>2405</onup>
 				<ondown>2407</ondown>
-				<include>SettingsCustomDialogButtonVars</include>
+				<textcolor>mod-infotags</textcolor>
+					<include>SettingsCustomDialogButtonVars</include>
 				<label>$LOCALIZE[41142]</label>
 				<label2>$INFO[Skin.String(Home.Music.Tile.9.Path)]</label2>
 				<onclick condition="stringcompare(Skin.String(Home.Music.Tile.9.Type),0)|stringcompare(Skin.String(Home.Music.Tile.9.Type),1)|stringcompare(Skin.String(Home.Music.Tile.9.Type),2)|stringcompare(Skin.String(Home.Music.Tile.9.Type),3)">SetProperty(Property,Home.Music.Tile.9,selectdialog)</onclick>
@@ -5236,7 +5409,8 @@
 				<onright>5</onright>
 				<onup>2406</onup>
 				<ondown>5</ondown>
-				<include>SettingsCustomDialogButtonVars</include>
+				<textcolor>mod-infotags</textcolor>
+					<include>SettingsCustomDialogButtonVars</include>
 				<label>$LOCALIZE[409]</label>
 				<onclick>Skin.SetString(Home.Music.Tile.9.Type,7)</onclick>
 				<onclick>Skin.SetString(Home.Music.Tile.9.TypeName,$LOCALIZE[41151])</onclick>
@@ -5264,18 +5438,21 @@
 				<scrolltime>0</scrolltime>
 				<orientation>vertical</orientation>
 				<control type="button" id="2141">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogButtonVars</include>
 					<label>$LOCALIZE[41138]</label>
 					<label2>$INFO[Skin.String(Home.Music.Tile.10.Label)]</label2>
 					<onclick>Skin.SetString(Home.Music.Tile.10.Label)</onclick>
 				</control>
 				<control type="button" id="2142">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogButtonVars</include>
 					<label>$LOCALIZE[41139]</label>
 					<label2>$INFO[Skin.String(Home.Music.Tile.10.Icon)]</label2>
 					<onclick>Skin.SetFile(Home.Music.Tile.10.Icon,.png|.jpg|.gif,special://skin/media/windows/home/icons/)</onclick>
 				</control>
 				<control type="radiobutton" id="2403">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogRadioButtonVars</include>
 					<label>$LOCALIZE[41156]</label>
 					<onclick condition="IsEmpty(Skin.String(Home.Music.Tile.10.ShowLabel))">Skin.SetString(Home.Music.Tile.10.ShowLabel,on)</onclick>
@@ -5283,6 +5460,7 @@
 					<selected>IsEmpty(Skin.String(Home.Music.Tile.10.ShowLabel))</selected>
 				</control>
 				<control type="radiobutton" id="2404">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogRadioButtonVars</include>
 					<label>$LOCALIZE[737]</label>
 					<onclick condition="IsEmpty(Skin.String(Home.Music.Tile.10.Animate))">Skin.SetString(Home.Music.Tile.10.Animate,on)</onclick>
@@ -5309,7 +5487,7 @@
 					<align>left</align>
 					<textoffsetx>20</textoffsetx>
 					<font>Font-Condensed-S30</font>
-					<textcolor>mod-infotags-alt</textcolor>
+					<textcolor>mod-infotags</textcolor>
 					<label>$LOCALIZE[41141]</label>
 					<label2>$INFO[Skin.String(Home.Music.Tile.10.TypeName)]</label2>
 					<visible>!ControlGroup(2405).HasFocus</visible>
@@ -5397,7 +5575,8 @@
 				<onright>5</onright>
 				<onup>2405</onup>
 				<ondown>2407</ondown>
-				<include>SettingsCustomDialogButtonVars</include>
+				<textcolor>mod-infotags</textcolor>
+					<include>SettingsCustomDialogButtonVars</include>
 				<label>$LOCALIZE[41142]</label>
 				<label2>$INFO[Skin.String(Home.Music.Tile.10.Path)]</label2>
 				<onclick condition="stringcompare(Skin.String(Home.Music.Tile.10.Type),0)|stringcompare(Skin.String(Home.Music.Tile.10.Type),1)|stringcompare(Skin.String(Home.Music.Tile.10.Type),2)|stringcompare(Skin.String(Home.Music.Tile.10.Type),3)">SetProperty(Property,Home.Music.Tile.10,selectdialog)</onclick>
@@ -5417,7 +5596,8 @@
 				<onright>5</onright>
 				<onup>2406</onup>
 				<ondown>5</ondown>
-				<include>SettingsCustomDialogButtonVars</include>
+				<textcolor>mod-infotags</textcolor>
+					<include>SettingsCustomDialogButtonVars</include>
 				<label>$LOCALIZE[409]</label>
 				<onclick>Skin.SetString(Home.Music.Tile.10.Type,7)</onclick>
 				<onclick>Skin.SetString(Home.Music.Tile.10.TypeName,$LOCALIZE[41151])</onclick>
@@ -5445,18 +5625,21 @@
 				<scrolltime>0</scrolltime>
 				<orientation>vertical</orientation>
 				<control type="button" id="2141">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogButtonVars</include>
 					<label>$LOCALIZE[41138]</label>
 					<label2>$INFO[Skin.String(Home.Programs.Tile.1.Label)]</label2>
 					<onclick>Skin.SetString(Home.Programs.Tile.1.Label)</onclick>
 				</control>
 				<control type="button" id="2142">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogButtonVars</include>
 					<label>$LOCALIZE[41139]</label>
 					<label2>$INFO[Skin.String(Home.Programs.Tile.1.Icon)]</label2>
 					<onclick>Skin.SetFile(Home.Programs.Tile.1.Icon,.png|.jpg|.gif,special://skin/media/windows/home/icons/)</onclick>
 				</control>
 				<control type="radiobutton" id="2403">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogRadioButtonVars</include>
 					<label>$LOCALIZE[41156]</label>
 					<onclick condition="IsEmpty(Skin.String(Home.Programs.Tile.1.ShowLabel))">Skin.SetString(Home.Programs.Tile.1.ShowLabel,on)</onclick>
@@ -5464,6 +5647,7 @@
 					<selected>IsEmpty(Skin.String(Home.Programs.Tile.1.ShowLabel))</selected>
 				</control>
 				<control type="radiobutton" id="2404">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogRadioButtonVars</include>
 					<label>$LOCALIZE[737]</label>
 					<onclick condition="IsEmpty(Skin.String(Home.Programs.Tile.1.Animate))">Skin.SetString(Home.Programs.Tile.1.Animate,on)</onclick>
@@ -5490,7 +5674,7 @@
 					<align>left</align>
 					<textoffsetx>20</textoffsetx>
 					<font>Font-Condensed-S30</font>
-					<textcolor>mod-infotags-alt</textcolor>
+					<textcolor>mod-infotags</textcolor>
 					<label>$LOCALIZE[41141]</label>
 					<label2>$INFO[Skin.String(Home.Programs.Tile.1.TypeName)]</label2>
 					<visible>!ControlGroup(2405).HasFocus</visible>
@@ -5578,7 +5762,8 @@
 				<onright>5</onright>
 				<onup>2405</onup>
 				<ondown>2407</ondown>
-				<include>SettingsCustomDialogButtonVars</include>
+				<textcolor>mod-infotags</textcolor>
+					<include>SettingsCustomDialogButtonVars</include>
 				<label>$LOCALIZE[41142]</label>
 				<label2>$INFO[Skin.String(Home.Programs.Tile.1.Path)]</label2>
 				<onclick condition="stringcompare(Skin.String(Home.Programs.Tile.1.Type),0)|stringcompare(Skin.String(Home.Programs.Tile.1.Type),1)|stringcompare(Skin.String(Home.Programs.Tile.1.Type),2)|stringcompare(Skin.String(Home.Programs.Tile.1.Type),3)">SetProperty(Property,Home.Programs.Tile.1,selectdialog)</onclick>
@@ -5598,7 +5783,8 @@
 				<onright>5</onright>
 				<onup>2406</onup>
 				<ondown>5</ondown>
-				<include>SettingsCustomDialogButtonVars</include>
+				<textcolor>mod-infotags</textcolor>
+					<include>SettingsCustomDialogButtonVars</include>
 				<label>$LOCALIZE[409]</label>
 				<onclick>Skin.SetString(Home.Programs.Tile.1.Type,7)</onclick>
 				<onclick>Skin.SetString(Home.Programs.Tile.1.TypeName,$LOCALIZE[41151])</onclick>
@@ -5626,18 +5812,21 @@
 				<scrolltime>0</scrolltime>
 				<orientation>vertical</orientation>
 				<control type="button" id="2141">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogButtonVars</include>
 					<label>$LOCALIZE[41138]</label>
 					<label2>$INFO[Skin.String(Home.Programs.Tile.2.Label)]</label2>
 					<onclick>Skin.SetString(Home.Programs.Tile.2.Label)</onclick>
 				</control>
 				<control type="button" id="2142">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogButtonVars</include>
 					<label>$LOCALIZE[41139]</label>
 					<label2>$INFO[Skin.String(Home.Programs.Tile.2.Icon)]</label2>
 					<onclick>Skin.SetFile(Home.Programs.Tile.2.Icon,.png|.jpg|.gif,special://skin/media/windows/home/icons/)</onclick>
 				</control>
 				<control type="radiobutton" id="2403">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogRadioButtonVars</include>
 					<label>$LOCALIZE[41156]</label>
 					<onclick condition="IsEmpty(Skin.String(Home.Programs.Tile.2.ShowLabel))">Skin.SetString(Home.Programs.Tile.2.ShowLabel,on)</onclick>
@@ -5645,6 +5834,7 @@
 					<selected>IsEmpty(Skin.String(Home.Programs.Tile.2.ShowLabel))</selected>
 				</control>
 				<control type="radiobutton" id="2404">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogRadioButtonVars</include>
 					<label>$LOCALIZE[737]</label>
 					<onclick condition="IsEmpty(Skin.String(Home.Programs.Tile.2.Animate))">Skin.SetString(Home.Programs.Tile.2.Animate,on)</onclick>
@@ -5671,7 +5861,7 @@
 					<align>left</align>
 					<textoffsetx>20</textoffsetx>
 					<font>Font-Condensed-S30</font>
-					<textcolor>mod-infotags-alt</textcolor>
+					<textcolor>mod-infotags</textcolor>
 					<label>$LOCALIZE[41141]</label>
 					<label2>$INFO[Skin.String(Home.Programs.Tile.2.TypeName)]</label2>
 					<visible>!ControlGroup(2405).HasFocus</visible>
@@ -5759,7 +5949,8 @@
 				<onright>5</onright>
 				<onup>2405</onup>
 				<ondown>2407</ondown>
-				<include>SettingsCustomDialogButtonVars</include>
+				<textcolor>mod-infotags</textcolor>
+					<include>SettingsCustomDialogButtonVars</include>
 				<label>$LOCALIZE[41142]</label>
 				<label2>$INFO[Skin.String(Home.Programs.Tile.2.Path)]</label2>
 				<onclick condition="stringcompare(Skin.String(Home.Programs.Tile.2.Type),0)|stringcompare(Skin.String(Home.Programs.Tile.2.Type),1)|stringcompare(Skin.String(Home.Programs.Tile.2.Type),2)|stringcompare(Skin.String(Home.Programs.Tile.2.Type),3)">SetProperty(Property,Home.Programs.Tile.2,selectdialog)</onclick>
@@ -5779,7 +5970,8 @@
 				<onright>5</onright>
 				<onup>2406</onup>
 				<ondown>5</ondown>
-				<include>SettingsCustomDialogButtonVars</include>
+				<textcolor>mod-infotags</textcolor>
+					<include>SettingsCustomDialogButtonVars</include>
 				<label>$LOCALIZE[409]</label>
 				<onclick>Skin.SetString(Home.Programs.Tile.2.Type,7)</onclick>
 				<onclick>Skin.SetString(Home.Programs.Tile.2.TypeName,$LOCALIZE[41151])</onclick>
@@ -5807,18 +5999,21 @@
 				<scrolltime>0</scrolltime>
 				<orientation>vertical</orientation>
 				<control type="button" id="2141">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogButtonVars</include>
 					<label>$LOCALIZE[41138]</label>
 					<label2>$INFO[Skin.String(Home.Programs.Tile.3.Label)]</label2>
 					<onclick>Skin.SetString(Home.Programs.Tile.3.Label)</onclick>
 				</control>
 				<control type="button" id="2142">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogButtonVars</include>
 					<label>$LOCALIZE[41139]</label>
 					<label2>$INFO[Skin.String(Home.Programs.Tile.3.Icon)]</label2>
 					<onclick>Skin.SetFile(Home.Programs.Tile.3.Icon,.png|.jpg|.gif,special://skin/media/windows/home/icons/)</onclick>
 				</control>
 				<control type="radiobutton" id="2403">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogRadioButtonVars</include>
 					<label>$LOCALIZE[41156]</label>
 					<onclick condition="IsEmpty(Skin.String(Home.Programs.Tile.3.ShowLabel))">Skin.SetString(Home.Programs.Tile.3.ShowLabel,on)</onclick>
@@ -5826,6 +6021,7 @@
 					<selected>IsEmpty(Skin.String(Home.Programs.Tile.3.ShowLabel))</selected>
 				</control>
 				<control type="radiobutton" id="2404">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogRadioButtonVars</include>
 					<label>$LOCALIZE[737]</label>
 					<onclick condition="IsEmpty(Skin.String(Home.Programs.Tile.3.Animate))">Skin.SetString(Home.Programs.Tile.3.Animate,on)</onclick>
@@ -5852,7 +6048,7 @@
 					<align>left</align>
 					<textoffsetx>20</textoffsetx>
 					<font>Font-Condensed-S30</font>
-					<textcolor>mod-infotags-alt</textcolor>
+					<textcolor>mod-infotags</textcolor>
 					<label>$LOCALIZE[41141]</label>
 					<label2>$INFO[Skin.String(Home.Programs.Tile.3.TypeName)]</label2>
 					<visible>!ControlGroup(2405).HasFocus</visible>
@@ -5940,7 +6136,8 @@
 				<onright>5</onright>
 				<onup>2405</onup>
 				<ondown>2407</ondown>
-				<include>SettingsCustomDialogButtonVars</include>
+				<textcolor>mod-infotags</textcolor>
+					<include>SettingsCustomDialogButtonVars</include>
 				<label>$LOCALIZE[41142]</label>
 				<label2>$INFO[Skin.String(Home.Programs.Tile.3.Path)]</label2>
 				<onclick condition="stringcompare(Skin.String(Home.Programs.Tile.3.Type),0)|stringcompare(Skin.String(Home.Programs.Tile.3.Type),1)|stringcompare(Skin.String(Home.Programs.Tile.3.Type),2)|stringcompare(Skin.String(Home.Programs.Tile.3.Type),3)">SetProperty(Property,Home.Programs.Tile.3,selectdialog)</onclick>
@@ -5960,7 +6157,8 @@
 				<onright>5</onright>
 				<onup>2406</onup>
 				<ondown>5</ondown>
-				<include>SettingsCustomDialogButtonVars</include>
+				<textcolor>mod-infotags</textcolor>
+					<include>SettingsCustomDialogButtonVars</include>
 				<label>$LOCALIZE[409]</label>
 				<onclick>Skin.SetString(Home.Programs.Tile.3.Type,7)</onclick>
 				<onclick>Skin.SetString(Home.Programs.Tile.3.TypeName,$LOCALIZE[41151])</onclick>
@@ -5988,18 +6186,21 @@
 				<scrolltime>0</scrolltime>
 				<orientation>vertical</orientation>
 				<control type="button" id="2141">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogButtonVars</include>
 					<label>$LOCALIZE[41138]</label>
 					<label2>$INFO[Skin.String(Home.Programs.Tile.4.Label)]</label2>
 					<onclick>Skin.SetString(Home.Programs.Tile.4.Label)</onclick>
 				</control>
 				<control type="button" id="2142">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogButtonVars</include>
 					<label>$LOCALIZE[41139]</label>
 					<label2>$INFO[Skin.String(Home.Programs.Tile.4.Icon)]</label2>
 					<onclick>Skin.SetFile(Home.Programs.Tile.4.Icon,.png|.jpg|.gif,special://skin/media/windows/home/icons/)</onclick>
 				</control>
 				<control type="radiobutton" id="2403">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogRadioButtonVars</include>
 					<label>$LOCALIZE[41156]</label>
 					<onclick condition="IsEmpty(Skin.String(Home.Programs.Tile.4.ShowLabel))">Skin.SetString(Home.Programs.Tile.4.ShowLabel,on)</onclick>
@@ -6007,6 +6208,7 @@
 					<selected>IsEmpty(Skin.String(Home.Programs.Tile.4.ShowLabel))</selected>
 				</control>
 				<control type="radiobutton" id="2404">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogRadioButtonVars</include>
 					<label>$LOCALIZE[737]</label>
 					<onclick condition="IsEmpty(Skin.String(Home.Programs.Tile.4.Animate))">Skin.SetString(Home.Programs.Tile.4.Animate,on)</onclick>
@@ -6033,7 +6235,7 @@
 					<align>left</align>
 					<textoffsetx>20</textoffsetx>
 					<font>Font-Condensed-S30</font>
-					<textcolor>mod-infotags-alt</textcolor>
+					<textcolor>mod-infotags</textcolor>
 					<label>$LOCALIZE[41141]</label>
 					<label2>$INFO[Skin.String(Home.Programs.Tile.4.TypeName)]</label2>
 					<visible>!ControlGroup(2405).HasFocus</visible>
@@ -6121,7 +6323,8 @@
 				<onright>5</onright>
 				<onup>2405</onup>
 				<ondown>2407</ondown>
-				<include>SettingsCustomDialogButtonVars</include>
+				<textcolor>mod-infotags</textcolor>
+					<include>SettingsCustomDialogButtonVars</include>
 				<label>$LOCALIZE[41142]</label>
 				<label2>$INFO[Skin.String(Home.Programs.Tile.4.Path)]</label2>
 				<onclick condition="stringcompare(Skin.String(Home.Programs.Tile.4.Type),0)|stringcompare(Skin.String(Home.Programs.Tile.4.Type),1)|stringcompare(Skin.String(Home.Programs.Tile.4.Type),2)|stringcompare(Skin.String(Home.Programs.Tile.4.Type),3)">SetProperty(Property,Home.Programs.Tile.4,selectdialog)</onclick>
@@ -6141,7 +6344,8 @@
 				<onright>5</onright>
 				<onup>2406</onup>
 				<ondown>5</ondown>
-				<include>SettingsCustomDialogButtonVars</include>
+				<textcolor>mod-infotags</textcolor>
+					<include>SettingsCustomDialogButtonVars</include>
 				<label>$LOCALIZE[409]</label>
 				<onclick>Skin.SetString(Home.Programs.Tile.4.Type,7)</onclick>
 				<onclick>Skin.SetString(Home.Programs.Tile.4.TypeName,$LOCALIZE[41151])</onclick>
@@ -6169,18 +6373,21 @@
 				<scrolltime>0</scrolltime>
 				<orientation>vertical</orientation>
 				<control type="button" id="2141">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogButtonVars</include>
 					<label>$LOCALIZE[41138]</label>
 					<label2>$INFO[Skin.String(Home.Programs.Tile.5.Label)]</label2>
 					<onclick>Skin.SetString(Home.Programs.Tile.5.Label)</onclick>
 				</control>
 				<control type="button" id="2142">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogButtonVars</include>
 					<label>$LOCALIZE[41139]</label>
 					<label2>$INFO[Skin.String(Home.Programs.Tile.5.Icon)]</label2>
 					<onclick>Skin.SetFile(Home.Programs.Tile.5.Icon,.png|.jpg|.gif,special://skin/media/windows/home/icons/)</onclick>
 				</control>
 				<control type="radiobutton" id="2403">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogRadioButtonVars</include>
 					<label>$LOCALIZE[41156]</label>
 					<onclick condition="IsEmpty(Skin.String(Home.Programs.Tile.5.ShowLabel))">Skin.SetString(Home.Programs.Tile.5.ShowLabel,on)</onclick>
@@ -6188,6 +6395,7 @@
 					<selected>IsEmpty(Skin.String(Home.Programs.Tile.5.ShowLabel))</selected>
 				</control>
 				<control type="radiobutton" id="2404">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogRadioButtonVars</include>
 					<label>$LOCALIZE[737]</label>
 					<onclick condition="IsEmpty(Skin.String(Home.Programs.Tile.5.Animate))">Skin.SetString(Home.Programs.Tile.5.Animate,on)</onclick>
@@ -6214,7 +6422,7 @@
 					<align>left</align>
 					<textoffsetx>20</textoffsetx>
 					<font>Font-Condensed-S30</font>
-					<textcolor>mod-infotags-alt</textcolor>
+					<textcolor>mod-infotags</textcolor>
 					<label>$LOCALIZE[41141]</label>
 					<label2>$INFO[Skin.String(Home.Programs.Tile.5.TypeName)]</label2>
 					<visible>!ControlGroup(2405).HasFocus</visible>
@@ -6302,7 +6510,8 @@
 				<onright>5</onright>
 				<onup>2405</onup>
 				<ondown>2407</ondown>
-				<include>SettingsCustomDialogButtonVars</include>
+				<textcolor>mod-infotags</textcolor>
+					<include>SettingsCustomDialogButtonVars</include>
 				<label>$LOCALIZE[41142]</label>
 				<label2>$INFO[Skin.String(Home.Programs.Tile.5.Path)]</label2>
 				<onclick condition="stringcompare(Skin.String(Home.Programs.Tile.5.Type),0)|stringcompare(Skin.String(Home.Programs.Tile.5.Type),1)|stringcompare(Skin.String(Home.Programs.Tile.5.Type),2)|stringcompare(Skin.String(Home.Programs.Tile.5.Type),3)">SetProperty(Property,Home.Programs.Tile.5,selectdialog)</onclick>
@@ -6322,7 +6531,8 @@
 				<onright>5</onright>
 				<onup>2406</onup>
 				<ondown>5</ondown>
-				<include>SettingsCustomDialogButtonVars</include>
+				<textcolor>mod-infotags</textcolor>
+					<include>SettingsCustomDialogButtonVars</include>
 				<label>$LOCALIZE[409]</label>
 				<onclick>Skin.SetString(Home.Programs.Tile.5.Type,7)</onclick>
 				<onclick>Skin.SetString(Home.Programs.Tile.5.TypeName,$LOCALIZE[41151])</onclick>
@@ -6350,18 +6560,21 @@
 				<scrolltime>0</scrolltime>
 				<orientation>vertical</orientation>
 				<control type="button" id="2141">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogButtonVars</include>
 					<label>$LOCALIZE[41138]</label>
 					<label2>$INFO[Skin.String(Home.Programs.Tile.6.Label)]</label2>
 					<onclick>Skin.SetString(Home.Programs.Tile.6.Label)</onclick>
 				</control>
 				<control type="button" id="2142">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogButtonVars</include>
 					<label>$LOCALIZE[41139]</label>
 					<label2>$INFO[Skin.String(Home.Programs.Tile.6.Icon)]</label2>
 					<onclick>Skin.SetFile(Home.Programs.Tile.6.Icon,.png|.jpg|.gif,special://skin/media/windows/home/icons/)</onclick>
 				</control>
 				<control type="radiobutton" id="2403">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogRadioButtonVars</include>
 					<label>$LOCALIZE[41156]</label>
 					<onclick condition="IsEmpty(Skin.String(Home.Programs.Tile.6.ShowLabel))">Skin.SetString(Home.Programs.Tile.6.ShowLabel,on)</onclick>
@@ -6369,6 +6582,7 @@
 					<selected>IsEmpty(Skin.String(Home.Programs.Tile.6.ShowLabel))</selected>
 				</control>
 				<control type="radiobutton" id="2404">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogRadioButtonVars</include>
 					<label>$LOCALIZE[737]</label>
 					<onclick condition="IsEmpty(Skin.String(Home.Programs.Tile.6.Animate))">Skin.SetString(Home.Programs.Tile.6.Animate,on)</onclick>
@@ -6395,7 +6609,7 @@
 					<align>left</align>
 					<textoffsetx>20</textoffsetx>
 					<font>Font-Condensed-S30</font>
-					<textcolor>mod-infotags-alt</textcolor>
+					<textcolor>mod-infotags</textcolor>
 					<label>$LOCALIZE[41141]</label>
 					<label2>$INFO[Skin.String(Home.Programs.Tile.6.TypeName)]</label2>
 					<visible>!ControlGroup(2405).HasFocus</visible>
@@ -6483,7 +6697,8 @@
 				<onright>5</onright>
 				<onup>2405</onup>
 				<ondown>2407</ondown>
-				<include>SettingsCustomDialogButtonVars</include>
+				<textcolor>mod-infotags</textcolor>
+					<include>SettingsCustomDialogButtonVars</include>
 				<label>$LOCALIZE[41142]</label>
 				<label2>$INFO[Skin.String(Home.Programs.Tile.6.Path)]</label2>
 				<onclick condition="stringcompare(Skin.String(Home.Programs.Tile.6.Type),0)|stringcompare(Skin.String(Home.Programs.Tile.6.Type),1)|stringcompare(Skin.String(Home.Programs.Tile.6.Type),2)|stringcompare(Skin.String(Home.Programs.Tile.6.Type),3)">SetProperty(Property,Home.Programs.Tile.6,selectdialog)</onclick>
@@ -6503,7 +6718,8 @@
 				<onright>5</onright>
 				<onup>2406</onup>
 				<ondown>5</ondown>
-				<include>SettingsCustomDialogButtonVars</include>
+				<textcolor>mod-infotags</textcolor>
+					<include>SettingsCustomDialogButtonVars</include>
 				<label>$LOCALIZE[409]</label>
 				<onclick>Skin.SetString(Home.Programs.Tile.6.Type,7)</onclick>
 				<onclick>Skin.SetString(Home.Programs.Tile.6.TypeName,$LOCALIZE[41151])</onclick>
@@ -6531,18 +6747,21 @@
 				<scrolltime>0</scrolltime>
 				<orientation>vertical</orientation>
 				<control type="button" id="2141">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogButtonVars</include>
 					<label>$LOCALIZE[41138]</label>
 					<label2>$INFO[Skin.String(Home.Programs.Tile.7.Label)]</label2>
 					<onclick>Skin.SetString(Home.Programs.Tile.7.Label)</onclick>
 				</control>
 				<control type="button" id="2142">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogButtonVars</include>
 					<label>$LOCALIZE[41139]</label>
 					<label2>$INFO[Skin.String(Home.Programs.Tile.7.Icon)]</label2>
 					<onclick>Skin.SetFile(Home.Programs.Tile.7.Icon,.png|.jpg|.gif,special://skin/media/windows/home/icons/)</onclick>
 				</control>
 				<control type="radiobutton" id="2403">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogRadioButtonVars</include>
 					<label>$LOCALIZE[41156]</label>
 					<onclick condition="IsEmpty(Skin.String(Home.Programs.Tile.7.ShowLabel))">Skin.SetString(Home.Programs.Tile.7.ShowLabel,on)</onclick>
@@ -6550,6 +6769,7 @@
 					<selected>IsEmpty(Skin.String(Home.Programs.Tile.7.ShowLabel))</selected>
 				</control>
 				<control type="radiobutton" id="2404">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogRadioButtonVars</include>
 					<label>$LOCALIZE[737]</label>
 					<onclick condition="IsEmpty(Skin.String(Home.Programs.Tile.7.Animate))">Skin.SetString(Home.Programs.Tile.7.Animate,on)</onclick>
@@ -6576,7 +6796,7 @@
 					<align>left</align>
 					<textoffsetx>20</textoffsetx>
 					<font>Font-Condensed-S30</font>
-					<textcolor>mod-infotags-alt</textcolor>
+					<textcolor>mod-infotags</textcolor>
 					<label>$LOCALIZE[41141]</label>
 					<label2>$INFO[Skin.String(Home.Programs.Tile.7.TypeName)]</label2>
 					<visible>!ControlGroup(2405).HasFocus</visible>
@@ -6664,7 +6884,8 @@
 				<onright>5</onright>
 				<onup>2405</onup>
 				<ondown>2407</ondown>
-				<include>SettingsCustomDialogButtonVars</include>
+				<textcolor>mod-infotags</textcolor>
+					<include>SettingsCustomDialogButtonVars</include>
 				<label>$LOCALIZE[41142]</label>
 				<label2>$INFO[Skin.String(Home.Programs.Tile.7.Path)]</label2>
 				<onclick condition="stringcompare(Skin.String(Home.Programs.Tile.7.Type),0)|stringcompare(Skin.String(Home.Programs.Tile.7.Type),1)|stringcompare(Skin.String(Home.Programs.Tile.7.Type),2)|stringcompare(Skin.String(Home.Programs.Tile.7.Type),3)">SetProperty(Property,Home.Programs.Tile.7,selectdialog)</onclick>
@@ -6684,7 +6905,8 @@
 				<onright>5</onright>
 				<onup>2406</onup>
 				<ondown>5</ondown>
-				<include>SettingsCustomDialogButtonVars</include>
+				<textcolor>mod-infotags</textcolor>
+					<include>SettingsCustomDialogButtonVars</include>
 				<label>$LOCALIZE[409]</label>
 				<onclick>Skin.SetString(Home.Programs.Tile.7.Type,7)</onclick>
 				<onclick>Skin.SetString(Home.Programs.Tile.7.TypeName,$LOCALIZE[41151])</onclick>
@@ -6712,18 +6934,21 @@
 				<scrolltime>0</scrolltime>
 				<orientation>vertical</orientation>
 				<control type="button" id="2141">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogButtonVars</include>
 					<label>$LOCALIZE[41138]</label>
 					<label2>$INFO[Skin.String(Home.Programs.Tile.8.Label)]</label2>
 					<onclick>Skin.SetString(Home.Programs.Tile.8.Label)</onclick>
 				</control>
 				<control type="button" id="2142">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogButtonVars</include>
 					<label>$LOCALIZE[41139]</label>
 					<label2>$INFO[Skin.String(Home.Programs.Tile.8.Icon)]</label2>
 					<onclick>Skin.SetFile(Home.Programs.Tile.8.Icon,.png|.jpg|.gif,special://skin/media/windows/home/icons/)</onclick>
 				</control>
 				<control type="radiobutton" id="2403">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogRadioButtonVars</include>
 					<label>$LOCALIZE[41156]</label>
 					<onclick condition="IsEmpty(Skin.String(Home.Programs.Tile.8.ShowLabel))">Skin.SetString(Home.Programs.Tile.8.ShowLabel,on)</onclick>
@@ -6731,6 +6956,7 @@
 					<selected>IsEmpty(Skin.String(Home.Programs.Tile.8.ShowLabel))</selected>
 				</control>
 				<control type="radiobutton" id="2404">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogRadioButtonVars</include>
 					<label>$LOCALIZE[737]</label>
 					<onclick condition="IsEmpty(Skin.String(Home.Programs.Tile.8.Animate))">Skin.SetString(Home.Programs.Tile.8.Animate,on)</onclick>
@@ -6757,7 +6983,7 @@
 					<align>left</align>
 					<textoffsetx>20</textoffsetx>
 					<font>Font-Condensed-S30</font>
-					<textcolor>mod-infotags-alt</textcolor>
+					<textcolor>mod-infotags</textcolor>
 					<label>$LOCALIZE[41141]</label>
 					<label2>$INFO[Skin.String(Home.Programs.Tile.8.TypeName)]</label2>
 					<visible>!ControlGroup(2405).HasFocus</visible>
@@ -6845,7 +7071,8 @@
 				<onright>5</onright>
 				<onup>2405</onup>
 				<ondown>2407</ondown>
-				<include>SettingsCustomDialogButtonVars</include>
+				<textcolor>mod-infotags</textcolor>
+					<include>SettingsCustomDialogButtonVars</include>
 				<label>$LOCALIZE[41142]</label>
 				<label2>$INFO[Skin.String(Home.Programs.Tile.8.Path)]</label2>
 				<onclick condition="stringcompare(Skin.String(Home.Programs.Tile.8.Type),0)|stringcompare(Skin.String(Home.Programs.Tile.8.Type),1)|stringcompare(Skin.String(Home.Programs.Tile.8.Type),2)|stringcompare(Skin.String(Home.Programs.Tile.8.Type),3)">SetProperty(Property,Home.Programs.Tile.8,selectdialog)</onclick>
@@ -6865,7 +7092,8 @@
 				<onright>5</onright>
 				<onup>2406</onup>
 				<ondown>5</ondown>
-				<include>SettingsCustomDialogButtonVars</include>
+				<textcolor>mod-infotags</textcolor>
+					<include>SettingsCustomDialogButtonVars</include>
 				<label>$LOCALIZE[409]</label>
 				<onclick>Skin.SetString(Home.Programs.Tile.8.Type,7)</onclick>
 				<onclick>Skin.SetString(Home.Programs.Tile.8.TypeName,$LOCALIZE[41151])</onclick>
@@ -6893,18 +7121,21 @@
 				<scrolltime>0</scrolltime>
 				<orientation>vertical</orientation>
 				<control type="button" id="2141">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogButtonVars</include>
 					<label>$LOCALIZE[41138]</label>
 					<label2>$INFO[Skin.String(Home.Programs.Tile.9.Label)]</label2>
 					<onclick>Skin.SetString(Home.Programs.Tile.9.Label)</onclick>
 				</control>
 				<control type="button" id="2142">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogButtonVars</include>
 					<label>$LOCALIZE[41139]</label>
 					<label2>$INFO[Skin.String(Home.Programs.Tile.9.Icon)]</label2>
 					<onclick>Skin.SetFile(Home.Programs.Tile.9.Icon,.png|.jpg|.gif,special://skin/media/windows/home/icons/)</onclick>
 				</control>
 				<control type="radiobutton" id="2403">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogRadioButtonVars</include>
 					<label>$LOCALIZE[41156]</label>
 					<onclick condition="IsEmpty(Skin.String(Home.Programs.Tile.9.ShowLabel))">Skin.SetString(Home.Programs.Tile.9.ShowLabel,on)</onclick>
@@ -6912,6 +7143,7 @@
 					<selected>IsEmpty(Skin.String(Home.Programs.Tile.9.ShowLabel))</selected>
 				</control>
 				<control type="radiobutton" id="2404">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogRadioButtonVars</include>
 					<label>$LOCALIZE[737]</label>
 					<onclick condition="IsEmpty(Skin.String(Home.Programs.Tile.9.Animate))">Skin.SetString(Home.Programs.Tile.9.Animate,on)</onclick>
@@ -6938,7 +7170,7 @@
 					<align>left</align>
 					<textoffsetx>20</textoffsetx>
 					<font>Font-Condensed-S30</font>
-					<textcolor>mod-infotags-alt</textcolor>
+					<textcolor>mod-infotags</textcolor>
 					<label>$LOCALIZE[41141]</label>
 					<label2>$INFO[Skin.String(Home.Programs.Tile.9.TypeName)]</label2>
 					<visible>!ControlGroup(2405).HasFocus</visible>
@@ -7026,7 +7258,8 @@
 				<onright>5</onright>
 				<onup>2405</onup>
 				<ondown>2407</ondown>
-				<include>SettingsCustomDialogButtonVars</include>
+				<textcolor>mod-infotags</textcolor>
+					<include>SettingsCustomDialogButtonVars</include>
 				<label>$LOCALIZE[41142]</label>
 				<label2>$INFO[Skin.String(Home.Programs.Tile.9.Path)]</label2>
 				<onclick condition="stringcompare(Skin.String(Home.Programs.Tile.9.Type),0)|stringcompare(Skin.String(Home.Programs.Tile.9.Type),1)|stringcompare(Skin.String(Home.Programs.Tile.9.Type),2)|stringcompare(Skin.String(Home.Programs.Tile.9.Type),3)">SetProperty(Property,Home.Programs.Tile.9,selectdialog)</onclick>
@@ -7046,7 +7279,8 @@
 				<onright>5</onright>
 				<onup>2406</onup>
 				<ondown>5</ondown>
-				<include>SettingsCustomDialogButtonVars</include>
+				<textcolor>mod-infotags</textcolor>
+					<include>SettingsCustomDialogButtonVars</include>
 				<label>$LOCALIZE[409]</label>
 				<onclick>Skin.SetString(Home.Programs.Tile.9.Type,7)</onclick>
 				<onclick>Skin.SetString(Home.Programs.Tile.9.TypeName,$LOCALIZE[41151])</onclick>
@@ -7074,18 +7308,21 @@
 				<scrolltime>0</scrolltime>
 				<orientation>vertical</orientation>
 				<control type="button" id="2141">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogButtonVars</include>
 					<label>$LOCALIZE[41138]</label>
 					<label2>$INFO[Skin.String(Home.Programs.Tile.10.Label)]</label2>
 					<onclick>Skin.SetString(Home.Programs.Tile.10.Label)</onclick>
 				</control>
 				<control type="button" id="2142">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogButtonVars</include>
 					<label>$LOCALIZE[41139]</label>
 					<label2>$INFO[Skin.String(Home.Programs.Tile.10.Icon)]</label2>
 					<onclick>Skin.SetFile(Home.Programs.Tile.10.Icon,.png|.jpg|.gif,special://skin/media/windows/home/icons/)</onclick>
 				</control>
 				<control type="radiobutton" id="2403">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogRadioButtonVars</include>
 					<label>$LOCALIZE[41156]</label>
 					<onclick condition="IsEmpty(Skin.String(Home.Programs.Tile.10.ShowLabel))">Skin.SetString(Home.Programs.Tile.10.ShowLabel,on)</onclick>
@@ -7093,6 +7330,7 @@
 					<selected>IsEmpty(Skin.String(Home.Programs.Tile.10.ShowLabel))</selected>
 				</control>
 				<control type="radiobutton" id="2404">
+					<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogRadioButtonVars</include>
 					<label>$LOCALIZE[737]</label>
 					<onclick condition="IsEmpty(Skin.String(Home.Programs.Tile.10.Animate))">Skin.SetString(Home.Programs.Tile.10.Animate,on)</onclick>
@@ -7119,7 +7357,7 @@
 					<align>left</align>
 					<textoffsetx>20</textoffsetx>
 					<font>Font-Condensed-S30</font>
-					<textcolor>mod-infotags-alt</textcolor>
+					<textcolor>mod-infotags</textcolor>
 					<label>$LOCALIZE[41141]</label>
 					<label2>$INFO[Skin.String(Home.Programs.Tile.10.TypeName)]</label2>
 					<visible>!ControlGroup(2405).HasFocus</visible>
@@ -7207,7 +7445,8 @@
 				<onright>5</onright>
 				<onup>2405</onup>
 				<ondown>2407</ondown>
-				<include>SettingsCustomDialogButtonVars</include>
+				<textcolor>mod-infotags</textcolor>
+					<include>SettingsCustomDialogButtonVars</include>
 				<label>$LOCALIZE[41142]</label>
 				<label2>$INFO[Skin.String(Home.Programs.Tile.10.Path)]</label2>
 				<onclick condition="stringcompare(Skin.String(Home.Programs.Tile.10.Type),0)|stringcompare(Skin.String(Home.Programs.Tile.10.Type),1)|stringcompare(Skin.String(Home.Programs.Tile.10.Type),2)|stringcompare(Skin.String(Home.Programs.Tile.10.Type),3)">SetProperty(Property,Home.Programs.Tile.10,selectdialog)</onclick>
@@ -7227,7 +7466,8 @@
 				<onright>5</onright>
 				<onup>2406</onup>
 				<ondown>5</ondown>
-				<include>SettingsCustomDialogButtonVars</include>
+				<textcolor>mod-infotags</textcolor>
+					<include>SettingsCustomDialogButtonVars</include>
 				<label>$LOCALIZE[409]</label>
 				<onclick>Skin.SetString(Home.Programs.Tile.10.Type,7)</onclick>
 				<onclick>Skin.SetString(Home.Programs.Tile.10.TypeName,$LOCALIZE[41151])</onclick>

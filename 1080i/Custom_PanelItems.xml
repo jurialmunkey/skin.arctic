@@ -261,6 +261,13 @@
             <control type="group">
             	<posx>770</posx>
             	<posy>300</posy>
+            	<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>532</width>
+					<height>420</height>
+					<texture border="15">arctic/common/whitepanel8.png</texture>
+				</control>  
 				<include>PanelDialogHome.Movies.Tile.1</include>
 				<include>PanelDialogHome.Movies.Tile.2</include>
 				<include>PanelDialogHome.Movies.Tile.3</include>
@@ -311,8 +318,8 @@
             </control> 
             
             <control type="group" id="10">
-                <posx>1100</posx>
-                <posy>730</posy>
+                <posx>1140</posx>
+                <posy>715</posy>
                 <control type="button" id="5">
                     <description>Close</description>
                     <texturefocus>buttons/cancel-fo.png</texturefocus>

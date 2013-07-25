@@ -1200,6 +1200,219 @@
 			<visible>true</visible>
 		</item>
 	</include>
+	<include name="Mod_82Layout">
+		<itemlayout width="184" condition="!Container(525).HasFocus(3) + !Container(525).HasFocus(7)">
+			<control type="group">
+				<control type="image">
+					<posx>10</posx>
+					<posy>264</posy>
+					<width>169</width>
+					<height>254</height>
+					<texture background="true"  diffuse="views/posterview/diffuse-ref.png" flipy="true" fallback="views/fallbacks/DefaultVideo.png/large.png">$INFO[ListItem.Property(poster)]</texture>
+				</control>
+				<control type="image">
+					<posx>10</posx>
+					<posy>10</posy>
+					<width>169</width>
+					<height>254</height>
+					<texture background="true"  diffuse="arctic/home/poster.png" fallback="views/fallbacks/DefaultVideo.png/large.png">$INFO[ListItem.Property(poster)]</texture>
+				</control>
+			</control>
+			<control type="image">
+				<width>189</width>
+				<height>274</height>
+				<texture border="25">arctic/common/border.png</texture>
+			</control>
+			<control type="image">
+				<posx>10</posx>
+				<posy>10</posy>
+				<width>169</width>
+				<height>254</height>
+				<texture border="5">views/newgloss/whitepanel.png</texture>
+				<visible>Control.HasFocus(82)</visible>
+				<colordiffuse>Mod_Cover_Fade</colordiffuse>
+			</control>
+			<control type="image">
+				<posx>10</posx>
+				<posy>10</posy>
+				<width>169</width>
+				<height>254</height>
+				<texture border="5">views/newgloss/whitepanel.png</texture>
+				<visible>Control.HasFocus(82)</visible>
+				<colordiffuse>Mod_Cover_Fade</colordiffuse>
+			</control>
+		</itemlayout>
+		<itemlayout width="184" condition="Container(525).HasFocus(7)">
+			<control type="group">
+				<control type="image">
+					<posx>10</posx>
+					<posy>264</posy>
+					<width>169</width>
+					<height>254</height>
+					<texture background="true" diffuse="views/posterview/diffuse-ref.png" flipy="true" fallback="views/fallbacks/DefaultVideo.png/large.png">$INFO[ListItem.Property(poster)]</texture>
+					<aspectratio align="center" scalediffuse="false">scale</aspectratio>
+				</control>
+				<control type="image">
+					<posx>10</posx>
+					<posy>10</posy>
+					<width>169</width>
+					<height>254</height>
+					<texture  background="true" diffuse="arctic/home/poster.png" fallback="views/fallbacks/DefaultVideo.png/large.png">$INFO[ListItem.Property(poster)]</texture>
+					<aspectratio align="center" scalediffuse="false">scale</aspectratio>
+				</control>
+			</control>
+			<control type="image">
+				<width>189</width>
+				<height>274</height>
+				<texture border="25">arctic/common/border.png</texture>
+			</control>
+			<control type="image">
+				<posx>10</posx>
+				<posy>10</posy>
+				<width>169</width>
+				<height>254</height>
+				<texture border="5">views/newgloss/whitepanel.png</texture>
+				<visible>Control.HasFocus(82)</visible>
+				<colordiffuse>Mod_Cover_Fade</colordiffuse>
+			</control>
+		</itemlayout>
+		<itemlayout width="230" condition="Container(525).HasFocus(3)">
+			<control type="group">
+				<posy>34</posy>
+				<control type="group">
+					<control type="image">
+						<posx>10</posx>
+						<posy>230</posy>
+						<width>220</width>
+						<height>220</height>
+						<texture  background="true"  diffuse="views/posterview/diffuse-ref.png" flipy="true" fallback="views/fallbacks/DefaultAlbumCover.png/square-large.png">$INFO[ListItem.Property(poster)]</texture>
+					</control>
+					<control type="image">
+						<posx>10</posx>
+						<posy>10</posy>
+						<width>220</width>
+						<height>220</height>
+						<texture background="true" diffuse="arctic/home/cover.png" fallback="views/fallbacks/DefaultAlbumCover.png/square-large.png">$INFO[ListItem.Property(poster)]</texture>
+					</control>
+				</control>
+				<control type="image">
+					<width>240</width>
+					<height>240</height>
+					<texture border="25">arctic/common/border.png</texture>
+				</control>
+				<control type="image">
+					<posx>10</posx>
+					<posy>10</posy>
+					<width>220</width>
+					<height>220</height>
+					<texture border="15">arctic/common/whitepanel.png</texture>
+					<visible>Control.HasFocus(82)</visible>
+					<colordiffuse>Mod_Cover_Fade</colordiffuse>
+				</control>
+			</control>
+		</itemlayout>
+		<focusedlayout width="184" condition="!Container(525).HasFocus(3) + !Container(525).HasFocus(7)">
+			<control type="group">
+				<control type="image">
+					<posx>10</posx>
+					<posy>264</posy>
+					<width>169</width>
+					<height>254</height>
+					<texture background="true"  diffuse="views/posterview/diffuse-ref.png" flipy="true" fallback="views/fallbacks/DefaultVideo.png/large.png">$INFO[ListItem.Property(poster)]</texture>
+				</control>
+				<control type="image">
+					<posx>10</posx>
+					<posy>10</posy>
+					<width>169</width>
+					<height>254</height>
+					<texture background="true"  diffuse="arctic/home/poster.png" fallback="views/fallbacks/DefaultVideo.png/large.png">$INFO[ListItem.Property(poster)]</texture>
+				</control>
+			</control>
+			<control type="image">
+				<width>189</width>
+				<height>274</height>
+				<texture border="25">arctic/common/border.png</texture>
+				<visible>!Control.HasFocus(82)</visible>
+			</control>
+			<control type="image">
+				<posx>-5</posx>
+				<posy>-5</posy>
+				<width>199</width>
+				<height>284</height>
+				<texture border="52">views/newgloss/border-fo.png</texture>
+				<visible>Control.HasFocus(82)</visible>
+			</control>
+		</focusedlayout>
+		<focusedlayout width="184" condition="Container(525).HasFocus(7)">
+			<control type="group">
+				<control type="image">
+					<posx>10</posx>
+					<posy>264</posy>
+					<width>169</width>
+					<height>254</height>
+					<texture background="true"  diffuse="views/posterview/diffuse-ref.png" flipy="true" fallback="views/fallbacks/DefaultVideo.png/large.png">$INFO[ListItem.Property(poster)]</texture>
+					<aspectratio align="center" scalediffuse="false">scale</aspectratio>
+				</control>
+				<control type="image">
+					<posx>10</posx>
+					<posy>10</posy>
+					<width>169</width>
+					<height>254</height>
+					<texture background="true"  diffuse="arctic/home/poster.png" fallback="views/fallbacks/DefaultVideo.png/large.png">$INFO[ListItem.Property(poster)]</texture>
+					<aspectratio align="center" scalediffuse="false">scale</aspectratio>
+				</control>
+			</control>
+			<control type="image">
+				<width>189</width>
+				<height>274</height>
+				<texture border="25">arctic/common/border.png</texture>
+				<visible>!Control.HasFocus(82)</visible>
+			</control>
+			<control type="image">
+				<posx>-5</posx>
+				<posy>-5</posy>
+				<width>199</width>
+				<height>284</height>
+				<texture border="52">views/newgloss/border-fo.png</texture>
+				<visible>Control.HasFocus(82)</visible>
+			</control>
+		</focusedlayout>
+		<focusedlayout width="230" condition="Container(525).HasFocus(3)">
+			<control type="group">
+				<posy>34</posy>
+				<control type="group">
+					<control type="image">
+						<posx>10</posx>
+						<posy>230</posy>
+						<width>220</width>
+						<height>220</height>
+						<texture  background="true" diffuse="views/posterview/diffuse-ref.png" flipy="true" fallback="views/fallbacks/DefaultAlbumCover.png/square-large.png">$INFO[ListItem.Property(poster)]</texture>
+					</control>
+					<control type="image">
+						<posx>10</posx>
+						<posy>10</posy>
+						<width>220</width>
+						<height>220</height>
+						<texture background="true"  diffuse="arctic/home/cover.png" fallback="views/fallbacks/DefaultAlbumCover.png/square-large.png">$INFO[ListItem.Property(poster)]</texture>
+					</control>
+				</control>
+				<control type="image">
+					<width>240</width>
+					<height>240</height>
+					<texture border="25">arctic/common/border.png</texture>
+					<visible>!Control.HasFocus(82)</visible>
+				</control>
+				<control type="image">
+					<posx>-5</posx>
+					<posy>-5</posy>
+					<width>250</width>
+					<height>250</height>
+					<texture border="52">views/newgloss/border-fo.png</texture>
+					<visible>Control.HasFocus(82)</visible>
+				</control>
+			</control>
+		</focusedlayout>
+	</include>
 	<include name="Mod_82Content">
 		<!-- recent movies -->
 		<item id="1">

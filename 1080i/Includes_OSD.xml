@@ -58,15 +58,26 @@
         <control type="group">
             <include>BannerListInfoAnimation</include>
             <visible>[Player.ShowInfo | Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Window.IsActive(videoosd) | Window.IsActive(musicosd) | Window.IsActive(fullscreenvideo)] + !Player.ShowCodec + !Window.IsActive(script-XBMC_Lyrics-main.xml) + !IsEmpty(Player.Chapter) + IntegerGreaterThan(Player.ChapterCount,0)</visible>
+            <control type="image">
+                <posx>-30</posx>
+                <posy>-30</posy>
+                <width>400</width>
+                <height>110</height>
+                <bordertexture border="40">arctic/common/border-20.png</bordertexture>
+                <bordersize>20</bordersize>
+                <texture border="25">arctic/common/whitepanel8.png</texture>
+                <aspectratio>stretch</aspectratio>
+                <colordiffuse>mod-osdbar</colordiffuse>
+            </control>
             <control type="label">
-				<posx>180</posx>
+				<posx>10</posx>
 				<posy>13</posy>
-				<width>400</width>
+				<width>320</width>
 				<label>$INFO[Player.Chapter,$LOCALIZE[21396] , / ]$INFO[Player.ChapterCount]</label>
 				<font>Font-Alaska-S28-L</font>
 				<shadowcolor>33ffffff</shadowcolor>
 				<textcolor>mod-infotags-d</textcolor>
-				<align>left</align>
+				<align>center</align>
 				<scroll>false</scroll>
 			</control>
         </control>
@@ -74,8 +85,9 @@
 
     <include name="OSDWeatherClock">
         <control type="group">
-        	<animation effect="slide" end="160" condition="Window.IsActive(visualisation)">Conditional</animation>
-        	<animation effect="slide" end="-60" time="300" tween="sine" easing="inout" condition="Window.IsActive(visualisation) + Player.Muted">Conditional</animation>
+        	<posx>160</posx>
+        	<!--<animation effect="slide" end="160" condition="Window.IsActive(visualisation)">Conditional</animation>-->
+        	<animation effect="slide" end="-60" time="300" tween="sine" easing="inout" condition="Player.Muted | substring(Player.Volume,-60.0)">Conditional</animation>
             <include condition="Window.IsActive(fullscreenvideo)">BannerListInfoAnimation</include>
             <include condition="!Window.IsActive(fullscreenvideo)">BannerListInfoAnimationMusicOSD</include>
             <visible>[Window.IsActive(volumebar) | Player.ShowInfo | Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Window.IsActive(videoosd) | Window.IsActive(musicosd) | Window.IsActive(fullscreenvideo)] + !Player.ShowCodec + !Window.IsActive(script-XBMC_Lyrics-main.xml)</visible>
@@ -83,7 +95,7 @@
                 <effect type="fade" start="100" end="8" tween="sine" easing="out" time="300" /> 
                 <effect type="zoom" start="100" end="50" center="1569,97" tween="sine" easing="inout" time="300" />
             </animation>
-            <control type="image">
+            <!--<control type="image">
                 <posx>-30</posx>
                 <posy>-30</posy>
                 <width>2000</width>
@@ -92,9 +104,9 @@
                 <bordersize>20</bordersize>
                 <texture border="25">arctic/common/whitepanel8.png</texture>
                 <aspectratio>stretch</aspectratio>
-                <colordiffuse>bbeeeeee</colordiffuse>
+                <colordiffuse>mod-osdbar</colordiffuse>
                 <visible>Window.IsActive(fullscreenvideo)</visible>
-            </control>
+            </control>-->
             <control type="image">
                 <posx>1405</posx>
                 <posy>-30</posy>
@@ -104,9 +116,9 @@
                 <bordersize>20</bordersize>
                 <texture border="25">arctic/common/whitepanel8.png</texture>
                 <aspectratio>stretch</aspectratio>
-                <colordiffuse>bbeeeeee</colordiffuse>
+                <colordiffuse>mod-osdbar</colordiffuse>
                 <animation effect="slide" end="-205" time="300" tween="sine" easing="inout" condition="Window.IsActive(volumebar)">Conditional</animation>            
-                <visible>Window.IsActive(visualisation)</visible>
+                <!--<visible>Window.IsActive(visualisation)</visible>-->
             </control>
             <!-- Volume Control -->
 			<control type="group">  
@@ -175,7 +187,7 @@
 				<visible>Player.Passthrough + [Window.IsActive(fullscreenvideo) | Window.IsActive(visualisation)] + Window.IsActive(volumebar)</visible>
 				<control type="label">
 					<description>Volume label</description>
-					<posx>0</posx>
+					<posx>500</posx>
 					<posy>-11</posy>
 					<width>1920</width>
 					<height>78</height>
@@ -190,6 +202,7 @@
 			<!-- Clocks -->
             <control type="group">
             	<animation effect="slide" end="-205" time="300" tween="sine" easing="inout" condition="Window.IsActive(volumebar)">Conditional</animation>            
+            	<visible>![Player.Passthrough + Window.IsActive(volumebar)]</visible>
 				<control type="group">
 					<posx>1500</posx>
 					<control type="image">

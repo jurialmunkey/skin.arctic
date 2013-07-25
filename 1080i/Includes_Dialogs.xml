@@ -1875,6 +1875,7 @@
                 <effect type="fade" start="100" end="0" delay="200" time="100" />
             </animation>
             <animation effect="slide" end="0,42" time="0" condition="!Window.IsActive(videoosd)">Conditional</animation>
+	        <animation effect="slide" end="0,-35" time="0" condition="Window.IsActive(videoosd)">Conditional</animation>
             <control type="label">
                 <description>Header</description>
                 <posx>100</posx>
@@ -1903,7 +1904,6 @@
                 	<font>Font-Condensed-S32</font>
                 	<textcolor>mod-infotags-l</textcolor>
                 	<disabledcolor>mod-infotags-l</disabledcolor>
-                	<texturenofocus border="90,3,90,3">views/list/other/separator.png</texturenofocus>
                 	<label>[B]$LOCALIZE[142][/B]</label>
                 	<label2>[COLOR=mod-infotags-l]$INFO[ListItem.StartTime] - $INFO[ListItem.EndTime] ($INFO[ListItem.StartDate])[/COLOR]</label2>
                 	<enable>false</enable>
@@ -1920,7 +1920,6 @@
                 	<font>Font-Condensed-S32</font>
                 	<textcolor>mod-infotags-l</textcolor>
                 	<disabledcolor>mod-infotags-l</disabledcolor>
-                	<texturenofocus border="90,3,90,3">views/list/other/separator.png</texturenofocus>
                 	<label>[B]$LOCALIZE[180]:[/B]</label>
                 	<label2>[COLOR=mod-infotags-l]$INFO[ListItem.Duration][/COLOR]</label2>
                 	<enable>false</enable>
@@ -1937,7 +1936,6 @@
                 	<font>Font-Condensed-S32</font>
                 	<textcolor>mod-infotags-l</textcolor>
                 	<disabledcolor>mod-infotags-l</disabledcolor>
-                	<texturenofocus border="90,3,90,3">views/list/other/separator.png</texturenofocus>
                 	<label>[B]$LOCALIZE[19148]:[/B]</label>
                 	<label2>[COLOR=mod-infotags-l]$INFO[ListItem.ChannelName][/COLOR]</label2>
                 	<enable>false</enable>
@@ -1954,7 +1952,6 @@
                 	<font>Font-Condensed-S32</font>
                 	<textcolor>mod-infotags-l</textcolor>
                 	<disabledcolor>mod-infotags-l</disabledcolor>
-                	<texturenofocus border="90,3,90,3">views/list/other/separator.png</texturenofocus>
                 	<label>[B]$LOCALIZE[135]:[/B]</label>
                 	<label2 fallback="161">[COLOR=mod-infotags-l]$INFO[ListItem.Genre][/COLOR]</label2>
                 	<enable>false</enable>

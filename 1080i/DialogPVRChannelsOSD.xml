@@ -6,6 +6,7 @@
 	        <include>NowPlayingFullscreen</include>
 	        <include>FullscreenDimensions</include>
 	        <animation effect="slide" end="0,42" time="0" condition="!Window.IsActive(videoosd)">Conditional</animation>
+	        <animation effect="slide" end="0,-35" time="0" condition="Window.IsActive(videoosd)">Conditional</animation>
             <control type="image">
                 <posx>79</posx>
 				<posy>38</posy>
@@ -31,6 +32,7 @@
 				<width>810</width>
 				<height>1012</height>
                 <texture border="80">arctic/common/border-64.png</texture>
+                <colordiffuse>bbwhite</colordiffuse>
             </control>
             <control type="group">
                 <visible>!Window.IsActive(DialogPVRGuideInfo.xml)</visible>
@@ -171,7 +173,7 @@
 								<posy>44</posy>
 								<width>360</width>
 								<height>50</height>
-								<font>Font-Condensed-S28</font>
+								<font>Font-Condensed-S30</font>
 								<align>left</align>
 								<label>$INFO[ListItem.Title]</label>
 								<textcolor>mod-infotags</textcolor>
@@ -341,7 +343,7 @@
 									<posy>44</posy>
 									<width>360</width>
 									<height>50</height>
-									<font>Font-Condensed-S28</font>
+									<font>Font-Condensed-S30</font>
 									<align>left</align>
 									<label>$INFO[ListItem.Title]</label>
 									<textcolor>D4FFFFFF</textcolor>

@@ -146,7 +146,7 @@
 							<control type="label">
 								<posx>0</posx>
 								<posy>4</posy>
-								<width>820</width>
+								<width>690</width>
 								<label>$VAR[MainTitle]</label>
 								<font>Font-Alaska-S34-BL</font>
 								<textcolor>mod-infotags-alt</textcolor>

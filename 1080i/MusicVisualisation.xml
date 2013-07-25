@@ -253,6 +253,7 @@
 				<visible>[Player.ShowInfo | Window.IsVisible(fullscreeninfo)]</visible>
 				<control type="group">
 					<control type="group">
+						<animation effect="slide" end="0,-70" time="300" tween="cubic" easing="inout" condition="[Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding]">Conditional</animation>
 						<posx>-28</posx>
 						<posy>-58</posy>
 						<control type="image">

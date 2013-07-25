@@ -11,14 +11,13 @@
     </include>
     
     <include name="OSDFwRwLabel">
-        <posx>1710</posx>
-        <posy>85</posy>
+        <posx>1670</posx>
+        <posy>13</posy>
         <width>150</width>
-        <height>34</height>
-        <font>Font-OSD-FwRw</font>
+        <font>Font-Alaska-S28-L</font>
         <textcolor>mod-infotags-d</textcolor>
         <shadowcolor>mod-shadow</shadowcolor>
-        <align>right</align>
+        <align>left</align>
         <scroll>false</scroll>
     </include>
     
@@ -59,158 +58,232 @@
         <control type="group">
             <include>BannerListInfoAnimation</include>
             <visible>[Player.ShowInfo | Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Window.IsActive(videoosd) | Window.IsActive(musicosd) | Window.IsActive(fullscreenvideo)] + !Player.ShowCodec + !Window.IsActive(script-XBMC_Lyrics-main.xml) + !IsEmpty(Player.Chapter) + IntegerGreaterThan(Player.ChapterCount,0)</visible>
-            <control type="button">
-                <posx>45</posx>
-                <posy>0</posy>
-                <width>355</width>
-                <height>194</height>
-                <label>$INFO[Player.Chapter,$LOCALIZE[21396] , / ]$INFO[Player.ChapterCount]</label>
-                <font>Font-Condensed-S34</font>
-                <disabledcolor>aawhite</disabledcolor>
-                <texturefocus>-</texturefocus>
-                <texturenofocus border="150,90,150,90">overlays/volume/back-vf.png</texturenofocus>
-                <align>center</align>
-                <enable>false</enable>
-            </control>
+            <control type="label">
+				<posx>180</posx>
+				<posy>13</posy>
+				<width>400</width>
+				<label>$INFO[Player.Chapter,$LOCALIZE[21396] , / ]$INFO[Player.ChapterCount]</label>
+				<font>Font-Alaska-S28-L</font>
+				<shadowcolor>33ffffff</shadowcolor>
+				<textcolor>mod-infotags-d</textcolor>
+				<align>left</align>
+				<scroll>false</scroll>
+			</control>
         </control>
     </include>
 
-	<!-- Maybe extend this ? -->
     <include name="OSDWeatherClock">
         <control type="group">
-        	<posx>35</posx>
-            <animation effect="slide" end="-100" time="300" tween="sine" easing="inout" condition="Player.Muted | substring(Player.Volume,-60.0)">Conditional</animation>
-            <animation effect="slide" end="-213" time="300" tween="sine" easing="inout" condition="Window.IsActive(volumebar) + !Player.Passthrough">Conditional</animation>
-            <animation effect="slide" end="-463" time="300" tween="sine" easing="inout" condition="Window.IsActive(volumebar) + Player.Passthrough">Conditional</animation>
             <include condition="Window.IsActive(fullscreenvideo)">BannerListInfoAnimation</include>
             <include condition="!Window.IsActive(fullscreenvideo)">BannerListInfoAnimationMusicOSD</include>
-            <visible>[Player.ShowInfo | Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Window.IsActive(videoosd) | Window.IsActive(musicosd) | Window.IsActive(fullscreenvideo)] + !Player.ShowCodec + !Window.IsActive(script-XBMC_Lyrics-main.xml)</visible>
+            <visible>[Window.IsActive(volumebar) | Player.ShowInfo | Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Window.IsActive(videoosd) | Window.IsActive(musicosd) | Window.IsActive(fullscreenvideo)] + !Player.ShowCodec + !Window.IsActive(script-XBMC_Lyrics-main.xml)</visible>
             <animation type="Conditional" condition="Window.IsActive(infodialog)">
                 <effect type="fade" start="100" end="8" tween="sine" easing="out" time="300" /> 
                 <effect type="zoom" start="100" end="50" center="1569,97" tween="sine" easing="inout" time="300" />
             </animation>
             <control type="image">
-                <posx>1395</posx>
-                <posy>38</posy>
-                <width>410</width>
-                <height>118</height>
+                <posx>-30</posx>
+                <posy>-30</posy>
+                <width>2000</width>
+                <height>110</height>
                 <bordertexture border="40">arctic/common/border-20.png</bordertexture>
                 <bordersize>20</bordersize>
                 <texture border="25">arctic/common/whitepanel8.png</texture>
                 <aspectratio>stretch</aspectratio>
                 <colordiffuse>bbeeeeee</colordiffuse>
             </control>
-			<control type="group">
-				<posx>1485</posx>
-				<control type="image">
-					<description>Clock image</description>
-					<posx>30</posx>
-					<posy>47</posy>
-					<width>100</width>
-					<height>100</height>
-					<texture>osd/fullscreen/clock.png</texture>
-					<visible>!Control.IsVisible(24)</visible>
+            <!-- Volume Control -->
+			<control type="group">  
+				<animation type="Visible">
+					<effect type="fade" start="0" end="100" time="300" tween="sine" easing="inout" />
+					<effect type="slide" start="50" end="0" time="300" tween="sine" easing="inout" />
+				</animation>
+				<animation type="Hidden">
+					<effect type="fade" start="100" end="0" time="200" tween="sine" easing="inout" />
+					<effect type="slide" start="0" end="50" time="200" tween="sine" easing="inout" />
+				</animation>
+				<visible>!Player.Passthrough + [Window.IsActive(fullscreenvideo) | Window.IsActive(visualisation)] + Window.IsActive(volumebar) + ![Player.Muted | substring(Player.Volume,-60.0)]</visible>
+				<posy>-66</posy>
+				<posx>-80</posx>
+				<control type="group">
+					<control type="label">
+						<description>Volume label</description>
+						<posx>1742</posx>
+						<posy>55</posy>
+						<width>150</width>
+						<height>78</height>
+						<label>$INFO[Player.Volume]</label>
+						<font>Font-Alaska-S28-L</font>
+						<textcolor>mod-infotags-d</textcolor>
+						<shadowcolor>33ffffff</shadowcolor>
+						<align>right</align>
+						<scroll>No</scroll>
+					</control>
 				</control>
-				<control type="image" id="24">
-					<description>Clock image</description>
-					<posx>30</posx>
-					<posy>47</posy>
-					<width>100</width>
-					<height>100</height>
-					<texture>osd/fullscreen/clock-pm.png</texture>
-					<visible>substring(System.Time,Pm,right)</visible>
-				</control>
-				<control type="label">
-					<description>Clock label</description>
-					<posx>34</posx>
-					<posy>59</posy>
-					<width>100</width>
-					<height>78</height>
-					<label>$INFO[System.Time(hh:mm)]</label>
-					<font>Font-OSD-Clock</font>
-					<textcolor>mod-infotags-d</textcolor>
-					<align>right</align>
-					<scroll>false</scroll>
-				</control>
-			</control>
-                
-			<control type="group">
-				<posx>1665</posx>
-				<visible>!Player.Forwarding + !Player.Rewinding</visible>
-				<include>visiblehidefadeinfo</include>
-				<control type="image">
-					<description>Finish time image</description>
-					<posx>30</posx>
-					<posy>47</posy>
-					<width>100</width>
-					<height>100</height>
-					<texture>osd/fullscreen/clock-finish.png</texture>
-				</control>
-				
-				<control type="label">
-					<description>Clock label</description>
-					<posx>34</posx>
-					<posy>59</posy>
-					<width>100</width>
-					<height>78</height>
-					<label>$INFO[Player.FinishTime(hh:mm)]</label>
-					<font>Font-OSD-Clock</font>
-					<textcolor>mod-infotags-d</textcolor>
-					<align>right</align>
-					<scroll>false</scroll>
+				<control type="group">
+					<posx>1740</posx>
+					<posy>28</posy>
+					<control type="progress" id="22">
+						<visible>false</visible>
+						<info>Player.Volume</info>
+					</control>
+					<control type="image">
+						<posx>-4</posx>
+						<posy>27</posy>
+						<width>80</width>
+						<height>80</height>
+						<texture>overlays/volume/volume-back.png</texture>
+						<aspectratio align="center">keep</aspectratio>
+						<colordiffuse>mod-infotags</colordiffuse>
+					</control>
+					<control type="image">
+						<posx>-4</posx>
+						<posy>27</posy>
+						<width>80</width>
+						<height>80</height>
+						<texture>$INFO[Control.GetLabel(22),overlays/volume/progress/p,.png]</texture>
+						<aspectratio align="center">keep</aspectratio>
+					</control>
 				</control>
 			</control>
+			<!-- Passthrough to Audio Device Notification-->
+			<control type="group">
+				<animation type="Visible">
+					<effect type="fade" start="0" end="100" time="300" tween="sine" easing="inout" />
+					<effect type="slide" start="0,-30" end="0" time="300" tween="sine" easing="inout" />
+				</animation>
+				<animation type="Hidden">
+					<effect type="fade" start="100" end="0" time="200" tween="sine" easing="inout" />
+					<effect type="slide" start="0" end="0,-30" time="200" tween="sine" easing="inout" />
+				</animation>
+				<visible>Player.Passthrough + [Window.IsActive(fullscreenvideo) | Window.IsActive(visualisation)] + Window.IsActive(volumebar)</visible>
+				<control type="label">
+					<description>Volume label</description>
+					<posx>0</posx>
+					<posy>-11</posy>
+					<width>1920</width>
+					<height>78</height>
+					<label>$LOCALIZE[29802]</label>
+					<font>Font-Alaska-S28-L</font>
+					<textcolor>mod-infotags-d</textcolor>
+					<shadowcolor>33ffffff</shadowcolor>
+					<align>center</align>
+					<scroll>No</scroll>
+				</control>
+			</control>
+			<!-- Clocks -->
             <control type="group">
-                <visible>Player.Forwarding | Player.Rewinding</visible>
-                <include>visiblehidefadeinfo</include>
-                <control type="image">
-                    <description>Forwarding image</description>
-                    <posx>1695</posx>
-                    <posy>47</posy>
-                    <width>100</width>
-                    <height>100</height>
-                    <texture>osd/fullscreen/fw.png</texture>
-                    <visible>Player.Forwarding</visible>
-                </control>
-                <control type="image">
-                    <description>Rewinding image</description>
-                    <posx>1695</posx>
-                    <posy>47</posy>
-                    <width>100</width>
-                    <height>100</height>
-                    <texture>osd/fullscreen/rw.png</texture>
-                    <visible>Player.Rewinding</visible>
-                </control>
-                <control type="label">
-                    <description>Forwarding / Rewinding 2x</description>
-                    <include>OSDFwRwLabel</include>
-                    <label>2x</label>
-                    <visible>Player.Forwarding2x | Player.Rewinding2x</visible>
-                </control>
-                <control type="label">
-                    <description>Forwarding / Rewinding 4x</description>
-                    <include>OSDFwRwLabel</include>
-                    <label>4x</label>
-                    <visible>Player.Forwarding4x | Player.Rewinding4x</visible>
-                </control>
-                <control type="label">
-                    <description>Forwarding / Rewinding 8x</description>
-                    <include>OSDFwRwLabel</include>
-                    <label>8x</label>
-                    <visible>Player.Forwarding8x | Player.Rewinding8x</visible>
-                </control>
-                <control type="label">
-                    <description>Forwarding / Rewinding 16x</description>
-                    <include>OSDFwRwLabel</include>
-                    <label>16x</label>
-                    <visible>Player.Forwarding16x | Player.Rewinding16x</visible>
-                </control>
-                <control type="label">
-                    <description>Forwarding / Rewinding 32x</description>
-                    <include>OSDFwRwLabel</include>
-                    <label>32x</label>
-                    <visible>Player.Forwarding32x | Player.Rewinding32x</visible>
-                </control>
+            	<animation effect="slide" end="-205" time="300" tween="sine" easing="inout" condition="Window.IsActive(volumebar)">Conditional</animation>            
+				<control type="group">
+					<posx>1500</posx>
+					<control type="image">
+						<description>Clock image</description>
+						<posx>-80</posx>
+						<posy>-22</posy>
+						<width>100</width>
+						<height>100</height>
+						<texture>osd/fullscreen/clock-blue.png</texture>
+						<aspectratio aligny="center">keep</aspectratio>
+					</control>
+					<control type="label">
+						<description>Clock label</description>
+						<posx>0</posx>
+						<posy>13</posy>
+						<width>100</width>
+						<label>$INFO[System.Time(hh:mm)]</label>
+						<font>Font-Alaska-S28-L</font>
+						<textcolor>mod-infotags-d</textcolor>
+						<shadowcolor>33ffffff</shadowcolor>
+						<align>left</align>
+						<scroll>false</scroll>
+					</control>
+				</control>
+				<control type="group">
+					<posx>1670</posx>
+					<visible>!Player.Forwarding + !Player.Rewinding</visible>
+					<include>visiblehidefadeinfo</include>
+					<control type="image">
+						<description>Finish time image</description>
+						<posx>-80</posx>
+						<posy>-22</posy>
+						<width>100</width>
+						<height>100</height>
+						<texture>osd/fullscreen/clock-green.png</texture>
+						<aspectratio aligny="center">keep</aspectratio>
+					</control>
+					<control type="label">
+						<description>Clock label</description>
+						<posx>0</posx>
+						<posy>13</posy>
+						<width>100</width>
+						<label>$INFO[Player.FinishTime(hh:mm)]</label>
+						<font>Font-Alaska-S28-L</font>
+						<shadowcolor>33ffffff</shadowcolor>
+						<textcolor>mod-infotags-d</textcolor>
+						<align>left</align>
+						<scroll>false</scroll>
+					</control>
+				</control>
+				<control type="group">
+					<visible>Player.Forwarding | Player.Rewinding</visible>
+					<include>visiblehidefadeinfo</include>
+					<control type="label">
+						<description>Rewind</description>
+						<posx>1654</posx>
+						<posy>13</posy>
+						<width>100</width>
+						<label>«</label>
+						<font>Font-Alaska-S52-L</font>
+						<shadowcolor>33ffffff</shadowcolor>
+						<textcolor>mod-infotags-d</textcolor>
+						<align>right</align>
+						<scroll>false</scroll>
+						<visible>Player.Rewinding</visible>
+					</control>
+					<control type="label">
+						<description>Forward</description>
+						<posx>1654</posx>
+						<posy>13</posy>
+						<width>100</width>
+						<label>»</label>
+						<font>Font-Alaska-S52-L</font>
+						<shadowcolor>33ffffff</shadowcolor>
+						<textcolor>mod-infotags-d</textcolor>
+						<align>right</align>
+						<scroll>false</scroll>
+						<visible>Player.Forwarding</visible>
+					</control>
+					<control type="label">
+						<description>Forwarding / Rewinding 2x</description>
+						<include>OSDFwRwLabel</include>
+						<label>2x</label>
+						<visible>Player.Forwarding2x | Player.Rewinding2x</visible>
+					</control>
+					<control type="label">
+						<description>Forwarding / Rewinding 4x</description>
+						<include>OSDFwRwLabel</include>
+						<label>4x</label>
+						<visible>Player.Forwarding4x | Player.Rewinding4x</visible>
+					</control>
+					<control type="label">
+						<description>Forwarding / Rewinding 8x</description>
+						<include>OSDFwRwLabel</include>
+						<label>8x</label>
+						<visible>Player.Forwarding8x | Player.Rewinding8x</visible>
+					</control>
+					<control type="label">
+						<description>Forwarding / Rewinding 16x</description>
+						<include>OSDFwRwLabel</include>
+						<label>16x</label>
+						<visible>Player.Forwarding16x | Player.Rewinding16x</visible>
+					</control>
+					<control type="label">
+						<description>Forwarding / Rewinding 32x</description>
+						<include>OSDFwRwLabel</include>
+						<label>32x</label>
+						<visible>Player.Forwarding32x | Player.Rewinding32x</visible>
+					</control>
+				</control>
             </control>
         </control>
     </include>

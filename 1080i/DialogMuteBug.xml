@@ -20,25 +20,15 @@
                 <effect type="fade" start="100" end="0" time="200" tween="sine" easing="inout" />
                 <effect type="slide" start="0" end="50" time="200" tween="sine" easing="inout" />
             </animation>
-
-            <control type="image">
-                <posx>1721</posx>
-                <posy>38</posy>
-                <width>118</width>
-                <height>118</height>
-                <bordertexture border="40">arctic/common/border-20.png</bordertexture>
-                <bordersize>20</bordersize>
-                <texture border="25">arctic/common/whitepanel8.png</texture>
-                <aspectratio>stretch</aspectratio>
-                <colordiffuse>bbeeeeee</colordiffuse>
-            </control>
             <control type="image">
                 <description>Mute image</description>
-                <posx>1730</posx>
-                <posy>47</posy>
-                <width>100</width>
-                <height>100</height>
-                <texture>overlays/volume/muted-info.png</texture>
+                <posx>1845</posx>
+                <posy>-17</posy>
+                <width>90</width>
+                <height>90</height>
+                <texture>overlays/volume/muted.png</texture>
+                <colordiffuse>mod-infotags-d</colordiffuse>
+                <aspectratio aligny="center">keep</aspectratio>
             </control>
         </control>
     </controls>

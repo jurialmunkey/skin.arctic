@@ -42,15 +42,6 @@
         
 <!-- Selected color -->
         <color name="SelectedGreen">eeeeeeee</color>
-        
-        <!-- TILES -->
-        <color name="Blue Tiles">aa005180</color>
-        <color name="Green Tiles">aa007949</color>
-        <color name="Red Tiles">aad02e49</color>
-        <color name="Pink Tiles">aa790059</color>
-        <color name="Purple Tiles">aa3a0079</color>
-        <color name="Lime Tiles">aa7eb000</color>
-        <color name="Grey Tiles">ee2f2f2f</color>
                 
 		<!-- WHITES AND BLACKS -->						
 		<color name="mod-black">ddeeeeee</color> 		

@@ -246,26 +246,13 @@
                 <!-- Big List -->
                 <control type="radiobutton" id="202">
                     <include>optionsbuttonsdimensions</include>
-                    <label>List</label>
+                    <label>Big List</label>
                     <texturefocus>dialogs/options/buttons/default-fo.png</texturefocus>
                     <onclick>Container.SetViewMode(50)</onclick>
                     <selected>Control.IsVisible(50)</selected>
                     <textureradiofocus>buttons/radio/options-radio-button-fo.png</textureradiofocus>
                     <textureradionofocus>buttons/radio/options-radio-button-nf.png</textureradionofocus>
                     <radioposx>-19</radioposx>
-                    <visible>![Container.Content(Artists) | Container.Content(Albums) | Container.Content(songs)]</visible>
-                </control>
-                <!-- Banner -->
-                <control type="radiobutton" id="220">
-                    <include>optionsbuttonsdimensions</include>
-                    <label>Banner</label>
-                    <texturefocus>dialogs/options/buttons/default-fo.png</texturefocus>
-                    <onclick>Container.SetViewMode(59)</onclick>
-                    <selected>Control.IsVisible(59)</selected>
-                    <textureradiofocus>buttons/radio/options-radio-button-fo.png</textureradiofocus>
-                    <textureradionofocus>buttons/radio/options-radio-button-nf.png</textureradionofocus>
-                    <radioposx>-19</radioposx>
-                    <visible>Container.Content(Artists) | Container.Content(Albums) | Container.Content(songs)</visible>
                 </control>
                 <!-- Medium List -->
                 <control type="radiobutton" id="211">
@@ -290,6 +277,18 @@
                     <textureradionofocus>buttons/radio/options-radio-button-nf.png</textureradionofocus>
                     <radioposx>-19</radioposx>
                     <visible>Container.Content(Artists) | Container.Content(Albums) | Container.Content(Songs)</visible>
+                </control>
+                <!-- Banner -->
+                <control type="radiobutton" id="220">
+                    <include>optionsbuttonsdimensions</include>
+                    <label>Banner</label>
+                    <texturefocus>dialogs/options/buttons/default-fo.png</texturefocus>
+                    <onclick>Container.SetViewMode(59)</onclick>
+                    <selected>Control.IsVisible(59)</selected>
+                    <textureradiofocus>buttons/radio/options-radio-button-fo.png</textureradiofocus>
+                    <textureradionofocus>buttons/radio/options-radio-button-nf.png</textureradionofocus>
+                    <radioposx>-19</radioposx>
+                    <visible>Container.Content(Artists) | Container.Content(Albums) | Container.Content(songs)</visible>
                 </control>
                 <!-- Cover Info -->
                 <control type="radiobutton" id="208">

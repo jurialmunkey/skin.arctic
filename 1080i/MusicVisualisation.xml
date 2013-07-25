@@ -282,7 +282,7 @@
 							<posy>-50</posy>
 							<width>350</width>
 							<height>350</height>
-							<texture background="true" diffuse="arctic/osd/poster.png">$VAR[ArcticOSDPoster]</texture>
+							<texture background="true" diffuse="arctic/osd/370.png">$VAR[ArcticOSDPoster]</texture>
 							<aspectratio scalediffuse="false">scale</aspectratio>
 							<animation effect="slide" end="0,-70" time="300" tween="cubic" easing="inout" condition="[Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding]">Conditional</animation>
 						</control>

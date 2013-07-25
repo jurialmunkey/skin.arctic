@@ -568,6 +568,13 @@
 							<onclick>Skin.ToggleSetting(CDArt.Enabled)</onclick>
 							<label>$LOCALIZE[41107]</label>
 						</control>
+						<control type="radiobutton" id="8008">
+							<width>1210</width>
+							<include>SettingsCategoryRadioButtonVars</include>
+							<selected>Skin.HasSetting(musicvis.small)</selected>
+							<onclick>Skin.ToggleSetting(musicvis.small)</onclick>
+							<label>Smaller music info</label>
+						</control>
 						<control type="radiobutton" id="8006">
 							<width>1210</width>
 							<include>SettingsCategoryRadioButtonVars</include>

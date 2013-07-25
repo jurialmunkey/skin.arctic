@@ -327,9 +327,9 @@
 							<width>1200</width>
 							<height>83</height>
 							<onup>SetFocus(9334)</onup>
-							<ondown condition="System.HasAddon(script.cinema.experience) + Container(9333).HasFocus(2) + Container.Content(movies) + !SubString(Container.FolderPath,plugin)">SetFocus(9339)</ondown>
-							<ondown condition="System.HasAddon(script.cinema.experience) + Container(9333).HasFocus(2) + ![Container.Content(movies) + !SubString(Container.FolderPath,plugin)]">SetFocus(9333)</ondown>
-							<ondown condition="!Container(9333).HasFocus(2) | !System.HasAddon(script.cinema.experience">70</ondown>
+							<ondown condition="System.HasAddon(script.cinema.experience) + Container(9333).HasFocus(1) + Container.Content(movies) + !SubString(Container.FolderPath,plugin)">SetFocus(9339)</ondown>
+							<ondown condition="System.HasAddon(script.cinema.experience) + Container(9333).HasFocus(1) + ![Container.Content(movies) + !SubString(Container.FolderPath,plugin)]">SetFocus(9333)</ondown>
+							<ondown condition="!Container(9333).HasFocus(1) | !System.HasAddon(script.cinema.experience">70</ondown>
 							<onleft>SetFocus(9336)</onleft>
 							<onright>SetProperty(BounceRight,1,Home)</onright>
 							<scrolltime>0</scrolltime>
@@ -436,8 +436,9 @@
 									<onclick>SendClick(2003,8)</onclick>
 									<icon>aeonflags/addition/OSDPlayNF.png</icon>
 									<thumb>aeonflags/addition/OSDPlayFO.png</thumb>
+									<visible>[[System.HasAddon(script.cinema.experience) + Skin.HasSetting(videoinfo.cinemaexperience) + Container.Content(movies) + !SubString(Container.FolderPath,plugin)] | !System.HasAddon(script.cinema.experience)]</visible>
 								</item>
-								<item id="2">
+								<item id="1">
 									<description>Cinema Experience</description>
 									<label>Cinema Ex</label>
 									<onclick>XBMC.RunScript(script.cinema.experience,movieid=$INFO[ListItem.DBID])</onclick>
@@ -452,7 +453,7 @@
 									<onclick condition="!Skin.HasSetting(PlayTrailer.Minimized)">PlayMedia($INFO[ListItem.Trailer])</onclick>
 									<onclick condition="Skin.HasSetting(PlayTrailer.Minimized)">SetFocus(9336)</onclick>
 									<onclick condition="Skin.HasSetting(PlayTrailer.Minimized)">PlayMedia($INFO[ListItem.Trailer],false,1)</onclick>
-									<visible>!IsEmpty(ListItem.Trailer) + [[System.HasAddon(script.cinema.experience) + Skin.HasSetting(videoinfo.cinemaexperience) + Container.Content(movies) + !SubString(Container.FolderPath,plugin)] | !System.HasAddon(script.cinema.experience)]</visible>
+									<visible>!IsEmpty(ListItem.Trailer) + Container.Content(movies) + !SubString(Container.FolderPath,plugin)</visible>
 									<icon>aeonflags/addition/OSDVideoNF.png</icon>
 									<thumb>aeonflags/addition/OSDVideoFO.png</thumb>
 								</item>

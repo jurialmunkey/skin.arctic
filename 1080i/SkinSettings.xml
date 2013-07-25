@@ -471,6 +471,13 @@
 							<onclick>Skin.ToggleSetting(HideFanart)</onclick>
 							<label>$LOCALIZE[41191]</label>
 						</control>
+						<control type="radiobutton" id="3006">
+							<width>1210</width>
+							<include>SettingsCategoryRadioButtonVars</include>
+							<selected>!Skin.HasSetting(disable.dimfanart)</selected>
+							<onclick>Skin.ToggleSetting(disable.dimfanart)</onclick>
+							<label>Show floor</label>
+						</control>
 						<control type="radiobutton" id="3002">
 							<width>1210</width>
 							<include>SettingsCategoryRadioButtonVars</include>
@@ -487,33 +494,19 @@
 							<enable>!Skin.HasSetting(HideInfoTags)</enable>
 							<animation effect="fade" start="100" end="42" time="0" condition="!Control.IsEnabled(3003)">Conditional</animation>
 						</control>
-						<control type="button" id="3005">
-							<width>1210</width>
-							<include>SettingsCategoryDefaultButtonVars</include>
-							<label>$LOCALIZE[41192]</label>
-							<label2 fallback="US">[COLOR=ff181818]$VAR[MovieMPAALangLabel][/COLOR]</label2>
-							<onclick>ActivateWindow(3006)</onclick>
-						</control>
 						<control type="radiobutton" id="3004">
 							<width>1210</width>
 							<include>SettingsCategoryRadioButtonVars</include>
-							<selected>!Skin.HasSetting(info.hideflags)</selected>
-							<onclick>Skin.ToggleSetting(info.hideflags)</onclick>
-							<label>Show language flags in movie info</label>
+							<selected>!Skin.HasSetting(hide.viewheader)</selected>
+							<onclick>Skin.ToggleSetting(hide.viewheader)</onclick>
+							<label>Show view header</label>
 						</control>
-						<control type="radiobutton" id="3006">
+						<control type="radiobutton" id="3005">
 							<width>1210</width>
 							<include>SettingsCategoryRadioButtonVars</include>
-							<selected>Skin.HasSetting(MovieInformation.PlayTrailer)</selected>
-							<onclick>Skin.ToggleSetting(MovieInformation.PlayTrailer)</onclick>
-							<label>$LOCALIZE[41202]</label>
-						</control>
-						<control type="radiobutton" id="3007">
-							<width>1210</width>
-							<include>SettingsCategoryRadioButtonVars</include>
-							<selected>Skin.HasSetting(PlayTrailer.Minimized)</selected>
-							<onclick>Skin.ToggleSetting(PlayTrailer.Minimized)</onclick>
-							<label>$LOCALIZE[41203]</label>
+							<selected>!Skin.HasSetting(hide.commonclock)</selected>
+							<onclick>Skin.ToggleSetting(hide.commonclock)</onclick>
+							<label>Show clock</label>
 						</control>
 						<control type="radiobutton" id="3008">
 							<width>1210</width>
@@ -521,6 +514,12 @@
 							<selected>Skin.HasSetting(PreferLandscapeArt)</selected>
 							<onclick>Skin.ToggleSetting(PreferLandscapeArt)</onclick>
 							<label>Prefer landscape art</label>
+						</control>
+						<control type="button" id="3009">
+							<width>1210</width>
+							<include>SettingsCategoryDefaultButtonVars</include>
+							<label>$LOCALIZE[5]: $LOCALIZE[20159]</label>
+							<onclick>ActivateWindow(3056)</onclick>
 						</control>
 					</control>
 				

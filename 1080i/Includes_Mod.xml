@@ -3009,7 +3009,7 @@
 			<itemgap>0</itemgap>
 			<orientation>horizontal</orientation>
 			<usecontrolcoords>true</usecontrolcoords>
-			<visible>IsEmpty(Window(Home).Property(script.metadata.actors.isactive)) + [Window.IsActive(movieinformation) | Window.IsActive(musicinformation) | !Skin.HasSetting(HideInfoTags)] + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(seasons) | Container.Content(artists) | Container.Content(albums) | Container.Content(songs)]</visible>
+			<visible>[IsEmpty(Window(Home).Property(script.metadata.actors.isactive)) + !Skin.HasSetting(HideInfoTags) + !Window.IsActive(movieinformation) + !Window.IsActive(musicinformation)] | [[Window.IsActive(movieinformation) | Window.IsActive(musicinformation] + !Skin.HasSetting(info.hideinfotags)]</visible>
 			<animation effect="fade" start="0" end="100" time="450" tween="sine" easing="inout">VisibleChange</animation>
 			<animation effect="fade" start="0" end="100" time="450" tween="sine" easing="inout">WindowOpen</animation>
 			<animation effect="fade" start="100" end="0" time="350" tween="sine" easing="inout">WindowClose</animation>

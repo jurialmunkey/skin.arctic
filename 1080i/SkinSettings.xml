@@ -562,13 +562,6 @@
 							<visible>Skin.HasSetting(ArtistSlideShow.Enabled)</visible>
 							<label> • $LOCALIZE[41105]</label>
 						</control>
-						<control type="radiobutton" id="8005">
-							<width>1210</width>
-							<include>SettingsCategoryRadioButtonVars</include>
-							<selected>!Skin.HasSetting(videoosd.showposter)</selected>
-							<onclick>Skin.ToggleSetting(videoosd.showposter)</onclick>
-							<label>Prefer logo for video osd</label>
-						</control>
 						<control type="radiobutton" id="8007">
 							<width>1210</width>
 							<include>SettingsCategoryRadioButtonVars</include>

@@ -37,7 +37,7 @@
                     <height>100</height>
                     <width>100</width>
                     <texturefocus>osd/fullscreen/buttons/playlists-fo.png</texturefocus>
-                    <texturenofocus>osd/fullscreen/buttons/playlists-nofo.png</texturenofocus>
+                    <texturenofocus>osd/fullscreen/buttons/playlists-nofo-dark.png</texturenofocus>
                     <onclick>Close</onclick>
                     <onclick>ActivateWindow(musicplaylist)</onclick>
                     <onleft>14</onleft>
@@ -51,10 +51,10 @@
                     <height>100</height>
                     <width>100</width>
                     <texturefocus>osd/fullscreen/buttons/shuffle_off-fo.png</texturefocus>
-                    <texturenofocus>osd/fullscreen/buttons/shuffle_off-nofo.png</texturenofocus>
+                    <texturenofocus>osd/fullscreen/buttons/shuffle_off-nofo-dark.png</texturenofocus>
                     <usealttexture>Playlist.IsRandom</usealttexture>
                     <alttexturefocus>osd/fullscreen/buttons/shuffle_on-fo.png</alttexturefocus>
-                    <alttexturenofocus>osd/fullscreen/buttons/shuffle_on-nofo.png</alttexturenofocus>
+                    <alttexturenofocus>osd/fullscreen/buttons/shuffle_on-nofo-dark.png</alttexturenofocus>
                     <onclick>PlayerControl(random)</onclick>
                     <onup>20</onup>
                     <ondown>noop</ondown>
@@ -81,7 +81,7 @@
                     <height>100</height>
                     <width>100</width>
                     <texturefocus>osd/fullscreen/buttons/previous-fo.png</texturefocus>
-                    <texturenofocus>osd/fullscreen/buttons/previous-nofo.png</texturenofocus>
+                    <texturenofocus>osd/fullscreen/buttons/previous-nofo-dark.png</texturenofocus>
                     <onclick>playercontrol(previous)</onclick>
                     <onup>20</onup>
                     <ondown>noop</ondown>
@@ -94,10 +94,10 @@
                     <height>100</height>
                     <width>100</width>
                     <texturefocus>osd/fullscreen/buttons/rewind-fo.png</texturefocus>
-                    <texturenofocus>osd/fullscreen/buttons/rewind-nofo.png</texturenofocus>
+                    <texturenofocus>osd/fullscreen/buttons/rewind-nofo-dark.png</texturenofocus>
                     <usealttexture>Player.Rewinding</usealttexture>
                     <alttexturefocus>osd/fullscreen/buttons/rewind-on-fo.png</alttexturefocus>
-                    <alttexturenofocus>osd/fullscreen/buttons/rewind-on-nofo.png</alttexturenofocus>
+                    <alttexturenofocus>osd/fullscreen/buttons/rewind-on-nofo-dark.png</alttexturenofocus>
                     <onclick>playercontrol(rewind)</onclick>
                     <onup>20</onup>
                     <ondown>noop</ondown>
@@ -110,10 +110,10 @@
                     <height>100</height>
                     <width>100</width>
                     <texturefocus>osd/fullscreen/buttons/pause-fo.png</texturefocus>
-                    <texturenofocus>osd/fullscreen/buttons/pause-nofo.png</texturenofocus>
+                    <texturenofocus>osd/fullscreen/buttons/pause-nofo-dark.png</texturenofocus>
                     <usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
                     <alttexturefocus>osd/fullscreen/buttons/play-fo.png</alttexturefocus>
-                    <alttexturenofocus>osd/fullscreen/buttons/play-nofo.png</alttexturenofocus>
+                    <alttexturenofocus>osd/fullscreen/buttons/play-nofo-dark.png</alttexturenofocus>
                     <onclick>playercontrol(play)</onclick>
                     <onup>20</onup>
                     <ondown>noop</ondown>
@@ -126,7 +126,7 @@
                     <height>100</height>
                     <width>100</width>
                     <texturefocus>osd/fullscreen/buttons/stop-fo.png</texturefocus>
-                    <texturenofocus>osd/fullscreen/buttons/stop-nofo.png</texturenofocus>
+                    <texturenofocus>osd/fullscreen/buttons/stop-nofo-dark.png</texturenofocus>
                     <onclick>playercontrol(stop)</onclick>
                     <onup>20</onup>
                     <ondown>noop</ondown>
@@ -139,10 +139,10 @@
                     <height>100</height>
                     <width>100</width>
                     <texturefocus>osd/fullscreen/buttons/fast-forward-fo.png</texturefocus>
-                    <texturenofocus>osd/fullscreen/buttons/fast-forward-nofo.png</texturenofocus>
+                    <texturenofocus>osd/fullscreen/buttons/fast-forward-nofo-dark.png</texturenofocus>
                     <usealttexture>Player.Forwarding</usealttexture>
                     <alttexturefocus>osd/fullscreen/buttons/fast-forward-on-fo.png</alttexturefocus>
-                    <alttexturenofocus>osd/fullscreen/buttons/fast-forward-on-nofo.png</alttexturenofocus>
+                    <alttexturenofocus>osd/fullscreen/buttons/fast-forward-on-nofo-dark.png</alttexturenofocus>
                     <onclick>playercontrol(forward)</onclick>
                     <onup>20</onup>
                     <ondown>noop</ondown>
@@ -155,7 +155,7 @@
                     <height>100</height>
                     <width>100</width>
                     <texturefocus>osd/fullscreen/buttons/next-fo.png</texturefocus>
-                    <texturenofocus>osd/fullscreen/buttons/next-nofo.png</texturenofocus>
+                    <texturenofocus>osd/fullscreen/buttons/next-nofo-dark.png</texturenofocus>
                     <onclick>playercontrol(next)</onclick>
                     <onup>20</onup>
                     <ondown>noop</ondown>

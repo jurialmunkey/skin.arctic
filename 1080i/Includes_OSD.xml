@@ -74,6 +74,8 @@
 
     <include name="OSDWeatherClock">
         <control type="group">
+        	<animation effect="slide" end="160" condition="Window.IsActive(visualisation)">Conditional</animation>
+        	<animation effect="slide" end="-60" time="300" tween="sine" easing="inout" condition="Window.IsActive(visualisation) + Player.Muted">Conditional</animation>
             <include condition="Window.IsActive(fullscreenvideo)">BannerListInfoAnimation</include>
             <include condition="!Window.IsActive(fullscreenvideo)">BannerListInfoAnimationMusicOSD</include>
             <visible>[Window.IsActive(volumebar) | Player.ShowInfo | Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Window.IsActive(videoosd) | Window.IsActive(musicosd) | Window.IsActive(fullscreenvideo)] + !Player.ShowCodec + !Window.IsActive(script-XBMC_Lyrics-main.xml)</visible>
@@ -91,6 +93,20 @@
                 <texture border="25">arctic/common/whitepanel8.png</texture>
                 <aspectratio>stretch</aspectratio>
                 <colordiffuse>bbeeeeee</colordiffuse>
+                <visible>Window.IsActive(fullscreenvideo)</visible>
+            </control>
+            <control type="image">
+                <posx>1405</posx>
+                <posy>-30</posy>
+                <width>700</width>
+                <height>110</height>
+                <bordertexture border="40">arctic/common/border-20.png</bordertexture>
+                <bordersize>20</bordersize>
+                <texture border="25">arctic/common/whitepanel8.png</texture>
+                <aspectratio>stretch</aspectratio>
+                <colordiffuse>bbeeeeee</colordiffuse>
+                <animation effect="slide" end="-205" time="300" tween="sine" easing="inout" condition="Window.IsActive(volumebar)">Conditional</animation>            
+                <visible>Window.IsActive(visualisation)</visible>
             </control>
             <!-- Volume Control -->
 			<control type="group">  

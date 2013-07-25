@@ -6,14 +6,35 @@
 	        <include>NowPlayingFullscreen</include>
 	        <include>FullscreenDimensions</include>
 	        <animation effect="slide" end="0,42" time="0" condition="!Window.IsActive(videoosd)">Conditional</animation>
+	        <animation effect="slide" end="0,-35" time="0" condition="Window.IsActive(videoosd)">Conditional</animation>
+
 	        <control type="image">
-	            <posx>-320</posx>
-	            <posy>-171</posy>
-	            <width>1520</width>
-	            <height>1339</height>
-	            <texture border="610,340,610,340">osd/fullscreen/osdsettings.png</texture>
-	            <aspectratio>stretch</aspectratio>
-	        </control>
+                <posx>79</posx>
+				<posy>38</posy>
+				<width>722</width>
+				<height>924</height>
+                <texture border="20">arctic/common/panel.png</texture>
+                <bordertexture border="40">arctic/common/banner-20.png</bordertexture>
+                <bordersize>20</bordersize>
+                <colordiffuse>ddwhite</colordiffuse>
+            </control>
+            <control type="image">
+                <posx>99</posx>
+				<posy>123</posy>
+				<width>682</width>
+				<height>760</height>
+                <texture border="35">arctic/common/whitepanel8.png</texture>
+                <aspectratio>stretch</aspectratio>
+                <colordiffuse>ddwhite</colordiffuse>
+            </control>
+            <control type="image">
+                <posx>35</posx>
+				<posy>-6</posy>
+				<width>810</width>
+				<height>1012</height>
+                <texture border="80">arctic/common/border-64.png</texture>
+                <colordiffuse>bbwhite</colordiffuse>
+            </control>
 	        <control type="group">
 	            <visible>!Window.IsActive(DialogPVRGuideInfo.xml)</visible>
 	            <include>visiblehidefadeinfo</include>
@@ -42,13 +63,6 @@
 	                <pagecontrol>60</pagecontrol>
 	                <scrolltime>0</scrolltime>
 	                <itemlayout width="680" height="76">
-	                    <control type="image">
-	                        <posx>0</posx>
-	                        <posy>0</posy>
-	                        <width>680</width>
-	                        <height>77</height>
-	                        <texture border="90,3,90,3">views/list/other/separator.png</texture>
-	                    </control>
 	                    <control type="label">
 	                        <description>Label</description>
 	                        <posx>102</posx>
@@ -58,8 +72,8 @@
 	                        <font>Font-Condensed-S33-B</font>
 	                        <align>right</align>
 	                        <label>$INFO[ListItem.StartTime]</label>
-	                        <textcolor>99FFFFFF</textcolor>
-	                        <selectedcolor>99FFFFFF</selectedcolor>
+	                        <textcolor>mod-infotags</textcolor>
+	                        <selectedcolor>mod-infotags</selectedcolor>
 	                        <scroll>false</scroll>
 	                        <visible>!substring(ListItem.StartTime,AM) + !substring(ListItem.StartTime,PM)</visible>
 	                    </control>
@@ -72,8 +86,8 @@
 	                        <font>Font-Condensed-S33-B</font>
 	                        <align>right</align>
 	                        <label>$INFO[ListItem.StartTime]</label>
-	                        <textcolor>99FFFFFF</textcolor>
-	                        <selectedcolor>99FFFFFF</selectedcolor>
+	                        <textcolor>mod-infotags</textcolor>
+	                        <selectedcolor>mod-infotags</selectedcolor>
 	                        <scroll>false</scroll>
 	                        <visible>substring(ListItem.StartTime,AM) | substring(ListItem.StartTime,PM)</visible>
 	                    </control>
@@ -86,8 +100,8 @@
 	                        <font>Font-Condensed-S34</font>
 	                        <align>left</align>
 	                        <label>$INFO[ListItem.Label]</label>
-	                        <textcolor>99FFFFFF</textcolor>
-	                        <selectedcolor>99FFFFFF</selectedcolor>
+	                        <textcolor>mod-infotags</textcolor>
+	                        <selectedcolor>mod-infotags</selectedcolor>
 	                        <scroll>false</scroll>
 	                        <visible>!ListItem.HasTimer + !ListItem.IsRecording + !substring(ListItem.StartTime,AM) + !substring(ListItem.StartTime,PM)</visible>
 	                    </control>
@@ -100,8 +114,8 @@
 	                        <font>Font-Condensed-S34</font>
 	                        <align>left</align>
 	                        <label>$INFO[ListItem.Label]</label>
-	                        <textcolor>99FFFFFF</textcolor>
-	                        <selectedcolor>99FFFFFF</selectedcolor>
+	                        <textcolor>mod-infotags</textcolor>
+	                        <selectedcolor>mod-infotags</selectedcolor>
 	                        <scroll>false</scroll>
 	                        <visible>[ListItem.HasTimer | ListItem.IsRecording] + !substring(ListItem.StartTime,AM) + !substring(ListItem.StartTime,PM)</visible>
 	                    </control>
@@ -114,8 +128,8 @@
 	                        <font>Font-Condensed-S34</font>
 	                        <align>left</align>
 	                        <label>$INFO[ListItem.Label]</label>
-	                        <textcolor>99FFFFFF</textcolor>
-	                        <selectedcolor>99FFFFFF</selectedcolor>
+	                        <textcolor>mod-infotags</textcolor>
+	                        <selectedcolor>mod-infotags</selectedcolor>
 	                        <scroll>false</scroll>
 	                        <visible>!ListItem.HasTimer + !ListItem.IsRecording + [substring(ListItem.StartTime,AM) | substring(ListItem.StartTime,PM)]</visible>
 	                    </control>
@@ -128,8 +142,8 @@
 	                        <font>Font-Condensed-S34</font>
 	                        <align>left</align>
 	                        <label>$INFO[ListItem.Label]</label>
-	                        <textcolor>99FFFFFF</textcolor>
-	                        <selectedcolor>99FFFFFF</selectedcolor>
+	                        <textcolor>mod-infotags</textcolor>
+	                        <selectedcolor>mod-infotags</selectedcolor>
 	                        <scroll>false</scroll>
 	                        <visible>[ListItem.HasTimer | ListItem.IsRecording] + [substring(ListItem.StartTime,AM) | substring(ListItem.StartTime,PM)]</visible>
 	                    </control>
@@ -165,17 +179,9 @@
 	                        <posx>0</posx>
 	                        <posy>0</posy>
 	                        <width>680</width>
-	                        <height>77</height>
-	                        <texture border="90,3,90,3">views/list/other/separator.png</texture>
-	                    </control>
-	                    <control type="image">
-	                        <posx>0</posx>
-	                        <posy>0</posy>
-	                        <width>680</width>
 	                        <height>75</height>
-	                        <texture border="150,1,150,1">views/other/focus.png</texture>
+	                        <texture border="15">views/other/focus-mod8.png</texture>
 	                        <aspectratio>stretch</aspectratio>
-	                        <visible>Control.HasFocus(11)</visible>
 	                        <include>visiblehidefadeinfo</include>
 	                    </control>
 	                    <control type="group">

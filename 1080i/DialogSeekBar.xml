@@ -30,7 +30,7 @@
                 <bordersize>20</bordersize>
                 <texture border="25">arctic/common/whitepanel8.png</texture>
                 <aspectratio>stretch</aspectratio>
-                <colordiffuse>bbeeeeee</colordiffuse>
+                <colordiffuse>mod-osdbar</colordiffuse>
                 <animation effect="slide" end="0,-200" time="100" tween="cubic" easing="inout" condition="[Player.ShowInfo | Window.IsVisible(fullscreeninfo)] + !Window.IsActive(videoosd)">Conditional</animation>
             </control>
 			<control type="label">
@@ -211,6 +211,7 @@
 							<height>578</height>
 							<texture background="true" border="128">arctic/common/16border64.png</texture>
 							<aspectratio scalediffuse="false">stretch</aspectratio>
+							<animation effect="slide" end="0,-70" time="300" tween="cubic" easing="inout" condition="[Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding]">Conditional</animation>
 						</control>
 						<control type="image">
 							<description>Thumb</description>
@@ -220,6 +221,7 @@
 							<height>450</height>
 							<texture background="true" diffuse="arctic/osd/poster.png">$VAR[ArcticOSDPoster]</texture>
 							<aspectratio scalediffuse="false">scale</aspectratio>
+							<animation effect="slide" end="0,-70" time="300" tween="cubic" easing="inout" condition="[Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding]">Conditional</animation>
 						</control>
 					</control>
 					<control type="group">
@@ -279,7 +281,7 @@
 								<posy>4</posy>
 								<width>1120</width>
 								<label>$VAR[OSDTitle]</label>
-								<font>Font-Alaska-S34-BL</font>
+								<font>Font-Alaska-S38-BL</font>
 								<textcolor>mod-infotags-d</textcolor>
 								<shadowcolor>22ffffff</shadowcolor>
 								<scroll>false</scroll>
@@ -291,7 +293,7 @@
 								<width>1231</width>
 								<label>$INFO[VideoPlayer.Year]$INFO[VideoPlayer.Genre, • ,]</label>
 								<label2>$INFO[VideoPlayer.Rating, ★ ,]</label2>
-								<font>Font-Alaska-S25-L</font>
+								<font>Font-Alaska-S28-L</font>
 								<textcolor>mod-infotags</textcolor>
 								<shadowcolor>22ffffff</shadowcolor>
 								<scroll>false</scroll>
@@ -304,7 +306,7 @@
 								<width>1231</width>
 								<label>$INFO[VideoPlayer.Season,$LOCALIZE[20373] , • ]$INFO[VideoPlayer.Episode,$LOCALIZE[20359] ,]$INFO[VideoPlayer.TVShowTitle, • ,]</label>
 								<label2>$INFO[VideoPlayer.Rating, ★ ,]</label2>
-								<font>Font-Alaska-S25-L</font>
+								<font>Font-Alaska-S28-L</font>
 								<textcolor>mod-infotags</textcolor>
 								<shadowcolor>22ffffff</shadowcolor>
 								<scroll>false</scroll>
@@ -317,7 +319,7 @@
 								<width>1231</width>
 								<label>$INFO[VideoPlayer.ChannelNumber,$LOCALIZE[19029] ,]$INFO[VideoPlayer.ChannelName, • ,]</label>
 								<label2>$INFO[VideoPlayer.Rating, ★ ,]</label2>
-								<font>Font-Alaska-S25-L</font>
+								<font>Font-Alaska-S28-L</font>
 								<textcolor>mod-infotags</textcolor>
 								<shadowcolor>22ffffff</shadowcolor>
 								<scroll>false</scroll>
@@ -371,7 +373,7 @@
 								<posy>178</posy>
 								<width>681</width>
 								<label>$VAR[OSDNextTitle]</label>
-								<font>Font-Alaska-S25-L</font>
+								<font>Font-Alaska-S28-L</font>
 								<textcolor>mod-infotags</textcolor>
 								<shadowcolor>22ffffff</shadowcolor>
 								<scroll>false</scroll>

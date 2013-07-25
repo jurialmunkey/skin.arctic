@@ -439,28 +439,6 @@
                         <textureradionofocus>buttons/radio/options-radio-button-nf.png</textureradionofocus>
                         <radioposx>-19</radioposx>
                     </control>
-                    <!-- Hide Info Tags -->
-                    <control type="radiobutton" id="105">
-                        <include>optionsbuttonsdimensions</include>
-                        <label>Hide info tags</label>
-                        <texturefocus>dialogs/options/buttons/default-fo.png</texturefocus>
-                        <onclick>Skin.ToggleSetting(HideInfoTags)</onclick>
-                        <selected>Skin.HasSetting(HideInfoTags)</selected>
-                        <textureradiofocus>buttons/radio/options-radio-button-fo.png</textureradiofocus>
-                        <textureradionofocus>buttons/radio/options-radio-button-nf.png</textureradionofocus>
-                        <radioposx>-19</radioposx>
-                    </control>
-                    <control type="radiobutton" id="106">
-                        <include>optionsbuttonsdimensions</include>
-                        <label>Show clear logo</label>
-                        <texturefocus>dialogs/options/buttons/default-fo.png</texturefocus>
-                        <onclick>Skin.ToggleSetting(ShowLowerLogo)</onclick>
-                        <selected>Skin.HasSetting(ShowLowerLogo)</selected>
-                        <textureradiofocus>buttons/radio/options-radio-button-fo.png</textureradiofocus>
-                        <textureradionofocus>buttons/radio/options-radio-button-nf.png</textureradionofocus>
-                        <radioposx>-19</radioposx>
-                        <visible>!Skin.HasSetting(HideInfoTags)</visible>
-                    </control>
                     
                     
                     

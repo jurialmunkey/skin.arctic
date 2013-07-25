@@ -44,7 +44,7 @@
             <texture>windows/common/showcase_floor3.png</texture>
             <colordiffuse>Mod_Overlay_Floor</colordiffuse>
             <include>visiblehidefadeinfo</include>
-            <visible>![[Skin.HasSetting(disable.dimfanart) + ![Window.IsVisible(movieinformation) | Window.IsVisible(albuminformation)]] | [Window.IsVisible(home) + !StringCompare(Skin.String(homescreen.style),metro)]]</visible>
+            <visible>![[Skin.HasSetting(disable.dimfanart) + ![Window.IsVisible(movieinformation) | Window.IsVisible(musicinformation)]] | Window.IsVisible(home)]</visible>
         </control>
         
         <!-- DIM FANART -->

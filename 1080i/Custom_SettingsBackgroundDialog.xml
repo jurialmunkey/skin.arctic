@@ -28,19 +28,8 @@
                 <posy>315</posy>
                 <width>974</width>
                 <include>DialogHeaderMod</include>
-                <label>$INFO[Window(skinsettings).property(Dialog)]</label>
+                <label>$LOCALIZE[33071]: $INFO[Window(skinsettings).property(Dialog)]</label>
                 <align>left</align>
-                <visible>IsEmpty(Window(skinsettings).property(CustomDialog))</visible>
-            </control>
-            <control type="label">
-                <description>Heading</description>
-                <posx>1350</posx>
-                <posy>313</posy>
-                <width>974</width>
-                <include>DialogHeaderMod</include>
-                <label>$INFO[Window(skinsettings).property(CustomDialog)]</label>
-                <align>right</align>
-                <visible>!IsEmpty(Window(skinsettings).property(CustomDialog))</visible>
             </control>
             <control type="image">
             	<posx>1104</posx>

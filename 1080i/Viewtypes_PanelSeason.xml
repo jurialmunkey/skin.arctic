@@ -106,7 +106,7 @@
 				<posx>321</posx>
 				<posy>0</posy>
 				<width>504</width>
-				<height>476</height>
+				<height>478</height>
                 <include>FullscreenDimensions</include>
                 <scrolltime tween="cubic" easing="out">500</scrolltime>
                 <pagecontrol>70</pagecontrol>
@@ -189,26 +189,7 @@
 							<texture background="true" diffuse="arctic/panel/wall.png">$VAR[WallPoster]</texture>
 							<aspectratio>stretch</aspectratio>
 						</control>
-						<control type="image">
-							<description>Border</description>
-							<posx>-4</posx>
-							<posy>-4</posy>
-							<width>176</width>
-							<height>246</height>
-							<texture border="25">arctic/common/border.png</texture>
-							<aspectratio>stretch</aspectratio>
-							<colordiffuse>Mod_Border</colordiffuse>
-						</control>
-						<control type="image">
-                            <description>Border</description>
-                            <posx>-4</posx>
-                            <posy>-4</posy>
-                            <width>176</width>
-                            <height>246</height>
-                            <texture border="25">views/newgloss/border-fo.png</texture>
-                            <aspectratio>stretch</aspectratio>
-                            <colordiffuse>ddffffff</colordiffuse>
-                        </control> 
+						
                         <control type="group">
 							<posx>6</posx>
 							<posy>6</posy>
@@ -221,7 +202,25 @@
 								<aspectratio aligny="top" align="left">keep</aspectratio>
 							</control>
 						</control>
-						
+						<control type="image">
+                            <description>Border</description>
+                            <posx>-4</posx>
+							<posy>-4</posy>
+							<width>176</width>
+							<height>246</height>
+                            <texture border="52">arctic/common/border.png</texture>
+                            <aspectratio>stretch</aspectratio>
+                        </control> 
+						<control type="image">
+                            <description>Border</description>
+                            <posx>4</posx>
+							<posy>4</posy>
+							<width>160</width>
+							<height>230</height>
+                            <texture border="52">arctic/common/border-glo-flat.png</texture>
+                            <aspectratio>stretch</aspectratio>
+                            <colordiffuse>Mod_Glow_Border</colordiffuse>
+                        </control> 
 						<control type="label">
 							<posx>84</posx>
 							<posy>6</posy>

@@ -73,6 +73,7 @@
 		<color name="Mod_Border">eeffffff</color>
 		<color name="Mod_Border_Fade">88ffffff</color>
 		<color name="Mod_Cover_Fade">44000000</color>
+		<color name="Mod_Glow_Border">ffffffff</color>
 		<color name="Mod_Panel_Glass">ffffffff</color>
 		
 		<color name="Mod_EmptyBG">ffffffff</color>

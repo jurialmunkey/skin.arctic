@@ -1,0 +1,13 @@
+[B]0.2.1[/B]
+Migrated from skin.xperience1080-arctic
+Thematic consolidation
+
+[B]0.2.2[/B]
+Music/Video Fullscreen Info / OSD clock bar cornered
+Added option for small music vis info
+Added option to disable scrolling text on music vis
+Added option to disable view header
+Added option to disable clock
+Added blue glow borders
+Added themes for faded covers
+Fixed poster info discart alignment issue for sets

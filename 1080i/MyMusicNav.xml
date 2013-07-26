@@ -212,11 +212,11 @@
                 </control>
                 <control type="radiobutton" id="106">
                     <include>optionsbuttonsdimensions</include>
-                    <label>Hide panel</label>
+                    <label>Prefer cover</label>
                     <texturefocus border="2">dialogs/options/buttons/default-fo.png</texturefocus>
-                    <onclick>Skin.ToggleSetting(viewtypes.hidepanel)</onclick>
-                    <selected>Skin.HasSetting(viewtypes.hidepanel)</selected>
-                    <visible>Control.IsVisible(51) | Control.IsVisible(52) | Control.IsVisible(53)</visible>
+                    <onclick>Skin.ToggleSetting(musicfanart.showcover)</onclick>
+                    <selected>Skin.HasSetting(musicfanart.showcover)</selected>
+                    <visible>Control.IsVisible(52)</visible>
                     <textureradioon>buttons/radio/options-radio-button-fo.png</textureradioon>
                     <textureradiooff>buttons/radio/options-radio-button-nf.png</textureradiooff>
                     <radioposx>-19</radioposx>
@@ -329,7 +329,7 @@
                 <!-- Cover Panel -->
                 <control type="radiobutton" id="204">
                     <include>optionsbuttonsdimensions</include>
-                    <label>Cover</label>
+                    <label>Panel</label>
                     <texturefocus>dialogs/options/buttons/default-fo.png</texturefocus>
                     <onclick>Container.SetViewMode(51)</onclick>
                     <selected>Control.IsVisible(51)</selected>

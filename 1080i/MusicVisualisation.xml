@@ -12,48 +12,51 @@
 				<animation effect="fade" time="600">Visible</animation>
 				<animation effect="fade" time="600">Hidden</animation>
 				<posy>100</posy>
-				<control type="label">
-					<description>Now Playing</description>
-					<posx>0</posx>
-					<posy>280</posy>
-					<width>2070</width>
-					<label>$INFO[MusicPlayer.Artist, ,]$INFO[MusicPlayer.Artist, ,]$INFO[MusicPlayer.Artist,,]$INFO[MusicPlayer.Artist,,]$INFO[MusicPlayer.Artist, ,]$INFO[MusicPlayer.Artist, ,]$INFO[MusicPlayer.Artist, ,]$INFO[MusicPlayer.Artist, ,]$INFO[MusicPlayer.Artist, ,]</label>
-					<scroll>true</scroll>
-					<pauseatend>0</pauseatend>
-					<font>Font-MusicVis-Artist</font>
-					<textcolor>55000000</textcolor>
-					<angle>0</angle>
-					<align>left</align>
-					<scrollspeed>100</scrollspeed>
-				</control>
-				<control type="label">
-					<description>Now Playing</description>
-					<posx>0</posx>
-					<posy>480</posy>
-					<width>2070</width>
-					<label>$INFO[MusicPlayer.Album, ,]$INFO[MusicPlayer.Album, ,]$INFO[MusicPlayer.Album, ,]$INFO[MusicPlayer.Album, ,]$INFO[MusicPlayer.Album, ,]$INFO[MusicPlayer.Album, ,]$INFO[MusicPlayer.Album, ,]$INFO[MusicPlayer.Album, ,]$INFO[MusicPlayer.Album, ,]$INFO[MusicPlayer.Album, ,]</label>
-					<scroll>true</scroll>
-					<pauseatend>0</pauseatend>
-					<font>Font-MusicVis-Album</font>
-					<textcolor>77666666</textcolor>
-					<angle>0</angle>
-					<align>left</align>
-					<scrollspeed>80</scrollspeed>
-					<pauseatend>0</pauseatend>
-				</control>	
-				<control type="label">
-					<description>Now Playing</description>
-					<posx>0</posx>
-					<posy>370</posy>
-					<width>2070</width>
-					<height>25</height>
-					<label>$INFO[MusicPlayer.Title,  ,]$INFO[MusicPlayer.Title,  ,]$INFO[MusicPlayer.Title,  ,]$INFO[MusicPlayer.Title,  ,]$INFO[MusicPlayer.Title,  ,]</label>
-					<scroll>true</scroll>
-					<font>Font-MusicVis-Title</font>
-					<pauseatend>0</pauseatend>
-					<textcolor>77white</textcolor>
-					<angle>0</angle>
-					<align>left</align>
+				<control type="group">
+					<visible>!Skin.HasSetting(musicvis.hidetext)</visible>
+					<control type="label">
+						<description>Now Playing</description>
+						<posx>0</posx>
+						<posy>280</posy>
+						<width>2070</width>
+						<label>$INFO[MusicPlayer.Artist, ,]$INFO[MusicPlayer.Artist, ,]$INFO[MusicPlayer.Artist,,]$INFO[MusicPlayer.Artist,,]$INFO[MusicPlayer.Artist, ,]$INFO[MusicPlayer.Artist, ,]$INFO[MusicPlayer.Artist, ,]$INFO[MusicPlayer.Artist, ,]$INFO[MusicPlayer.Artist, ,]</label>
+						<scroll>true</scroll>
+						<pauseatend>0</pauseatend>
+						<font>Font-MusicVis-Artist</font>
+						<textcolor>55000000</textcolor>
+						<angle>0</angle>
+						<align>left</align>
+						<scrollspeed>100</scrollspeed>
+					</control>
+					<control type="label">
+						<description>Now Playing</description>
+						<posx>0</posx>
+						<posy>480</posy>
+						<width>2070</width>
+						<label>$INFO[MusicPlayer.Album, ,]$INFO[MusicPlayer.Album, ,]$INFO[MusicPlayer.Album, ,]$INFO[MusicPlayer.Album, ,]$INFO[MusicPlayer.Album, ,]$INFO[MusicPlayer.Album, ,]$INFO[MusicPlayer.Album, ,]$INFO[MusicPlayer.Album, ,]$INFO[MusicPlayer.Album, ,]$INFO[MusicPlayer.Album, ,]</label>
+						<scroll>true</scroll>
+						<pauseatend>0</pauseatend>
+						<font>Font-MusicVis-Album</font>
+						<textcolor>77666666</textcolor>
+						<angle>0</angle>
+						<align>left</align>
+						<scrollspeed>80</scrollspeed>
+						<pauseatend>0</pauseatend>
+					</control>	
+					<control type="label">
+						<description>Now Playing</description>
+						<posx>0</posx>
+						<posy>370</posy>
+						<width>2070</width>
+						<height>25</height>
+						<label>$INFO[MusicPlayer.Title,  ,]$INFO[MusicPlayer.Title,  ,]$INFO[MusicPlayer.Title,  ,]$INFO[MusicPlayer.Title,  ,]$INFO[MusicPlayer.Title,  ,]</label>
+						<scroll>true</scroll>
+						<font>Font-MusicVis-Title</font>
+						<pauseatend>0</pauseatend>
+						<textcolor>77white</textcolor>
+						<angle>0</angle>
+						<align>left</align>
+					</control>
 				</control>
 				<control type="image">
 					<posx>0</posx>
@@ -120,7 +123,7 @@
 						<width>1137</width>
 						<height>307</height>
 						<texture border="24">arctic/common/whitepanel8.png</texture>
-						<colordiffuse>e0e0e0e0</colordiffuse>
+						<colordiffuse>mod-osdbar</colordiffuse>
 					</control>
 					<control type="image">
 						<posx>825</posx>
@@ -462,7 +465,7 @@
 							<posy>-58</posy>
 							<control type="image">
 								<posx>509</posx>
-								<posy>-205</posy>
+								<posy>-195</posy>
 								<width>310</width>
 								<height>310</height>
 								<texture background="true" fallback="osd/fullscreen/cd.png">$INFO[Player.Folderpath,,cdart.png]</texture>
@@ -567,49 +570,51 @@
 			<control type="group">
 				<animation effect="fade" time="600">Visible</animation>
 				<animation effect="fade" time="600">Hidden</animation>
-				<posy>0</posy>
-				<control type="label">
-					<description>Now Playing</description>
-					<posx>0</posx>
-					<posy>280</posy>
-					<width>2070</width>
-					<label>$INFO[MusicPlayer.Artist, ,]$INFO[MusicPlayer.Artist, ,]$INFO[MusicPlayer.Artist,,]$INFO[MusicPlayer.Artist,,]$INFO[MusicPlayer.Artist, ,]$INFO[MusicPlayer.Artist, ,]$INFO[MusicPlayer.Artist, ,]$INFO[MusicPlayer.Artist, ,]$INFO[MusicPlayer.Artist, ,]</label>
-					<scroll>true</scroll>
-					<pauseatend>0</pauseatend>
-					<font>Font-MusicVis-Artist</font>
-					<textcolor>55000000</textcolor>
-					<angle>0</angle>
-					<align>left</align>
-					<scrollspeed>100</scrollspeed>
-				</control>
-				<control type="label">
-					<description>Now Playing</description>
-					<posx>0</posx>
-					<posy>480</posy>
-					<width>2070</width>
-					<label>$INFO[MusicPlayer.Album, ,]$INFO[MusicPlayer.Album, ,]$INFO[MusicPlayer.Album, ,]$INFO[MusicPlayer.Album, ,]$INFO[MusicPlayer.Album, ,]$INFO[MusicPlayer.Album, ,]$INFO[MusicPlayer.Album, ,]$INFO[MusicPlayer.Album, ,]$INFO[MusicPlayer.Album, ,]$INFO[MusicPlayer.Album, ,]</label>
-					<scroll>true</scroll>
-					<pauseatend>0</pauseatend>
-					<font>Font-MusicVis-Album</font>
-					<textcolor>77666666</textcolor>
-					<angle>0</angle>
-					<align>left</align>
-					<scrollspeed>80</scrollspeed>
-					<pauseatend>0</pauseatend>
-				</control>	
-				<control type="label">
-					<description>Now Playing</description>
-					<posx>0</posx>
-					<posy>370</posy>
-					<width>2070</width>
-					<height>25</height>
-					<label>$INFO[MusicPlayer.Title,  ,]$INFO[MusicPlayer.Title,  ,]$INFO[MusicPlayer.Title,  ,]$INFO[MusicPlayer.Title,  ,]$INFO[MusicPlayer.Title,  ,]</label>
-					<scroll>true</scroll>
-					<font>Font-MusicVis-Title</font>
-					<pauseatend>0</pauseatend>
-					<textcolor>77white</textcolor>
-					<angle>0</angle>
-					<align>left</align>
+				<control type="group">
+					<visible>!Skin.HasSetting(musicvis.hidetext)</visible>
+					<control type="label">
+						<description>Now Playing</description>
+						<posx>0</posx>
+						<posy>280</posy>
+						<width>2070</width>
+						<label>$INFO[MusicPlayer.Artist, ,]$INFO[MusicPlayer.Artist, ,]$INFO[MusicPlayer.Artist,,]$INFO[MusicPlayer.Artist,,]$INFO[MusicPlayer.Artist, ,]$INFO[MusicPlayer.Artist, ,]$INFO[MusicPlayer.Artist, ,]$INFO[MusicPlayer.Artist, ,]$INFO[MusicPlayer.Artist, ,]</label>
+						<scroll>true</scroll>
+						<pauseatend>0</pauseatend>
+						<font>Font-MusicVis-Artist</font>
+						<textcolor>55000000</textcolor>
+						<angle>0</angle>
+						<align>left</align>
+						<scrollspeed>100</scrollspeed>
+					</control>
+					<control type="label">
+						<description>Now Playing</description>
+						<posx>0</posx>
+						<posy>480</posy>
+						<width>2070</width>
+						<label>$INFO[MusicPlayer.Album, ,]$INFO[MusicPlayer.Album, ,]$INFO[MusicPlayer.Album, ,]$INFO[MusicPlayer.Album, ,]$INFO[MusicPlayer.Album, ,]$INFO[MusicPlayer.Album, ,]$INFO[MusicPlayer.Album, ,]$INFO[MusicPlayer.Album, ,]$INFO[MusicPlayer.Album, ,]$INFO[MusicPlayer.Album, ,]</label>
+						<scroll>true</scroll>
+						<pauseatend>0</pauseatend>
+						<font>Font-MusicVis-Album</font>
+						<textcolor>77666666</textcolor>
+						<angle>0</angle>
+						<align>left</align>
+						<scrollspeed>80</scrollspeed>
+						<pauseatend>0</pauseatend>
+					</control>	
+					<control type="label">
+						<description>Now Playing</description>
+						<posx>0</posx>
+						<posy>370</posy>
+						<width>2070</width>
+						<height>25</height>
+						<label>$INFO[MusicPlayer.Title,  ,]$INFO[MusicPlayer.Title,  ,]$INFO[MusicPlayer.Title,  ,]$INFO[MusicPlayer.Title,  ,]$INFO[MusicPlayer.Title,  ,]</label>
+						<scroll>true</scroll>
+						<font>Font-MusicVis-Title</font>
+						<pauseatend>0</pauseatend>
+						<textcolor>77white</textcolor>
+						<angle>0</angle>
+						<align>left</align>
+					</control>
 				</control>
 				<control type="label">
 					<description>Player Times</description>

@@ -11,26 +11,53 @@
             <include>listEndAnimation</include>
             <posx>62</posx>
 			<posy>195</posy>
-            <control type="image">
-                <description>Cover</description>
-                <posx>6</posx>
-                <posy>6</posy>
-                <width>828</width>
-				<height>464</height>
-                <texture background="true" diffuse="views/newgloss/panel-fanart-diffuse.png" fallback="views/fallbacks/DefaultAlbumCover.png/square-large.png">$INFO[ListItem.Art(fanart)]</texture>
-                <aspectratio scalediffuse="false">scale</aspectratio>
-                <fadetime>200</fadetime>
-            </control>
-            <control type="image">
-                <description>Border</description>
-                <posx>-4</posx>
-                <posy>-4</posy>
-                <width>848</width>
-				<height>484</height>
-                <texture border="25">views/newgloss/border.png</texture>
-                <aspectratio scalediffuse="false">stretch</aspectratio>
-                <colordiffuse>Mod_Border</colordiffuse>
-            </control>
+			<animation effect="slide" end="-60" condition="Skin.HasSetting(musicfanart.showcover)">Conditional</animation>
+			<control type="group">
+				<visible>!Skin.HasSetting(musicfanart.showcover)</visible>
+				<control type="image">
+					<description>Cover</description>
+					<posx>6</posx>
+					<posy>6</posy>
+					<width>828</width>
+					<height>464</height>
+					<texture background="true" diffuse="arctic/panel/fanart.png" fallback="views/fallbacks/DefaultAlbumCover.png/square-large.png">$INFO[ListItem.Art(fanart)]</texture>
+					<aspectratio scalediffuse="false">scale</aspectratio>
+					<fadetime>200</fadetime>
+				</control>
+				<control type="image">
+					<description>Border</description>
+					<posx>-4</posx>
+					<posy>-4</posy>
+					<width>848</width>
+					<height>484</height>
+					<texture border="25">arctic/common/border.png</texture>
+					<aspectratio scalediffuse="false">stretch</aspectratio>
+					<colordiffuse>Mod_Border</colordiffuse>
+				</control>
+			</control>
+			<control type="group">
+				<visible>Skin.HasSetting(musicfanart.showcover)</visible>
+				<control type="image">
+					<description>Cover</description>
+					<posx>126</posx>
+					<posy>6</posy>
+					<width>702</width>
+					<height>702</height>
+					<texture background="true" diffuse="arctic/panel/fanart.png" fallback="views/fallbacks/DefaultAlbumCover.png/square-large.png">$VAR[WallPoster]</texture>
+					<aspectratio scalediffuse="false">scale</aspectratio>
+					<fadetime>200</fadetime>
+				</control>
+				<control type="image">
+					<description>Border</description>
+					<posx>116</posx>
+					<posy>-4</posy>
+					<width>722</width>
+					<height>722</height>
+					<texture border="25">arctic/common/border.png</texture>
+					<aspectratio scalediffuse="false">stretch</aspectratio>
+					<colordiffuse>Mod_Border</colordiffuse>
+				</control>
+			</control>
             <control type="panel" id="52">
 				<posx>836</posx>
 				<posy>0</posy>
@@ -40,7 +67,7 @@
                 <scrolltime tween="cubic" easing="out">500</scrolltime>
                 <orientation>vertical</orientation>
                 <pagecontrol>70</pagecontrol>
-                <viewtype label="Fanart Panel">list</viewtype>
+                <viewtype label="Fanart">list</viewtype>
                 <onright>70</onright>
                 <onleft condition="Skin.HasSetting(KioskMode)">52</onleft>
                 <onleft condition="!Skin.HasSetting(KioskMode)">9010</onleft>
@@ -55,19 +82,8 @@
                         <posy>6</posy>
                         <width>226</width>
                         <height>226</height>
-                        <texture background="true" diffuse="views/newgloss/musicwall-diffuse.png" fallback="views/fallbacks/DefaultAlbumCover.png/square-large.png">$VAR[WallPoster]</texture>
-                        <colordiffuse>ffcccccc</colordiffuse>
-                        <aspectratio>stretch</aspectratio>
-                    </control>
-                    <control type="image">
-                        <description>Gloss</description>
-                        <posx>6</posx>
-                        <posy>6</posy>
-                        <width>226</width>
-                        <height>226</height>
-                        <texture background="true" diffuse="views/newgloss/musicwall-diffuse.png">views/newgloss/gloss.png</texture>
-                        <colordiffuse>ffcccccc</colordiffuse>
-                        <aspectratio scalediffuse="false" align="right" aligny="top">keep</aspectratio>
+                        <texture background="true" diffuse="arctic/covers/226.png" fallback="views/fallbacks/DefaultAlbumCover.png/square-large.png">$VAR[WallPoster]</texture>
+                        <aspectratio scalediffuse="false">scale</aspectratio>
                     </control>
                     <control type="image">
                         <description>Border</description>
@@ -75,7 +91,7 @@
                         <posy>-4</posy>
                         <width>246</width>
                         <height>246</height>
-                        <texture border="25">views/newgloss/border.png</texture>
+                        <texture border="25">arctic/common/border.png</texture>
                         <colordiffuse>Mod_Border_Fade</colordiffuse>
                         <aspectratio>stretch</aspectratio>
                     </control>
@@ -85,7 +101,7 @@
                         <posy>6</posy>
                         <width>226</width>
                         <height>226</height>
-                        <texture>views/newgloss/musicwall-diffuse.png</texture>
+                        <texture>arctic/common/whitepanel.png</texture>
                         <colordiffuse>Mod_Cover_Fade</colordiffuse>
                         <aspectratio>stretch</aspectratio>
                     </control>
@@ -129,26 +145,8 @@
 							<posy>6</posy>
 							<width>226</width>
 							<height>226</height>
-							<texture background="true" diffuse="views/newgloss/musicwall-diffuse.png" fallback="views/fallbacks/DefaultAlbumCover.png/square-large.png">$VAR[WallPoster]</texture>
-							<aspectratio>stretch</aspectratio>
-						</control>
-						<control type="image">
-							<description>Gloss</description>
-							<posx>6</posx>
-							<posy>6</posy>
-							<width>226</width>
-							<height>226</height>
-							<texture background="true" diffuse="views/newgloss/musicwall-diffuse.png">views/newgloss/gloss.png</texture>
-							<aspectratio scalediffuse="false" align="right" aligny="top">keep</aspectratio>
-						</control>
-						<control type="image">
-							<description>Glass</description>
-							<posx>6</posx>
-							<posy>6</posy>
-							<width>226</width>
-							<height>226</height>
-							<texture border="25">arctic/common/glass-ring.png</texture>
-							<visible>Skin.HasSetting(covers.showglass)</visible>
+							<texture background="true" diffuse="arctic/covers/226.png" fallback="views/fallbacks/DefaultAlbumCover.png/square-large.png">$VAR[WallPoster]</texture>
+							<aspectratio scalediffuse="false">scale</aspectratio>
 						</control>
 						<control type="image">
 							<description>Border</description>
@@ -156,7 +154,7 @@
 							<posy>-4</posy>
 							<width>246</width>
 							<height>246</height>
-							<texture border="25">views/newgloss/border.png</texture>
+							<texture border="25">arctic/common/border.png</texture>
 							<aspectratio>stretch</aspectratio>
 							<colordiffuse>Mod_Border</colordiffuse>
 						</control>
@@ -192,9 +190,19 @@
 							<posy>-4</posy>
 							<width>246</width>
 							<height>246</height>
-							<texture border="25">views/newgloss/border-fo.png</texture>
+							<texture border="25">arctic/common/border.png</texture>
 							<aspectratio>stretch</aspectratio>
-							<colordiffuse>ddffffff</colordiffuse>
+							<colordiffuse>Mod_Border</colordiffuse>
+						</control>
+						<control type="image">
+							<description>Border</description>
+							<posx>6</posx>
+							<posy>6</posy>
+							<width>226</width>
+							<height>226</height>
+							<texture border="25">arctic/common/border-glo-flat.png</texture>
+							<aspectratio>stretch</aspectratio>
+							<colordiffuse>Mod_Glow_Border</colordiffuse>
 						</control>
 					</control>	
                 </focusedlayout>
@@ -202,6 +210,7 @@
 			<control type="group">
 				<posy>476</posy>
 				<posx>0</posx>
+				<visible>!Skin.HasSetting(musicfanart.showcover)</visible>
 				<control type="label">
 					<posx>24</posx>
 					<posy>30</posy>

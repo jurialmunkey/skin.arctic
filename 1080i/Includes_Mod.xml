@@ -1222,15 +1222,7 @@
 				<width>189</width>
 				<height>274</height>
 				<texture border="25">arctic/common/border.png</texture>
-			</control>
-			<control type="image">
-				<posx>10</posx>
-				<posy>10</posy>
-				<width>169</width>
-				<height>254</height>
-				<texture border="5">views/newgloss/whitepanel.png</texture>
-				<visible>Control.HasFocus(82)</visible>
-				<colordiffuse>Mod_Cover_Fade</colordiffuse>
+				<colordiffuse>Mod_Border_Fade</colordiffuse>
 			</control>
 			<control type="image">
 				<posx>10</posx>
@@ -1265,6 +1257,7 @@
 				<width>189</width>
 				<height>274</height>
 				<texture border="25">arctic/common/border.png</texture>
+				<colordiffuse>Mod_Border_Fade</colordiffuse>
 			</control>
 			<control type="image">
 				<posx>10</posx>
@@ -1299,6 +1292,7 @@
 					<width>240</width>
 					<height>240</height>
 					<texture border="25">arctic/common/border.png</texture>
+					<colordiffuse>Mod_Border_Fade</colordiffuse>
 				</control>
 				<control type="image">
 					<posx>10</posx>
@@ -1332,15 +1326,16 @@
 				<width>189</width>
 				<height>274</height>
 				<texture border="25">arctic/common/border.png</texture>
-				<visible>!Control.HasFocus(82)</visible>
+				<colordiffuse>Mod_Border</colordiffuse>
 			</control>
 			<control type="image">
-				<posx>-5</posx>
-				<posy>-5</posy>
-				<width>199</width>
-				<height>284</height>
-				<texture border="52">views/newgloss/border-fo.png</texture>
+				<posx>-10</posx>
+				<posy>-10</posy>
+				<width>209</width>
+				<height>294</height>
+				<texture border="52">arctic/common/border-glo.png</texture>
 				<visible>Control.HasFocus(82)</visible>
+				<colordiffuse>Mod_Glow_Border</colordiffuse>
 			</control>
 		</focusedlayout>
 		<focusedlayout width="184" condition="Container(525).HasFocus(7)">
@@ -1366,15 +1361,15 @@
 				<width>189</width>
 				<height>274</height>
 				<texture border="25">arctic/common/border.png</texture>
-				<visible>!Control.HasFocus(82)</visible>
 			</control>
 			<control type="image">
-				<posx>-5</posx>
-				<posy>-5</posy>
-				<width>199</width>
-				<height>284</height>
-				<texture border="52">views/newgloss/border-fo.png</texture>
+				<posx>-10</posx>
+				<posy>-10</posy>
+				<width>209</width>
+				<height>294</height>
+				<texture border="52">arctic/common/border-glo.png</texture>
 				<visible>Control.HasFocus(82)</visible>
+				<colordiffuse>Mod_Glow_Border</colordiffuse>
 			</control>
 		</focusedlayout>
 		<focusedlayout width="230" condition="Container(525).HasFocus(3)">
@@ -1400,15 +1395,15 @@
 					<width>240</width>
 					<height>240</height>
 					<texture border="25">arctic/common/border.png</texture>
-					<visible>!Control.HasFocus(82)</visible>
 				</control>
 				<control type="image">
-					<posx>-5</posx>
-					<posy>-5</posy>
-					<width>250</width>
-					<height>250</height>
-					<texture border="52">views/newgloss/border-fo.png</texture>
+					<posx>-10</posx>
+					<posy>-10</posy>
+					<width>260</width>
+					<height>260</height>
+					<texture border="52">arctic/common/border-glo.png</texture>
 					<visible>Control.HasFocus(82)</visible>
+					<colordiffuse>Mod_Glow_Border</colordiffuse>
 				</control>
 			</control>
 		</focusedlayout>

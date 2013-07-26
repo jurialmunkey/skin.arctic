@@ -252,9 +252,18 @@
 								<width>257</width>
 								<height>375</height>
 								<texture border="25">arctic/common/border.png</texture>
-								<colordiffuse>Mod_Border</colordiffuse>
 								<aspectratio>stretch</aspectratio>
 							</control>
+							<control type="image">
+								<description>Poster</description>
+								<posx>-5</posx>
+								<posy>-5</posy>
+								<width>257</width>
+								<height>375</height>
+								<texture border="25">arctic/common/border.png</texture>
+								<aspectratio>stretch</aspectratio>
+							</control>
+							
                         </control>
                     </focusedlayout>
                 </control>

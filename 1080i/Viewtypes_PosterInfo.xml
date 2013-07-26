@@ -17,7 +17,7 @@
 		<onup condition="Skin.HasSetting(KioskMode)">56</onup>
 		<ondown>70</ondown>
 		<focusposition>2</focusposition>
-		<movement>1</movement>
+		<movement>0</movement>
 		<preloaditems>0</preloaditems>  
 		<itemlayout width="224" condition="!Container.Content(episodes)">
 			<control type="group">
@@ -398,9 +398,9 @@
 				<control type="group">
 					<posx>490</posx>
 					<posy>75</posy>
-					<animation effect="slide" end="-340,250" condition="!Skin.HasSetting(old.posterinfo)">Conditional</animation>
+					<animation effect="slide" end="-230,250" condition="!Skin.HasSetting(old.posterinfo)">Conditional</animation>
 					<animation effect="slide" start="0,75" end="0" time="250" delay="250" reversible="false">Visible</animation>
-					<visible>![Container(56).OnNext | Container(56).OnPrevious] + !Window.IsActive(movieinformation) + Control.IsVisible(56)</visible>
+					<visible>![Container(56).OnNext | Container(56).OnPrevious] + !Window.IsActive(movieinformation) + Control.IsVisible(56) + !Skin.HasSetting(old.posterinfo)</visible>
 					<control type="image">
 						<posx>100</posx>
 						<posy>0</posy>

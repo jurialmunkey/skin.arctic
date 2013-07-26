@@ -157,15 +157,23 @@
 							</control>
 						</control>
 						<control type="image">
-							<description>Border</description>
-							<posx>-4</posx>
-							<posy>-4</posy>
-							<width>176</width>
-							<height>246</height>
-							<texture border="25">arctic/common/border.png</texture>
-							<aspectratio>stretch</aspectratio>
-							<colordiffuse>Mod_Border</colordiffuse>
-						</control>
+                            <description>Border</description>
+                            <posx>-14</posx>
+                            <posy>-14</posy>
+                            <width>196</width>
+                            <height>266</height>
+                            <texture border="52">arctic/common/border-20.png</texture>
+                            <aspectratio>stretch</aspectratio>
+                        </control> 
+                        <control type="image">
+                            <description>Border</description>
+                            <posx>-14</posx>
+                            <posy>-14</posy>
+                            <width>196</width>
+                            <height>266</height>
+                            <texture border="52">arctic/common/border-20.png</texture>
+                            <aspectratio>stretch</aspectratio>
+                        </control> 
                     </control>
                 </focusedlayout>
             </control>

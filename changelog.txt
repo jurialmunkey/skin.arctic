@@ -12,3 +12,4 @@ Added blue glow borders
 Added themes for faded covers
 Fixed poster info discart alignment issue for sets
 Fixed info tags for movie sets
+Fixed overlay for Views > Settings: Video Information

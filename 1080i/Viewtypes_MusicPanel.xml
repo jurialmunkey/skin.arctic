@@ -153,12 +153,12 @@
 				<height>476</height>
                 <include>FullscreenDimensions</include>
                 <scrolltime tween="cubic" easing="out">500</scrolltime>
-                <orientation>horizontal</orientation>
+                <orientation>vertical</orientation>
                 <viewtype label="Panel">list</viewtype>
                 <pagecontrol>70</pagecontrol>
-                <ondown>70</ondown>
-                <onright>51</onright>
+                <onright>70</onright>
                 <onleft>51</onleft>
+                <ondown>51</ondown>
                 <onup>51</onup>
                 <preloaditems>2</preloaditems>
                 <visible>Container.Content(albums) | Container.Content(artists)</visible>
@@ -233,19 +233,19 @@
                 </focusedlayout>
             </control>
         </control>
-         <!--Scrollbar-->			
+        <!--Scrollbar-->			
 		<control type="scrollbar" id="70">
 			<description>Scrollbar</description>
-			<width>1920</width>
-			<height>26</height>
-			<posy>26r</posy>
-			<orientation>horizontal</orientation>
-			<textureslidernib >arctic/common/slider-nf-h.png</textureslidernib>
-			<textureslidernibfocus >arctic/common/slider-fo-h.png</textureslidernibfocus>
+			<width>26</width>
+			<height>1080</height>
+			<posx>1894</posx>
+			<orientation>vertical</orientation>
+			<textureslidernib flipx="true" >arctic/common/slider-nf-v.png</textureslidernib>
+			<textureslidernibfocus flipx="true" >arctic/common/slider-fo-v.png</textureslidernibfocus>
 			<showonepage>true</showonepage>
-			<onup>51</onup>
-			<ondown condition="!Skin.HasSetting(KioskMode)">9010</ondown>
-			<ondown condition="Skin.HasSetting(KioskMode)">51</ondown>
+			<onleft>51</onleft>
+			<onright condition="!Skin.HasSetting(KioskMode)">9010</onright>
+			<onright condition="Skin.HasSetting(KioskMode)">51</onright>
 			<animation effect="fade" start="100" end="0" time="300" tween="sine" easing="inout" condition="!Control.IsVisible(9772)">Conditional</animation>
 			<animation effect="fade" start="40" end="100" time="300" tween="sine" easing="inout" condition="Control.HasFocus(70)">Conditional</animation>
 			<animation effect="fade" start="100" end="40" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(70)">Conditional</animation>

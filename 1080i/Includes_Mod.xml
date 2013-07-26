@@ -3142,7 +3142,18 @@
 				<aspectratio align="center" aligny="center">keep</aspectratio>
 				<texture fallback="aeonflags/studios/default-studio.png">$VAR[AeonFlagHDSD]</texture>
 				<colordiffuse>Mod_Tags_Alt</colordiffuse>
-				<visible>Container.Content(episodes) | Container.Content(movies)</visible>
+				<visible>[Container.Content(episodes) | Container.Content(movies)]  + !substring(ListItem.Path,videodb://1/7,left)</visible>
+				<animation effect="fade" end="90" condition="true">Conditional</animation>
+			</control>
+			<control type="image">
+				<posx>-100</posx>
+				<posy>52</posy>
+				<width>92</width>
+				<height>64</height>
+				<aspectratio align="center" aligny="center">keep</aspectratio>
+				<texture fallback="aeonflags/studios/default-studio.png">flags/other/set-default.png</texture>
+				<colordiffuse>Mod_Tags_Alt</colordiffuse>
+				<visible>[Container.Content(episodes) | Container.Content(movies)] + substring(ListItem.Path,videodb://1/7,left)</visible>
 				<animation effect="fade" end="90" condition="true">Conditional</animation>
 			</control>
 			<control type="image">
@@ -3162,7 +3173,7 @@
 				<aspectratio align="center" aligny="center">keep</aspectratio>
 				<texture fallback="aeonflags/studios/default-studio.png">$VAR[AeonFlagVideoCodec]</texture>
 				<colordiffuse>Mod_Tags</colordiffuse>
-				<visible>Container.Content(episodes) | Container.Content(movies)</visible>
+				<visible>[Container.Content(episodes) | Container.Content(movies)] + !substring(ListItem.Path,videodb://1/7,left)</visible>
 			</control>
 			<control type="image">
 				<posx>0</posx>
@@ -3181,7 +3192,20 @@
 				<aspectratio align="center" aligny="center">keep</aspectratio>
 				<texture fallback="aeonflags/studios/default-studio.png">$VAR[AeonFlagAudioCodec]</texture>
 				<colordiffuse>Mod_Tags</colordiffuse>
-				<visible>Container.Content(episodes) | Container.Content(movies)</visible>
+				<visible>[Container.Content(episodes) | Container.Content(movies)] + !substring(ListItem.Path,videodb://1/7,left)</visible>
+			</control>
+			<control type="label">
+				<font>Font-Alaska-S25-BL</font>
+				<textcolor>Mod_Tags</textcolor>
+				<posx>-200</posx>
+				<posy>60</posy>
+				<width>192</width>
+				<height>48</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>20457</label>
+				<scroll>false</scroll>
+				<visible>[Container.Content(episodes) | Container.Content(movies)] + substring(ListItem.Path,videodb://1/7,left)</visible>
 			</control>
 			<control type="image">
 				<posx>20</posx>

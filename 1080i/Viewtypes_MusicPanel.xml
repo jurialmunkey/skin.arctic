@@ -10,7 +10,7 @@
             <include>OptionsShutdownAnimation</include>
             <include>listEndAnimation</include>
             <posx>50</posx>
-			<posy>450</posy>
+			<posy>430</posy>
             <control type="image">
                 <description>Cover</description>
                 <posx>6</posx>
@@ -157,7 +157,8 @@
                 <viewtype label="Panel">list</viewtype>
                 <pagecontrol>70</pagecontrol>
                 <onright>70</onright>
-                <onleft>51</onleft>
+                <onleft condition="!Skin.HasSetting(KioskMode)">9010</onleft>
+				<onleft condition="Skin.HasSetting(KioskMode)">51</onleft>
                 <ondown>51</ondown>
                 <onup>51</onup>
                 <preloaditems>2</preloaditems>

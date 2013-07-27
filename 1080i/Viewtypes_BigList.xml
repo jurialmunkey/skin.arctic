@@ -62,6 +62,17 @@
 								<align>right</align>
 								<visible>Container.Content(movies) | Container.Content(episodes)</visible>
 							</control>
+							<control type="label">                        
+								<posx>632</posx>
+								<posy>0</posy>
+								<width>600</width>
+								<label>$INFO[ListItem.Property(UnWatchedEpisodes),, $LOCALIZE[16101]]</label>
+								<font>Font-Condensed-S20-B</font>
+								<textcolor>Mod_Tags</textcolor>
+								<scroll>false</scroll>
+								<align>right</align>
+								<visible>Container.Content(tvshows) | Container.Content(seasons)</visible>
+							</control>
 						</control>
 					</itemlayout>
 					<focusedlayout height="56">
@@ -106,6 +117,17 @@
 								<scroll>false</scroll>
 								<align>right</align>
 								<visible>Container.Content(movies) | Container.Content(episodes)</visible>
+							</control>
+							<control type="label">                        
+								<posx>632</posx>
+								<posy>0</posy>
+								<width>600</width>
+								<label>$INFO[ListItem.Property(UnWatchedEpisodes),, $LOCALIZE[16101]]</label>
+								<font>Font-Condensed-S20-B</font>
+								<textcolor>Mod_Tags_Alt</textcolor>
+								<scroll>false</scroll>
+								<align>right</align>
+								<visible>Container.Content(tvshows) | Container.Content(seasons)</visible>
 							</control>
 						</control>
 					</focusedlayout>
@@ -206,7 +228,7 @@
 						<posy>470</posy>
 						<width>309</width>
 						<height>464</height>
-						<texture background="true" diffuse="views/posterview/diffuse-ref.png" border="5" flipy="true">$VAR[WallPoster]</texture>
+						<texture background="true" diffuse="views/posterview/diffuse-ref.png" border="5" flipy="true">$VAR[ListInfoPosterVar]</texture>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
 						<fadetime>200</fadetime>
 					</control>
@@ -224,7 +246,7 @@
 						<posy>6</posy>
 						<width>309</width>
 						<height>464</height>
-						<texture background="true" diffuse="arctic/panel/season-poster.png">$VAR[WallPoster]</texture>
+						<texture background="true" diffuse="arctic/panel/season-poster.png">$VAR[ListInfoPosterVar]</texture>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
 						<fadetime>200</fadetime>
 					</control>

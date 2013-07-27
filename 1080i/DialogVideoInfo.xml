@@ -436,7 +436,7 @@
 									<onclick>SendClick(2003,8)</onclick>
 									<icon>aeonflags/addition/OSDPlayNF.png</icon>
 									<thumb>aeonflags/addition/OSDPlayFO.png</thumb>
-									<visible>[[System.HasAddon(script.cinema.experience) + Skin.HasSetting(videoinfo.cinemaexperience) + Container.Content(movies) + !SubString(Container.FolderPath,plugin)] | !System.HasAddon(script.cinema.experience) | !Container.Content(movies)]</visible>
+									<visible>[[System.HasAddon(script.cinema.experience) + Skin.HasSetting(videoinfo.cinemaexperience) + Container.Content(movies) + !SubString(Container.FolderPath,plugin)] | !System.HasAddon(script.cinema.experience) | !Container.Content(movies) | SubString(Container.FolderPath,plugin)]</visible>
 								</item>
 								<item id="1">
 									<description>Cinema Experience</description>

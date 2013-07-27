@@ -8,13 +8,7 @@
             <visible>Control.IsVisible(50) + !Window.IsActive(movieinformation) + !Window.IsActive(script-Actors-DialogInfo.xml) + !Window.IsActive(script-Actors-DialogVideoInfo.xml) + IsEmpty(Window(Home).Property(script.metadata.actors.hasparent)) + !Window.IsActive(addoninformation) + !Window.IsActive(favourites)</visible>
             <include>CommonViewAnimations</include>
             <include>OptionsShutdownAnimation</include>
-            <control type="image">
-                <posx>235</posx>
-                <posy>176</posy>
-                <height>727</height>
-                <width>1450</width>
-                <texture border="35">views/newgloss/whitepanel-15.png</texture>
-            </control>
+
             <control type="list" id="50">
                 <posx>250</posx>
                 <posy>190</posy>
@@ -26,6 +20,8 @@
                 <onright>70</onright>
                 <onup>50</onup>
                 <ondown>50</ondown>
+                <focusposition>3</focusposition>
+                <movement>3</movement>
                 <viewtype label="Big List">list</viewtype>
                 <scrolltime tween="cubic" easing="out">500</scrolltime>
                 <preloaditems>2</preloaditems>
@@ -49,8 +45,8 @@
                         <font>Font-Condensed-S34-B</font>
                         <align>left</align>
                         <label>$INFO[ListItem.Label]</label>
-                        <textcolor>mod-infotags</textcolor>
-                        <selectedcolor>mod-infotags</selectedcolor>
+                        <textcolor>Mod_Tags</textcolor>
+                        <selectedcolor>Mod_Tags</selectedcolor>
                         <scroll>false</scroll>
                         <animation effect="slide" end="-20" time="0" condition="Container.Content(genres)">Conditional</animation>
                     </control>
@@ -63,8 +59,8 @@
                         <font>Font-Condensed-S34-B</font>
                         <align>right</align>
                         <label>$INFO[ListItem.Label2]</label>
-                        <textcolor>mod-infotags-l</textcolor>
-                        <selectedcolor>mod-infotags-l</selectedcolor>
+                        <textcolor>Mod_Tags_Light</textcolor>
+                        <selectedcolor>Mod_Tags_Light</selectedcolor>
                         <scroll>false</scroll>
                         <visible>IsEmpty(ListItem.Overlay) + IsEmpty(ListItem.Rating)</visible>
                     </control>
@@ -77,8 +73,8 @@
                         <font>Font-Condensed-S34-B</font>
                         <align>right</align>
                         <label>$INFO[ListItem.Label2]</label>
-                        <textcolor>mod-infotags-l</textcolor>
-                        <selectedcolor>mod-infotags-l</selectedcolor>
+                        <textcolor>Mod_Tags_Light</textcolor>
+                        <selectedcolor>Mod_Tags_Light</selectedcolor>
                         <scroll>false</scroll>
                         <visible>!IsEmpty(ListItem.Overlay) | !IsEmpty(ListItem.Rating)</visible>
                         <animation effect="slide" end="55" time="0" condition="IsEmpty(ListItem.Overlay)">Conditional</animation>
@@ -113,8 +109,8 @@
                         <font>Font-Condensed-S34-B</font>
                         <align>right</align>
                         <label fallback="[COLOR=mod-infotags-l]0.0[/COLOR]">$INFO[ListItem.Rating]</label>
-                        <textcolor>mod-infotags-l</textcolor>
-                        <selectedcolor>mod-infotags-l</selectedcolor>
+                        <textcolor>Mod_Tags_Light</textcolor>
+                        <selectedcolor>Mod_Tags_Light</selectedcolor>
                         <scroll>false</scroll>
                         <visible>!IsEmpty(ListItem.Rating)</visible>
                     </control>
@@ -165,8 +161,8 @@
                         <font>Font-Condensed-S34-B</font>
                         <align>left</align>
                         <label>$INFO[ListItem.Label]</label>
-                        <selectedcolor>mod-infotags</selectedcolor>
-                        <textcolor>mod-infotags</textcolor>
+                        <selectedcolor>Mod_Tags</selectedcolor>
+                        <textcolor>Mod_Tags</textcolor>
                         <scroll>false</scroll>
                     </control>
                     <control type="label">
@@ -178,8 +174,8 @@
                         <font>Font-Condensed-S28</font>
                         <align>left</align>
                         <label>$INFO[ListItem.Year]$INFO[ListItem.Genre, • ,]</label>
-                        <selectedcolor>mod-infotags-l</selectedcolor>
-                        <textcolor>mod-infotags-l</textcolor>
+                        <selectedcolor>Mod_Tags_Light</selectedcolor>
+                        <textcolor>Mod_Tags_Light</textcolor>
                         <scroll>false</scroll>
                     </control>
                     <control type="image">
@@ -189,7 +185,7 @@
                         <width>140</width>
                         <height>100</height>
                         <texture>$VAR[ListHDSDFlag]</texture>
-                        <colordiffuse>mod-infotags</colordiffuse>
+                        <colordiffuse>Mod_Tags</colordiffuse>
                         <visible>!IsEmpty(ListItem.VideoResolution)</visible>
                     </control>
                     <control type="image">
@@ -200,7 +196,7 @@
                         <height>100</height>
                         <texture>flags/other/set-default.png</texture>
                         <visible>substring(ListItem.Path,videodb://1/7,left)</visible>
-                        <colordiffuse>mod-infotags-l</colordiffuse>
+                        <colordiffuse>Mod_Tags_Light</colordiffuse>
                     </control>
                     <control type="image">
                         <description>Watched/unwatched overlay</description>
@@ -227,8 +223,8 @@
                         <font>Font-Condensed-S34-B</font>
                         <align>right</align>
                         <label fallback="                 [COLOR=mod-infotags-l]0.0[/COLOR]">$INFO[ListItem.Rating,                 ,]</label>
-                        <selectedcolor>mod-infotags-l</selectedcolor>
-                        <textcolor>mod-infotags-l</textcolor>
+                        <selectedcolor>Mod_Tags_Light</selectedcolor>
+                        <textcolor>Mod_Tags_Light</textcolor>
                         <scroll>false</scroll>
                         <visible>!IsEmpty(ListItem.Title)</visible>
                     </control>
@@ -253,7 +249,7 @@
                         <font>Font-Condensed-S34-B</font>
                         <align>left</align>
                         <label>$INFO[ListItem.Label]</label>
-                        <textcolor>mod-infotags</textcolor>
+                        <textcolor>Mod_Tags</textcolor>
                         <scroll>false</scroll>
                     </control>
                     <control type="label">
@@ -265,7 +261,7 @@
                         <font>Font-Condensed-S28</font>
                         <align>left</align>
                         <label>$INFO[ListItem.Studio,, • ]$INFO[ListItem.Genre]</label>
-                        <textcolor>mod-infotags-l</textcolor>
+                        <textcolor>Mod_Tags_Light</textcolor>
                         <scroll>false</scroll>
                     </control>
                     <control type="image">
@@ -293,7 +289,7 @@
                         <font>Font-Condensed-S34-B</font>
                         <align>right</align>
                         <label fallback="                 [COLOR=mod-infotags-l]0.0[/COLOR]">$INFO[ListItem.Rating,                 ,]</label>
-                        <textcolor>mod-infotags-l</textcolor>
+                        <textcolor>Mod_Tags_Light</textcolor>
                         <scroll>false</scroll>
                         <visible>!IsEmpty(ListItem.Title)</visible>
                     </control>
@@ -305,7 +301,7 @@
                             <width>64</width>
                             <height>41</height>
                             <texture>views/list/other/unwatched.png</texture>
-                            <colordiffuse>mod-infotags-l</colordiffuse>
+                            <colordiffuse>Mod_Tags_Light</colordiffuse>
                         </control>
                         <control type="label">
                             <posx>1244</posx>
@@ -314,7 +310,7 @@
                             <height>42</height>
                             <label>$INFO[ListItem.Property(unWatchedEpisodes)]</label>
                             <font>Font-Condensed-S30-B</font>
-                            <textcolor>mod-infotags-l</textcolor>
+                            <textcolor>Mod_Tags_Light</textcolor>
                             <scroll>no</scroll>
                             <align>center</align>
                         </control>
@@ -340,7 +336,7 @@
                         <font>Font-Condensed-S34-B</font>
                         <align>left</align>
                         <label>$INFO[ListItem.Label]</label>
-                        <textcolor>mod-infotags</textcolor>
+                        <textcolor>Mod_Tags</textcolor>
                         <scroll>false</scroll>
                     </control>
                     <control type="label">
@@ -352,7 +348,7 @@
                         <font>Font-Condensed-S28</font>
                         <align>left</align>
                         <label>$INFO[ListItem.Studio]</label>
-                        <textcolor>mod-infotags-l</textcolor>
+                        <textcolor>Mod_Tags_Light</textcolor>
                         <scroll>false</scroll>
                     </control>
                     <control type="image">
@@ -380,7 +376,7 @@
                             <width>64</width>
                             <height>41</height>
                             <texture>views/list/other/unwatched.png</texture>
-                            <colordiffuse>mod-infotags-l</colordiffuse>
+                            <colordiffuse>Mod_Tags_Light</colordiffuse>
                         </control>
                         <control type="label">
                             <posx>1314</posx>
@@ -389,7 +385,7 @@
                             <height>42</height>
                             <label>$INFO[ListItem.Property(unWatchedEpisodes)]</label>
                             <font>Font-Condensed-S30-B</font>
-                            <textcolor>mod-infotags-l</textcolor>
+                            <textcolor>Mod_Tags_Light</textcolor>
                             <scroll>no</scroll>
                             <align>center</align>
                         </control>
@@ -425,8 +421,8 @@
                         <font>Font-Condensed-S34-B</font>
                         <align>left</align>
                         <label>$INFO[ListItem.Label]</label>
-                        <selectedcolor>mod-infotags</selectedcolor>
-                        <textcolor>mod-infotags</textcolor>
+                        <selectedcolor>Mod_Tags</selectedcolor>
+                        <textcolor>Mod_Tags</textcolor>
                         <scroll>false</scroll>
                     </control>
                     <control type="label">
@@ -438,8 +434,8 @@
                         <font>Font-Condensed-S28</font>
                         <align>left</align>
                         <label>$INFO[ListItem.Premiered]$INFO[ListItem.Duration, • , $LOCALIZE[12391]]</label>
-                        <selectedcolor>mod-infotags-l</selectedcolor>
-                        <textcolor>mod-infotags-l</textcolor>
+                        <selectedcolor>Mod_Tags_Light</selectedcolor>
+                        <textcolor>Mod_Tags_Light</textcolor>
                         <scroll>false</scroll>
                     </control>
                     <control type="image">
@@ -449,7 +445,7 @@
                         <width>140</width>
                         <height>100</height>
                         <texture>$VAR[ListHDSDFlag]</texture>
-                        <colordiffuse>mod-infotags</colordiffuse>
+                        <colordiffuse>Mod_Tags</colordiffuse>
                         <visible>!IsEmpty(ListItem.VideoResolution)</visible>
                     </control>
                     <control type="image">
@@ -477,8 +473,8 @@
                         <font>Font-Condensed-S34-B</font>
                         <align>right</align>
                         <label fallback="                 [COLOR=mod-infotags-l]0.0[/COLOR]">$INFO[ListItem.Rating,                 ,]</label>
-                        <selectedcolor>mod-infotags-l</selectedcolor>
-                        <textcolor>mod-infotags-l</textcolor>
+                        <selectedcolor>Mod_Tags_Light</selectedcolor>
+                        <textcolor>Mod_Tags_Light</textcolor>
                         <scroll>false</scroll>
                         <visible>!IsEmpty(ListItem.Title)</visible>
                     </control>
@@ -500,7 +496,17 @@
                         <posy>0</posy>
                         <width>1420</width>
                         <height>99</height>
-                        <texture border="5">views/other/focus-mod.png</texture>
+                        <texture border="25">arctic/common/whitepanel8.png</texture>
+                        <include>defaultfocusanim</include>
+                        <include>visiblehidefadeinfo</include>
+                        <colordiffuse>Mod_Tags_Dark</colordiffuse>
+                    </control>
+                    <control type="image">
+                        <posx>-10</posx>
+                        <posy>-10</posy>
+                        <width>1440</width>
+                        <height>119</height>
+                        <texture border="25">arctic/common/border.png</texture>
                         <include>defaultfocusanim</include>
                         <include>visiblehidefadeinfo</include>
                     </control>
@@ -535,8 +541,8 @@
                             <font>Font-Condensed-S34-B</font>
                             <align>left</align>
                             <label>$VAR[ListItem.Label]</label>
-                            <textcolor>eewhite</textcolor>
-                            <selectedcolor>eewhite</selectedcolor>
+                            <textcolor>Mod_Tags_Alt</textcolor>
+                            <selectedcolor>Mod_Tags_Alt</selectedcolor>
                             <animation effect="slide" end="-20" time="0" condition="Container.Content(genres)">Conditional</animation>
                         </control>
                         <control type="label">
@@ -548,8 +554,8 @@
                             <font>Font-Condensed-S34-B</font>
                             <align>right</align>
                             <label>$INFO[ListItem.Label2]</label>
-                            <textcolor>D4FFFFFF</textcolor>
-                            <selectedcolor>D4FFFFFF</selectedcolor>
+                            <textcolor>Mod_Tags_Alt2</textcolor>
+                            <selectedcolor>Mod_Tags_Alt2</selectedcolor>
                             <scroll>false</scroll>
                             <visible>IsEmpty(ListItem.Overlay) + IsEmpty(ListItem.Rating)</visible>
                         </control>
@@ -562,8 +568,8 @@
                             <font>Font-Condensed-S34-B</font>
                             <align>right</align>
                             <label>$INFO[ListItem.Label2]</label>
-                            <textcolor>D4FFFFFF</textcolor>
-                            <selectedcolor>D4FFFFFF</selectedcolor>
+                            <textcolor>Mod_Tags_Alt2</textcolor>
+                            <selectedcolor>Mod_Tags_Alt2</selectedcolor>
                             <scroll>false</scroll>
                             <visible>!IsEmpty(ListItem.Overlay) | !IsEmpty(ListItem.Rating)</visible>
                             <animation effect="slide" end="62" time="0" condition="IsEmpty(ListItem.Rating)">Conditional</animation>
@@ -574,7 +580,7 @@
                             <posy>0</posy>
                             <width>100</width>
                             <height>100</height>
-                            <colordiffuse>D4FFFFFF</colordiffuse>
+                            <colordiffuse>Mod_Tags_Alt2</colordiffuse>
                             <texture>$VAR[DefaultListOverlay]</texture>
                             <visible>!IsEmpty(ListItem.Overlay)</visible>
                             <animation effect="slide" end="40" time="0" condition="IsEmpty(ListItem.Overlay)">Conditional</animation>
@@ -600,8 +606,8 @@
                             <font>Font-Condensed-S34-B</font>
                             <align>right</align>
                             <label fallback="[COLOR=47FFFFFF]0.0[/COLOR]">$INFO[ListItem.Rating]</label>
-                            <textcolor>D4FFFFFF</textcolor>
-                            <selectedcolor>D4FFFFFF</selectedcolor>
+                            <textcolor>Mod_Tags_Alt2</textcolor>
+                            <selectedcolor>Mod_Tags_Alt2</selectedcolor>
                             <scroll>false</scroll>
                             <visible>!IsEmpty(ListItem.Rating)</visible>
                         </control>
@@ -624,7 +630,18 @@
                         <posy>0</posy>
                         <width>1420</width>
                         <height>99</height>
-                        <texture border="5">views/other/focus-mod.png</texture>
+                        <texture border="25">arctic/common/whitepanel8.png</texture>
+                        <include>defaultfocusanim</include>
+                        <include>visiblehidefadeinfo</include>
+                        <colordiffuse>Mod_Tags_Dark</colordiffuse>
+                    </control>
+                    
+                    <control type="image">
+                        <posx>-10</posx>
+                        <posy>-10</posy>
+                        <width>1440</width>
+                        <height>119</height>
+                        <texture border="25">arctic/common/border.png</texture>
                         <include>defaultfocusanim</include>
                         <include>visiblehidefadeinfo</include>
                     </control>
@@ -651,8 +668,8 @@
                             <font>Font-Condensed-S34-B</font>
                             <align>left</align>
                             <label>$VAR[ListItem.Label]</label>
-                            <selectedcolor>eewhite</selectedcolor>
-                            <textcolor>eewhite</textcolor>
+                            <selectedcolor>Mod_Tags_Alt</selectedcolor>
+                            <textcolor>Mod_Tags_Alt</textcolor>
                         </control>
                         <control type="label">
                             <description>Year / Genre</description>
@@ -663,8 +680,8 @@
                             <font>Font-Condensed-S28</font>
                             <align>left</align>
                             <label>$INFO[ListItem.Year]$INFO[ListItem.Genre, • ,]</label>
-                            <selectedcolor>D4FFFFFF</selectedcolor>
-                            <textcolor>D4FFFFFF</textcolor>
+                            <selectedcolor>Mod_Tags_Alt2</selectedcolor>
+                            <textcolor>Mod_Tags_Alt2</textcolor>
                             <scroll>false</scroll>
                         </control>
                         <control type="image">
@@ -674,7 +691,7 @@
                             <width>140</width>
                             <height>100</height>
                             <texture>$VAR[ListHDSDFlag]</texture>
-                            <colordiffuse>D4FFFFFF</colordiffuse>
+                            <colordiffuse>Mod_Tags_Alt2</colordiffuse>
                             <visible>!IsEmpty(ListItem.VideoResolution)</visible>
                         </control>
                         <control type="image">
@@ -685,7 +702,7 @@
                             <height>100</height>
                             <texture>flags/other/set-default.png</texture>
                             <visible>substring(ListItem.Path,videodb://1/7,left)</visible>
-                            <colordiffuse>D4FFFFFF</colordiffuse>
+                            <colordiffuse>Mod_Tags_Alt2</colordiffuse>
                         </control>
                         <control type="image">
                             <description>Watched/unwatched overlay</description>
@@ -693,7 +710,7 @@
                             <posy>0</posy>
                             <width>100</width>
                             <height>100</height>
-                            <colordiffuse>D4FFFFFF</colordiffuse>
+                            <colordiffuse>Mod_Tags_Alt2</colordiffuse>
                             <texture>$VAR[DefaultListOverlay]</texture>
                         </control>
                         <control type="image">
@@ -713,8 +730,8 @@
                             <font>Font-Condensed-S34-B</font>
                             <align>right</align>
                             <label fallback="                 [COLOR=47FFFFFF]0.0[/COLOR]">$INFO[ListItem.Rating,                 ,]</label>
-                            <selectedcolor>D4FFFFFF</selectedcolor>
-                            <textcolor>D4FFFFFF</textcolor>
+                            <selectedcolor>Mod_Tags_Alt2</selectedcolor>
+                            <textcolor>Mod_Tags_Alt2</textcolor>
                             <scroll>false</scroll>
                             <visible>!IsEmpty(ListItem.Title)</visible>
                         </control>
@@ -727,7 +744,17 @@
                         <posy>0</posy>
                         <width>1420</width>
                         <height>99</height>
-                        <texture border="5">views/other/focus-mod.png</texture>
+                        <texture border="25">arctic/common/whitepanel8.png</texture>
+                        <include>defaultfocusanim</include>
+                        <include>visiblehidefadeinfo</include>
+                        <colordiffuse>Mod_Tags_Dark</colordiffuse>
+                    </control>
+                    <control type="image">
+                        <posx>-10</posx>
+                        <posy>-10</posy>
+                        <width>1440</width>
+                        <height>119</height>
+                        <texture border="25">arctic/common/border.png</texture>
                         <include>defaultfocusanim</include>
                         <include>visiblehidefadeinfo</include>
                     </control>
@@ -754,7 +781,7 @@
                             <font>Font-Condensed-S34-B</font>
                             <align>left</align>
                             <label>$INFO[ListItem.Label]</label>
-                            <textcolor>eewhite</textcolor>
+                            <textcolor>Mod_Tags_Alt</textcolor>
                         </control>
                         <control type="label">
                             <description>Year / Duration</description>
@@ -765,7 +792,7 @@
                             <font>Font-Condensed-S28</font>
                             <align>left</align>
                             <label>$INFO[ListItem.Studio,, • ]$INFO[ListItem.Genre]</label>
-                            <textcolor>D4FFFFFF</textcolor>
+                            <textcolor>Mod_Tags_Alt2</textcolor>
                             <scroll>false</scroll>
                         </control>
                         <control type="image">
@@ -774,7 +801,7 @@
                             <posy>0</posy>
                             <width>100</width>
                             <height>100</height>
-                            <colordiffuse>D4FFFFFF</colordiffuse>
+                            <colordiffuse>Mod_Tags_Alt2</colordiffuse>
                             <texture>$VAR[DefaultListOverlay]</texture>
                         </control>
                         <control type="image">
@@ -794,7 +821,7 @@
                             <font>Font-Condensed-S34-B</font>
                             <align>right</align>
                             <label fallback="                 [COLOR=47FFFFFF]0.0[/COLOR]">$INFO[ListItem.Rating,                 ,]</label>
-                            <textcolor>D4FFFFFF</textcolor>
+                            <textcolor>Mod_Tags_Alt2</textcolor>
                             <scroll>false</scroll>
                             <visible>!IsEmpty(ListItem.Title)</visible>
                         </control>
@@ -806,7 +833,7 @@
                                 <width>64</width>
                                 <height>41</height>
                                 <texture>views/list/other/unwatched.png</texture>
-                                <colordiffuse>D4FFFFFF</colordiffuse>
+                                <colordiffuse>Mod_Tags_Alt2</colordiffuse>
                             </control>
                             <control type="label">
                                 <posx>1244</posx>
@@ -815,7 +842,7 @@
                                 <height>42</height>
                                 <label>$INFO[ListItem.Property(unWatchedEpisodes)]</label>
                                 <font>Font-Condensed-S30-B</font>
-                                <textcolor>D4FFFFFF</textcolor>
+                                <textcolor>Mod_Tags_Alt2</textcolor>
                                 <scroll>no</scroll>
                                 <align>center</align>
                             </control>
@@ -829,7 +856,17 @@
                         <posy>0</posy>
                         <width>1420</width>
                         <height>99</height>
-                        <texture border="5">views/other/focus-mod.png</texture>
+                        <texture border="25">arctic/common/whitepanel8.png</texture>
+                        <include>defaultfocusanim</include>
+                        <include>visiblehidefadeinfo</include>
+                        <colordiffuse>Mod_Tags_Dark</colordiffuse>
+                    </control>
+                    <control type="image">
+                        <posx>-10</posx>
+                        <posy>-10</posy>
+                        <width>1440</width>
+                        <height>119</height>
+                        <texture border="25">arctic/common/border.png</texture>
                         <include>defaultfocusanim</include>
                         <include>visiblehidefadeinfo</include>
                     </control>
@@ -856,7 +893,7 @@
                             <font>Font-Condensed-S34-B</font>
                             <align>left</align>
                             <label>$INFO[ListItem.Label]</label>
-                            <textcolor>eewhite</textcolor>
+                            <textcolor>Mod_Tags_Alt</textcolor>
                         </control>
                         <control type="label">
                             <description>Year / Duration</description>
@@ -867,7 +904,7 @@
                             <font>Font-Condensed-S28</font>
                             <align>left</align>
                             <label>$INFO[ListItem.Studio]</label>
-                            <textcolor>D4FFFFFF</textcolor>
+                            <textcolor>Mod_Tags_Alt2</textcolor>
                             <scroll>false</scroll>
                         </control>
                         <control type="image">
@@ -876,7 +913,7 @@
                             <posy>0</posy>
                             <width>100</width>
                             <height>100</height>
-                            <colordiffuse>D4FFFFFF</colordiffuse>
+                            <colordiffuse>Mod_Tags_Alt2</colordiffuse>
                             <texture>$VAR[DefaultListOverlay]</texture>
                         </control>
                         <control type="image">
@@ -904,7 +941,7 @@
                                 <height>42</height>
                                 <label>$INFO[ListItem.Property(unWatchedEpisodes)]</label>
                                 <font>Font-Condensed-S30-B</font>
-                                <textcolor>eewhite</textcolor>
+                                <textcolor>Mod_Tags_Alt</textcolor>
                                 <scroll>no</scroll>
                                 <align>center</align>
                             </control>
@@ -928,7 +965,17 @@
                         <posy>0</posy>
                         <width>1420</width>
                         <height>99</height>
-                        <texture border="5">views/other/focus-mod.png</texture>
+                        <texture border="25">arctic/common/whitepanel8.png</texture>
+                        <include>defaultfocusanim</include>
+                        <include>visiblehidefadeinfo</include>
+                        <colordiffuse>Mod_Tags_Dark</colordiffuse>
+                    </control>
+                    <control type="image">
+                        <posx>-10</posx>
+                        <posy>-10</posy>
+                        <width>1440</width>
+                        <height>119</height>
+                        <texture border="25">arctic/common/border.png</texture>
                         <include>defaultfocusanim</include>
                         <include>visiblehidefadeinfo</include>
                     </control>
@@ -955,8 +1002,8 @@
                             <font>Font-Condensed-S34-B</font>
                             <align>left</align>
                             <label>$VAR[ListItem.Label]</label>
-                            <selectedcolor>eewhite</selectedcolor>
-                            <textcolor>eewhite</textcolor>
+                            <selectedcolor>Mod_Tags_Alt</selectedcolor>
+                            <textcolor>Mod_Tags_Alt</textcolor>
                         </control>
                         <control type="label">
                             <description>Premiered / Duration</description>
@@ -967,8 +1014,8 @@
                             <font>Font-Condensed-S28</font>
                             <align>left</align>
                             <label>$INFO[ListItem.Premiered]$INFO[ListItem.Duration, • , $LOCALIZE[12391]]</label>
-                            <selectedcolor>D4FFFFFF</selectedcolor>
-                            <textcolor>D4FFFFFF</textcolor>
+                            <selectedcolor>Mod_Tags_Alt2</selectedcolor>
+                            <textcolor>Mod_Tags_Alt2</textcolor>
                             <scroll>false</scroll>
                         </control>
                         <control type="image">
@@ -978,7 +1025,7 @@
                             <width>140</width>
                             <height>100</height>
                             <texture>$VAR[ListHDSDFlag]</texture>
-                            <colordiffuse>D4FFFFFF</colordiffuse>
+                            <colordiffuse>Mod_Tags_Alt2</colordiffuse>
                             <visible>!IsEmpty(ListItem.VideoResolution)</visible>
                         </control>
                         <control type="image">
@@ -987,7 +1034,7 @@
                             <posy>0</posy>
                             <width>100</width>
                             <height>100</height>
-                            <colordiffuse>D4FFFFFF</colordiffuse>
+                            <colordiffuse>Mod_Tags_Alt2</colordiffuse>
                             <texture>$VAR[DefaultListOverlay]</texture>
                         </control>
                         <control type="image">
@@ -1007,8 +1054,8 @@
                             <font>Font-Condensed-S34-B</font>
                             <align>right</align>
                             <label fallback="                 [COLOR=47FFFFFF]0.0[/COLOR]">$INFO[ListItem.Rating,                 ,]</label>
-                            <selectedcolor>D4FFFFFF</selectedcolor>
-                            <textcolor>D4FFFFFF</textcolor>
+                            <selectedcolor>Mod_Tags_Alt2</selectedcolor>
+                            <textcolor>Mod_Tags_Alt2</textcolor>
                             <scroll>false</scroll>
                             <visible>!IsEmpty(ListItem.Title)</visible>
                         </control>

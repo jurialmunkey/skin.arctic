@@ -7,21 +7,68 @@
             <include>OptionsShutdownAnimation</include>
 			<visible>!Window.IsActive(movieinformation) + Control.IsVisible(517)</visible>
 			<include>CommonViewAnimations</include>
+			<animation effect="slide" end="-95,10" condition="Skin.HasSetting(mediumlist.bigcover)">Conditional</animation>
 			<posx>50</posx>
 			<posy>0</posy>
-			<control type="image">
-				<posx>0</posx>
-				<posy>471</posy>
-				<width>1841</width>
-				<height>431</height>
-				<texture border="70">arctic/osd/white-25.png</texture>
+			<control type="group">
+				<visible>!Skin.HasSetting(mediumlist.bigcover)</visible>
+				<control type="image">
+					<posx>0</posx>
+					<posy>877</posy>
+					<width>1816</width>
+					<height>381</height>
+					<texture background="true" diffuse="views/posterview/diffuse-ref.png" border="15" flipy="true">arctic/common/panel.png</texture>
+					<aspectratio scalediffuse="false">stretch</aspectratio>
+				</control>
+				<control type="image">
+					<description>Shadow Bottom</description>
+					<posx>0</posx>
+					<posy>857</posy>
+					<width>1856</width>
+					<height>36</height>
+					<texture>views/posterview/shadow.png</texture>
+				</control>
+				<control type="image">
+					<posx>5</posx>
+					<posy>476</posy>
+					<width>1831</width>
+					<height>421</height>
+					<texture border="70">arctic/common/border-20.png</texture>
+				</control>
+				<control type="image">
+					<posx>25</posx>
+					<posy>496</posy>
+					<width>1791</width>
+					<height>381</height>
+					<texture border="70">arctic/common/panel.png</texture>
+				</control>
 			</control>
-			<control type="image">
-				<posx>25</posx>
-				<posy>496</posy>
-				<width>1791</width>
-				<height>381</height>
-				<texture border="70">arctic/common/panel.png</texture>
+			<control type="group">
+				<visible>Skin.HasSetting(mediumlist.bigcover)</visible>
+				<control type="image">
+					<posx>185</posx>
+					<posy>877</posy>
+					<width>1631</width>
+					<height>381</height>
+					<texture background="true" diffuse="views/posterview/diffuse-ref.png" border="15" flipy="true">arctic/common/panel.png</texture>
+					<aspectratio scalediffuse="false">stretch</aspectratio>
+				</control>
+				<control type="image">
+					<description>Shadow Bottom</description>
+					<posx>160</posx>
+					<posy>857</posy>
+					<width>1696</width>
+					<height>36</height>
+					<texture>views/posterview/shadow.png</texture>
+				</control>
+				
+				<control type="image">
+					<posx>185</posx>
+					<posy>496</posy>
+					<width>1631</width>
+					<height>381</height>
+					<texture border="70">arctic/common/panel.png</texture>
+				</control>
 			</control>
 			<control type="textbox">
 				<description>Plot</description>
@@ -38,7 +85,7 @@
 			</control>
 			<control type="textbox">
 				<description>Plot</description>
-				<posx>465</posx>
+				<posx>462</posx>
 				<posy>514</posy>
 				<width>1330</width>
 				<height>340</height>
@@ -188,6 +235,7 @@
 			<!-- LEFT ART -->
 			<control type="group">
 				<posy>254</posy>
+				<visible>!Skin.HasSetting(mediumlist.bigcover)</visible>
 				<!-- Cd Art -->
 				<control type="image">
 					<posx>10</posx>
@@ -208,6 +256,14 @@
 					<texture diffuse="views/posterview/diffuse-ref.png" flipy="true" background="true">$VAR[ListInfoPosterVar]</texture>
 					<aspectratio scalediffuse="false">stretch</aspectratio>
 					<fadetime>250</fadetime>
+				</control>
+				<control type="image">
+					<description>Shadow Bottom</description>
+					<posx>0</posx>
+					<posy>646</posy>
+					<width>444</width>
+					<height>36</height>
+					<texture>views/posterview/shadow.png</texture>
 				</control>
 				<!-- Shadow -->
 				<control type="image">
@@ -236,15 +292,6 @@
 					<aspectratio scalediffuse="false">stretch</aspectratio>
 					<fadetime>250</fadetime>
 				</control>
-				<!-- Glass -->
-				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>444</width>
-					<height>666</height>
-					<texture border="25">arctic/common/glass-ring.png</texture>
-					<visible>Skin.HasSetting(covers.showglass)</visible>
-				</control>
 				<!-- Overlay -->
 				<control type="image">
 					<posx>0</posx>
@@ -263,6 +310,56 @@
 					<texture border="25">arctic/common/border.png</texture>
 					<aspectratio scalediffuse="false">stretch</aspectratio>
 				</control>
+			</control>
+			<!-- LEFT ART -->
+			<control type="group">
+				<visible>Skin.HasSetting(mediumlist.bigcover)</visible>
+				<posx>185</posx>
+				<posy>496</posy>
+				<!-- Cover -->
+				<control type="image">
+					<posx>0</posx>
+					<posy>381</posy>
+					<width>254</width>
+					<height>381</height>
+					<texture diffuse="arctic/list/mediumposter-ref.png" background="true" flipy="true">$VAR[ListInfoPosterVar]</texture>
+					<aspectratio scalediffuse="false">stretch</aspectratio>
+					<fadetime>250</fadetime>
+				</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>254</width>
+					<height>381</height>
+					<texture diffuse="arctic/list/mediumposter.png" background="true">$VAR[ListInfoPosterVar]</texture>
+					<aspectratio scalediffuse="false">stretch</aspectratio>
+					<fadetime>250</fadetime>
+				</control>
+				<!-- Overlay -->
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>64</width>
+					<height>64</height>
+					<aspectratio align="left" aligny="top">keep</aspectratio>
+					<texture>$VAR[arctic.watched]</texture>
+				</control>
+				<control type="image">
+					<posx>253</posx>
+					<posy>0</posy>
+					<width>3</width>
+					<height>381</height>
+					<texture border="1,150,1,150">arctic/common/separator-v.png</texture>
+					<aspectratio>stretch</aspectratio>
+				</control>
+			</control>
+			<control type="image">
+				<posx>165</posx>
+				<posy>476</posy>
+				<width>1671</width>
+				<height>421</height>
+				<texture border="40">arctic/common/border-20.png</texture>
+				<visible>Skin.HasSetting(mediumlist.bigcover)</visible>
 			</control>
         </control>
         <control type="button" id="72">

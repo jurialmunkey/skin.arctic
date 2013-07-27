@@ -34,111 +34,151 @@
             <include>OptionsShutdownAnimation</include>
             <include>pvr.menu.slide</include>
             <include>listEndAnimation</include>
+            <visible>Control.IsVisible(11) + !Window.IsActive(favourites)</visible>
+			<animation type="WindowOpen">
+			    <effect type="slide" start="200" end="0" tween="cubic" easing="out" time="650" />
+			    <effect type="fade" start="0" end="100" tween="sine" easing="inout" time="300" />
+			    <effect type="zoom" start="90" end="100" center="1027,438" tween="cubic" easing="out" time="400" />
+			</animation>
+			<animation type="WindowClose">
+			    <effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
+			    <effect type="zoom" start="100" end="85" time="300" center="960,600" tween="sine" easing="out" />
+			</animation>
+			<animation type="Visible">
+			    <effect type="slide" start="200" end="0" tween="cubic" easing="out" time="650" />
+			    <effect type="fade" start="0" end="100" tween="sine" easing="inout" time="300" />
+			    <effect type="zoom" start="90" end="100" center="1027,438" tween="cubic" easing="out" time="400" />
+			</animation>
+			<animation type="Hidden">
+			    <effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
+			    <effect type="zoom" start="100" end="85" time="300" center="960,600" tween="sine" easing="out" />
+			</animation>
             <control type="group">
-                <visible>Control.IsVisible(11) + !Window.IsActive(favourites)</visible>
-                <animation type="WindowOpen">
-                    <effect type="slide" start="200" end="0" tween="cubic" easing="out" time="545" delay="105" />
-                    <effect type="fade" start="0" end="100" tween="sine" easing="inout" time="300" delay="105" />
-                    <effect type="zoom" start="90" end="100" center="1462,438" tween="cubic" easing="out" time="400" delay="105" />
-                </animation>
-                <animation type="WindowClose">
-                    <effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
-                    <effect type="zoom" start="100" end="85" time="300" center="960,600" tween="sine" easing="out" />
-                </animation>
-                <animation type="Visible">
-                    <effect type="slide" start="200" end="0" tween="cubic" easing="out" time="545" delay="105" />
-                    <effect type="fade" start="0" end="100" tween="sine" easing="inout" time="300" delay="105" />
-                    <effect type="zoom" start="90" end="100" center="1462,438" tween="cubic" easing="out" time="400" delay="105" />
-                </animation>
-                <animation type="Hidden">
-                    <effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
-                    <effect type="zoom" start="100" end="85" time="300" center="960,600" tween="sine" easing="out" />
-                </animation>
-
-                <control type="group">
-                    <description>Channel Preview + Info</description>
-                    <posx>1184</posx>
-                    <posy>218</posy>
-					<!-- Panel -->
-                    <include>PVR-RightPanel</include>
-                
-                    <control type="label">
-                        <posx>30</posx>
-                        <posy>30</posy>
-                        <width>516</width>
-                        <font>Font-Alaska-S38-BL</font>
-                        <label>$INFO[Container(11).ListItem.Title]</label>
-                        <textcolor>mod-infotags</textcolor>
-                        <shadowcolor>mod-shadow</shadowcolor>
-                        <scroll>false</scroll>
-                    </control>
-                    <control type="group">
-                    	<visible>Container(11).ListItem.HasEpg</visible>
-                    	<include>visiblehidefadeinfo</include>
-                    	<control type="textbox">
-                    	    <description>Plot</description>
-                    	    <posx>30</posx>
-                    	    <posy>82</posy>
-                    	    <width>516</width>
-                    	    <height>416</height>
-                    	    <info>Container(11).ListItem.Plot</info>
-                    	    <align>justify</align>
-                    	    <textcolor>mod-infotags-l</textcolor>
-                    	    <shadowcolor>mod-shadow</shadowcolor>
-                    	    <pagecontrol>71</pagecontrol>
-                    	    <autoscroll delay="13000" time="3000" repeat="13000">!Control.HasFocus(71)</autoscroll>
-                    	    <font>Font-Condensed-S28</font>
-                    	</control>
-	                    <control type="progress">
-	                        <posx>29</posx>
-	                        <posy>525</posy>
-	                        <width>518</width>
-	                        <height>19</height>
-	                        <reveal>true</reveal>
-	                        <texturebg>windows/pvr/progress-back-wide.png</texturebg>
-	                    	<lefttexture>windows/pvr/progress-leftright.png</lefttexture>
-	                    	<midtexture>windows/pvr/progress-mid-wide.png</midtexture>
-	                    	<righttexture>windows/pvr/progress-leftright.png</righttexture>
-	                    	<info>Container(11).ListItem.Progress</info>
-	                    	<colordiffuse>mod-infotags-d</colordiffuse>
-	                    </control>
-	                    <control type="label">
-	                        <posx>30</posx>
-	                        <posy>566</posy>
-	                        <width>516</width>
-	                        <font>Font-Alaska-S31-L</font>
-	                        <label>[B]$INFO[Container(11).ListItem.Genre][/B]</label>
-	                        <textcolor>mod-infotags</textcolor>
-	                        <shadowcolor>mod-shadow</shadowcolor>
+                <!-- Panel -->
+				<control type="group">
+					<posy>218</posy>
+					<posx>0</posx>
+					<control type="image">
+						<description>Shadow</description>
+						<posx>0</posx>
+						<posy>643</posy>
+						<width>2420</width>
+						<height>150</height>
+						<texture>windows/home/item-shadow.png</texture>
+					</control>
+					<control type="image">
+						<posx>129</posx>
+						<posy>-55</posy>
+						<width>2474</width>
+						<height>751</height>
+						<texture border="35">arctic/common/panel.png</texture>
+					</control>
+					<control type="image">
+						<posx>129</posx>
+						<posy>195</posy>
+						<width>2500</width>
+						<height>501</height>
+						<texture border="25">arctic/common/whitepanel8.png</texture>
+					</control>
+					<control type="image">
+						<posx>1173</posx>
+						<posy>205</posy>
+						<width>737</width>
+						<height>481</height>
+						<texture border="25">arctic/common/whitepanel8.png</texture>
+						<colordiffuse>ff000000</colordiffuse>
+					</control>
+					<control type="label">
+						<posx>1173</posx>
+						<posy>205</posy>
+						<width>737</width>
+						<height>481</height>
+						<font>Font-Alaska-S25-BL</font>
+						<textcolor>mod-infotags-alt</textcolor>
+						<align>center</align>
+						<aligny>center</aligny>
+						<label>41452</label>
+						<visible>!Player.HasVideo</visible>
+					</control>
+					<control type="videowindow">
+						<posx>1173</posx>
+						<posy>205</posy>
+						<width>737</width>
+						<height>481</height>
+						<align>center</align>
+						<visible>Player.HasVideo</visible>
+					</control>
+					<control type="image">
+						<posx>109</posx>
+						<posy>-75</posy>
+						<width>2474</width>
+						<height>791</height>
+						<texture border="50">arctic/common/border-20.png</texture>
+					</control>
+				</control>
+				<control type="group">
+					<posx>155</posx>
+					<posy>158</posy>
+					<control type="image">
+						<posx>20</posx>
+						<posy>22</posy>
+						<width>210</width>
+						<height>210</height>
+						<texture fallback="windows/pvr/defaultchannel.png">$INFO[Container(11).ListItem.Icon]</texture>
+						<aspectratio align="right">keep</aspectratio>
+					</control>
+					<control type="group">
+						<posx>280</posx>
+						<control type="button">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>1450</width>
+							<height>86</height>
+							<label>$INFO[ListItem.Label]</label>
+							<label2>$INFO[ListItem.StartTime]$INFO[ListItem.EndTime, - ]</label2>
+							<disabledcolor>mod-infotags-alt</disabledcolor>
+							<font>Font-Alaska-S38-BL</font>
+							<align>left</align>
+							<aligny>center</aligny>
+							<enable>false</enable>
+						</control>
+						<control type="label">
+	                        <posx>0</posx>
+	                        <posy>70</posy>
+	                        <width>1450</width>
+	                        <font>Font-Alaska-S28-L</font>
+	                        <label>$INFO[Container(11).ListItem.Title]$INFO[Container(11).ListItem.Genre, • ,]</label>
+	                        <textcolor>mod-infotags-alt</textcolor>
 	                        <scroll>false</scroll>
+	                        <align>left</align>
 	                    </control>
+						<control type="textbox">
+							<description>Plot value</description>
+							<posx>0</posx>
+							<posy>110</posy>
+							<width>1450</width>
+							<height>87</height>
+							<font>Font-Condensed-S33</font>
+							<align>justify</align>
+							<textcolor>mod-infotags-alt</textcolor>
+							<pagecontrol>60</pagecontrol>
+							<autoscroll delay="10000" time="3000" repeat="6000">!Control.HasFocus(60)</autoscroll>
+							<label fallback="161">$INFO[ListItem.Plot]</label>
+						</control>
 	                    <control type="label">
-	                        <posx>30</posx>
-	                        <posy>610</posy>
-	                        <width>516</width>
-	                        <font>Font-Alaska-S25-BL</font>
+	                        <posx>1450</posx>
+	                        <posy>204</posy>
+	                        <width>900</width>
+	                        <font>Font-Alaska-S25-L</font>
 	                        <label>$INFO[Container(11).ListItem.NextTitle,$LOCALIZE[19031]: ,]$INFO[Container(11).ListItem.NextStartTime, (,)]</label>
-	                        <textcolor>mod-infotags-l</textcolor>
-	                        <shadowcolor>mod-shadow</shadowcolor>
+	                        <textcolor>mod-infotags-alt</textcolor>
 	                        <scroll>false</scroll>
+	                        <align>right</align>
 	                    </control>
-	            	</control>
-	            	<control type="label">
-	            	    <visible>!Container(11).ListItem.HasEpg</visible>
-	            	    <include>visiblehidefadeinfo</include>
-	            	    <posx>30</posx>
-	            	    <posy>300</posy>
-	            	    <width>516</width>
-	            	    <height>72</height>
-	            	    <font>Font-Condensed-S40</font>
-	            	    <label>$LOCALIZE[19055]</label>
-	            	    <textcolor>mod-infotags-l</textcolor>
-	            	    <shadowcolor>mod-shadow</shadowcolor>
-	            	    <scroll>false</scroll>
-	            	    <align>center</align>
-	            	    <aligny>center</aligny>
-	            	</control>
-                </control>
+					</control>
+				</control>
+
+                
                 <control type="scrollbar" id="71">
                     <description>Scrollbar</description>
                     <posx>1755</posx>
@@ -157,52 +197,12 @@
             </control>
             <control type="group">
                 <visible>Control.IsVisible(11) + !Window.IsActive(favourites)</visible>
-                <animation type="WindowOpen">
-                    <effect type="slide" start="200" end="0" tween="cubic" easing="out" time="650" />
-                    <effect type="fade" start="0" end="100" tween="sine" easing="inout" time="300" />
-                    <effect type="zoom" start="90" end="100" center="661,438" tween="cubic" easing="out" time="400" />
-                </animation>
-                <animation type="WindowClose">
-                    <effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
-                    <effect type="zoom" start="100" end="85" time="300" center="960,600" tween="sine" easing="out" />
-                </animation>
-                <animation type="Visible">
-                    <effect type="slide" start="200" end="0" tween="cubic" easing="out" time="650" />
-                    <effect type="fade" start="0" end="100" tween="sine" easing="inout" time="300" />
-                    <effect type="zoom" start="90" end="100" center="661,438" tween="cubic" easing="out" time="400" />
-                </animation>
-                <animation type="Hidden">
-                    <effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
-                    <effect type="zoom" start="100" end="85" time="300" center="960,600" tween="sine" easing="out" />
-                </animation>
-                <control type="label">
-                	<posx>168</posx>
-                	<posy>173</posy>
-                	<width>200</width>
-                	<height>30</height>
-                	<font>Font-Alaska-S29-BL</font>
-                	<textcolor>Mod_Tags</textcolor>
-                	<shadowcolor>Mod_Shadow</shadowcolor>
-                	<align>left</align>
-                	<aligny>center</aligny>
-                	<label>$VAR[TVNumItemsLabel]</label>
-                </control>
-                <control type="image">
-                    <description>Shadow</description>
-                    <posx>50</posx>
-                    <posy>883</posy>
-                    <width>1820</width>
-                    <height>150</height>
-                    <texture>windows/home/item-shadow.png</texture>
-                </control>
-                
-                <include>PVR-LeftPanel</include>
                 
                 <control type="list" id="11">
-                    <posx>150</posx>
-                    <posy>218</posy>
+                    <posx>140</posx>
+                    <posy>424</posy>
                     <width>1022</width>
-                    <height>672</height>
+                    <height>480</height>
                     <pagecontrol>70</pagecontrol>
                     <onleft>9001</onleft>
                     <onright>70</onright>
@@ -212,7 +212,6 @@
                     <preloaditems>2</preloaditems>
                     <scrolltime tween="cubic" easing="out">500</scrolltime>
                     <itemlayout height="96">
-
                         <control type="image">
                             <posx>0</posx>
                             <posy>1</posy>
@@ -357,13 +356,12 @@
                         </control>
                     </itemlayout>
                     <focusedlayout height="96">
-             
                         <control type="image">
                             <posx>0</posx>
                             <posy>0</posy>
                             <width>1022</width>
                             <height>95</height>
-                            <texture border="5">views/other/focus-mod.png</texture>
+                            <texture border="15">views/other/focus-mod8.png</texture>
                             <animation effect="slide" start="0,96" end="0,0" time="200" reversible="false" tween="cubic" easing="out" condition="Container(11).OnPrevious">focus</animation>
                             <animation effect="slide" start="0,-96" end="0,0" time="200" reversible="false" tween="cubic" easing="out" condition="Container(11).OnNext">focus</animation>
                             <include>visiblehidefadeinfo</include>
@@ -532,181 +530,153 @@
 	        <control type="group">
 	            <visible>Control.IsVisible(12) + !Window.IsActive(favourites)</visible>
 	            <animation type="WindowOpen">
-	                <effect type="slide" start="200" end="0" tween="cubic" easing="out" time="545" delay="105" />
-	                <effect type="fade" start="0" end="100" tween="sine" easing="inout" time="300" delay="105" />
-	                <effect type="zoom" start="90" end="100" center="1462,438" tween="cubic" easing="out" time="400" delay="105" />
-	            </animation>
-	            <animation type="WindowClose">
-	                <effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
-	                <effect type="zoom" start="100" end="85" time="300" center="960,600" tween="sine" easing="out" />
-	            </animation>
-	            <animation type="Visible">
-	                <effect type="slide" start="200" end="0" tween="cubic" easing="out" time="545" delay="105" />
-	                <effect type="fade" start="0" end="100" tween="sine" easing="inout" time="300" delay="105" />
-	                <effect type="zoom" start="90" end="100" center="1462,438" tween="cubic" easing="out" time="400" delay="105" />
-	            </animation>
-	            <animation type="Hidden">
-	                <effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
-	                <effect type="zoom" start="100" end="85" time="300" center="960,600" tween="sine" easing="out" />
-	            </animation>
-	            <control type="image">
-					<posx>130</posx>
-					<posy>200</posy>
-					<height>707</height>
-					<width>1650</width>
-					<texture border="25">views/newgloss/border-glass.png</texture>
-					<colordiffuse>77ffffff</colordiffuse>
-					<visible>!Skin.HasSetting(hide.glass)</visible>
+					<effect type="slide" start="200" end="0" tween="cubic" easing="out" time="650" />
+					<effect type="fade" start="0" end="100" tween="sine" easing="inout" time="300" />
+					<effect type="zoom" start="90" end="100" center="1027,438" tween="cubic" easing="out" time="400" />
+				</animation>
+				<animation type="WindowClose">
+					<effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
+					<effect type="zoom" start="100" end="85" time="300" center="960,600" tween="sine" easing="out" />
+				</animation>
+				<animation type="Visible">
+					<effect type="slide" start="200" end="0" tween="cubic" easing="out" time="650" />
+					<effect type="fade" start="0" end="100" tween="sine" easing="inout" time="300" />
+					<effect type="zoom" start="90" end="100" center="1027,438" tween="cubic" easing="out" time="400" />
+				</animation>
+				<animation type="Hidden">
+					<effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
+					<effect type="zoom" start="100" end="85" time="300" center="960,600" tween="sine" easing="out" />
+				</animation>
+				<control type="group">
+					<!-- Panel -->
+					<control type="group">
+						<posy>218</posy>
+						<posx>0</posx>
+						<control type="image">
+							<description>Shadow</description>
+							<posx>0</posx>
+							<posy>643</posy>
+							<width>2420</width>
+							<height>150</height>
+							<texture>windows/home/item-shadow.png</texture>
+						</control>
+						<control type="image">
+							<posx>129</posx>
+							<posy>-55</posy>
+							<width>2474</width>
+							<height>751</height>
+							<texture border="35">arctic/common/panel.png</texture>
+						</control>
+						<control type="image">
+							<posx>129</posx>
+							<posy>195</posy>
+							<width>2500</width>
+							<height>501</height>
+							<texture border="25">arctic/common/whitepanel8.png</texture>
+						</control>
+						<control type="image">
+							<posx>1173</posx>
+							<posy>205</posy>
+							<width>737</width>
+							<height>481</height>
+							<texture border="25">arctic/common/whitepanel8.png</texture>
+							<colordiffuse>ff000000</colordiffuse>
+						</control>
+						<control type="label">
+							<posx>1173</posx>
+							<posy>205</posy>
+							<width>737</width>
+							<height>481</height>
+							<font>Font-Alaska-S25-BL</font>
+							<textcolor>mod-infotags-alt</textcolor>
+							<align>center</align>
+							<aligny>center</aligny>
+							<label>41452</label>
+							<visible>!Player.HasVideo</visible>
+						</control>
+						<control type="videowindow">
+							<posx>1173</posx>
+							<posy>205</posy>
+							<width>737</width>
+							<height>481</height>
+							<align>center</align>
+							<visible>Player.HasVideo</visible>
+						</control>
+						<control type="image">
+							<posx>109</posx>
+							<posy>-75</posy>
+							<width>2474</width>
+							<height>791</height>
+							<texture border="50">arctic/common/border-20.png</texture>
+						</control>
+					</control>
+					<control type="group">
+						<posx>155</posx>
+						<posy>158</posy>
+						<control type="image">
+							<posx>20</posx>
+							<posy>22</posy>
+							<width>210</width>
+							<height>210</height>
+							<texture fallback="windows/pvr/defaultchannel.png">$INFO[Container(12).ListItem.Icon]</texture>
+							<aspectratio align="right">keep</aspectratio>
+						</control>
+						<control type="group">
+							<posx>280</posx>
+							<control type="button">
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>1450</width>
+								<height>86</height>
+								<label>$INFO[ListItem.Label]</label>
+								<label2>$INFO[ListItem.StartTime]$INFO[ListItem.EndTime, - ]</label2>
+								<disabledcolor>mod-infotags-alt</disabledcolor>
+								<font>Font-Alaska-S38-BL</font>
+								<align>left</align>
+								<aligny>center</aligny>
+								<enable>false</enable>
+							</control>
+							<control type="label">
+								<posx>0</posx>
+								<posy>70</posy>
+								<width>1450</width>
+								<font>Font-Alaska-S28-L</font>
+								<label>$INFO[Container(12).ListItem.Title]$INFO[Container(12).ListItem.Genre, • ,]</label>
+								<textcolor>mod-infotags-alt</textcolor>
+								<scroll>false</scroll>
+								<align>left</align>
+							</control>
+							<control type="textbox">
+								<description>Plot value</description>
+								<posx>0</posx>
+								<posy>110</posy>
+								<width>1450</width>
+								<height>87</height>
+								<font>Font-Condensed-S33</font>
+								<align>justify</align>
+								<textcolor>mod-infotags-alt</textcolor>
+								<pagecontrol>60</pagecontrol>
+								<autoscroll delay="10000" time="3000" repeat="6000">!Control.HasFocus(60)</autoscroll>
+								<label fallback="161">$INFO[ListItem.Plot]</label>
+							</control>
+							<control type="label">
+								<posx>1450</posx>
+								<posy>204</posy>
+								<width>900</width>
+								<font>Font-Alaska-S25-L</font>
+								<label>$INFO[Container(12).ListItem.NextTitle,$LOCALIZE[19031]: ,]$INFO[Container(12).ListItem.NextStartTime, (,)]</label>
+								<textcolor>mod-infotags-alt</textcolor>
+								<scroll>false</scroll>
+								<align>right</align>
+							</control>
+						</control>
+					</control>
 				</control>
-
-	            <control type="group">
-                    <description>Channel Preview + Info</description>
-                    <posx>1184</posx>
-                    <posy>218</posy>
-
-                    <include>PVR-RightPanel</include>
-
-                    <control type="label">
-                        <posx>30</posx>
-                        <posy>30</posy>
-                        <width>516</width>
-                        <font>Font-Condensed-S40</font>
-                        <label>$INFO[Container(12).ListItem.Title]</label>
-                        <textcolor>mod-infotags</textcolor>
-                        <shadowcolor>mod-shadow</shadowcolor>
-                        <scroll>false</scroll>
-                    </control>
-                    <control type="group">
-                    	<visible>Container(12).ListItem.HasEpg</visible>
-                    	<include>visiblehidefadeinfo</include>
-                    	<control type="textbox">
-                    	    <description>Plot</description>
-                    	    <posx>30</posx>
-                    	    <posy>82</posy>
-                    	    <width>516</width>
-                    	    <height>416</height>
-                    	    <info>Container(12).ListItem.Plot</info>
-                    	    <align>justify</align>
-                    	    <textcolor>mod-infotags-l</textcolor>
-                    	    <shadowcolor>mod-shadow</shadowcolor>
-                    	    <pagecontrol>71</pagecontrol>
-                    	    <autoscroll delay="13000" time="3000" repeat="13000">!Control.HasFocus(71)</autoscroll>
-                    	    <font>Font-Condensed-S34</font>
-                    	</control>
-                        <control type="progress">
-                            <posx>29</posx>
-                            <posy>526</posy>
-                            <width>518</width>
-                            <height>19</height>
-                            <reveal>true</reveal>
-                            <texturebg>windows/pvr/progress-back-wide.png</texturebg>
-                        	<lefttexture>windows/pvr/progress-leftright.png</lefttexture>
-                        	<midtexture>windows/pvr/progress-mid-wide.png</midtexture>
-                        	<righttexture>windows/pvr/progress-leftright.png</righttexture>
-                        	<info>Container(12).ListItem.Progress</info>
-                        	<colordiffuse>bbwhite</colordiffuse>
-                        </control>
-                        <control type="label">
-                            <posx>30</posx>
-                            <posy>566</posy>
-                            <width>516</width>
-                            <font>Font-Condensed-S30-B</font>
-                            <label>$INFO[Container(12).ListItem.Genre]</label>
-                            <textcolor>mod-infotags-l</textcolor>
-                            <shadowcolor>mod-shadow</shadowcolor>
-                            <scroll>false</scroll>
-                        </control>
-                        <control type="label">
-                            <posx>30</posx>
-                            <posy>610</posy>
-                            <width>516</width>
-                            <font>Font-Condensed-S30</font>
-                            <label>$INFO[Container(12).ListItem.NextTitle,$LOCALIZE[19031]: ,]$INFO[Container(12).ListItem.NextStartTime, (,)]</label>
-                            <textcolor>mod-infotags-l</textcolor>
-                            <shadowcolor>mod-shadow</shadowcolor>
-                            <scroll>false</scroll>
-                        </control>
-                	</control>
-                	<control type="label">
-                	    <visible>!Container(12).ListItem.HasEpg</visible>
-                	    <include>visiblehidefadeinfo</include>
-                	    <posx>30</posx>
-                	    <posy>300</posy>
-                	    <width>516</width>
-                	    <height>72</height>
-                	    <font>Font-Condensed-S40</font>
-                	    <label>$LOCALIZE[19055]</label>
-                	    <textcolor>mod-infotags-l</textcolor>
-                	    <shadowcolor>mod-shadow</shadowcolor>
-                	    <scroll>false</scroll>
-                	    <align>center</align>
-                	    <aligny>center</aligny>
-                	</control>
-                </control>
-                <control type="scrollbar" id="71">
-                    <description>Scrollbar</description>
-                    <posx>1755</posx>
-                    <posy>300</posy>
-                    <width>6</width>
-                    <height>416</height>                    
-                    <onleft>70</onleft>
-                    <onright>12</onright>
-                    <texturesliderbar border="1">views/other/scrollbar-sq.png</texturesliderbar>
-                    <texturesliderbarfocus border="1">views/other/scrollbar-sq.png</texturesliderbarfocus>
-                    <orientation>vertical</orientation>
-                    <showonepage>false</showonepage>
-                    <animation effect="fade" start="35" end="0" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(71)">Conditional</animation>
-                    <visible>Control.IsVisible(12)</visible>
-                </control>
-            </control>
-	        <control type="group">
-	            <visible>Control.IsVisible(12) + !Window.IsActive(favourites)</visible>
-	            <animation type="WindowOpen">
-	                <effect type="slide" start="200" end="0" tween="cubic" easing="out" time="650" />
-	                <effect type="fade" start="0" end="100" tween="sine" easing="inout" time="300" />
-	                <effect type="zoom" start="90" end="100" center="661,438" tween="cubic" easing="out" time="400" />
-	            </animation>
-	            <animation type="WindowClose">
-	                <effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
-	                <effect type="zoom" start="100" end="85" time="300" center="960,600" tween="sine" easing="out" />
-	            </animation>
-	            <animation type="Visible">
-	                <effect type="slide" start="200" end="0" tween="cubic" easing="out" time="650" />
-	                <effect type="fade" start="0" end="100" tween="sine" easing="inout" time="300" />
-	                <effect type="zoom" start="90" end="100" center="661,438" tween="cubic" easing="out" time="400" />
-	            </animation>
-	            <animation type="Hidden">
-	                <effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
-	                <effect type="zoom" start="100" end="85" time="300" center="960,600" tween="sine" easing="out" />
-	            </animation>
-	            <control type="label">
-	            	<posx>168</posx>
-	            	<posy>180</posy>
-	            	<width>200</width>
-	            	<height>30</height>
-	            	<font>Font-Alaska-S29-BL</font>
-	            	<textcolor>Mod_Tags</textcolor>
-	            	<shadowcolor>Mod_Shadow</shadowcolor>
-	            	<align>left</align>
-	            	<aligny>center</aligny>
-	            	<label>$VAR[TVNumItemsLabel]</label>
-	            </control>
-	            <control type="image">
-	                <description>Shadow</description>
-	                <posx>50</posx>
-	                <posy>883</posy>
-	                <width>1820</width>
-	                <height>150</height>
-	                <texture>windows/home/item-shadow.png</texture>
-	            </control>
-
-				<include>PVR-LeftPanel</include>
-
 	            <control type="list" id="12">
-	                <posx>150</posx>
-	                <posy>218</posy>
-	                <width>1022</width>
-	                <height>672</height>
+	                <posx>140</posx>
+                    <posy>424</posy>
+                    <width>1022</width>
+                    <height>480</height>
 	                <pagecontrol>70</pagecontrol>
 	                <onleft>9001</onleft>
 	                <onright>70</onright>
@@ -867,7 +837,7 @@
 	                        <posy>0</posy>
 	                        <width>1022</width>
 	                        <height>95</height>
-	                        <texture border="5">views/other/focus-mod.png</texture>
+	                        <texture border="15">views/other/focus-mod8.png</texture>
 	                        <animation effect="slide" start="0,96" end="0,0" time="200" reversible="false" tween="cubic" easing="out" condition="Container(12).OnPrevious">focus</animation>
 	                        <animation effect="slide" start="0,-96" end="0,0" time="200" reversible="false" tween="cubic" easing="out" condition="Container(12).OnNext">focus</animation>
 	                        <include>visiblehidefadeinfo</include>
@@ -1054,21 +1024,40 @@
 			    <effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
 			    <effect type="zoom" start="100" end="85" time="300" center="960,600" tween="sine" easing="out" />
 			</animation>
-			<control type="image">
-				<posx>114</posx>
-				<posy>-70</posy>
-				<width>2474</width>
-				<height>293</height>
-				<texture border="35">views/newgloss/darkpanel-15.png</texture>
+			
+			<!-- Panel -->
+			<control type="group">
+				<control type="image">
+					<description>Shadow</description>
+					<posx>0</posx>
+					<posy>643</posy>
+					<width>2420</width>
+					<height>150</height>
+					<texture>windows/home/item-shadow.png</texture>
+				</control>
+				<control type="image">
+					<posx>129</posx>
+					<posy>-55</posy>
+					<width>2474</width>
+					<height>751</height>
+					<texture border="35">arctic/common/panel.png</texture>
+				</control>
+				<control type="image">
+					<posx>129</posx>
+					<posy>215</posy>
+					<width>2504</width>
+					<height>482</height>
+					<texture border="25">arctic/common/whitepanel8.png</texture>
+				</control>
+				<control type="image">
+					<posx>109</posx>
+					<posy>-75</posy>
+					<width>2474</width>
+					<height>791</height>
+					<texture border="50">arctic/common/border-20.png</texture>
+				</control>
 			</control>
-			<control type="image">
-			    <description>Shadow</description>
-			    <posx>0</posx>
-			    <posy>643</posy>
-			    <width>2420</width>
-			    <height>150</height>
-			    <texture>windows/home/item-shadow.png</texture>
-			</control>
+			
 			<control type="group">
 				<posx>147</posx>
 			    <posy>-70</posy>
@@ -1139,13 +1128,7 @@
 				</control>
     		</control>
     		
-    		<control type="image">
-			    <posx>114</posx>
-			    <posy>223</posy>
-			    <width>2504</width>
-			    <height>488</height>
-			    <texture border="25">views/newgloss/whitepanel-15-b.png</texture>
-			</control>
+    		
 			
 			<control type="epggrid" id="10">
 				<description>EPG Grid</description>
@@ -1245,7 +1228,7 @@
 					    <posy>0</posy>
 					    <width>504</width>
 					    <height>81</height>
-					    <texture border="5">views/other/focus-mod.png</texture>
+					    <texture border="15">views/other/focus-mod8.png</texture>
 					    <include>visiblehidefadeinfo</include>
 					</control>
 					<control type="image">
@@ -1376,7 +1359,7 @@
 						<width>98</width>
 						<height>81</height>
 						<aspectratio>stretch</aspectratio>
-						<texture border="5">views/other/focus-mod.png</texture>
+						<texture border="15">views/other/focus-mod8.png</texture>
 					</control>
 					<control type="label" id="1">
 						<posx>17</posx>
@@ -1447,360 +1430,377 @@
 	        <control type="group">
 	            <visible>Control.IsVisible(15) + IntegerGreaterThan(Container(15).NumItems,0) + !Window.IsActive(favourites)</visible>
 	            <animation type="WindowOpen">
-	                <effect type="slide" start="200" end="0" tween="cubic" easing="out" time="545" delay="105" />
-	                <effect type="fade" start="0" end="100" tween="sine" easing="inout" time="300" delay="105" />
-	                <effect type="zoom" start="90" end="100" center="1462,438" tween="cubic" easing="out" time="400" delay="105" />
-	            </animation>
-	            <animation type="WindowClose">
-	                <effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
-	                <effect type="zoom" start="100" end="85" time="300" center="960,600" tween="sine" easing="out" />
-	            </animation>
-	            <animation type="Visible">
-	                <effect type="slide" start="200" end="0" tween="cubic" easing="out" time="545" delay="105" />
-	                <effect type="fade" start="0" end="100" tween="sine" easing="inout" time="300" delay="105" />
-	                <effect type="zoom" start="90" end="100" center="1462,438" tween="cubic" easing="out" time="400" delay="105" />
-	            </animation>
-	            <animation type="Hidden">
-	                <effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
-	                <effect type="zoom" start="100" end="85" time="300" center="960,600" tween="sine" easing="out" />
-	            </animation>
-	            <control type="image">
-					<posx>130</posx>
-					<posy>200</posy>
-					<height>707</height>
-					<width>1650</width>
-					<texture border="25">views/newgloss/border-glass.png</texture>
-					<colordiffuse>77ffffff</colordiffuse>
-					<visible>!Skin.HasSetting(hide.glass)</visible>
+					<effect type="slide" start="200" end="0" tween="cubic" easing="out" time="650" />
+					<effect type="fade" start="0" end="100" tween="sine" easing="inout" time="300" />
+					<effect type="zoom" start="90" end="100" center="1027,438" tween="cubic" easing="out" time="400" />
+				</animation>
+				<animation type="WindowClose">
+					<effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
+					<effect type="zoom" start="100" end="85" time="300" center="960,600" tween="sine" easing="out" />
+				</animation>
+				<animation type="Visible">
+					<effect type="slide" start="200" end="0" tween="cubic" easing="out" time="650" />
+					<effect type="fade" start="0" end="100" tween="sine" easing="inout" time="300" />
+					<effect type="zoom" start="90" end="100" center="1027,438" tween="cubic" easing="out" time="400" />
+				</animation>
+				<animation type="Hidden">
+					<effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
+					<effect type="zoom" start="100" end="85" time="300" center="960,600" tween="sine" easing="out" />
+				</animation>
+				<control type="group">
+					<!-- Panel -->
+					<control type="group">
+						<posy>218</posy>
+						<posx>0</posx>
+						<control type="image">
+							<description>Shadow</description>
+							<posx>0</posx>
+							<posy>643</posy>
+							<width>2420</width>
+							<height>150</height>
+							<texture>windows/home/item-shadow.png</texture>
+						</control>
+						<control type="image">
+							<posx>129</posx>
+							<posy>-55</posy>
+							<width>2474</width>
+							<height>751</height>
+							<texture border="35">arctic/common/panel.png</texture>
+						</control>
+						<control type="image">
+							<posx>129</posx>
+							<posy>195</posy>
+							<width>2500</width>
+							<height>501</height>
+							<texture border="25">arctic/common/whitepanel8.png</texture>
+						</control>
+						<control type="image">
+							<posx>1173</posx>
+							<posy>205</posy>
+							<width>737</width>
+							<height>481</height>
+							<texture border="25">arctic/common/whitepanel8.png</texture>
+							<colordiffuse>ff000000</colordiffuse>
+						</control>
+						<control type="label">
+							<posx>1173</posx>
+							<posy>205</posy>
+							<width>737</width>
+							<height>481</height>
+							<font>Font-Alaska-S25-BL</font>
+							<textcolor>mod-infotags-alt</textcolor>
+							<align>center</align>
+							<aligny>center</aligny>
+							<label>41452</label>
+							<visible>!Player.HasVideo</visible>
+						</control>
+						<control type="videowindow">
+							<posx>1173</posx>
+							<posy>205</posy>
+							<width>737</width>
+							<height>481</height>
+							<align>center</align>
+							<visible>Player.HasVideo</visible>
+						</control>
+						<control type="image">
+							<posx>109</posx>
+							<posy>-75</posy>
+							<width>2474</width>
+							<height>791</height>
+							<texture border="50">arctic/common/border-20.png</texture>
+						</control>
+					</control>
+					<control type="group">
+						<posx>155</posx>
+						<posy>158</posy>
+						<control type="image">
+							<posx>20</posx>
+							<posy>22</posy>
+							<width>210</width>
+							<height>210</height>
+							<texture fallback="windows/pvr/defaultchannel.png">$INFO[Container(15).ListItem.Icon]</texture>
+							<aspectratio align="right">keep</aspectratio>
+						</control>
+						<control type="group">
+							<posx>280</posx>
+							<control type="button">
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>1450</width>
+								<height>86</height>
+								<label>$INFO[ListItem.Label]</label>
+								<label2>$INFO[ListItem.StartTime]$INFO[ListItem.EndTime, - ]</label2>
+								<disabledcolor>mod-infotags-alt</disabledcolor>
+								<font>Font-Alaska-S38-BL</font>
+								<align>left</align>
+								<aligny>center</aligny>
+								<enable>false</enable>
+							</control>
+							<control type="label">
+								<posx>0</posx>
+								<posy>70</posy>
+								<width>1450</width>
+								<font>Font-Alaska-S28-L</font>
+								<label>$INFO[Container(15).ListItem.ChannelName]$INFO[Container(15).ListItem.Genre, • ,]</label>
+								<textcolor>mod-infotags-alt</textcolor>
+								<scroll>false</scroll>
+								<align>left</align>
+							</control>
+							<control type="textbox">
+								<description>Plot value</description>
+								<posx>0</posx>
+								<posy>110</posy>
+								<width>1450</width>
+								<height>87</height>
+								<font>Font-Condensed-S33</font>
+								<align>justify</align>
+								<textcolor>mod-infotags-alt</textcolor>
+								<pagecontrol>60</pagecontrol>
+								<autoscroll delay="10000" time="3000" repeat="6000">!Control.HasFocus(60)</autoscroll>
+								<label fallback="161">$INFO[ListItem.Plot]</label>
+							</control>
+							<control type="label">
+								<posx>1450</posx>
+								<posy>204</posy>
+								<width>900</width>
+								<font>Font-Alaska-S25-L</font>
+								<label>$INFO[Container(15).ListItem.Date]</label>
+								<textcolor>mod-infotags-alt</textcolor>
+								<scroll>false</scroll>
+								<align>right</align>
+							</control>
+						</control>
+					</control>
+
+				
+					<control type="scrollbar" id="71">
+						<description>Scrollbar</description>
+						<posx>1755</posx>
+						<posy>300</posy>
+						<width>6</width>
+						<height>416</height>                    
+						<onleft>70</onleft>
+						<onright>11</onright>
+						<texturesliderbar border="3,6,3,6">views/other/scrollbar.png</texturesliderbar>
+						<texturesliderbarfocus border="3,6,3,6">views/other/scrollbar.png</texturesliderbarfocus>
+						<orientation>vertical</orientation>
+						<showonepage>false</showonepage>
+						<animation effect="fade" start="35" end="0" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(71)">Conditional</animation>
+						<visible>Control.IsVisible(11)</visible>
+					</control>
 				</control>
-
-	            <control type="group">
-	                <description>Channel Preview + Info</description>
-	                <posx>1184</posx>
-	                <posy>218</posy>
-	               	
-	               	<include>PVR-RightPanel</include>
-	               	
-	                <control type="label">
-	                    <posx>30</posx>
-	                    <posy>30</posy>
-	                    <width>516</width>
-	                    <font>Font-Alaska-S38-BL</font>
-	                    <label>$INFO[Container(15).ListItem.Title]</label>
-	                    <textcolor>mod-infotags</textcolor>
-	                    <shadowcolor>mod-shadow</shadowcolor>
-	                    <scroll>false</scroll>
-	                </control>
-	                <control type="textbox">
-	                    <description>Plot</description>
-	                    <posx>30</posx>
-	                    <posy>78</posy>
-	                    <width>516</width>
-	                    <height>505</height>
-	                    <info>Container(15).ListItem.Plot</info>
-	                    <align>justify</align>
-	                    <textcolor>mod-infotags-l</textcolor>
-	                    <shadowcolor>mod-shadow</shadowcolor>
-	                    <pagecontrol>71</pagecontrol>
-	                    <autoscroll delay="13000" time="3000" repeat="13000">!Control.HasFocus(71)</autoscroll>
-	                    <font>Font-Condensed-S34</font>
-	                    <visible>!IsEmpty(Container(15).ListItem.Plot)</visible>
-	                    <include>visiblehidefadeinfo</include>
-	                </control>
-	                <control type="label">
-	                    <posx>30</posx>
-	                    <posy>618</posy>
-	                    <width>516</width>
-	                    <font>Font-Alaska-S29-BL</font>
-	                    <label>$INFO[Container(15).ListItem.Genre]</label>
-	                    <textcolor>mod-infotags-l</textcolor>
-	                    <shadowcolor>mod-shadow</shadowcolor>
-	                    <scroll>false</scroll>
-	                </control>
-	                <control type="scrollbar" id="71">
-	                    <description>Scrollbar</description>
-	                    <posx>572</posx>
-	                    <posy>78</posy>
-	                    <width>6</width>
-	                    <height>505</height>                    
-	                    <onleft>70</onleft>
-	                    <onright>16</onright>
-	                    <texturesliderbar border="1">views/other/scrollbar-sq.png</texturesliderbar>
-	                    <texturesliderbarfocus border="1">views/other/scrollbar-sq.png</texturesliderbarfocus>
-	                    <orientation>vertical</orientation>
-	                    <showonepage>false</showonepage>
-	                    <animation effect="fade" start="35" end="0" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(71)">Conditional</animation>
-	                    <visible>Control.IsVisible(15)</visible>
-	                </control>
-	            </control>
-	        </control>
-	        <control type="group">
-	            <visible>Control.IsVisible(15) + !Window.IsActive(favourites)</visible>
-	            <animation type="WindowOpen">
-	                <effect type="slide" start="200" end="0" tween="cubic" easing="out" time="650" />
-	                <effect type="fade" start="0" end="100" tween="sine" easing="inout" time="300" />
-	                <effect type="zoom" start="90" end="100" center="661,438" tween="cubic" easing="out" time="400" />
-	            </animation>
-	            <animation type="WindowClose">
-	                <effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
-	                <effect type="zoom" start="100" end="85" time="300" center="960,600" tween="sine" easing="out" />
-	            </animation>
-	            <animation type="Visible">
-	                <effect type="slide" start="200" end="0" tween="cubic" easing="out" time="650" />
-	                <effect type="fade" start="0" end="100" tween="sine" easing="inout" time="300" />
-	                <effect type="zoom" start="90" end="100" center="661,438" tween="cubic" easing="out" time="400" />
-	            </animation>
-	            <animation type="Hidden">
-	                <effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
-	                <effect type="zoom" start="100" end="85" time="300" center="960,600" tween="sine" easing="out" />
-	            </animation>
-	            <control type="label">
-	            	<posx>168</posx>
-	            	<posy>178</posy>
-	            	<width>200</width>
-	            	<height>30</height>
-	            	<font>Font-Alaska-S29-BL</font>
-	            	<textcolor>Mod_Tags</textcolor>
-	            	<shadowcolor>Mod_Shadow</shadowcolor>
-	            	<align>left</align>
-	            	<aligny>center</aligny>
-	            	<label>$VAR[TVNumItemsLabel]</label>
-	            </control>
-	            <control type="image">
-	                <description>Shadow</description>
-	                <posx>50</posx>
-	                <posy>883</posy>
-	                <width>1820</width>
-	                <height>150</height>
-	                <texture>windows/home/item-shadow.png</texture>
-	                <animation effect="zoom" start="50,883,1820,150" end="50,883,1222,150" time="300" tween="sine" easing="inout" condition="!Pvr.IsPlayingTv + !IntegerGreaterThan(Container(15).NumItems,0)">Conditional</animation>
-	            </control>
-	            
-	            <include>PVR-LeftPanel</include>
-
-	            <control type="label">
-	                <posx>180</posx>
-	                <posy>503</posy>
-	                <width>962</width>
-	                <height>100</height>
-	                <label>$LOCALIZE[19055]</label>
-	                <textcolor>mod-infotags-l</textcolor>
-	                <font>Font-Condensed-S50</font>
-	                <scroll>false</scroll>
-	                <align>center</align>
-	                <visible>!Pvr.IsPlayingTv + !IntegerGreaterThan(Container(15).NumItems,0)</visible>
-	            </control>
-	            <control type="list" id="15">
-	                <posx>150</posx>
-	                <posy>218</posy>
-	                <width>1022</width>
-	                <height>675</height>
-	                <pagecontrol>70</pagecontrol>
-	                <onleft>9001</onleft>
-	                <onright>70</onright>
-	                <onup>15</onup>
-	                <ondown>15</ondown>
-	                <viewtype label="535">list</viewtype>
-	                <preloaditems>2</preloaditems>
-	                <scrolltime tween="cubic" easing="out">500</scrolltime>
-	                <itemlayout height="75">
-	   
-	                    <control type="label">
-	                        <description>Title</description>
-	                        <posx>270</posx>
-	                        <posy>0</posy>
-	                        <width>250</width>
-	                        <height>74</height>
-	                        <font>Font-Alaska-S25-BL</font>
-	                        <align>right</align>
-	                        <label>$INFO[ListItem.Date]</label>
-	                        <textcolor>mod-infotags-l</textcolor>
-	                        <selectedcolor>mod-infotags-l</selectedcolor>
-	                        <scroll>false</scroll>
-	                    </control>
-	                    <control type="label">
-	                        <description>Label</description>
-	                        <posx>290</posx>
-	                        <posy>0</posy>
-	                        <width>712</width>
-	                        <height>75</height>
-	                        <font>Font-Alaska-S34-BL</font>
-	                        <align>left</align>
-	                        <label>$INFO[ListItem.Label]</label>
-	                        <textcolor>mod-infotags-l</textcolor>
-	                        <selectedcolor>mod-infotags-l</selectedcolor>
-	                        <scroll>false</scroll>
-	                    </control>
-	                    <control type="label">
-	                        <description>Label</description>
-	                        <posx>1002</posx>
-	                        <posy>0</posy>
-	                        <width>712</width>
-	                        <height>74</height>
-	                        <font>Font-Alaska-S25-BL</font>
-	                        <align>right</align>
-	                        <label>$INFO[ListItem.Genre]</label>
-	                        <textcolor>mod-infotags-l</textcolor>
-	                        <selectedcolor>mod-infotags-l</selectedcolor>
-	                        <scroll>false</scroll>
-	                        <visible>!ListItem.IsRecording + !ListItem.HasTimer</visible>
-	                    </control>
-	                    <control type="label">
-	                        <description>Label</description>
-	                        <posx>956</posx>
-	                        <posy>0</posy>
-	                        <width>666</width>
-	                        <height>74</height>
-	                        <font>Font-Alaska-S25-BL</font>
-	                        <align>right</align>
-	                        <label>$INFO[ListItem.Genre]</label>
-	                        <textcolor>mod-infotags-l</textcolor>
-	                        <selectedcolor>mod-infotags-l</selectedcolor>
-	                        <scroll>false</scroll>
-	                        <visible>ListItem.IsRecording | ListItem.HasTimer</visible>
-	                    </control>
-	                    <control type="group">
-	                        <visible>ListItem.IsRecording</visible>
-	                        <control type="image">
-	                        	<posx>956</posx>
-	                        	<posy>-3</posy>
-	                        	<width>66</width>
-	                        	<height>80</height>
-	                        	<texture>windows/pvr/epg-recording.png</texture>
-	                        </control>
-	                        <control type="image">
-	                        	<posx>956</posx>
-	                        	<posy>-3</posy>
-	                        	<width>66</width>
-	                        	<height>80</height>
-	                        	<texture>windows/pvr/epg-recording-pulse.png</texture>
-	                        	<animation effect="fade" start="65" end="100" time="750" tween="sine" easing="in" pulse="true" condition="true">Conditional</animation>
-	                        </control>
-	                    </control>
-	                    <control type="image">
-	                    	<posx>956</posx>
-	                    	<posy>-3</posy>
-	                    	<width>66</width>
-	                    	<height>80</height>
-	                    	<texture>windows/pvr/epg-timer.png</texture>
-	                    	<visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
-	                    </control>
-	                </itemlayout>
-	                <focusedlayout height="75">
-	        
-	                    <control type="image">
-	                        <posx>0</posx>
-	                        <posy>0</posy>
-	                        <width>1022</width>
-	                        <height>74</height>
-	                        <texture border="5">views/other/focus-mod.png</texture>
-	                        <animation effect="slide" start="0,75" end="0,0" time="200" reversible="false" tween="cubic" easing="out" condition="Container(15).OnPrevious">focus</animation>
-	                        <animation effect="slide" start="0,-75" end="0,0" time="200" reversible="false" tween="cubic" easing="out" condition="Container(15).OnNext">focus</animation>
-	                        <include>visiblehidefadeinfo</include>
-	                    </control>
-	                    <control type="group">
-	                        <animation type="Focus" condition="Container(15).OnNext | Container(15).OnPrevious" reversible="false">
-	                            <effect type="fade" start="64" end="100" time="500" tween="sine" easing="inout" />
-	                        </animation>
-	                        <animation effect="fade" start="100" end="64" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(15)">Conditional</animation>
-	                        <control type="label">
-	                            <description>Title</description>
-	                            <posx>270</posx>
-	                            <posy>0</posy>
-	                            <width>250</width>
-	                            <height>74</height>
-	                            <font>Font-Alaska-S25-BL</font>
-	                            <align>right</align>
-	                            <label>$INFO[ListItem.Date]</label>
-	                            <textcolor>eewhite</textcolor>
-	                            <selectedcolor>eewhite</selectedcolor>
-	                            <scroll>false</scroll>
-	                        </control>
-	                        <control type="label">
-	                            <description>Label</description>
-	                            <posx>290</posx>
-	                            <posy>0</posy>
-	                            <width>712</width>
-	                            <height>75</height>
-	                            <font>Font-Alaska-S34-BL</font>
-	                            <align>left</align>
-	                            <label>$INFO[ListItem.Label]</label>
-	                            <textcolor>eewhite</textcolor>
-	                            <selectedcolor>eewhite</selectedcolor>
-	                            <scroll>false</scroll>
-	                        </control>
-	                        <control type="label">
-	                            <description>Label</description>
-	                            <posx>1002</posx>
-	                            <posy>0</posy>
-	                            <width>712</width>
-	                            <height>74</height>
-	                            <font>Font-Alaska-S25-BL</font>
-	                            <align>right</align>
-	                            <label>$INFO[ListItem.Genre]</label>
-	                            <textcolor>D4FFFFFF</textcolor>
-	                            <selectedcolor>D4FFFFFF</selectedcolor>
-	                            <scroll>false</scroll>
-	                            <visible>!ListItem.IsRecording + !ListItem.HasTimer</visible>
-	                        </control>
-	                        <control type="label">
-	                            <description>Label</description>
-	                            <posx>956</posx>
-	                            <posy>0</posy>
-	                            <width>666</width>
-	                            <height>74</height>
-	                            <font>Font-Alaska-S25-BL</font>
-	                            <align>right</align>
-	                            <label>$INFO[ListItem.Genre]</label>
-	                            <textcolor>D4FFFFFF</textcolor>
-	                            <selectedcolor>D4FFFFFF</selectedcolor>
-	                            <scroll>false</scroll>
-	                            <visible>ListItem.IsRecording | ListItem.HasTimer</visible>
-	                        </control>
-	                    </control>
-	                    <control type="group">
-	                        <visible>ListItem.IsRecording</visible>
-	                        <control type="image">
-	                        	<posx>956</posx>
-	                        	<posy>-3</posy>
-	                        	<width>66</width>
-	                        	<height>80</height>
-	                        	<texture>windows/pvr/epg-recording.png</texture>
-	                        </control>
-	                        <control type="image">
-	                        	<posx>956</posx>
-	                        	<posy>-3</posy>
-	                        	<width>66</width>
-	                        	<height>80</height>
-	                        	<texture>windows/pvr/epg-recording-pulse.png</texture>
-	                        	<animation effect="fade" start="65" end="100" time="750" tween="sine" easing="in" pulse="true" condition="true">Conditional</animation>
-	                        </control>
-	                    </control>
-	                    <control type="image">
-	                    	<posx>956</posx>
-	                    	<posy>-3</posy>
-	                    	<width>66</width>
-	                    	<height>80</height>
-	                    	<texture>windows/pvr/epg-timer.png</texture>
-	                    	<visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
-	                    </control>
-	                </focusedlayout>
-	            </control>
-	            <control type="scrollbar" id="70">
-	                <description>Scrollbar</description>
-	                <posx>1166</posx>
-	                <posy>216</posy>
-	                <width>6</width>
-	                <height>675</height>
-	                <onleft>15</onleft>
-	                <onright>71</onright>
-	                <texturesliderbar border="3,6,3,6">views/other/scrollbar.png</texturesliderbar>
-	                <texturesliderbarfocus border="3,6,3,6">views/other/scrollbar.png</texturesliderbarfocus>
-	                <orientation>vertical</orientation>
-	                <showonepage>false</showonepage>
-	                <animation effect="fade" start="35" end="0" time="300" tween="sine" easing="inout" condition="!Control.IsVisible(9772) + !Control.HasFocus(70)">Conditional</animation>
-	                <visible allowhiddenfocus="true">Control.HasFocus(70)</visible>
-	            </control>
+				<control type="group">
+					<visible>Control.IsVisible(15) + !Window.IsActive(favourites)</visible>
+					<control type="list" id="15">
+						<posx>140</posx>
+						<posy>424</posy>
+						<width>1022</width>
+						<height>480</height>
+						<pagecontrol>70</pagecontrol>
+						<onleft>9001</onleft>
+						<onright>70</onright>
+						<onup>15</onup>
+						<ondown>15</ondown>
+						<viewtype label="535">list</viewtype>
+						<preloaditems>2</preloaditems>
+						<scrolltime tween="cubic" easing="out">500</scrolltime>
+						<itemlayout height="60">
+							<control type="label">
+								<description>Title</description>
+								<posx>270</posx>
+								<posy>0</posy>
+								<width>250</width>
+								<height>60</height>
+								<font>Font-Alaska-S28-L</font>
+								<align>right</align>
+								<label>$INFO[ListItem.Date]</label>
+								<textcolor>mod-infotags</textcolor>
+								<selectedcolor>mod-infotags</selectedcolor>
+								<scroll>false</scroll>
+							</control>
+							<control type="label">
+								<description>Label</description>
+								<posx>290</posx>
+								<posy>0</posy>
+								<width>712</width>
+								<height>60</height>
+								<font>Font-Condensed-S32</font>
+								<align>left</align>
+								<label>$INFO[ListItem.Label]</label>
+								<textcolor>mod-infotags</textcolor>
+								<selectedcolor>mod-infotags</selectedcolor>
+								<scroll>false</scroll>
+							</control>
+							<control type="label">
+								<description>Label</description>
+								<posx>1002</posx>
+								<posy>0</posy>
+								<width>712</width>
+								<height>60</height>
+								<font>Font-Condensed-S28</font>
+								<align>right</align>
+								<label>$INFO[ListItem.Genre]</label>
+								<textcolor>mod-infotags-l</textcolor>
+								<selectedcolor>mod-infotags-l</selectedcolor>
+								<scroll>false</scroll>
+								<visible>!ListItem.IsRecording + !ListItem.HasTimer</visible>
+							</control>
+							<control type="label">
+								<description>Label</description>
+								<posx>956</posx>
+								<posy>0</posy>
+								<width>666</width>
+								<height>60</height>
+								<font>Font-Condensed-S28</font>
+								<align>right</align>
+								<label>$INFO[ListItem.Genre]</label>
+								<textcolor>mod-infotags-l</textcolor>
+								<selectedcolor>mod-infotags-l</selectedcolor>
+								<scroll>false</scroll>
+								<visible>ListItem.IsRecording | ListItem.HasTimer</visible>
+							</control>
+							<control type="group">
+								<visible>ListItem.IsRecording</visible>
+								<control type="image">
+									<posx>956</posx>
+									<posy>-6</posy>
+									<width>66</width>
+									<height>80</height>
+									<texture>windows/pvr/epg-recording.png</texture>
+								</control>
+								<control type="image">
+									<posx>956</posx>
+									<posy>-6</posy>
+									<width>66</width>
+									<height>80</height>
+									<texture>windows/pvr/epg-recording-pulse.png</texture>
+									<animation effect="fade" start="65" end="100" time="750" tween="sine" easing="in" pulse="true" condition="true">Conditional</animation>
+								</control>
+							</control>
+							<control type="image">
+								<posx>956</posx>
+								<posy>-6</posy>
+								<width>66</width>
+								<height>80</height>
+								<texture>windows/pvr/epg-timer.png</texture>
+								<visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
+							</control>
+						</itemlayout>
+						<focusedlayout height="60">
+							<control type="image">
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>1022</width>
+								<height>60</height>
+								<texture border="15">views/other/focus-mod8.png</texture>
+								<animation effect="slide" start="0,75" end="0,0" time="200" reversible="false" tween="cubic" easing="out" condition="Container(15).OnPrevious">focus</animation>
+								<animation effect="slide" start="0,-75" end="0,0" time="200" reversible="false" tween="cubic" easing="out" condition="Container(15).OnNext">focus</animation>
+								<include>visiblehidefadeinfo</include>
+							</control>
+							<control type="group">
+								<animation type="Focus" condition="Container(15).OnNext | Container(15).OnPrevious" reversible="false">
+									<effect type="fade" start="64" end="100" time="500" tween="sine" easing="inout" />
+								</animation>
+								<animation effect="fade" start="100" end="64" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(15)">Conditional</animation>
+								<control type="label">
+									<description>Title</description>
+									<posx>270</posx>
+									<posy>0</posy>
+									<width>250</width>
+									<height>60</height>
+									<font>Font-Alaska-S28-L</font>
+									<align>right</align>
+									<label>$INFO[ListItem.Date]</label>
+									<textcolor>eewhite</textcolor>
+									<selectedcolor>eewhite</selectedcolor>
+									<scroll>false</scroll>
+								</control>
+								<control type="label">
+									<description>Label</description>
+									<posx>290</posx>
+									<posy>0</posy>
+									<width>712</width>
+									<height>60</height>
+									<font>Font-Condensed-S34-B</font>
+									<align>left</align>
+									<label>$INFO[ListItem.Label]</label>
+									<textcolor>eewhite</textcolor>
+									<selectedcolor>eewhite</selectedcolor>
+									<scroll>false</scroll>
+								</control>
+								<control type="label">
+									<description>Label</description>
+									<posx>1002</posx>
+									<posy>0</posy>
+									<width>712</width>
+									<height>60</height>
+									<font>Font-Condensed-S28</font>
+									<align>right</align>
+									<label>$INFO[ListItem.Genre]</label>
+									<textcolor>D4FFFFFF</textcolor>
+									<selectedcolor>D4FFFFFF</selectedcolor>
+									<scroll>false</scroll>
+									<visible>!ListItem.IsRecording + !ListItem.HasTimer</visible>
+								</control>
+								<control type="label">
+									<description>Label</description>
+									<posx>956</posx>
+									<posy>0</posy>
+									<width>666</width>
+									<height>60</height>
+									<font>Font-Alaska-S28-L</font>
+									<align>right</align>
+									<label>$INFO[ListItem.Genre]</label>
+									<textcolor>D4FFFFFF</textcolor>
+									<selectedcolor>D4FFFFFF</selectedcolor>
+									<scroll>false</scroll>
+									<visible>ListItem.IsRecording | ListItem.HasTimer</visible>
+								</control>
+							</control>
+							<control type="group">
+								<visible>ListItem.IsRecording</visible>
+								<control type="image">
+									<posx>956</posx>
+									<posy>-6</posy>
+									<width>66</width>
+									<height>80</height>
+									<texture>windows/pvr/epg-recording.png</texture>
+								</control>
+								<control type="image">
+									<posx>956</posx>
+									<posy>-6</posy>
+									<width>66</width>
+									<height>80</height>
+									<texture>windows/pvr/epg-recording-pulse.png</texture>
+									<animation effect="fade" start="65" end="100" time="750" tween="sine" easing="in" pulse="true" condition="true">Conditional</animation>
+								</control>
+							</control>
+							<control type="image">
+								<posx>956</posx>
+								<posy>-6</posy>
+								<width>66</width>
+								<height>80</height>
+								<texture>windows/pvr/epg-timer.png</texture>
+								<visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
+							</control>
+						</focusedlayout>
+					</control>
+					<control type="scrollbar" id="70">
+						<description>Scrollbar</description>
+						<posx>1166</posx>
+						<posy>216</posy>
+						<width>6</width>
+						<height>675</height>
+						<onleft>15</onleft>
+						<onright>71</onright>
+						<texturesliderbar border="3,6,3,6">views/other/scrollbar.png</texturesliderbar>
+						<texturesliderbarfocus border="3,6,3,6">views/other/scrollbar.png</texturesliderbarfocus>
+						<orientation>vertical</orientation>
+						<showonepage>false</showonepage>
+						<animation effect="fade" start="35" end="0" time="300" tween="sine" easing="inout" condition="!Control.IsVisible(9772) + !Control.HasFocus(70)">Conditional</animation>
+						<visible allowhiddenfocus="true">Control.HasFocus(70)</visible>
+					</control>
+				</control>
 	        </control>
 	    </control>
 	</include>
@@ -1814,139 +1814,153 @@
 	        <control type="group">
 	            <visible>Control.IsVisible(16) + !Window.IsActive(favourites)</visible>
 	            <animation type="WindowOpen">
-	                <effect type="slide" start="200" end="0" tween="cubic" easing="out" time="545" delay="105" />
-	                <effect type="fade" start="0" end="100" tween="sine" easing="inout" time="300" delay="105" />
-	                <effect type="zoom" start="90" end="100" center="1462,438" tween="cubic" easing="out" time="400" delay="105" />
-	            </animation>
-	            <animation type="WindowClose">
-	                <effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
-	                <effect type="zoom" start="100" end="85" time="300" center="960,600" tween="sine" easing="out" />
-	            </animation>
-	            <animation type="Visible">
-	                <effect type="slide" start="200" end="0" tween="cubic" easing="out" time="545" delay="105" />
-	                <effect type="fade" start="0" end="100" tween="sine" easing="inout" time="300" delay="105" />
-	                <effect type="zoom" start="90" end="100" center="1462,438" tween="cubic" easing="out" time="400" delay="105" />
-	            </animation>
-	            <animation type="Hidden">
-	                <effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
-	                <effect type="zoom" start="100" end="85" time="300" center="960,600" tween="sine" easing="out" />
-	            </animation>
-	            <control type="image">
-					<posx>130</posx>
-					<posy>200</posy>
-					<height>707</height>
-					<width>1650</width>
-					<texture border="25">views/newgloss/border-glass.png</texture>
-					<colordiffuse>77ffffff</colordiffuse>
-					<visible>!Skin.HasSetting(hide.glass)</visible>
+					<effect type="slide" start="200" end="0" tween="cubic" easing="out" time="650" />
+					<effect type="fade" start="0" end="100" tween="sine" easing="inout" time="300" />
+					<effect type="zoom" start="90" end="100" center="1027,438" tween="cubic" easing="out" time="400" />
+				</animation>
+				<animation type="WindowClose">
+					<effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
+					<effect type="zoom" start="100" end="85" time="300" center="960,600" tween="sine" easing="out" />
+				</animation>
+				<animation type="Visible">
+					<effect type="slide" start="200" end="0" tween="cubic" easing="out" time="650" />
+					<effect type="fade" start="0" end="100" tween="sine" easing="inout" time="300" />
+					<effect type="zoom" start="90" end="100" center="1027,438" tween="cubic" easing="out" time="400" />
+				</animation>
+				<animation type="Hidden">
+					<effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
+					<effect type="zoom" start="100" end="85" time="300" center="960,600" tween="sine" easing="out" />
+				</animation>
+				<control type="group">
+					<!-- Panel -->
+					<control type="group">
+						<posy>218</posy>
+						<posx>0</posx>
+						<control type="image">
+							<description>Shadow</description>
+							<posx>0</posx>
+							<posy>643</posy>
+							<width>2420</width>
+							<height>150</height>
+							<texture>windows/home/item-shadow.png</texture>
+						</control>
+						<control type="image">
+							<posx>129</posx>
+							<posy>-55</posy>
+							<width>2474</width>
+							<height>751</height>
+							<texture border="35">arctic/common/panel.png</texture>
+						</control>
+						<control type="image">
+							<posx>129</posx>
+							<posy>195</posy>
+							<width>2500</width>
+							<height>501</height>
+							<texture border="25">arctic/common/whitepanel8.png</texture>
+						</control>
+						<control type="image">
+							<posx>1173</posx>
+							<posy>205</posy>
+							<width>737</width>
+							<height>481</height>
+							<texture border="25">arctic/common/whitepanel8.png</texture>
+							<colordiffuse>ff000000</colordiffuse>
+						</control>
+						<control type="label">
+							<posx>1173</posx>
+							<posy>205</posy>
+							<width>737</width>
+							<height>481</height>
+							<font>Font-Alaska-S25-BL</font>
+							<textcolor>mod-infotags-alt</textcolor>
+							<align>center</align>
+							<aligny>center</aligny>
+							<label>41452</label>
+							<visible>!Player.HasVideo</visible>
+						</control>
+						<control type="videowindow">
+							<posx>1173</posx>
+							<posy>205</posy>
+							<width>737</width>
+							<height>481</height>
+							<align>center</align>
+							<visible>Player.HasVideo</visible>
+						</control>
+						<control type="image">
+							<posx>109</posx>
+							<posy>-75</posy>
+							<width>2474</width>
+							<height>791</height>
+							<texture border="50">arctic/common/border-20.png</texture>
+						</control>
+					</control>
+					<control type="group">
+						<posx>155</posx>
+						<posy>158</posy>
+						<control type="image">
+							<posx>20</posx>
+							<posy>22</posy>
+							<width>210</width>
+							<height>210</height>
+							<texture fallback="windows/pvr/defaultchannel.png">$INFO[Container(16).ListItem.Icon]</texture>
+							<aspectratio align="right">keep</aspectratio>
+						</control>
+						<control type="group">
+							<posx>280</posx>
+							<control type="button">
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>1450</width>
+								<height>86</height>
+								<label>$INFO[ListItem.Label]</label>
+								<label2>$INFO[ListItem.StartTime]$INFO[ListItem.EndTime, - ]</label2>
+								<disabledcolor>mod-infotags-alt</disabledcolor>
+								<font>Font-Alaska-S38-BL</font>
+								<align>left</align>
+								<aligny>center</aligny>
+								<enable>false</enable>
+							</control>
+							<control type="label">
+								<posx>0</posx>
+								<posy>70</posy>
+								<width>1450</width>
+								<font>Font-Alaska-S28-L</font>
+								<label>$INFO[Container(16).ListItem.ChannelName]$INFO[Container(15).ListItem.Genre, • ,]</label>
+								<textcolor>mod-infotags-alt</textcolor>
+								<scroll>false</scroll>
+								<align>left</align>
+							</control>
+							<control type="textbox">
+								<description>Plot value</description>
+								<posx>0</posx>
+								<posy>110</posy>
+								<width>1450</width>
+								<height>87</height>
+								<font>Font-Condensed-S33</font>
+								<align>justify</align>
+								<textcolor>mod-infotags-alt</textcolor>
+								<pagecontrol>60</pagecontrol>
+								<autoscroll delay="10000" time="3000" repeat="6000">!Control.HasFocus(60)</autoscroll>
+								<label fallback="161">$INFO[ListItem.Plot]</label>
+							</control>
+							<control type="label">
+								<posx>1450</posx>
+								<posy>204</posy>
+								<width>900</width>
+								<font>Font-Alaska-S25-L</font>
+								<label>$INFO[Container(16).ListItem.Date]</label>
+								<textcolor>mod-infotags-alt</textcolor>
+								<scroll>false</scroll>
+								<align>right</align>
+							</control>
+						</control>
+					</control>
 				</control>
-
-	            <control type="group">
-	                <description>Channel Preview + Info</description>
-	                <posx>1184</posx>
-	                <posy>218</posy>
-	                
-	                <include>PVR-RightPanel</include>
-	                
-	                <control type="label">
-	                    <posx>30</posx>
-	                    <posy>30</posy>
-	                    <width>516</width>
-	                    <font>Font-Alaska-S38-BL</font>
-	                    <label>$INFO[Container(16).ListItem.Title]</label>
-	                    <textcolor>mod-infotags</textcolor>
-	                    <shadowcolor>mod-shadow</shadowcolor>
-	                    <scroll>false</scroll>
-	                </control>
-	                <control type="textbox">
-	                    <description>Plot</description>
-	                    <posx>30</posx>
-	                    <posy>78</posy>
-	                    <width>516</width>
-	                    <height>505</height>
-	                    <info>Container(16).ListItem.Plot</info>
-	                    <align>justify</align>
-	                    <textcolor>mod-infotags-l</textcolor>
-	                    <shadowcolor>mod-shadow</shadowcolor>
-	                    <pagecontrol>71</pagecontrol>
-	                    <autoscroll delay="13000" time="3000" repeat="13000">!Control.HasFocus(71)</autoscroll>
-	                    <font>Font-Condensed-S34</font>
-	                    <visible>!IsEmpty(Container(16).ListItem.Plot)</visible>
-	                    <include>visiblehidefadeinfo</include>
-	                </control>
-	                <control type="label">
-	                    <posx>30</posx>
-	                    <posy>618</posy>
-	                    <width>516</width>
-	                    <font>Font-Alaska-S29-BL</font>
-	                    <label>$INFO[Container(16).ListItem.Genre]</label>
-	                    <textcolor>mod-infotags-l</textcolor>
-	                    <shadowcolor>mod-shadow</shadowcolor>
-	                    <scroll>false</scroll>
-	                </control>
-	                <control type="scrollbar" id="71">
-	                    <description>Scrollbar</description>
-	                    <posx>572</posx>
-	                    <posy>78</posy>
-	                    <width>6</width>
-	                    <height>505</height>                    
-	                    <onleft>70</onleft>
-	                    <onright>16</onright>
-	                    <texturesliderbar border="1">views/other/scrollbar-sq.png</texturesliderbar>
-	                    <texturesliderbarfocus border="1">views/other/scrollbar-sq.png</texturesliderbarfocus>
-	                    <orientation>vertical</orientation>
-	                    <showonepage>false</showonepage>
-	                    <animation effect="fade" start="35" end="0" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(71)">Conditional</animation>
-	                    <visible>Control.IsVisible(16)</visible>
-	                </control>
-	            </control>
-	        </control>
-	        <control type="group">
-	            <visible>Control.IsVisible(16) + !Window.IsActive(favourites)</visible>
-	            <animation type="WindowOpen">
-	                <effect type="slide" start="200" end="0" tween="cubic" easing="out" time="650" />
-	                <effect type="fade" start="0" end="100" tween="sine" easing="inout" time="300" />
-	                <effect type="zoom" start="90" end="100" center="661,438" tween="cubic" easing="out" time="400" />
-	            </animation>
-	            <animation type="WindowClose">
-	                <effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
-	                <effect type="zoom" start="100" end="85" time="300" center="960,600" tween="sine" easing="out" />
-	            </animation>
-	            <animation type="Visible">
-	                <effect type="slide" start="200" end="0" tween="cubic" easing="out" time="650" />
-	                <effect type="fade" start="0" end="100" tween="sine" easing="inout" time="300" />
-	                <effect type="zoom" start="90" end="100" center="661,438" tween="cubic" easing="out" time="400" />
-	            </animation>
-	            <animation type="Hidden">
-	                <effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
-	                <effect type="zoom" start="100" end="85" time="300" center="960,600" tween="sine" easing="out" />
-	            </animation>
-	            <control type="label">
-	            	<posx>168</posx>
-	            	<posy>173</posy>
-	            	<width>200</width>
-	            	<height>30</height>
-	            	<font>Font-Alaska-S29-BL</font>
-	            	<textcolor>Mod_Tags</textcolor>
-	            	<shadowcolor>Mod_Shadow</shadowcolor>
-	            	<align>left</align>
-	            	<aligny>center</aligny>
-	            	<label>$VAR[TVNumItemsLabel]</label>
-	            </control>
-	            <control type="image">
-	                <description>Shadow</description>
-	                <posx>50</posx>
-	                <posy>883</posy>
-	                <width>1820</width>
-	                <height>150</height>
-	                <texture>windows/home/item-shadow.png</texture>
-	            </control>
-	            <include>PVR-LeftPanel</include>
-	            <control type="list" id="16">
-	                <posx>150</posx>
-	                <posy>218</posy>
-	                <width>1022</width>
-	                <height>675</height>
+				<control type="list" id="16">
+	                <posx>140</posx>
+                    <posy>424</posy>
+                    <width>1022</width>
+                    <height>480</height>
 	                <pagecontrol>70</pagecontrol>
 	                <onleft>9001</onleft>
 	                <onright>70</onright>
@@ -1955,15 +1969,14 @@
 	                <viewtype label="535">list</viewtype>
 	                <preloaditems>2</preloaditems>
 	                <scrolltime tween="cubic" easing="out">500</scrolltime>
-	                <itemlayout height="75">
-	                
+	                <itemlayout height="60">
 	                    <control type="label">
 	                        <description>Title</description>
 	                        <posx>145</posx>
 	                        <posy>0</posy>
 	                        <width>125</width>
 	                        <height>75</height>
-	                        <font>Font-Alaska-S32-BL</font>
+	                        <font>Font-Alaska-S28-L</font>
 	                        <align>right</align>
 	                        <label>[B]$INFO[ListItem.StartTime][/B]</label>
 	                        <textcolor>mod-infotags-l</textcolor>
@@ -1977,7 +1990,7 @@
 	                        <posy>0</posy>
 	                        <width>837</width>
 	                        <height>74</height>
-	                        <font>Font-Alaska-S34-BL</font>
+	                        <font>Font-Condensed-S32-B</font>
 	                        <align>left</align>
 	                        <label>$INFO[ListItem.ChannelName]</label>
 	                        <textcolor>mod-infotags-l</textcolor>
@@ -1991,7 +2004,7 @@
 	                        <posy>0</posy>
 	                        <width>837</width>
 	                        <height>75</height>
-	                        <font>Font-Alaska-S32-BL</font>
+	                        <font>Font-Condensed-S32</font>
 	                        <align>right</align>
 	                        <label>$INFO[ListItem.Label]</label>
 	                        <textcolor>mod-infotags-l</textcolor>
@@ -2005,7 +2018,7 @@
 	                        <posy>0</posy>
 	                        <width>791</width>
 	                        <height>75</height>
-	                        <font>Font-Alaska-S32-BL</font>
+	                        <font>Font-Condensed-S32</font>
 	                        <align>right</align>
 	                        <label>$INFO[ListItem.Label]</label>
 	                        <textcolor>mod-infotags-l</textcolor>
@@ -2040,14 +2053,14 @@
 	                    	<visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
 	                    </control>
 	                </itemlayout>
-	                <focusedlayout height="75">
+	                <focusedlayout height="60">
 	          
 	                    <control type="image">
 	                        <posx>0</posx>
 	                        <posy>0</posy>
 	                        <width>1022</width>
-	                        <height>74</height>
-	                        <texture border="5">views/other/focus-mod.png</texture>
+	                        <height>60</height>
+	                        <texture border="15">views/other/focus-mod8.png</texture>
 	                        <animation effect="slide" start="0,75" end="0,0" time="200" reversible="false" tween="cubic" easing="out" condition="Container(16).OnPrevious">focus</animation>
 	                        <animation effect="slide" start="0,-75" end="0,0" time="200" reversible="false" tween="cubic" easing="out" condition="Container(16).OnNext">focus</animation>
 	                        <include>visiblehidefadeinfo</include>
@@ -2062,8 +2075,8 @@
 	                            <posx>145</posx>
 	                            <posy>0</posy>
 	                            <width>125</width>
-	                            <height>75</height>
-	                            <font>Font-Alaska-S32-BL</font>
+	                            <height>60</height>
+	                            <font>Font-Alaska-S28-L</font>
 	                            <align>right</align>
 	                            <label>[B]$INFO[ListItem.StartTime][/B]</label>
 	                            <textcolor>eewhite</textcolor>
@@ -2076,8 +2089,8 @@
 	                            <posx>165</posx>
 	                            <posy>0</posy>
 	                            <width>837</width>
-	                            <height>74</height>
-	                            <font>Font-Alaska-S34-BL</font>
+	                            <height>60</height>
+	                            <font>Font-Condensed-S32-B</font>
 	                            <align>left</align>
 	                            <label>$INFO[ListItem.ChannelName]</label>
 	                            <textcolor>D4FFFFFF</textcolor>
@@ -2090,8 +2103,8 @@
 	                            <posx>1002</posx>
 	                            <posy>0</posy>
 	                            <width>837</width>
-	                            <height>75</height>
-	                            <font>Font-Alaska-S32-BL</font>
+	                            <height>60</height>
+	                            <font>Font-Condensed-S32</font>
 	                            <align>right</align>
 	                            <label>$INFO[ListItem.Label]</label>
 	                            <textcolor>eewhite</textcolor>
@@ -2104,8 +2117,8 @@
 	                            <posx>956</posx>
 	                            <posy>0</posy>
 	                            <width>791</width>
-	                            <height>75</height>
-	                            <font>Font-Condensed-S33</font>
+	                            <height>60</height>
+	                            <font>Font-Condensed-S32</font>
 	                            <align>right</align>
 	                            <label>[B]$INFO[ListItem.Label][/B]</label>
 	                            <textcolor>eewhite</textcolor>
@@ -2142,6 +2155,9 @@
 	                    </control>
 	                </focusedlayout>
 	            </control>
+	        </control>
+	        <control type="group">
+	            <visible>Control.IsVisible(16) + !Window.IsActive(favourites)</visible>
 	            <control type="scrollbar" id="70">
 	                <description>Scrollbar</description>
 	                <posx>1166</posx>
@@ -2170,141 +2186,153 @@
 	        <control type="group">
 	            <visible>Control.IsVisible(13) + !Window.IsActive(favourites)</visible>
 	            <animation type="WindowOpen">
-	                <effect type="slide" start="200" end="0" tween="cubic" easing="out" time="545" delay="105" />
-	                <effect type="fade" start="0" end="100" tween="sine" easing="inout" time="300" delay="105" />
-	                <effect type="zoom" start="90" end="100" center="1462,438" tween="cubic" easing="out" time="400" delay="105" />
-	            </animation>
-	            <animation type="WindowClose">
-	                <effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
-	                <effect type="zoom" start="100" end="85" time="300" center="960,600" tween="sine" easing="out" />
-	            </animation>
-	            <animation type="Visible">
-	                <effect type="slide" start="200" end="0" tween="cubic" easing="out" time="545" delay="105" />
-	                <effect type="fade" start="0" end="100" tween="sine" easing="inout" time="300" delay="105" />
-	                <effect type="zoom" start="90" end="100" center="1462,438" tween="cubic" easing="out" time="400" delay="105" />
-	            </animation>
-	            <animation type="Hidden">
-	                <effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
-	                <effect type="zoom" start="100" end="85" time="300" center="960,600" tween="sine" easing="out" />
-	            </animation>
-	            <control type="image">
-					<posx>130</posx>
-					<posy>200</posy>
-					<height>707</height>
-					<width>1650</width>
-					<texture border="25">views/newgloss/border-glass.png</texture>
-					<colordiffuse>77ffffff</colordiffuse>
-					<visible>!Skin.HasSetting(hide.glass)</visible>
-				</control>
-
-	            <control type="group">
-	                <description>Channel Preview + Info</description>
-	                <posx>1184</posx>
-	                <posy>218</posy>
-	                
-	                <include>PVR-RightPanel</include>
-	                
-	                <control type="label">
-	                    <posx>30</posx>
-	                    <posy>30</posy>
-	                    <width>516</width>
-	                    <font>Font-Alaska-S38-BL</font>
-	                    <label>$INFO[Container(13).ListItem.Title]</label>
-	                    <textcolor>mod-infotags</textcolor>
-	                    <shadowcolor>mod-shadow</shadowcolor>
-	                    <scroll>false</scroll>
-	                </control>
-	                <control type="textbox">
-	                    <description>Plot</description>
-	                    <posx>30</posx>
-	                    <posy>78</posy>
-	                    <width>516</width>
-	                    <height>505</height>
-	                    <info>Container(15).ListItem.Plot</info>
-	                    <align>justify</align>
-	                    <textcolor>mod-infotags-l</textcolor>
-	                    <shadowcolor>mod-shadow</shadowcolor>
-	                    <pagecontrol>71</pagecontrol>
-	                    <autoscroll delay="13000" time="3000" repeat="13000">!Control.HasFocus(71)</autoscroll>
-	                    <font>Font-Condensed-S34</font>
-	                    <visible>!IsEmpty(Container(13).ListItem.Plot)</visible>
-	                    <include>visiblehidefadeinfo</include>
-	                </control>
-	                <control type="label">
-	                    <posx>30</posx>
-	                    <posy>618</posy>
-	                    <width>516</width>
-	                    <font>Font-Alaska-S29-BL</font>
-	                    <label>$INFO[Container(13).ListItem.Genre]</label>
-	                    <textcolor>mod-infotags-l</textcolor>
-	                    <shadowcolor>mod-shadow</shadowcolor>
-	                    <scroll>false</scroll>
-	                </control>
-	                <control type="scrollbar" id="71">
-	                    <description>Scrollbar</description>
-	                    <posx>572</posx>
-	                    <posy>78</posy>
-	                    <width>6</width>
-	                    <height>505</height>                    
-	                    <onleft>70</onleft>
-	                    <onright>16</onright>
-	                    <texturesliderbar border="3,6,3,6">views/other/scrollbar.png</texturesliderbar>
-	                    <texturesliderbarfocus border="3,6,3,6">views/other/scrollbar.png</texturesliderbarfocus>
-	                    <orientation>vertical</orientation>
-	                    <showonepage>false</showonepage>
-	                    <animation effect="fade" start="35" end="0" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(71)">Conditional</animation>
-	                    <visible>Control.IsVisible(13)</visible>
-	                </control>
-	            </control>
-	        </control>
-	        <control type="group">
-	            <visible>Control.IsVisible(13) + !Window.IsActive(favourites)</visible>
-	            <animation type="WindowOpen">
-	                <effect type="slide" start="200" end="0" tween="cubic" easing="out" time="650" />
-	                <effect type="fade" start="0" end="100" tween="sine" easing="inout" time="300" />
-	                <effect type="zoom" start="90" end="100" center="661,438" tween="cubic" easing="out" time="400" />
-	            </animation>
-	            <animation type="WindowClose">
-	                <effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
-	                <effect type="zoom" start="100" end="85" time="300" center="960,600" tween="sine" easing="out" />
-	            </animation>
-	            <animation type="Visible">
-	                <effect type="slide" start="200" end="0" tween="cubic" easing="out" time="650" />
-	                <effect type="fade" start="0" end="100" tween="sine" easing="inout" time="300" />
-	                <effect type="zoom" start="90" end="100" center="661,438" tween="cubic" easing="out" time="400" />
-	            </animation>
-	            <animation type="Hidden">
-	                <effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
-	                <effect type="zoom" start="100" end="85" time="300" center="960,600" tween="sine" easing="out" />
-	            </animation>
-	            <control type="label">
-	            	<posx>168</posx>
-	            	<posy>173</posy>
-	            	<width>200</width>
-	            	<height>30</height>
-	            	<font>Font-Alaska-S29-BL</font>
-	            	<textcolor>Mod_Tags</textcolor>
-	            	<shadowcolor>Mod_Shadow</shadowcolor>
-	            	<align>left</align>
-	            	<aligny>center</aligny>
-	            	<label>$VAR[TVNumItemsLabel]</label>
-	            </control>
-	            <control type="image">
-	                <description>Shadow</description>
-	                <posx>50</posx>
-	                <posy>883</posy>
-	                <width>1820</width>
-	                <height>150</height>
-	                <texture>windows/home/item-shadow.png</texture>
-	            </control>
-	            
-	            <include>PVR-LeftPanel</include>
-	            
+					<effect type="slide" start="200" end="0" tween="cubic" easing="out" time="650" />
+					<effect type="fade" start="0" end="100" tween="sine" easing="inout" time="300" />
+					<effect type="zoom" start="90" end="100" center="1027,438" tween="cubic" easing="out" time="400" />
+				</animation>
+				<animation type="WindowClose">
+					<effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
+					<effect type="zoom" start="100" end="85" time="300" center="960,600" tween="sine" easing="out" />
+				</animation>
+				<animation type="Visible">
+					<effect type="slide" start="200" end="0" tween="cubic" easing="out" time="650" />
+					<effect type="fade" start="0" end="100" tween="sine" easing="inout" time="300" />
+					<effect type="zoom" start="90" end="100" center="1027,438" tween="cubic" easing="out" time="400" />
+				</animation>
+				<animation type="Hidden">
+					<effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
+					<effect type="zoom" start="100" end="85" time="300" center="960,600" tween="sine" easing="out" />
+				</animation>
+				<control type="group">
+					<!-- Panel -->
+					<control type="group">
+						<posy>218</posy>
+						<posx>0</posx>
+						<control type="image">
+							<description>Shadow</description>
+							<posx>0</posx>
+							<posy>643</posy>
+							<width>2420</width>
+							<height>150</height>
+							<texture>windows/home/item-shadow.png</texture>
+						</control>
+						<control type="image">
+							<posx>129</posx>
+							<posy>-55</posy>
+							<width>2474</width>
+							<height>751</height>
+							<texture border="35">arctic/common/panel.png</texture>
+						</control>
+						<control type="image">
+							<posx>129</posx>
+							<posy>195</posy>
+							<width>2500</width>
+							<height>501</height>
+							<texture border="25">arctic/common/whitepanel8.png</texture>
+						</control>
+						<control type="image">
+							<posx>1173</posx>
+							<posy>205</posy>
+							<width>737</width>
+							<height>481</height>
+							<texture border="25">arctic/common/whitepanel8.png</texture>
+							<colordiffuse>ff000000</colordiffuse>
+						</control>
+						<control type="label">
+							<posx>1173</posx>
+							<posy>205</posy>
+							<width>737</width>
+							<height>481</height>
+							<font>Font-Alaska-S25-BL</font>
+							<textcolor>mod-infotags-alt</textcolor>
+							<align>center</align>
+							<aligny>center</aligny>
+							<label>41452</label>
+							<visible>!Player.HasVideo</visible>
+						</control>
+						<control type="videowindow">
+							<posx>1173</posx>
+							<posy>205</posy>
+							<width>737</width>
+							<height>481</height>
+							<align>center</align>
+							<visible>Player.HasVideo</visible>
+						</control>
+						<control type="image">
+							<posx>109</posx>
+							<posy>-75</posy>
+							<width>2474</width>
+							<height>791</height>
+							<texture border="50">arctic/common/border-20.png</texture>
+						</control>
+					</control>
+					<control type="group">
+						<posx>155</posx>
+						<posy>158</posy>
+						<control type="image">
+							<posx>20</posx>
+							<posy>22</posy>
+							<width>210</width>
+							<height>210</height>
+							<texture fallback="windows/pvr/defaultchannel.png">$INFO[Container(13).ListItem.Icon]</texture>
+							<aspectratio align="right">keep</aspectratio>
+						</control>
+						<control type="group">
+							<posx>280</posx>
+							<control type="button">
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>1450</width>
+								<height>86</height>
+								<label>$INFO[ListItem.Label]</label>
+								<label2>$INFO[ListItem.StartTime]$INFO[ListItem.EndTime, - ]</label2>
+								<disabledcolor>mod-infotags-alt</disabledcolor>
+								<font>Font-Alaska-S38-BL</font>
+								<align>left</align>
+								<aligny>center</aligny>
+								<enable>false</enable>
+							</control>
+							<control type="label">
+								<posx>0</posx>
+								<posy>70</posy>
+								<width>1450</width>
+								<font>Font-Alaska-S28-L</font>
+								<label>$INFO[Container(13).ListItem.ChannelName]$INFO[Container(13).ListItem.Genre, • ,]</label>
+								<textcolor>mod-infotags-alt</textcolor>
+								<scroll>false</scroll>
+								<align>left</align>
+							</control>
+							<control type="textbox">
+								<description>Plot value</description>
+								<posx>0</posx>
+								<posy>110</posy>
+								<width>1450</width>
+								<height>87</height>
+								<font>Font-Condensed-S33</font>
+								<align>justify</align>
+								<textcolor>mod-infotags-alt</textcolor>
+								<pagecontrol>60</pagecontrol>
+								<autoscroll delay="10000" time="3000" repeat="6000">!Control.HasFocus(60)</autoscroll>
+								<label fallback="161">$INFO[ListItem.Plot]</label>
+							</control>
+							<control type="label">
+								<posx>1450</posx>
+								<posy>204</posy>
+								<width>900</width>
+								<font>Font-Alaska-S25-L</font>
+								<label>$INFO[Container(13).ListItem.Date]</label>
+								<textcolor>mod-infotags-alt</textcolor>
+								<scroll>false</scroll>
+								<align>right</align>
+							</control>
+						</control>
+					</control>
+				</control>    
 	            <control type="list" id="13">
-	                <posx>150</posx>
-	                <posy>218</posy>
-	                <width>1022</width>
-	                <height>675</height>
+	                <posx>140</posx>
+                    <posy>424</posy>
+                    <width>1022</width>
+                    <height>480</height>
 	                <pagecontrol>70</pagecontrol>
 	                <onleft>9001</onleft>
 	                <onright>70</onright>
@@ -2313,13 +2341,12 @@
 	                <viewtype label="535">list</viewtype>
 	                <preloaditems>2</preloaditems>
 	                <scrolltime tween="cubic" easing="out">500</scrolltime>
-	                <itemlayout height="75">
-	             
+	                <itemlayout height="60">
 	                    <control type="image">
 	                        <posx>0</posx>
 	                        <posy>1</posy>
 	                        <width>1022</width>
-	                        <height>74</height>
+	                        <height>60</height>
 	                        <texture>views/other/selected.png</texture>
 	                        <colordiffuse>25FFFFFF</colordiffuse>
 	                        <aspectratio aligny="top">center</aspectratio>
@@ -2330,8 +2357,8 @@
                             <posx>20</posx>
                             <posy>0</posy>
                             <width>940</width>
-                            <height>75</height>
-                            <font>Font-Alaska-S32-BL</font>
+                            <height>60</height>
+                            <font>Font-Condensed-S32-B</font>
                             <align>left</align>
                             <label>$INFO[ListItem.Label]</label>
                             <textcolor>mod-infotags-l</textcolor>
@@ -2343,8 +2370,8 @@
 	                        <posx>960</posx>
 	                        <posy>0</posy>
 	                        <width>940</width>
-	                        <height>75</height>
-	                        <font>Font-Alaska-S29-BL</font>
+	                        <height>60</height>
+	                        <font>Font-Alaska-S28-L</font>
 	                        <align>right</align>
 	                        <label>$INFO[ListItem.Date]</label>
 	                        <textcolor>mod-infotags-l</textcolor>
@@ -2354,19 +2381,19 @@
 	                    <control type="image">
 	                        <description>Watched/unwatched overlay</description>
 	                        <posx>940</posx>
-	                        <posy>-12</posy>
+	                        <posy>-20</posy>
 	                        <width>100</width>
 	                        <height>100</height>
 	                        <texture>$VAR[DefaultListOverlay]</texture>
 	                    </control>
 	                </itemlayout>
-	                <focusedlayout height="75">
+	                <focusedlayout height="60">
 	         
 	                    <control type="image">
 	                        <posx>0</posx>
 	                        <posy>1</posy>
 	                        <width>1022</width>
-	                        <height>74</height>
+	                        <height>60</height>
 	                        <texture>views/other/selected.png</texture>
 	                        <colordiffuse>25FFFFFF</colordiffuse>
 	                        <aspectratio aligny="top">center</aspectratio>
@@ -2376,8 +2403,8 @@
 	                        <posx>0</posx>
 	                        <posy>0</posy>
 	                        <width>1022</width>
-	                        <height>74</height>
-	                        <texture border="5">views/other/focus-mod.png</texture>
+	                        <height>60</height>
+	                        <texture border="15">views/other/focus-mod8.png</texture>
 	                        <animation effect="slide" start="0,75" end="0,0" time="200" reversible="false" tween="cubic" easing="out" condition="Container(13).OnPrevious">focus</animation>
 	                        <animation effect="slide" start="0,-75" end="0,0" time="200" reversible="false" tween="cubic" easing="out" condition="Container(13).OnNext">focus</animation>
 	                        <include>visiblehidefadeinfo</include>
@@ -2387,8 +2414,8 @@
 	                        <posx>20</posx>
 	                        <posy>0</posy>
 	                        <width>940</width>
-	                        <height>75</height>
-	                        <font>Font-Alaska-S32-BL</font>
+	                        <height>60</height>
+	                        <font>Font-Condensed-S32-B</font>
 	                        <align>left</align>
 	                        <label>$INFO[ListItem.Label]</label>
 	                        <textcolor>eewhite</textcolor>
@@ -2404,8 +2431,8 @@
 	                        <posx>960</posx>
 	                        <posy>0</posy>
 	                        <width>940</width>
-	                        <height>75</height>
-	                        <font>Font-Alaska-S29-BL</font>
+	                        <height>60</height>
+	                        <font>Font-Alaska-S28-L</font>
 	                        <align>right</align>
 	                        <label>$INFO[ListItem.Date]</label>
 	                        <textcolor>D4FFFFFF</textcolor>
@@ -2419,7 +2446,7 @@
 	                    <control type="image">
 	                        <description>Watched/unwatched overlay</description>
 	                        <posx>940</posx>
-	                        <posy>-12</posy>
+	                        <posy>-20</posy>
 	                        <width>100</width>
 	                        <height>100</height>
 	                        <texture>$VAR[DefaultListOverlay]</texture>
@@ -2428,14 +2455,7 @@
 	                        </animation>
 	                        <animation effect="fade" start="100" end="64" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(13)">Conditional</animation>
 	                    </control>
-	                    <control type="image">
-	                        <description>Watched/unwatched overlay</description>
-	                        <posx>1042</posx>
-	                        <posy>-13</posy>
-	                        <width>100</width>
-	                        <height>100</height>
-	                        <texture>$VAR[DefaultListOverlay]</texture>
-	                    </control>
+
 	                </focusedlayout>
 	            </control>
 	            <control type="scrollbar" id="70">
@@ -2461,73 +2481,159 @@
 	    <control type="group" id="140">
 	        <include>FullscreenDimensions</include>
 	        <include>OptionsShutdownAnimation</include>
-	        <include>pvr.timer.menu.slide</include>
+	        <include>pvr.menu.slide</include>
 	        <include>listEndAnimation</include>
 	        <control type="group">
 	            <visible>Control.IsVisible(14) + !Window.IsActive(favourites)</visible>
 	            <animation type="WindowOpen">
-	                <effect type="slide" start="200" end="0" tween="cubic" easing="out" time="600" />
-	                <effect type="fade" start="0" end="100" tween="sine" easing="inout" time="300" />
-	                <effect type="zoom" start="90" end="100" center="960,438" tween="cubic" easing="out" time="400" />
-	            </animation>
-	            <animation type="WindowClose">
-	                <effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
-	                <effect type="zoom" start="100" end="85" time="300" center="960,600" tween="sine" easing="out" />
-	            </animation>
-	            <animation type="Visible">
-	                <effect type="slide" start="200" end="0" tween="cubic" easing="out" time="600" />
-	                <effect type="fade" start="0" end="100" tween="sine" easing="inout" time="300" />
-	                <effect type="zoom" start="90" end="100" center="960,438" tween="cubic" easing="out" time="400" />
-	            </animation>
-	            <animation type="Hidden">
-	                <effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
-	                <effect type="zoom" start="100" end="85" time="300" center="960,600" tween="sine" easing="out" />
-	            </animation>
-	            <control type="image">
-					<posx>282</posx>
-					<posy>200</posy>
-					<height>707</height>
-					<width>1358</width>
-					<texture border="25">views/newgloss/border-glass.png</texture>
-					<colordiffuse>77ffffff</colordiffuse>
-					<visible>!Skin.HasSetting(hide.glass)</visible>
+					<effect type="slide" start="200" end="0" tween="cubic" easing="out" time="650" />
+					<effect type="fade" start="0" end="100" tween="sine" easing="inout" time="300" />
+					<effect type="zoom" start="90" end="100" center="1027,438" tween="cubic" easing="out" time="400" />
+				</animation>
+				<animation type="WindowClose">
+					<effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
+					<effect type="zoom" start="100" end="85" time="300" center="960,600" tween="sine" easing="out" />
+				</animation>
+				<animation type="Visible">
+					<effect type="slide" start="200" end="0" tween="cubic" easing="out" time="650" />
+					<effect type="fade" start="0" end="100" tween="sine" easing="inout" time="300" />
+					<effect type="zoom" start="90" end="100" center="1027,438" tween="cubic" easing="out" time="400" />
+				</animation>
+				<animation type="Hidden">
+					<effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
+					<effect type="zoom" start="100" end="85" time="300" center="960,600" tween="sine" easing="out" />
+				</animation>
+				<control type="group">
+					<!-- Panel -->
+					<control type="group">
+						<posy>218</posy>
+						<posx>0</posx>
+						<control type="image">
+							<description>Shadow</description>
+							<posx>0</posx>
+							<posy>643</posy>
+							<width>2420</width>
+							<height>150</height>
+							<texture>windows/home/item-shadow.png</texture>
+						</control>
+						<control type="image">
+							<posx>129</posx>
+							<posy>-55</posy>
+							<width>2474</width>
+							<height>751</height>
+							<texture border="35">arctic/common/panel.png</texture>
+						</control>
+						<control type="image">
+							<posx>129</posx>
+							<posy>195</posy>
+							<width>2500</width>
+							<height>501</height>
+							<texture border="25">arctic/common/whitepanel8.png</texture>
+						</control>
+						<control type="image">
+							<posx>1173</posx>
+							<posy>205</posy>
+							<width>737</width>
+							<height>481</height>
+							<texture border="25">arctic/common/whitepanel8.png</texture>
+							<colordiffuse>ff000000</colordiffuse>
+						</control>
+						<control type="label">
+							<posx>1173</posx>
+							<posy>205</posy>
+							<width>737</width>
+							<height>481</height>
+							<font>Font-Alaska-S25-BL</font>
+							<textcolor>mod-infotags-alt</textcolor>
+							<align>center</align>
+							<aligny>center</aligny>
+							<label>41452</label>
+							<visible>!Player.HasVideo</visible>
+						</control>
+						<control type="videowindow">
+							<posx>1173</posx>
+							<posy>205</posy>
+							<width>737</width>
+							<height>481</height>
+							<align>center</align>
+							<visible>Player.HasVideo</visible>
+						</control>
+						<control type="image">
+							<posx>109</posx>
+							<posy>-75</posy>
+							<width>2474</width>
+							<height>791</height>
+							<texture border="50">arctic/common/border-20.png</texture>
+						</control>
+					</control>
+					<control type="group">
+						<posx>155</posx>
+						<posy>158</posy>
+						<control type="image">
+							<posx>20</posx>
+							<posy>22</posy>
+							<width>210</width>
+							<height>210</height>
+							<texture fallback="windows/pvr/defaultchannel.png">$INFO[Container(14).ListItem.Icon]</texture>
+							<aspectratio align="right">keep</aspectratio>
+						</control>
+						<control type="group">
+							<posx>280</posx>
+							<control type="button">
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>1450</width>
+								<height>86</height>
+								<label>$INFO[ListItem.Label]</label>
+								<label2>$INFO[ListItem.StartTime]$INFO[ListItem.EndTime, - ]</label2>
+								<disabledcolor>mod-infotags-alt</disabledcolor>
+								<font>Font-Alaska-S38-BL</font>
+								<align>left</align>
+								<aligny>center</aligny>
+								<enable>false</enable>
+							</control>
+							<control type="label">
+								<posx>0</posx>
+								<posy>70</posy>
+								<width>1450</width>
+								<font>Font-Alaska-S28-L</font>
+								<label>$INFO[Container(14).ListItem.ChannelName]$INFO[Container(14).ListItem.Genre, • ,]</label>
+								<textcolor>mod-infotags-alt</textcolor>
+								<scroll>false</scroll>
+								<align>left</align>
+							</control>
+							<control type="textbox">
+								<description>Plot value</description>
+								<posx>0</posx>
+								<posy>110</posy>
+								<width>1450</width>
+								<height>87</height>
+								<font>Font-Condensed-S33</font>
+								<align>justify</align>
+								<textcolor>mod-infotags-alt</textcolor>
+								<pagecontrol>60</pagecontrol>
+								<autoscroll delay="10000" time="3000" repeat="6000">!Control.HasFocus(60)</autoscroll>
+								<label fallback="161">$INFO[Container(14).ListItem.Plot]</label>
+							</control>
+							<control type="label">
+								<posx>1450</posx>
+								<posy>204</posy>
+								<width>900</width>
+								<font>Font-Alaska-S25-L</font>
+								<label>$INFO[Container(14).ListItem.Date]</label>
+								<textcolor>mod-infotags-alt</textcolor>
+								<scroll>false</scroll>
+								<align>right</align>
+							</control>
+						</control>
+					</control>
 				</control>
 
-	            <control type="label">
-	            	<posx>318</posx>
-	            	<posy>173</posy>
-	            	<width>200</width>
-	            	<height>30</height>
-	            	<font>Font-Alaska-S29-BL</font>
-	            	<textcolor>Mod_Tags</textcolor>
-	            	<shadowcolor>Mod_Shadow</shadowcolor>
-	            	<align>left</align>
-	            	<aligny>center</aligny>
-	            	<label>$VAR[TVNumItemsLabel]</label>
-	            </control>
-	            <control type="image">
-	                <description>Shadow</description>
-	                <posx>200</posx>
-	                <posy>883</posy>
-	                <width>1520</width>
-	                <height>150</height>
-	                <texture>windows/home/item-shadow.png</texture>
-	            </control>
-	            
-	            <control type="image">
-	                <description>List Panel</description>
-	                <posx>284</posx>
-	                <posy>203</posy>
-	                <width>1353</width>
-	                <height>701</height>
-	                <texture border="35">views/newgloss/whitepanel-15.png</texture>
-	            </control>
-
 	            <control type="list" id="14">
-	                <posx>300</posx>
-	                <posy>218</posy>
-	                <width>1320</width>
-	                <height>675</height>
+	                <posx>140</posx>
+                    <posy>424</posy>
+                    <width>1022</width>
+                    <height>480</height>
 	                <pagecontrol>70</pagecontrol>
 	                <onleft>9001</onleft>
 	                <onright>70</onright>
@@ -2536,15 +2642,15 @@
 	                <viewtype label="535">list</viewtype>
 	                <preloaditems>2</preloaditems>
 	                <scrolltime tween="cubic" easing="out">500</scrolltime>
-	                <itemlayout height="75">
+	                <itemlayout height="60">
 	        
 	                    <control type="label">
 	                        <description>Title</description>
 	                        <posx>285</posx>
 	                        <posy>0</posy>
 	                        <width>265</width>
-	                        <height>74</height>
-	                        <font>Font-Alaska-S29-BL</font>
+	                        <height>60</height>
+	                        <font>Font-Alaska-S28-L</font>
 	                        <align>right</align>
 	                        <label>$INFO[ListItem.Date]</label>
 	                        <textcolor>mod-infotags-l</textcolor>
@@ -2556,8 +2662,8 @@
 	                        <posx>305</posx>
 	                        <posy>0</posy>
 	                        <width>925</width>
-	                        <height>75</height>
-	                        <font>Font-Alaska-S32-BL</font>
+	                        <height>60</height>
+	                        <font>Font-Condensed-S32</font>
 	                        <align>left</align>
 	                        <label>$INFO[ListItem.Label]</label>
 	                        <textcolor>mod-infotags-l</textcolor>
@@ -2570,8 +2676,8 @@
 	                        <posx>1230</posx>
 	                        <posy>0</posy>
 	                        <width>925</width>
-	                        <height>74</height>
-	                        <font>Font-Alaska-S32-BL</font>
+	                        <height>60</height>
+	                        <font>Font-Condensed-S32</font>
 	                        <align>right</align>
 	                        <label>$INFO[ListItem.ChannelName]</label>
 	                        <textcolor>mod-infotags-l</textcolor>
@@ -2582,18 +2688,18 @@
 	                        <posx>1214</posx>
 	                        <posy>0</posy>
 	                        <width>120</width>
-	                        <height>75</height>
+	                        <height>60</height>
 	                        <texture>$VAR[TVTimerRadioButtonTexture]</texture>
 	                    </control>
 	                </itemlayout>
-	                <focusedlayout height="75">
+	                <focusedlayout height="60">
 	         
 	                    <control type="image">
 	                        <posx>0</posx>
 	                        <posy>0</posy>
 	                        <width>1320</width>
-	                        <height>74</height>
-	                        <texture border="5">views/other/focus-mod.png</texture>
+	                        <height>60</height>
+	                        <texture border="15">views/other/focus-mod8.png</texture>
 	                        <animation effect="slide" start="0,75" end="0,0" time="200" reversible="false" tween="cubic" easing="out" condition="Container(14).OnPrevious">focus</animation>
 	                        <animation effect="slide" start="0,-75" end="0,0" time="200" reversible="false" tween="cubic" easing="out" condition="Container(14).OnNext">focus</animation>
 	                        <include>visiblehidefadeinfo</include>
@@ -2608,8 +2714,8 @@
 	                            <posx>285</posx>
 	                            <posy>0</posy>
 	                            <width>265</width>
-	                            <height>74</height>
-	                            <font>Font-Alaska-S29-BL</font>
+	                            <height>60</height>
+	                            <font>Font-Alaska-S28-L</font>
 	                            <align>right</align>
 	                            <label>$INFO[ListItem.Date]</label>
 	                            <textcolor>eewhite</textcolor>
@@ -2621,8 +2727,8 @@
 	                            <posx>305</posx>
 	                            <posy>0</posy>
 	                            <width>925</width>
-	                            <height>75</height>
-	                            <font>Font-Alaska-S32-BL</font>
+	                            <height>60</height>
+	                            <font>Font-Condensed-S32</font>
 	                            <align>left</align>
 	                            <label>$INFO[ListItem.Label]</label>
 	                            <textcolor>eewhite</textcolor>
@@ -2635,8 +2741,8 @@
 	                            <posx>1230</posx>
 	                            <posy>0</posy>
 	                            <width>925</width>
-	                            <height>74</height>
-	                            <font>Font-Alaska-S32-BL</font>
+	                            <height>60</height>
+	                            <font>Font-Condensed-S32</font>
 	                            <align>right</align>
 	                            <label>$INFO[ListItem.ChannelName]</label>
 	                            <textcolor>D4FFFFFF</textcolor>
@@ -2676,73 +2782,158 @@
 	    <control type="group" id="170">
 	        <include>FullscreenDimensions</include>
 	        <include>OptionsShutdownAnimation</include>
-	        <include>pvr.timer.menu.slide</include>
+	        <include>pvr.menu.slide</include>
 	        <include>listEndAnimation</include>
 	        <control type="group">
 	            <visible>Control.IsVisible(17) + !Window.IsActive(favourites)</visible>
 	            <animation type="WindowOpen">
-	                <effect type="slide" start="200" end="0" tween="cubic" easing="out" time="600" />
-	                <effect type="fade" start="0" end="100" tween="sine" easing="inout" time="300" />
-	                <effect type="zoom" start="90" end="100" center="960,438" tween="cubic" easing="out" time="400" />
-	            </animation>
-	            <animation type="WindowClose">
-	                <effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
-	                <effect type="zoom" start="100" end="85" time="300" center="960,600" tween="sine" easing="out" />
-	            </animation>
+					<effect type="slide" start="200" end="0" tween="cubic" easing="out" time="650" />
+					<effect type="fade" start="0" end="100" tween="sine" easing="inout" time="300" />
+					<effect type="zoom" start="90" end="100" center="1027,438" tween="cubic" easing="out" time="400" />
+				</animation>
+				<animation type="WindowClose">
+					<effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
+					<effect type="zoom" start="100" end="85" time="300" center="960,600" tween="sine" easing="out" />
+				</animation>
 				<animation type="Visible">
-	                <effect type="slide" start="200" end="0" tween="cubic" easing="out" time="600" />
-	                <effect type="fade" start="0" end="100" tween="sine" easing="inout" time="300" />
-	                <effect type="zoom" start="90" end="100" center="960,438" tween="cubic" easing="out" time="400" />
-	            </animation>
-	            <animation type="Hidden">
-	                <effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
-	                <effect type="zoom" start="100" end="85" time="300" center="960,600" tween="sine" easing="out" />
-	            </animation>
-	            <control type="image">
-					<posx>282</posx>
-					<posy>200</posy>
-					<height>707</height>
-					<width>1358</width>
-					<texture border="25">views/newgloss/border-glass.png</texture>
-					<colordiffuse>77ffffff</colordiffuse>
-					<visible>!Skin.HasSetting(hide.glass)</visible>
-				</control>
-
-                <control type="label">
-                	<posx>318</posx>
-                	<posy>178</posy>
-                	<width>200</width>
-                	<height>30</height>
-                	<font>Font-Alaska-S29-BL</font>
-                	<textcolor>Mod_Tags</textcolor>
-                	<shadowcolor>Mod_Shadow</shadowcolor>
-                	<align>left</align>
-                	<aligny>center</aligny>
-                	<label>$VAR[TVNumItemsLabel]</label>
-                </control>
-	            <control type="image">
-	                <description>Shadow</description>
-	                <posx>200</posx>
-	                <posy>883</posy>
-	                <width>1520</width>
-	                <height>150</height>
-	                <texture>windows/home/item-shadow.png</texture>
-	            </control>
-	            
-	            <control type="image">
-	                <description>List Panel</description>
-	                <posx>284</posx>
-	                <posy>203</posy>
-	                <width>1353</width>
-	                <height>701</height>
-	                <texture border="35">views/newgloss/whitepanel-15.png</texture>
-	            </control>
-	            
+					<effect type="slide" start="200" end="0" tween="cubic" easing="out" time="650" />
+					<effect type="fade" start="0" end="100" tween="sine" easing="inout" time="300" />
+					<effect type="zoom" start="90" end="100" center="1027,438" tween="cubic" easing="out" time="400" />
+				</animation>
+				<animation type="Hidden">
+					<effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
+					<effect type="zoom" start="100" end="85" time="300" center="960,600" tween="sine" easing="out" />
+				</animation>
+				<control type="group">
+					<!-- Panel -->
+					<control type="group">
+						<posy>218</posy>
+						<posx>0</posx>
+						<control type="image">
+							<description>Shadow</description>
+							<posx>0</posx>
+							<posy>643</posy>
+							<width>2420</width>
+							<height>150</height>
+							<texture>windows/home/item-shadow.png</texture>
+						</control>
+						<control type="image">
+							<posx>129</posx>
+							<posy>-55</posy>
+							<width>2474</width>
+							<height>751</height>
+							<texture border="35">arctic/common/panel.png</texture>
+						</control>
+						<control type="image">
+							<posx>129</posx>
+							<posy>195</posy>
+							<width>2500</width>
+							<height>501</height>
+							<texture border="25">arctic/common/whitepanel8.png</texture>
+						</control>
+						<control type="image">
+							<posx>1173</posx>
+							<posy>205</posy>
+							<width>737</width>
+							<height>481</height>
+							<texture border="25">arctic/common/whitepanel8.png</texture>
+							<colordiffuse>ff000000</colordiffuse>
+						</control>
+						<control type="label">
+							<posx>1173</posx>
+							<posy>205</posy>
+							<width>737</width>
+							<height>481</height>
+							<font>Font-Alaska-S25-BL</font>
+							<textcolor>mod-infotags-alt</textcolor>
+							<align>center</align>
+							<aligny>center</aligny>
+							<label>41452</label>
+							<visible>!Player.HasVideo</visible>
+						</control>
+						<control type="videowindow">
+							<posx>1173</posx>
+							<posy>205</posy>
+							<width>737</width>
+							<height>481</height>
+							<align>center</align>
+							<visible>Player.HasVideo</visible>
+						</control>
+						<control type="image">
+							<posx>109</posx>
+							<posy>-75</posy>
+							<width>2474</width>
+							<height>791</height>
+							<texture border="50">arctic/common/border-20.png</texture>
+						</control>
+					</control>
+					<control type="group">
+						<posx>155</posx>
+						<posy>158</posy>
+						<control type="image">
+							<posx>20</posx>
+							<posy>22</posy>
+							<width>210</width>
+							<height>210</height>
+							<texture fallback="windows/pvr/defaultchannel.png">$INFO[Container(17).ListItem.Icon]</texture>
+							<aspectratio align="right">keep</aspectratio>
+						</control>
+						<control type="group">
+							<posx>280</posx>
+							<control type="button">
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>1450</width>
+								<height>86</height>
+								<label>$INFO[ListItem.Label]</label>
+								<label2>$INFO[ListItem.StartTime]$INFO[ListItem.EndTime, - ]</label2>
+								<disabledcolor>mod-infotags-alt</disabledcolor>
+								<font>Font-Alaska-S38-BL</font>
+								<align>left</align>
+								<aligny>center</aligny>
+								<enable>false</enable>
+							</control>
+							<control type="label">
+								<posx>0</posx>
+								<posy>70</posy>
+								<width>1450</width>
+								<font>Font-Alaska-S28-L</font>
+								<label>$INFO[Container(17).ListItem.ChannelName]$INFO[Container(17).ListItem.Genre, • ,]</label>
+								<textcolor>mod-infotags-alt</textcolor>
+								<scroll>false</scroll>
+								<align>left</align>
+							</control>
+							<control type="textbox">
+								<description>Plot value</description>
+								<posx>0</posx>
+								<posy>110</posy>
+								<width>1450</width>
+								<height>87</height>
+								<font>Font-Condensed-S33</font>
+								<align>justify</align>
+								<textcolor>mod-infotags-alt</textcolor>
+								<pagecontrol>60</pagecontrol>
+								<autoscroll delay="10000" time="3000" repeat="6000">!Control.HasFocus(60)</autoscroll>
+								<label fallback="161">$INFO[ListItem.Plot]</label>
+							</control>
+							<control type="label">
+								<posx>1450</posx>
+								<posy>204</posy>
+								<width>900</width>
+								<font>Font-Alaska-S25-L</font>
+								<label>$INFO[Container(17).ListItem.Date]</label>
+								<textcolor>mod-infotags-alt</textcolor>
+								<scroll>false</scroll>
+								<align>right</align>
+							</control>
+						</control>
+					</control>
+				</control>   
 	            <control type="list" id="17">
-	                <posx>300</posx>
-	                <posy>218</posy>
-	                <width>1320</width>
-	                <height>675</height>
+	                <posx>140</posx>
+                    <posy>424</posy>
+                    <width>1022</width>
+                    <height>480</height>
 	                <pagecontrol>70</pagecontrol>
 	                <onleft>9001</onleft>
 	                <onright>70</onright>
@@ -2751,15 +2942,15 @@
 	                <viewtype label="535">list</viewtype>
 	                <preloaditems>2</preloaditems>
 	                <scrolltime tween="cubic" easing="out">500</scrolltime>
-	                <itemlayout height="75">
+	                <itemlayout height="60">
 	           
 	                    <control type="label">
 	                        <description>Title</description>
 	                        <posx>285</posx>
 	                        <posy>0</posy>
 	                        <width>265</width>
-	                        <height>74</height>
-	                        <font>Font-Alaska-S29-BL</font>
+	                        <height>60</height>
+	                        <font>Font-Alaska-S28-L</font>
 	                        <align>right</align>
 	                        <label>$INFO[ListItem.Date]</label>
 	                        <textcolor>mod-infotags-l</textcolor>
@@ -2771,8 +2962,8 @@
 	                        <posx>305</posx>
 	                        <posy>0</posy>
 	                        <width>995</width>
-	                        <height>75</height>
-	                        <font>Font-Alaska-S32-BL</font>
+	                        <height>60</height>
+	                        <font>Font-Condensed-S32</font>
 	                        <align>left</align>
 	                        <label>$INFO[ListItem.Label]</label>
 	                        <textcolor>mod-infotags-l</textcolor>
@@ -2785,8 +2976,8 @@
 	                        <posx>1300</posx>
 	                        <posy>0</posy>
 	                        <width>995</width>
-	                        <height>74</height>
-	                        <font>Font-Alaska-S32-BL</font>
+	                        <height>60</height>
+	                        <font>Font-Condensed-S32</font>
 	                        <align>right</align>
 	                        <label>$INFO[ListItem.ChannelName]</label>
 	                        <textcolor>mod-infotags-l</textcolor>
@@ -2799,8 +2990,8 @@
 	                        <posx>1254</posx>
 	                        <posy>0</posy>
 	                        <width>939</width>
-	                        <height>74</height>
-	                        <font>Font-Alaska-S32-BL</font>
+	                        <height>60</height>
+	                        <font>Font-Condensed-S32</font>
 	                        <align>right</align>
 	                        <label>$INFO[ListItem.ChannelName]</label>
 	                        <textcolor>mod-infotags-l</textcolor>
@@ -2812,14 +3003,14 @@
 	                        <visible>ListItem.IsRecording</visible>
 	                        <control type="image">
 	                        	<posx>1254</posx>
-	                        	<posy>-3</posy>
+	                        	<posy>-6</posy>
 	                        	<width>66</width>
 	                        	<height>80</height>
 	                        	<texture>windows/pvr/epg-recording.png</texture>
 	                        </control>
 	                        <control type="image">
 	                        	<posx>1254</posx>
-	                        	<posy>-3</posy>
+	                        	<posy>-6</posy>
 	                        	<width>66</width>
 	                        	<height>80</height>
 	                        	<texture>windows/pvr/epg-recording-pulse.png</texture>
@@ -2828,7 +3019,7 @@
 	                    </control>
 	                    <control type="image">
 	                    	<posx>1254</posx>
-	                    	<posy>-3</posy>
+	                    	<posy>-6</posy>
 	                    	<width>66</width>
 	                    	<height>80</height>
 	                    	<texture>windows/pvr/epg-timer.png</texture>
@@ -2843,13 +3034,13 @@
 						    <visible>ListItem.IsSelected | ListItem.IsPlaying</visible>
 						</control>
 	                </itemlayout>
-	                <focusedlayout height="75">
+	                <focusedlayout height="60">
 	          
 	                    <control type="image">
 	                        <posx>0</posx>
 	                        <posy>0</posy>
 	                        <width>1320</width>
-	                        <height>74</height>
+	                        <height>60</height>
 	                        <texture border="5">views/other/focus-mod.png</texture>
 	                        <animation effect="slide" start="0,75" end="0,0" time="200" reversible="false" tween="cubic" easing="out" condition="Container(17).OnPrevious">focus</animation>
 	                        <animation effect="slide" start="0,-75" end="0,0" time="200" reversible="false" tween="cubic" easing="out" condition="Container(17).OnNext">focus</animation>
@@ -2865,8 +3056,8 @@
 	                            <posx>285</posx>
 	                            <posy>0</posy>
 	                            <width>265</width>
-	                            <height>74</height>
-	                            <font>Font-Alaska-S29-BL</font>
+	                            <height>60</height>
+	                            <font>Font-Alaska-S28-L</font>
 	                            <align>right</align>
 	                            <label>$INFO[ListItem.Date]</label>
 	                            <textcolor>eewhite</textcolor>
@@ -2878,8 +3069,8 @@
 	                            <posx>305</posx>
 	                            <posy>0</posy>
 	                            <width>995</width>
-	                            <height>75</height>
-	                            <font>Font-Alaska-S32-BL</font>
+	                            <height>60</height>
+	                            <font>Font-Condensed-S32</font>
 	                            <align>left</align>
 	                            <label>$INFO[ListItem.Label]</label>
 	                            <textcolor>eewhite</textcolor>
@@ -2892,8 +3083,8 @@
 	                            <posx>1300</posx>
 	                            <posy>0</posy>
 	                            <width>995</width>
-	                            <height>74</height>
-	                            <font>Font-Alaska-S32-BL</font>
+	                            <height>60</height>
+	                            <font>Font-Condensed-S32</font>
 	                            <align>right</align>
 	                            <label>$INFO[ListItem.ChannelName]</label>
 	                            <textcolor>D4FFFFFF</textcolor>
@@ -2906,8 +3097,8 @@
 	                            <posx>1254</posx>
 	                            <posy>0</posy>
 	                            <width>939</width>
-	                            <height>74</height>
-	                            <font>Font-Alaska-S32-BL</font>
+	                            <height>60</height>
+	                            <font>Font-Condensed-S32</font>
 	                            <align>right</align>
 	                            <label>$INFO[ListItem.ChannelName]</label>
 	                            <textcolor>D4FFFFFF</textcolor>
@@ -2920,14 +3111,14 @@
 	                        <visible>ListItem.IsRecording</visible>
 	                        <control type="image">
 	                        	<posx>1254</posx>
-	                        	<posy>-3</posy>
+	                        	<posy>-6</posy>
 	                        	<width>66</width>
 	                        	<height>80</height>
 	                        	<texture>windows/pvr/epg-recording.png</texture>
 	                        </control>
 	                        <control type="image">
 	                        	<posx>1254</posx>
-	                        	<posy>-3</posy>
+	                        	<posy>-6</posy>
 	                        	<width>66</width>
 	                        	<height>80</height>
 	                        	<texture>windows/pvr/epg-recording-pulse.png</texture>
@@ -2936,7 +3127,7 @@
 	                    </control>
 	                    <control type="image">
 	                    	<posx>1254</posx>
-	                    	<posy>-3</posy>
+	                    	<posy>-6</posy>
 	                    	<width>66</width>
 	                    	<height>80</height>
 	                    	<texture>windows/pvr/epg-timer.png</texture>

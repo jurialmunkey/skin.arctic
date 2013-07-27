@@ -38,6 +38,7 @@
 	<include file="Viewtypes_MusicBanner.xml" />
 	<include file="Viewtypes_MusicShortList.xml" />
 	<include file="Viewtypes_MusicSongInfo.xml" />
+	<include file="Viewtypes_MusicInfoList.xml" />
 	
     <include name="VideoViews">
         <include>Viewtype-List</include>                <!--id(50)  -->
@@ -71,6 +72,7 @@
         <include>Viewtype-MusicBigList</include>		<!-- (58) -->
         <include>Viewtype-SongInfo</include>			<!-- (59) -->
         <include>Viewtype-CoverList</include>			<!-- (60) -->
+        <include>Viewtype-MusicInfoList</include>		<!-- (61) -->
     </include>
     
     <include name="MusicFileViews">

@@ -403,6 +403,30 @@
                         <radioposx>-19</radioposx>
                         <visible>Control.IsVisible(509) + Container.Content(seasons)</visible>
                     </control>
+                    <!-- Medium List Big Poster -->
+                    <control type="radiobutton" id="128">
+                        <include>optionsbuttonsdimensions</include>
+                        <selected>Skin.HasSetting(mediumlist.bigcover)</selected>
+                        <onclick>Skin.ToggleSetting(mediumlist.bigcover)</onclick>
+                        <label>Use small cover</label>
+                        <texturefocus>dialogs/options/buttons/default-fo.png</texturefocus>
+                        <textureradiofocus>buttons/radio/options-radio-button-fo.png</textureradiofocus>
+                        <textureradionofocus>buttons/radio/options-radio-button-nf.png</textureradionofocus>
+                        <radioposx>-19</radioposx>
+                        <visible>Control.IsVisible(517)</visible>
+                    </control>
+                    <!-- Medium List Big Poster -->
+                    <control type="radiobutton" id="129">
+                        <include>optionsbuttonsdimensions</include>
+                        <selected>Skin.HasSetting(panellist.showplot)</selected>
+                        <onclick>Skin.ToggleSetting(panellist.showplot)</onclick>
+                        <label>Show plot</label>
+                        <texturefocus>dialogs/options/buttons/default-fo.png</texturefocus>
+                        <textureradiofocus>buttons/radio/options-radio-button-fo.png</textureradiofocus>
+                        <textureradionofocus>buttons/radio/options-radio-button-nf.png</textureradionofocus>
+                        <radioposx>-19</radioposx>
+                        <visible>Control.IsVisible(51)</visible>
+                    </control>
                     
                     <!-- GLOBAL OPTIONS -->
                     <!-- Extrafanart -->

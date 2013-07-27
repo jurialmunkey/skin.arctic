@@ -13,3 +13,11 @@ Added themes for faded covers
 Fixed poster info discart alignment issue for sets
 Fixed info tags for movie sets
 Fixed overlay for Views > Settings: Video Information
+Re-added EPG Colors
+Added option for long or short videoosd top bar
+Fixed episode info play button not showing
+
+[B]0.2.3[/B]
+Big update to PVR section
+Added "panel list" view type (replaces info list)
+Modified "big list" to be more minimal (removed panel behind)

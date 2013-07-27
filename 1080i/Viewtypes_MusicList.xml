@@ -7,13 +7,6 @@
             <visible>Control.IsVisible(50) + !Window.IsActive(musicinformation) + !Window.IsActive(addoninformation)</visible>
             <include>CommonViewAnimations</include>
             <include>OptionsShutdownAnimation</include>
-            <control type="image">
-                <posx>234</posx>
-                <posy>175</posy>
-                <height>729</height>
-                <width>1452</width>
-                <texture border="35">views/newgloss/whitepanel-15.png</texture>
-            </control>
             <control type="list" id="50">
                 <posx>250</posx>
                 <posy>190</posy>
@@ -64,8 +57,8 @@
                         <font>Font-Condensed-S34-B</font>
                         <align>left</align>
                         <label>$VAR[MusicListLabel]</label>
-                        <textcolor>mod-infotags</textcolor>
-                        <selectedcolor>mod-infotags</selectedcolor>
+                        <textcolor>Mod_Tags</textcolor>
+                        <selectedcolor>Mod_Tags</selectedcolor>
                         <scroll>false</scroll>
                         <visible>!IsEmpty(ListItem.Artist)</visible>
                     </control>
@@ -78,8 +71,8 @@
                         <font>Font-Condensed-S34-B</font>
                         <align>left</align>
                         <label>$VAR[MusicListLabel]</label>
-                        <textcolor>mod-infotags</textcolor>
-                        <selectedcolor>mod-infotags</selectedcolor>
+                        <textcolor>Mod_Tags</textcolor>
+                        <selectedcolor>Mod_Tags</selectedcolor>
                         <scroll>false</scroll>
                         <visible>IsEmpty(ListItem.Artist)</visible>
                     </control>
@@ -92,8 +85,8 @@
                         <font>Font-Condensed-S28</font>
                         <align>left</align>
                         <label>$INFO[ListItem.Artist]</label>
-                        <textcolor>mod-infotags-l</textcolor>
-                        <selectedcolor>mod-infotags-l</selectedcolor>
+                        <textcolor>Mod_Tags_Light</textcolor>
+                        <selectedcolor>Mod_Tags_Light</selectedcolor>
                         <scroll>false</scroll>
                         <visible>!IsEmpty(ListItem.Artist)</visible>
                     </control>
@@ -106,8 +99,8 @@
                         <font>Font-Condensed-S34-B</font>
                         <align>right</align>
                         <label>$INFO[ListItem.Label2]</label>
-                        <textcolor>mod-infotags-l</textcolor>
-                        <selectedcolor>mod-infotags-l</selectedcolor>
+                        <textcolor>Mod_Tags_Light</textcolor>
+                        <selectedcolor>Mod_Tags_Light</selectedcolor>
                         <scroll>false</scroll>
                     </control>
                 </itemlayout>
@@ -129,7 +122,7 @@
                         <font>Font-Condensed-S34-B</font>
                         <align>left</align>
                         <label>$INFO[ListItem.Label]</label>
-                        <textcolor>mod-infotags</textcolor>
+                        <textcolor>Mod_Tags</textcolor>
                         <scroll>false</scroll>
                         <visible>!IsEmpty(ListItem.Property(Artist_Genre))</visible>
                     </control>
@@ -142,7 +135,7 @@
                         <font>Font-Condensed-S34-B</font>
                         <align>left</align>
                         <label>$INFO[ListItem.Label]</label>
-                        <textcolor>mod-infotags</textcolor>
+                        <textcolor>Mod_Tags</textcolor>
                         <scroll>false</scroll>
                         <visible>IsEmpty(ListItem.Property(Artist_Genre))</visible>
                     </control>
@@ -155,8 +148,8 @@
                         <font>Font-Condensed-S28</font>
                         <align>left</align>
                         <label>$INFO[ListItem.Property(Artist_Genre)]</label>
-                        <textcolor>mod-infotags-l</textcolor>
-                        <selectedcolor>mod-infotags-l</selectedcolor>
+                        <textcolor>Mod_Tags_Light</textcolor>
+                        <selectedcolor>Mod_Tags_Light</selectedcolor>
                         <scroll>false</scroll>
                         <visible>!IsEmpty(ListItem.Property(Artist_Genre))</visible>
                     </control>
@@ -179,7 +172,7 @@
                         <font>Font-Condensed-S34-B</font>
                         <align>left</align>
                         <label>$INFO[ListItem.Label]</label>
-                        <textcolor>mod-infotags</textcolor>
+                        <textcolor>Mod_Tags</textcolor>
                         <scroll>false</scroll>
                         <visible>!IsEmpty(ListItem.Artist)</visible>
                     </control>
@@ -192,7 +185,7 @@
                         <font>Font-Condensed-S34-B</font>
                         <align>left</align>
                         <label>$INFO[ListItem.Label]</label>
-                        <textcolor>mod-infotags</textcolor>
+                        <textcolor>Mod_Tags</textcolor>
                         <scroll>false</scroll>
                         <visible>IsEmpty(ListItem.Artist)</visible>
                     </control>
@@ -205,8 +198,8 @@
                         <font>Font-Condensed-S28</font>
                         <align>left</align>
                         <label>$INFO[ListItem.Artist]</label>
-                        <textcolor>mod-infotags-l</textcolor>
-                        <selectedcolor>mod-infotags-l</selectedcolor>
+                        <textcolor>Mod_Tags_Light</textcolor>
+                        <selectedcolor>Mod_Tags_Light</selectedcolor>
                         <scroll>false</scroll>
                         <visible>!IsEmpty(ListItem.Artist)</visible>
                     </control>
@@ -218,8 +211,8 @@
                         <font>Font-Condensed-S34-B</font>
                         <align>right</align>
                         <label>$INFO[ListItem.Year]</label>
-                        <textcolor>mod-infotags-l</textcolor>
-                        <selectedcolor>mod-infotags-l</selectedcolor>
+                        <textcolor>Mod_Tags_Light</textcolor>
+                        <selectedcolor>Mod_Tags_Light</selectedcolor>
                         <scroll>false</scroll>
                         <visible>!IsEmpty(ListItem.Year)</visible>
                     </control>
@@ -238,9 +231,9 @@
                         <height>100</height>
                         <font>Font-Condensed-S34-B</font>
                         <align>right</align>
-                        <label fallback="[COLOR=mod-infotags-l]0.0[/COLOR]">$INFO[ListItem.Rating,,.0]</label>
-                        <textcolor>mod-infotags-l</textcolor>
-                        <selectedcolor>mod-infotags-l</selectedcolor>
+                        <label fallback="[COLOR=Mod_Tags_Light]0.0[/COLOR]">$INFO[ListItem.Rating,,.0]</label>
+                        <textcolor>Mod_Tags_Light</textcolor>
+                        <selectedcolor>Mod_Tags_Light</selectedcolor>
                         <scroll>false</scroll>
                         <visible>!IsEmpty(ListItem.Album)</visible>
                     </control>
@@ -274,8 +267,8 @@
                         <font>Font-Condensed-S34-B</font>
                         <align>left</align>
                         <label>$VAR[MusicListSongLabel]</label>
-                        <textcolor>mod-infotags</textcolor>
-                        <selectedcolor>mod-infotags</selectedcolor>
+                        <textcolor>Mod_Tags</textcolor>
+                        <selectedcolor>Mod_Tags</selectedcolor>
                         <scroll>false</scroll>
                         <visible>!IsEmpty(ListItem.Artist)</visible>
                     </control>
@@ -288,8 +281,8 @@
                         <font>Font-Condensed-S34-B</font>
                         <align>left</align>
                         <label>$VAR[MusicListSongLabel]</label>
-                        <textcolor>mod-infotags</textcolor>
-                        <selectedcolor>mod-infotags</selectedcolor>
+                        <textcolor>Mod_Tags</textcolor>
+                        <selectedcolor>Mod_Tags</selectedcolor>
                         <scroll>false</scroll>
                         <visible>IsEmpty(ListItem.Artist)</visible>
                     </control>
@@ -302,8 +295,8 @@
                         <font>Font-Condensed-S28</font>
                         <align>left</align>
                         <label>$INFO[ListItem.Artist]</label>
-                        <textcolor>mod-infotags-l</textcolor>
-                        <selectedcolor>mod-infotags-l</selectedcolor>
+                        <textcolor>Mod_Tags_Light</textcolor>
+                        <selectedcolor>Mod_Tags_Light</selectedcolor>
                         <scroll>false</scroll>
                         <visible>!IsEmpty(ListItem.Artist)</visible>
                     </control>
@@ -324,8 +317,8 @@
                             <height>42</height>
                             <label>$INFO[ListItem.PlayCount]</label>
                             <font>Font-Condensed-S30-B</font>
-                            <textcolor>mod-infotags-l</textcolor>
-                            <selectedcolor>mod-infotags-l</selectedcolor>
+                            <textcolor>Mod_Tags_Light</textcolor>
+                            <selectedcolor>Mod_Tags_Light</selectedcolor>
                             <scroll>no</scroll>
                             <align>center</align>
                         </control>
@@ -338,8 +331,8 @@
                         <font>Font-Condensed-S34-B</font>
                         <align>right</align>
                         <label>$VAR[MusicListSongLabel2]</label>
-                        <textcolor>mod-infotags-l</textcolor>
-                        <selectedcolor>mod-infotags-l</selectedcolor>
+                        <textcolor>Mod_Tags_Light</textcolor>
+                        <selectedcolor>Mod_Tags_Light</selectedcolor>
                         <scroll>false</scroll>
                         <visible>!stringcompare(Container.FolderPath,musicdb://5/1/)</visible>
                     </control>
@@ -358,9 +351,9 @@
                         <height>100</height>
                         <font>Font-Condensed-S34-B</font>
                         <align>right</align>
-                        <label fallback="[COLOR=mod-infotags-l]0.0[/COLOR]">$INFO[ListItem.Rating,,.0]</label>
-                        <textcolor>mod-infotags-l</textcolor>
-                        <selectedcolor>mod-infotags-l</selectedcolor>
+                        <label fallback="[COLOR=Mod_Tags_Light]0.0[/COLOR]">$INFO[ListItem.Rating,,.0]</label>
+                        <textcolor>Mod_Tags_Light</textcolor>
+                        <selectedcolor>Mod_Tags_Light</selectedcolor>
                         <scroll>false</scroll>
                         <visible>!IsEmpty(ListItem.Title)</visible>
                     </control>
@@ -372,10 +365,21 @@
                         <posy>0</posy>
                         <width>1420</width>
                         <height>99</height>
-                        <texture border="5">views/other/focus-mod.png</texture>
+                        <texture border="25">arctic/common/whitepanel8.png</texture>
+                        <include>defaultfocusanim</include>
+                        <include>visiblehidefadeinfo</include>
+                        <colordiffuse>Mod_Tags_Dark</colordiffuse>
+                    </control>
+                    <control type="image">
+                        <posx>-10</posx>
+                        <posy>-10</posy>
+                        <width>1440</width>
+                        <height>119</height>
+                        <texture border="25">arctic/common/border.png</texture>
                         <include>defaultfocusanim</include>
                         <include>visiblehidefadeinfo</include>
                     </control>
+                    
                     <control type="image">
                         <posx>0</posx>
                         <posy>1</posy>
@@ -417,8 +421,8 @@
                             <font>Font-Condensed-S34-B</font>
                             <align>left</align>
                             <label>$VAR[MusicListLabel]</label>
-                            <textcolor>eewhite</textcolor>
-                            <selectedcolor>eewhite</selectedcolor>
+                            <textcolor>Mod_Tags_Alt</textcolor>
+                            <selectedcolor>Mod_Tags_Alt</selectedcolor>
                             <scroll>false</scroll>
                             <visible>!IsEmpty(ListItem.Artist)</visible>
                         </control>
@@ -431,7 +435,7 @@
                             <font>Font-Condensed-S34-B</font>
                             <align>left</align>
                             <label>$VAR[MusicListLabel]</label>
-                            <textcolor>eewhite</textcolor>
+                            <textcolor>Mod_Tags_Alt</textcolor>
                             <selectedcolor>SelectedGreen</selectedcolor>
                             <scroll>false</scroll>
                             <visible>IsEmpty(ListItem.Artist)</visible>
@@ -445,8 +449,8 @@
                             <font>Font-Condensed-S28</font>
                             <align>left</align>
                             <label>$INFO[ListItem.Artist]</label>
-                            <textcolor>D4FFFFFF</textcolor>
-                            <selectedcolor>D4FFFFFF</selectedcolor>
+                            <textcolor>Mod_Tags_Alt2</textcolor>
+                            <selectedcolor>Mod_Tags_Alt2</selectedcolor>
                             <scroll>false</scroll>
                             <visible>!IsEmpty(ListItem.Artist)</visible>
                         </control>
@@ -459,8 +463,8 @@
                             <font>Font-Condensed-S34-B</font>
                             <align>right</align>
                             <label>$INFO[ListItem.Label2]</label>
-                            <textcolor>D4FFFFFF</textcolor>
-                            <selectedcolor>D4FFFFFF</selectedcolor>
+                            <textcolor>Mod_Tags_Alt2</textcolor>
+                            <selectedcolor>Mod_Tags_Alt2</selectedcolor>
                             <scroll>false</scroll>
                         </control>
                     </control>
@@ -471,7 +475,17 @@
                         <posy>0</posy>
                         <width>1420</width>
                         <height>99</height>
-                        <texture border="5">views/other/focus-mod.png</texture>
+                        <texture border="25">arctic/common/whitepanel8.png</texture>
+                        <include>defaultfocusanim</include>
+                        <include>visiblehidefadeinfo</include>
+                        <colordiffuse>Mod_Tags_Dark</colordiffuse>
+                    </control>
+                    <control type="image">
+                        <posx>-10</posx>
+                        <posy>-10</posy>
+                        <width>1440</width>
+                        <height>119</height>
+                        <texture border="25">arctic/common/border.png</texture>
                         <include>defaultfocusanim</include>
                         <include>visiblehidefadeinfo</include>
                     </control>
@@ -497,7 +511,7 @@
                             <font>Font-Condensed-S34-B</font>
                             <align>left</align>
                             <label>$VAR[MusicListLabel]</label>
-                            <textcolor>eewhite</textcolor>
+                            <textcolor>Mod_Tags_Alt</textcolor>
                             <scroll>false</scroll>
                             <visible>!IsEmpty(ListItem.Property(Artist_Genre))</visible>
                         </control>
@@ -510,7 +524,7 @@
                             <font>Font-Condensed-S34-B</font>
                             <align>left</align>
                             <label>$VAR[MusicListLabel]</label>
-                            <textcolor>eewhite</textcolor>
+                            <textcolor>Mod_Tags_Alt</textcolor>
                             <scroll>false</scroll>
                             <visible>IsEmpty(ListItem.Property(Artist_Genre))</visible>
                         </control>
@@ -523,8 +537,8 @@
                             <font>Font-Condensed-S28</font>
                             <align>left</align>
                             <label>$INFO[ListItem.Property(Artist_Genre)]</label>
-                            <textcolor>D4FFFFFF</textcolor>
-                            <selectedcolor>D4FFFFFF</selectedcolor>
+                            <textcolor>Mod_Tags_Alt2</textcolor>
+                            <selectedcolor>Mod_Tags_Alt2</selectedcolor>
                             <scroll>false</scroll>
                             <visible>!IsEmpty(ListItem.Property(Artist_Genre))</visible>
                         </control>
@@ -536,7 +550,17 @@
                         <posy>0</posy>
                         <width>1420</width>
                         <height>99</height>
-                        <texture border="5">views/other/focus-mod.png</texture>
+                        <texture border="25">arctic/common/whitepanel8.png</texture>
+                        <include>defaultfocusanim</include>
+                        <include>visiblehidefadeinfo</include>
+                        <colordiffuse>Mod_Tags_Dark</colordiffuse>
+                    </control>
+                    <control type="image">
+                        <posx>-10</posx>
+                        <posy>-10</posy>
+                        <width>1440</width>
+                        <height>119</height>
+                        <texture border="25">arctic/common/border.png</texture>
                         <include>defaultfocusanim</include>
                         <include>visiblehidefadeinfo</include>
                     </control>
@@ -562,7 +586,7 @@
                             <font>Font-Condensed-S34-B</font>
                             <align>left</align>
                             <label>$INFO[ListItem.Label]</label>
-                            <textcolor>eewhite</textcolor>
+                            <textcolor>Mod_Tags_Alt</textcolor>
                             <scroll>false</scroll>
                             <visible>!IsEmpty(ListItem.Artist)</visible>
                         </control>
@@ -575,7 +599,7 @@
                             <font>Font-Condensed-S34-B</font>
                             <align>left</align>
                             <label>$INFO[ListItem.Label]</label>
-                            <textcolor>eewhite</textcolor>
+                            <textcolor>Mod_Tags_Alt</textcolor>
                             <scroll>false</scroll>
                             <visible>IsEmpty(ListItem.Artist)</visible>
                         </control>
@@ -588,8 +612,8 @@
                             <font>Font-Condensed-S28</font>
                             <align>left</align>
                             <label>$INFO[ListItem.Artist]</label>
-                            <textcolor>D4FFFFFF</textcolor>
-                            <selectedcolor>D4FFFFFF</selectedcolor>
+                            <textcolor>Mod_Tags_Alt2</textcolor>
+                            <selectedcolor>Mod_Tags_Alt2</selectedcolor>
                             <scroll>false</scroll>
                             <visible>!IsEmpty(ListItem.Artist)</visible>
                         </control>
@@ -601,8 +625,8 @@
                             <font>Font-Condensed-S34-B</font>
                             <align>right</align>
                             <label>$INFO[ListItem.Year]</label>
-                            <textcolor>D4FFFFFF</textcolor>
-                            <selectedcolor>D4FFFFFF</selectedcolor>
+                            <textcolor>Mod_Tags_Alt2</textcolor>
+                            <selectedcolor>Mod_Tags_Alt2</selectedcolor>
                             <scroll>false</scroll>
                             <visible>!IsEmpty(ListItem.Year)</visible>
                         </control>
@@ -622,9 +646,9 @@
                             <height>100</height>
                             <font>Font-Condensed-S34-B</font>
                             <align>right</align>
-                            <label fallback="[COLOR=D4FFFFFF]0.0[/COLOR]">$INFO[ListItem.Rating,,.0]</label>
-                            <textcolor>D4FFFFFF</textcolor>
-                            <selectedcolor>D4FFFFFF</selectedcolor>
+                            <label fallback="[COLOR=Mod_Tags_Alt2]0.0[/COLOR]">$INFO[ListItem.Rating,,.0]</label>
+                            <textcolor>Mod_Tags_Alt2</textcolor>
+                            <selectedcolor>Mod_Tags_Alt2</selectedcolor>
                             <scroll>false</scroll>
                             <visible>!IsEmpty(ListItem.Album)</visible>
                         </control>
@@ -636,7 +660,17 @@
                         <posy>0</posy>
                         <width>1420</width>
                         <height>99</height>
-                        <texture border="5">views/other/focus-mod.png</texture>
+                        <texture border="25">arctic/common/whitepanel8.png</texture>
+                        <include>defaultfocusanim</include>
+                        <include>visiblehidefadeinfo</include>
+                        <colordiffuse>Mod_Tags_Dark</colordiffuse>
+                    </control>
+                    <control type="image">
+                        <posx>-10</posx>
+                        <posy>-10</posy>
+                        <width>1440</width>
+                        <height>119</height>
+                        <texture border="25">arctic/common/border.png</texture>
                         <include>defaultfocusanim</include>
                         <include>visiblehidefadeinfo</include>
                     </control>
@@ -677,8 +711,8 @@
                                 <font>Font-Condensed-S34-B</font>
                                 <align>left</align>
                                 <label>$VAR[MusicListSongLabel]</label>
-                                <textcolor>eewhite</textcolor>
-                                <selectedcolor>eewhite</selectedcolor>
+                                <textcolor>Mod_Tags_Alt</textcolor>
+                                <selectedcolor>Mod_Tags_Alt</selectedcolor>
                                 <scroll>false</scroll>
                                 <visible>!IsEmpty(ListItem.Artist)</visible>
                             </control>
@@ -691,8 +725,8 @@
                                 <font>Font-Condensed-S34-B</font>
                                 <align>left</align>
                                 <label>$VAR[MusicListSongLabel]</label>
-                                <textcolor>eewhite</textcolor>
-                                <selectedcolor>eewhite</selectedcolor>
+                                <textcolor>Mod_Tags_Alt</textcolor>
+                                <selectedcolor>Mod_Tags_Alt</selectedcolor>
                                 <scroll>false</scroll>
                                 <visible>IsEmpty(ListItem.Artist)</visible>
                             </control>
@@ -705,8 +739,8 @@
                                 <font>Font-Condensed-S28</font>
                                 <align>left</align>
                                 <label>$INFO[ListItem.Artist]</label>
-                                <textcolor>D4FFFFFF</textcolor>
-                                <selectedcolor>D4FFFFFF</selectedcolor>
+                                <textcolor>Mod_Tags_Alt2</textcolor>
+                                <selectedcolor>Mod_Tags_Alt2</selectedcolor>
                                 <scroll>false</scroll>
                                 <visible>!IsEmpty(ListItem.Artist)</visible>
                             </control>
@@ -718,7 +752,7 @@
                                     <width>64</width>
                                     <height>41</height>
                                     <texture>views/list/other/unwatched.png</texture>
-                                    <colordiffuse>D4FFFFFF</colordiffuse>
+                                    <colordiffuse>Mod_Tags_Alt2</colordiffuse>
                                 </control>
                                 <control type="label">
                                     <posx>1244</posx>
@@ -727,7 +761,7 @@
                                     <height>42</height>
                                     <label>$INFO[ListItem.PlayCount]</label>
                                     <font>Font-Condensed-S30-B</font>
-                                    <textcolor>D4FFFFFF</textcolor>
+                                    <textcolor>Mod_Tags_Alt2</textcolor>
                                     <scroll>no</scroll>
                                     <align>center</align>
                                 </control>
@@ -740,8 +774,8 @@
                                 <font>Font-Condensed-S34-B</font>
                                 <align>right</align>
                                 <label>$VAR[MusicListSongLabel2]</label>
-                                <textcolor>D4FFFFFF</textcolor>
-                                <selectedcolor>D4FFFFFF</selectedcolor>
+                                <textcolor>Mod_Tags_Alt2</textcolor>
+                                <selectedcolor>Mod_Tags_Alt2</selectedcolor>
                                 <scroll>false</scroll>
                                 <visible>!stringcompare(Container.FolderPath,musicdb://5/1/)</visible>
                             </control>
@@ -769,9 +803,9 @@
                                 <height>100</height>
                                 <font>Font-Condensed-S34-B</font>
                                 <align>right</align>
-                                <label fallback="[COLOR=D4FFFFFF]0.0[/COLOR]">$INFO[ListItem.Rating,,.0]</label>
-                                <textcolor>D4FFFFFF</textcolor>
-                                <selectedcolor>D4FFFFFF</selectedcolor>
+                                <label fallback="[COLOR=Mod_Tags_Alt2]0.0[/COLOR]">$INFO[ListItem.Rating,,.0]</label>
+                                <textcolor>Mod_Tags_Alt2</textcolor>
+                                <selectedcolor>Mod_Tags_Alt2</selectedcolor>
                                 <scroll>false</scroll>
                                 <visible>!IsEmpty(ListItem.Title)</visible>
                             </control>

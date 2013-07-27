@@ -10,20 +10,68 @@
 			<posx>50</posx>
 			<posy>10</posy>
 			<animation effect="slide" start="0" end="150" time="0" condition="Container.Content(songs)">Conditional</animation>
-			<control type="image">
-				<posx>0</posx>
-				<posy>471</posy>
-				<width>1841</width>
-				<height>431</height>
-				<texture border="70">arctic/osd/white-25.png</texture>
-				<visible>!Container.Content(songs)</visible>
+			<control type="group">
+				<posx>25</posx>
+				<posy>496</posy>
+				<visible>Skin.HasSetting(music.mediumlist.bigcover)</visible>
+				<!-- Cd Art -->
+				<control type="image">
+					<posx>15</posx>
+					<posy>-170</posy>
+					<width>351</width>
+					<height>351</height>
+					<texture background="true" fallback="osd/fullscreen/cd.png">$INFO[ListItem.Path,,cdart.png]</texture>
+					<aspectratio align="center">keep</aspectratio>
+					<animation effect="rotate" center="auto" reversible="false" start="360" end="0" time="2500" loop="true" condition="Player.Playing + StringCompare(MusicPlayer.Album,ListItem.Album)">Conditional</animation>
+					<visible>Container.Content(songs) + Skin.HasSetting(CDArt.Enabled)</visible>
+				</control>
 			</control>
 			<control type="image">
 				<posx>0</posx>
-				<posy>471</posy>
-				<width>1536</width>
-				<height>431</height>
-				<texture border="70">arctic/osd/white-25.png</texture>
+				<posy>877</posy>
+				<width>1816</width>
+				<height>381</height>
+				<texture background="true" diffuse="views/posterview/diffuse-ref.png" border="15" flipy="true">arctic/common/panel.png</texture>
+				<visible>!Container.Content(songs) + !Skin.HasSetting(music.mediumlist.bigcover)</visible>
+			</control>
+			<control type="image">
+				<posx>25</posx>
+				<posy>877</posy>
+				<width>1791</width>
+				<height>381</height>
+				<texture background="true" diffuse="views/posterview/diffuse-ref.png" border="15" flipy="true">arctic/common/panel.png</texture>
+				<visible>!Container.Content(songs) + Skin.HasSetting(music.mediumlist.bigcover)</visible>
+			</control>
+			<control type="image">
+				<posx>0</posx>
+				<posy>877</posy>
+				<width>1511</width>
+				<height>381</height>
+				<texture background="true" diffuse="views/posterview/diffuse-ref.png" border="15" flipy="true">arctic/common/panel.png</texture>
+				<visible>Container.Content(songs) + !Skin.HasSetting(music.mediumlist.bigcover)</visible>
+			</control>
+			<control type="image">
+				<posx>25</posx>
+				<posy>877</posy>
+				<width>1486</width>
+				<height>381</height>
+				<texture background="true" diffuse="views/posterview/diffuse-ref.png" border="15" flipy="true">arctic/common/panel.png</texture>
+				<visible>Container.Content(songs) + Skin.HasSetting(music.mediumlist.bigcover)</visible>
+			</control>
+			<control type="image">
+				<posx>5</posx>
+				<posy>476</posy>
+				<width>1831</width>
+				<height>421</height>
+				<texture border="40">arctic/common/border-20.png</texture>
+				<visible>!Container.Content(songs)</visible>
+			</control>
+			<control type="image">
+				<posx>5</posx>
+				<posy>476</posy>
+				<width>1526</width>
+				<height>421</height>
+				<texture border="40">arctic/common/border-20.png</texture>
 				<visible>Container.Content(songs)</visible>
 			</control>
 			<control type="image">
@@ -42,6 +90,8 @@
 				<texture border="10">arctic/common/panel.png</texture>
 				<visible>Container.Content(songs)</visible>
 			</control>
+			
+
 			<control type="textbox">
 				<description>Plot</description>
 				<posx>1225</posx>
@@ -372,9 +422,10 @@
 					</control>
 				</focusedlayout>
 			</control>
-			<!-- LEFT ART -->
+			<!-- Left Art : Big Cover -->
 			<control type="group">
 				<posy>456</posy>
+				<visible>!Skin.HasSetting(music.mediumlist.bigcover)</visible>
 				<!-- Cd Art -->
 				<control type="image">
 					<posx>10</posx>
@@ -422,15 +473,6 @@
 					<aspectratio scalediffuse="false">stretch</aspectratio>
 					<fadetime>250</fadetime>
 				</control>
-				<!-- Glass -->
-				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>444</width>
-					<height>444</height>
-					<texture border="25">arctic/common/glass-ring.png</texture>
-					<visible>Skin.HasSetting(covers.showglass)</visible>
-				</control>
 				<!-- Border -->
 				<control type="image">
 					<posx>-10</posx>
@@ -441,65 +483,22 @@
 					<aspectratio scalediffuse="false">stretch</aspectratio>
 				</control>
 			</control>
-			<!-- RIGHT ART -->
+
+			<!-- Left Art : Small Cover -->
 			<control type="group">
-				<posy>456</posy>
-				<posx>684r</posx>
-				<visible>false</visible>
-				<!-- Reflection -->
-				<control type="image">
-					<posx>0</posx>
-					<posy>444</posy>
-					<width>644</width>
-					<height>444</height>
-					<texture diffuse="views/posterview/diffuse-ref.png" flipy="true" background="true" fallback="windows/common/black.png">$INFO[ListItem.Art(fanart)]</texture>
-					<aspectratio scalediffuse="false">scale</aspectratio>
-					<fadetime>250</fadetime>
-				</control>
-				<!-- Shadow -->
-				<control type="image">
-					<posx>-105</posx>
-					<posy>-50</posy>
-					<width>854</width>
-					<height>485</height>
-					<texture border="150">views/posterview/shadow-focus.png</texture>
-				</control>
-				<!-- Back -->
-				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>644</width>
-					<height>444</height>
-					<texture diffuse="arctic/covers/444.png" background="true">windows/common/black.png</texture>
-					<aspectratio scalediffuse="false">stretch</aspectratio>
-				</control>
+				<posx>25</posx>
+				<posy>496</posy>
+				<visible>Skin.HasSetting(music.mediumlist.bigcover)</visible>
+			
 				<!-- Cover -->
 				<control type="image">
 					<posx>0</posx>
 					<posy>0</posy>
-					<width>644</width>
-					<height>444</height>
-					<texture diffuse="arctic/covers/444.png" background="true">$INFO[ListItem.Art(fanart)]</texture>
-					<aspectratio scalediffuse="false">scale</aspectratio>
-					<fadetime>250</fadetime>
-				</control>
-				<!-- Glass -->
-				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>644</width>
-					<height>444</height>
-					<texture border="25">arctic/common/glass-ring.png</texture>
-					<visible>Skin.HasSetting(covers.showglass)</visible>
-				</control>
-				<!-- Border -->
-				<control type="image">
-					<posx>-10</posx>
-					<posy>-10</posy>
-					<width>664</width>
-					<height>464</height>
-					<texture border="25">arctic/common/border.png</texture>
+					<width>381</width>
+					<height>381</height>
+					<texture diffuse="arctic/covers/444.png" background="true">$VAR[ListInfoPosterVar]</texture>
 					<aspectratio scalediffuse="false">stretch</aspectratio>
+					<fadetime>250</fadetime>
 				</control>
 			</control>
         </control>

@@ -281,7 +281,8 @@
                         <width>100</width>
                         <texturefocus>osd/fullscreen/buttons/channel-fo.png</texturefocus>
                         <texturenofocus>osd/fullscreen/buttons/channel-nofo-dark.png</texturenofocus>
-                        <onclick>ActivateWindow(PVROSDChannels)</onclick>
+                        <onclick condition="!Skin.HasSetting(PVR.OSD.Reroute)">ActivateWindow(PVROSDChannels)</onclick>
+                         <onclick condition="Skin.HasSetting(PVR.OSD.Reroute)">ActivateWindowAndFocus(MyPVR, 32,0, 11,0)</onclick>
                         <onleft>6</onleft>
                         <onright>8</onright>
                         <onup>Close</onup>
@@ -294,7 +295,8 @@
                         <width>100</width>
                         <texturefocus>osd/fullscreen/buttons/epg-fo.png</texturefocus>
                         <texturenofocus>osd/fullscreen/buttons/epg-nofo-dark.png</texturenofocus>
-                        <onclick>ActivateWindow(PVROSDGuide)</onclick>
+                        <onclick condition="!Skin.HasSetting(PVR.OSD.Reroute)">ActivateWindow(PVROSDGuide)</onclick>
+                        <onclick condition="Skin.HasSetting(PVR.OSD.Reroute)">ActivateWindowAndFocus(MyPVR, 31,0, 10,0)</onclick>
                         <onleft>10</onleft>
                         <onright>9</onright>
                         <onup>Close</onup>

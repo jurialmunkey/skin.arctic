@@ -17,7 +17,7 @@
 					<posy>14</posy>
 					<scrolltime tween="cubic" easing="out">350</scrolltime>
 					<orientation>vertical</orientation>
-					<viewtype label="Info List">list</viewtype>
+					<viewtype label="Panel List">list</viewtype>
 					<onleft condition="!Skin.HasSetting(KioskMode)">9010</onleft>
 					<onleft condition="Skin.HasSetting(KioskMode)">51</onleft>
 					<onright>70</onright>

@@ -526,7 +526,7 @@
                     <!-- Info List -->
                     <control type="radiobutton" id="205">
                         <include>optionsbuttonsdimensions</include>
-                        <label>Info List</label>
+                        <label>Panel List</label>
                         <texturefocus>dialogs/options/buttons/default-fo.png</texturefocus>
                         <onclick>Container.SetViewMode(51)</onclick>
                         <selected>Control.IsVisible(51)</selected>

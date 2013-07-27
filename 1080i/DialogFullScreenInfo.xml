@@ -70,9 +70,9 @@
             </control>
             <control type="textbox">
                 <posx>490</posx>
-                <posy>780</posy>
+                <posy>785</posy>
                 <width>1232</width>
-                <height>245</height>
+                <height>195</height>
                 <label>[B]$LOCALIZE[207][/B][CR]$VAR[OSDPlot]</label>
                 <textcolor>mod-infotags</textcolor>
                 <font>Font-Condensed-S32</font>

@@ -191,6 +191,42 @@
 					<control type="group">
 						<visible>!VideoPlayer.Content(LiveTV)</visible>
 						<posx>-28</posx>
+						<posy>-62</posy>
+						<control type="image">
+							<posx>592</posx>
+							<posy>-200</posy>
+							<width>236</width>
+							<height>236</height>
+							<texture background="true" fallback="osd/fullscreen/cd.png">$INFO[Player.Art(discart)]</texture>
+							<aspectratio align="center">keep</aspectratio>
+							<animation effect="rotate" center="auto" reversible="false" start="360" end="0" time="2500" loop="true" condition="Player.Playing">Conditional</animation>
+							<animation effect="slide" start="395" end="0" time="350">Visible</animation>
+							<visible>Skin.HasSetting(CDArt.Enabled)</visible>
+						</control>
+						<control type="image">
+							<description>Thumb</description>
+							<posx>518</posx>
+							<posy>-148</posy>
+							<width>384</width>
+							<height>512</height>
+							<texture background="true" border="100">arctic/common/16border64.png</texture>
+							<aspectratio scalediffuse="false">stretch</aspectratio>
+							<animation effect="slide" end="0,-62" time="300" tween="cubic" easing="inout" condition="[Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding]">Conditional</animation>
+						</control>
+						<control type="image">
+							<description>Thumb</description>
+							<posx>582</posx>
+							<posy>-84</posy>
+							<width>256</width>
+							<height>384</height>
+							<texture background="true" diffuse="arctic/osd/poster.png">$VAR[ArcticOSDPoster]</texture>
+							<aspectratio scalediffuse="false">scale</aspectratio>
+							<animation effect="slide" end="0,-62" time="300" tween="cubic" easing="inout" condition="[Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding]">Conditional</animation>
+						</control>
+					</control>
+					<!--<control type="group">
+						<visible>!VideoPlayer.Content(LiveTV)</visible>
+						<posx>-28</posx>
 						<posy>-58</posy>
 						<control type="image">
 							<posx>549</posx>
@@ -223,7 +259,7 @@
 							<aspectratio scalediffuse="false">scale</aspectratio>
 							<animation effect="slide" end="0,-70" time="300" tween="cubic" easing="inout" condition="[Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding]">Conditional</animation>
 						</control>
-					</control>
+					</control>-->
 					<control type="group">
 						<include>visiblehidefadeinfo</include>
 						<!-- FLAGS -->

@@ -18,7 +18,6 @@
     <include file="Viewtypes_LandscapeCarousel.xml" />
     <include file="Viewtypes_PanelWall.xml" />
     <include file="Viewtypes_PanelSeason.xml" />
-    <include file="Viewtypes_PanelBanner.xml" />
     <include file="Viewtypes_Banner.xml" />
     <include file="Viewtypes_PosterWall.xml" />
     <include file="Viewtypes_PosterClassic.xml" />
@@ -52,7 +51,6 @@
         <include>Viewtype-PanelSeason</include>       	<!--id(509) -->
         <include>Viewtype-PanelWall</include>       	<!--id(510) -->
         <include>Viewtype-LowList</include>         	<!--id(511) -->
-        <include>Viewtype-PanelBanner</include>       	<!--id(512) -->
 		<include>Viewtype-LandscapeCarousel</include>   <!--id(513) -->
 		<include>Viewtype-ClassicPosterInfo</include>   <!--id(514) -->
 		<include>Viewtype-EpisodeInfo</include>		    <!--id(516) -->

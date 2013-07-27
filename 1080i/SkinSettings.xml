@@ -582,6 +582,13 @@
 							<onclick>Skin.ToggleSetting(musicvis.hidetext)</onclick>
 							<label>Scrolling text effect</label>
 						</control>
+						<control type="radiobutton" id="8010">
+							<width>1210</width>
+							<include>SettingsCategoryRadioButtonVars</include>
+							<selected>Skin.HasSetting(videoosd.longbar)</selected>
+							<onclick>Skin.ToggleSetting(videoosd.longbar)</onclick>
+							<label>Long top bar</label>
+						</control>
 						<control type="radiobutton" id="8006">
 							<width>1210</width>
 							<include>SettingsCategoryRadioButtonVars</include>

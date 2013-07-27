@@ -144,7 +144,21 @@
 						<texture background="true" diffuse="views/posterview/diffuse-ref.png" border="5" flipy="true">$VAR[ListInfoLandscapeVar]</texture>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
 						<fadetime>200</fadetime>
+						<visible>!Skin.HasSetting(panellist.showplot)</visible>
 					</control>
+					<control type="image">
+						<description>Landscape</description>
+						<posx>991</posx>
+						<posy>470</posy>
+						<width>828</width>
+						<height>464</height>
+						<texture background="true" diffuse="views/posterview/diffuse-ref.png" border="5" flipy="true">$VAR[ListInfoLandscapeVar]</texture>
+						<aspectratio scalediffuse="false">stretch</aspectratio>
+						<fadetime>200</fadetime>
+						<visible>Skin.HasSetting(panellist.showplot)</visible>
+						<colordiffuse>77white</colordiffuse>
+					</control>
+
 					<control type="image">
 						<description>Shadow Bottom</description>
 						<posx>981</posx>

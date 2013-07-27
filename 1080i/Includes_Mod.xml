@@ -3113,7 +3113,7 @@
 				<visible>!Container.Content(episodes) + !Container.Content(movies)</visible>
 			</control>
 			<control type="label">
-				<font>Font-Alaska-S25-L</font>
+				<font>Font-Alaska-S25-BL</font>
 				<textcolor>Mod_Tags</textcolor>
 				<posx>-192</posx>
 				<posy>60</posy>
@@ -3195,7 +3195,7 @@
 				<visible>[Container.Content(episodes) | Container.Content(movies)] + !substring(ListItem.Path,videodb://1/7,left)</visible>
 			</control>
 			<control type="label">
-				<font>Font-Alaska-S25-L</font>
+				<font>Font-Alaska-S25-BL</font>
 				<textcolor>Mod_Tags</textcolor>
 				<posx>-200</posx>
 				<posy>60</posy>
@@ -3236,7 +3236,7 @@
 				<colordiffuse>Mod_Tags</colordiffuse>
 			</control>
 			<control type="label">
-				<font>Font-Alaska-S25-L</font>
+				<font>Font-Alaska-S25-BL</font>
 				<textcolor>Mod_Tags</textcolor>
 				<posx>-147</posx>
 				<posy>60</posy>

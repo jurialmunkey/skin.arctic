@@ -99,7 +99,7 @@
 								<description>Label</description>
 								<posx>570</posx>
 								<posy>18</posy>
-								<width>67</width>
+								<width>167</width>
 								<height>58</height>
 								<font>Font-Alaska-S52-BL</font>
 								<align>right</align>
@@ -113,7 +113,7 @@
 								<description>Label</description>
 								<posx>570</posx>
 								<posy>18</posy>
-								<width>67</width>
+								<width>167</width>
 								<height>96</height>
 								<font>Font-Alaska-S52-BL</font>
 								<align>right</align>
@@ -263,7 +263,7 @@
 								<description>Label</description>
 								<posx>570</posx>
 								<posy>18</posy>
-								<width>67</width>
+								<width>167</width>
 								<height>58</height>
 								<font>Font-Alaska-S52-BL</font>
 								<align>right</align>
@@ -293,7 +293,7 @@
 								<description>Label</description>
 								<posx>570</posx>
 								<posy>18</posy>
-								<width>67</width>
+								<width>167</width>
 								<height>96</height>
 								<font>Font-Alaska-S52-BL</font>
 								<align>right</align>

@@ -5,7 +5,7 @@
     <zorder>3</zorder>
     <controls>
         <control type="group">
-        	<posy>30</posy>
+        	<posy>148</posy>
             <animation type="WindowOpen" condition="Player.Paused | Player.ShowInfo">
                 <effect type="fade" start="0" end="100" time="200" tween="sine" easing="inout" />
             </animation>
@@ -22,6 +22,7 @@
                 <effect type="fade" start="100" end="0" time="200" tween="sine" easing="out" />
             </animation>
             <animation effect="slide" start="0,0" end="0,205" time="300" tween="cubic" easing="inout" condition="Window.IsActive(videoosd) | [!Window.IsActive(videoosd) + [Window.IsActive(script-XBMC-Subtitles-main.xml) | Window.IsActive(pvrguideinfo) | Window.IsActive(pvrosdchannels) | Window.IsActive(pvrosdguide) | Window.IsActive(yesnodialog) | Window.IsActive(okdialog) | Window.IsActive(progressdialog) | Window.IsActive(virtualkeyboard) | Window.IsActive(numericinput) | Window.IsActive(shutdownmenu) | Window.IsActive(osdvideosettings) | Window.IsActive(osdaudiosettings) | Window.IsActive(videobookmarks)]]">Conditional</animation>
+            <animation effect="slide" end="0,-120" time="300" tween="cubic" easing="inout" condition="[[Player.ShowInfo | Window.IsVisible(fullscreeninfo)] + !Window.IsActive(videoosd) + !IsEmpty(Window(seekbar).Property(ExtendPlot)) + !VideoPlayer.Content(LiveTV)] | VideoPlayer.Content(LiveTV)">Conditional</animation>
             <visible>!Window.IsActive(videoosd) + ![!Window.IsActive(videoosd) + [Window.IsActive(script-XBMC-Subtitles-main.xml) | Window.IsActive(pvrguideinfo) | Window.IsActive(pvrosdchannels) | Window.IsActive(pvrosdguide) | Window.IsActive(yesnodialog) | Window.IsActive(okdialog) | Window.IsActive(progressdialog) | Window.IsActive(virtualkeyboard) | Window.IsActive(numericinput) | Window.IsActive(shutdownmenu) | Window.IsActive(osdvideosettings) | Window.IsActive(osdaudiosettings) | Window.IsActive(videobookmarks)]]</visible>
             <control type="grouplist" id="5">
                 <posx>1442</posx>
@@ -57,6 +58,7 @@
                     <usealttexture>!IsEmpty(Window(seekbar).Property(ExtendPlot))</usealttexture>
                     <onclick condition="IsEmpty(Window(seekbar).Property(ExtendPlot))">SetProperty(ExtendPlot,1,seekbar)</onclick>
                     <onclick condition="!IsEmpty(Window(seekbar).Property(ExtendPlot))">ClearProperty(ExtendPlot,seekbar)</onclick>
+                    <visible>!VideoPlayer.Content(LiveTV)</visible>
                 </control>
                 <control type="button" id="53">
                     <posx>0</posx>
@@ -68,7 +70,7 @@
                     <onclick>PreviousMenu</onclick>
                 </control>
             </control>
-            <control type="textbox">
+            <!--<control type="textbox">
                 <posx>490</posx>
                 <posy>785</posy>
                 <width>1232</width>
@@ -80,7 +82,7 @@
                 <autoscroll delay="11500" time="5000" repeat="7500" />
                 <include>visiblehidefadeinfo</include>
                 <visible>!IsEmpty(VideoPlayer.Plot) + !IsEmpty(Window(seekbar).Property(ExtendPlot))</visible>
-            </control>
+            </control>-->
         </control>
     </controls>
 </window>

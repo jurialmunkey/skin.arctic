@@ -34,3 +34,5 @@ String localization
   - Music Viewtypes
   - Adv Launcher Viewtypes
   - MyPrograms
+  
+Video Info/OSD show plot on up.

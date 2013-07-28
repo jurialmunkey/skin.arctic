@@ -1857,7 +1857,7 @@
             </control>
         </control>
     </include>
-    
+
     <include name="PVRGuideInfoOSD">
         <control type="group">
             <animation type="WindowOpen" reversible="false">

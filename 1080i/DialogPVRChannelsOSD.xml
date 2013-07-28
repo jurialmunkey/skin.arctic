@@ -32,7 +32,7 @@
                 <colordiffuse>mod-osdbar</colordiffuse>
             </control>
             <control type="group">
-                <visible>!Window.IsActive(DialogPVRGuideInfo.xml)</visible>
+                <animation effect="fade" time="200" end="0" start="100" condition="Window.IsActive(DialogPVRGuideInfo.xml)">Conditional</animation>
                 <include>visiblehidefadeinfo</include>
                 <control type="image">
                 	<posx>-12</posx>
@@ -219,6 +219,10 @@
 						</control>
                     </itemlayout>
                     <focusedlayout width="680" height="95">
+                    	<control type="button">
+							<visible>true</visible>
+							<onfocus>AlarmClock(pvrosdnownext,null,0:9,silent,loop)</onfocus>
+						</control>
                         <control type="image">
                             <posx>0</posx>
                             <posy>0</posy>
@@ -276,10 +280,27 @@
 								<height>19</height>
 								<font>Font-Alaska-S25-L</font>
 								<align>left</align>
-								<label>$INFO[ListItem.Title]</label>
+								<label>$INFO[ListItem.Title,[B]$LOCALIZE[19030]:[/B] ,]</label>
 								<textcolor>mod-infotags-alt</textcolor>
 								<selectedcolor>mod-infotags-alt</selectedcolor>
 								<scroll>false</scroll>
+								<visible>!System.AlarmLessOrEqual(pvrosdnownext,4)</visible>
+								<animation effect="fade" start="0" end="100" time="750">VisibleChange</animation>
+							</control>
+							<control type="label">
+								<description>Title</description>
+								<posx>28</posx>
+								<posy>38</posy>
+								<width>360</width>
+								<height>19</height>
+								<font>Font-Alaska-S25-L</font>
+								<align>left</align>
+								<label>$INFO[ListItem.NextTitle,[B]$LOCALIZE[19031]:[/B] ,]</label>
+								<textcolor>mod-infotags-alt</textcolor>
+								<selectedcolor>mod-infotags-alt</selectedcolor>
+								<scroll>false</scroll>
+								<visible>System.AlarmLessOrEqual(pvrosdnownext,4)</visible>
+								<animation effect="fade" start="0" end="100" time="750">VisibleChange</animation>
 							</control>
 							<control type="label">
 								<description>Label</description>

@@ -29,7 +29,7 @@
                 <aspectratio>stretch</aspectratio>
                 <colordiffuse>mod-osdbar</colordiffuse>
                 <animation effect="slide" end="0,-195" time="300" tween="cubic" easing="inout" condition="[Player.ShowInfo | Window.IsVisible(fullscreeninfo)] + !Window.IsActive(videoosd) + !IsEmpty(Window(seekbar).Property(ExtendPlot)) + !VideoPlayer.Content(LiveTV)">Conditional</animation>
-                <animation effect="slide" end="0,-195" time="300" tween="cubic" easing="inout" condition="VideoPlayer.Content(LiveTV) + !Window.IsActive(videoosd)">Conditional</animation>
+                <animation effect="slide" end="0,-195" time="300" tween="cubic" easing="inout" condition="VideoPlayer.Content(LiveTV) + !Window.IsActive(videoosd) + [Player.ShowInfo | Window.IsVisible(fullscreeninfo)]">Conditional</animation>
                 <animation effect="slide" end="0,-78" time="300" tween="cubic" easing="inout" condition="[Player.ShowInfo | Window.IsVisible(fullscreeninfo)] + !Window.IsActive(videoosd) + IsEmpty(Window(seekbar).Property(ExtendPlot)) + !VideoPlayer.Content(LiveTV)">Conditional</animation>
                 <animation effect="slide" end="0,-65" time="300" tween="cubic" easing="inout" condition="Window.IsActive(videoosd)">Conditional</animation>
             </control>

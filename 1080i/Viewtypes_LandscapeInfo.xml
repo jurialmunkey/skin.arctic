@@ -143,7 +143,7 @@
 						<posy>0</posy>
 						<width>374</width>
 						<height>210</height>
-						<texture background="true" diffuse="views/newgloss/landscape-diffuse.png">$VAR[LandscapeViewVar]</texture>
+						<texture background="true" diffuse="views/newgloss/landscape-diffuse.png">$VAR[ListInfoLandscapeVar]</texture>
 						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
 					</control>
 					<control type="image">
@@ -309,7 +309,7 @@
 						<posy>0</posy>
 						<width>374</width>
 						<height>210</height>
-						<texture background="true" diffuse="views/newgloss/landscape-diffuse.png">$VAR[LandscapeViewVar]</texture>
+						<texture background="true" diffuse="views/newgloss/landscape-diffuse.png">$VAR[ListInfoLandscapeVar]</texture>
 						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
 					</control>
 					<control type="image">

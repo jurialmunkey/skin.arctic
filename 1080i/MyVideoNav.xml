@@ -488,10 +488,10 @@
                         <texturefocus border="70,2,2,2">dialogs/options/buttons/custom-back-fo.png</texturefocus>
                         <texturenofocus border="70,2,2,2">dialogs/options/buttons/custom-back-nf.png</texturenofocus>
                     </control>
-                    <!-- Menu List -->
+                    <!-- Big List -->
                     <control type="radiobutton" id="202">
                         <include>optionsbuttonsdimensions</include>
-                        <label>Big List</label>
+                        <label>$LOCALIZE[537]</label>
                         <texturefocus>dialogs/options/buttons/default-fo.png</texturefocus>
                         <onclick>Container.SetViewMode(50)</onclick>
                         <selected>Control.IsVisible(50)</selected>

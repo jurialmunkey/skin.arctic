@@ -24,20 +24,10 @@
                 <control type="image">
                     <description>Landscape</description>
                     <posx>831</posx>
-                    <posy>6</posy>
+                    <posy>238</posy>
                     <width>828</width>
-                    <height>464</height>
-                    <texture background="true" diffuse="arctic/panel/fanart.png">arctic/common/fade.png</texture>
-                    <aspectratio scalediffuse="false">stretch</aspectratio>
-                    <visible>Skin.HasSetting(seasonpanel.showplot)</visible>
-                </control>
-                <control type="image">
-                    <description>Landscape</description>
-                    <posx>831</posx>
-                    <posy>6</posy>
-                    <width>828</width>
-                    <height>464</height>
-                    <texture background="true" diffuse="arctic/panel/fanart.png">arctic/common/fade.png</texture>
+                    <height>232</height>
+                    <texture background="true" border="20">arctic/list/fade.png</texture>
                     <aspectratio scalediffuse="false">stretch</aspectratio>
                     <visible>Skin.HasSetting(seasonpanel.showplot)</visible>
                 </control>

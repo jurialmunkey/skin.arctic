@@ -1,8 +1,8 @@
 <includes>
-<!-- ========================= -->
-<!-- Episode Info (516) -->
-<!-- ========================= -->
-	<include name="Viewtype-EpisodeInfo-Normal">
+<!-- ================ -->
+<!-- Banner List (54) -->
+<!-- ================ -->
+	<include name="Viewtype-BannerList-Normal">
 		<posx>-358</posx>
 		<posy>125</posy>
 		<width>2300</width>
@@ -10,9 +10,9 @@
 		<pagecontrol>70</pagecontrol>
 		<scrolltime tween="cubic" easing="out">500</scrolltime>
 		<orientation>vertical</orientation>
-		<viewtype label="Banner List">list</viewtype>
+		<viewtype label="42304">list</viewtype>
 		<onleft condition="!Skin.HasSetting(KioskMode)">9010</onleft>
-		<onleft condition="Skin.HasSetting(KioskMode)">516</onleft>
+		<onleft condition="Skin.HasSetting(KioskMode)">54</onleft>
 		<onright>70</onright>
 		<focusposition>3</focusposition>
 		<movement>0</movement>
@@ -71,8 +71,8 @@
 		</itemlayout>
 		<focusedlayout height="341">
 			<control type="group">
-				<animation effect="slide" start="0,96" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(516).OnPrevious">Focus</animation>
-				<animation effect="slide" start="0,-96" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(516).OnNext">Focus</animation>    
+				<animation effect="slide" start="0,96" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(54).OnPrevious">Focus</animation>
+				<animation effect="slide" start="0,-96" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(54).OnNext">Focus</animation>    
 				<posx>200</posx>
 				<control type="group">
 					<posy>52</posy>
@@ -175,7 +175,7 @@
 							<textcolor>mod-infotags-alt2</textcolor>
 							<autoscroll delay="13000" time="3000" repeat="13000" />
 							<font>Font-Alaska-S25-NC</font>
-							<visible>![Container(516).OnNext | Container(516).OnPrevious]</visible>
+							<visible>![Container(54).OnNext | Container(54).OnPrevious]</visible>
 						</control>
 					</control>
 				</control>
@@ -183,15 +183,15 @@
 		</focusedlayout>
 	
 	</include>
-    <include name="Viewtype-EpisodeInfo">
+    <include name="Viewtype-BannerList">
         <control type="group">
             <include>FullscreenDimensions</include>
             <include>OptionsShutdownAnimation</include>
             <include>BannerListAnimations</include>
             <include>CommonViewAnimations</include>  
-			<visible>!Window.IsActive(movieinformation) + !Window.IsActive(script-Actors-DialogInfo.xml) + !Window.IsActive(script-Actors-DialogVideoInfo.xml) + IsEmpty(Window(Home).Property(script.metadata.actors.hasparent)) + Control.IsVisible(516)</visible>
-			<control type="fixedlist" id="516">
-				<include>Viewtype-EpisodeInfo-Normal</include>
+			<visible>!Window.IsActive(movieinformation) + !Window.IsActive(script-Actors-DialogInfo.xml) + !Window.IsActive(script-Actors-DialogVideoInfo.xml) + IsEmpty(Window(Home).Property(script.metadata.actors.hasparent)) + Control.IsVisible(54)</visible>
+			<control type="fixedlist" id="54">
+				<include>Viewtype-BannerList-Normal</include>
 			</control>
         </control>
         <control type="scrollbar" id="70">
@@ -203,13 +203,13 @@
 			<textureslidernib flipx="true">arctic/common/slider-nf-v.png</textureslidernib>
 			<textureslidernibfocus flipx="true">arctic/common/slider-fo-v.png</textureslidernibfocus>
 			<showonepage>true</showonepage>
-			<onleft>516</onleft>
+			<onleft>54</onleft>
 			<onright condition="!Skin.HasSetting(KioskMode)">9010</onright>
-			<onright condition="Skin.HasSetting(KioskMode)">516</onright>
+			<onright condition="Skin.HasSetting(KioskMode)">54</onright>
 			<animation effect="fade" start="100" end="0" time="300" tween="sine" easing="inout" condition="!Control.IsVisible(9772)">Conditional</animation>
 			<animation effect="fade" start="40" end="100" time="300" tween="sine" easing="inout" condition="Control.HasFocus(70)">Conditional</animation>
 			<animation effect="fade" start="100" end="40" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(70)">Conditional</animation>
-			<visible>Control.IsVisible(516)</visible>
+			<visible>Control.IsVisible(54)</visible>
 		</control>
     </include>
 </includes>

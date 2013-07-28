@@ -1,6 +1,6 @@
 <includes>
 <!-- =========== -->
-<!-- Banner (60) -->
+<!-- Banner (55) -->
 <!-- =========== -->
 	<include name="banner.textcolor.light1">
 		<textcolor>mod-infotags</textcolor>
@@ -8,25 +8,25 @@
 	<include name="banner.textcolor.light2">
 		<textcolor>mod-infotags-li</textcolor>
 	</include>
-    <include name="Viewtype-Banner">        
+    <include name="Viewtype-WideBanner">        
         <control type="group">
             <include>OptionsShutdownAnimation</include>
             <include>BannerListAnimations</include>
-            <visible>Control.IsVisible(60)</visible>
-            <control type="fixedlist" id="60">
+            <visible>Control.IsVisible(55)</visible>
+            <control type="fixedlist" id="55">
                 <posx>0</posx>
                 <posy>244</posy>
                 <width>1920</width>
-                <height>660</height>
+                <height>655</height>
                 <pagecontrol>70</pagecontrol>
                 <scrolltime tween="cubic" easing="out">500</scrolltime>
                 <orientation>vertical</orientation>
-                <viewtype label="Wide Banner">list</viewtype>
+                <viewtype label="42305">list</viewtype>
                 <onright>70</onright>
                 <onleft condition="!Skin.HasSetting(KioskMode)">9010</onleft>
-                <onleft condition="Skin.HasSetting(KioskMode)">60</onleft>
-                <onup>60</onup>
-                <ondown>60</ondown>
+                <onleft condition="Skin.HasSetting(KioskMode)">55</onleft>
+                <onup>55</onup>
+                <ondown>55</ondown>
                 <movement>1</movement>
                 <focusposition>1</focusposition>
                 <preloaditems>2</preloaditems>
@@ -71,8 +71,8 @@
                     <control type="group">
                         <posx>305</posx>
                         <posy>-15</posy>
-                        <animation effect="slide" start="0,96" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(60).OnPrevious">Focus</animation>
-                        <animation effect="slide" start="0,-96" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(60).OnNext">Focus</animation>
+                        <animation effect="slide" start="0,96" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(55).OnPrevious">Focus</animation>
+                        <animation effect="slide" start="0,-96" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(55).OnNext">Focus</animation>
                         <control type="group">
 							<control type="image">
 								<posx>0</posx>
@@ -150,7 +150,7 @@
 							<posx>35</posx>
 							<posy>206</posy>
 							<width>1241</width>
-							<height>60</height>
+							<height>55</height>
 							<texture background="true" border="30">views/list/other/separator.png</texture>
 							<aspectratio>stretch</aspectratio>
 						</control>
@@ -169,8 +169,8 @@
                     <control type="group">
                         <posx>305</posx>
                         <posy>-15</posy>
-                        <animation effect="slide" start="0,96" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(60).OnPrevious">Focus</animation>
-                        <animation effect="slide" start="0,-96" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(60).OnNext">Focus</animation>
+                        <animation effect="slide" start="0,96" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(55).OnPrevious">Focus</animation>
+                        <animation effect="slide" start="0,-96" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(55).OnNext">Focus</animation>
                         <control type="group">
 							<control type="image">
 								<posx>0</posx>
@@ -197,7 +197,7 @@
                                 <font>Font-Alaska-S25-BL</font>
                             </control>
                             <control type="label">
-                                <posx>1260</posx>
+                                <posx>1255</posx>
                                 <posy>267</posy>
                                 <width>1210</width>
                                 <label>$VAR[UnderTitle]</label>
@@ -237,7 +237,7 @@
 							<posx>35</posx>
 							<posy>206</posy>
 							<width>1241</width>
-							<height>60</height>
+							<height>55</height>
 							<texture background="true" border="30">views/list/other/separator.png</texture>
 							<aspectratio>stretch</aspectratio>
 						</control>
@@ -254,13 +254,13 @@
 			<textureslidernib flipx="true">arctic/common/slider-nf-v.png</textureslidernib>
 			<textureslidernibfocus flipx="true">arctic/common/slider-fo-v.png</textureslidernibfocus>
 			<showonepage>true</showonepage>
-			<onleft>60</onleft>
+			<onleft>55</onleft>
 			<onright condition="!Skin.HasSetting(KioskMode)">9010</onright>
-			<onright condition="Skin.HasSetting(KioskMode)">60</onright>
+			<onright condition="Skin.HasSetting(KioskMode)">55</onright>
 			<animation effect="fade" start="100" end="0" time="300" tween="sine" easing="inout" condition="!Control.IsVisible(9772)">Conditional</animation>
 			<animation effect="fade" start="40" end="100" time="300" tween="sine" easing="inout" condition="Control.HasFocus(70)">Conditional</animation>
 			<animation effect="fade" start="100" end="40" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(70)">Conditional</animation>
-			<visible>Control.IsVisible(60)</visible>
+			<visible>Control.IsVisible(55)</visible>
 		</control>
     </include>
 </includes>

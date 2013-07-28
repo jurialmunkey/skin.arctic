@@ -1,7 +1,7 @@
 # XBMC Media Center language file
-# Addon Name: Xperience1080
-# Addon id: skin.xperience1080
-# Addon Provider: `Black
+# Addon Name: Arctic
+# Addon id: skin.arctic
+# Addon Provider: jurialmunkey
 msgid ""
 msgstr ""
 "Project-Id-Version: XBMC Skins\n"
@@ -977,3 +977,186 @@ msgstr ""
 msgctxt "#42212"
 msgid "Edit song"
 msgstr ""
+
+msgctxt "#42301"
+msgid "Medium list"
+msgstr ""
+
+msgctxt "#42302"
+msgid "Low list"
+msgstr ""
+
+msgctxt "#42303"
+msgid "Panel list"
+msgstr ""
+
+msgctxt "#42304"
+msgid "Banner list"
+msgstr ""
+
+msgctxt "#42305"
+msgid "Wide banner"
+msgstr ""
+
+msgctxt "#42306"
+msgid "Lovefilm"
+msgstr ""
+
+msgctxt "#42307"
+msgid "Reel"
+msgstr ""
+
+msgctxt "#42308"
+msgid "Classic poster"
+msgstr ""
+
+msgctxt "#42309"
+msgid "Classic info"
+msgstr ""
+
+msgctxt "#42310"
+msgid "Info poster"
+msgstr ""
+
+msgctxt "#42311"
+msgid "Wall"
+msgstr ""
+
+msgctxt "#42312"
+msgid "Landscape"
+msgstr ""
+
+msgctxt "#42313"
+msgid "Info wall"
+msgstr ""
+
+msgctxt "#42314"
+msgid "Poster panel"
+msgstr ""
+
+msgctxt "#42315"
+msgid "Cover info"
+msgstr ""
+
+msgctxt "#42316"
+msgid "Big cover"
+msgstr ""
+
+msgctxt "#42317"
+msgid "Cover panel"
+msgstr ""
+
+# Range to 42399 reserved for viewtypes
+
+msgctxt "#42400"
+msgid "Wrap list"
+msgstr ""
+
+msgctxt "#42401"
+msgid "Show discart"
+msgstr ""
+
+msgctxt "#42402"
+msgid "Thumbnail as fanart"
+msgstr ""
+
+msgctxt "#42403"
+msgid "Focus zoom"
+msgstr ""
+
+msgctxt "#42404"
+msgid "Show season number"
+msgstr ""
+
+msgctxt "#42405"
+msgid "Smaller poster"
+msgstr ""
+
+msgctxt "#42406"
+msgid "Use extrafanart"
+msgstr ""
+
+msgctxt "#42407"
+msgid "Animate fanart"
+msgstr ""
+
+msgctxt "#42408"
+msgid "Show music visualisation in background"
+msgstr ""
+
+msgctxt "#42409"
+msgid "Path to music art"
+msgstr ""
+
+msgctxt "#42410"
+msgid "Home style"
+msgstr ""
+
+msgctxt "#42411"
+msgid "Open submenu on click"
+msgstr ""
+
+msgctxt "#42412"
+msgid "Show floor"
+msgstr ""
+
+msgctxt "#42413"
+msgid "Show info tags"
+msgstr ""
+
+msgctxt "#42414"
+msgid "Show clearlogo"
+msgstr ""
+
+msgctxt "#42415"
+msgid "Show view header"
+msgstr ""
+
+msgctxt "#42416"
+msgid "Prefer landscape art"
+msgstr ""
+
+msgctxt "#42417"
+msgid "Smaller music info"
+msgstr ""
+
+msgctxt "#42418"
+msgid "Scrolling text effect"
+msgstr ""
+
+msgctxt "#42419"
+msgid "Full width top bar"
+msgstr ""
+
+msgctxt "#42420"
+msgid "Use weather fanart"
+msgstr ""
+
+msgctxt "#42421"
+msgid "Use default widget for settings"
+msgstr ""
+
+msgctxt "#42422"
+msgid "Use rom collection widget for programs"
+msgstr ""
+
+msgctxt "#42423"
+msgid "Programs slideshow path"
+msgstr ""
+
+msgctxt "#42424"
+msgid "Pictures slideshow path"
+msgstr ""
+
+msgctxt "#42425"
+msgid "Edit custom..."
+msgstr ""
+
+msgctxt "#42426"
+msgid "Show language flags"
+msgstr ""
+
+msgctxt "#42427"
+msgid "Prefer cover"
+msgstr ""
+

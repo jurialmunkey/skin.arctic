@@ -60,7 +60,7 @@
                     <include>SettingsCategoryPanelRadioButtonVars</include>
                     <selected>!Skin.HasSetting(info.hideinfotags)</selected>
 					<onclick>Skin.ToggleSetting(info.hideinfotags)</onclick>
-					<label>Show info tags</label>
+					<label>42413</label>
                 </control>
                 <control type="radiobutton" id="2103">
                     <width>644</width>
@@ -68,7 +68,7 @@
                     <include>SettingsCategoryPanelRadioButtonVars</include>
                     <selected>!Skin.HasSetting(info.hideflags)</selected>
 					<onclick>Skin.ToggleSetting(info.hideflags)</onclick>
-					<label>Show language flags</label>
+					<label>42426</label>
                 </control>
                 <control type="radiobutton" id="2104">
                     <width>644</width>

@@ -222,7 +222,7 @@
 							<include>SettingsCategoryRadioButtonVars</include>
 							<selected>Skin.HasSetting(OSDVisualation.Background)</selected>
 							<onclick>Skin.ToggleSetting(OSDVisualation.Background)</onclick>
-							<label>Show music visualisation in background</label>
+							<label>42408</label>
 						</control>
 						<control type="radiobutton" id="1012">
 							<width>1210</width>
@@ -260,7 +260,7 @@
 							<font>Font-Condensed-S30</font>
 							<include>SettingsCategoryDefaultButtonVars</include>
 							<onclick>Skin.SetPath(cdartlocation)</onclick>
-							<label>Music clearlogos path</label>
+							<label>42409</label>
 							<label2>$INFO[Skin.String(cdartlocation)]</label2>
 							<onup>1007</onup>
 							<ondown>1001</ondown>
@@ -287,7 +287,7 @@
 							<onclick condition="StringCompare(Skin.String(homescreen.style),simple)">Skin.SetString(homescreen.style,panel)</onclick>
 							<onclick condition="StringCompare(Skin.String(homescreen.style),panel)">Skin.SetString(homescreen.style,simple)</onclick>
 							<onclick condition="StringCompare(Skin.String(homescreen.style),simple)">Skin.SetString(homescreen.style,panel)</onclick>
-							<label>Home screen style</label>
+							<label>42410</label>
 							<label2>[UPPERCASE]$INFO[Skin.String(homescreen.style)][/UPPERCASE]</label2>
 						</control>
 						<control type="button" id="2001">
@@ -326,7 +326,7 @@
 							<include>SettingsCategoryRadioButtonVars</include>
 							<selected>Skin.HasSetting(HomeClicksSubmenu)</selected>
 							<onclick>Skin.ToggleSetting(HomeClicksSubmenu)</onclick>
-							<label>Open submenu on click</label>
+							<label>42411</label>
 						</control>
 					
 						
@@ -476,21 +476,21 @@
 							<include>SettingsCategoryRadioButtonVars</include>
 							<selected>!Skin.HasSetting(disable.dimfanart)</selected>
 							<onclick>Skin.ToggleSetting(disable.dimfanart)</onclick>
-							<label>Show floor</label>
+							<label>42412</label>
 						</control>
 						<control type="radiobutton" id="3002">
 							<width>1210</width>
 							<include>SettingsCategoryRadioButtonVars</include>
 							<selected>!Skin.HasSetting(HideInfoTags)</selected>
 							<onclick>Skin.ToggleSetting(HideInfoTags)</onclick>
-							<label>Show info tags</label>
+							<label>42413</label>
 						</control>
 						<control type="radiobutton" id="3003">
 							<width>1210</width>
 							<include>SettingsCategoryRadioButtonVars</include>
 							<selected>Skin.HasSetting(ShowLowerLogo)</selected>
 							<onclick>Skin.ToggleSetting(ShowLowerLogo)</onclick>
-							<label>Show clearlogo</label>
+							<label>42414</label>
 							<enable>!Skin.HasSetting(HideInfoTags)</enable>
 							<animation effect="fade" start="100" end="42" time="0" condition="!Control.IsEnabled(3003)">Conditional</animation>
 						</control>
@@ -499,21 +499,21 @@
 							<include>SettingsCategoryRadioButtonVars</include>
 							<selected>!Skin.HasSetting(hide.viewheader)</selected>
 							<onclick>Skin.ToggleSetting(hide.viewheader)</onclick>
-							<label>Show view header</label>
+							<label>42415</label>
 						</control>
 						<control type="radiobutton" id="3005">
 							<width>1210</width>
 							<include>SettingsCategoryRadioButtonVars</include>
 							<selected>!Skin.HasSetting(hide.commonclock)</selected>
 							<onclick>Skin.ToggleSetting(hide.commonclock)</onclick>
-							<label>Show clock</label>
+							<label>41270</label>
 						</control>
 						<control type="radiobutton" id="3008">
 							<width>1210</width>
 							<include>SettingsCategoryRadioButtonVars</include>
 							<selected>Skin.HasSetting(PreferLandscapeArt)</selected>
 							<onclick>Skin.ToggleSetting(PreferLandscapeArt)</onclick>
-							<label>Prefer landscape art</label>
+							<label>42416</label>
 						</control>
 						<control type="button" id="3009">
 							<width>1210</width>
@@ -573,21 +573,21 @@
 							<include>SettingsCategoryRadioButtonVars</include>
 							<selected>Skin.HasSetting(musicvis.small)</selected>
 							<onclick>Skin.ToggleSetting(musicvis.small)</onclick>
-							<label>Smaller music info</label>
+							<label>42417</label>
 						</control>
 						<control type="radiobutton" id="8009">
 							<width>1210</width>
 							<include>SettingsCategoryRadioButtonVars</include>
 							<selected>!Skin.HasSetting(musicvis.hidetext)</selected>
 							<onclick>Skin.ToggleSetting(musicvis.hidetext)</onclick>
-							<label>Scrolling text effect</label>
+							<label>42418</label>
 						</control>
 						<control type="radiobutton" id="8010">
 							<width>1210</width>
 							<include>SettingsCategoryRadioButtonVars</include>
 							<selected>Skin.HasSetting(videoosd.longbar)</selected>
 							<onclick>Skin.ToggleSetting(videoosd.longbar)</onclick>
-							<label>Long top bar</label>
+							<label>42419</label>
 						</control>
 						<control type="radiobutton" id="8006">
 							<width>1210</width>
@@ -674,7 +674,7 @@
 							<include>SettingsCategoryRadioButtonVars</include>
 							<selected>Skin.HasSetting(weather.usefanart)</selected>
 							<onclick>Skin.ToggleSetting(weather.usefanart)</onclick>
-							<label>Use weather fanart</label>
+							<label>42420</label>
 						</control>
 						<!-- LIVE TV BACKGROUND -->
 						<control type="button" id="5011">

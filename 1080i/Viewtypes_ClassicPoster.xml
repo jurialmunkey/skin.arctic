@@ -1,6 +1,6 @@
 <includes>
 <!-- ==================== -->
-<!-- Classic Poster (506) -->
+<!-- Classic Poster (58) -->
 <!-- ==================== -->
 	<include name="Viewtype-ClassicPoster-Content">		
 		<visible>Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Actors) | Container.Content(Sets) | Container.HasFolders</visible>
@@ -11,16 +11,16 @@
 		<pagecontrol>70</pagecontrol>
 		<scrolltime tween="cubic" easing="out">500</scrolltime>
 		<orientation>horizontal</orientation>
-		<viewtype label="Classic Poster">list</viewtype>
-		<onleft>506</onleft>
-		<onright>506</onright>
+		<viewtype label="42308">list</viewtype>
+		<onleft>58</onleft>
+		<onright>58</onright>
 		<onup condition="!Skin.HasSetting(KioskMode)">9010</onup>
-		<onup condition="Skin.HasSetting(KioskMode)">506</onup>
+		<onup condition="Skin.HasSetting(KioskMode)">58</onup>
 		<ondown>70</ondown>
 		<focusposition>3</focusposition>
 		<movement>2</movement>
 		<preloaditems>2</preloaditems>
-		<itemlayout width="310" condition="![[IntegerGreaterThan(Container(506).NumItems,1) + !IntegerGreaterThan(Container(506).NumItems,2)] | [IntegerGreaterThan(Container(506).NumItems,3) + !IntegerGreaterThan(Container(506).NumItems,4)]]">
+		<itemlayout width="310" condition="![[IntegerGreaterThan(Container(58).NumItems,1) + !IntegerGreaterThan(Container(58).NumItems,2)] | [IntegerGreaterThan(Container(58).NumItems,3) + !IntegerGreaterThan(Container(58).NumItems,4)]]">
 			<control type="group">
 				<posy>300</posy>
 				<animation effect="Conditional" condition="true">
@@ -109,7 +109,7 @@
 				</control>
 			</control>
 		</itemlayout>
-		<itemlayout width="310" condition="[[IntegerGreaterThan(Container(506).NumItems,1) + !IntegerGreaterThan(Container(506).NumItems,2)] | [IntegerGreaterThan(Container(506).NumItems,3) + !IntegerGreaterThan(Container(506).NumItems,4)]]">
+		<itemlayout width="310" condition="[[IntegerGreaterThan(Container(58).NumItems,1) + !IntegerGreaterThan(Container(58).NumItems,2)] | [IntegerGreaterThan(Container(58).NumItems,3) + !IntegerGreaterThan(Container(58).NumItems,4)]]">
 			<control type="group">
 				<animation effect="Conditional" condition="true">
 					<effect type="zoom" end="75" time="0" center="-45,702" />
@@ -204,11 +204,11 @@
 				</control>
 			</control>
 		</itemlayout>
-		<focusedlayout width="310" condition="![[IntegerGreaterThan(Container(506).NumItems,1) + !IntegerGreaterThan(Container(506).NumItems,2)] | [IntegerGreaterThan(Container(506).NumItems,3) + !IntegerGreaterThan(Container(506).NumItems,4)]]">
+		<focusedlayout width="310" condition="![[IntegerGreaterThan(Container(58).NumItems,1) + !IntegerGreaterThan(Container(58).NumItems,2)] | [IntegerGreaterThan(Container(58).NumItems,3) + !IntegerGreaterThan(Container(58).NumItems,4)]]">
 			<control type="group">
 				<posy>300</posy>
-				<animation condition="Container(506).OnNext | Container(506).OnPrevious" effect="zoom" start="75" end="100" time="350" tween="sine" easing="out" center="155,702">Focus</animation>
-				<animation condition="Container(506).OnNext | Container(506).OnPrevious" effect="zoom" start="100" end="75" time="250" tween="sine" easing="out" center="155,702">UnFocus</animation>
+				<animation condition="Container(58).OnNext | Container(58).OnPrevious" effect="zoom" start="75" end="100" time="350" tween="sine" easing="out" center="155,702">Focus</animation>
+				<animation condition="Container(58).OnNext | Container(58).OnPrevious" effect="zoom" start="100" end="75" time="250" tween="sine" easing="out" center="155,702">UnFocus</animation>
 				<control type="image">
 					<description>Shadow Back</description>
 					<posx>-42</posx>
@@ -318,13 +318,13 @@
 				</control>
 			</control>
 		</focusedlayout>
-		<focusedlayout width="310" condition="[[IntegerGreaterThan(Container(506).NumItems,1) + !IntegerGreaterThan(Container(506).NumItems,2)] | [IntegerGreaterThan(Container(506).NumItems,3) + !IntegerGreaterThan(Container(506).NumItems,4)]]">
+		<focusedlayout width="310" condition="[[IntegerGreaterThan(Container(58).NumItems,1) + !IntegerGreaterThan(Container(58).NumItems,2)] | [IntegerGreaterThan(Container(58).NumItems,3) + !IntegerGreaterThan(Container(58).NumItems,4)]]">
 			<control type="group">
 				<posy>300</posy>
-				<animation type="Focus" condition="Container(506).OnNext | Container(506).OnPrevious">
+				<animation type="Focus" condition="Container(58).OnNext | Container(58).OnPrevious">
 					<effect type="zoom" start="75" end="100" time="350" tween="sine" easing="out" center="-45,702" />
 				</animation>
-				<animation type="Unfocus" condition="Container(506).OnNext | Container(506).OnPrevious">
+				<animation type="Unfocus" condition="Container(58).OnNext | Container(58).OnPrevious">
 					<effect type="zoom" start="100" end="75" time="250" tween="sine" easing="out" center="-45,702" />
 				</animation>
 				<posx>-200</posx>
@@ -439,12 +439,12 @@
 		</focusedlayout>
 	</include>
 	<include name="Viewtype-ClassicPoster-Wrap">
-		<control type="wraplist" id="506">
+		<control type="wraplist" id="58">
 			<include>Viewtype-ClassicPoster-Content</include>
 		</control>
 	</include>
 	<include name="Viewtype-ClassicPoster-Fixed">
-		<control type="fixedlist" id="506">
+		<control type="fixedlist" id="58">
 			<include>Viewtype-ClassicPoster-Content</include>
 		</control>
 	</include>
@@ -453,7 +453,7 @@
             <include>FullscreenDimensions</include>
             <include>OptionsShutdownAnimation</include>
             <include>BannerListAnimations</include>
-            <visible>!Window.IsActive(movieinformation) + Control.IsVisible(506)</visible>  
+            <visible>!Window.IsActive(movieinformation) + Control.IsVisible(58)</visible>  
 			<include condition="!Skin.HasSetting(viewtype.classicposter.wrap)">Viewtype-ClassicPoster-Fixed</include>
             <include condition="Skin.HasSetting(viewtype.classicposter.wrap)">Viewtype-ClassicPoster-Wrap</include>
         </control>
@@ -467,13 +467,13 @@
 			<textureslidernib >arctic/common/slider-nf-h.png</textureslidernib>
 			<textureslidernibfocus >arctic/common/slider-fo-h.png</textureslidernibfocus>
 			<showonepage>true</showonepage>
-			<onup>506</onup>
+			<onup>58</onup>
 			<ondown condition="!Skin.HasSetting(KioskMode)">9010</ondown>
-			<ondown condition="Skin.HasSetting(KioskMode)">506</ondown>
+			<ondown condition="Skin.HasSetting(KioskMode)">58</ondown>
 			<animation effect="fade" start="100" end="0" time="300" tween="sine" easing="inout" condition="!Control.IsVisible(9772)">Conditional</animation>
 			<animation effect="fade" start="40" end="100" time="300" tween="sine" easing="inout" condition="Control.HasFocus(70)">Conditional</animation>
 			<animation effect="fade" start="100" end="40" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(70)">Conditional</animation>
-			<visible>Control.IsVisible(506)</visible>
+			<visible>Control.IsVisible(58)</visible>
 		</control>
     </include>
 </includes>

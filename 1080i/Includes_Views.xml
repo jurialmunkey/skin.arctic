@@ -11,21 +11,23 @@
     <include file="Viewtypes_AdvClassicInfo.xml" />
     <include file="Viewtypes_AdvPosterInfo.xml" />
     
-    <include file="Viewtypes_List.xml" />
-    <include file="Viewtypes_ListLow.xml" />
-    <include file="Viewtypes_BigList.xml" />
-    <include file="Viewtypes_LandscapeInfo.xml" />
-    <include file="Viewtypes_LandscapeCarousel.xml" />
-    <include file="Viewtypes_PanelWall.xml" />
-    <include file="Viewtypes_PanelSeason.xml" />
-    <include file="Viewtypes_Banner.xml" />
-    <include file="Viewtypes_PosterWall.xml" />
-    <include file="Viewtypes_PosterClassic.xml" />
-    <include file="Viewtypes_PosterClassicInfo.xml" />
-    <include file="Viewtypes_PosterInfo.xml" />
-    <include file="Viewtypes_EpisodeInfo.xml" />
-    <include file="viewtypes_LoveFilm.xml" />
-    <include file="viewtypes_GlassList.xml" />
+    <!-- Video Viewtypes -->
+    <include file="Viewtypes_BigList.xml" />			<!-- (50) -->
+    <include file="Viewtypes_MediumList.xml" />			<!-- (51) -->
+    <include file="Viewtypes_LowList.xml" />			<!-- (52) -->
+    <include file="Viewtypes_PanelList.xml" />			<!-- (53) -->
+    <include file="Viewtypes_BannerList.xml" />			<!-- (54) -->
+    <include file="Viewtypes_WideBanner.xml" />			<!-- (55) -->
+    <include file="Viewtypes_LoveFilm.xml" />			<!-- (56) -->
+    <include file="Viewtypes_Reel.xml" />				<!-- (57) -->
+    <include file="Viewtypes_ClassicPoster.xml" />		<!-- (58) -->
+    <include file="Viewtypes_ClassicInfo.xml" />		<!-- (59) -->
+    <include file="Viewtypes_InfoPoster.xml" />			<!-- (60) -->
+    <include file="Viewtypes_Wall.xml" />				<!-- (61) -->
+    <include file="Viewtypes_Landscape.xml" />			<!-- (62) -->
+    <include file="Viewtypes_InfoWall.xml" />			<!-- (63) -->
+    <include file="Viewtypes_PosterPanel.xml" />		<!-- (64) -->
+    
 
     <include file="Viewtypes_MusicList.xml" />
     <include file="Viewtypes_MusicListLow.xml" />
@@ -41,22 +43,22 @@
 	<include file="Viewtypes_MusicInfoList.xml" />
 	
     <include name="VideoViews">
-        <include>Viewtype-List</include>                <!--id(50)  -->
-        <include>Viewtype-BigList</include>             <!--id(51)  -->
-        <include>Viewtype-PosterInfo</include>          <!--id(56)  -->
-        <include>Viewtype-WallVideo</include>           <!--id(502) -->
-        <include>Viewtype-ClassicPoster</include>       <!--id(506) -->
-        <include>Viewtype-Landscape</include>	        <!--id(507) -->
-        <include>Viewtype-PanelVideo</include>          <!--id(508) -->
-        <include>Viewtype-PanelSeason</include>       	<!--id(509) -->
-        <include>Viewtype-PanelWall</include>       	<!--id(510) -->
-        <include>Viewtype-LowList</include>         	<!--id(511) -->
-		<include>Viewtype-LandscapeCarousel</include>   <!--id(513) -->
-		<include>Viewtype-ClassicPosterInfo</include>   <!--id(514) -->
-		<include>Viewtype-EpisodeInfo</include>		    <!--id(516) -->
-		<include>Viewtype-GlassList</include>		    <!--id(516) -->
-        <include>Viewtype-LoveFilm</include>            <!--id(519)  -->
-        <include>Viewtype-Banner</include>              <!--id(60)  -->
+        <include>Viewtype-BigList</include>				<!-- (50) -->
+        <include>Viewtype-MediumList</include>			<!-- (51) -->
+        <include>Viewtype-LowList</include>				<!-- (52) -->
+        <include>Viewtype-PanelList</include>			<!-- (53) -->
+        <include>Viewtype-BannerList</include>			<!-- (54) -->
+        <include>Viewtype-WideBanner</include>			<!-- (55) -->
+        <include>Viewtype-LoveFilm</include>			<!-- (56) -->
+        <include>Viewtype-Reel</include>				<!-- (57) -->
+        <include>Viewtype-ClassicPoster</include>		<!-- (58) -->
+        <include>Viewtype-ClassicInfo</include>			<!-- (59) -->
+        <include>Viewtype-InfoPoster</include>			<!-- (60) -->
+        <include>Viewtype-Wall</include>				<!-- (61) -->
+        <include>Viewtype-Landscape</include>			<!-- (62) -->
+        <include>Viewtype-InfoWall</include>			<!-- (63) -->
+        <include>Viewtype-PosterPanel</include>			<!-- (64) -->
+        
         <include condition="Skin.HasSetting(NextAired.Enabled)">NextAiredInfo</include>
     </include>
     
@@ -104,7 +106,7 @@
     </include>
     
     <include name="VideoPlaylistViews">
-        <include>Viewtype-List</include>
+        <include>Viewtype-BigList</include>
     </include>
     
     <include name="MusicPlaylistViews">

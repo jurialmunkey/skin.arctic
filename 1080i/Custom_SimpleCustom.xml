@@ -15,13 +15,6 @@
             	<height>484</height>
             	<texture border="15">arctic/common/panel.png</texture>
             </control>  
-            <!--<control type="image">
-            	<posx>528</posx>
-            	<posy>298</posy>
-            	<width>572</width>
-            	<height>460</height>
-            	<texture border="15">arctic/common/whitepanel8.png</texture>
-            </control>    --> 
             <control type="image">
             	<posx>538</posx>
             	<posy>308</posy>

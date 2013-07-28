@@ -21,3 +21,16 @@ Fixed episode info play button not showing
 Big update to PVR section
 Added "panel list" view type (replaces info list)
 Modified "big list" to be more minimal (removed panel behind)
+
+[B]0.2.4[/B]
+Cleanup
+  - Video viewtype filenames
+  
+String localization	
+  - MyVideoNav
+  - Video Viewtypes
+  - Skin Settings
+  - MyMusicNav
+  - Music Viewtypes
+  - Adv Launcher Viewtypes
+  - MyPrograms

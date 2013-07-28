@@ -21,13 +21,13 @@
 			<include>FullscreenDimensions</include>
 			<texture>windows/common/black.png</texture>
 			<aspectratio>scale</aspectratio>
-			<visible>[Container.Content(episodes) + Control.IsVisible(511) + !IsEmpty(ListItem.Thumb) + Skin.HasSetting(lowlist.showepisodethumb)] | [Skin.HasSetting(BackgroundVideo) + Player.HasVideo]</visible>
+			<visible>[Container.Content(episodes) + Control.IsVisible(52) + !IsEmpty(ListItem.Thumb) + Skin.HasSetting(lowlist.showepisodethumb)] | [Skin.HasSetting(BackgroundVideo) + Player.HasVideo]</visible>
 		</control> 
     	<control type="image">
 			<include>FullscreenDimensions</include>
 			<texture>$INFO[ListItem.Thumb]</texture>
 			<aspectratio>scale</aspectratio>
-			<visible>Container.Content(episodes) + Control.IsVisible(511) + !IsEmpty(ListItem.Thumb) + Skin.HasSetting(lowlist.showepisodethumb)</visible>
+			<visible>Container.Content(episodes) + Control.IsVisible(52) + !IsEmpty(ListItem.Thumb) + Skin.HasSetting(lowlist.showepisodethumb)</visible>
 			<fadetime>200</fadetime>
 		</control> 
         <control type="videowindow">

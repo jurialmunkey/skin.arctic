@@ -18,7 +18,7 @@
                 <include>FullscreenDimensions</include>
                 <scrolltime tween="cubic" easing="out">350</scrolltime>
                 <orientation>horizontal</orientation>
-                <viewtype label="Big Cover">list</viewtype>
+                <viewtype label="42316">list</viewtype>
                 <ondown>70</ondown>
                 <pagecontrol>70</pagecontrol>
                 <onright>55</onright>

@@ -126,7 +126,7 @@
 					<include>SettingsCategoryPanelRadioButtonVars</include>
 					<onclick>Skin.ToggleSetting(settings.widget.usedefault)</onclick>
 					<selected>Skin.HasSetting(settings.widget.usedefault)</selected>										
-					<label>Use default widget for settings</label>
+					<label>42421</label>
 					<visible>StringCompare(Skin.String(homescreen.style),panel) + !stringcompare(Skin.String(defaultpanel.widget.type),$LOCALIZE[10511])</visible>
 				</control>
 				<control type="radiobutton" id="2105">
@@ -137,7 +137,7 @@
 					<include>SettingsCategoryPanelRadioButtonVars</include>
 					<onclick>Skin.ToggleSetting(UseRCB)</onclick>
 					<selected>Skin.HasSetting(UseRCB)</selected>										
-					<label>Use rom collection widget for programs</label>
+					<label>42422</label>
 					<visible>StringCompare(Skin.String(homescreen.style),panel) + !Skin.HasSettings(disable.programs) + System.HasAddon(script.games.rom.collection.browser)</visible>
 				</control>
 				<control type="button" id="2106">
@@ -151,7 +151,7 @@
 					<font>Font-Condensed-S27</font>
 					<include>SettingsCategoryDefaultButtonVars</include>
 					<onclick>Skin.SetPath(pictures.slideshowpath)</onclick>
-					<label>[B]Programs slideshow path:[/B]$INFO[Skin.String(pictures.slideshowpath),[CR],]</label>
+					<label>[B]$LOCALIZE[42423]:[/B]$INFO[Skin.String(pictures.slideshowpath),[CR],]</label>
 					<visible>StringCompare(Skin.String(homescreen.style),panel) + !Skin.HasSetting(disable.programs) + stringcompare(Skin.String(defaultpanel.widget.type),$LOCALIZE[10511]) + !Skin.HasSetting(UseRCB)</visible>
 				</control>
 				<control type="button" id="2107">
@@ -165,7 +165,7 @@
 					<font>Font-Condensed-S27</font>
 					<include>SettingsCategoryDefaultButtonVars</include>
 					<onclick>Skin.SetPath(pictures.slideshowpath2)</onclick>
-					<label>[B]Pictures slideshow path:[/B]$INFO[Skin.String(pictures.slideshowpath2),[CR],]</label>
+					<label>[B]$LOCALIZE[42424]:[/B]$INFO[Skin.String(pictures.slideshowpath2),[CR],]</label>
 					<visible>StringCompare(Skin.String(homescreen.style),panel) + [!Skin.HasSetting(disable.pictures) | stringcompare(Skin.String(defaultpanel.widget.type),$LOCALIZE[129])]</visible>
 				</control>
             </control>

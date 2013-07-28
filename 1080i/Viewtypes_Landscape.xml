@@ -1,7 +1,7 @@
 <includes>
-<!-- ==================== -->
-<!-- Landscape Poster (507) -->
-<!-- ==================== -->
+<!-- ============== -->
+<!-- Landscape (62) -->
+<!-- ============== -->
 	<include name="Viewtype-Landscape-Contents">
 		<posx>-75</posx>
 		<posy>340</posy>
@@ -10,11 +10,11 @@
 		<pagecontrol>70</pagecontrol>
 		<scrolltime tween="cubic" easing="out">500</scrolltime>
 		<orientation>horizontal</orientation>
-		<viewtype label="Landscape">list</viewtype>
-		<onleft>507</onleft>
-		<onright>507</onright>
+		<viewtype label="42312">list</viewtype>
+		<onleft>62</onleft>
+		<onright>62</onright>
 		<onup condition="!Skin.HasSetting(KioskMode)">9010</onup>
-		<onup condition="Skin.HasSetting(KioskMode)">507</onup>
+		<onup condition="Skin.HasSetting(KioskMode)">62</onup>
 		<ondown>70</ondown>
 		<focusposition>1</focusposition>
 		<movement>0</movement>
@@ -102,7 +102,7 @@
 					<posx>10</posx>
 					<posy>245</posy>
 					<width>355</width>
-					<label>$VAR[UnderTitle][COLOR=ff00ddaa]   ‡[/COLOR]</label>
+					<label>[COLOR=ff00ddaa]‡   [/COLOR]$VAR[UnderTitle]</label>
 					<font>Font-Alaska-S25-L</font>
 					<textcolor>ddwhite</textcolor>
 					<shadowcolor>33000000</shadowcolor>
@@ -269,7 +269,7 @@
 					<posx>10</posx>
 					<posy>245</posy>
 					<width>355</width>
-					<label>$VAR[UnderTitle][COLOR=ff00ddaa]   ‡[/COLOR]</label>
+					<label>[COLOR=ff00ddaa]‡   [/COLOR]$VAR[UnderTitle]</label>
 					<font>Font-Alaska-S25-L</font>
 					<textcolor>ddwhite</textcolor>
 					<shadowcolor>33000000</shadowcolor>
@@ -349,12 +349,12 @@
 		</focusedlayout>
 	</include>
 	<include name="Viewtype-Landscape-Fixed">
-		<control type="fixedlist" id="507">
+		<control type="fixedlist" id="62">
 			<include>Viewtype-Landscape-Contents</include>
 		</control>
 	</include>
 	<include name="Viewtype-Landscape-Wrap">
-		<control type="wraplist" id="507">
+		<control type="wraplist" id="62">
 			<include>Viewtype-Landscape-Contents</include>
 		</control>
 	</include>
@@ -363,7 +363,7 @@
             <include>FullscreenDimensions</include>
             <include>OptionsShutdownAnimation</include>
             <include>BannerListAnimations</include>
-            <visible>!Window.IsActive(movieinformation) + Control.IsVisible(507)</visible>  
+            <visible>!Window.IsActive(movieinformation) + Control.IsVisible(62)</visible>  
             <include condition="!Skin.HasSetting(viewtype.landscape.wrap)">Viewtype-Landscape-Fixed</include>
             <include condition="Skin.HasSetting(viewtype.landscape.wrap)">Viewtype-Landscape-Wrap</include>
         </control>
@@ -377,13 +377,13 @@
 			<textureslidernib>arctic/common/slider-nf-h.png</textureslidernib>
 			<textureslidernibfocus>arctic/common/slider-fo-h.png</textureslidernibfocus>
 			<showonepage>true</showonepage>
-			<onup>507</onup>
+			<onup>62</onup>
 			<ondown condition="!Skin.HasSetting(KioskMode)">9010</ondown>
-			<ondown condition="Skin.HasSetting(KioskMode)">507</ondown>
+			<ondown condition="Skin.HasSetting(KioskMode)">62</ondown>
 			<animation effect="fade" start="100" end="0" time="300" tween="sine" easing="inout" condition="!Control.IsVisible(9772)">Conditional</animation>
 			<animation effect="fade" start="40" end="100" time="300" tween="sine" easing="inout" condition="Control.HasFocus(70)">Conditional</animation>
 			<animation effect="fade" start="100" end="40" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(70)">Conditional</animation>
-			<visible>Control.IsVisible(507)</visible>
+			<visible>Control.IsVisible(62)</visible>
 		</control>
     </include>
 </includes>

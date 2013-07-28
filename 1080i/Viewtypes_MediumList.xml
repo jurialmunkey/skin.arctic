@@ -1,11 +1,11 @@
 <includes>
-<!-- ========================= -->
-<!-- Glass List (517) -->
-<!-- ========================= -->
-    <include name="Viewtype-GlassList">
+<!-- ================ -->
+<!-- Medium List (51) -->
+<!-- ================ -->
+    <include name="Viewtype-MediumList">
         <control type="group">
             <include>OptionsShutdownAnimation</include>
-			<visible>!Window.IsActive(movieinformation) + Control.IsVisible(517)</visible>
+			<visible>!Window.IsActive(movieinformation) + Control.IsVisible(51)</visible>
 			<include>CommonViewAnimations</include>
 			<animation effect="slide" end="-95,10" condition="Skin.HasSetting(mediumlist.bigcover)">Conditional</animation>
 			<posx>50</posx>
@@ -103,15 +103,15 @@
 				<posy>120</posy>
 				<width>6</width>
 				<height>185</height>
-				<onleft>517</onleft>
-				<onright>517</onright>
+				<onleft>51</onleft>
+				<onright>51</onright>
 				<texturesliderbar border="3,6,3,6">-</texturesliderbar>
 				<texturesliderbarfocus border="3,6,3,6">-</texturesliderbarfocus>
 				<orientation>vertical</orientation>
 				<showonepage>true</showonepage>
-				<visible>Control.IsVisible(517)</visible>
+				<visible>Control.IsVisible(51)</visible>
 			</control>
-			<control type="fixedlist" id="517">
+			<control type="fixedlist" id="51">
 				<posx>422</posx>
 				<posy>505</posy>
 				<width>1500</width>
@@ -119,7 +119,7 @@
 				<pagecontrol>70</pagecontrol>
 				<scrolltime tween="cubic" easing="out">500</scrolltime>
 				<orientation>vertical</orientation>
-				<viewtype label="Medium List">list</viewtype>
+				<viewtype label="42301">list</viewtype>
 				<onleft>70</onleft>
 				<onright>72</onright>
 				<focusposition>1</focusposition>
@@ -169,8 +169,8 @@
 				<focusedlayout height="168">
 					<control type="group">
 						<visible>!Control.HasFocus(73)</visible>
-						<animation effect="slide" start="0,96" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(517).OnPrevious">Focus</animation>
-						<animation effect="slide" start="0,-96" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(517).OnNext">Focus</animation>
+						<animation effect="slide" start="0,96" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(51).OnPrevious">Focus</animation>
+						<animation effect="slide" start="0,-96" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(51).OnNext">Focus</animation>
 						<posy>22</posy>
 						<control type="image">
 							<posx>28</posx>
@@ -364,8 +364,8 @@
         </control>
         <control type="button" id="72">
 			<visible allowhiddenfocus="true">false</visible>
-			<onleft>517</onleft>
-			<onright>517</onright>
+			<onleft>51</onleft>
+			<onright>51</onright>
 			<onup>73</onup>
 			<ondown>73</ondown>
 			<onfocus>SetFocus(73)</onfocus>
@@ -378,13 +378,13 @@
 			<textureslidernib>arctic/common/slider-nf-v.png</textureslidernib>
 			<textureslidernibfocus>arctic/common/slider-fo-v.png</textureslidernibfocus>
 			<showonepage>true</showonepage>
-			<onright>517</onright>
+			<onright>51</onright>
 			<onleft condition="!Skin.HasSetting(KioskMode)">9010</onleft>
-			<onleft condition="Skin.HasSetting(KioskMode)">517</onleft>
+			<onleft condition="Skin.HasSetting(KioskMode)">51</onleft>
 			<animation effect="fade" start="100" end="0" time="300" tween="sine" easing="inout" condition="!Control.IsVisible(9772)">Conditional</animation>
 			<animation effect="fade" start="40" end="100" time="300" tween="sine" easing="inout" condition="Control.HasFocus(70)">Conditional</animation>
 			<animation effect="fade" start="100" end="40" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(70)">Conditional</animation>
-			<visible>Control.IsVisible(517)</visible>
+			<visible>Control.IsVisible(51)</visible>
 		</control>
     </include>
 </includes>

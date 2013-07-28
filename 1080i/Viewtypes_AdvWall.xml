@@ -18,7 +18,7 @@
                     <pagecontrol>70</pagecontrol>
                     <scrolltime tween="cubic" easing="out">500</scrolltime>
                     <orientation>vertical</orientation>
-                    <viewtype label="Wall">list</viewtype>
+                    <viewtype label="42311">list</viewtype>
                     <onleft condition="!Skin.HasSetting(KioskMode)">9010</onleft>
                     <onleft condition="Skin.HasSetting(KioskMode)">502</onleft>
                     <onright condition="!Skin.HasSetting(KioskMode)">9010</onright>

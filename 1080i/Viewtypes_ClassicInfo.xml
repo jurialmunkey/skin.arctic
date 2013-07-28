@@ -1,8 +1,8 @@
 <includes>
 <!-- ==================== -->
-<!-- Classic Poster (514) -->
+<!-- Classic Info (59) -->
 <!-- ==================== -->
-	<include name="Viewtype-ClassicPosterInfo-Content">
+	<include name="Viewtype-ClassicInfo-Content">
 		<visible>Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Actors) | Container.Content(Sets) | Container.HasFolders</visible>
 		<posx>-80</posx>
 		<posy>0</posy>
@@ -11,11 +11,11 @@
 		<pagecontrol>70</pagecontrol>
 		<scrolltime tween="cubic" easing="out">500</scrolltime>
 		<orientation>horizontal</orientation>
-		<viewtype label="Classic Info">list</viewtype>
-		<onleft>514</onleft>
-		<onright>514</onright>
+		<viewtype label="42309">list</viewtype>
+		<onleft>59</onleft>
+		<onright>59</onright>
 		<onup condition="!Skin.HasSetting(KioskMode)">9010</onup>
-		<onup condition="Skin.HasSetting(KioskMode)">514</onup>
+		<onup condition="Skin.HasSetting(KioskMode)">59</onup>
 		<ondown>70</ondown>
 		<focusposition>1</focusposition>
 		<movement>0</movement>
@@ -89,8 +89,8 @@
 		<focusedlayout width="280">
 			<control type="group">
 				<posy>300</posy>
-				<animation condition="Container(514).OnNext | Container(514).OnPrevious" effect="zoom" start="60" end="100" delay="0" time="350" tween="sine" easing="out" center="155,452">Focus</animation>
-				<animation condition="Container(514).OnNext | Container(514).OnPrevious" effect="zoom" start="100" end="60" delay="0" time="250" tween="sine" easing="out" center="155,452">UnFocus</animation>
+				<animation condition="Container(59).OnNext | Container(59).OnPrevious" effect="zoom" start="60" end="100" delay="0" time="350" tween="sine" easing="out" center="155,452">Focus</animation>
+				<animation condition="Container(59).OnNext | Container(59).OnPrevious" effect="zoom" start="100" end="60" delay="0" time="250" tween="sine" easing="out" center="155,452">UnFocus</animation>
 				<control type="image">
 					<description>Shadow Back</description>
 					<posx>-42</posx>
@@ -108,8 +108,8 @@
 					<height>561</height>
 					<texture background="true" flipy="true" diffuse="views/posterview/diffuse-ref.png">$VAR[PosterViewPosterAlt]</texture>
 					<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
-					<animation effect="fade" start="100" end="50" time="250" condition="Container(514).OnNext | Container(514).OnPrevious">UnFocus</animation>
-					<animation effect="fade" end="100" start="50" time="250" condition="Container(514).OnNext | Container(514).OnPrevious">Focus</animation>
+					<animation effect="fade" start="100" end="50" time="250" condition="Container(59).OnNext | Container(59).OnPrevious">UnFocus</animation>
+					<animation effect="fade" end="100" start="50" time="250" condition="Container(59).OnNext | Container(59).OnPrevious">Focus</animation>
 				</control>
 				<control type="image">
 					<description>Shadow</description>
@@ -126,8 +126,8 @@
 					<width>580</width>
 					<height>571</height>
 					<texture>views/posterview/shadow-focus.png</texture>
-					<animation effect="fade" time="450" start="100" end="0" condition="Container(514).OnNext | Container(514).OnPrevious">UnFocus</animation>
-					<animation effect="fade" time="250" end="100" start="0" condition="Container(514).OnNext | Container(514).OnPrevious">Focus</animation>
+					<animation effect="fade" time="450" start="100" end="0" condition="Container(59).OnNext | Container(59).OnPrevious">UnFocus</animation>
+					<animation effect="fade" time="250" end="100" start="0" condition="Container(59).OnNext | Container(59).OnPrevious">Focus</animation>
 				</control>
 				<!-- CD ART -->
 				<control type="image">
@@ -177,28 +177,28 @@
 			</control>
 		</focusedlayout>
 	</include>
-	<include name="Viewtype-ClassicPosterInfo-Wrap">
-		<control type="wraplist" id="514">
-			<include>Viewtype-ClassicPosterInfo-Content</include>
+	<include name="Viewtype-ClassicInfo-Wrap">
+		<control type="wraplist" id="59">
+			<include>Viewtype-ClassicInfo-Content</include>
 		</control>
 	</include>
-	<include name="Viewtype-ClassicPosterInfo-Fixed">
-		<control type="fixedlist" id="514">
-			<include>Viewtype-ClassicPosterInfo-Content</include>
+	<include name="Viewtype-ClassicInfo-Fixed">
+		<control type="fixedlist" id="59">
+			<include>Viewtype-ClassicInfo-Content</include>
 		</control>
 	</include>
-    <include name="Viewtype-ClassicPosterInfo">
+    <include name="Viewtype-ClassicInfo">
         <control type="group">
             <include>OptionsShutdownAnimation</include>
             <include>BannerListAnimations</include>
-            <visible>!Window.IsActive(movieinformation) + Control.IsVisible(514)</visible>  
+            <visible>!Window.IsActive(movieinformation) + Control.IsVisible(59)</visible>  
             <posy>30</posy>
-			<include condition="!Skin.HasSetting(viewtype.classicposterinfo.wrap)">Viewtype-ClassicPosterInfo-Fixed</include>
-            <include condition="Skin.HasSetting(viewtype.classicposterinfo.wrap)">Viewtype-ClassicPosterInfo-Wrap</include>
+			<include condition="!Skin.HasSetting(viewtype.ClassicInfo.wrap)">Viewtype-ClassicInfo-Fixed</include>
+            <include condition="Skin.HasSetting(viewtype.ClassicInfo.wrap)">Viewtype-ClassicInfo-Wrap</include>
             <control type="group">
             	<posy>698</posy>
             	<posx>502</posx>
-            	<visible>![Container(514).OnNext | Container(514).OnPrevious]</visible>
+            	<visible>![Container(59).OnNext | Container(59).OnPrevious]</visible>
             	<animation effect="fade" start="0" end="100" delay="450" time="250" reversible="false">Visible</animation>
 				<control type="label">
 					<posx>24</posx>
@@ -247,13 +247,13 @@
 			<textureslidernib >arctic/common/slider-nf-h.png</textureslidernib>
 			<textureslidernibfocus >arctic/common/slider-fo-h.png</textureslidernibfocus>
 			<showonepage>true</showonepage>
-			<onup>514</onup>
+			<onup>59</onup>
 			<ondown condition="!Skin.HasSetting(KioskMode)">9010</ondown>
-			<ondown condition="Skin.HasSetting(KioskMode)">514</ondown>
+			<ondown condition="Skin.HasSetting(KioskMode)">59</ondown>
 			<animation effect="fade" start="100" end="0" time="300" tween="sine" easing="inout" condition="!Control.IsVisible(9772)">Conditional</animation>
 			<animation effect="fade" start="40" end="100" time="300" tween="sine" easing="inout" condition="Control.HasFocus(70)">Conditional</animation>
 			<animation effect="fade" start="100" end="40" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(70)">Conditional</animation>
-			<visible>Control.IsVisible(514)</visible>
+			<visible>Control.IsVisible(59)</visible>
 		</control>
     </include>
 </includes>

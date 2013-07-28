@@ -1,15 +1,15 @@
 <includes>
-<!-- ========================= -->
-<!-- Landscape Carousel (513)  -->
-<!-- ========================= -->
-    <include name="Viewtype-LandscapeCarousel">
+<!-- ========== -->
+<!-- Reel (57)  -->
+<!-- ========== -->
+    <include name="Viewtype-Reel">
         <control type="group">
-            <visible>Control.IsVisible(513) + !Window.IsActive(movieinformation)</visible>
+            <visible>Control.IsVisible(57) + !Window.IsActive(movieinformation)</visible>
             <include>CommonViewAnimations</include>
             <include>OptionsShutdownAnimation</include>
 			<posy>240</posy>
 			<posx>-25</posx>
-            <control type="fixedlist" id="513">
+            <control type="fixedlist" id="57">
 				<posx>-328</posx>
 				<posy>0</posy>
 				<width>3500</width>
@@ -17,13 +17,13 @@
                 <include>FullscreenDimensions</include>
                 <scrolltime tween="sine" easing="out">500</scrolltime>
                 <orientation>horizontal</orientation>
-                <viewtype label="Reel">list</viewtype>
+                <viewtype label="42307">list</viewtype>
                 <ondown>70</ondown>
                 <pagecontrol>70</pagecontrol>
                 <onup condition="!Skin.HasSetting(KioskMode)">9010</onup>
-                <onup condition="Skin.HasSetting(KioskMode)">513</onup>
-                <onleft>513</onleft>
-                <onright>513</onright>
+                <onup condition="Skin.HasSetting(KioskMode)">57</onup>
+                <onleft>57</onleft>
+                <onright>57</onright>
                 <focusposition>1</focusposition>
                 <itemlayout width="434" height="714"> 
 					<control type="group">
@@ -122,10 +122,10 @@
                 </itemlayout>
                 <focusedlayout width="848" height="714">
 					<control type="group">
-						<animation effect="zoom" start="384,185,424,357" end="0,0,848,714" time="350" tween="sine" easing="out" condition="Container(513).OnNext">Focus</animation>
-						<animation effect="zoom" end="0,185,424,357" start="0,0,848,714" time="350" tween="sine" easing="out" condition="Container(513).OnNext">UnFocus</animation>
-						<animation effect="zoom" start="0,185,424,357" end="0,0,848,714" time="350" tween="sine" easing="out" condition="Container(513).OnPrevious">Focus</animation>
-						<animation condition="Container(513).OnPrevious" type="UnFocus">
+						<animation effect="zoom" start="384,185,424,357" end="0,0,848,714" time="350" tween="sine" easing="out" condition="Container(57).OnNext">Focus</animation>
+						<animation effect="zoom" end="0,185,424,357" start="0,0,848,714" time="350" tween="sine" easing="out" condition="Container(57).OnNext">UnFocus</animation>
+						<animation effect="zoom" start="0,185,424,357" end="0,0,848,714" time="350" tween="sine" easing="out" condition="Container(57).OnPrevious">Focus</animation>
+						<animation condition="Container(57).OnPrevious" type="UnFocus">
 							<effect type="zoom" end="0,185,424,357" start="-384,0,848,714" time="350" tween="sine" easing="out" />
 							<effect type="slide" end="-380" time="0" />
 						</animation>
@@ -220,9 +220,9 @@
 						</control>
 						<control type="group">
 							<posy>474</posy>
-							<animation condition="Container(513).OnNext | Container(513).OnPrevious" effect="fade" start="0" end="100" time="350">Focus</animation>
-							<animation condition="Container(513).OnNext" effect="fade" start="100" end="0" time="250">UnFocus</animation>
-							<animation condition="Container(513).OnPrevious" effect="fade" start="100" end="0" time="0">UnFocus</animation>							
+							<animation condition="Container(57).OnNext | Container(57).OnPrevious" effect="fade" start="0" end="100" time="350">Focus</animation>
+							<animation condition="Container(57).OnNext" effect="fade" start="100" end="0" time="250">UnFocus</animation>
+							<animation condition="Container(57).OnPrevious" effect="fade" start="100" end="0" time="0">UnFocus</animation>							
 							
 							<control type="label">
 								<posx>28</posx>
@@ -260,13 +260,13 @@
 			<textureslidernib>arctic/common/slider-nf-h.png</textureslidernib>
 			<textureslidernibfocus>arctic/common/slider-fo-h.png</textureslidernibfocus>
 			<showonepage>true</showonepage>
-			<onup>513</onup>
+			<onup>57</onup>
 			<ondown condition="!Skin.HasSetting(KioskMode)">9010</ondown>
-			<ondown condition="Skin.HasSetting(KioskMode)">513</ondown>
+			<ondown condition="Skin.HasSetting(KioskMode)">57</ondown>
 			<animation effect="fade" start="100" end="0" time="300" tween="sine" easing="inout" condition="!Control.IsVisible(9772)">Conditional</animation>
 			<animation effect="fade" start="40" end="100" time="300" tween="sine" easing="inout" condition="Control.HasFocus(70)">Conditional</animation>
 			<animation effect="fade" start="100" end="40" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(70)">Conditional</animation>
-			<visible>Control.IsVisible(513)</visible>
+			<visible>Control.IsVisible(57)</visible>
 		</control>
     </include>    
 </includes>

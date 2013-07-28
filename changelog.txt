@@ -37,3 +37,4 @@ String localization
   
 Video Info/OSD show plot on up.
 Video Info/OSD clearlogo preference
+Timer and Search PVR dialogs

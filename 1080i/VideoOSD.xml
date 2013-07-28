@@ -6,7 +6,7 @@
     <zorder>2</zorder>
     <controls>
         <control type="group">
-            <visible>!Window.IsVisible(sliderdialog)</visible>
+            <visible>!Window.IsActive(pvrosdchannels) + !Window.IsVisible(sliderdialog)</visible>
             <animation type="WindowOpen" condition="Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding">
                 <effect type="fade" start="0" end="100" time="175" tween="sine" easing="inout" delay="100" />
                 <effect type="slide" start="0,70" end="0,0" time="275" tween="cubic" easing="inout" />
@@ -295,8 +295,8 @@
                         <width>100</width>
                         <texturefocus>osd/fullscreen/buttons/epg-fo.png</texturefocus>
                         <texturenofocus>osd/fullscreen/buttons/epg-nofo-dark.png</texturenofocus>
-                        <onclick condition="!Skin.HasSetting(PVR.OSD.Reroute)">ActivateWindow(PVROSDGuide)</onclick>
-                        <onclick condition="Skin.HasSetting(PVR.OSD.Reroute)">ActivateWindowAndFocus(MyPVR, 31,0, 10,0)</onclick>
+                        <!--<onclick condition="!Skin.HasSetting(PVR.OSD.Reroute)">ActivateWindow(PVROSDGuide)</onclick>-->
+                        <onclick>ActivateWindowAndFocus(MyPVR, 31,0, 10,0)</onclick>
                         <onleft>10</onleft>
                         <onright>9</onright>
                         <onup>Close</onup>

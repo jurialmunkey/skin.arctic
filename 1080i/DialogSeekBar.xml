@@ -7,7 +7,7 @@
         <!-- Seek Bar -->
 		<control type="group">
 			<posy>770</posy>
-			<visible>Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Window.IsActive(videoosd) | Player.ShowInfo | Window.IsVisible(fullscreeninfo)</visible>
+			<visible>!Window.IsActive(pvrosdchannels) + [Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Window.IsActive(videoosd) | Player.ShowInfo | Window.IsVisible(fullscreeninfo)]</visible>
 			<animation type="Visible" reversible="false">
 				<effect type="fade" start="0" end="100" time="300" tween="sine" easing="inout" delay="150" />
 			</animation>

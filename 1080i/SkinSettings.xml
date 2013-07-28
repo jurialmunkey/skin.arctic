@@ -589,6 +589,13 @@
 							<onclick>Skin.ToggleSetting(videoosd.longbar)</onclick>
 							<label>42419</label>
 						</control>
+						<control type="radiobutton" id="8011">
+							<width>1210</width>
+							<include>SettingsCategoryRadioButtonVars</include>
+							<selected>Skin.HasSetting(videoosd.clearlogo)</selected>
+							<onclick>Skin.ToggleSetting(videoosd.clearlogo)</onclick>
+							<label>42428</label>
+						</control>
 						<control type="radiobutton" id="8006">
 							<width>1210</width>
 							<include>SettingsCategoryRadioButtonVars</include>

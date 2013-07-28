@@ -359,6 +359,101 @@
 		<value condition="IsEmpty(Window.Property(ExtendPlot))">bbwhite</value>
     </variable>
     
+    <include name="HomeProfileInfoLabel">
+        <posx>110</posx>
+        <posy>46</posy>
+        <width>600</width>
+        <height>60</height>
+        <font>Font-Alaska-S29-BL</font>
+        <textcolor>Mod_Tags</textcolor>
+        <scroll>false</scroll>
+        <align>left</align>
+        <animation type="Visible">
+            <effect type="fade" start="0" end="100" time="250" delay="150" tween="sine" easing="inout" />
+            <effect type="slide" start="0,55" end="0,0" time="500" tween="cubic" easing="inout" />
+        </animation>
+        <animation type="Hidden">
+            <effect type="fade" start="100" end="0" time="250" tween="sine" easing="inout" />
+            <effect type="slide" start="0,0" end="0,-55" time="500" tween="cubic" easing="inout" />
+        </animation>
+    </include>
+    
+    <include name="HomeProfileInfo">
+        <control type="group">
+            <visible>!Window.IsActive(favourites) + !Window.IsActive(script-globalsearch-main.xml) + !Window.IsActive(script-globalsearch-infodialog.xml) + !Window.IsActive(script-globalsearch-contextmenu.xml) + ![Window.IsVisible(virtualkeyboard) + !IsEmpty(Window.Property(HomeSearch))]</visible>
+            <posx>75</posx>
+            <posy>24</posy>
+            <include>BannerListInfoAnimation</include>
+            <control type="group">
+                <visible>!Skin.HasSetting(HideHomeProfileInfo)</visible>
+                <control type="image">
+                    <posx>25</posx>
+                    <posy>46</posy>
+                    <width>60</width>
+                    <height>60</height>
+                    <texture>$INFO[System.ProfileThumb]</texture>
+                </control>
+                <control type="image">
+                    <posx>13</posx>
+                    <posy>34</posy>
+                    <width>84</width>
+                    <height>84</height>
+                    <texture>windows/home/ava-overlay.png</texture>
+                </control>
+                <control type="label">
+                    <include>HomeProfileInfoLabel</include>
+                    <label>$INFO[System.ProfileName]</label>
+                    <visible>Container(30).HasFocus(1)</visible>
+                </control>
+                <control type="label">
+                    <include>HomeProfileInfoLabel</include>
+                    <label>$INFO[Window.Property(Movies.Count),, $LOCALIZE[342]]</label>
+                    <visible>Container(30).HasFocus(2)</visible>
+                </control>
+                <control type="label">
+                    <include>HomeProfileInfoLabel</include>
+                    <label>$INFO[Window.Property(TVShows.Count),, $LOCALIZE[20343]]</label>
+                    <visible>Container(30).HasFocus(3)</visible>
+                </control>
+                <control type="label">
+                    <include>HomeProfileInfoLabel</include>
+                    <label>$INFO[Window.Property(Music.SongsCount),, $LOCALIZE[134]]</label>
+                    <visible>Container(30).HasFocus(4)</visible>
+                </control>
+                <control type="wraplist" id="30">
+                    <posx>0</posx>
+                    <posy>0</posy>
+                    <height>2</height>
+                    <width>2</width>
+                    <orientation>horizontal</orientation>
+                    <focusposition>0</focusposition>
+                    <scrolltime>0</scrolltime>
+                    <viewtype>list</viewtype>
+                    <itemlayout width="2" height="2"/>
+                    <focusedlayout width="2" height="2"/>
+                    <content>
+                        <item id="1">
+                            <label>-</label>
+                            <onclick>noop</onclick>
+                        </item>
+                        <item id="2">
+                            <label>-</label>
+                            <onclick>noop</onclick>
+                        </item>
+                        <item id="3">
+                            <label>-</label>
+                            <onclick>noop</onclick>
+                        </item>
+                        <item id="4">
+                            <label>-</label>
+                            <onclick>noop</onclick>
+                        </item>
+                    </content>
+                </control>
+            </control>
+        </control>
+    </include>
+    
     <include name="DialogHeaderMod">
     	<textcolor>ddwhite</textcolor>
 		<font>Font-Condensed-S34</font>

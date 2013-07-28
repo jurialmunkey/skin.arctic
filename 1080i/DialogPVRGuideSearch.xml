@@ -4,29 +4,31 @@
 	    <control type="group">
     	    <include>KeyboardAnimations</include>
     	    <visible>!Window.IsVisible(virtualkeyboard) + !Window.IsVisible(numericinput)</visible>
+
     	    <control type="image">
-    	        <posx>920</posx>
-    	        <posy>154</posy>
-    	        <width>80</width>
-    	        <height>60</height>
-    	        <texture>dialogs/default/arrow.png</texture>
+    	        <posx>343</posx>
+    	        <posy>140</posy>
+    	        <width>1234</width>
+    	        <height>800</height>
+    	        <texture border="39">arctic/common/panel.png</texture>
     	    </control>
     	    <control type="image">
-    	        <posx>319</posx>
-    	        <posy>174</posy>
-    	        <width>1282</width>
-    	        <height>732</height>
-    	        <texture border="39">dialogs/default/bg.png</texture>
-    	    </control>       
+            	<posx>345</posx>
+            	<posy>130</posy>
+            	<width>80</width>
+            	<height>80</height>
+            	<texture>windows/home/icons/search.png</texture>
+            	<aspectratio>keep</aspectratio>
+            </control>
     	    <control type="label">
     	        <description>Heading</description>
-    	        <posx>353</posx>
-    	        <posy>126</posy>
-    	        <width>1214</width>
+    	        <posx>430</posx>
+    	        <posy>154</posy>
+    	        <width>1114</width>
     	        <label>$LOCALIZE[19142]</label>
     	        <font>Font-Condensed-S34</font>
     	        <textcolor>ddwhite</textcolor>
-    	        <align>center</align>
+    	        <align>left</align>
     	    </control>
     	    <control type="group">
     	        <posx>353</posx>
@@ -40,7 +42,7 @@
     	            <align>left</align>
     	            <textoffsetx>20</textoffsetx>
     	            <label>$LOCALIZE[19133]</label>
-    	            <textcolor>FF585858</textcolor>
+    	            <textcolor>mod-infotags-alt</textcolor>
     	            <shadowcolor>20FFFFFF</shadowcolor>
     	            <font>Font-Condensed-S30</font>
     	        </control>
@@ -49,13 +51,13 @@
         	    	<posy>40</posy>
         	    	<width>1214</width>
         	    	<height>61</height>
-        	    	<texture border="5">dialogs/default/inner.png</texture>
+        	    	<texture border="10">arctic/common/whitepanel8.png</texture>
         	    </control>
         	    <control type="edit" id="9">
         	        <description>Search</description>
         	        <posx>0</posx>
         	        <posy>40</posy>
-        	        <width>1162</width>
+        	        <width>1214</width>
         	        <height>60</height>
         	        <align>left</align>
         	        <aligny>center</aligny>
@@ -66,7 +68,7 @@
         	        <shadowcolor>20FFFFFF</shadowcolor>
         	        <font>Font-Condensed-S32</font>
         	        <pulseonselect>false</pulseonselect>
-        	        <texturefocus border="2">dialogs/default/highlight.png</texturefocus>
+        	        <texturefocus border="10">views/other/focus-mod8.png</texturefocus>
         	        <onup>8000</onup>
         	        <onleft>9</onleft>
         	        <onright>9</onright>
@@ -86,7 +88,7 @@
         	        <posy>40</posy>
         	        <width>74</width>
         	        <height>60</height>
-        	        <texture>dialogs/mediasource/keyboard-fo.png</texture>
+        	        <texture>dialogs/mediasource/keyboard-nf.png</texture>
         	        <visible>Control.HasFocus(9)</visible>
         	    </control>
         	    <control type="textbox">
@@ -97,7 +99,7 @@
         	        <height>74</height>
         	        <align>justify</align>
         	        <label>$LOCALIZE[19001] $LOCALIZE[19002]</label>
-        	        <textcolor>FF585858</textcolor>
+        	        <textcolor>mod-infotags-alt</textcolor>
         	        <shadowcolor>20FFFFFF</shadowcolor>
         	        <font>Font-Condensed-S28</font>
         	    </control>
@@ -110,7 +112,7 @@
             	    		<posy>0</posy>
             	    		<width>600</width>
             	    		<height>474</height>
-            	    		<texture border="5">dialogs/default/inner.png</texture>
+            	    		<texture border="10">arctic/common/whitepanel8.png</texture>
             	    	</control>
             	    	<control type="radiobutton" id="10">
             	    		<description>Include Description</description>
@@ -128,8 +130,8 @@
                             <shadowcolor>20FFFFFF</shadowcolor>
                             <textureradioon>buttons/radio/radio-light-fo.png</textureradioon>
                             <textureradiooff>buttons/radio/radio-light-nf.png</textureradiooff>
-                            <texturefocus border="2">dialogs/default/highlight.png</texturefocus>
-                            <texturenofocus>dialogs/default/separator.png</texturenofocus>
+                            <texturefocus border="10">views/other/focus-mod8.png</texturefocus>
+                            
             	    		<label>19134</label>
             	    		<onleft>12</onleft>
             	    		<onright>12</onright>
@@ -152,8 +154,8 @@
             	    		<shadowcolor>20FFFFFF</shadowcolor>
             	    		<textureradioon>buttons/radio/radio-light-fo.png</textureradioon>
             	    		<textureradiooff>buttons/radio/radio-light-nf.png</textureradiooff>
-            	    		<texturefocus border="2">dialogs/default/highlight.png</texturefocus>
-            	    		<texturenofocus>dialogs/default/separator.png</texturenofocus>
+            	    		<texturefocus border="10">views/other/focus-mod8.png</texturefocus>
+            	    		
             	    		<label>19135</label>
             	    		<onleft>13</onleft>
             	    		<onright>13</onright>
@@ -175,8 +177,8 @@
             	    		<shadowcolor>20FFFFFF</shadowcolor>
             	    		<font>Font-Condensed-S32</font>
             	    		<pulseonselect>false</pulseonselect>
-            	    		<texturefocus border="2">dialogs/default/highlight.png</texturefocus>
-            	    		<texturenofocus>dialogs/default/separator.png</texturenofocus>
+            	    		<texturefocus border="10">views/other/focus-mod8.png</texturefocus>
+            	    		
             	    		<label>19128</label>
             	    		<onright>16</onright>
             	    		<onleft>16</onleft>
@@ -198,8 +200,8 @@
             	    		<shadowcolor>20FFFFFF</shadowcolor>
             	    		<font>Font-Condensed-S32</font>
             	    		<pulseonselect>false</pulseonselect>
-            	    		<texturefocus border="2">dialogs/default/highlight.png</texturefocus>
-            	    		<texturenofocus>dialogs/default/separator.png</texturenofocus>
+            	    		<texturefocus border="10">views/other/focus-mod8.png</texturefocus>
+            	    		
             	    		<label>19129</label>
             	    		<onright>17</onright>
             	    		<onleft>17</onleft>
@@ -216,8 +218,8 @@
         	    		    <texturedown>buttons/spinctrl/arrow-light-down-nf.png</texturedown>
         	    		    <textureupfocus>buttons/spinctrl/arrow-light-up-fo.png</textureupfocus>
         	    		    <texturedownfocus>buttons/spinctrl/arrow-light-down-fo.png</texturedownfocus>
-        	    		    <texturefocus border="2">dialogs/default/highlight.png</texturefocus>
-        	    		    <texturenofocus>dialogs/default/separator.png</texturenofocus>
+        	    		    <texturefocus border="10">views/other/focus-mod8.png</texturefocus>
+        	    		    
         	    		    <textcolor>FF585858</textcolor>
         	    		    <focusedcolor>eewhite</focusedcolor>
         	    		    <disabledcolor>77585858</disabledcolor>
@@ -246,8 +248,8 @@
             	    		<shadowcolor>20FFFFFF</shadowcolor>
             	    		<textureradioon>buttons/radio/radio-light-fo.png</textureradioon>
             	    		<textureradiooff>buttons/radio/radio-light-nf.png</textureradiooff>
-            	    		<texturefocus border="2">dialogs/default/highlight.png</texturefocus>
-            	    		<texturenofocus>dialogs/default/separator.png</texturenofocus>
+            	    		<texturefocus border="10">views/other/focus-mod8.png</texturefocus>
+            	    		
             	    		<label>19132</label>
             	    		<onleft>21</onleft>
             	    		<onright>21</onright>
@@ -270,8 +272,8 @@
             	    		<shadowcolor>20FFFFFF</shadowcolor>
             	    		<textureradioon>buttons/radio/radio-light-fo.png</textureradioon>
             	    		<textureradiooff>buttons/radio/radio-light-nf.png</textureradiooff>
-            	    		<texturefocus border="2">dialogs/default/highlight.png</texturefocus>
-            	    		<texturenofocus>dialogs/default/separator.png</texturenofocus>
+            	    		<texturefocus border="10">views/other/focus-mod8.png</texturefocus>
+            	    		
             	    		<label>19123</label>
             	    		<onleft>23</onleft>
             	    		<onright>23</onright>
@@ -294,7 +296,7 @@
             	    		<shadowcolor>20FFFFFF</shadowcolor>
             	    		<textureradioon>buttons/radio/radio-light-fo.png</textureradioon>
             	    		<textureradiooff>buttons/radio/radio-light-nf.png</textureradiooff>
-            	    		<texturefocus border="2">dialogs/default/highlight.png</texturefocus>
+            	    		<texturefocus border="10">views/other/focus-mod8.png</texturefocus>
             	    		<label>19124</label>
             	    		<onleft>27</onleft>
             	    		<onright>27</onright>
@@ -310,7 +312,7 @@
             	    		<posy>0</posy>
             	    		<width>600</width>
             	    		<height>474</height>
-            	    		<texture border="5">dialogs/default/inner.png</texture>
+            	    		<texture border="10">arctic/common/whitepanel8.png</texture>
             	    	</control>
             	    	<control type="spincontrolex" id="12">
             	    		<description>Min Duration</description>
@@ -322,8 +324,7 @@
             	    		<texturedown>buttons/spinctrl/arrow-light-down-nf.png</texturedown>
             	    		<textureupfocus>buttons/spinctrl/arrow-light-up-fo.png</textureupfocus>
             	    		<texturedownfocus>buttons/spinctrl/arrow-light-down-fo.png</texturedownfocus>
-            	    		<texturefocus border="2">dialogs/default/highlight.png</texturefocus>
-            	    		<texturenofocus>dialogs/default/separator.png</texturenofocus>
+            	    		<texturefocus border="10">views/other/focus-mod8.png</texturefocus>
             	    		<textcolor>FF585858</textcolor>
             	    		<focusedcolor>eewhite</focusedcolor>
             	    		<disabledcolor>77585858</disabledcolor>
@@ -346,8 +347,7 @@
             	    		<texturedown>buttons/spinctrl/arrow-light-down-nf.png</texturedown>
             	    		<textureupfocus>buttons/spinctrl/arrow-light-up-fo.png</textureupfocus>
             	    		<texturedownfocus>buttons/spinctrl/arrow-light-down-fo.png</texturedownfocus>
-            	    		<texturefocus border="2">dialogs/default/highlight.png</texturefocus>
-            	    		<texturenofocus>dialogs/default/separator.png</texturenofocus>
+            	    		<texturefocus border="10">views/other/focus-mod8.png</texturefocus>
             	    		<textcolor>FF585858</textcolor>
             	    		<focusedcolor>eewhite</focusedcolor>
             	    		<disabledcolor>77585858</disabledcolor>
@@ -375,8 +375,8 @@
             	    		<shadowcolor>20FFFFFF</shadowcolor>
             	    		<font>Font-Condensed-S32</font>
             	    		<pulseonselect>false</pulseonselect>
-            	    		<texturefocus border="2">dialogs/default/highlight.png</texturefocus>
-            	    		<texturenofocus>dialogs/default/separator.png</texturenofocus>
+            	    		<texturefocus border="10">views/other/focus-mod8.png</texturefocus>
+            	    		
             	    		<label>19126</label>
             	    		<onright>14</onright>
             	    		<onleft>14</onleft>
@@ -398,8 +398,8 @@
             	    		<shadowcolor>20FFFFFF</shadowcolor>
             	    		<font>Font-Condensed-S32</font>
             	    		<pulseonselect>false</pulseonselect>
-            	    		<texturefocus border="2">dialogs/default/highlight.png</texturefocus>
-            	    		<texturenofocus>dialogs/default/separator.png</texturenofocus>
+            	    		<texturefocus border="10">views/other/focus-mod8.png</texturefocus>
+            	    		
             	    		<label>19127</label>
             	    		<onright>15</onright>
             	    		<onleft>15</onleft>
@@ -422,8 +422,8 @@
             	    		<shadowcolor>20FFFFFF</shadowcolor>
             	    		<textureradioon>buttons/radio/radio-light-fo.png</textureradioon>
             	    		<textureradiooff>buttons/radio/radio-light-nf.png</textureradiooff>
-            	    		<texturefocus border="2">dialogs/default/highlight.png</texturefocus>
-            	    		<texturenofocus>dialogs/default/separator.png</texturenofocus>
+            	    		<texturefocus border="10">views/other/focus-mod8.png</texturefocus>
+            	    		
             	    		<label>19121</label>
             	    		<onright>18</onright>
             	    		<onleft>18</onleft>
@@ -440,8 +440,8 @@
             	    		<texturedown>buttons/spinctrl/arrow-light-down-nf.png</texturedown>
             	    		<textureupfocus>buttons/spinctrl/arrow-light-up-fo.png</textureupfocus>
             	    		<texturedownfocus>buttons/spinctrl/arrow-light-down-fo.png</texturedownfocus>
-            	    		<texturefocus border="2">dialogs/default/highlight.png</texturefocus>
-            	    		<texturenofocus>dialogs/default/separator.png</texturenofocus>
+            	    		<texturefocus border="10">views/other/focus-mod8.png</texturefocus>
+            	    		
             	    		<textcolor>FF585858</textcolor>
             	    		<focusedcolor>eewhite</focusedcolor>
             	    		<disabledcolor>77585858</disabledcolor>
@@ -464,8 +464,8 @@
             	    		<texturedown>buttons/spinctrl/arrow-light-down-nf.png</texturedown>
             	    		<textureupfocus>buttons/spinctrl/arrow-light-up-fo.png</textureupfocus>
             	    		<texturedownfocus>buttons/spinctrl/arrow-light-down-fo.png</texturedownfocus>
-            	    		<texturefocus border="2">dialogs/default/highlight.png</texturefocus>
-            	    		<texturenofocus>dialogs/default/separator.png</texturenofocus>
+            	    		<texturefocus border="10">views/other/focus-mod8.png</texturefocus>
+            	    		
             	    		<textcolor>FF585858</textcolor>
             	    		<focusedcolor>eewhite</focusedcolor>
             	    		<disabledcolor>77585858</disabledcolor>
@@ -494,7 +494,7 @@
             	    		<shadowcolor>20FFFFFF</shadowcolor>
             	    		<textureradioon>buttons/radio/radio-light-fo.png</textureradioon>
             	    		<textureradiooff>buttons/radio/radio-light-nf.png</textureradiooff>
-            	    		<texturefocus border="2">dialogs/default/highlight.png</texturefocus>
+            	    		<texturefocus border="10">views/other/focus-mod8.png</texturefocus>
             	    		<label>19125</label>
             	    		<onleft>24</onleft>
             	    		<onright>24</onright>
@@ -506,7 +506,7 @@
         	</control>
     	    <control type="group" id="8000">
     	        <posx>343</posx>
-    	        <posy>871</posy>
+    	        <posy>854</posy>
     	        <control type="button" id="26">
     	            <description>Select</description>
     	            <texturefocus>buttons/select-fo.png</texturefocus>

@@ -5,37 +5,45 @@
     	    <include>KeyboardAnimations</include>
     	    <visible>!Window.IsVisible(virtualkeyboard) + !Window.IsVisible(numericinput)</visible>
     	    
+    	    
     	    <control type="image">
-    	        <posx>920</posx>
-    	        <posy>156</posy>
-    	        <width>80</width>
-    	        <height>60</height>
-    	        <texture>dialogs/default/arrow.png</texture>
+    	    	<posx>649</posx>
+    	    	<posy>159</posy>
+    	    	<width>622</width>
+    	    	<height>773</height>
+    	    	<texture border="10">arctic/common/panel.png</texture>
     	    </control>
     	    <control type="image">
-    	        <posx>626</posx>
-    	        <posy>176</posy>
-    	        <width>668</width>
-    	        <height>728</height>
-    	        <texture border="39">dialogs/default/bg.png</texture>
+    	    	<posx>629</posx>
+    	    	<posy>139</posy>
+    	    	<width>662</width>
+    	    	<height>813</height>
+    	    	<texture border="40">arctic/common/border-20.png</texture>
     	    </control>
-    	                
+    	    <control type="image">
+            	<posx>640</posx>
+            	<posy>150</posy>
+            	<width>80</width>
+            	<height>80</height>
+            	<texture>windows/home/icons/timers.png</texture>
+            	<aspectratio>keep</aspectratio>
+            </control>
     	    <control type="label" id="2">
     	        <description>Heading</description>
-    	        <posx>660</posx>
-    	        <posy>128</posy>
+    	        <posx>710</posx>
+    	        <posy>168</posy>
     	        <width>600</width>
     	        <font>Font-Condensed-S34</font>
-    	        <textcolor>ddwhite</textcolor>
-    	        <align>center</align>
+    	        <textcolor>mod-infotags-alt</textcolor>
+    	        <align>left</align>
     	    </control>
     	    
     	    <control type="image">
-    	    	<posx>660</posx>
-    	    	<posy>210</posy>
-    	    	<width>600</width>
-    	    	<height>661</height>
-    	    	<texture border="5">dialogs/default/inner.png</texture>
+    	    	<posx>659</posx>
+    	    	<posy>209</posy>
+    	    	<width>602</width>
+    	    	<height>663</height>
+    	    	<texture border="10">arctic/common/whitepanel8.png</texture>
     	    </control>
 
     	    <control type="grouplist" id="5">
@@ -60,8 +68,7 @@
                 <focusedcolor>eewhite</focusedcolor>
                 <disabledcolor>77585858</disabledcolor>
                 <shadowcolor>20FFFFFF</shadowcolor>
-                <texturefocus border="2">dialogs/default/highlight.png</texturefocus>
-                <texturenofocus>dialogs/default/separator-btn.png</texturenofocus>
+                <texturefocus border="8">views/other/focus-mod8.png</texturefocus>
             </control>
             
             <control type="radiobutton" id="8">
@@ -76,8 +83,7 @@
                 <shadowcolor>20FFFFFF</shadowcolor>
                 <textureradioon>buttons/radio/radio-light-fo.png</textureradioon>
                 <textureradiooff>buttons/radio/radio-light-nf.png</textureradiooff>
-                <texturefocus border="2">dialogs/default/highlight.png</texturefocus>
-                <texturenofocus>dialogs/default/separator-btn.png</texturenofocus>
+                <texturefocus border="8">views/other/focus-mod8.png</texturefocus>
             </control>
             
             <control type="spincontrolex" id="9">
@@ -85,8 +91,7 @@
                 <texturedown>buttons/spinctrl/arrow-light-down-nf.png</texturedown>
                 <textureupfocus>buttons/spinctrl/arrow-light-up-fo.png</textureupfocus>
                 <texturedownfocus>buttons/spinctrl/arrow-light-down-fo.png</texturedownfocus>
-                <texturefocus border="2">dialogs/default/highlight.png</texturefocus>
-                <texturenofocus>dialogs/default/separator-btn.png</texturenofocus>
+                <texturefocus border="8">views/other/focus-mod8.png</texturefocus>
                 <textcolor>FF585858</textcolor>
                 <focusedcolor>eewhite</focusedcolor>
                 <disabledcolor>77585858</disabledcolor>
@@ -99,8 +104,7 @@
                 <posx>0</posx>
                 <posy>0</posy>
                 <height>60</height>
-                <texturefocus border="2">dialogs/default/highlight.png</texturefocus>
-                <texturenofocus>dialogs/default/separator-btn.png</texturenofocus>
+                <texturefocus border="8">views/other/focus-mod8.png</texturefocus>
                 <sliderwidth>150</sliderwidth>
                 <sliderheight>28</sliderheight>
                 <texturesliderbar>dialogs/mediasource/slider-back.png</texturesliderbar>
@@ -142,13 +146,12 @@
                 <shadowcolor>20FFFFFF</shadowcolor>
                 <font>Font-Condensed-S32</font>
                 <pulseonselect>false</pulseonselect>
-                <texturefocus border="2">dialogs/default/highlight.png</texturefocus>
-                <texturenofocus>dialogs/default/separator-btn.png</texturenofocus>
+                <texturefocus border="8">views/other/focus-mod8.png</texturefocus>
             </control>
     	    
     	    <control type="group" id="8000">
     	        <posx>651</posx>
-    	        <posy>868</posy>
+    	        <posy>850</posy>
     	        <control type="button" id="28">
     	            <description>Select</description>
     	            <texturefocus>buttons/select-fo.png</texturefocus>

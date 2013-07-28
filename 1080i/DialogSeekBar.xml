@@ -214,7 +214,18 @@
 							<height>155</height>
 						<texture background="true">$INFO[Player.Art(clearlogo)]</texture>
 						<aspectratio scalediffuse="false" align="right" aligny="center">keep</aspectratio>
-						<visible>!VideoPlayer.Content(LiveTV) + Skin.HasSetting(videoosd.clearlogo)</visible>
+						<visible>!VideoPlayer.Content(LiveTV) + Skin.HasSetting(videoosd.clearlogo) + VideoPlayer.Content(movies)</visible>
+						<animation effect="slide" end="0,-120" time="300" tween="cubic" easing="inout" condition="[[Player.ShowInfo | Window.IsVisible(fullscreeninfo)] + !Window.IsActive(videoosd) + !IsEmpty(Window(seekbar).Property(ExtendPlot)) + !VideoPlayer.Content(LiveTV)]">Conditional</animation>
+					</control>
+					<control type="image">
+						<description>Thumb</description>
+						<posx>520</posx>
+							<posy>96</posy>
+							<width>275</width>
+							<height>155</height>
+						<texture background="true">$INFO[Player.Art(tvshow.clearlogo)]</texture>
+						<aspectratio scalediffuse="false" align="right" aligny="center">keep</aspectratio>
+						<visible>!VideoPlayer.Content(LiveTV) + Skin.HasSetting(videoosd.clearlogo) + !VideoPlayer.Content(movies)</visible>
 						<animation effect="slide" end="0,-120" time="300" tween="cubic" easing="inout" condition="[[Player.ShowInfo | Window.IsVisible(fullscreeninfo)] + !Window.IsActive(videoosd) + !IsEmpty(Window(seekbar).Property(ExtendPlot)) + !VideoPlayer.Content(LiveTV)]">Conditional</animation>
 					</control>
 					<control type="group">

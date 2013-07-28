@@ -13,9 +13,8 @@
 				<width>722</width>
 				<height>924</height>
                 <texture border="20">arctic/common/panel.png</texture>
-                <bordertexture border="40">arctic/common/banner-20.png</bordertexture>
+                <bordertexture border="40">arctic/common/border-20.png</bordertexture>
                 <bordersize>20</bordersize>
-                <colordiffuse>ddwhite</colordiffuse>
             </control>
             <control type="image">
                 <posx>99</posx>
@@ -24,7 +23,6 @@
 				<height>760</height>
                 <texture border="35">arctic/common/whitepanel8.png</texture>
                 <aspectratio>stretch</aspectratio>
-                <colordiffuse>ddwhite</colordiffuse>
             </control>
             <control type="image">
                 <posx>35</posx>
@@ -32,7 +30,7 @@
 				<width>810</width>
 				<height>1012</height>
                 <texture border="80">arctic/common/border-64.png</texture>
-                <colordiffuse>bbwhite</colordiffuse>
+                <colordiffuse>ddwhite</colordiffuse>
             </control>
             <control type="group">
                 <visible>!Window.IsActive(DialogPVRGuideInfo.xml)</visible>

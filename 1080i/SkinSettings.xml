@@ -469,7 +469,16 @@
 							<include>SettingsCategoryRadioButtonVars</include>
 							<selected>!Skin.HasSetting(HideFanart)</selected>
 							<onclick>Skin.ToggleSetting(HideFanart)</onclick>
+							<onclick condition="!Skin.HasSetting(HideFanart)">Skin.Reset(NoDimFade)</onclick>
 							<label>$LOCALIZE[41191]</label>
+						</control>
+						<control type="radiobutton" id="3010">
+							<width>1210</width>
+							<include>SettingsCategoryRadioButtonVars</include>
+							<selected>Skin.HasSetting(NoDimFade)</selected>
+							<onclick>Skin.ToggleSetting(NoDimFade)</onclick>
+							<label>$LOCALIZE[42429]</label>
+							<visible>Skin.HasSetting(HideFanart)</visible>
 						</control>
 						<control type="radiobutton" id="3006">
 							<width>1210</width>
@@ -477,6 +486,7 @@
 							<selected>!Skin.HasSetting(disable.dimfanart)</selected>
 							<onclick>Skin.ToggleSetting(disable.dimfanart)</onclick>
 							<label>42412</label>
+							<visible>!Skin.HasSetting(NoDimFade)</visible>
 						</control>
 						<control type="radiobutton" id="3002">
 							<width>1210</width>

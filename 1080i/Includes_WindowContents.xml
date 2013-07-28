@@ -35,7 +35,7 @@
             <visible>Skin.HasSetting(BackgroundVideo) + Player.HasVideo</visible>
         </control>
         <!-- FLOOR -->
-        <control type="image">   
+        <!--<control type="image">   
             <posx>0</posx>
             <posy>-2700</posy>
             <width>1920</width>
@@ -45,7 +45,7 @@
             <colordiffuse>Mod_Overlay_Floor</colordiffuse>
             <include>visiblehidefadeinfo</include>
             <visible>![[Skin.HasSetting(disable.dimfanart) + ![Window.IsVisible(movieinformation) | Window.IsVisible(musicinformation)]] | Window.IsVisible(home)]</visible>
-        </control>
+        </control>-->
         
         <!-- DIM FANART -->
         <control type="image">
@@ -53,15 +53,24 @@
             <texture>arctic/common/nofanart.png</texture>
             <colordiffuse>Mod_Overlay_Dimfanart</colordiffuse>
             <include>visiblehidefadeinfo</include>
-            <visible>![Window.IsVisible(home) + StringCompare(Skin.String(homescreen.style),simple)]</visible>
+            <visible>![Window.IsVisible(home) + StringCompare(Skin.String(homescreen.style),simple)] + !Skin.HasSetting(NoDimFade)</visible>
         </control>
         
         <control type="image">
             <include>FullscreenDimensions</include>
-            <texture>windows/common/white.png</texture>
+            <texture>arctic/common/nofanart.png</texture>
             <colordiffuse>Mod_Overlay_Dimfanart_Extra</colordiffuse>
             <include>visiblehidefadeinfo</include>
-            <visible>Skin.HasSetting(disable.dimfanart) + ![Window.IsVisible(home) + !StringCompare(Skin.String(homescreen.style),metro)]</visible>
+            <visible>Skin.HasSetting(disable.dimfanart) + ![Window.IsVisible(home) + !StringCompare(Skin.String(homescreen.style),metro)] + !Skin.HasSetting(NoDimFade)</visible>
+        </control>
+        
+        <control type="image">   
+            <include>FullscreenDimensions</include>
+            <aspectratio>stretch</aspectratio>
+            <texture diffuse="arctic/common/floor.png">arctic/common/nofanart.png</texture>
+            <include>visiblehidefadeinfo</include>
+            <colordiffuse>Mod_Overlay_Floor</colordiffuse>
+            <visible>![[Skin.HasSetting(disable.dimfanart) + ![Window.IsVisible(movieinformation) | Window.IsVisible(musicinformation)]] | Window.IsVisible(home)] + !Skin.HasSetting(NoDimFade)</visible>
         </control>
         
         <!-- GLass -->

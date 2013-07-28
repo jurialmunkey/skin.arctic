@@ -832,14 +832,14 @@
 							<width>1210</width>
 							<include>SettingsCategoryDefaultButtonVars</include>
 							<label>$LOCALIZE[41281]</label>
-							<label2>[COLOR=SettingsBlue]$INFO[system.addontitle(Skin.String(SubtitleScript_Path))][/COLOR]</label2>
+							<label2>[COLOR=ff000000]$INFO[system.addontitle(Skin.String(SubtitleScript_Path))][/COLOR]</label2>
 							<onclick>Skin.SetAddon(SubtitleScript_Path,xbmc.python.subtitles)</onclick>
 						</control>
 						<control type="button" id="7002">
 							<width>1210</width>
 							<include>SettingsCategoryDefaultButtonVars</include>
 							<label>$LOCALIZE[41282]</label>
-							<label2>[COLOR=SettingsBlue]$INFO[system.addontitle(Skin.String(LyricScript_Path))][/COLOR]</label2>
+							<label2>[COLOR=ff000000]$INFO[system.addontitle(Skin.String(LyricScript_Path))][/COLOR]</label2>
 							<onclick>Skin.SetAddon(LyricScript_Path,xbmc.python.lyrics)</onclick>
 						</control>
 						<control type="radiobutton" id="7005">

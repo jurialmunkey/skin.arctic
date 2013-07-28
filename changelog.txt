@@ -40,3 +40,4 @@ Video Info/OSD clearlogo preference
 Timer and Search PVR dialogs
 PVR Channel OSD number length fix
 PVR Channel OSD revamp
+Fixed text color visibility in add on settings

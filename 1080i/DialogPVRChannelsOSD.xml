@@ -1,6 +1,8 @@
 <window id="609">
 	<defaultcontrol always="true">11</defaultcontrol>
 	<zorder>3</zorder>
+	<onunload>CancelAlarm(pvrosdnownext,true)</onunload>
+	<onload>AlarmClock(pvrosdnownext,null,0:9,silent,loop)</onload>
 	<controls>
 	    <control type="group">
 	        <include>FullscreenDimensions</include>
@@ -219,10 +221,6 @@
 						</control>
                     </itemlayout>
                     <focusedlayout width="680" height="95">
-                    	<control type="button">
-							<visible>true</visible>
-							<onfocus>AlarmClock(pvrosdnownext,null,0:9,silent,loop)</onfocus>
-						</control>
                         <control type="image">
                             <posx>0</posx>
                             <posy>0</posy>
@@ -285,7 +283,7 @@
 								<selectedcolor>mod-infotags-alt</selectedcolor>
 								<scroll>false</scroll>
 								<visible>!System.AlarmLessOrEqual(pvrosdnownext,4)</visible>
-								<animation effect="fade" start="0" end="100" time="750">VisibleChange</animation>
+								<animation effect="fade" start="0" end="100" time="450">VisibleChange</animation>
 							</control>
 							<control type="label">
 								<description>Title</description>
@@ -300,7 +298,7 @@
 								<selectedcolor>mod-infotags-alt</selectedcolor>
 								<scroll>false</scroll>
 								<visible>System.AlarmLessOrEqual(pvrosdnownext,4)</visible>
-								<animation effect="fade" start="0" end="100" time="750">VisibleChange</animation>
+								<animation effect="fade" start="0" end="100" time="450">VisibleChange</animation>
 							</control>
 							<control type="label">
 								<description>Label</description>

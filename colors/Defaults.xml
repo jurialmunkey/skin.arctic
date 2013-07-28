@@ -67,8 +67,8 @@
 		<color name="Mod_Tags_Plex">cc777777</color>
 		<color name="Mod_Tags_Logo_Shadow">dd000000</color>
 		
-		<color name="Mod_Overlay_Floor">ddeeeeee</color>
-		<color name="Mod_Overlay_Dimfanart">aaeeeeee</color>
+		<color name="Mod_Overlay_Floor">daeeeeee</color>
+		<color name="Mod_Overlay_Dimfanart">bbeeeeee</color>
 		<color name="Mod_Overlay_Dimfanart_Extra">22eeeeee</color>
 		
 		<color name="Mod_Border">eeffffff</color>

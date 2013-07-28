@@ -39,3 +39,4 @@ Video Info/OSD show plot on up.
 Video Info/OSD clearlogo preference
 Timer and Search PVR dialogs
 PVR Channel OSD number length fix
+PVR Channel OSD revamp

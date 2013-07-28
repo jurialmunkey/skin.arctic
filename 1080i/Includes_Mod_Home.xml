@@ -853,7 +853,7 @@
 							<itemgap>10</itemgap>
 							<align>left</align>
 							<control type="label">
-								<label>$INFO[System.Date(DDD d mmm yyyy),[B]Today's Date:[/B] ,]</label>
+								<label>$INFO[System.Date(DDD d mmm yyyy),[B]$LOCALIZE[552]:[/B] ,]</label>
 								<align>left</align>
 								<font>Font-Condensed-S28</font>
 								<textcolor>mod-infotags-l</textcolor>
@@ -861,7 +861,7 @@
 								<scroll>false</scroll>
 							</control>
 							<control type="label">
-								<label>$INFO[System.FreeMemory,[B]Free MEM:[/B] ,]$INFO[System.CPUFrequency,  •  [B]CPU Freq:[/B] ,]</label>
+								<label>$INFO[System.FreeMemory,[B]$LOCALIZE[158]:[/B] ,]$INFO[System.CPUFrequency,  •  [B]$LOCALIZE[13284][/B] ,]</label>
 								<align>left</align>
 								<font>Font-Condensed-S28</font>
 								<textcolor>mod-infotags-l</textcolor>
@@ -870,7 +870,7 @@
 							</control>
 						
 							<control type="label">
-								<label>$INFO[System.ScreenResolution,[B]Screen Resolution:[/B] ,]</label>
+								<label>$INFO[System.ScreenResolution,[B]$LOCALIZE[13287][/B] ,]</label>
 								<align>left</align>
 								<font>Font-Condensed-S28</font>
 								<textcolor>mod-infotags-l</textcolor>
@@ -878,7 +878,7 @@
 								<scroll>false</scroll>
 							</control>
 							<control type="label">
-								<label>$INFO[System.Uptime,[B]System Uptime:[/B] ,]$INFO[System.TotalUptime,  •  [B]Total Uptime:[/B] ,]</label>
+								<label>$INFO[System.Uptime,[B]$LOCALIZE[12390]:[/B] ,]$INFO[System.TotalUptime,  •  [B]$LOCALIZE[12394]:[/B] ,]</label>
 								<align>left</align>
 								<font>Font-Condensed-S28</font>
 								<textcolor>mod-infotags-l</textcolor>
@@ -894,7 +894,7 @@
 								<scroll>false</scroll>
 							</control>
 							<control type="label">
-								<label>$INFO[System.BuildVersion,[B]Build Version:[/B] ,]$INFO[System.BuildDate,  •  [B]Build Date:[/B] ,]</label>
+								<label>$INFO[System.BuildVersion,[B]$LOCALIZE[144][/B] ,]$INFO[System.BuildDate,  •  ,]</label>
 								<align>left</align>
 								<font>Font-Condensed-S28</font>
 								<textcolor>mod-infotags-l</textcolor>
@@ -936,7 +936,7 @@
 							<align>left</align>
 						
 							<control type="label">
-								<label>$INFO[Pvr.BackendChannels,[B]Channels: [/B],]</label>
+								<label>$INFO[Pvr.BackendChannels,[B]$LOCALIZE[253]: [/B],]</label>
 								<align>left</align>
 								<font>Font-Condensed-S28</font>
 								<textcolor>mod-infotags-l</textcolor>
@@ -944,7 +944,7 @@
 								<scroll>false</scroll>
 							</control>
 							<control type="label">
-								<label>$INFO[Pvr.BackendName,[B]Backend: [/B],]</label>
+								<label>$INFO[Pvr.BackendName,[B]$LOCALIZE[19012]: [/B],]</label>
 								<align>left</align>
 								<font>Font-Condensed-S28</font>
 								<textcolor>mod-infotags-l</textcolor>
@@ -952,7 +952,7 @@
 								<scroll>false</scroll>
 							</control>
 							<control type="label">
-								<label>$INFO[Pvr.BackendVersion,[B]Version: [/B],]</label>
+								<label>$INFO[Pvr.BackendVersion,[B]$LOCALIZE[19114]: [/B],]</label>
 								<align>left</align>
 								<font>Font-Condensed-S28</font>
 								<textcolor>mod-infotags-l</textcolor>
@@ -960,7 +960,7 @@
 								<scroll>false</scroll>
 							</control>
 							<control type="label">
-								<label>$INFO[Pvr.BackendDiskSpace,[B]Space Available: [/B],]</label>
+								<label>$INFO[Pvr.BackendDiskSpace,[B]$LOCALIZE[20089]: [/B],]</label>
 								<align>left</align>
 								<font>Font-Condensed-S28</font>
 								<textcolor>mod-infotags-l</textcolor>
@@ -977,7 +977,7 @@
 								<visible>!IsEmpty(Pvr.NowRecordingTitle) | !IsEmpty(Pvr.NextRecordingTitle)</visible>
 							</control>
 							<control type="label">
-								<label>TIMERS</label>
+								<label>19040</label>
 								<align>left</align>
 								<font>Font-Condensed-S28</font>
 								<textcolor>mod-infotags-l</textcolor>
@@ -986,7 +986,7 @@
 								<visible>!IsEmpty(Pvr.NowRecordingTitle) | !IsEmpty(Pvr.NextRecordingTitle)</visible>
 							</control>
 							<control type="label">
-								<label>$INFO[Pvr.NowRecordingTitle,[B]Recording NOW:[/B] ,]$INFO[Pvr.NowRecordingChannel, (,)]</label>
+								<label>$INFO[Pvr.NowRecordingTitle,[B]$LOCALIZE[19043]:[/B] ,]$INFO[Pvr.NowRecordingChannel, (,)]</label>
 								<align>left</align>
 								<font>Font-Condensed-S28</font>
 								<textcolor>mod-infotags-l</textcolor>
@@ -995,7 +995,7 @@
 								<visible>!IsEmpty(Pvr.NowRecordingTitle)</visible>
 							</control>
 							<control type="label">
-								<label>$INFO[Pvr.NextRecordingTitle,[B]Recording NEXT:[/B] ,]$INFO[Pvr.NextRecordingChannel, (,)  ]$INFO[Pvr.NextRecordingDateTime, @,]</label>
+								<label>$INFO[Pvr.NextRecordingTitle,[B]$LOCALIZE[19106]:[/B] ,]$INFO[Pvr.NextRecordingChannel, (,)  ]$INFO[Pvr.NextRecordingDateTime, @,]</label>
 								<align>left</align>
 								<font>Font-Condensed-S28</font>
 								<textcolor>mod-infotags-l</textcolor>

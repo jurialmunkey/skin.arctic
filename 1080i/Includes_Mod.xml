@@ -3246,39 +3246,63 @@
 				<aligny>center</aligny>
 				<label>$VAR[SeasonalYear]</label>
 			</control>
-			<control type="image">
+			<control type="label">
+				<font>Font-Alaska-S29-BL</font>
+				<textcolor>Mod_Tags</textcolor>
+				<posx>55</posx>
+				<posy>31</posy>
+				<width>590</width>
+				<height>120</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>$INFO[ListItem.Label]</label>
+				<visible>StringCompare(Control.GetLabel(9991),blank.png) + Skin.HasSetting(ShowLowerLogo) + ![Container.Content(albums) | Container.Content(artists) | Container.Content(songs)]</visible>
+			</control>
+			<control type="image" id="9991">
 				<posx>50</posx>
 				<posy>31</posy>
-				<width>580</width>
+				<width>590</width>
 				<height>120</height>
 				<aspectratio align="center" aligny="top">keep</aspectratio>
-				<texture>$VAR[ClearLogosVar]</texture>
+				<texture fallback="blank.png">$VAR[ClearLogosVar]</texture>
 				<visible>Skin.HasSetting(ShowLowerLogo) + ![Container.Content(albums) | Container.Content(artists) | Container.Content(songs)]</visible>
 				<colordiffuse>Mod_Tags_Logo_Shadow</colordiffuse>
 			</control>
 			<control type="image">
-				<posx>-581</posx>
+				<posx>-591</posx>
 				<posy>30</posy>
-				<width>580</width>
+				<width>590</width>
 				<height>120</height>
 				<aspectratio align="center" aligny="top">keep</aspectratio>
 				<texture>$VAR[ClearLogosVar]</texture>
 				<visible>Skin.HasSetting(ShowLowerLogo) + ![Container.Content(albums) | Container.Content(artists) | Container.Content(songs)]</visible>
 			</control>
-			<control type="image">
+			<control type="label">
+				<font>Font-Alaska-S29-BL</font>
+				<textcolor>Mod_Tags</textcolor>
 				<posx>50</posx>
 				<posy>31</posy>
-				<width>660</width>
+				<width>670</width>
+				<height>120</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>$INFO[ListItem.Artist]</label>
+				<visible>StringCompare(Control.GetLabel(9992),blank.png) + Skin.HasSetting(ShowLowerLogo) + [Container.Content(albums) | Container.Content(artists) | Container.Content(songs)]</visible>
+			</control>
+			<control type="image" id="9992">
+				<posx>50</posx>
+				<posy>31</posy>
+				<width>670</width>
 				<height>120</height>
 				<aspectratio align="center" aligny="top">keep</aspectratio>
-				<texture>$INFO[Skin.String(cdartlocation)]$INFO[ListItem.Artist,,/logo.png]</texture>
+				<texture fallback="blank.png">$INFO[Skin.String(cdartlocation)]$INFO[ListItem.Artist,,/logo.png]</texture>
 				<visible>Skin.HasSetting(ShowLowerLogo) + [Container.Content(albums) | Container.Content(artists) | Container.Content(songs)]</visible>
 				<colordiffuse>Mod_Tags_Logo_Shadow</colordiffuse>
 			</control>
 			<control type="image">
-				<posx>-661</posx>
+				<posx>-671</posx>
 				<posy>30</posy>
-				<width>660</width>
+				<width>670</width>
 				<height>120</height>
 				<aspectratio align="center" aligny="top">keep</aspectratio>
 				<texture>$INFO[Skin.String(cdartlocation)]$INFO[ListItem.Artist,,/logo.png]</texture>

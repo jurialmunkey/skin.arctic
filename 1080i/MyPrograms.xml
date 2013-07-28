@@ -337,7 +337,7 @@
                 <control type="radiobutton" id="202">
                     <description>List</description>
                     <include>optionsbuttonsdimensions</include>
-                    <label>List</label>
+                    <label>537</label>
                     <texturefocus border="2">dialogs/options/buttons/default-fo.png</texturefocus>
                     <onclick>Container.SetViewMode(50)</onclick>
                     <selected>Control.IsVisible(50)</selected>
@@ -348,7 +348,7 @@
                 <control type="radiobutton" id="203">
                     <description>Thumbnail</description>
                     <include>optionsbuttonsdimensions</include>
-                    <label>Thumbnail</label>
+                    <label>21371</label>
                     <texturefocus border="2">dialogs/options/buttons/default-fo.png</texturefocus>
                     <onclick>Container.SetViewMode(500)</onclick>
                     <selected>Control.IsVisible(500)</selected>
@@ -360,7 +360,7 @@
                 <control type="radiobutton" id="204">
                     <description>Info</description>
                     <include>optionsbuttonsdimensions</include>
-                    <label>Info</label>
+                    <label>42309</label>
                     <texturefocus border="2">dialogs/options/buttons/default-fo.png</texturefocus>
                     <onclick>Container.SetViewMode(52)</onclick>
                     <selected>Control.IsVisible(52)</selected>
@@ -371,7 +371,7 @@
                 <control type="radiobutton" id="205">
                     <description>Banner</description>
                     <include>optionsbuttonsdimensions</include>
-                    <label>Banner</label>
+                    <label>42304</label>
                     <texturefocus border="2">dialogs/options/buttons/default-fo.png</texturefocus>
                     <onclick>Container.SetViewMode(60)</onclick>
                     <selected>Control.IsVisible(60)</selected>
@@ -382,7 +382,7 @@
                 <control type="radiobutton" id="206">
                     <description>Wall</description>
                     <include>optionsbuttonsdimensions</include>
-                    <label>Wall</label>
+                    <label>42311</label>
                     <texturefocus border="2">dialogs/options/buttons/default-fo.png</texturefocus>
                     <onclick>Container.SetViewMode(502)</onclick>
                     <selected>Control.IsVisible(502)</selected>
@@ -391,22 +391,10 @@
                     <radioposx>-19</radioposx>
                     <visible>substring(Container.FolderPath,plugin://plugin.program.advanced.launcher/,left)</visible>
                 </control>
-                <control type="radiobutton" id="207">
-                    <description>Carousel</description>
-                    <include>optionsbuttonsdimensions</include>
-                    <label>Carousel</label>
-                    <texturefocus border="2">dialogs/options/buttons/default-fo.png</texturefocus>
-                    <onclick>Container.SetViewMode(503)</onclick>
-                    <selected>Control.IsVisible(503)</selected>
-                    <textureradioon>buttons/radio/options-radio-button-fo.png</textureradioon>
-                    <textureradiooff>buttons/radio/options-radio-button-nf.png</textureradiooff>
-                    <radioposx>-19</radioposx>
-                    <visible>substring(Container.FolderPath,plugin://plugin.program.advanced.launcher/,left)</visible>
-                </control>
                 <control type="radiobutton" id="208">
                     <description>Reel</description>
                     <include>optionsbuttonsdimensions</include>
-                    <label>Reel</label>
+                    <label>42307</label>
                     <texturefocus border="2">dialogs/options/buttons/default-fo.png</texturefocus>
                     <onclick>Container.SetViewMode(513)</onclick>
                     <selected>Control.IsVisible(513)</selected>
@@ -418,7 +406,7 @@
                 <control type="radiobutton" id="209">
                     <description>Landscape</description>
                     <include>optionsbuttonsdimensions</include>
-                    <label>Landscape</label>
+                    <label>42312</label>
                     <texturefocus border="2">dialogs/options/buttons/default-fo.png</texturefocus>
                     <onclick>Container.SetViewMode(507)</onclick>
                     <selected>Control.IsVisible(507)</selected>
@@ -430,7 +418,7 @@
                 <control type="radiobutton" id="210">
                     <description>Classic Info</description>
                     <include>optionsbuttonsdimensions</include>
-                    <label>Classic Info</label>
+                    <label>42309</label>
                     <texturefocus border="2">dialogs/options/buttons/default-fo.png</texturefocus>
                     <onclick>Container.SetViewMode(514)</onclick>
                     <selected>Control.IsVisible(514)</selected>
@@ -442,7 +430,7 @@
                 <control type="radiobutton" id="211">
                     <description>Poster Info</description>
                     <include>optionsbuttonsdimensions</include>
-                    <label>Poster Info</label>
+                    <label>42310</label>
                     <texturefocus border="2">dialogs/options/buttons/default-fo.png</texturefocus>
                     <onclick>Container.SetViewMode(56)</onclick>
                     <selected>Control.IsVisible(56)</selected>

@@ -1,17 +1,17 @@
 <includes>
-<!-- =============== -->
-<!-- Wall (502)      -->
-<!-- =============== -->
+<!-- ========= -->
+<!-- Wall (61) -->
+<!-- ========= -->
 
-    <include name="Viewtype-WallVideo">
+    <include name="Viewtype-Wall">
         <control type="group">
             <control type="group">
-                <visible>Control.IsVisible(502) + !Window.IsActive(movieinformation)</visible>
+                <visible>Control.IsVisible(61) + !Window.IsActive(movieinformation)</visible>
                 <include>CommonViewAnimation</include>
                 <include>FullscreenDimensions</include>
 				<include>OptionsShutdownAnimation</include>
 				<include>BannerListAnimations</include>
-                <control type="panel" id="502">
+                <control type="panel" id="61">
 					<width>1920</width>
 					<height>730</height>
 					<posx>95</posx>
@@ -19,12 +19,12 @@
                     <pagecontrol>70</pagecontrol>
                     <scrolltime tween="cubic" easing="out">500</scrolltime>
                     <orientation>vertical</orientation>
-                    <viewtype label="Wall">list</viewtype>
+                    <viewtype label="42311">list</viewtype>
                     <onright>70</onright>
                     <onleft condition="!Skin.HasSetting(KioskMode)">9010</onleft>
-                    <onleft condition="Skin.HasSetting(KioskMode)">502</onleft>
-                    <onup>502</onup>
-                    <ondown>502</ondown>
+                    <onleft condition="Skin.HasSetting(KioskMode)">61</onleft>
+                    <onup>61</onup>
+                    <ondown>61</ondown>
                     <preloaditems>2</preloaditems>
                     <visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(actors) | Container.HasFolders</visible>
                     <itemlayout width="247" height="365">
@@ -85,8 +85,8 @@
                     </itemlayout>
                     <focusedlayout width="247" height="365">
 						<control type="group">
-							<visible>!Skin.HasSetting(hide.posterwallinfo) + [Container(502).Column(0) | Container(502).Column(1) | Container(502).Column(2) | Container(502).Column(3)]</visible>
-							<animation effect="fade" end="0" start="100" time="0" delay="0" condition="[Container(502).OnNext | Container(502).OnPrevious]">UnFocus</animation>
+							<visible>!Skin.HasSetting(hide.posterwallinfo) + [Container(61).Column(0) | Container(61).Column(1) | Container(61).Column(2) | Container(61).Column(3)]</visible>
+							<animation effect="fade" end="0" start="100" time="0" delay="0" condition="[Container(61).OnNext | Container(61).OnPrevious]">UnFocus</animation>
 							<animation effect="fade" start="0" end="100" time="250" delay="1800">Focus</animation>
 							<posx>269</posx>
 							<posy>20</posy>
@@ -147,8 +147,8 @@
 							</control>
 						</control>
 						<control type="group">
-							<visible>!Skin.HasSetting(hide.posterwallinfo) + ![Container(502).Column(0) | Container(502).Column(1) | Container(502).Column(2) | Container(502).Column(3)]</visible>
-							<animation effect="fade" end="0" start="100" time="0" delay="0" condition="[Container(502).OnNext | Container(502).OnPrevious]">UnFocus</animation>
+							<visible>!Skin.HasSetting(hide.posterwallinfo) + ![Container(61).Column(0) | Container(61).Column(1) | Container(61).Column(2) | Container(61).Column(3)]</visible>
+							<animation effect="fade" end="0" start="100" time="0" delay="0" condition="[Container(61).OnNext | Container(61).OnPrevious]">UnFocus</animation>
 							<animation effect="fade" start="0" end="100" time="250" delay="1800">Focus</animation>
 							<posx>-723</posx>
 							<posy>20</posy>
@@ -278,13 +278,13 @@
 			<textureslidernib flipx="true" >arctic/common/slider-nf-v.png</textureslidernib>
 			<textureslidernibfocus flipx="true" >arctic/common/slider-fo-v.png</textureslidernibfocus>
 			<showonepage>true</showonepage>
-			<onleft>502</onleft>
+			<onleft>61</onleft>
 			<onright condition="!Skin.HasSetting(KioskMode)">9010</onright>
-			<onright condition="Skin.HasSetting(KioskMode)">502</onright>
+			<onright condition="Skin.HasSetting(KioskMode)">61</onright>
 			<animation effect="fade" start="100" end="0" time="300" tween="sine" easing="inout" condition="!Control.IsVisible(9772)">Conditional</animation>
 			<animation effect="fade" start="40" end="100" time="300" tween="sine" easing="inout" condition="Control.HasFocus(70)">Conditional</animation>
 			<animation effect="fade" start="100" end="40" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(70)">Conditional</animation>
-			<visible>Control.IsVisible(502)</visible>
+			<visible>Control.IsVisible(61)</visible>
 		</control>
     </include>    
 </includes>

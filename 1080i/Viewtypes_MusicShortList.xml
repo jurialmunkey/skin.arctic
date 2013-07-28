@@ -141,7 +141,7 @@
 				<pagecontrol>70</pagecontrol>
 				<scrolltime tween="cubic" easing="out">500</scrolltime>
 				<orientation>vertical</orientation>
-				<viewtype label="Medium List">list</viewtype>
+				<viewtype label="42301">list</viewtype>
 				<onleft>70</onleft>
 				<onright>72</onright>
 				<focusposition>1</focusposition>

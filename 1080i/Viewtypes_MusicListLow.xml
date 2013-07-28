@@ -51,7 +51,7 @@
                     <posy>145</posy>
                     <scrolltime tween="cubic" easing="out">350</scrolltime>
                     <orientation>vertical</orientation>
-                    <viewtype label="Low List">list</viewtype>
+                    <viewtype label="42302">list</viewtype>
                     <onleft>70</onleft>
                     <pagecontrol>70</pagecontrol>
                     <onright>72</onright>

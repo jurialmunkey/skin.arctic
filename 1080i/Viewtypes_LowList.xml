@@ -1,7 +1,7 @@
 <includes>
-<!-- ========================= -->
-<!-- Low List (511) -->
-<!-- ========================= -->
+<!-- ============= -->
+<!-- Low List (52) -->
+<!-- ============= -->
 	<variable name="lowlist.tagline">
 		<value condition="!IsEmpty(ListItem.Tagline)">$INFO[ListItem.Tagline]</value>
 		<value condition="Container.Content(movies)">$LOCALIZE[24007]</value>
@@ -16,11 +16,11 @@
 		<posy>145</posy>
 		<scrolltime tween="cubic" easing="out">350</scrolltime>
 		<orientation>vertical</orientation>
-		<viewtype label="Low List">list</viewtype>
+		<viewtype label="42302">list</viewtype>
 		<onleft>70</onleft>
 		<onright>72</onright>
-		<onup>511</onup>
-		<ondown>511</ondown>
+		<onup>52</onup>
+		<ondown>52</ondown>
 		<focusposition>2</focusposition>
 		<movement>2</movement>
 		<preloaditems>2</preloaditems>
@@ -125,12 +125,12 @@
 		</focusedlayout>
 	</include>
 	<include name="Viewtype-LowList-Wrap">
-		<control type="wraplist" id="511">
+		<control type="wraplist" id="52">
 			<include>Viewtype-LowList-Content</include>
 		</control>    
 	</include>
 	<include name="Viewtype-LowList-Fixed">
-		<control type="fixedlist" id="511">
+		<control type="fixedlist" id="52">
 			<include>Viewtype-LowList-Content</include>
 		</control>    
 	</include>
@@ -139,7 +139,7 @@
             <include>FullscreenDimensions</include>
             <include>OptionsShutdownAnimation</include>
             <control type="group">
-                <visible>Control.IsVisible(511) + !Window.IsActive(movieinformation)</visible>
+                <visible>Control.IsVisible(52) + !Window.IsActive(movieinformation)</visible>
     			<posy>450</posy>
                 <posx>10</posx>
                 <include>BannerListAnimations</include>    	
@@ -149,7 +149,7 @@
 					<posy>-300</posy>
 					<animation effect="slide" end="-340,250" condition="!Skin.HasSetting(old.posterinfo)">Conditional</animation>
 					<animation effect="slide" start="0,75" end="0" time="250" delay="250" reversible="false">Visible</animation>
-					<visible>![Container(511).OnNext | Container(511).OnPrevious] + !Window.IsActive(movieinformation) + Control.IsVisible(511)</visible>
+					<visible>![Container(52).OnNext | Container(52).OnPrevious] + !Window.IsActive(movieinformation) + Control.IsVisible(52)</visible>
 					<control type="image">
 						<posx>120</posx>
 						<posy>0</posy>
@@ -364,8 +364,8 @@
 						</control>
 						<control type="button" id="72">
 							<visible allowhiddenfocus="true">false</visible>
-							<onleft>511</onleft>
-							<onright>511</onright>
+							<onleft>52</onleft>
+							<onright>52</onright>
 							<onup>73</onup>
 							<ondown>73</ondown>
 							<onfocus>SetFocus(73)</onfocus>
@@ -449,13 +449,13 @@
 								<posy>120</posy>
 								<width>6</width>
 								<height>180</height>
-								<onleft>511</onleft>
-								<onright>511</onright>
+								<onleft>52</onleft>
+								<onright>52</onright>
 								<texturesliderbar border="3,6,3,6">-</texturesliderbar>
 								<texturesliderbarfocus border="3,6,3,6">views/other/scrollbar-light.png</texturesliderbarfocus>
 								<orientation>vertical</orientation>
 								<showonepage>false</showonepage>
-								<visible>Control.IsVisible(511)</visible>
+								<visible>Control.IsVisible(52)</visible>
 							</control>
 						</control>
 					</control>
@@ -477,7 +477,7 @@
                     <texture background="true">$INFO[ListItem.Art(discart)]</texture>
                     <aspectratio align="center">keep</aspectratio>
                     <visible>Container.Content(movies) + Skin.HasSetting(showdiscart)</visible>
-                    <!--<animation effect="slide" start="0" end="0,-250" time="500" delay="250" reversible="false" condition="![Container(511).OnNext | Container(511).OnPrevious]">Conditional</animation>-->
+                    <!--<animation effect="slide" start="0" end="0,-250" time="500" delay="250" reversible="false" condition="![Container(52).OnNext | Container(52).OnPrevious]">Conditional</animation>-->
                     <fadetime>200</fadetime>
                 </control>
                 
@@ -547,13 +547,13 @@
 			<textureslidernib>arctic/common/slider-nf-v.png</textureslidernib>
 			<textureslidernibfocus>arctic/common/slider-fo-v.png</textureslidernibfocus>
 			<showonepage>true</showonepage>
-			<onright>511</onright>
+			<onright>52</onright>
 			<onleft condition="!Skin.HasSetting(KioskMode)">9010</onleft>
-			<onleft condition="Skin.HasSetting(KioskMode)">511</onleft>
+			<onleft condition="Skin.HasSetting(KioskMode)">52</onleft>
 			<animation effect="fade" start="100" end="0" time="300" tween="sine" easing="inout" condition="!Control.IsVisible(9772)">Conditional</animation>
 			<animation effect="fade" start="40" end="100" time="300" tween="sine" easing="inout" condition="Control.HasFocus(70)">Conditional</animation>
 			<animation effect="fade" start="100" end="40" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(70)">Conditional</animation>
-			<visible>Control.IsVisible(511)</visible>
+			<visible>Control.IsVisible(52)</visible>
 		</control>
     </include>  
 </includes>

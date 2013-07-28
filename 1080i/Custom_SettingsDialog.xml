@@ -173,7 +173,7 @@
                     <width>644</width>
                     <height>60</height>
                     <include>SettingsCategoryPanelRadioButtonVars</include>
-                    <label>Edit Custom..</label>
+                    <label>42425</label>
                     <visible>StringCompare(Skin.String(homescreen.style),simple) + !Skin.HasSetting(disable.games)</visible>
 					<onclick condition="IsEmpty(Skin.String(HomeCustomItem.Type))">Skin.SetString(HomeCustomItem.Type,0)</onclick>
 					<onclick condition="IsEmpty(Skin.String(HomeCustomItem.TypeName))">Skin.SetString(HomeCustomItem.TypeName,$LOCALIZE[41145])</onclick>

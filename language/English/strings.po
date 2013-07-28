@@ -1160,3 +1160,6 @@ msgctxt "#42427"
 msgid "Prefer cover"
 msgstr ""
 
+msgctxt "#42428"
+msgid "Prefer clearlogo for video"
+msgstr ""

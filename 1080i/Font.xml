@@ -349,6 +349,11 @@
             <size>22</size>
         </font>
         <font>
+            <name>Font-Alaska-S22-L</name>
+            <filename>alaska_regular.ttf</filename>
+            <size>22</size>
+        </font>
+        <font>
             <name>Font-Alaska-S18-L</name>
             <filename>alaska_regular.ttf</filename>
             <size>18</size>

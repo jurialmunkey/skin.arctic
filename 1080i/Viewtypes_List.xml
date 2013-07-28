@@ -22,7 +22,7 @@
                 <ondown>50</ondown>
                 <focusposition>3</focusposition>
                 <movement>3</movement>
-                <viewtype label="Big List">list</viewtype>
+                <viewtype label="537">list</viewtype>
                 <scrolltime tween="cubic" easing="out">500</scrolltime>
                 <preloaditems>2</preloaditems>
                 <itemlayout height="100" condition="!Container.Content(movies) + !Container.Content(tvshows) + !Container.Content(seasons) + !Container.Content(episodes)">
@@ -119,7 +119,7 @@
                         <posy>8</posy>
                         <width>85</width>
                         <height>85</height>
-                        <texture background="true">$INFO[ListItem.Icon]</texture>
+                        <texture background="true" diffuse="arctic/list/icon.png">$INFO[ListItem.Icon]</texture>
                         <aspectratio>keep</aspectratio>
                         <visible>!Container.Content(genres)</visible>
                     </control>
@@ -128,7 +128,7 @@
                         <posy>5</posy>
                         <width>60</width>
                         <height>90</height>
-                        <texture background="true" fallback="special://skin/extras/moviegenres/Default.jpg">$INFO[ListItem.Label,special://skin/extras/moviegenres/,.jpg]</texture>
+                        <texture background="true" diffuse="arctic/list/icon.png" fallback="special://skin/extras/moviegenres/Default.jpg">$INFO[ListItem.Label,special://skin/extras/moviegenres/,.jpg]</texture>
                         <visible>Container.Content(genres)</visible>
                     </control>
                 </itemlayout>
@@ -149,8 +149,17 @@
                         <posy>5</posy>
                         <width>60</width>
                         <height>90</height>
-                        <texture background="true">$VAR[DefaultListPoster]</texture>
-                        <aspectratio>scale</aspectratio>
+                        <texture background="true" diffuse="arctic/list/poster.png">$VAR[DefaultListPoster]</texture>
+                        <aspectratio scalediffuse="false">scale</aspectratio>
+                    </control>
+                    <control type="image">
+                        <description>Border</description>
+                        <posx>10</posx>
+                        <posy>-5</posy>
+                        <width>80</width>
+                        <height>110</height>
+                        <texture border="20">arctic/common/border.png</texture>
+                        <colordiffuse>Mod_Border</colordiffuse>
                     </control>
                     <control type="label">
                         <description>Label</description>
@@ -237,8 +246,17 @@
                         <posy>19</posy>
                         <width>336</width>
                         <height>62</height>
-                        <texture background="true">$VAR[DefaultListBanner]</texture>
-                        <aspectratio>scale</aspectratio>
+                        <texture background="true" diffuse="arctic/list/banner.png">$VAR[DefaultListBanner]</texture>
+                        <aspectratio scalediffuse="false">stretch</aspectratio>
+                    </control>
+                    <control type="image">
+                        <description>Border</description>
+                        <posx>10</posx>
+                        <posy>9</posy>
+                        <width>356</width>
+                        <height>82</height>
+                        <texture background="true" border="20">arctic/common/border.png</texture>
+                        <colordiffuse>Mod_Border</colordiffuse>
                     </control>
                     <control type="label">
                         <description>Label</description>
@@ -324,8 +342,17 @@
                         <posy>5</posy>
                         <width>60</width>
                         <height>90</height>
-                        <texture background="true">$VAR[DefaultListPoster]</texture>
-                        <aspectratio>scale</aspectratio>
+                        <texture background="true" diffuse="arctic/list/poster.png">$VAR[DefaultListPoster]</texture>
+                        <aspectratio scalediffuse="false">scale</aspectratio>
+                    </control>
+                    <control type="image">
+                        <description>Border</description>
+                        <posx>10</posx>
+                        <posy>-5</posy>
+                        <width>80</width>
+                        <height>110</height>
+                        <texture border="20">arctic/common/border.png</texture>
+                        <colordiffuse>Mod_Border</colordiffuse>
                     </control>
                     <control type="label">
                         <description>Label</description>
@@ -409,8 +436,17 @@
                         <posy>10</posy>
                         <width>142</width>
                         <height>80</height>
-                        <texture background="true">$VAR[DefaultListLandscape]</texture>
-                        <aspectratio>scale</aspectratio>
+                        <texture background="true" diffuse="arctic/list/thumb.png">$VAR[DefaultListLandscape]</texture>
+                        <aspectratio scalediffuse="false">scale</aspectratio>
+                    </control>
+                    <control type="image">
+                        <description>Border</description>
+                        <posx>20</posx>
+                        <posy>10</posy>
+                        <width>142</width>
+                        <height>80</height>
+                        <texture border="20">arctic/common/border.png</texture>
+                        <colordiffuse>Mod_Border</colordiffuse>
                     </control>
                     <control type="label">
                         <description>Label</description>
@@ -480,7 +516,6 @@
                     </control>
                 </itemlayout>
                 <focusedlayout height="100" condition="!Container.Content(movies) + !Container.Content(tvshows) + !Container.Content(seasons) + !Container.Content(episodes)">
-
                     <control type="image">
                         <posx>0</posx>
                         <posy>1</posy>
@@ -509,6 +544,7 @@
                         <texture border="25">arctic/common/border.png</texture>
                         <include>defaultfocusanim</include>
                         <include>visiblehidefadeinfo</include>
+                        <colordiffuse>Mod_Border</colordiffuse>
                     </control>
                     <control type="image">
                         <posx>20</posx>
@@ -614,7 +650,6 @@
                     </control>
                 </focusedlayout>
                 <focusedlayout height="100" condition="Container.Content(movies)">
-
                     <control type="image">
                         <posx>0</posx>
                         <posy>1</posy>
@@ -635,7 +670,6 @@
                         <include>visiblehidefadeinfo</include>
                         <colordiffuse>Mod_Tags_Dark</colordiffuse>
                     </control>
-                    
                     <control type="image">
                         <posx>-10</posx>
                         <posy>-10</posy>
@@ -651,8 +685,17 @@
                         <posy>5</posy>
                         <width>60</width>
                         <height>90</height>
-                        <texture background="true">$VAR[DefaultListPoster]</texture>
-                        <aspectratio>scale</aspectratio>
+                        <texture background="true" diffuse="arctic/list/poster.png">$VAR[DefaultListPoster]</texture>
+                        <aspectratio scalediffuse="false">scale</aspectratio>
+                    </control>
+                    <control type="image">
+                        <description>Border</description>
+                        <posx>10</posx>
+                        <posy>-5</posy>
+                        <width>80</width>
+                        <height>110</height>
+                        <texture border="20">arctic/common/border.png</texture>
+                        <colordiffuse>Mod_Border</colordiffuse>
                     </control>
                     <control type="group">
                         <animation type="Focus" condition="[Container(50).OnNext | Container(50).OnPrevious] + !Container(50).ListItem.IsPlaying" reversible="false">
@@ -738,7 +781,6 @@
                     </control>
                 </focusedlayout>
                 <focusedlayout height="100" condition="Container.Content(tvshows)">
-
                     <control type="image">
                         <posx>0</posx>
                         <posy>0</posy>
@@ -764,8 +806,17 @@
                         <posy>19</posy>
                         <width>336</width>
                         <height>62</height>
-                        <texture background="true">$VAR[DefaultListBanner]</texture>
-                        <aspectratio>scale</aspectratio>
+                        <texture background="true" diffuse="arctic/list/banner.png">$VAR[DefaultListBanner]</texture>
+                        <aspectratio scalediffuse="false">stretch</aspectratio>
+                    </control>
+                    <control type="image">
+                        <description>Border</description>
+                        <posx>10</posx>
+                        <posy>9</posy>
+                        <width>356</width>
+                        <height>82</height>
+                        <texture background="true" border="20">arctic/common/border.png</texture>
+                        <colordiffuse>Mod_Border</colordiffuse>
                     </control>
                     <control type="group">
                         <animation type="Focus" condition="Container(50).OnNext | Container(50).OnPrevious" reversible="false">
@@ -876,8 +927,17 @@
                         <posy>5</posy>
                         <width>60</width>
                         <height>90</height>
-                        <texture background="true">$VAR[DefaultListPoster]</texture>
-                        <aspectratio>scale</aspectratio>
+                        <texture background="true" diffuse="arctic/list/poster.png">$VAR[DefaultListPoster]</texture>
+                        <aspectratio scalediffuse="false">scale</aspectratio>
+                    </control>
+                    <control type="image">
+                        <description>Border</description>
+                        <posx>10</posx>
+                        <posy>-5</posy>
+                        <width>80</width>
+                        <height>110</height>
+                        <texture border="20">arctic/common/border.png</texture>
+                        <colordiffuse>Mod_Border</colordiffuse>
                     </control>
                     <control type="group">
                         <animation type="Focus" condition="Container(50).OnNext | Container(50).OnPrevious" reversible="false">
@@ -985,8 +1045,17 @@
                         <posy>10</posy>
                         <width>142</width>
                         <height>80</height>
-                        <texture background="true">$VAR[DefaultListLandscape]</texture>
-                        <aspectratio>scale</aspectratio>
+                        <texture background="true" diffuse="arctic/list/thumb.png">$VAR[DefaultListLandscape]</texture>
+                        <aspectratio scalediffuse="false">scale</aspectratio>
+                    </control>
+                    <control type="image">
+                        <description>Border</description>
+                        <posx>10</posx>
+                        <posy>0</posy>
+                        <width>162</width>
+                        <height>100</height>
+                        <texture border="20">arctic/common/border.png</texture>
+                        <colordiffuse>Mod_Border</colordiffuse>
                     </control>
                     <control type="group">
                         <animation type="Focus" condition="[Container(50).OnNext | Container(50).OnPrevious] + !Container(50).ListItem.IsPlaying" reversible="false">

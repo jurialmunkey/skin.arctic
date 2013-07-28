@@ -11,6 +11,7 @@
             </animation>
             <control type="group">
                 <control type="group">
+                	<visible>![Window.IsActive(home) + StringCompare(Skin.String(homescreen.style),simple)]</visible>
 					<posy>904</posy>
 					<posx>285r</posx>
 					<animation effect="slide" end="-50" time="300" tween="sine" easing="inout" condition="Window.IsActive(mutebug) + [PVR.IsRecording | PVR.HasTimer]">Conditional</animation>
@@ -43,6 +44,44 @@
 						<label>$INFO[System.Date(ddd)], $INFO[System.Date(dd MMM yyyy)]</label>
 						<font>Font-Alaska-S28-L</font>
 						<textcolor>Mod_Tags</textcolor>
+						<align>right</align>
+						<scroll>false</scroll>
+					</control>
+				</control>
+				<control type="group">
+                	<visible>Window.IsActive(home) + StringCompare(Skin.String(homescreen.style),simple)</visible>
+					<posy>904</posy>
+					<posx>285r</posx>
+					<animation effect="slide" end="-50" time="300" tween="sine" easing="inout" condition="Window.IsActive(mutebug) + [PVR.IsRecording | PVR.HasTimer]">Conditional</animation>
+					<!-- Hide weather somewhere to make sure it loads for widgets -->
+					<control type="image">
+						<posx>175</posx>
+						<posy>30</posy>
+						<width>128</width>
+						<height>128</height>
+						<texture>weather/small/$INFO[Weather.FanartCode].png</texture>
+						<colordiffuse>Mod_Tags</colordiffuse>
+						<animation effect="fade" start="0" end="0" time="0" condition="true">Conditional</animation>
+					</control>
+					<control type="label">
+						<posx>190</posx>
+						<posy>41</posy>
+						<width>300</width>
+						<height>78</height>
+						<label>$INFO[System.Time(hh:mm:xx)]</label>
+						<font>Font-Alaska-S52-BL</font>
+						<textcolor>mod-infotags</textcolor>
+						<align>right</align>
+						<scroll>false</scroll>
+					</control>
+					<control type="label">
+						<posx>190</posx>
+						<posy>74</posy>
+						<width>300</width>
+						<height>78</height>
+						<label>$INFO[System.Date(ddd)], $INFO[System.Date(dd MMM yyyy)]</label>
+						<font>Font-Alaska-S28-L</font>
+						<textcolor>mod-infotags</textcolor>
 						<align>right</align>
 						<scroll>false</scroll>
 					</control>

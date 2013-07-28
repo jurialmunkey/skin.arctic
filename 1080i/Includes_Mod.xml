@@ -361,11 +361,11 @@
     
     <include name="HomeProfileInfoLabel">
         <posx>110</posx>
-        <posy>46</posy>
+        <posy>64</posy>
         <width>600</width>
         <height>60</height>
-        <font>Font-Alaska-S29-BL</font>
-        <textcolor>Mod_Tags</textcolor>
+        <font>Font-Alaska-S28-L</font>
+        <textcolor>Mod_Tags_Dark</textcolor>
         <scroll>false</scroll>
         <align>left</align>
         <animation type="Visible">
@@ -401,24 +401,35 @@
                     <texture>windows/home/ava-overlay.png</texture>
                 </control>
                 <control type="label">
-                    <include>HomeProfileInfoLabel</include>
+                    <posx>110</posx>
+					<posy>32</posy>
+					<width>600</width>
+					<height>60</height>
+					<font>Font-Alaska-S36-BL</font>
+					<textcolor>Mod_Tags_Dark</textcolor>
+					<scroll>false</scroll>
+					<align>left</align>
                     <label>$INFO[System.ProfileName]</label>
-                    <visible>Container(30).HasFocus(1)</visible>
                 </control>
                 <control type="label">
                     <include>HomeProfileInfoLabel</include>
                     <label>$INFO[Window.Property(Movies.Count),, $LOCALIZE[342]]</label>
-                    <visible>Container(30).HasFocus(2)</visible>
+                    <visible>[Container(30).HasFocus(2) + !Container(525).HasFocus(1) + !Container(525).HasFocus(2) + !Container(525).HasFocus(3) + !Container(525).HasFocus(4)] | Container(525).HasFocus(1)</visible>
                 </control>
                 <control type="label">
                     <include>HomeProfileInfoLabel</include>
                     <label>$INFO[Window.Property(TVShows.Count),, $LOCALIZE[20343]]</label>
-                    <visible>Container(30).HasFocus(3)</visible>
+                    <visible>[Container(30).HasFocus(3) + !Container(525).HasFocus(1) + !Container(525).HasFocus(2) + !Container(525).HasFocus(3) + !Container(525).HasFocus(4)] | Container(525).HasFocus(2)</visible>
                 </control>
                 <control type="label">
                     <include>HomeProfileInfoLabel</include>
                     <label>$INFO[Window.Property(Music.SongsCount),, $LOCALIZE[134]]</label>
-                    <visible>Container(30).HasFocus(4)</visible>
+                    <visible>[Container(30).HasFocus(4) + !Container(525).HasFocus(1) + !Container(525).HasFocus(2) + !Container(525).HasFocus(3) + !Container(525).HasFocus(4)] | Container(525).HasFocus(3)</visible>
+                </control>
+                <control type="label">
+                    <include>HomeProfileInfoLabel</include>
+                    <label>$INFO[Pvr.BackendChannels,, $LOCALIZE[19019]]</label>
+                    <visible>Container(525).HasFocus(4)</visible>
                 </control>
                 <control type="wraplist" id="30">
                     <posx>0</posx>
@@ -432,10 +443,6 @@
                     <itemlayout width="2" height="2"/>
                     <focusedlayout width="2" height="2"/>
                     <content>
-                        <item id="1">
-                            <label>-</label>
-                            <onclick>noop</onclick>
-                        </item>
                         <item id="2">
                             <label>-</label>
                             <onclick>noop</onclick>

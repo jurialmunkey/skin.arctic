@@ -545,7 +545,7 @@
 				<animation effect="rotate" center="auto" reversible="false" start="360" end="0" time="2500" loop="true" condition="Player.Playing">Conditional</animation>
 				<animation effect="slide" start="395" end="0" time="350">Visible</animation>
 				<visible>Skin.HasSetting(CDArt.Enabled)</visible>
-				<visible>!Window.IsVisible(shutdownmenu)</visible>
+				<visible>!Window.IsVisible(shutdownmenu) + !VideoPlayer.Content(LiveTV)</visible>
 			</control>
 			<control type="image">
 				<posx>10</posx>
@@ -554,7 +554,7 @@
 				<height>270</height>
 				<texture diffuse="arctic/covers/270.png" fallback="views/fallbacks/DefaultAudio.png/square-medium.png">$INFO[Player.Art(thumb)]</texture>
 				<aspectratio scalediffuse="false">scale</aspectratio>
-				<visible>!Window.IsVisible(shutdownmenu)</visible>
+				<visible>!Window.IsVisible(shutdownmenu) + !VideoPlayer.Content(LiveTV)</visible>
 			</control>
 			<control type="image">
 				<posx>-10</posx>
@@ -562,7 +562,7 @@
 				<width>310</width>
 				<height>310</height>
 				<texture border="30">arctic/common/border-20.png</texture>
-				<visible>!Window.IsVisible(shutdownmenu)</visible>
+				<visible>!Window.IsVisible(shutdownmenu) + !VideoPlayer.Content(LiveTV)</visible>
 			</control>
 		</control>
     </include>

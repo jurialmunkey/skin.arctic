@@ -517,49 +517,51 @@
         <radioposy>10</radioposy>
     </include>
     <include name="ViewOptions.Panel.NowPlaying">
-		<control type="image">
-			<posx>122</posx>
-			<posy>760</posy>
-			<width>250</width>
-			<height>250</height>
-			<texture background="true" fallback="osd/fullscreen/cd.png">$INFO[Player.Folderpath,,cdart.png]</texture>
-			<aspectratio align="center">keep</aspectratio>
-			<animation effect="rotate" center="auto" reversible="false" start="360" end="0" time="2500" loop="true" condition="Player.Playing">Conditional</animation>
-			<animation effect="slide" start="395" end="0" time="350">Visible</animation>
-			<visible>Skin.HasSetting(CDArt.Enabled) + !Player.HasVideo</visible>
-		</control>
-		<control type="image">
-			<posx>10</posx>
-			<posy>750</posy>
-			<width>270</width>
-			<height>270</height>
-			<texture diffuse="arctic/covers/270.png" fallback="views/fallbacks/DefaultAudio.png/square-medium.png">$INFO[Player.Art(thumb)]</texture>
-			<aspectratio scalediffuse="false">scale</aspectratio>
-			<visible>!Player.HasVideo</visible>
-		</control>
-		<control type="image">
-			<posx>10</posx>
-			<posy>750</posy>
-			<width>360</width>
-			<height>270</height>
-			<texture border="30">arctic/common/whitepanel8.png</texture>
-			<colordiffuse>ff181818</colordiffuse>
-			<visible>!Window.IsVisible(shutdownmenu) + Player.HasVideo</visible>
-		</control>
-		<control type="videowindow">
-			<posx>10</posx>
-			<posy>750</posy>
-			<width>360</width>
-			<height>270</height>
-			<visible>!Window.IsVisible(shutdownmenu) + Player.HasVideo</visible>
-		</control>
-		<control type="image">
-			<posx>-10</posx>
-			<posy>730</posy>
-			<width>310</width>
-			<height>310</height>
-			<texture border="30">arctic/common/border-20.png</texture>
-			<visible>!Player.HasVideo</visible>
+    	<control type="group">
+    		<visible>!Window.IsVisible(shutdownmenu)</visible>
+			<control type="image">
+				<posx>122</posx>
+				<posy>760</posy>
+				<width>250</width>
+				<height>250</height>
+				<texture background="true" fallback="osd/fullscreen/cd.png">$INFO[Player.Folderpath,,cdart.png]</texture>
+				<aspectratio align="center">keep</aspectratio>
+				<animation effect="rotate" center="auto" reversible="false" start="360" end="0" time="2500" loop="true" condition="Player.Playing">Conditional</animation>
+				<visible>Skin.HasSetting(CDArt.Enabled) + !Player.HasVideo</visible>
+			</control>
+			<control type="image">
+				<posx>10</posx>
+				<posy>750</posy>
+				<width>270</width>
+				<height>270</height>
+				<texture diffuse="arctic/covers/270.png" fallback="views/fallbacks/DefaultAudio.png/square-medium.png">$INFO[Player.Art(thumb)]</texture>
+				<aspectratio scalediffuse="false">scale</aspectratio>
+				<visible>!Player.HasVideo</visible>
+			</control>
+			<control type="image">
+				<posx>9</posx>
+				<posy>750</posy>
+				<width>370</width>
+				<height>270</height>
+				<texture border="30">arctic/common/whitepanel8.png</texture>
+				<colordiffuse>ff181818</colordiffuse>
+				<visible>Player.HasVideo</visible>
+			</control>
+			<control type="videowindow">
+				<posx>9</posx>
+				<posy>750</posy>
+				<width>370</width>
+				<height>270</height>
+				<visible>Player.HasVideo</visible>
+			</control>
+			<control type="image">
+				<posx>-10</posx>
+				<posy>730</posy>
+				<width>310</width>
+				<height>310</height>
+				<texture border="30">arctic/common/border-20.png</texture>
+				<visible>!Player.HasVideo</visible>
+			</control>
 		</control>
     </include>
     <include name="ViewOptions.Panel">

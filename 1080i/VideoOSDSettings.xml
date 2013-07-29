@@ -80,6 +80,8 @@
                     <aligny>center</aligny>
                     <texturefocus border="150,1,150,1">windows/settings/images/right-focus.png</texturefocus>
                     <texturenofocus>-</texturenofocus>
+                    <textureradioon>buttons/radio/radio-light-fo.png</textureradioon>
+					<textureradiooff>buttons/radio/radio-light-nf.png</textureradiooff>
                     <textcolor>96FFFFFF</textcolor>
                     <focusedcolor>white</focusedcolor>
                     <disabledcolor>40FFFFFF</disabledcolor>

@@ -6,6 +6,7 @@
     <onload>SendClick(2003,5)</onload>
     <onload condition="Container.Content(movies) + Skin.HasSetting(PlayTrailer.Minimized) + Skin.HasSetting(MovieInformation.PlayTrailer) + !Skin.HasSetting(old.infostyle)">SetFocus(9336)</onload>
     <onunload>ClearProperty(fanart_image,home)</onunload>
+    <onunload>ClearProperty(videoinfo.cinemaexperience,movieinformation)</onunload>
     <allowoverlay>no</allowoverlay>
     <controls>    
 		<!-- Movies, TVShows, Seasons, Episodes -->

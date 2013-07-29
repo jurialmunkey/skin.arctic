@@ -7,45 +7,81 @@
         
         <control type="group">
             <posx>0</posx>
-            <animation type="WindowClose">
-                <effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
-                <effect type="zoom" start="100" end="85" time="300" center="960,600" tween="sine" easing="out" />
-            </animation>
-            
             <control type="group" id="9001">
-                <posx>100</posx>
-                <posy>218</posy>
+            	<posx>-650</posx>
                 <onup>50</onup>
                 <ondown>50</ondown>
                 <orientation>horizontal</orientation>
                 <visible allowhiddenfocus="true">ControlGroup(9001).HasFocus</visible>
-                <animation type="Visible">
-                    <effect type="fade" start="0" end="100" time="100"  tween="sine" easing="inout" />
-                </animation>
-                <animation type="Hidden">
-                    <effect type="fade" start="100" end="0" time="400" tween="sine" easing="inout" />
-                </animation>
+                <animation type="Visible" reversible="false">
+					<effect type="slide" start="0,0" end="650,0" time="300" delay="100" tween="cubic" easing="inout" />
+				</animation>
+				<animation type="Hidden" reversible="false">
+					<effect type="slide" start="650,0" end="0,0" time="300" tween="cubic" easing="inout" />
+				</animation>
                 <include>listEndAnimation</include>
-                <control type="image">
-                    <description>Panel</description>
-                    <posx>-15</posx>
-                    <posy>0</posy>
-                    <width>492</width>
-                    <height>672</height>
-                    <texture border="35">views/newgloss/whitepanel-15.png</texture>
-                </control>
-                <control type="image">
-                    <description>Shadow</description>
-                    <posx>57</posx>
-                    <posy>883</posy>
-                    <width>544</width>
-                    <height>150</height>
-                    <texture>windows/home/item-shadow.png</texture>
-                </control>
+                <posy>24</posy>
+				<control type="group">
+					<posy>-4</posy>
+					<control type="image">
+						<posx>-40</posx>
+						<posy>-10</posy>
+						<width>452</width>
+						<height>1060</height>
+						<texture border="40">arctic/common/border-20.png</texture>
+					</control>
+					<control type="image">
+						<posx>-20</posx>
+						<posy>10</posy>
+						<width>412</width>
+						<height>1020</height>
+						<texture border="15">arctic/common/panel.png</texture>
+					</control>
+					<control type="group">
+						<control type="image">
+							<posx>122</posx>
+							<posy>760</posy>
+							<width>250</width>
+							<height>250</height>
+							<texture background="true" fallback="osd/fullscreen/cd.png">$INFO[Player.Folderpath,,cdart.png]</texture>
+							<aspectratio align="center">keep</aspectratio>
+							<animation effect="rotate" center="auto" reversible="false" start="360" end="0" time="2500" loop="true" condition="Player.Playing">Conditional</animation>
+							<animation effect="slide" start="395" end="0" time="350">Visible</animation>
+							<visible>Skin.HasSetting(CDArt.Enabled) + !VideoPlayer.Content(LiveTV)</visible>
+						</control>
+						<control type="image">
+							<posx>10</posx>
+							<posy>750</posy>
+							<width>270</width>
+							<height>270</height>
+							<texture diffuse="arctic/covers/270.png" fallback="views/fallbacks/DefaultAudio.png/square-medium.png">$INFO[Player.Art(thumb)]</texture>
+							<aspectratio scalediffuse="false">scale</aspectratio>
+							<visible>!VideoPlayer.Content(LiveTV)</visible>
+						</control>
+						<control type="image">
+							<posx>190</posx>
+							<posy>840</posy>
+							<width>200</width>
+							<height>200</height>
+							<texture>windows/pvr/defaultchannel.png</texture>
+							<aspectratio align="right" aligny="bottom">keep</aspectratio>
+							<visible>VideoPlayer.Content(LiveTV)</visible>
+						</control>
+						<control type="image">
+							<posx>-10</posx>
+							<posy>730</posy>
+							<width>310</width>
+							<height>310</height>
+							<texture border="30">arctic/common/border-20.png</texture>
+							<visible>!VideoPlayer.Content(LiveTV)</visible>
+						</control>
+					</control>
+					
+				</control>
                 <control type="image">
                     <posx>0</posx>
                     <posy>15</posy>
-                    <width>461</width>
+                    <width>380</width>
                     <height>107</height>
                     <texture border="5">views/other/focus-mod.png</texture>
                     <animation effect="slide" end="0,107" time="0" condition="ControlGroup(9001).HasFocus(33)">Conditional</animation>
@@ -72,7 +108,7 @@
                 	<posy>0</posy>
                 	<include>PVRMenuButtonVars</include>
                 	<texturefocus>windows/pvr/icons/channels-fo.png</texturefocus>
-                	<texturenofocus>windows/pvr/icons/channels-nf.png</texturenofocus>
+                	<texturenofocus>windows/pvr/icons/channels-fo.png</texturenofocus>
                 	<label>$LOCALIZE[19023]</label>
                 	<onup>SetProperty(Movement,1)</onup>
                 	<onup>36</onup>
@@ -86,7 +122,7 @@
                 	<posy>107</posy>
                 	<include>PVRMenuButtonVars</include>
                 	<texturefocus>windows/pvr/icons/radio-fo.png</texturefocus>
-                	<texturenofocus>windows/pvr/icons/radio-nf.png</texturenofocus>
+                	<texturenofocus>windows/pvr/icons/radio-fo.png</texturenofocus>
                 	<label>$LOCALIZE[19024]</label>
                 	<onup>SetProperty(Movement,1)</onup>
                 	<onup>32</onup>
@@ -100,7 +136,7 @@
                 	<posy>214</posy>
                 	<include>PVRMenuButtonVars</include>
                 	<texturefocus>windows/pvr/icons/epg-fo.png</texturefocus>
-                	<texturenofocus>windows/pvr/icons/epg-nf.png</texturenofocus>
+                	<texturenofocus>windows/pvr/icons/epg-fo.png</texturenofocus>
                 	<label>$LOCALIZE[19222]: $LOCALIZE[19030]</label>
                 	<onup>SetProperty(Movement,1)</onup>
                 	<onup>33</onup>
@@ -117,7 +153,7 @@
                 	<posy>321</posy>
                 	<include>PVRMenuButtonVars</include>
                 	<texturefocus>windows/pvr/icons/recordings-fo.png</texturefocus>
-                	<texturenofocus>windows/pvr/icons/recordings-nf.png</texturenofocus>
+                	<texturenofocus>windows/pvr/icons/recordings-fo.png</texturenofocus>
                 	<label>$LOCALIZE[19163]</label>
                 	<onup>SetProperty(Movement,1)</onup>
                 	<onup>31</onup>
@@ -131,7 +167,7 @@
                 	<posy>428</posy>
                 	<include>PVRMenuButtonVars</include>
                 	<texturefocus>windows/pvr/icons/timers-fo.png</texturefocus>
-                	<texturenofocus>windows/pvr/icons/timers-nf.png</texturenofocus>
+                	<texturenofocus>windows/pvr/icons/timers-fo.png</texturenofocus>
                 	<label>$LOCALIZE[19040]</label>
                 	<onup>SetProperty(Movement,1)</onup>
                 	<onup>34</onup>
@@ -145,7 +181,7 @@
                 	<posy>535</posy>
                 	<include>PVRMenuButtonVars</include>
                 	<texturefocus>windows/pvr/icons/search-fo.png</texturefocus>
-                	<texturenofocus>windows/pvr/icons/search-nf.png</texturenofocus>
+                	<texturenofocus>windows/pvr/icons/search-fo.png</texturenofocus>
                 	<label>$LOCALIZE[137]</label>
                 	<onup>SetProperty(Movement,1)</onup>
                 	<onup>35</onup>

@@ -1167,3 +1167,7 @@ msgstr ""
 msgctxt "#42429"
 msgid "Don't fade background"
 msgstr ""
+
+msgctxt "#42430"
+msgid "Return to main menu"
+msgstr ""

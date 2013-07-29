@@ -8,151 +8,149 @@
         <include>ProgramHeader</include>
         <include>ProgramViews</include>
         <include>FadeBackgroundContentContext</include>
-        
-        <control type="group" id="9000">
-            <posx>267</posx>
-            <posy>517</posy>
-            <include>OptionsAnimations</include>
-            <animation effect="slide" start="0" end="-204" time="0" condition="Skin.HasSetting(HideShutdownButton)">Conditional</animation> 
-            <control type="group">
-                <include>OptionsPanelAnimations</include>
-                <control type="image">
-                    <description>shadow image</description>
-                    <posx>5</posx>
-                    <posy>505</posy>
-                    <height>60</height>
-                    <width>442</width>
-                    <texture>dialogs/shutdown/shadow.png</texture>
-                    <aspectratio>stretch</aspectratio>
-                </control>
-                <control type="image">
-                    <description>background image</description>
-                    <posx>0</posx>
-                    <posy>0</posy>
-                    <height>540</height>
-                    <width>442</width>
-                    <texture>dialogs/shutdown/shutdown.png</texture>
-                    <aspectratio>stretch</aspectratio>
-                </control>
-            </control>
-                
-            <control type="grouplist" id="9111">
-                <posx>19</posx>
-                <posy>47</posy>
-                <width>404</width>
-                <height>399</height>
-                <itemgap>0</itemgap>
-                <onleft>50</onleft>
-                <onright>50</onright>
-                <onup>9111</onup>
-                <ondown>9111</ondown>
-                <include>GeneralOptionsAnimations</include>
-                <control type="button" id="2">
-                    <description>View</description>
-                    <visible>false</visible>
-                </control>
-                <control type="button" id="100">
-                    <description>Label</description>
-                    <posy>330</posy>
-                    <include>optionsbuttonsdimensions</include>
-                    <label>$INFO[Container.ViewMode]</label>
-                    <onclick>setfocus(201)</onclick>
-                    <texturefocus border="70,2,2,2">dialogs/options/buttons/view-fo.png</texturefocus>
-                    <texturenofocus border="70,2,2,2">dialogs/options/buttons/view-nf.png</texturenofocus>
-                    <animation effect="fade" start="100" end="50" time="0" condition="!Control.IsEnabled(2)">Conditional</animation>
-                </control>
-                <control type="button" id="20">
-                    <description>Label</description>
-                    <posy>330</posy>
-                    <include>optionsbuttonsdimensions</include>
-                    <label>$LOCALIZE[41620]</label>
-                    <onclick>setfocus(9222)</onclick>
-                    <texturefocus border="70,2,2,2">dialogs/options/buttons/custom-fo.png</texturefocus>
-                    <texturenofocus border="70,2,2,2">dialogs/options/buttons/custom-nf.png</texturenofocus>
-                    <animation effect="fade" start="100" end="50" time="0" condition="!Control.IsEnabled(20)">Conditional</animation>
-                    <enable>Control.IsVisible(52) | Control.IsVisible(53) | Control.IsVisible(54) | Control.IsVisible(55) | Control.IsVisible(501) | Control.IsVisible(502)</enable>
-                </control>
-                <control type="button" id="3">
-                    <description>sort</description>
-                    <include>optionsbuttonsdimensions</include>
-                    <texturefocus border="70,2,2,2">dialogs/options/buttons/sort-fo.png</texturefocus>
-                    <texturenofocus border="70,2,2,2">dialogs/options/buttons/sort-nf.png</texturenofocus>
-                    <animation effect="fade" start="100" end="50" time="0" condition="!Control.IsEnabled(3)">Conditional</animation>
-                </control>
-                <control type="togglebutton" id="4">
-                    <description>Ascending</description>
-                    <include>optionsbuttonsdimensions</include>
-                    <label>$LOCALIZE[584]</label>
-                    <altlabel>$LOCALIZE[585]</altlabel>
-                    <texturefocus border="70,2,2,2">dialogs/options/buttons/up-fo.png</texturefocus>
-                    <texturenofocus border="70,2,2,2">dialogs/options/buttons/up-nf.png</texturenofocus>
-                    <alttexturenofocus border="70,2,2,2">dialogs/options/buttons/down-nf.png</alttexturenofocus>
-                    <alttexturefocus border="70,2,2,2">dialogs/options/buttons/down-fo.png</alttexturefocus>
-                    <animation effect="fade" start="100" end="50" time="0" condition="!Control.IsEnabled(4)">Conditional</animation>
-                </control>
-                <control type="edit" id="19">
-                    <description>Filter</description>
-                    <posx>0</posx>
-                    <posy>0</posy>
-                    <width>404</width>
-                    <height>57</height>
-                    <font>Font-Condensed-S34</font>
-                    <align>left</align>
-                    <aligny>top</aligny>
-                    <textcolor>FF484848</textcolor>
-                    <focusedcolor>DDFFFFFF</focusedcolor>
-                    <textoffsety>3</textoffsety>
-                    <textoffsetx>75</textoffsetx>
-                    <scroll>false</scroll>  
-                    <label>587</label>
-                    <pulseonselect>false</pulseonselect>
-                    <texturefocus border="62,2,62,2">dialogs/options/buttons/filter-fo.png</texturefocus>
-                    <texturenofocus border="62,2,62,2">dialogs/options/buttons/filter-nf.png</texturenofocus>
-                    <animation effect="fade" start="100" end="50" time="0" condition="!Control.IsEnabled(19)">Conditional</animation>
-                </control>
-                <control type="button" id="21">
-                    <description>sort</description>
-                    <include>optionsbuttonsdimensions</include>
-                    <label>$LOCALIZE[41621]</label>
-                    <texturefocus border="70,2,2,2">dialogs/options/buttons/custom-fo.png</texturefocus>
-                    <texturenofocus border="70,2,2,2">dialogs/options/buttons/custom-nf.png</texturenofocus>
-                    <onclick>Skin.SetString(GameTile.Path,$INFO[Container.FolderPath])</onclick>
-                    <onclick>SetProperty(BounceLeft,1,Home)</onclick>
-                    <visible>substring(Container.FolderPath,plugin://plugin.program.advanced.launcher/,left)</visible>
-                    <animation type="Conditional" condition="Window.IsVisible(3008)" reversible="false">
-                        <effect type="fade" start="0" end="100" time="300" tween="sine" easing="out" />
-                    </animation>        
-                </control>
-                <control type="button" id="22">
-                    <description>sort</description>
-                    <include>optionsbuttonsdimensions</include>
-                    <label>$LOCALIZE[41622]</label>
-                    <texturefocus border="70,2,2,2">dialogs/options/buttons/custom-back-fo.png</texturefocus>
-                    <texturenofocus border="70,2,2,2">dialogs/options/buttons/custom-back-nf.png</texturenofocus>
-                    <onclick>Skin.Reset(GameTile.Path)</onclick>
-                    <onclick>SetProperty(BounceRight,1,Home)</onclick>
-                    <visible>substring(Container.FolderPath,plugin://plugin.program.advanced.launcher/,left)</visible>
-                    <animation type="Conditional" condition="Window.IsVisible(3009)" reversible="false">
-                        <effect type="fade" start="0" end="100" time="300" tween="sine" easing="out" />
-                    </animation>    
-                </control>
-            </control>
+        <control type="togglebutton" id="4">
+			<description>Sort Direction</description>
+			<label>584</label>
+			<altlabel>585</altlabel>
+			<animation effect="fade" start="0" end="0" time="0" condition="true">Conditional</animation>
+		</control>
+		<control type="group" id="9000">
+			<include>ViewOptions.Panel</include>
+			<control type="list" id="9111">
+				<posx>0</posx>
+				<posy>20</posy>
+				<width>400</width>
+				<height>720</height>
+				<itemgap>0</itemgap>
+				<onleft>50</onleft>
+				<onright>50</onright>
+				<onback>50</onback>
+				<onup>9111</onup>
+				<ondown>9111</ondown>
+				<include>GeneralOptionsAnimations</include>
+				<itemlayout height="80">
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>100</width>
+						<height>100</height>
+						<texture>$INFO[ListItem.Icon]</texture>
+						<aspectratio aligny="center">keep</aspectratio>
+					</control>
+					<control type="label">
+						<posx>102</posx>
+						<posy>0</posy>
+						<width>260</width>
+						<height>80</height>
+						<font>Font-Condensed-S34</font>
+						<align>left</align>
+						<textcolor>mod-infotags-alt</textcolor>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+				</itemlayout>
+				<focusedlayout height="80">
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>380</width>
+						<height>80</height>
+						<texture border="8">views/other/focus-mod8-right.png</texture>
+					</control>
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>100</width>
+						<height>100</height>
+						<texture>$INFO[ListItem.Icon]</texture>
+						<aspectratio aligny="center">keep</aspectratio>
+					</control>
+					<control type="label">
+						<posx>102</posx>
+						<posy>0</posy>
+						<width>260</width>
+						<height>80</height>
+						<font>Font-Condensed-S34</font>
+						<align>left</align>
+						<textcolor>mod-infotags-alt</textcolor>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+				</focusedlayout>
+				<content>
+					<item id="1">
+						<description>View Mode</description>
+						<label>$INFO[Container.ViewMode]</label>
+						<icon>windows/home/icons/config.png</icon>
+						<onclick>setfocus(201)</onclick>
+						<visible>true</visible>
+					</item>
+					<item id="2">
+						<description>View Options</description>
+						<label>41620</label>
+						<icon>windows/home/icons/config2.png</icon>
+						<onclick>setfocus(9222)</onclick>
+						<visible>true</visible>
+					</item>
+					<item id="3">
+						<description>Sort</description>
+						<icon>windows/home/icons/epg.png</icon>
+						<label>$INFO[Container.SortMethod]</label>
+						<onclick>SendClick(3)</onclick>
+					</item>
+					<item id="4">
+						<description>Ascending</description>
+						<icon>windows/home/icons/thumbup.png</icon>
+						<label>584</label>
+						<onclick>SendClick(4)</onclick>
+						<visible>StringCompare(Control.GetLabel(4),$LOCALIZE[584])</visible>
+					</item>
+					<item id="5">
+						<description>Descending</description>
+						<icon>windows/home/icons/thumbdown.png</icon>
+						<label>585</label>
+						<onclick>SendClick(4)</onclick>
+						<visible>StringCompare(Control.GetLabel(4),$LOCALIZE[585])</visible>
+					</item>
+					<item id="6">
+						<description>Filter</description>
+						<label>587</label>
+						<icon>windows/home/icons/cloud.png</icon>
+						<onclick>SendClick(19)</onclick>
+					</item>
+					<item id="7">
+						<description>Set games path</description>
+						<label>41621</label>
+						<icon>windows/home/icons/controller.png</icon>
+						<onclick>Skin.SetString(GameTile.Path,$INFO[Container.FolderPath])</onclick>
+						<onclick>SetProperty(BounceLeft,1,Home)</onclick>
+						<visible>substring(Container.FolderPath,plugin://plugin.program.advanced.launcher/,left)</visible>
+					</item>
+					<item id="8">
+						<description>Reset games path</description>
+						<label>41622</label>
+						<icon>windows/home/icons/no.png</icon>
+						<onclick>Skin.Reset(GameTile.Path)</onclick>
+						<onclick>SetProperty(BounceRight,1,Home)</onclick>
+						<visible>substring(Container.FolderPath,plugin://plugin.program.advanced.launcher/,left)</visible>
+					</item>
+				</content>
+			</control>
             <control type="grouplist" id="9222">
                 <description>View Specific Controls</description>
-                <posx>19</posx>
-                <posy>47</posy>
-                <width>404</width>
-                <height>399</height>
-                <itemgap>0</itemgap>
-                <onleft>9111</onleft>
-                <onright>9111</onright>
+                <posx>0</posx>
+				<posy>20</posy>
+				<width>400</width>
+				<height>720</height>
+				<itemgap>0</itemgap>
+				<onleft>9111</onleft>
+				<onright>9111</onright>
+				<onback>9111</onback>
                 <onup>9222</onup>
                 <ondown>9222</ondown>
                 <include>SpecificOptionsAnimations</include>
                 <control type="button" id="101">
                     <description>Label</description>
                     <posy>330</posy>
-                    <include>optionsbuttonsdimensions</include>
+                    <include>ViewOptions.Button</include>
                     <label>$LOCALIZE[42017]</label>
                     <onclick>setfocus(9111)</onclick>
                     <texturefocus border="70,2,2,2">dialogs/options/buttons/custom-fo.png</texturefocus>
@@ -160,7 +158,7 @@
                 </control>
                 <control type="radiobutton" id="102">
                     <description>Show info in Info List</description>
-                    <include>optionsbuttonsdimensions</include>
+                    <include>ViewOptions.Button</include>
                     <label>$LOCALIZE[42015]</label>
                     <texturefocus border="2">dialogs/options/buttons/default-fo.png</texturefocus>
                     <onclick>Skin.ToggleSetting(ProgramInfoListHideInfo)</onclick>
@@ -172,7 +170,7 @@
                 </control>
                 <control type="radiobutton" id="103">
                     <description>Show plot in Info List</description>
-                    <include>optionsbuttonsdimensions</include>
+                    <include>ViewOptions.Button</include>
                     <label>$LOCALIZE[42018]</label>
                     <texturefocus border="2">dialogs/options/buttons/default-fo.png</texturefocus>
                     <onclick>Skin.ToggleSetting(ProgramInfoListPlot)</onclick>
@@ -186,7 +184,7 @@
                 </control>
                 <control type="radiobutton" id="104">
                     <description>Show info in Info List Square</description>
-                    <include>optionsbuttonsdimensions</include>
+                    <include>ViewOptions.Button</include>
                     <label>$LOCALIZE[42015]</label>
                     <texturefocus border="2">dialogs/options/buttons/default-fo.png</texturefocus>
                     <onclick>Skin.ToggleSetting(ProgramInfoListSquareHideInfo)</onclick>
@@ -198,7 +196,7 @@
                 </control>
                 <control type="radiobutton" id="105">
                     <description>Show plot in Info List Square</description>
-                    <include>optionsbuttonsdimensions</include>
+                    <include>ViewOptions.Button</include>
                     <label>$LOCALIZE[42018]</label>
                     <texturefocus border="2">dialogs/options/buttons/default-fo.png</texturefocus>
                     <onclick>Skin.ToggleSetting(ProgramInfoListSquarePlot)</onclick>
@@ -212,7 +210,7 @@
                 </control>
                 <control type="radiobutton" id="106">
                     <description>Show info in Info Panel</description>
-                    <include>optionsbuttonsdimensions</include>
+                    <include>ViewOptions.Button</include>
                     <label>$LOCALIZE[42015]</label>
                     <texturefocus border="2">dialogs/options/buttons/default-fo.png</texturefocus>
                     <onclick>Skin.ToggleSetting(ProgramInfoPanelHideInfo)</onclick>
@@ -224,7 +222,7 @@
                 </control>
                 <control type="radiobutton" id="107">
                     <description>Show plot in Info Panel</description>
-                    <include>optionsbuttonsdimensions</include>
+                    <include>ViewOptions.Button</include>
                     <label>$LOCALIZE[42018]</label>
                     <texturefocus border="2">dialogs/options/buttons/default-fo.png</texturefocus>
                     <onclick>Skin.ToggleSetting(ProgramInfoPanelPlot)</onclick>
@@ -238,7 +236,7 @@
                 </control>
                 <control type="radiobutton" id="108">
                     <description>Show info in Info Panel Square</description>
-                    <include>optionsbuttonsdimensions</include>
+                    <include>ViewOptions.Button</include>
                     <label>$LOCALIZE[42015]</label>
                     <texturefocus border="2">dialogs/options/buttons/default-fo.png</texturefocus>
                     <onclick>Skin.ToggleSetting(ProgramInfoPanelSquareHideInfo)</onclick>
@@ -250,7 +248,7 @@
                 </control>
                 <control type="radiobutton" id="109">
                     <description>Show plot in Info Panel Square</description>
-                    <include>optionsbuttonsdimensions</include>
+                    <include>ViewOptions.Button</include>
                     <label>$LOCALIZE[42018]</label>
                     <texturefocus border="2">dialogs/options/buttons/default-fo.png</texturefocus>
                     <onclick>Skin.ToggleSetting(ProgramInfoPanelSquarePlot)</onclick>
@@ -264,7 +262,7 @@
                 </control>
                 <control type="radiobutton" id="110">
                     <description>Use small thumbs in thumbnail video view</description>
-                    <include>optionsbuttonsdimensions</include>
+                    <include>ViewOptions.Button</include>
                     <label>$LOCALIZE[42024]</label>
                     <texturefocus border="2">dialogs/options/buttons/default-fo.png</texturefocus>
                     <onclick>Skin.ToggleSetting(ProgramThumbnailSmall)</onclick>
@@ -276,7 +274,7 @@
                 </control>
                 <control type="radiobutton" id="111">
                     <description>Show info in thumbnail view</description>
-                    <include>optionsbuttonsdimensions</include>
+                    <include>ViewOptions.Button</include>
                     <label>$LOCALIZE[42015]</label>
                     <texturefocus border="2">dialogs/options/buttons/default-fo.png</texturefocus>
                     <onclick>Skin.ToggleSetting(ProgramThumbnailHideInfo)</onclick>
@@ -288,7 +286,7 @@
                 </control>
                 <control type="radiobutton" id="112">
                     <description>Show plot in thumbnail view</description>
-                    <include>optionsbuttonsdimensions</include>
+                    <include>ViewOptions.Button</include>
                     <label>$LOCALIZE[42018]</label>
                     <texturefocus border="2">dialogs/options/buttons/default-fo.png</texturefocus>
                     <onclick>Skin.ToggleSetting(ProgramThumbnailPlot)</onclick>
@@ -302,7 +300,7 @@
                 </control>
                 <control type="radiobutton" id="113">
                     <description>Show plot in thumbnail square view</description>
-                    <include>optionsbuttonsdimensions</include>
+                    <include>ViewOptions.Button</include>
                     <label>$LOCALIZE[42018]</label>
                     <texturefocus border="2">dialogs/options/buttons/default-fo.png</texturefocus>
                     <onclick>Skin.ToggleSetting(ProgramThumbnailSquarePlot)</onclick>
@@ -315,20 +313,21 @@
             </control>
             <control type="grouplist" id="9223">
                 <description>View Controls</description>
-                <posx>19</posx>
-                <posy>47</posy>
-                <width>404</width>
-                <height>399</height>
-                <itemgap>0</itemgap>
-                <onleft>9111</onleft>
-                <onright>9111</onright>
+                <posx>0</posx>
+				<posy>20</posy>
+				<width>400</width>
+				<height>720</height>
+				<itemgap>0</itemgap>
+				<onleft>9111</onleft>
+				<onright>9111</onright>
+				<onback>9111</onback>
                 <onup>9223</onup>
                 <ondown>9223</ondown>
                 <include>ViewOptionsAnimations</include>
                 <control type="button" id="201">
                     <description>Label</description>
                     <posy>330</posy>
-                    <include>optionsbuttonsdimensions</include>
+                    <include>ViewOptions.Button</include>
                     <label>$LOCALIZE[42017]</label>
                     <onclick>setfocus(9111)</onclick>
                     <texturefocus border="70,2,2,2">dialogs/options/buttons/custom-back-fo.png</texturefocus>
@@ -336,7 +335,7 @@
                 </control>
                 <control type="radiobutton" id="202">
                     <description>List</description>
-                    <include>optionsbuttonsdimensions</include>
+                    <include>ViewOptions.Button</include>
                     <label>537</label>
                     <texturefocus border="2">dialogs/options/buttons/default-fo.png</texturefocus>
                     <onclick>Container.SetViewMode(50)</onclick>
@@ -347,7 +346,7 @@
                 </control>
                 <control type="radiobutton" id="203">
                     <description>Thumbnail</description>
-                    <include>optionsbuttonsdimensions</include>
+                    <include>ViewOptions.Button</include>
                     <label>21371</label>
                     <texturefocus border="2">dialogs/options/buttons/default-fo.png</texturefocus>
                     <onclick>Container.SetViewMode(500)</onclick>
@@ -359,7 +358,7 @@
                 </control>
                 <control type="radiobutton" id="204">
                     <description>Info</description>
-                    <include>optionsbuttonsdimensions</include>
+                    <include>ViewOptions.Button</include>
                     <label>42309</label>
                     <texturefocus border="2">dialogs/options/buttons/default-fo.png</texturefocus>
                     <onclick>Container.SetViewMode(52)</onclick>
@@ -370,7 +369,7 @@
                 </control>
                 <control type="radiobutton" id="205">
                     <description>Banner</description>
-                    <include>optionsbuttonsdimensions</include>
+                    <include>ViewOptions.Button</include>
                     <label>42304</label>
                     <texturefocus border="2">dialogs/options/buttons/default-fo.png</texturefocus>
                     <onclick>Container.SetViewMode(60)</onclick>
@@ -381,7 +380,7 @@
                 </control>
                 <control type="radiobutton" id="206">
                     <description>Wall</description>
-                    <include>optionsbuttonsdimensions</include>
+                    <include>ViewOptions.Button</include>
                     <label>42311</label>
                     <texturefocus border="2">dialogs/options/buttons/default-fo.png</texturefocus>
                     <onclick>Container.SetViewMode(502)</onclick>
@@ -393,7 +392,7 @@
                 </control>
                 <control type="radiobutton" id="208">
                     <description>Reel</description>
-                    <include>optionsbuttonsdimensions</include>
+                    <include>ViewOptions.Button</include>
                     <label>42307</label>
                     <texturefocus border="2">dialogs/options/buttons/default-fo.png</texturefocus>
                     <onclick>Container.SetViewMode(513)</onclick>
@@ -405,7 +404,7 @@
                 </control>
                 <control type="radiobutton" id="209">
                     <description>Landscape</description>
-                    <include>optionsbuttonsdimensions</include>
+                    <include>ViewOptions.Button</include>
                     <label>42312</label>
                     <texturefocus border="2">dialogs/options/buttons/default-fo.png</texturefocus>
                     <onclick>Container.SetViewMode(507)</onclick>
@@ -417,7 +416,7 @@
                 </control>
                 <control type="radiobutton" id="210">
                     <description>Classic Info</description>
-                    <include>optionsbuttonsdimensions</include>
+                    <include>ViewOptions.Button</include>
                     <label>42309</label>
                     <texturefocus border="2">dialogs/options/buttons/default-fo.png</texturefocus>
                     <onclick>Container.SetViewMode(514)</onclick>
@@ -429,7 +428,7 @@
                 </control>
                 <control type="radiobutton" id="211">
                     <description>Poster Info</description>
-                    <include>optionsbuttonsdimensions</include>
+                    <include>ViewOptions.Button</include>
                     <label>42310</label>
                     <texturefocus border="2">dialogs/options/buttons/default-fo.png</texturefocus>
                     <onclick>Container.SetViewMode(56)</onclick>
@@ -440,69 +439,7 @@
                     <visible>substring(Container.FolderPath,plugin://plugin.program.advanced.launcher/,left)</visible>
                 </control>
             </control>
-            
-            <control type="group">
-                <include>GeneralOptionsAnimations</include>
-                <control type="image">
-                    <posx>9</posx>
-                    <posy>433</posy>
-                    <width>100</width>
-                    <height>100</height>
-                    <texture>buttons/options_nofo.png</texture>
-                </control>
-                <control type="label">
-                    <posx>94</posx>
-                    <posy>433</posy>
-                    <width>300</width>
-                    <height>100</height>
-                    <label>$LOCALIZE[41600]</label>
-                    <font>Font-Alaska-S29-BL</font>
-                    <textcolor>eewhite</textcolor>
-                    <shadowcolor>22000000</shadowcolor>
-                </control>
-            </control>
-            
-            <control type="group">
-                <include>SpecificOptionsAnimations</include>
-                <control type="image">
-                    <posx>9</posx>
-                    <posy>433</posy>
-                    <width>100</width>
-                    <height>100</height>
-                    <texture>buttons/options_nofo.png</texture>
-                </control>
-                <control type="label">
-                    <posx>94</posx>
-                    <posy>433</posy>
-                    <width>300</width>
-                    <height>100</height>
-                    <label>$LOCALIZE[42010]</label>
-                    <font>Font-Alaska-S29-BL</font>
-                    <textcolor>eewhite</textcolor>
-                    <shadowcolor>22000000</shadowcolor>
-                </control>
-            </control>
-            
-            <control type="group">
-                <include>ViewOptionsAnimations</include>
-                <control type="image">
-                    <posx>9</posx>
-                    <posy>433</posy>
-                    <width>100</width>
-                    <height>100</height>
-                    <texture>buttons/options_nofo.png</texture>
-                </control>
-                <control type="label">
-                    <posx>94</posx> 
-                    <posy>433</posy>
-                    <width>300</width>
-                    <height>100</height>
-                    <label>$LOCALIZE[42021]</label>
-                    <font>Font-Alaska-S29-BL</font>
-                    <textcolor>eewhite</textcolor>
-                    <shadowcolor>22000000</shadowcolor>
-                </control>
-            </control>          
+                    
         </control>
         
         <!-- Scrollbar visibility controls -->

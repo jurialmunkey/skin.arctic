@@ -220,13 +220,6 @@
 								<onfocus>Action(left)</onfocus>
 								<onleft>50</onleft>
 							</control>
-							<!--<control type="image">
-								<posx>745</posx>
-								<posy>280</posy>
-								<width>1135</width>
-								<height>84</height>
-								<texture border="90,3,90,3">views/list/other/separator-l.png</texture>
-							</control>-->
 							<control type="label">
 								<posx>985</posx>
 								<posy>375</posy>
@@ -318,7 +311,7 @@
 						</control>
 						<control type="button" id="9339">
 							<visible allowhiddenfocus="true">false</visible>
-							<onfocus>Skin.ToggleSetting(videoinfo.cinemaexperience)</onfocus>
+							<onfocus>ClearProperty(videoinfo.cinemaexperience)</onfocus>
 							<onfocus>SetFocus(9333)</onfocus>
 						</control>
 						<control type="list" id="9333">
@@ -327,7 +320,8 @@
 							<width>1200</width>
 							<height>83</height>
 							<onup>SetFocus(9334)</onup>
-							<ondown condition="System.HasAddon(script.cinema.experience) + Container(9333).HasFocus(1) + Container.Content(movies) + !SubString(Container.FolderPath,plugin)">SetFocus(9339)</ondown>
+							<ondown condition="System.HasAddon(script.cinema.experience) + Container(9333).HasFocus(1) + Container.Content(movies) + !SubString(Container.FolderPath,plugin) + IsEmpty(Window(movieinformation).Property(videoinfo.cinemaexperience)">SetProperty(videoinfo.cinemaexperience,1)</ondown>
+							<ondown condition="System.HasAddon(script.cinema.experience) + Container(9333).HasFocus(1) + Container.Content(movies) + !SubString(Container.FolderPath,plugin) + !IsEmpty(Window(movieinformation).Property(videoinfo.cinemaexperience)">SetFocus(9339)</ondown>
 							<ondown condition="System.HasAddon(script.cinema.experience) + Container(9333).HasFocus(1) + ![Container.Content(movies) + !SubString(Container.FolderPath,plugin)]">SetFocus(9333)</ondown>
 							<ondown condition="!Container(9333).HasFocus(1) | !System.HasAddon(script.cinema.experience">70</ondown>
 							<onleft>SetFocus(9336)</onleft>
@@ -374,7 +368,7 @@
 									<animation effect="slide" start="83" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(9333).OnPrevious">Focus</animation>
 									<animation effect="slide" start="-83" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(9333).OnNext">Focus</animation>
 									<include>visiblehidefadeinfo</include>
-									<visible>Control.HasFocus(9333)</visible>
+									<visible>Control.HasFocus(9333) | Control.HasFocus(9339)</visible>
 								</control>
 								<control type="label">
 									<posx>90</posx>
@@ -387,7 +381,7 @@
 									<shadowcolor>33000000</shadowcolor>
 									<animation effect="fade" start="50" end="100" time="300" tween="sine" easing="inout" reversible="false" condition="Container(9333).OnNext | Container(9333).OnPrevious">Focus</animation>
 									<animation effect="fade" start="100" end="50" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(9333)">Conditional</animation>
-									<visible>Control.HasFocus(9333)</visible>
+									<visible>Control.HasFocus(9333) | Control.HasFocus(9339)</visible>
 								</control>
 								<control type="label">
 									<posx>90</posx>
@@ -400,7 +394,7 @@
 									<shadowcolor>mod-shadow</shadowcolor>
 									<animation effect="fade" start="50" end="100" time="300" tween="sine" easing="inout" reversible="false" condition="Container(9333).OnNext | Container(9333).OnPrevious">Focus</animation>
 									<animation effect="fade" start="100" end="50" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(9333)">Conditional</animation>
-									<visible>!Control.HasFocus(9333)</visible>
+									<visible>!Control.HasFocus(9333) + !Control.HasFocus(9339)</visible>
 								</control>
 								<control type="image">
 									<posx>-5</posx>
@@ -409,7 +403,7 @@
 									<height>100</height>
 									<texture>$INFO[ListItem.Thumb]</texture>
 									<include>visiblehidefadeinfo</include>
-									<visible>Control.HasFocus(9333)</visible>
+									<visible>Control.HasFocus(9333) | Control.HasFocus(9339)</visible>
 									<aspectratio>keep</aspectratio>
 								</control>
 								<control type="image">
@@ -419,7 +413,7 @@
 									<height>100</height>
 									<texture>$INFO[ListItem.ActualIcon]</texture>
 									<include>visiblehidefadeinfo</include>
-									<visible>!Control.HasFocus(9333)</visible>
+									<visible>!Control.HasFocus(9333) + !Control.HasFocus(9339)</visible>
 									<aspectratio>keep</aspectratio>
 								</control>
 								<control type="image">
@@ -436,14 +430,14 @@
 									<onclick>SendClick(2003,8)</onclick>
 									<icon>aeonflags/addition/OSDPlayNF.png</icon>
 									<thumb>aeonflags/addition/OSDPlayFO.png</thumb>
-									<visible>[[System.HasAddon(script.cinema.experience) + Skin.HasSetting(videoinfo.cinemaexperience) + Container.Content(movies) + !SubString(Container.FolderPath,plugin)] | !System.HasAddon(script.cinema.experience) | !Container.Content(movies) | SubString(Container.FolderPath,plugin)]</visible>
+									<visible>[[System.HasAddon(script.cinema.experience) + IsEmpty(Window(movieinformation).Property(videoinfo.cinemaexperience) + Container.Content(movies) + !SubString(Container.FolderPath,plugin)] | !System.HasAddon(script.cinema.experience) | !Container.Content(movies) | SubString(Container.FolderPath,plugin)]</visible>
 								</item>
 								<item id="1">
 									<description>Cinema Experience</description>
 									<label>Cinema Ex</label>
 									<onclick>XBMC.RunScript(script.cinema.experience,movieid=$INFO[ListItem.DBID])</onclick>
 									<onclick>Dialog.Close(MovieInformation)</onclick>
-									<visible>System.HasAddon(script.cinema.experience) + Container.Content(movies) + !SubString(Container.FolderPath,plugin) + !Skin.HasSetting(videoinfo.cinemaexperience)</visible>
+									<visible>System.HasAddon(script.cinema.experience) + Container.Content(movies) + !SubString(Container.FolderPath,plugin) + !IsEmpty(Window(movieinformation).Property(videoinfo.cinemaexperience)</visible>
 									<icon>aeonflags/addition/OSDBookMarksNF.png</icon>
 									<thumb>aeonflags/addition/OSDBookMarksFO.png</thumb>
 								</item>
@@ -606,7 +600,6 @@
 							<align>left</align>
 							<aligny>center</aligny>
 						</control>
-						
 					</control>
 					<!-- PLOT -->
 					<control type="group">
@@ -693,24 +686,6 @@
 						<height>720</height>
 						<texture border="25">arctic/common/border.png</texture>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
-					</control>
-					<control type="image">
-						<description>Case Back</description>
-						<posx>-10</posx>
-						<posy>-10</posy>
-						<width>486</width>
-						<height>720</height>
-						<texture border="100">overlays/aeon/glass.png</texture>
-						<visible>Skin.HasSetting(covers.showcases)</visible>
-					</control>
-					<control type="image">
-						<description>Case Front</description>
-						<posx>-10</posx>
-						<posy>-65</posy>
-						<width>486</width>
-						<height>775</height>
-						<texture border="15,70,15,30">overlays/aeon/$VAR[covers.showcases.var].png</texture>
-						<visible>Skin.HasSetting(covers.showcases)</visible>
 					</control>
 				</control>
 				<!-- FANART -->
@@ -806,24 +781,6 @@
 							<texture border="25">arctic/common/border.png</texture>
 							<aspectratio scalediffuse="false">stretch</aspectratio>
 						</control>
-					</control>
-					<control type="image">
-						<description>Case Back</description>
-						<posx>-10</posx>
-						<posy>-10</posy>
-						<width>1264</width>
-						<height>720</height>
-						<texture border="100">overlays/aeon/glass.png</texture>
-						<visible>Skin.HasSetting(covers.showcases)</visible>
-					</control>
-					<control type="image">
-						<description>Case Front</description>
-						<posx>-10</posx>
-						<posy>-65</posy>
-						<width>1264</width>
-						<height>775</height>
-						<texture border="15,70,15,30">overlays/aeon/plain.png</texture>
-						<visible>Skin.HasSetting(covers.showcases)</visible>
 					</control>
 				</control>
             </control>

@@ -43,5 +43,6 @@ PVR Channel OSD revamp
 Fixed text color visibility in add on settings
 
 [B]0.2.5[/B]
-Revamp of view and power menu 
-  - Still to do: context menu and pictures/addons menu
+Revamp of view and power menu
+Revamp of Context menu 
+  - Still to do: pictures/addons menu

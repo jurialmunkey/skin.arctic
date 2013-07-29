@@ -783,49 +783,41 @@
    
     <include name="OptionsAnimations">
         <animation type="Conditional" condition="Controlgroup(9000).HasFocus" reversible="false">
-            <effect type="fade" start="0" end="100" time="200" tween="sine" easing="in"  />
-            <effect type="slide" start="0,0" end="0,-40" time="300" delay="100" tween="sine" easing="out" />
+            <effect type="slide" start="-650,0" end="0,0" time="300" delay="100" tween="cubic" easing="inout" />
         </animation>
         <animation type="Conditional" condition="!Controlgroup(9000).HasFocus" reversible="false">
-            <effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
-            <effect type="slide" start="0,-40" end="0,-40" />
+            <effect type="slide" start="0,0" end="-650,0" time="300" tween="cubic" easing="inout" />
         </animation>
         <animation type="WindowClose" reversible="false">
-            <effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
+            <effect type="slide" start="0,0" end="-650,0" time="300" tween="cubic" easing="inout" />
         </animation>
     </include>
     
     <include name="GeneralOptionsAnimations">
         <visible allowhiddenfocus="true">!ControlGroup(9222).HasFocus + !ControlGroup(9223).HasFocus</visible>
         <animation type="Visible">
-            <effect type="rotatey" start="-180" end="0" center="221,0" time="400" tween="sine" easing="inout" />
-            <effect type="fade" start="0" end="100" time="10" delay="200" />
+            <effect type="fade" start="0" end="100" time="250" delay="200" />
         </animation>
         <animation type="Hidden">
-            <effect type="rotatey" start="0" end="-180" center="221,0" time="400" tween="sine" easing="inout" />
-            <effect type="fade" start="100" end="0" time="10" delay="200" />
+            <effect type="fade" start="100" end="0" time="250" delay="200" />
         </animation>
     </include>
     <include name="SpecificOptionsAnimations">
         <visible allowhiddenfocus="true">ControlGroup(9222).HasFocus</visible>
         <animation type="Visible">
-            <effect type="rotatey" start="180" end="0" center="221,0" time="400" tween="sine" easing="inout" />
-            <effect type="fade" start="0" end="100" time="10" delay="200" />
+            <effect type="fade" start="0" end="100" time="250" delay="200" />
         </animation>                                
         <animation type="Hidden">
-            <effect type="rotatey" start="0" end="180" center="221,0" time="400" tween="sine" easing="inout" />
-            <effect type="fade" start="100" end="0" time="10" delay="200" />
+            <effect type="fade" start="100" end="0" time="250" delay="200" />
         </animation>
     </include>
     <include name="ViewOptionsAnimations">
         <visible allowhiddenfocus="true">ControlGroup(9223).HasFocus</visible>
         <animation type="Visible">
-            <effect type="rotatey" start="180" end="0" center="221,0" time="400" tween="sine" easing="inout" />
-            <effect type="fade" start="0" end="100" time="10" delay="200" />
+            <effect type="fade" start="0" end="100" time="250" delay="200" />
         </animation>                                
         <animation type="Hidden">
-            <effect type="rotatey" start="0" end="180" center="221,0" time="400" tween="sine" easing="inout" />
-            <effect type="fade" start="100" end="0" time="10" delay="200" />
+            <effect type="fade" start="100" end="0" time="250" delay="200" />
         </animation>
     </include>
     

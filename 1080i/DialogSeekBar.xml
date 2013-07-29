@@ -358,7 +358,7 @@
 								<posx>0</posx>
 								<posy>34</posy>
 								<width>1231</width>
-								<label>$INFO[VideoPlayer.ChannelNumber,$LOCALIZE[19029] ,]$INFO[VideoPlayer.ChannelName, • ,]</label>
+								<label>$INFO[VideoPlayer.ChannelNumber,$LOCALIZE[19029] ,]$INFO[VideoPlayer.ChannelName, • ,]$INFO[VideoPlayer.Genre, • ,]</label>
 								<label2>$INFO[VideoPlayer.Rating, ★ ,]</label2>
 								<font>Font-Alaska-S28-L</font>
 								<textcolor>mod-infotags</textcolor>

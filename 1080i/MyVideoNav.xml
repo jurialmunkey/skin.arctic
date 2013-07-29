@@ -13,224 +13,243 @@
             <include>CommonItems</include>
             <include>VideoHeader</include>
             <include>VideoViews</include>
+            <include>Arctic.ClearLogo</include>
             <include>FadeBackgroundContentContext</include>
-			<include>Arctic.ClearLogo</include>
+			
+			<control type="togglebutton" id="4">
+				<description>Sort Direction</description>
+				<label>584</label>
+				<altlabel>585</altlabel>
+				<animation effect="fade" start="0" end="0" time="0" condition="true">Conditional</animation>
+			</control>
+			<control type="radiobutton" id="14">
+				<description>Watched Toggle</description>
+				<animation effect="fade" start="0" end="0" time="0" condition="true">Conditional</animation>
+			</control>
+			<control type="radiobutton" id="17">
+				<description>Flatten</description>
+				<animation effect="fade" start="0" end="0" time="0" condition="true">Conditional</animation>
+			</control>
             <control type="group" id="9000">
-                <posx>267</posx>
-                <posy>517</posy>
-                <include>OptionsAnimations</include>
-                <animation effect="slide" start="0" end="-204" time="0" condition="true">Conditional</animation>     
-                <control type="group">
-                    <include>OptionsPanelAnimations</include>
-                    <control type="image">
-                        <description>shadow image</description>
-                        <posx>5</posx>
-                        <posy>505</posy>
-                        <height>60</height>
-                        <width>442</width>
-                        <texture>dialogs/shutdown/shadow.png</texture>
-                        <aspectratio>stretch</aspectratio>
-                    </control>
-                    <control type="image">
-                        <description>background image</description>
-                        <posx>0</posx>
-                        <posy>0</posy>
-                        <height>540</height>
-                        <width>442</width>
-                        <texture>dialogs/shutdown/shutdown.png</texture>
-                        <aspectratio>stretch</aspectratio>
-                    </control>
-                </control>
-                
-                <control type="grouplist" id="9111">
-                    <posx>19</posx>
-                    <posy>47</posy>
-                    <width>404</width>
-                    <height>399</height>
+                <include>ViewOptions.Panel</include>
+                <control type="list" id="9111">
+                    <posx>0</posx>
+                    <posy>20</posy>
+                    <width>400</width>
+                    <height>720</height>
                     <itemgap>0</itemgap>
                     <onleft>50</onleft>
                     <onright>50</onright>
+                    <onback>50</onback>
                     <onup>9111</onup>
                     <ondown>9111</ondown>
                     <include>GeneralOptionsAnimations</include>
-                    <control type="button" id="2">
-                        <description>View</description>
-                        <visible>false</visible>
-                    </control>
-                    <control type="button" id="100">
-                        <description>Label</description>
-                        <posy>330</posy>
-                        <include>optionsbuttonsdimensions</include>
-                        <label>$INFO[Container.ViewMode]</label>
-                        <onclick>setfocus(201)</onclick>
-                        <texturefocus border="70,2,2,2">dialogs/options/buttons/view-fo.png</texturefocus>
-                        <texturenofocus border="70,2,2,2">dialogs/options/buttons/view-nf.png</texturenofocus>
-                        <animation effect="fade" start="100" end="50" time="0" condition="!Control.IsEnabled(2)">Conditional</animation>
-                    </control>
-                    <control type="button" id="21">
-                        <description>Label</description>
-                        <posy>330</posy>
-                        <include>optionsbuttonsdimensions</include>
-                        <label>14018</label>
-                        <onclick>setfocus(101)</onclick>
-                        <texturefocus border="70,2,2,2">dialogs/options/buttons/custom-fo.png</texturefocus>
-                        <texturenofocus border="70,2,2,2">dialogs/options/buttons/custom-nf.png</texturenofocus>
-                        <animation effect="fade" start="100" end="50" time="0" condition="!Control.IsEnabled(21)">Conditional</animation>
-                    </control>
-                    <control type="button" id="98">
-                        <description>Label</description>
-                        <include>optionsbuttonsdimensions</include>
-                        <label>42160</label>
-                        <onclick>RunAddon(script.tv.show.next.aired)</onclick>
-                        <texturefocus border="70,2,2,2">dialogs/options/buttons/tvguide-fo.png</texturefocus>
-                        <texturenofocus border="70,2,2,2">dialogs/options/buttons/tvguide-nf.png</texturenofocus>
-                        <visible>[Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes)] + System.HasAddon(script.tv.show.next.aired)</visible>
-                    </control>
-                    <control type="button" id="22">
-                        <description>Label</description>
-                        <include>optionsbuttonsdimensions</include>
-                        <label>42025</label>
-                        <onclick>XBMC.RunScript(script.artwork.downloader,mode=custom,mediatype=tvshow,landscape,clearlogo,clearart)</onclick>
-                        <texturefocus border="70,2,2,2">dialogs/options/buttons/refresh-fo.png</texturefocus>
-                        <texturenofocus border="70,2,2,2">dialogs/options/buttons/refresh-nf.png</texturenofocus>
-                        <visible>Container.Content(TVShows) + System.HasAddon(script.artwork.downloader)</visible>
-                    </control>
-                    <control type="button" id="23">
-                        <description>Label</description>
-                        <include>optionsbuttonsdimensions</include>
-                        <label>42025</label>
-                        <onclick>XBMC.RunScript(script.artwork.downloader,mode=custom,mediatype=movie,landscape,clearlogo,clearart)</onclick>
-                        <texturefocus border="70,2,2,2">dialogs/options/buttons/refresh-fo.png</texturefocus>
-                        <texturenofocus border="70,2,2,2">dialogs/options/buttons/refresh-nf.png</texturenofocus>
-                        <visible>Container.Content(Movies) + System.HasAddon(script.artwork.downloader)</visible>
-                    </control>
-                    <control type="button" id="97">
-                        <description>Metadata actors</description>
-                        <include>optionsbuttonsdimensions</include>
-                        <label>344</label>
-                        <onclick>Action(left)</onclick>
-                        <onclick>SetProperty(metadata.actors,1,home)</onclick>
-                        <onclick>RunScript(script.metadata.actors)</onclick>
-                        <texturefocus border="70,2,2,2">dialogs/options/buttons/user-fo.png</texturefocus>
-                        <texturenofocus border="70,2,2,2">dialogs/options/buttons/user-nf.png</texturenofocus>
-                        <animation effect="fade" start="100" end="50" time="0" condition="!Control.IsEnabled(97)">Conditional</animation>
-                        <visible>System.HasAddon(script.metadata.actors)</visible>
-                    </control>
-                    <control type="button" id="3">
-                        <description>sort</description>
-                        <include>optionsbuttonsdimensions</include>
-                        <texturefocus border="70,2,2,2">dialogs/options/buttons/sort-fo.png</texturefocus>
-                        <texturenofocus border="70,2,2,2">dialogs/options/buttons/sort-nf.png</texturenofocus>
-                        <animation effect="fade" start="100" end="50" time="0" condition="!Control.IsEnabled(3)">Conditional</animation>
-                    </control>
-                    <control type="togglebutton" id="4">
-                        <description>Ascending</description>
-                        <include>optionsbuttonsdimensions</include>
-                        <label>584</label>
-                        <altlabel>585</altlabel>
-                        <texturefocus border="70,2,2,2">dialogs/options/buttons/up-fo.png</texturefocus>
-                        <texturenofocus border="70,2,2,2">dialogs/options/buttons/up-nf.png</texturenofocus>
-                        <alttexturenofocus border="70,2,2,2">dialogs/options/buttons/down-nf.png</alttexturenofocus>
-                        <alttexturefocus border="70,2,2,2">dialogs/options/buttons/down-fo.png</alttexturefocus>
-                        <animation effect="fade" start="100" end="50" time="0" condition="!Control.IsEnabled(4)">Conditional</animation>
-                    </control>
-                    <control type="button" id="8">
-                        <description>Search</description>
-                        <include>optionsbuttonsdimensions</include>
-                        <label>137</label>
-                        <texturefocus border="70,2,2,2">dialogs/options/buttons/search-fo.png</texturefocus>
-                        <texturenofocus border="70,2,2,2">dialogs/options/buttons/search-nf.png</texturenofocus>
-                        <animation effect="fade" start="100" end="50" time="0" condition="!Control.IsEnabled(8)">Conditional</animation>
-                    </control>
-                    <control type="edit" id="19">
-                        <description>Filter</description>
-                        <posx>0</posx>
-                        <posy>0</posy>
-                        <width>404</width>
-                        <height>57</height>
-                        <font>Font-Condensed-S34</font>
-                        <align>left</align>
-                        <textcolor>FF484848</textcolor>
-                        <focusedcolor>DDFFFFFF</focusedcolor>
-                        <textoffsetx>75</textoffsetx>
-                        <scroll>false</scroll>  
-                        <label>587</label>
-                        <pulseonselect>false</pulseonselect>
-                        <texturefocus border="62,2,62,2">dialogs/options/buttons/filter-fo.png</texturefocus>
-                        <texturenofocus border="62,2,62,2">dialogs/options/buttons/filter-nf.png</texturenofocus>
-                        <animation effect="fade" start="100" end="50" time="0" condition="!Control.IsEnabled(19)">Conditional</animation>
-                        <visible>Container.CanFilter + !Container.CanFilterAdvanced</visible>
-                    </control>
-                    <control type="radiobutton" id="20">
-                        <description>Advanced Filter</description>
-                        <include>optionsbuttonsdimensions</include>
-                        <label>587</label>
-                        <texturefocus border="2">dialogs/options/buttons/default-fo.png</texturefocus>
-                        <textureradioon>buttons/radio/options-radio-button-fo.png</textureradioon>
-                        <textureradiooff>buttons/radio/options-radio-button-nf.png</textureradiooff>
-                        <radioposx>-19</radioposx>
-                        <selected>Container.Filtered</selected>
-                        <onclick>SetFocus(50)</onclick>
-                        <onclick>Filter</onclick>
-                        <animation effect="fade" start="100" end="50" time="0" condition="!Control.IsEnabled(20)">Conditional</animation>
-                        <visible>Container.CanFilterAdvanced</visible>
-                    </control>
-                    <control type="button" id="99">
-                        <description>Files</description>
-                        <include>optionsbuttonsdimensions</include>
-                        <label>744</label>
-                        <texturefocus border="70,2,2,2">dialogs/options/buttons/files-fo.png</texturefocus>
-                        <texturenofocus border="70,2,2,2">dialogs/options/buttons/files-nf.png</texturenofocus>
-                        <onclick>ActivateWindow(Videos,Files,return)</onclick>
-                        <onclick>setfocus(50)</onclick>
-                        <animation effect="fade" start="100" end="50" time="0" condition="!Control.IsEnabled(99)">Conditional</animation>
-                    </control>
-                    <control type="radiobutton" id="14">
-                        <description>Watched Toggle</description>
-                        <include>optionsbuttonsdimensions</include>
-                        <label>20367</label>
-                        <texturefocus border="2">dialogs/options/buttons/default-fo.png</texturefocus>
-                        <textureradioon>buttons/radio/options-radio-button-fo.png</textureradioon>
-                        <textureradiooff>buttons/radio/options-radio-button-nf.png</textureradiooff>
-                        <radioposx>-19</radioposx>
-                        <animation effect="fade" start="100" end="50" time="0" condition="!Control.IsEnabled(14)">Conditional</animation>
-                    </control>
-                    <control type="radiobutton" id="17">
-                        <description>Flatten</description>
-                        <include>optionsbuttonsdimensions</include>
-                        <label>20411</label>
-                        <texturefocus border="2">dialogs/options/buttons/default-fo.png</texturefocus>
-                        <textureradioon>buttons/radio/options-radio-button-fo.png</textureradioon>
-                        <textureradiooff>buttons/radio/options-radio-button-nf.png</textureradiooff>
-                        <radioposx>-19</radioposx>
-                        <animation effect="fade" start="100" end="50" time="0" condition="!Control.IsEnabled(17)">Conditional</animation>
-                    </control>
+                    <itemlayout height="80">
+                    	<control type="image">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>100</width>
+							<height>100</height>
+							<texture>$INFO[ListItem.Icon]</texture>
+							<aspectratio aligny="center">keep</aspectratio>
+						</control>
+                    	<control type="label">
+                    		<posx>102</posx>
+							<posy>0</posy>
+							<width>260</width>
+							<height>80</height>
+							<font>Font-Condensed-S34</font>
+							<align>left</align>
+							<textcolor>mod-infotags-alt</textcolor>
+							<label>$INFO[ListItem.Label]</label>
+                    	</control>
+                    </itemlayout>
+                    <focusedlayout height="80">
+                    	<control type="image">
+                    		<posx>0</posx>
+							<posy>0</posy>
+							<width>380</width>
+							<height>80</height>
+							<texture border="8">views/other/focus-mod8-right.png</texture>
+                    	</control>
+                    	<control type="image">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>100</width>
+							<height>100</height>
+							<texture>$INFO[ListItem.Icon]</texture>
+							<aspectratio aligny="center">keep</aspectratio>
+						</control>
+                    	<control type="label">
+                    		<posx>102</posx>
+							<posy>0</posy>
+							<width>260</width>
+							<height>80</height>
+							<font>Font-Condensed-S34</font>
+							<align>left</align>
+							<textcolor>mod-infotags-alt</textcolor>
+							<label>$INFO[ListItem.Label]</label>
+                    	</control>
+                    </focusedlayout>
+                    <content>
+                    	<item id="1">
+                    		<description>View Mode</description>
+                    		<label>$INFO[Container.ViewMode]</label>
+                    		<icon>windows/home/icons/config.png</icon>
+							<onclick>setfocus(201)</onclick>
+							<visible>true</visible>
+                    	</item>
+                    	<item id="2">
+							<description>View Options</description>
+                    		<label>14018</label>
+                    		<icon>windows/home/icons/config2.png</icon>
+							<onclick>setfocus(101)</onclick>
+							<visible>true</visible>
+                    	</item>
+                    	<item id="3">
+                    		<description>TV Next Aired</description>
+                    		<icon>windows/home/icons/tvguide.png</icon>
+							<label>42160</label>
+							<onclick>RunAddon(script.tv.show.next.aired)</onclick>
+							<visible>[Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes)] + System.HasAddon(script.tv.show.next.aired)</visible>
+                    	</item>
+                    	<item id="4">
+                    		<description>Update Art</description>
+                    		<icon>windows/home/icons/arrows.png</icon>
+							<label>42025</label>
+							<onclick>XBMC.RunScript(script.artwork.downloader,mode=custom,mediatype=tvshow,landscape,clearlogo,clearart)</onclick>
+							<visible>Container.Content(TVShows) + System.HasAddon(script.artwork.downloader)</visible>
+                    	</item>
+                    	<item id="5">
+                    		<description>Update Art</description>
+                    		<icon>windows/home/icons/arrows.png</icon>
+							<label>42025</label>
+							<onclick>XBMC.RunScript(script.artwork.downloader,mode=custom,mediatype=movie,landscape,clearlogo,clearart)</onclick>
+							<visible>Container.Content(Movies) + System.HasAddon(script.artwork.downloader)</visible>
+                    	</item>
+                    	<item id="6">
+                    		<description>Metadata Actors</description>
+                    		<icon>windows/home/icons/profiles.png</icon>
+							<label>344</label>
+							<onclick>Action(left)</onclick>
+							<onclick>SetProperty(metadata.actors,1,home)</onclick>
+							<onclick>RunScript(script.metadata.actors)</onclick>
+							<visible>System.HasAddon(script.metadata.actors)</visible>
+                    	</item>
+                    	<item id="7">
+                    		<description>Sort</description>
+                    		<icon>windows/home/icons/epg.png</icon>
+							<label>$INFO[Container.SortMethod]</label>
+							<onclick>SendClick(3)</onclick>
+                    	</item>
+                    	<item id="8">
+                    		<description>Ascending</description>
+                    		<icon>windows/home/icons/thumbup.png</icon>
+							<label>584</label>
+							<onclick>SendClick(4)</onclick>
+							<visible>StringCompare(Control.GetLabel(4),$LOCALIZE[584])</visible>
+                    	</item>
+                    	<item id="9">
+                    		<description>Descending</description>
+                    		<icon>windows/home/icons/thumbdown.png</icon>
+							<label>585</label>
+							<onclick>SendClick(4)</onclick>
+							<visible>StringCompare(Control.GetLabel(4),$LOCALIZE[585])</visible>
+                    	</item>
+                    	<item id="10">
+                    		<description>Search</description>
+                    		<icon>windows/home/icons/search-tv.png</icon>
+							<label>137</label>
+							<onclick>SendClick(8)</onclick>
+                    	</item>
+                    	<item id="11">
+                    		<description>Filter</description>
+							<label>587</label>
+							<icon>windows/home/icons/cloud.png</icon>
+							<onclick>SendClick(19)</onclick>
+							<visible>Container.CanFilter + !Container.CanFilterAdvanced</visible>
+                    	</item>
+                    	<item id="12">
+                    		<description>Filter Adv On</description>
+                    		<icon>windows/home/icons/yes.png</icon>
+							<label>587</label>
+							<onclick>SetFocus(50)</onclick>
+							<onclick>Filter</onclick>
+							<visible>Container.CanFilterAdvanced + Container.Filtered</visible>
+                    	</item>
+                    	<item id="13">
+                    		<description>Filter Adv Off</description>
+                    		<icon>windows/home/icons/no.png</icon>
+							<label>587</label>
+							<onclick>SetFocus(50)</onclick>
+							<onclick>Filter</onclick>
+							<visible>Container.CanFilterAdvanced + !Container.Filtered</visible>
+                    	</item>
+                    	<item id="14">
+                    		<description>Files</description>
+							<label>744</label>
+							<icon>windows/home/icons/recordings.png</icon>
+							<onclick>ActivateWindow(Videos,Files,return)</onclick>
+							<onclick>setfocus(50)</onclick>
+                    	</item>
+                    	<item id="15">
+                    		<description>Watched Toggle</description>
+                    		<icon>windows/home/icons/yes.png</icon>
+							<label>20367</label>
+							<onclick>SendClick(14)</onclick>
+							<icon>windows/home/icons/yes.png</icon>
+							<visible>SubString(Control.GetLabel(14),*)</visible>
+                    	</item>
+                    	<item id="16">
+                    		<description>Watched Toggle</description>
+                    		<icon>windows/home/icons/no.png</icon>
+							<label>20367</label>
+							<onclick>SendClick(14)</onclick>
+							<icon>windows/home/icons/yes.png</icon>
+							<visible>!SubString(Control.GetLabel(14),*)</visible>
+                    	</item>
+                    	<item id="17">
+                    		<description>Flatten Toggle</description>
+                    		<icon>windows/home/icons/no.png</icon>
+							<label>20411</label>
+							<onclick>SendClick(17)</onclick>
+							<icon>windows/home/icons/yes.png</icon>
+							<visible>!SubString(Control.GetLabel(17),*)</visible>
+                    	</item>
+                    	<item id="18">
+                    		<description>Flatten Toggle</description>
+                    		<icon>windows/home/icons/yes.png</icon>
+							<label>20411</label>
+							<onclick>SendClick(17)</onclick>
+							<icon>windows/home/icons/yes.png</icon>
+							<visible>SubString(Control.GetLabel(17),*)</visible>
+                    	</item>
+                    </content>
                 </control>
                 <control type="grouplist" id="9222">
                     <description>View Specific Controls</description>
-                    <posx>19</posx>
-                    <posy>47</posy>
-                    <width>404</width>
-                    <height>399</height>
+                    <posx>0</posx>
+                    <posy>20</posy>
+                    <width>400</width>
+                    <height>720</height>
                     <itemgap>0</itemgap>
                     <onleft>9111</onleft>
                     <onright>9111</onright>
+                    <onback>9111</onback>
                     <onup>9222</onup>
                     <ondown>9222</ondown>
                     <include>SpecificOptionsAnimations</include>
                     <control type="button" id="101">
                         <description>Label</description>
                         <posy>330</posy>
-                        <include>optionsbuttonsdimensions</include>
-                        <label>$LOCALIZE[42017]</label>
+                        <include>ViewOptions.Button</include>
+                        <label>42430</label>
                         <onclick>setfocus(9111)</onclick>
-                        <texturefocus border="70,2,2,2">dialogs/options/buttons/custom-back-fo.png</texturefocus>
-                        <texturenofocus border="70,2,2,2">dialogs/options/buttons/custom-back-nf.png</texturenofocus>
                     </control>
                     <!-- WRAP AND FIXED OPTIONS -->
                     <!-- Landscape -->
                     <control type="radiobutton" id="102">
-                        <include>optionsbuttonsdimensions</include>
+                        <include>ViewOptions.Button</include>
                         <selected>Skin.HasSetting(viewtype.landscape.wrap)</selected>
                         <onclick>Skin.ToggleSetting(viewtype.landscape.wrap)</onclick>
                         <onclick>ReloadSkin()</onclick>
@@ -243,7 +262,7 @@
                     </control>
                     <!-- Classic Poster -->
                     <control type="radiobutton" id="103">
-                        <include>optionsbuttonsdimensions</include>
+                        <include>ViewOptions.Button</include>
                         <selected>Skin.HasSetting(viewtype.classicposter.wrap)</selected>
                         <onclick>Skin.ToggleSetting(viewtype.classicposter.wrap)</onclick>
                         <onclick>ReloadSkin()</onclick>
@@ -256,7 +275,7 @@
                     </control>
                     <!-- Classic Info -->
                     <control type="radiobutton" id="104">
-                        <include>optionsbuttonsdimensions</include>
+                        <include>ViewOptions.Button</include>
                         <selected>Skin.HasSetting(viewtype.classicposterinfo.wrap)</selected>
                         <onclick>Skin.ToggleSetting(viewtype.classicposterinfo.wrap)</onclick>
                         <onclick>ReloadSkin()</onclick>
@@ -269,7 +288,7 @@
                     </control>
                     <!-- Info Poster -->
                     <control type="radiobutton" id="105">
-                        <include>optionsbuttonsdimensions</include>
+                        <include>ViewOptions.Button</include>
                         <selected>Skin.HasSetting(viewtype.posterinfo.wrap)</selected>
                         <onclick>Skin.ToggleSetting(viewtype.posterinfo.wrap)</onclick>
                         <onclick>ReloadSkin()</onclick>
@@ -282,7 +301,7 @@
                     </control>
                     <!-- Low List -->
                     <control type="radiobutton" id="106">
-                        <include>optionsbuttonsdimensions</include>
+                        <include>ViewOptions.Button</include>
                         <selected>Skin.HasSetting(viewtype.lowlist.wrap)</selected>
                         <onclick>Skin.ToggleSetting(viewtype.lowlist.wrap)</onclick>
                         <onclick>ReloadSkin()</onclick>
@@ -295,7 +314,7 @@
                     </control>
                     <!-- Disc Art -->
                     <control type="radiobutton" id="107">
-                        <include>optionsbuttonsdimensions</include>
+                        <include>ViewOptions.Button</include>
                         <label>42401</label>
                         <texturefocus>dialogs/options/buttons/default-fo.png</texturefocus>
                         <onclick>Skin.ToggleSetting(showdiscart)</onclick>
@@ -307,7 +326,7 @@
                     </control>
                     <!-- Info Poster : Show info -->
                     <control type="radiobutton" id="108">
-                        <include>optionsbuttonsdimensions</include>
+                        <include>ViewOptions.Button</include>
                         <label>42015</label>
                         <texturefocus>dialogs/options/buttons/default-fo.png</texturefocus>
                         <onclick>Skin.ToggleSetting(old.InfoPoster)</onclick>
@@ -319,7 +338,7 @@
                     </control>
                     <!-- Wall : Show info -->
                     <control type="radiobutton" id="109">
-                        <include>optionsbuttonsdimensions</include>
+                        <include>ViewOptions.Button</include>
                         <label>42015</label>
                         <texturefocus>dialogs/options/buttons/default-fo.png</texturefocus>
                         <onclick>Skin.ToggleSetting(hide.posterwallinfo)</onclick>
@@ -331,7 +350,7 @@
                     </control>
                     <!-- Low List : Episode thumb as fanart -->
                     <control type="radiobutton" id="110">
-                        <include>optionsbuttonsdimensions</include>
+                        <include>ViewOptions.Button</include>
                         <selected>Skin.HasSetting(lowlist.showepisodethumb)</selected>
                         <onclick>Skin.ToggleSetting(lowlist.showepisodethumb)</onclick>
                         <label>42402</label>
@@ -343,7 +362,7 @@
                     </control>
                     <!-- Landscape: Focus zoom -->
                     <control type="radiobutton" id="111">
-                        <include>optionsbuttonsdimensions</include>
+                        <include>ViewOptions.Button</include>
                         <selected>Skin.HasSetting(landscapeview.zoom)</selected>
                         <onclick>Skin.ToggleSetting(landscapeview.zoom)</onclick>
                         <label>42403</label>
@@ -355,7 +374,7 @@
                     </control>
                     <!-- Wide Banner: Show plot -->
                     <control type="radiobutton" id="112">
-                        <include>optionsbuttonsdimensions</include>
+                        <include>ViewOptions.Button</include>
                         <selected>Skin.HasSetting(bannerlist.showplot)</selected>
                         <onclick>Skin.ToggleSetting(bannerlist.showplot)</onclick>
                         <label>42018</label>
@@ -367,7 +386,7 @@
                     </control>
                     <!-- Poster Panel : Show plot -->
                     <control type="radiobutton" id="113">
-                        <include>optionsbuttonsdimensions</include>
+                        <include>ViewOptions.Button</include>
                         <selected>Skin.HasSetting(seasonpanel.showplot)</selected>
                         <onclick>Skin.ToggleSetting(seasonpanel.showplot)</onclick>
                         <label>42018</label>
@@ -379,7 +398,7 @@
                     </control>
                     <!-- Poster Panel : Show season number -->
                     <control type="radiobutton" id="114">
-                        <include>optionsbuttonsdimensions</include>
+                        <include>ViewOptions.Button</include>
                         <selected>Skin.HasSetting(seasonpanel.shownumber)</selected>
                         <onclick>Skin.ToggleSetting(seasonpanel.shownumber)</onclick>
                         <label>42404</label>
@@ -391,7 +410,7 @@
                     </control>
                     <!-- Medium List : Smaller cover -->
                     <control type="radiobutton" id="115">
-                        <include>optionsbuttonsdimensions</include>
+                        <include>ViewOptions.Button</include>
                         <selected>Skin.HasSetting(mediumlist.bigcover)</selected>
                         <onclick>Skin.ToggleSetting(mediumlist.bigcover)</onclick>
                         <label>42405</label>
@@ -403,7 +422,7 @@
                     </control>
                     <!-- Panel List : Show plot -->
                     <control type="radiobutton" id="116">
-                        <include>optionsbuttonsdimensions</include>
+                        <include>ViewOptions.Button</include>
                         <selected>Skin.HasSetting(panellist.showplot)</selected>
                         <onclick>Skin.ToggleSetting(panellist.showplot)</onclick>
                         <label>42018</label>
@@ -418,7 +437,7 @@
                     <!-- GLOBAL OPTIONS -->
                     <!-- Extrafanart -->
                     <control type="radiobutton" id="130">
-                        <include>optionsbuttonsdimensions</include>
+                        <include>ViewOptions.Button</include>
                         <label>42406</label>
                         <texturefocus>dialogs/options/buttons/default-fo.png</texturefocus>
                         <onclick>Skin.ToggleSetting(movies.use.extrafanart)</onclick>
@@ -429,7 +448,7 @@
                         <visible>Container.Content(movies)</visible>
                     </control>
                     <control type="radiobutton" id="131">
-                        <include>optionsbuttonsdimensions</include>
+                        <include>ViewOptions.Button</include>
                         <label>42406</label>
                         <texturefocus>dialogs/options/buttons/default-fo.png</texturefocus>
                         <onclick>Skin.ToggleSetting(tvshows.use.extrafanart)</onclick>
@@ -441,7 +460,7 @@
                     </control>
                     <!-- Animate Fanart -->
                     <control type="radiobutton" id="132">
-                        <include>optionsbuttonsdimensions</include>
+                        <include>ViewOptions.Button</include>
                         <label>42407</label>
                         <texturefocus>dialogs/options/buttons/default-fo.png</texturefocus>
                         <onclick>Skin.ToggleSetting(Fanart.Animate)</onclick>
@@ -453,28 +472,20 @@
                 </control>
                 <control type="grouplist" id="9223">
                     <description>View Controls</description>
-                    <posx>19</posx>
-                    <posy>47</posy>
-                    <width>404</width>
-                    <height>399</height>
+                    <posx>0</posx>
+                    <posy>20</posy>
+                    <width>400</width>
+                    <height>720</height>
                     <itemgap>0</itemgap>
                     <onleft>9111</onleft>
                     <onright>9111</onright>
+                    <onback>9111</onback>
                     <onup>9223</onup>
                     <ondown>9223</ondown>
                     <include>ViewOptionsAnimations</include>
-                    <control type="button" id="201">
-                        <description>Label</description>
-                        <posy>330</posy>
-                        <include>optionsbuttonsdimensions</include>
-                        <label>$LOCALIZE[42017]</label>
-                        <onclick>setfocus(9111)</onclick>
-                        <texturefocus border="70,2,2,2">dialogs/options/buttons/custom-back-fo.png</texturefocus>
-                        <texturenofocus border="70,2,2,2">dialogs/options/buttons/custom-back-nf.png</texturenofocus>
-                    </control>
                     <!-- Big List -->
-                    <control type="radiobutton" id="202">
-                        <include>optionsbuttonsdimensions</include>
+                    <control type="radiobutton" id="201">
+                        <include>ViewOptions.Button</include>
                         <label>$LOCALIZE[537]</label>
                         <texturefocus>dialogs/options/buttons/default-fo.png</texturefocus>
                         <onclick>Container.SetViewMode(50)</onclick>
@@ -485,7 +496,7 @@
                     </control>
                     <!-- Medium List -->
                     <control type="radiobutton" id="203">
-                        <include>optionsbuttonsdimensions</include>
+                        <include>ViewOptions.Button</include>
                         <label>$LOCALIZE[42301]</label>
                         <texturefocus>dialogs/options/buttons/default-fo.png</texturefocus>
                         <onclick>Container.SetViewMode(51)</onclick>
@@ -497,7 +508,7 @@
                     </control>
                     <!-- Low List -->
                     <control type="radiobutton" id="204">
-                        <include>optionsbuttonsdimensions</include>
+                        <include>ViewOptions.Button</include>
                         <label>$LOCALIZE[42302]</label>
                         <texturefocus>dialogs/options/buttons/default-fo.png</texturefocus>
                         <onclick>Container.SetViewMode(52)</onclick>
@@ -509,7 +520,7 @@
                     </control>
                     <!-- Panel List -->
                     <control type="radiobutton" id="205">
-                        <include>optionsbuttonsdimensions</include>
+                        <include>ViewOptions.Button</include>
                         <label>$LOCALIZE[42303]</label>
                         <texturefocus>dialogs/options/buttons/default-fo.png</texturefocus>
                         <onclick>Container.SetViewMode(53)</onclick>
@@ -521,7 +532,7 @@
                     </control>
                     <!-- Banner List -->
                     <control type="radiobutton" id="206">
-                        <include>optionsbuttonsdimensions</include>
+                        <include>ViewOptions.Button</include>
                         <label>$LOCALIZE[42304]</label>
                         <texturefocus>dialogs/options/buttons/default-fo.png</texturefocus>
                         <onclick>Container.SetViewMode(54)</onclick>
@@ -533,7 +544,7 @@
                     </control>
                     <!-- Wide Banner -->
                     <control type="radiobutton" id="207">
-                        <include>optionsbuttonsdimensions</include>
+                        <include>ViewOptions.Button</include>
                         <label>$LOCALIZE[42305]</label>
                         <texturefocus>dialogs/options/buttons/default-fo.png</texturefocus>
                         <onclick>Container.SetViewMode(55)</onclick>
@@ -545,7 +556,7 @@
                     </control>
                     <!-- Love Film -->
                     <control type="radiobutton" id="208">
-                        <include>optionsbuttonsdimensions</include>
+                        <include>ViewOptions.Button</include>
                         <label>$LOCALIZE[42306]</label>
                         <texturefocus>dialogs/options/buttons/default-fo.png</texturefocus>
                         <onclick>Container.SetViewMode(56)</onclick>
@@ -557,7 +568,7 @@
                     </control>
                     <!-- Reel -->
                     <control type="radiobutton" id="209">
-                        <include>optionsbuttonsdimensions</include>
+                        <include>ViewOptions.Button</include>
                         <label>$LOCALIZE[42307]</label>
                         <texturefocus>dialogs/options/buttons/default-fo.png</texturefocus>
                         <onclick>Container.SetViewMode(57)</onclick>
@@ -569,7 +580,7 @@
                     </control>
                     <!-- Classic Poster -->
                     <control type="radiobutton" id="210">
-                        <include>optionsbuttonsdimensions</include>
+                        <include>ViewOptions.Button</include>
                         <label>$LOCALIZE[42308]</label>
                         <texturefocus>dialogs/options/buttons/default-fo.png</texturefocus>
                         <onclick>Container.SetViewMode(58)</onclick>
@@ -581,7 +592,7 @@
                     </control>
                     <!-- Classic Info -->
                     <control type="radiobutton" id="211">
-                        <include>optionsbuttonsdimensions</include>
+                        <include>ViewOptions.Button</include>
                         <label>$LOCALIZE[42309]</label>
                         <texturefocus>dialogs/options/buttons/default-fo.png</texturefocus>
                         <onclick>Container.SetViewMode(59)</onclick>
@@ -593,7 +604,7 @@
                     </control>
                     <!-- Info Poster -->
                     <control type="radiobutton" id="212">
-                        <include>optionsbuttonsdimensions</include>
+                        <include>ViewOptions.Button</include>
                         <label>42310</label>
                         <texturefocus>dialogs/options/buttons/default-fo.png</texturefocus>
                         <onclick>Container.SetViewMode(60)</onclick>
@@ -605,7 +616,7 @@
                     </control>
                     <!-- Wall -->
                     <control type="radiobutton" id="213">
-                        <include>optionsbuttonsdimensions</include>
+                        <include>ViewOptions.Button</include>
                         <label>42311</label>
                         <texturefocus>dialogs/options/buttons/default-fo.png</texturefocus>
                         <onclick>Container.SetViewMode(61)</onclick>
@@ -617,7 +628,7 @@
                     </control>
                     <!-- Landscape -->
                     <control type="radiobutton" id="214">
-                        <include>optionsbuttonsdimensions</include>
+                        <include>ViewOptions.Button</include>
                         <label>42312</label>
                         <texturefocus>dialogs/options/buttons/default-fo.png</texturefocus>
                         <onclick>Container.SetViewMode(62)</onclick>
@@ -629,7 +640,7 @@
                     </control>
                     <!-- Info Wall -->
                     <control type="radiobutton" id="215">
-                        <include>optionsbuttonsdimensions</include>
+                        <include>ViewOptions.Button</include>
                         <label>42313</label>
                         <texturefocus>dialogs/options/buttons/default-fo.png</texturefocus>
                         <onclick>Container.SetViewMode(63)</onclick>
@@ -641,7 +652,7 @@
                     </control>
                     <!-- Poster Panel -->
                     <control type="radiobutton" id="216">
-                        <include>optionsbuttonsdimensions</include>
+                        <include>ViewOptions.Button</include>
                         <label>42314</label>
                         <texturefocus>dialogs/options/buttons/default-fo.png</texturefocus>
                         <onclick>Container.SetViewMode(64)</onclick>
@@ -652,69 +663,6 @@
                         <visible>Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons)</visible>
                     </control>
                 </control>                      
-                
-                <control type="group">
-                    <include>GeneralOptionsAnimations</include>
-                    <control type="image">
-                        <posx>9</posx>
-                        <posy>433</posy>
-                        <width>100</width>
-                        <height>100</height>
-                        <texture>buttons/options_nofo.png</texture>
-                    </control>
-                    <control type="label">
-                        <posx>94</posx>
-                        <posy>433</posy>
-                        <width>300</width>
-                        <height>100</height>
-                        <label>$LOCALIZE[41600]</label>
-                        <font>Font-Alaska-S29-BL</font>
-                        <textcolor>eewhite</textcolor>
-                        <shadowcolor>22000000</shadowcolor>
-                    </control>
-                </control>
-                
-                <control type="group">
-                    <include>SpecificOptionsAnimations</include>
-                    <control type="image">
-                        <posx>9</posx>
-                        <posy>433</posy>
-                        <width>100</width>
-                        <height>100</height>
-                        <texture>buttons/options_nofo.png</texture>
-                    </control>
-                    <control type="label">
-                        <posx>94</posx>
-                        <posy>433</posy>
-                        <width>300</width>
-                        <height>100</height>
-                        <label>$LOCALIZE[42010]</label>
-                        <font>Font-Alaska-S29-BL</font>
-                        <textcolor>eewhite</textcolor>
-                        <shadowcolor>22000000</shadowcolor>
-                    </control>
-                </control>
-                
-                <control type="group">
-                    <include>ViewOptionsAnimations</include>
-                    <control type="image">
-                        <posx>9</posx>
-                        <posy>433</posy>
-                        <width>100</width>
-                        <height>100</height>
-                        <texture>buttons/options_nofo.png</texture>
-                    </control>
-                    <control type="label">
-                        <posx>94</posx> 
-                        <posy>433</posy>
-                        <width>300</width>
-                        <height>100</height>
-                        <label>$LOCALIZE[42021]</label>
-                        <font>Font-Alaska-S29-BL</font>
-                        <textcolor>eewhite</textcolor>
-                        <shadowcolor>22000000</shadowcolor>
-                    </control>
-                </control>
             </control>
         </control>
         

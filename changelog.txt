@@ -41,3 +41,7 @@ Timer and Search PVR dialogs
 PVR Channel OSD number length fix
 PVR Channel OSD revamp
 Fixed text color visibility in add on settings
+
+[B]0.2.5[/B]
+Revamp of view and power menu 
+  - Still to do: context menu and pictures/addons menu

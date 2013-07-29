@@ -346,7 +346,7 @@
             <animation effect="fade" time="300" start="0" end="95" tween="sine" easing="out" condition="!Window.IsActive(mediafilter) + !Window.IsVisible(contextmenu) + IsEmpty(Window(Home).Property(metadata.actors))">Visible</animation>
             <animation effect="fade" time="300" start="0" end="95" tween="sine" easing="out" delay="550" condition="Window.IsActive(mediafilter) | Window.IsVisible(contextmenu) | !IsEmpty(Window(Home).Property(metadata.actors))">Visible</animation>
             <animation effect="fade" time="300" start="95" end="0" tween="sine" easing="in">Hidden</animation>
-            <visible>[Window.IsActive(3051) | Window.IsActive(3054) | Window.IsActive(3056) | Window.IsActive(contentsettings) | Window.IsActive(addonsettings) | Window.IsActive(filebrowser) | [Window.IsActive(virtualkeyboard) + IsEmpty(Window(Home).Property(HomeSearch))] | Window.IsActive(playercontrols) | Window.IsActive(profilesettings) | Window.IsActive(selectdialog) | Window.IsActive(progressdialog) | Window.IsActive(mediasource) | Window.IsActive(screencalibration) | Window.IsActive(numericinput) | Window.IsActive(filestackingdialog) | Window.IsActive(LockSettings) | Window.IsActive(smartplaylisteditor) | Window.IsActive(smartplaylistrule) | Window.IsActive(pictureinfo) | Window.IsActive(script-RSS_Editor-rssEditor.xml) | Window.IsActive(script-RSS_Editor-setEditor.xml) | Window.IsActive(3001) | Window.IsActive(3002) | Window.IsActive(3003) | Window.IsActive(3006) | Window.IsActive(peripherals) | Window.IsActive(peripheralsettings) | Window.IsActive(mediafilter) | Window.IsActive(mediafilter) | Window.IsActive(pvrgroupmanager) | Window.IsActive(pvrtimersetting) | Window.IsActive(pvrguidesearch) | Window.IsActive(pvrchannelmanager) | Window.IsActive(pvrguideinfo) | Window.IsActive(pvrrecordinginfo) | Window.IsActive(DialogSelect.xml)] + !Window.IsActive(movieinformation) + !Window.IsActive(1122) + !Window.IsActive(addoninformation) + !Window.IsActive(musicinformation) + !Window.IsActive(script-globalsearch-infodialog.xml)</visible>
+            <visible>[Window.IsActive(3051) | Window.IsActive(3054) | Window.IsActive(3056) | Window.IsActive(shutdownmenu) | Window.IsActive(contentsettings) | Window.IsActive(addonsettings) | Window.IsActive(filebrowser) | [Window.IsActive(virtualkeyboard) + IsEmpty(Window(Home).Property(HomeSearch))] | Window.IsActive(playercontrols) | Window.IsActive(profilesettings) | Window.IsActive(selectdialog) | Window.IsActive(progressdialog) | Window.IsActive(mediasource) | Window.IsActive(screencalibration) | Window.IsActive(numericinput) | Window.IsActive(filestackingdialog) | Window.IsActive(LockSettings) | Window.IsActive(smartplaylisteditor) | Window.IsActive(smartplaylistrule) | Window.IsActive(pictureinfo) | Window.IsActive(script-RSS_Editor-rssEditor.xml) | Window.IsActive(script-RSS_Editor-setEditor.xml) | Window.IsActive(3001) | Window.IsActive(3002) | Window.IsActive(3003) | Window.IsActive(3006) | Window.IsActive(peripherals) | Window.IsActive(peripheralsettings) | Window.IsActive(mediafilter) | Window.IsActive(mediafilter) | Window.IsActive(pvrgroupmanager) | Window.IsActive(pvrtimersetting) | Window.IsActive(pvrguidesearch) | Window.IsActive(pvrchannelmanager) | Window.IsActive(pvrguideinfo) | Window.IsActive(pvrrecordinginfo) | Window.IsActive(DialogSelect.xml)] + !Window.IsActive(movieinformation) + !Window.IsActive(1122) + !Window.IsActive(addoninformation) + !Window.IsActive(musicinformation) + !Window.IsActive(script-globalsearch-infodialog.xml)</visible>
         </control>
         <control type="image">
             <include>FullscreenDimensions</include>
@@ -355,7 +355,7 @@
             <animation effect="fade" time="300" start="95" end="0" tween="sine" easing="in">Hidden</animation>
             <texture>windows/common/white.png</texture>
             <colordiffuse>mod-dimfanart</colordiffuse>
-            <visible>[Window.IsActive(3051) | Window.IsActive(3054) | Window.IsActive(3056) | Window.IsActive(contentsettings) | Window.IsActive(addonsettings) | Window.IsActive(filebrowser) | [Window.IsActive(virtualkeyboard) + IsEmpty(Window(Home).Property(HomeSearch))] | Window.IsActive(playercontrols) | Window.IsActive(profilesettings) | Window.IsActive(selectdialog) | Window.IsActive(progressdialog) | Window.IsActive(mediasource) | Window.IsActive(screencalibration) | Window.IsActive(numericinput) | Window.IsActive(filestackingdialog) | Window.IsActive(LockSettings) | Window.IsActive(smartplaylisteditor) | Window.IsActive(smartplaylistrule) | Window.IsActive(pictureinfo) | Window.IsActive(script-RSS_Editor-rssEditor.xml) | Window.IsActive(script-RSS_Editor-setEditor.xml) | Window.IsActive(3001) | Window.IsActive(3002) | Window.IsActive(3003) | Window.IsActive(3006) | Window.IsActive(peripherals) | Window.IsActive(peripheralsettings) | Window.IsActive(mediafilter) | Window.IsActive(mediafilter) | Window.IsActive(pvrgroupmanager) | Window.IsActive(pvrtimersetting) | Window.IsActive(pvrguidesearch) | Window.IsActive(pvrchannelmanager) | Window.IsActive(pvrguideinfo) | Window.IsActive(pvrrecordinginfo) | Window.IsActive(DialogSelect.xml)] + !Window.IsActive(movieinformation) + !Window.IsActive(1122) + !Window.IsActive(addoninformation) + !Window.IsActive(musicinformation) + !Window.IsActive(script-globalsearch-infodialog.xml)</visible>
+            <visible>[Window.IsActive(3051) | Window.IsActive(3054) | Window.IsActive(3056) | Window.IsActive(shutdownmenu) | Window.IsActive(contentsettings) | Window.IsActive(addonsettings) | Window.IsActive(filebrowser) | [Window.IsActive(virtualkeyboard) + IsEmpty(Window(Home).Property(HomeSearch))] | Window.IsActive(playercontrols) | Window.IsActive(profilesettings) | Window.IsActive(selectdialog) | Window.IsActive(progressdialog) | Window.IsActive(mediasource) | Window.IsActive(screencalibration) | Window.IsActive(numericinput) | Window.IsActive(filestackingdialog) | Window.IsActive(LockSettings) | Window.IsActive(smartplaylisteditor) | Window.IsActive(smartplaylistrule) | Window.IsActive(pictureinfo) | Window.IsActive(script-RSS_Editor-rssEditor.xml) | Window.IsActive(script-RSS_Editor-setEditor.xml) | Window.IsActive(3001) | Window.IsActive(3002) | Window.IsActive(3003) | Window.IsActive(3006) | Window.IsActive(peripherals) | Window.IsActive(peripheralsettings) | Window.IsActive(mediafilter) | Window.IsActive(mediafilter) | Window.IsActive(pvrgroupmanager) | Window.IsActive(pvrtimersetting) | Window.IsActive(pvrguidesearch) | Window.IsActive(pvrchannelmanager) | Window.IsActive(pvrguideinfo) | Window.IsActive(pvrrecordinginfo) | Window.IsActive(DialogSelect.xml)] + !Window.IsActive(movieinformation) + !Window.IsActive(1122) + !Window.IsActive(addoninformation) + !Window.IsActive(musicinformation) + !Window.IsActive(script-globalsearch-infodialog.xml)</visible>
         </control>
     </include>
     <include name="FadeBackgroundMovieInfo">
@@ -483,14 +483,98 @@
         <scroll>false</scroll>      
     </include>
     
+    <include name="ViewOptions.Button">
+        <posx>0</posx>
+        <posy>0</posy>
+        <width>380</width>
+        <height>60</height>
+        <font>Font-Condensed-S34</font>
+        <align>left</align>
+        <textcolor>mod-infotags-alt</textcolor>
+        <focusedcolor>DDFFFFFF</focusedcolor>
+        <disabledcolor>FF484848</disabledcolor>
+        <textoffsetx>75</textoffsetx>
+        <textwidth>300</textwidth>
+        <scroll>false</scroll>   
+        <texturefocus border="8">views/other/focus-mod8-right.png</texturefocus>   
+        
+    </include>
+    <include name="ViewOptions.Button2">
+        <posx>0</posx>
+        <posy>0</posy>
+        <width>380</width>
+        <height>80</height>
+        <font>Font-Condensed-S34</font>
+        <align>left</align>
+        <textcolor>mod-infotags-alt</textcolor>
+        <focusedcolor>DDFFFFFF</focusedcolor>
+        <disabledcolor>FF484848</disabledcolor>
+        <textoffsetx>90</textoffsetx>
+        <textwidth>300</textwidth>
+        <scroll>false</scroll>   
+        <texturefocus border="8">views/other/focus-mod8-right.png</texturefocus>   
+        <radioposx>-16</radioposx>
+        <radioposy>10</radioposy>
+    </include>
+    
+    <include name="ViewOptions.Panel">
+    	<include>OptionsAnimations</include>
+		<posy>20</posy>
+		<control type="group">
+			<control type="image">
+				<posx>-40</posx>
+				<posy>-10</posy>
+				<width>452</width>
+				<height>1060</height>
+				<texture border="40">arctic/common/border-20.png</texture>
+			</control>
+			<control type="image">
+				<posx>-20</posx>
+				<posy>10</posy>
+				<width>412</width>
+				<height>1020</height>
+				<texture border="15">arctic/common/panel.png</texture>
+			</control>
+			<control type="image">
+				<posx>122</posx>
+				<posy>760</posy>
+				<width>250</width>
+				<height>250</height>
+				<texture background="true" fallback="osd/fullscreen/cd.png">$INFO[Player.Folderpath,,cdart.png]</texture>
+				<aspectratio align="center">keep</aspectratio>
+				<animation effect="rotate" center="auto" reversible="false" start="360" end="0" time="2500" loop="true" condition="Player.Playing">Conditional</animation>
+				<animation effect="slide" start="395" end="0" time="350">Visible</animation>
+				<visible>Skin.HasSetting(CDArt.Enabled)</visible>
+				<visible>!Window.IsVisible(shutdownmenu)</visible>
+			</control>
+			<control type="image">
+				<posx>10</posx>
+				<posy>750</posy>
+				<width>270</width>
+				<height>270</height>
+				<texture diffuse="arctic/covers/270.png" fallback="views/fallbacks/DefaultAudio.png/square-medium.png">$INFO[Player.Art(thumb)]</texture>
+				<aspectratio scalediffuse="false">scale</aspectratio>
+				<visible>!Window.IsVisible(shutdownmenu)</visible>
+			</control>
+			<control type="image">
+				<posx>-10</posx>
+				<posy>730</posy>
+				<width>310</width>
+				<height>310</height>
+				<texture border="30">arctic/common/border-20.png</texture>
+				<visible>!Window.IsVisible(shutdownmenu)</visible>
+			</control>
+		</control>
+    </include>
+    
     <include name="PVRMenuButtonVars">
         <posx>0</posx>
-        <width>458</width>
+        <width>380</width>
         <height>107</height>
-        <font>Font-Alaska-S34-BL</font>
+        <font>Font-Alaska-S29-BL</font>
         <textoffsetx>110</textoffsetx>
         <textwidth>318</textwidth>
-        <textcolor>mod-infotags-l</textcolor>
+        <textcolor>mod-infotags-alt</textcolor>
         <focusedcolor>mod-infotags-alt</focusedcolor>
         <align>left</align>
         <animation effect="fade" start="64.435" end="100" time="300" tween="sine" easing="inout" reversible="false">Focus</animation>

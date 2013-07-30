@@ -197,6 +197,15 @@
 						<textcolor>mod-infotags</textcolor>
 						<scroll>false</scroll>
 						<align>left</align>
+					</control>
+					<control type="image">
+						<description>Thumb</description>
+						<posx>559</posx>
+						<posy>-5</posy>
+						<width>287</width>
+						<height>287</height>
+						<texture background="true" diffuse="arctic/osd/287.png">windows/common/black.png</texture>
+						<aspectratio scalediffuse="false">stretch</aspectratio>
 					</control>	
 					<control type="image">
 						<description>Thumb</description>
@@ -204,7 +213,7 @@
 						<posy>-5</posy>
 						<width>287</width>
 						<height>287</height>
-						<texture background="true" diffuse="arctic/osd/287.png">$INFO[MusicPlayer.Cover]</texture>
+						<texture background="true" diffuse="arctic/osd/287.png">$VAR[ArcticOSDPoster]</texture>
 						<aspectratio scalediffuse="false">scale</aspectratio>
 					</control>
 					<control type="image">
@@ -218,6 +227,7 @@
 					<control type="group">
 						<posy>5</posy>
 						<posx>865</posx>
+						
 						<control type="label">
 							<posx>0</posx>
 							<posy>22</posy>
@@ -237,6 +247,7 @@
 							<textcolor>mod-infotags-d</textcolor>
 							<scroll>false</scroll>
 							<align>left</align>
+							<animation effect="slide" end="-100" time="200" condition="IsEmpty(MusicPlayer.TrackNumber)">Conditional</animation>
 						</control>
 						<control type="label">
 							<posx>100</posx>
@@ -247,6 +258,7 @@
 							<textcolor>mod-infotags</textcolor>
 							<scroll>false</scroll>
 							<align>left</align>
+							<animation effect="slide" end="-100" time="200" condition="IsEmpty(MusicPlayer.TrackNumber)">Conditional</animation>
 						</control>			
 						<control type="textbox">
 							<description>Plot</description>
@@ -490,6 +502,16 @@
 								<posy>-50</posy>
 								<width>350</width>
 								<height>350</height>
+								<texture background="true" diffuse="arctic/osd/370.png">windows/common/black.png</texture>
+								<aspectratio scalediffuse="false">stretch</aspectratio>
+								<animation effect="slide" end="0,-70" time="300" tween="cubic" easing="inout" condition="[Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding]">Conditional</animation>
+							</control>
+							<control type="image">
+								<description>Thumb</description>
+								<posx>489</posx>
+								<posy>-50</posy>
+								<width>350</width>
+								<height>350</height>
 								<texture background="true" diffuse="arctic/osd/370.png">$VAR[ArcticOSDPoster]</texture>
 								<aspectratio scalediffuse="false">scale</aspectratio>
 								<animation effect="slide" end="0,-70" time="300" tween="cubic" easing="inout" condition="[Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding]">Conditional</animation>
@@ -528,6 +550,7 @@
 									<textcolor>mod-infotags-d</textcolor>
 									<scroll>false</scroll>
 									<align>left</align>
+									<animation effect="slide" end="-100" time="200" condition="IsEmpty(MusicPlayer.TrackNumber)">Conditional</animation>
 								</control>
 								<control type="label">
 									<posx>100</posx>
@@ -538,6 +561,7 @@
 									<textcolor>mod-infotags</textcolor>
 									<scroll>false</scroll>
 									<align>left</align>
+									<animation effect="slide" end="-100" time="200" condition="IsEmpty(MusicPlayer.TrackNumber)">Conditional</animation>
 								</control>			
 								<control type="textbox">
 									<description>Plot</description>

@@ -2,6 +2,9 @@
     <include condition="!Skin.HasSetting(OSDDefaultSubtitleButton.Enabled) + !VideoPlayer.Content(LiveTV)">OSDDefaultControlPlay</include>
     <include condition="Skin.HasSetting(OSDDefaultSubtitleButton.Enabled) + !VideoPlayer.Content(LiveTV)">OSDDefaultControlSubtitles</include>
     <include condition="VideoPlayer.Content(LiveTV)">OSDDefaultControlLiveTV</include>
+    <onunload condition="Player.ShowInfo">Action(Info)</onunload>
+    <onunload>ClearProperty(ExtendPlot,seekbar)</onunload>
+    
     <allowoverlay>yes</allowoverlay>
     <zorder>2</zorder>
     <controls>

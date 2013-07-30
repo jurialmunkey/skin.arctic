@@ -7,6 +7,15 @@
             <visible>Control.IsVisible(50) + !Window.IsActive(musicinformation) + !Window.IsActive(addoninformation)</visible>
             <include>CommonViewAnimations</include>
             <include>OptionsShutdownAnimation</include>
+            <control type="image">
+                <posx>235</posx>
+                <posy>176</posy>
+                <height>727</height>
+                <width>1450</width>
+                <texture border="35">views/newgloss/whitepanel-15.png</texture>
+                <colordiffuse>Mod_Tags_Alt</colordiffuse>
+                <visible>Skin.HasSetting(biglist.showpanel)</visible>
+            </control>
             <control type="list" id="50">
                 <posx>250</posx>
                 <posy>190</posy>

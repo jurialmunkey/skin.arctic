@@ -1171,3 +1171,7 @@ msgstr ""
 msgctxt "#42430"
 msgid "Return to main menu"
 msgstr ""
+
+msgctxt "#42431"
+msgid "Show back panel"
+msgstr ""

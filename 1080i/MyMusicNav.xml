@@ -242,8 +242,8 @@
 					<radioposx>-19</radioposx>
 					<visible>Control.IsVisible(61)</visible>
 				</control>
-				<!-- Panel List : Show panel -->
-				<control type="radiobutton" id="110">
+				<!-- Big List : Show panel -->
+				<!--<control type="radiobutton" id="110">
 					<include>ViewOptions.Button</include>
 					<selected>Skin.HasSetting(biglist.showpanel)</selected>
 					<onclick>Skin.ToggleSetting(biglist.showpanel)</onclick>
@@ -253,7 +253,7 @@
 					<textureradionofocus>buttons/radio/options-radio-button-nf.png</textureradionofocus>
 					<radioposx>-19</radioposx>
 					<visible>Control.IsVisible(50)</visible>
-				</control>
+				</control>-->
 				
 				
 				<!-- GLOBAL OPTIONS -->

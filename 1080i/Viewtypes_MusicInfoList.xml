@@ -20,6 +20,32 @@
             <control type="group">
 				<posx>46</posx>
 				<posy>420</posy>
+				<control type="group">
+					<visible>Skin.HasSetting(panellist.showpanel)</visible>
+					<control type="image">
+						<width>1813</width>
+						<height>464</height>
+						<posx>6</posx>
+						<posy>470</posy>
+						<texture background="true" diffuse="views/posterview/diffuse-ref.png" border="15" flipy="true">arctic/common/panel.png</texture>
+						<aspectratio scalediffuse="false">stretch</aspectratio>
+					</control>
+					<control type="image">
+						<description>Shadow Bottom</description>
+						<posx>-44</posx>
+						<posy>448</posy>
+						<width>1873</width>
+						<height>36</height>
+						<texture>views/posterview/shadow.png</texture>
+					</control>
+					<control type="image">
+						<width>1813</width>
+						<height>464</height>
+						<posx>6</posx>
+						<posy>6</posy>
+						<texture border="70">arctic/common/panel.png</texture>
+					</control>
+				</control>
 				<control type="list" id="61">            	
 					<width>665</width>
 					<height>447</height>
@@ -37,7 +63,7 @@
 					<movement>2</movement>
 					<preloaditems>2</preloaditems>
 					<pagecontrol>70</pagecontrol>
-					<itemlayout height="56">
+					<itemlayout height="56" condition="!Skin.HasSetting(panellist.showpanel)">
 						<control type="group">
 							<posx>12</posx>
 							<posy>12</posy>
@@ -63,7 +89,33 @@
 							</control>
 						</control>
 					</itemlayout>
-					<focusedlayout height="56">
+					<itemlayout height="56" condition="Skin.HasSetting(panellist.showpanel)">
+						<control type="group">
+							<posx>12</posx>
+							<posy>12</posy>
+							<control type="label">                        
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>600</width>
+								<label>$VAR[InfoList.LeftLabel]</label>
+								<font>Font-Alaska-S25-BL</font>
+								<textcolor>77eeeeee</textcolor>
+								<scroll>false</scroll>
+								<align>left</align>
+							</control>
+							<control type="label">                        
+								<posx>632</posx>
+								<posy>0</posy>
+								<width>600</width>
+								<label>$VAR[InfoList.RightLabel]</label>
+								<font>Font-Condensed-S20-B</font>
+								<textcolor>77eeeeee</textcolor>
+								<scroll>false</scroll>
+								<align>right</align>
+							</control>
+						</control>
+					</itemlayout>
+					<focusedlayout height="56" condition="!Skin.HasSetting(panellist.showpanel)">
 						<control type="image">
 							<posx>0</posx>
 							<posy>0</posy>
@@ -98,7 +150,41 @@
 							</control>
 						</control>
 					</focusedlayout>
-	
+					<focusedlayout height="56" condition="Skin.HasSetting(panellist.showpanel)">
+						<control type="image">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>655</width>
+							<height>56</height>
+							<texture background="true" border="10">arctic/common/whitepanel8.png</texture>
+							<aspectratio>stretch</aspectratio>
+							<colordiffuse>ff181818</colordiffuse>
+						</control>
+						<control type="group">
+							<posx>12</posx>
+							<posy>12</posy>
+							<control type="label">                        
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>600</width>
+								<label>$VAR[InfoList.LeftLabel]</label>
+								<font>Font-Alaska-S25-BL</font>
+								<textcolor>white</textcolor>
+								<scroll>false</scroll>
+								<align>left</align>
+							</control>
+							<control type="label">                        
+								<posx>632</posx>
+								<posy>0</posy>
+								<width>600</width>
+								<label>$VAR[InfoList.RightLabel]</label>
+								<font>Font-Condensed-S20-B</font>
+								<textcolor>white</textcolor>
+								<scroll>false</scroll>
+								<align>right</align>
+							</control>
+						</control>
+					</focusedlayout>
 				</control>
 				<control type="group">
 					<control type="group">
@@ -112,6 +198,19 @@
 							<texture background="true" diffuse="views/posterview/diffuse-ref.png" fallback="views/fallbacks/DefaultAudio.png/square-large.png" border="5" flipy="true">$VAR[ListInfoLandscapeVar]</texture>
 							<aspectratio scalediffuse="false">scale</aspectratio>
 							<fadetime>200</fadetime>
+							<visible>!Skin.HasSetting(music.panellist.showplot)</visible>
+						</control>
+						<control type="image">
+							<description>Landscape</description>
+							<posx>991</posx>
+							<posy>470</posy>
+							<width>673</width>
+							<height>464</height>
+							<texture background="true" diffuse="views/posterview/diffuse-ref.png" fallback="views/fallbacks/DefaultAudio.png/square-large.png" border="5" flipy="true">$VAR[ListInfoLandscapeVar]</texture>
+							<aspectratio scalediffuse="false">scale</aspectratio>
+							<fadetime>200</fadetime>
+							<visible>Skin.HasSetting(music.panellist.showplot)</visible>
+							<colordiffuse>77white</colordiffuse>
 						</control>
 						<control type="image">
 							<description>Shadow Bottom</description>
@@ -120,6 +219,7 @@
 							<width>693</width>
 							<height>36</height>
 							<texture>views/posterview/shadow.png</texture>
+							<visible>!Skin.HasSetting(panellist.showpanel)</visible>
 						</control>
 						<control type="image">
 							<description>Landscape</description>
@@ -163,6 +263,7 @@
 							<texture border="25">arctic/common/border.png</texture>
 							<aspectratio>stretch</aspectratio>
 							<colordiffuse>Mod_Border</colordiffuse>
+							<visible>!Skin.HasSetting(panellist.showpanel)</visible>
 						</control> 
 					</control>
 					<control type="image">
@@ -182,6 +283,18 @@
 						<width>484</width>
 						<height>36</height>
 						<texture>views/posterview/shadow.png</texture>
+						<visible>!Skin.HasSetting(panellist.showpanel)</visible>
+					</control>
+					<!-- CD ART -->
+					<control type="image">
+						<posx>26</posx>
+						<posy>-200</posy>
+						<width>424</width>
+						<height>424</height>
+						<texture background="true" fallback="osd/fullscreen/cd.png">$INFO[ListItem.Path,,cdart.png]</texture>
+						<aspectratio align="center">keep</aspectratio>
+						<animation effect="rotate" center="auto" reversible="false" start="360" end="0" time="2500" loop="true" condition="Player.Playing + StringCompare(MusicPlayer.Album,ListItem.Album)">Conditional</animation>
+						<visible>Container.Content(songs) + Skin.HasSetting(CDArt.Enabled)</visible>
 					</control>
 					<control type="image">
 						<description>Cover</description>
@@ -201,6 +314,15 @@
 						<height>484</height>
 						<texture border="25">arctic/common/border.png</texture>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
+						<visible>!Skin.HasSetting(panellist.showpanel)</visible>
+					</control>
+					<control type="image">
+						<width>1853</width>
+						<height>504</height>
+						<posx>-14</posx>
+						<posy>-14</posy>
+						<texture border="70">arctic/common/border-20.png</texture>
+						<visible>Skin.HasSetting(panellist.showpanel)</visible>
 					</control>
 				</control>
             </control>

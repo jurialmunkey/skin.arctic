@@ -33,6 +33,7 @@
                 <orientation>horizontal</orientation>
                 <itemgap>-40</itemgap>
                 <onup condition="IsEmpty(Window(seekbar).Property(ExtendPlot))">SetProperty(ExtendPlot,1,seekbar)</onup>
+                <ondown condition="IsEmpty(Window(seekbar).Property(ExtendPlot))">Back</ondown>
                 <ondown condition="!IsEmpty(Window(seekbar).Property(ExtendPlot))">ClearProperty(ExtendPlot,seekbar)</ondown>
                 <usecontrolcoords>true</usecontrolcoords>
                 <control type="button" id="51">

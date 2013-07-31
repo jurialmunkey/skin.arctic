@@ -109,18 +109,7 @@
                         <aspectratio>stretch</aspectratio>
                         <colordiffuse>Mod_Border_Fade</colordiffuse>
                     </control>  
-					<control type="group">
-						<posx>6</posx>
-						<posy>6</posy>
-						<control type="image">
-							<posx>0</posx>
-							<posy>0</posy>
-							<width>50</width>
-							<height>50</height>
-							<texture>$VAR[arctic.watched]</texture>
-							<aspectratio aligny="top" align="left">keep</aspectratio>
-						</control>
-					</control>
+					
                     <control type="image">
                         <description>Poster</description>
                         <posx>6</posx>
@@ -131,6 +120,14 @@
                         <aspectratio>stretch</aspectratio>
                         <colordiffuse>Mod_Cover_Fade</colordiffuse>
                     </control>
+					<control type="image">
+						<posx>6</posx>
+						<posy>6</posy>
+						<width>50</width>
+						<height>50</height>
+						<texture>$VAR[arctic.watched]</texture>
+						<aspectratio aligny="top" align="left">keep</aspectratio>
+					</control>
                 </itemlayout>
                 <focusedlayout width="168" height="238">
                     <control type="group">
@@ -144,36 +141,32 @@
 							<texture background="true" diffuse="arctic/panel/wall.png">$VAR[WallPoster]</texture>
 							<aspectratio>stretch</aspectratio>
 						</control>
-                        <control type="group">
-							<posx>6</posx>
-							<posy>6</posy>
-							<control type="image">
-								<posx>0</posx>
-								<posy>0</posy>
-								<width>50</width>
-								<height>50</height>
-								<texture>$VAR[arctic.watched]</texture>
-								<aspectratio aligny="top" align="left">keep</aspectratio>
-							</control>
-						</control>
 						<control type="image">
                             <description>Border</description>
-                            <posx>-14</posx>
-                            <posy>-14</posy>
-                            <width>196</width>
-                            <height>266</height>
-                            <texture border="52">arctic/common/border-20.png</texture>
+                            <posx>-4</posx>
+                            <posy>-4</posy>
+                            <width>176</width>
+                            <height>246</height>
+                            <texture border="52">arctic/common/border.png</texture>
                             <aspectratio>stretch</aspectratio>
                         </control> 
                         <control type="image">
                             <description>Border</description>
-                            <posx>-14</posx>
-                            <posy>-14</posy>
-                            <width>196</width>
-                            <height>266</height>
-                            <texture border="52">arctic/common/border-20.png</texture>
+                            <posx>-4</posx>
+                            <posy>-4</posy>
+                            <width>176</width>
+                            <height>246</height>
+                            <texture border="52">arctic/common/border.png</texture>
                             <aspectratio>stretch</aspectratio>
                         </control> 
+                        <control type="image">
+							<posx>6</posx>
+							<posy>6</posy>
+							<width>50</width>
+							<height>50</height>
+							<texture>$VAR[arctic.watched]</texture>
+							<aspectratio aligny="top" align="left">keep</aspectratio>
+						</control>
                     </control>
                 </focusedlayout>
             </control>

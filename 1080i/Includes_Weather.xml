@@ -790,7 +790,7 @@
                     <width>85</width>
                     <height>85</height>
                     <texture>$VAR[WeatherMoonPhaseIcon]</texture>
-                    <colordiffuse>mod-infotags</colordiffuse>
+                    <colordiffuse>Mod_Tags</colordiffuse>
                 </control>
                 <control type="label">
                     <posx>0</posx>
@@ -799,7 +799,7 @@
                     <height>120</height>
                     <label>$LOCALIZE[41693]</label>
                     <font>Font-Alaska-S34-BL</font>
-                    <textcolor>mod-infotags</textcolor>
+                    <textcolor>Mod_Tags</textcolor>
                     <scroll>false</scroll>
                     <align>right</align>
                 </control>
@@ -810,7 +810,7 @@
                     <height>120</height>
                     <label>$INFO[Window(Weather).Property(Today.moonphase)]</label>
                     <font>Font-Alaska-S25-BL</font>
-                    <textcolor>mod-infotags-l</textcolor>
+                    <textcolor>Mod_Tags_Light</textcolor>
                     <scroll>false</scroll>
                     <align>right</align>
                 </control>

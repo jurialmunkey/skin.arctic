@@ -43,6 +43,7 @@
 					<texture background="true" flipy="true" diffuse="views/posterview/diffuse-ref.png">$VAR[PosterViewPosterAlt]</texture>
 					<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
 					<animation effect="fade" end="50" condition="true">Conditional</animation>
+					<visible>!Skin.HasSetting(HideCoverReflection)</visible>
 				</control>
 				<control type="image">
 					<description>Shadow Bottom</description>
@@ -110,6 +111,7 @@
 					<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
 					<animation effect="fade" start="100" end="50" time="250" condition="Container(59).OnNext | Container(59).OnPrevious">UnFocus</animation>
 					<animation effect="fade" end="100" start="50" time="250" condition="Container(59).OnNext | Container(59).OnPrevious">Focus</animation>
+					<visible>!Skin.HasSetting(HideCoverReflection)</visible>
 				</control>
 				<control type="image">
 					<description>Shadow</description>

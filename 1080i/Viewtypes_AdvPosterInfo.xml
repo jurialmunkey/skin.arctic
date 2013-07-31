@@ -224,6 +224,7 @@
                                     <height>400</height>
                                     <texture background="true" flipy="true" diffuse="views/posterview/diffuse-ref.png">$VAR[PosterViewPoster]</texture>
                                     <aspectratio align="center" scalediffuse="false">scale</aspectratio>
+									<visible>!Skin.HasSetting(HideCoverReflection)</visible>
                                 </control>
                                 <!-- SHADOW -->
                                 <control type="image">
@@ -304,6 +305,7 @@
 									<height>301</height>
 									<texture background="true" flipy="true" diffuse="views/posterview/diffuse-ref.png" border="15">arctic/common/panel.png</texture>
 									<aspectratio scalediffuse="false">scale</aspectratio>
+									<visible>!Skin.HasSetting(HideCoverReflection)</visible>
 								</control>
 								<control type="image">
 									<posx>-130</posx>
@@ -394,6 +396,7 @@
 									<height>400</height>
 									<texture background="true" flipy="true" diffuse="views/posterview/diffuse-ref.png">$VAR[PosterViewPoster]</texture>
 									<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+									<visible>!Skin.HasSetting(HideCoverReflection)</visible>
 								</control>
 								<control type="image">
 									<description>Shadow Bottom</description>
@@ -497,6 +500,7 @@
                                     <height>400</height>
                                     <texture background="true" flipy="true" diffuse="views/posterview/diffuse-ref.png">$VAR[PosterViewPoster]</texture>
 									<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+									<visible>!Skin.HasSetting(HideCoverReflection)</visible>
                                 </control>
                                 
                                 <!-- SHADOWS -->

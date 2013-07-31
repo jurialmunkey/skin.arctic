@@ -43,6 +43,7 @@
 					<height>561</height>
 					<texture background="true" flipy="true" diffuse="views/posterview/diffuse-ref.png">$VAR[PosterViewPosterAlt]</texture>
 					<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
+					<visible>!Skin.HasSetting(HideCoverReflection)</visible>
 				</control>
 				<control type="image">
 					<description>Shadow Bottom</description>
@@ -133,6 +134,7 @@
 					<height>561</height>
 					<texture background="true" flipy="true" diffuse="views/posterview/diffuse-ref.png">$VAR[PosterViewPosterAlt]</texture>
 					<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
+					<visible>!Skin.HasSetting(HideCoverReflection)</visible>
 				</control>
 				<control type="image">
 					<description>Shadow Bottom</description>
@@ -226,6 +228,7 @@
 					<height>561</height>
 					<texture background="true" flipy="true" diffuse="views/posterview/diffuse-ref.png">$VAR[PosterViewPosterAlt]</texture>
 					<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
+					<visible>!Skin.HasSetting(HideCoverReflection)</visible>
 				</control>
 				<control type="image">
 					<description>Shadow</description>
@@ -345,6 +348,7 @@
 					<height>561</height>
 					<texture background="true" flipy="true" diffuse="views/posterview/diffuse-ref.png">$VAR[PosterViewPosterAlt]</texture>
 					<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
+					<visible>!Skin.HasSetting(HideCoverReflection)</visible>
 				</control>
 				<control type="image">
 					<description>Shadow Bottom</description>

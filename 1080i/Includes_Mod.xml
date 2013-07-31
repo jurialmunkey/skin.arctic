@@ -1416,6 +1416,7 @@
 					<width>169</width>
 					<height>254</height>
 					<texture background="true"  diffuse="views/posterview/diffuse-ref.png" flipy="true" fallback="views/fallbacks/DefaultVideo.png/large.png">$INFO[ListItem.Property(poster)]</texture>
+					<visible>!Skin.HasSetting(HideCoverReflection)</visible>
 				</control>
 				<control type="image">
 					<posx>10</posx>
@@ -1450,6 +1451,7 @@
 					<height>254</height>
 					<texture background="true" diffuse="views/posterview/diffuse-ref.png" flipy="true" fallback="views/fallbacks/DefaultVideo.png/large.png">$INFO[ListItem.Property(poster)]</texture>
 					<aspectratio align="center" scalediffuse="false">scale</aspectratio>
+					<visible>!Skin.HasSetting(HideCoverReflection)</visible>
 				</control>
 				<control type="image">
 					<posx>10</posx>
@@ -1486,6 +1488,7 @@
 						<width>220</width>
 						<height>220</height>
 						<texture  background="true"  diffuse="views/posterview/diffuse-ref.png" flipy="true" fallback="views/fallbacks/DefaultAlbumCover.png/square-large.png">$INFO[ListItem.Property(poster)]</texture>
+						<visible>!Skin.HasSetting(HideCoverReflection)</visible>
 					</control>
 					<control type="image">
 						<posx>10</posx>
@@ -1520,6 +1523,7 @@
 					<width>169</width>
 					<height>254</height>
 					<texture background="true"  diffuse="views/posterview/diffuse-ref.png" flipy="true" fallback="views/fallbacks/DefaultVideo.png/large.png">$INFO[ListItem.Property(poster)]</texture>
+					<visible>!Skin.HasSetting(HideCoverReflection)</visible>
 				</control>
 				<control type="image">
 					<posx>10</posx>
@@ -1554,6 +1558,7 @@
 					<height>254</height>
 					<texture background="true"  diffuse="views/posterview/diffuse-ref.png" flipy="true" fallback="views/fallbacks/DefaultVideo.png/large.png">$INFO[ListItem.Property(poster)]</texture>
 					<aspectratio align="center" scalediffuse="false">scale</aspectratio>
+					<visible>!Skin.HasSetting(HideCoverReflection)</visible>
 				</control>
 				<control type="image">
 					<posx>10</posx>
@@ -1589,6 +1594,7 @@
 						<width>220</width>
 						<height>220</height>
 						<texture  background="true" diffuse="views/posterview/diffuse-ref.png" flipy="true" fallback="views/fallbacks/DefaultAlbumCover.png/square-large.png">$INFO[ListItem.Property(poster)]</texture>
+						<visible>!Skin.HasSetting(HideCoverReflection)</visible>
 					</control>
 					<control type="image">
 						<posx>10</posx>

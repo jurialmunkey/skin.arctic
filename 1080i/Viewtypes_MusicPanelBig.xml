@@ -38,6 +38,7 @@
 							<texture background="true" flipy="true" diffuse="views/posterview/diffuse-ref.png" fallback="views/fallbacks/DefaultAlbumCover.png/square-large.png">$VAR[WallPoster]</texture>
 							<aspectratio scalediffuse="false">scale</aspectratio>
 							<colordiffuse>ffcccccc</colordiffuse>
+							<visible>!Skin.HasSetting(HideCoverReflection)</visible>
 						</control>
 						<control type="image">
 							<description>Cover Shadow</description>
@@ -108,6 +109,7 @@
 							<height>702</height>
 							<texture background="true" flipy="true" diffuse="views/posterview/diffuse-ref.png" fallback="views/fallbacks/DefaultAlbumCover.png/square-large.png">$VAR[WallPoster]</texture>
 							<aspectratio scalediffuse="false">scale</aspectratio>
+							<visible>!Skin.HasSetting(HideCoverReflection)</visible>
 						</control>
 						<control type="image">
 							<description>Cover Shadow</description>

@@ -524,8 +524,8 @@
 					</control>									
 				</control>                
                 <control type="group">
-					<include condition="!Skin.HasSetting(viewtype.InfoPoster.wrap)">Viewtype-InfoPoster-Fixed</include>
-					<include condition="Skin.HasSetting(viewtype.InfoPoster.wrap)">Viewtype-InfoPoster-Wrap</include>
+					<include condition="!Skin.HasSetting(viewtype.posterinfo.wrap)">Viewtype-InfoPoster-Fixed</include>
+					<include condition="Skin.HasSetting(viewtype.posterinfo.wrap)">Viewtype-InfoPoster-Wrap</include>
                     <control type="textbox">
 						<description>Plot</description>
 						<posx>524</posx>

@@ -549,34 +549,7 @@
 						<effect type="fade" end="100" start="0" time="350"/>
 					</animation>
 					<itemlayout width="184" condition="!Container(525).HasFocus(8)">
-						<control type="group">
-							<control type="image">
-								<posx>10</posx>
-								<posy>10</posy>
-								<width>169</width>
-								<height>169</height>
-								<texture border="5">views/newgloss/whitepanel.png</texture>
-								<colordiffuse>mod-infotags-alt</colordiffuse>
-							</control>
-							<control type="image">
-								<posx>10</posx>
-								<posy>10</posy>
-								<width>169</width>
-								<height>169</height>
-								<texture fallback="windows/home/icons/addtile.png">$INFO[ListItem.Property(poster)]</texture>
-								<colordiffuse>mod-infotags-d</colordiffuse>
-							</control>
-							<control type="label">
-								<posx>92</posx>
-								<posy>146</posy>
-								<label>$INFO[ListItem.Label]</label>
-								<align>center</align>
-								<font>Font-Alaska-S25-L</font>
-								<textcolor>mod-infotags</textcolor>
-								<width>149</width>
-								<scroll>false</scroll>
-							</control>
-						</control>
+						<include>Mod_83Items</include>
 					</itemlayout>
 					<itemlayout width="368" condition="Container(525).HasFocus(8)">
 						<control type="group">
@@ -685,63 +658,7 @@
 						</control>
 					</itemlayout>
 					<focusedlayout width="184" condition="!Container(525).HasFocus(8)">
-						<control type="group">
-							<visible>Control.HasFocus(83)</visible>
-							<control type="image">
-								<posx>10</posx>
-								<posy>10</posy>
-								<width>169</width>
-								<height>169</height>
-								<texture border="5">views/other/focus-mod.png</texture>
-							</control>
-							<control type="image">
-								<posx>10</posx>
-								<posy>10</posy>
-								<width>169</width>
-								<height>169</height>
-								<texture fallback="windows/home/icons/addtile.png">$INFO[ListItem.Property(poster)]</texture>
-								<colordiffuse>mod-infotags-alt</colordiffuse>
-							</control>
-							<control type="label">
-								<posx>92</posx>
-								<posy>146</posy>
-								<label>$INFO[ListItem.Label]</label>
-								<align>center</align>
-								<font>Font-Alaska-S25-L</font>
-								<textcolor>mod-infotags-alt</textcolor>
-								<width>149</width>
-								<scroll>false</scroll>
-							</control>
-						</control>
-						<control type="group">
-							<visible>!Control.HasFocus(83)</visible>
-							<control type="image">
-								<posx>10</posx>
-								<posy>10</posy>
-								<width>169</width>
-								<height>169</height>
-								<texture border="5">views/newgloss/whitepanel.png</texture>
-								<colordiffuse>mod-infotags-alt</colordiffuse>
-							</control>
-							<control type="image">
-								<posx>10</posx>
-								<posy>10</posy>
-								<width>169</width>
-								<height>169</height>
-								<texture fallback="windows/home/icons/addtile.png">$INFO[ListItem.Property(poster)]</texture>
-								<colordiffuse>mod-infotags-d</colordiffuse>
-							</control>
-							<control type="label">
-								<posx>92</posx>
-								<posy>146</posy>
-								<label>$INFO[ListItem.Label]</label>
-								<align>center</align>
-								<font>Font-Alaska-S25-L</font>
-								<textcolor>mod-infotags</textcolor>
-								<width>149</width>
-								<scroll>false</scroll>
-							</control>
-						</control>
+						<include>Mod_83Focused</include>
 					</focusedlayout>
 					<focusedlayout width="368" condition="Container(525).HasFocus(8)">
 						<control type="group">

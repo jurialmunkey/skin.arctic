@@ -18,7 +18,8 @@
             <onfocus>ClearProperty(SkinInitStarted,home)</onfocus>
             <onfocus>ReplaceWindow(Home)</onfocus>
             <animation effect="fade" start="0" end="100" time="0" delay="3000">Focus</animation>
-        </control>
+            <onfocus>ReloadSkin()</onfocus>
+		</control>
         <control type="group" id="12">
             <visible>!IsEmpty(Window(home).Property(SkinInitStarted))</visible>
             <animation effect="fade" start="0" end="100" time="300" tween="sine" easing="inout">WindowOpen</animation>

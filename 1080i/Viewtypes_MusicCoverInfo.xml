@@ -66,7 +66,7 @@
                                     <height>444</height>
                                     <texture background="true" flipy="true" diffuse="views/posterview/diffuse-ref-square.png" fallback="special://skin/extras/musicgenres/default.jpg">$INFO[ListItem.Label,special://skin/extras/musicgenres/,.jpg]</texture>
                                     <aspectratio align="center" scalediffuse="false">stretch</aspectratio>
-                                    <visible>Container.Content(Genres)</visible>
+                                    <visible>Container.Content(Genres) + !Skin.HasSetting(HideCoverReflection)</visible>
                                 </control>
                                 <control type="image">
                                     <description>Reflection</description>
@@ -76,7 +76,7 @@
                                     <height>444</height>
                                     <texture background="true" flipy="true" diffuse="views/posterview/diffuse-ref-square.png" fallback="windows/common/black.png">$VAR[SquareThumbLarge]</texture>
                                     <aspectratio align="center" scalediffuse="false">stretch</aspectratio>
-                                    <visible>!Container.Content(Genres)</visible>
+                                    <visible>!Container.Content(Genres) + !Skin.HasSetting(HideCoverReflection)</visible>
                                 </control>
                                 <control type="image">
                                     <description>Shadow Bottom</description>
@@ -182,7 +182,7 @@
                                     <height>444</height>
                                     <texture background="true" flipy="true" diffuse="views/posterview/diffuse-ref-square.png" fallback="special://skin/extras/musicgenres/default.jpg">$INFO[ListItem.Label,special://skin/extras/musicgenres/,.jpg]</texture>
                                     <aspectratio align="center" scalediffuse="false">stretch</aspectratio>
-                                    <visible>Container.Content(Genres)</visible>
+                                    <visible>Container.Content(Genres) + !Skin.HasSetting(HideCoverReflection)</visible>
                                 </control>
                                 <control type="image">
                                     <description>Reflection</description>
@@ -192,7 +192,7 @@
                                     <height>444</height>
                                     <texture background="true" flipy="true" diffuse="views/posterview/diffuse-ref-square.png" fallback="windows/common/black.png">$VAR[SquareThumbLarge]</texture>
                                     <aspectratio align="center" scalediffuse="false">stretch</aspectratio>
-                                    <visible>!Container.Content(Genres)</visible>
+                                    <visible>!Container.Content(Genres) + !Skin.HasSetting(HideCoverReflection)</visible>
                                 </control>
                                 <control type="image">
                                     <description>Shadow Bottom</description>
@@ -272,6 +272,7 @@
 									<height>347</height>
 									<texture background="true" flipy="true" diffuse="views/posterview/diffuse-ref.png" border="5">views/newgloss/panel.png</texture>
 									<aspectratio scalediffuse="false">stretch</aspectratio>
+									<visible>!Skin.HasSetting(HideCoverReflection)</visible>
 								</control>
 								<control type="image">
 									<posx>-130</posx>
@@ -362,7 +363,7 @@
                                     <height>444</height>
                                     <texture background="true" flipy="true" diffuse="views/posterview/diffuse-ref-square.png"  fallback="windows/common/black.png">$VAR[SquareThumbLarge]</texture>
                                     <aspectratio align="center" scalediffuse="false">stretch</aspectratio>
-                                    <visible>!Container.Content(Genres)</visible>
+                                    <visible>!Container.Content(Genres) + !Skin.HasSetting(HideCoverReflection)</visible>
                                 </control>
                                 <control type="image">
                                     <description>Shadow Bottom</description>

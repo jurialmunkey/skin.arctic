@@ -256,6 +256,7 @@
 					<texture diffuse="views/posterview/diffuse-ref.png" flipy="true" background="true">$VAR[ListInfoPosterVar]</texture>
 					<aspectratio scalediffuse="false">stretch</aspectratio>
 					<fadetime>250</fadetime>
+					<visible>!Skin.HasSetting(HideCoverReflection)</visible>
 				</control>
 				<control type="image">
 					<description>Shadow Bottom</description>

@@ -531,6 +531,13 @@
 							<label>$LOCALIZE[5]: $LOCALIZE[20159]</label>
 							<onclick>ActivateWindow(3056)</onclick>
 						</control>
+						<control type="radiobutton" id="3011">
+							<width>1210</width>
+							<include>SettingsCategoryRadioButtonVars</include>
+							<selected>!Skin.HasSetting(HideCoverReflection)</selected>
+							<onclick>Skin.ToggleSetting(HideCoverReflection)</onclick>
+							<label>42432</label>
+						</control>
 					</control>
 				
 					<!-- OSD Settings -->

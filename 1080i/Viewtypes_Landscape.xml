@@ -33,6 +33,7 @@
 					<texture border="5" flipy="true" diffuse="views/posterview/diffuse-ref.png">views/newgloss/whitepanel.png</texture>
 					<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
 					<colordiffuse>ff181818</colordiffuse>
+					<visible>!Skin.HasSetting(HideCoverReflection)</visible>
 				</control>
 				<control type="image">
 					<description>Shadow Focus</description>
@@ -200,6 +201,7 @@
 					<texture border="5" flipy="true" diffuse="views/posterview/diffuse-ref.png">views/newgloss/whitepanel.png</texture>
 					<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
 					<colordiffuse>ff181818</colordiffuse>
+					<visible>!Skin.HasSetting(HideCoverReflection)</visible>
 				</control>
 				<control type="image">
 					<description>Shadow Focus</description>

@@ -234,6 +234,7 @@
 					<height>526</height>
 					<texture background="true" flipy="true" diffuse="views/posterview/diffuse-ref.png">$VAR[AddonInfoThumb]</texture>
 					<aspectratio scalediffuse="false">scale</aspectratio>
+					<visible>!Skin.HasSetting(HideCoverReflection)</visible>
 				</control>
 				<control type="image">
 					<description>Poster</description>

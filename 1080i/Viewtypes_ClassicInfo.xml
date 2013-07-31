@@ -193,8 +193,8 @@
             <include>BannerListAnimations</include>
             <visible>!Window.IsActive(movieinformation) + Control.IsVisible(59)</visible>  
             <posy>30</posy>
-			<include condition="!Skin.HasSetting(viewtype.ClassicInfo.wrap)">Viewtype-ClassicInfo-Fixed</include>
-            <include condition="Skin.HasSetting(viewtype.ClassicInfo.wrap)">Viewtype-ClassicInfo-Wrap</include>
+			<include condition="!Skin.HasSetting(viewtype.classicposterinfo.wrap)">Viewtype-ClassicInfo-Fixed</include>
+            <include condition="Skin.HasSetting(viewtype.classicposterinfo.wrap)">Viewtype-ClassicInfo-Wrap</include>
             <control type="group">
             	<posy>698</posy>
             	<posx>502</posx>

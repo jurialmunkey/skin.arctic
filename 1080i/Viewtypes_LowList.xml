@@ -282,6 +282,7 @@
                         <height>275</height>
                         <texture diffuse="views/posterview/diffuse-ref.png" flipy="true" border="10">arctic/common/panel.png</texture>
                         <aspectratio scalediffuse="false">stretch</aspectratio>
+						<visible>!Skin.HasSetting(HideCoverReflection)</visible>
                     </control>
                     <!-- BOTTOM SHADOW -->
                     <control type="image">

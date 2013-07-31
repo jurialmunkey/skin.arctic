@@ -651,6 +651,7 @@
 						<height>700</height>
 						<texture background="true" flipy="true" diffuse="views/posterview/diffuse-ref.png" fallback="views/fallbacks/DefaultActor.png/medium.png">$VAR[VideoInfoThumb]</texture>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
+						<visible>!Skin.HasSetting(HideCoverReflection)</visible>
 					</control>
 					<control type="image">
 						<description>Shadow</description>
@@ -708,6 +709,7 @@
 							<height>700</height>
 							<texture background="true" flipy="true" diffuse="views/posterview/diffuse-ref.png">$INFO[ListItem.Art(fanart)]</texture>
 							<aspectratio scalediffuse="false">stretch</aspectratio>
+							<visible>!Skin.HasSetting(HideCoverReflection)</visible>
 						</control>
 						<control type="image">
 							<description>Shadow</description>
@@ -747,6 +749,7 @@
 							<height>700</height>
 							<texture background="true" flipy="true" diffuse="views/posterview/diffuse-ref.png">windows/common/black.png</texture>
 							<aspectratio scalediffuse="false">stretch</aspectratio>
+							<visible>!Skin.HasSetting(HideCoverReflection)</visible>
 						</control>
 						<control type="image">
 							<description>Shadow</description>
@@ -820,4 +823,4 @@
         </control>
         <include>FadeBackgroundMovieInfo</include>
     </controls>
-</window>                                                                                                                                                      
+</window>

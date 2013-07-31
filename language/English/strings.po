@@ -1175,3 +1175,7 @@ msgstr ""
 msgctxt "#42431"
 msgid "Show back panel"
 msgstr ""
+
+msgctxt "#42432"
+msgid "Show Cover Reflections"
+msgstr ""

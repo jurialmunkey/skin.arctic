@@ -356,6 +356,7 @@
 						<height>700</height>
 						<texture background="true" flipy="true" diffuse="views/posterview/diffuse-ref.png"  fallback="views/fallbacks/DefaultActor.png/medium.png">$INFO[ListItem.Icon]</texture>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
+						<visible>!Skin.HasSetting(HideCoverReflection)</visible>
 					</control>
 					<control type="image">
 						<description>Shadow</description>
@@ -406,6 +407,7 @@
 						<height>700</height>
 						<texture background="true" flipy="true" diffuse="views/posterview/diffuse-ref.png" fallback="views/fallbacks/DefaultActor.png/medium.png">$INFO[Container(150).ListItem.Icon]</texture>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
+						<visible>!Skin.HasSetting(HideCoverReflection)</visible>
 					</control>
 					<control type="image">
 						<description>Shadow</description>

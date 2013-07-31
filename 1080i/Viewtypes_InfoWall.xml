@@ -116,7 +116,7 @@
                         <posy>6</posy>
                         <width>156</width>
                         <height>226</height>
-                        <texture border="5">arctic/panel/wall.png</texture>
+                        <texture border="10">arctic/panel/wall.png</texture>
                         <aspectratio>stretch</aspectratio>
                         <colordiffuse>Mod_Cover_Fade</colordiffuse>
                     </control>

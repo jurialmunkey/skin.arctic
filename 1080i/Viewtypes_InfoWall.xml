@@ -109,7 +109,14 @@
                         <aspectratio>stretch</aspectratio>
                         <colordiffuse>Mod_Border_Fade</colordiffuse>
                     </control>  
-					
+					<control type="image">
+						<posx>6</posx>
+						<posy>6</posy>
+						<width>50</width>
+						<height>50</height>
+						<texture diffuse="arctic/overlay/50.png">$VAR[arctic.watched]</texture>
+						<aspectratio scalediffuse="false" aligny="top" align="left">keep</aspectratio>
+					</control>
                     <control type="image">
                         <description>Poster</description>
                         <posx>6</posx>
@@ -120,14 +127,7 @@
                         <aspectratio>stretch</aspectratio>
                         <colordiffuse>Mod_Cover_Fade</colordiffuse>
                     </control>
-					<control type="image">
-						<posx>6</posx>
-						<posy>6</posy>
-						<width>50</width>
-						<height>50</height>
-						<texture>$VAR[arctic.watched]</texture>
-						<aspectratio aligny="top" align="left">keep</aspectratio>
-					</control>
+					
                 </itemlayout>
                 <focusedlayout width="168" height="238">
                     <control type="group">
@@ -166,6 +166,8 @@
 							<height>50</height>
 							<texture>$VAR[arctic.watched]</texture>
 							<aspectratio aligny="top" align="left">keep</aspectratio>
+							<texture diffuse="arctic/overlay/50.png">$VAR[arctic.watched]</texture>
+							<aspectratio scalediffuse="false" aligny="top" align="left">keep</aspectratio>
 						</control>
                     </control>
                 </focusedlayout>

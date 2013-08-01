@@ -167,9 +167,9 @@
 						<control type="textbox">
 							<description>Plot</description>
 							<posx>0</posx>
-							<posy>77</posy>
+							<posy>82</posy>
 							<width>1035</width>
-							<height>190</height>
+							<height>180</height>
 							<label>$INFO[ListItem.Plot]</label>
 							<align>justify</align>
 							<textcolor>mod-infotags-alt2</textcolor>

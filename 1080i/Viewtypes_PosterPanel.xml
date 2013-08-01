@@ -47,10 +47,10 @@
                     <visible>Skin.HasSetting(seasonpanel.showplot)</visible>
                     <control type="textbox">
                         <posx>0</posx>
-                        <posy>34</posy>
+                        <posy>52</posy>
                         <width>800</width>
-                        <height>124</height>
-                        <label>$INFO[ListItem.Plot,[B]$LOCALIZE[207][/B][CR],]</label>
+                        <height>100</height>
+                        <label>$INFO[ListItem.Plot]</label>
                         <font>Font-Alaska-S25-NC</font>
                         <textcolor>mod-infotags-alt</textcolor>
                         <align>justify</align>
@@ -59,9 +59,9 @@
                     </control>
                     <control type="textbox">
                         <posx>0</posx>
-                        <posy>34</posy>
+                        <posy>52</posy>
                         <width>800</width>
-                        <height>124</height>
+                        <height>100</height>
                         <font>Font-Alaska-S25-NC</font>
                         <textcolor>mod-infotags-alt</textcolor>
                         <align>justify</align>

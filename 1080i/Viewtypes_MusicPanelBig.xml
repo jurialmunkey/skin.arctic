@@ -223,9 +223,9 @@
 					<control type="textbox">
 						<description>Plot</description>
 						<posx>24</posx>
-						<posy>67</posy>
+						<posy>70</posy>
 						<width>902</width>
-						<height>154</height>
+						<height>146</height>
 						<label>$VAR[MusicTracklistInfoVar]</label>
 						<align>justify</align>
 						<textcolor>Mod_Tags_Light</textcolor>
@@ -234,9 +234,9 @@
 				</control>
 				<control type="textbox">
 					<posx>24</posx>
-					<posy>67</posy>
+					<posy>70</posy>
 					<width>902</width>
-					<height>154</height>
+					<height>146</height>
 					<label>$INFO[ListItem.Property(Artist_Description)]</label>
 					<font>Font-Alaska-S25-NC</font>
 					<textcolor>Mod_Tags_Light</textcolor>

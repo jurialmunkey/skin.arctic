@@ -282,7 +282,7 @@
 						<animation effect="slide" end="0,-120" time="300" tween="cubic" easing="inout" condition="[[Player.ShowInfo | Window.IsVisible(fullscreeninfo)] + !IsEmpty(Window(seekbar).Property(ExtendPlot)) + !VideoPlayer.Content(LiveTV)] | VideoPlayer.Content(LiveTV)">Conditional</animation>
 						<control type="grouplist">
 							<posx>1775</posx>
-							<posy>-10</posy>
+							<posy>-6</posy>
 							<width>300</width>
 							<orientation>horizontal</orientation>
 							<itemgap>10</itemgap>
@@ -330,7 +330,7 @@
 							<control type="label">
 								<posx>0</posx>
 								<posy>4</posy>
-								<width>1120</width>
+								<width>1020</width>
 								<label>$VAR[OSDTitle]</label>
 								<font>Font-Alaska-S38-BL</font>
 								<textcolor>mod-infotags-d</textcolor>

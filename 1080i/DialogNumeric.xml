@@ -33,6 +33,7 @@
                     <posy>-73</posy>
                     <width>1000</width>
                     <height>22</height>
+                    <textcolor>Mod_Tags_Dark</textcolor>
                     <include>DialogHeaderMod</include>
                     <align>center</align>
                 </control>
@@ -43,9 +44,9 @@
                     <width>1000</width>
                     <font>Font-Condensed-S45</font>
                     <align>center</align>
-                    <textcolor>mod-infotags</textcolor>
-                    <selectedcolor>mod-infotags</selectedcolor>
-                    <disabledcolor>mod-infotags-l</disabledcolor>
+                    <textcolor>Mod_Tags</textcolor>
+                    <selectedcolor>Mod_Tags</selectedcolor>
+                    <disabledcolor>Mod_Tags_Light</disabledcolor>
                 </control>
             <!-- First Row -->
                 <control type="group">

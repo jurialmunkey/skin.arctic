@@ -1177,5 +1177,13 @@ msgid "Show back panel"
 msgstr ""
 
 msgctxt "#42432"
-msgid "Show Cover Reflections"
+msgid "Show cover reflections"
+msgstr ""
+
+msgctxt "#42433"
+msgid "Rotate discart"
+msgstr ""
+
+msgctxt "#42434"
+msgid "Show in-progress indicators"
 msgstr ""

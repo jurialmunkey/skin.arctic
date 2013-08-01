@@ -147,7 +147,7 @@
 				<control type="group">
 					<posx>670</posx>
 					<posy>-300</posy>
-					<animation effect="slide" end="-340,250" condition="!Skin.HasSetting(old.posterinfo)">Conditional</animation>
+					<animation effect="slide" end="-340,250" condition="true">Conditional</animation>
 					<animation effect="slide" start="0,75" end="0" time="250" delay="250" reversible="false">Visible</animation>
 					<visible>![Container(52).OnNext | Container(52).OnPrevious] + !Window.IsActive(movieinformation) + Control.IsVisible(52)</visible>
 					<control type="image">
@@ -159,6 +159,7 @@
 						<aspectratio align="center">keep</aspectratio>
 						<visible>Container.Content(movies) + Skin.HasSetting(showdiscart)</visible>
 						<include>discart.slide</include>
+						<animation effect="rotate" center="auto" reversible="false" start="360" end="0" time="20000" loop="true" condition="Skin.HasSetting(RotateDiscArt)">Conditional</animation>
 					</control>	
 					<control type="image">
 						<posx>240</posx>
@@ -169,6 +170,7 @@
 						<aspectratio align="center">keep</aspectratio>
 						<visible>Container.Content(movies) + Skin.HasSetting(showdiscart)</visible>
 						<animation effect="slide" end="-80" condition="IsEmpty(Window(home).Property(Set.Movie.10.Art(discart)))">Conditional</animation>
+						<animation effect="rotate" center="auto" reversible="false" start="360" end="0" time="20000" loop="true" condition="Skin.HasSetting(RotateDiscArt)">Conditional</animation>
 					</control>	
 					<control type="image">
 						<posx>360</posx>
@@ -180,6 +182,7 @@
 						<visible>Container.Content(movies) + Skin.HasSetting(showdiscart)</visible>
 						<animation effect="slide" end="-70" condition="IsEmpty(Window(home).Property(Set.Movie.10.Art(discart)))">Conditional</animation>
 						<animation effect="slide" end="-140" condition="IsEmpty(Window(home).Property(Set.Movie.9.Art(discart)))">Conditional</animation>
+						<animation effect="rotate" center="auto" reversible="false" start="360" end="0" time="20000" loop="true" condition="Skin.HasSetting(RotateDiscArt)">Conditional</animation>
 					</control>	
 					<control type="image">
 						<posx>480</posx>
@@ -192,6 +195,7 @@
 						<animation effect="slide" end="-60" condition="IsEmpty(Window(home).Property(Set.Movie.10.Art(discart)))">Conditional</animation>
 						<animation effect="slide" end="-120" condition="IsEmpty(Window(home).Property(Set.Movie.9.Art(discart)))">Conditional</animation>
 						<animation effect="slide" end="-180" condition="IsEmpty(Window(home).Property(Set.Movie.8.Art(discart)))">Conditional</animation>
+						<animation effect="rotate" center="auto" reversible="false" start="360" end="0" time="20000" loop="true" condition="Skin.HasSetting(RotateDiscArt)">Conditional</animation>
 					</control>	
 					<control type="image">
 						<posx>600</posx>
@@ -205,6 +209,7 @@
 						<animation effect="slide" end="-100" condition="IsEmpty(Window(home).Property(Set.Movie.9.Art(discart)))">Conditional</animation>
 						<animation effect="slide" end="-150" condition="IsEmpty(Window(home).Property(Set.Movie.8.Art(discart)))">Conditional</animation>
 						<animation effect="slide" end="-200" condition="IsEmpty(Window(home).Property(Set.Movie.7.Art(discart)))">Conditional</animation>
+						<animation effect="rotate" center="auto" reversible="false" start="360" end="0" time="20000" loop="true" condition="Skin.HasSetting(RotateDiscArt)">Conditional</animation>
 					</control>	
 					<control type="image">
 						<posx>720</posx>
@@ -219,6 +224,7 @@
 						<animation effect="slide" end="-120" condition="IsEmpty(Window(home).Property(Set.Movie.8.Art(discart)))">Conditional</animation>
 						<animation effect="slide" end="-160" condition="IsEmpty(Window(home).Property(Set.Movie.7.Art(discart)))">Conditional</animation>
 						<animation effect="slide" end="-200" condition="IsEmpty(Window(home).Property(Set.Movie.6.Art(discart)))">Conditional</animation>
+						<animation effect="rotate" center="auto" reversible="false" start="360" end="0" time="20000" loop="true" condition="Skin.HasSetting(RotateDiscArt)">Conditional</animation>
 					</control>
 					<control type="image">
 						<posx>840</posx>
@@ -233,6 +239,7 @@
 						<animation effect="slide" end="-90" condition="IsEmpty(Window(home).Property(Set.Movie.8.Art(discart)))">Conditional</animation>
 						<animation effect="slide" end="-120" condition="IsEmpty(Window(home).Property(Set.Movie.7.Art(discart)))">Conditional</animation>
 						<animation effect="slide" end="-150" condition="IsEmpty(Window(home).Property(Set.Movie.6.Art(discart)))">Conditional</animation>
+						<animation effect="rotate" center="auto" reversible="false" start="360" end="0" time="20000" loop="true" condition="Skin.HasSetting(RotateDiscArt)">Conditional</animation>
 					</control>
 					<control type="image">
 						<posx>960</posx>
@@ -247,6 +254,7 @@
 						<animation effect="slide" end="-60" condition="IsEmpty(Window(home).Property(Set.Movie.8.Art(discart)))">Conditional</animation>
 						<animation effect="slide" end="-80" condition="IsEmpty(Window(home).Property(Set.Movie.7.Art(discart)))">Conditional</animation>
 						<animation effect="slide" end="-100" condition="IsEmpty(Window(home).Property(Set.Movie.6.Art(discart)))">Conditional</animation>
+						<animation effect="rotate" center="auto" reversible="false" start="360" end="0" time="20000" loop="true" condition="Skin.HasSetting(RotateDiscArt)">Conditional</animation>
 					</control>
 					<control type="image">
 						<posx>1080</posx>
@@ -261,6 +269,7 @@
 						<animation effect="slide" end="-30" condition="IsEmpty(Window(home).Property(Set.Movie.8.Art(discart)))">Conditional</animation>
 						<animation effect="slide" end="-40" condition="IsEmpty(Window(home).Property(Set.Movie.7.Art(discart)))">Conditional</animation>
 						<animation effect="slide" end="-50" condition="IsEmpty(Window(home).Property(Set.Movie.6.Art(discart)))">Conditional</animation>
+						<animation effect="rotate" center="auto" reversible="false" start="360" end="0" time="20000" loop="true" condition="Skin.HasSetting(RotateDiscArt)">Conditional</animation>
 					</control>
 					<control type="image">
 						<posx>1200</posx>
@@ -270,6 +279,7 @@
 						<texture background="true">$INFO[Window(home).Property(Set.Movie.1.Art(discart))]</texture>
 						<aspectratio align="center">keep</aspectratio>
 						<visible>Container.Content(movies) + Skin.HasSetting(showdiscart)</visible>
+						<animation effect="rotate" center="auto" reversible="false" start="360" end="0" time="20000" loop="true" condition="Skin.HasSetting(RotateDiscArt)">Conditional</animation>
 					</control>									
 				</control>
     			<!-- LIST BANNER -->
@@ -339,7 +349,7 @@
                             <posx>0</posx>
                             <posy>114</posy>
                             <width>565</width>
-                            <height>184</height>
+                            <height>180</height>
                             <label>$INFO[ListItem.Plot]</label>
                             <align>justify</align>
                             <textcolor>cceeeeee</textcolor>
@@ -352,7 +362,7 @@
                             <posx>0</posx>
                             <posy>114</posy>
                             <width>565</width>
-                            <height>184</height>
+                            <height>180</height>
                             <label>$INFO[ListItem.Plot]</label>
                             <align>justify</align>
                             <textcolor>cceeeeee</textcolor>
@@ -472,13 +482,13 @@
                 <!-- CD ART -->
                 <control type="image">
                     <posx>45</posx>
-                    <posy>-188</posy>
+                    <posy>-172</posy>
                     <width>303</width>
                     <height>303</height>
                     <texture background="true">$INFO[ListItem.Art(discart)]</texture>
                     <aspectratio align="center">keep</aspectratio>
                     <visible>Container.Content(movies) + Skin.HasSetting(showdiscart)</visible>
-                    <!--<animation effect="slide" start="0" end="0,-250" time="500" delay="250" reversible="false" condition="![Container(52).OnNext | Container(52).OnPrevious]">Conditional</animation>-->
+                    <animation effect="rotate" center="auto" reversible="false" start="360" end="0" time="20000" loop="true" condition="Skin.HasSetting(RotateDiscArt)">Conditional</animation>
                     <fadetime>200</fadetime>
                 </control>
                 

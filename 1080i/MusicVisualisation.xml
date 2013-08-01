@@ -270,7 +270,7 @@
 							<align>justify</align>
 							<textcolor>mod-infotags</textcolor>
 							<autoscroll delay="13000" time="3000" repeat="13000" />
-							<font>Font-Alaska-S25-NC</font>
+							<font>Font-Condensed-S26</font>
 						</control>
 						<control type="label">
 							<posx>0</posx>
@@ -566,9 +566,9 @@
 								<control type="textbox">
 									<description>Plot</description>
 									<posx>0</posx>
-									<posy>80</posy>
+									<posy>88</posy>
 									<width>840</width>
-									<height>120</height>
+									<height>100</height>
 									<label>$INFO[MusicPlayer.Property(Album_Description),[B]$LOCALIZE[41325][/B][CR],[CR][CR]]$INFO[MusicPlayer.Property(Artist_Description),[B]$LOCALIZE[21887][/B][CR],]</label>
 									<align>justify</align>
 									<textcolor>mod-infotags</textcolor>

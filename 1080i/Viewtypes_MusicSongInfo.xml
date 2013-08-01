@@ -248,9 +248,9 @@
 						<control type="textbox">
 							<description>Plot</description>
 							<posx>0</posx>
-							<posy>77</posy>
+							<posy>84</posy>
 							<width>796</width>
-							<height>184</height>
+							<height>170</height>
 							<label>$VAR[MusicPlotBox]</label>
 							<align>justify</align>
 							<textcolor>mod-infotags-alt2</textcolor>

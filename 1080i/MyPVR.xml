@@ -13,11 +13,17 @@
                 <ondown>50</ondown>
                 <orientation>horizontal</orientation>
                 <visible allowhiddenfocus="true">ControlGroup(9001).HasFocus</visible>
+                <animation type="WindowOpen" reversible="false">
+					<effect type="slide" start="-650,0" end="0,0" time="300" delay="0" tween="cubic" easing="inout" />
+				</animation>
                 <animation type="Visible" reversible="false">
 					<effect type="slide" start="0,0" end="650,0" time="300" delay="100" tween="cubic" easing="inout" />
 				</animation>
 				<animation type="Hidden" reversible="false">
 					<effect type="slide" start="650,0" end="0,0" time="300" tween="cubic" easing="inout" />
+				</animation>
+				<animation type="WindowClose" reversible="false">
+					<effect type="slide" start="0,0" end="-650,0" time="300" tween="cubic" easing="inout" />
 				</animation>
                 <include>listEndAnimation</include>
                 <posy>24</posy>

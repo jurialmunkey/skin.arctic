@@ -136,7 +136,7 @@
 							<posy>32</posy>
 							<width>660</width>
 							<label>$INFO[ListItem.Year]$INFO[ListItem.Genre, • ,]</label>
-							<font>Font-Alaska-S25-BL</font>
+							<font>Font-Alaska-S25-L</font>
 							<textcolor>mod-infotags-alt2</textcolor>
 							<scroll>false</scroll>
 							<align>left</align>
@@ -146,9 +146,9 @@
 							<control type="textbox">
 								<description>Plot</description>
 								<posx>0</posx>
-								<posy>70</posy>
+								<posy>65</posy>
 								<width>660</width>
-								<height>130</height>
+								<height>136</height>
 								<label>$INFO[ListItem.Property(Album_Description)]</label>
 								<align>justify</align>
 								<textcolor>mod-infotags-alt2</textcolor>
@@ -159,9 +159,9 @@
 							<control type="textbox">
 								<description>Plot</description>
 								<posx>0</posx>
-								<posy>70</posy>
+								<posy>65</posy>
 								<width>660</width>
-								<height>130</height>
+								<height>136</height>
 								<label>$INFO[ListItem.Property(Artist_Description)]</label>
 								<align>justify</align>
 								<textcolor>mod-infotags-alt2</textcolor>
@@ -213,7 +213,7 @@
 							<posy>32</posy>
 							<width>665</width>
 							<label>$INFO[ListItem.Year]$INFO[ListItem.Genre, • ,]</label>
-							<font>Font-Alaska-S25-BL</font>
+							<font>Font-Alaska-S25-L</font>
 							<textcolor>mod-infotags-alt2</textcolor>
 							<scroll>false</scroll>
 							<align>left</align>
@@ -223,9 +223,9 @@
 							<control type="textbox">
 								<description>Plot</description>
 								<posx>0</posx>
-								<posy>70</posy>
+								<posy>65</posy>
 								<width>660</width>
-								<height>130</height>
+								<height>136</height>
 								<label>$INFO[ListItem.Property(Album_Description)]</label>
 								<align>justify</align>
 								<textcolor>mod-infotags-alt2</textcolor>
@@ -236,9 +236,9 @@
 							<control type="textbox">
 								<description>Plot</description>
 								<posx>0</posx>
-								<posy>70</posy>
+								<posy>65</posy>
 								<width>660</width>
-								<height>130</height>
+								<height>136</height>
 								<label>$INFO[ListItem.Property(Artist_Description)]</label>
 								<align>justify</align>
 								<textcolor>mod-infotags-alt2</textcolor>

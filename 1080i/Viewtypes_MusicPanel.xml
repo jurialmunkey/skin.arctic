@@ -62,7 +62,7 @@
 				</control>
 				<control type="group">
 					<posx>1186</posx>
-					<posy>340</posy>
+					<posy>354</posy>
 					<control type="group">
 						<visible>![Container(51).OnNext | Container(51).OnPrevious] + Container.Content(Albums)</visible>
 						<animation effect="fade" end="100" start="0" time="500" delay="0" reversible="false">Visible</animation>
@@ -71,7 +71,7 @@
 							<posx>24</posx>
 							<posy>0</posy>
 							<width>293</width>
-							<height>124</height>
+							<height>100</height>
 							<label>$VAR[MusicTracklistVar]</label>
 							<align>justify</align>
 							<aligny>top</aligny>
@@ -85,7 +85,7 @@
 							<posx>317</posx>
 							<posy>0</posy>
 							<width>293</width>
-							<height>124</height>
+							<height>100</height>
 							<label>$VAR[MusicTracklistAltVar]</label>
 							<align>justify</align>
 							<aligny>top</aligny>
@@ -99,7 +99,7 @@
 							<posx>24</posx>
 							<posy>0</posy>
 							<width>586</width>
-							<height>124</height>
+							<height>100</height>
 							<label>$VAR[MusicTracklistInfoVar]</label>
 							<align>justify</align>
 							<textcolor>mod-infotags-alt</textcolor>
@@ -110,7 +110,7 @@
 						<posx>24</posx>
 						<posy>0</posy>
 						<width>586</width>
-						<height>124</height>
+						<height>100</height>
 						<label>$INFO[ListItem.Property(Artist_Description)]</label>
 						<font>Font-Alaska-S25-NC</font>
 						<textcolor>mod-infotags-alt</textcolor>

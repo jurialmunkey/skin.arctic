@@ -213,7 +213,7 @@
 				<visible>!Skin.HasSetting(musicfanart.showcover)</visible>
 				<control type="label">
 					<posx>24</posx>
-					<posy>24</posy>
+					<posy>18</posy>
 					<width>690</width>
 					<label>$INFO[ListItem.Album]</label>
 					<font>Font-Alaska-S32-BL</font>
@@ -224,7 +224,7 @@
 				</control>
 				<control type="label">
 					<posx>24</posx>
-					<posy>24</posy>
+					<posy>18</posy>
 					<width min="50" max="690">auto</width>
 					<label>$INFO[ListItem.Label]</label>
 					<font>Font-Alaska-S32-BL</font>
@@ -239,7 +239,7 @@
 					<control type="label">
 						<description>Tracks</description>
 						<posx>24</posx>
-						<posy>74</posy>
+						<posy>58</posy>
 						<width>330</width>
 						<height>130</height>
 						<label>$VAR[MusicTracklistVar]</label>
@@ -253,7 +253,7 @@
 					<control type="label">
 						<description>Tracks Right</description>
 						<posx>400</posx>
-						<posy>74</posy>
+						<posy>58</posy>
 						<width>330</width>
 						<height>130</height>
 						<label>$VAR[MusicTracklistAltVar]</label>
@@ -267,9 +267,9 @@
 					<control type="textbox">
 						<description>Plot</description>
 						<posx>24</posx>
-						<posy>67</posy>
+						<posy>58</posy>
 						<width>770</width>
-						<height>154</height>
+						<height>170</height>
 						<label>$VAR[MusicTracklistInfoVar]</label>
 						<align>justify</align>
 						<textcolor>Mod_Tags_Light</textcolor>
@@ -278,9 +278,9 @@
 				</control>
 				<control type="textbox">
 					<posx>24</posx>
-					<posy>67</posy>
+					<posy>58</posy>
 					<width>770</width>
-					<height>154</height>
+					<height>170</height>
 					<label>$INFO[ListItem.Property(Artist_Description)]</label>
 					<font>Font-Alaska-S25-NC</font>
 					<textcolor>Mod_Tags_Light</textcolor>

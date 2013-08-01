@@ -26,18 +26,23 @@
                 <onright>Back</onright>
                 <onup>9000</onup>
                 <ondown>9000</ondown>
-                <control type="togglebutton" id="1">
+                <control type="radiobutton" id="1">
+                    <description>Master mode button</description>
+                    <include>ViewOptions.Button2</include>
+                    <label>$LOCALIZE[41361]</label>
+                    <onclick>xbmc.mastermode</onclick>
+                    <textureradiofocus>windows/home/icons/keys.png</textureradiofocus>
+					<textureradionofocus>windows/home/icons/keys.png</textureradionofocus>
+                    <visible>System.HasLocks + System.Loggedon + System.IsMaster</visible>
+                </control>
+                <control type="radiobutton" id="16">
                     <description>Master mode button</description>
                     <include>ViewOptions.Button2</include>
                     <label>$LOCALIZE[41360]</label>
-                    <altlabel>$LOCALIZE[41361]</altlabel>
                     <onclick>xbmc.mastermode</onclick>
-                    <usealttexture>System.IsMaster</usealttexture>
-                    <texturefocus border="70,2,2,2">dialogs/options/buttons/lock-fo.png</texturefocus>
-                    <texturenofocus border="70,2,2,2">dialogs/options/buttons/lock-nf.png</texturenofocus>
-                    <alttexturefocus border="70,2,2,2">dialogs/options/buttons/nolock-fo.png</alttexturefocus>
-                    <alttexturenofocus border="70,2,2,2">dialogs/options/buttons/nolock-nf.png</alttexturenofocus>
-                    <visible>System.HasLocks + System.Loggedon</visible>
+                    <textureradiofocus>windows/home/icons/keys.png</textureradiofocus>
+					<textureradionofocus>windows/home/icons/keys.png</textureradionofocus>
+                    <visible>System.HasLocks + System.Loggedon + !System.IsMaster</visible>
                 </control>
                 <control type="radiobutton" id="2">
                     <description>System Info button</description>

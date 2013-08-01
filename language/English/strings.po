@@ -1183,3 +1183,7 @@ msgstr ""
 msgctxt "#42433"
 msgid "Rotate discart"
 msgstr ""
+
+msgctxt "#42434"
+msgid "Show in-progress indicators"
+msgstr ""

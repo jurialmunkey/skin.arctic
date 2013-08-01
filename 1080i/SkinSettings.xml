@@ -224,7 +224,7 @@
 							<onclick>Skin.ToggleSetting(OSDVisualation.Background)</onclick>
 							<label>42408</label>
 						</control>
-						<control type="radiobutton" id="1012">
+						<!--<control type="radiobutton" id="1012">
 							<width>1210</width>
 							<include>SettingsCategoryRadioButtonVars</include>
 							<selected>!Skin.HasSetting(SpinControl.Default)</selected>
@@ -246,7 +246,7 @@
 							<onclick>Skin.SetFile(StartupPlaylist.Path,.m3u|.xsp,special://profile/playlists/music/)</onclick>
 							<enable>Skin.HasSetting(StartupPlaylist)</enable>
 							<animation effect="fade" start="100" end="42" time="0" condition="!Control.IsEnabled(1009)">Conditional</animation>
-						</control>
+						</control>-->
 						<control type="radiobutton" id="1007">
 							<width>1210</width>
 							<include>SettingsCategoryRadioButtonVars</include>
@@ -265,6 +265,14 @@
 							<onup>1007</onup>
 							<ondown>1001</ondown>
 						</control>
+						<control type="radiobutton" id="1014">
+							<width>1210</width>
+							<include>SettingsCategoryRadioButtonVars</include>
+							<selected>Skin.HasSetting(PreferLandscapeArt)</selected>
+							<onclick>Skin.ToggleSetting(PreferLandscapeArt)</onclick>
+							<label>42416</label>
+						</control>
+						
 					</control>
 			
 					<!-- ============= -->  
@@ -518,12 +526,12 @@
 							<onclick>Skin.ToggleSetting(hide.commonclock)</onclick>
 							<label>41270</label>
 						</control>
-						<control type="radiobutton" id="3008">
+						<control type="radiobutton" id="3007">
 							<width>1210</width>
 							<include>SettingsCategoryRadioButtonVars</include>
-							<selected>Skin.HasSetting(PreferLandscapeArt)</selected>
-							<onclick>Skin.ToggleSetting(PreferLandscapeArt)</onclick>
-							<label>42416</label>
+							<selected>!Skin.HasSetting(HideProgressOverlay)</selected>
+							<onclick>Skin.ToggleSetting(HideProgressOverlay)</onclick>
+							<label>42434</label>
 						</control>
 						<control type="button" id="3009">
 							<width>1210</width>

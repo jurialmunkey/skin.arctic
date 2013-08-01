@@ -465,7 +465,7 @@
 								<align>justify</align>
 								<textcolor>mod-infotags-alt2</textcolor>
 								<autoscroll delay="13000" time="3000" repeat="13000" />
-								<font>Font-Condensed-S25</font>
+								<font>Font-Alaska-S25-NC</font>
 							</control>
 						</control>
 					</control>

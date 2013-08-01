@@ -36,7 +36,7 @@
                     <posy>472</posy>
                     <control type="label">
                         <posx>24</posx>
-                        <posy>30</posy>
+                        <posy>27</posy>
                         <width>790</width>
                         <label>$INFO[ListItem.Label]</label>
                         <font>Font-Alaska-S32-BL</font>
@@ -46,9 +46,9 @@
                     </control>
                     <control type="textbox">
                         <posx>24</posx>
-                        <posy>72</posy>
+                        <posy>64</posy>
                         <width>790</width>
-                        <height>152</height>
+                        <height>170</height>
                         <label>$INFO[ListItem.Plot]</label>
                         <font>Font-Alaska-S25-NC</font>
                         <textcolor>Mod_Tags</textcolor>
@@ -58,9 +58,9 @@
                     </control>
                     <control type="textbox">
                         <posx>24</posx>
-                        <posy>72</posy>
+                        <posy>64</posy>
                         <width>790</width>
-                        <height>152</height>
+                        <height>170</height>
                         <font>Font-Alaska-S25-NC</font>
                         <textcolor>Mod_Tags</textcolor>
                         <align>justify</align>

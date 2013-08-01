@@ -151,7 +151,7 @@
 				</control>
 				<control type="label">
 					<posx>0</posx>
-					<posy>38</posy>
+					<posy>32</posy>
 					<width>870</width>
 					<label>$VAR[UnderTitle]</label>
 					<font>Font-Alaska-S25-L</font>
@@ -165,9 +165,9 @@
 					<control type="textbox">
 						<description>Plot</description>
 						<posx>0</posx>
-						<posy>80</posy>
+						<posy>82</posy>
 						<width>1038</width>
-						<height>188</height>
+						<height>170</height>
 						<label>$INFO[ListItem.Plot]</label>
 						<align>justify</align>
 						<textcolor>mod-infotags-alt2</textcolor>
@@ -545,9 +545,9 @@
                     <control type="textbox">
 						<description>Plot</description>
 						<posx>524</posx>
-						<posy>580</posy>
+						<posy>582</posy>
 						<width>1038</width>
-						<height>180</height>
+						<height>170</height>
 						<align>justify</align>
 						<textcolor>mod-infotags-alt2</textcolor>
 						<font>Font-Alaska-S25-NC</font>

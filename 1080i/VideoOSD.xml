@@ -375,7 +375,7 @@
                         <width>100</width>
                         <texturefocus>osd/fullscreen/buttons/epg-fo.png</texturefocus>
                         <texturenofocus>osd/fullscreen/buttons/epg-nofo-dark.png</texturenofocus>
-                        <!--<onclick condition="!Skin.HasSetting(PVR.OSD.Reroute)">ActivateWindow(PVROSDGuide)</onclick>-->
+                        <!--<onclick>ActivateWindow(PVROSDGuide)</onclick>-->
                         <onclick>ActivateWindowAndFocus(MyPVR, 31,0, 10,0)</onclick>
                         <onleft>10</onleft>
                         <onright>9</onright>

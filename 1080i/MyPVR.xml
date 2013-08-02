@@ -26,24 +26,24 @@
 					<effect type="slide" start="0,0" end="-650,0" time="300" tween="cubic" easing="inout" />
 				</animation>
                 <include>listEndAnimation</include>
-                <posy>24</posy>
+                <posy>210</posy>
 				<control type="group">
 					<posy>-4</posy>
 					<control type="image">
 						<posx>-40</posx>
 						<posy>-10</posy>
 						<width>452</width>
-						<height>1060</height>
+						<height>702</height>
 						<texture border="40">arctic/common/border-20.png</texture>
 					</control>
 					<control type="image">
 						<posx>-20</posx>
 						<posy>10</posy>
 						<width>412</width>
-						<height>1020</height>
+						<height>662</height>
 						<texture border="15">arctic/common/panel.png</texture>
 					</control>
-					<include>ViewOptions.Panel.NowPlaying</include>
+					<!--<include>ViewOptions.Panel.NowPlaying</include>-->
 				</control>
                 <control type="image">
                     <posx>0</posx>

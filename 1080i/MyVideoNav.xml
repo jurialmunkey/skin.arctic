@@ -576,7 +576,7 @@
                         <textureradiofocus>buttons/radio/options-radio-button-fo.png</textureradiofocus>
                         <textureradionofocus>buttons/radio/options-radio-button-nf.png</textureradionofocus>
                         <radioposx>-19</radioposx>
-                        <visible>!Container.Content(genres) + !Container.Content(years) + !Container.Content(actors) + !Container.Content(directors) + !Container.Content(studios)</visible>
+                        <visible>Container.Content(episodes) | Container.Content(Seasons) | Container.Content(tvshows) | Container.Content(movies)  | Container.Content(Sets)</visible>
                     </control>
                     <!-- Wide Banner -->
                     <control type="radiobutton" id="207">

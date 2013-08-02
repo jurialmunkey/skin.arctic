@@ -57,6 +57,7 @@
 		<color name="mod-shadow">55ffffff</color>
 		<color name="mod-osd">99ffffff</color>
 		<color name="mod-osdbar">ffcccccc</color>
+		<color name="mod-osdbar-dark">f0ffffff</color>
 		
 		<color name="Mod_Tags">ff404040</color>
 		<color name="Mod_Tags_Alt">ffeeeeee</color>

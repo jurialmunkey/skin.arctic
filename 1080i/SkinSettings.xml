@@ -265,14 +265,21 @@
 							<onup>1007</onup>
 							<ondown>1001</ondown>
 						</control>
+						
 						<control type="radiobutton" id="1014">
+							<width>1210</width>
+							<include>SettingsCategoryRadioButtonVars</include>
+							<selected>Skin.HasSetting(CDArt.Enabled)</selected>
+							<onclick>Skin.ToggleSetting(CDArt.Enabled)</onclick>
+							<label>$LOCALIZE[41107]</label>
+						</control>
+						<control type="radiobutton" id="1015">
 							<width>1210</width>
 							<include>SettingsCategoryRadioButtonVars</include>
 							<selected>Skin.HasSetting(PreferLandscapeArt)</selected>
 							<onclick>Skin.ToggleSetting(PreferLandscapeArt)</onclick>
 							<label>42416</label>
 						</control>
-						
 					</control>
 			
 					<!-- ============= -->  
@@ -586,13 +593,7 @@
 							<visible>Skin.HasSetting(ArtistSlideShow.Enabled)</visible>
 							<label> • $LOCALIZE[41105]</label>
 						</control>
-						<control type="radiobutton" id="8007">
-							<width>1210</width>
-							<include>SettingsCategoryRadioButtonVars</include>
-							<selected>Skin.HasSetting(CDArt.Enabled)</selected>
-							<onclick>Skin.ToggleSetting(CDArt.Enabled)</onclick>
-							<label>$LOCALIZE[41107]</label>
-						</control>
+						
 						<control type="radiobutton" id="8008">
 							<width>1210</width>
 							<include>SettingsCategoryRadioButtonVars</include>
@@ -620,6 +621,14 @@
 							<selected>Skin.HasSetting(videoosd.clearlogo)</selected>
 							<onclick>Skin.ToggleSetting(videoosd.clearlogo)</onclick>
 							<label>42428</label>
+						</control>
+						<control type="radiobutton" id="8012">
+							<width>1210</width>
+							<include>SettingsCategoryRadioButtonVars</include>
+							<selected>!Skin.HasSetting(osd.darkpanel)</selected>
+							<onclick>Skin.ToggleSetting(osd.darkpanel)</onclick>
+							<onclick>ReloadSkin()</onclick>
+							<label>42435</label>
 						</control>
 						<control type="radiobutton" id="8006">
 							<width>1210</width>

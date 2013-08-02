@@ -27,6 +27,7 @@
     <include file="Viewtypes_Landscape.xml" />			<!-- (62) -->
     <include file="Viewtypes_InfoWall.xml" />			<!-- (63) -->
     <include file="Viewtypes_PosterPanel.xml" />		<!-- (64) -->
+    <include file="Viewtypes_Thumbnail.xml" />			<!-- (500) -->
     
 
     <include file="Viewtypes_MusicList.xml" />
@@ -58,6 +59,7 @@
         <include>Viewtype-Landscape</include>			<!-- (62) -->
         <include>Viewtype-InfoWall</include>			<!-- (63) -->
         <include>Viewtype-PosterPanel</include>			<!-- (64) -->
+        <include>Viewtype-Thumbnail</include>			<!-- (500) -->
         
         <include condition="Skin.HasSetting(NextAired.Enabled)">NextAiredInfo</include>
     </include>

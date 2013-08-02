@@ -610,7 +610,7 @@
     
     <include name="PVRMenuButtonVars">
         <posx>0</posx>
-        <width>380</width>
+        <width>480</width>
         <height>107</height>
         <font>Font-Alaska-S29-BL</font>
         <textoffsetx>110</textoffsetx>

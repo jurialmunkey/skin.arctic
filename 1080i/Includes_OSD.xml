@@ -15,7 +15,7 @@
         <posy>13</posy>
         <width>150</width>
         <font>Font-Alaska-S28-L</font>
-        <textcolor>mod-infotags-d</textcolor>
+        <textcolor>$VAR[osd.text.dark]</textcolor>
         <shadowcolor>mod-shadow</shadowcolor>
         <align>left</align>
         <scroll>false</scroll>
@@ -77,7 +77,7 @@
 				<label>$INFO[Player.Chapter,$LOCALIZE[21396] , / ]$INFO[Player.ChapterCount]</label>
 				<font>Font-Alaska-S28-L</font>
 				<shadowcolor>33ffffff</shadowcolor>
-				<textcolor>mod-infotags-d</textcolor>
+				<textcolor>$VAR[osd.text.dark]</textcolor>
 				<align>center</align>
 				<scroll>false</scroll>
 				<visible>!Skin.HasSetting(videoosd.longbar)</visible>
@@ -89,7 +89,7 @@
 				<label>$INFO[Player.Chapter,$LOCALIZE[21396] , / ]$INFO[Player.ChapterCount]</label>
 				<font>Font-Alaska-S28-L</font>
 				<shadowcolor>33ffffff</shadowcolor>
-				<textcolor>mod-infotags-d</textcolor>
+				<textcolor>$VAR[osd.text.dark]</textcolor>
 				<align>left</align>
 				<scroll>false</scroll>
 				<visible>Skin.HasSetting(videoosd.longbar)</visible>
@@ -119,7 +119,7 @@
                 <texture border="25">arctic/common/whitepanel8.png</texture>
                 <aspectratio>stretch</aspectratio>
                 <colordiffuse>mod-osdbar</colordiffuse>
-                <visible>Window.IsActive(fullscreenvideo) + Skin.HasSetting(videoosd.longbar)</visible>
+                <visible>Window.IsActive(fullscreenvideo) + Skin.HasSetting(videoosd.longbar) + !Skin.HasSetting(osd.darkpanel)</visible>
             </control>
             <control type="image">
                 <posx>1405</posx>
@@ -132,7 +132,32 @@
                 <aspectratio>stretch</aspectratio>
                 <colordiffuse>mod-osdbar</colordiffuse>
                 <animation effect="slide" end="-205" time="300" tween="sine" easing="inout" condition="Window.IsActive(volumebar)">Conditional</animation>            
-                <visible>[Window.IsActive(fullscreenvideo) + !Skin.HasSetting(videoosd.longbar)] | Window.IsActive(visualisation)</visible>
+                <visible>[[Window.IsActive(fullscreenvideo) + !Skin.HasSetting(videoosd.longbar)] | Window.IsActive(visualisation)] + !Skin.HasSetting(osd.darkpanel)</visible>
+            </control>
+            <control type="image">
+                <posx>-300</posx>
+                <posy>-30</posy>
+                <width>2600</width>
+                <height>110</height>
+                <bordertexture border="40">arctic/common/border-20.png</bordertexture>
+                <bordersize>20</bordersize>
+                <texture border="25">arctic/common/panel.png</texture>
+                <aspectratio>stretch</aspectratio>
+                <colordiffuse>mod-osdbar-dark</colordiffuse>
+                <visible>Window.IsActive(fullscreenvideo) + Skin.HasSetting(videoosd.longbar) + Skin.HasSetting(osd.darkpanel)</visible>
+            </control>
+            <control type="image">
+                <posx>1405</posx>
+                <posy>-30</posy>
+                <width>700</width>
+                <height>110</height>
+                <bordertexture border="40">arctic/common/border-20.png</bordertexture>
+                <bordersize>20</bordersize>
+                <texture border="25">arctic/common/panel.png</texture>
+                <aspectratio>stretch</aspectratio>
+                <colordiffuse>mod-osdbar-dark</colordiffuse>
+                <animation effect="slide" end="-205" time="300" tween="sine" easing="inout" condition="Window.IsActive(volumebar)">Conditional</animation>            
+                <visible>[[Window.IsActive(fullscreenvideo) + !Skin.HasSetting(videoosd.longbar)] | Window.IsActive(visualisation)] + Skin.HasSetting(osd.darkpanel)</visible>
             </control>
             <!-- Volume Control -->
 			<control type="group">  
@@ -156,7 +181,7 @@
 						<height>78</height>
 						<label>$INFO[Player.Volume]</label>
 						<font>Font-Alaska-S28-L</font>
-						<textcolor>mod-infotags-d</textcolor>
+						<textcolor>$VAR[osd.text.dark]</textcolor>
 						<shadowcolor>33ffffff</shadowcolor>
 						<align>right</align>
 						<scroll>No</scroll>
@@ -176,7 +201,7 @@
 						<height>80</height>
 						<texture>overlays/volume/volume-back.png</texture>
 						<aspectratio align="center">keep</aspectratio>
-						<colordiffuse>mod-infotags</colordiffuse>
+						<colordiffuse>$VAR[osd.text.normal]</colordiffuse>
 					</control>
 					<control type="image">
 						<posx>-4</posx>
@@ -207,7 +232,7 @@
 					<height>78</height>
 					<label>$LOCALIZE[29802]</label>
 					<font>Font-Alaska-S28-L</font>
-					<textcolor>mod-infotags-d</textcolor>
+					<textcolor>$VAR[osd.text.dark]</textcolor>
 					<shadowcolor>33ffffff</shadowcolor>
 					<align>center</align>
 					<scroll>No</scroll>
@@ -227,6 +252,17 @@
 						<height>100</height>
 						<texture>osd/fullscreen/clock-blue.png</texture>
 						<aspectratio aligny="center">keep</aspectratio>
+						<visible>Skin.HasSetting(osd.darkpanel)</visible>
+					</control>
+					<control type="image">
+						<description>Clock image</description>
+						<posx>-80</posx>
+						<posy>-22</posy>
+						<width>100</width>
+						<height>100</height>
+						<texture>osd/fullscreen/clock-blue-dark.png</texture>
+						<aspectratio aligny="center">keep</aspectratio>
+						<visible>!Skin.HasSetting(osd.darkpanel)</visible>
 					</control>
 					<control type="label">
 						<description>Clock label</description>
@@ -235,7 +271,7 @@
 						<width>100</width>
 						<label>$INFO[System.Time(hh:mm)]</label>
 						<font>Font-Alaska-S28-L</font>
-						<textcolor>mod-infotags-d</textcolor>
+						<textcolor>$VAR[osd.text.dark]</textcolor>
 						<shadowcolor>33ffffff</shadowcolor>
 						<align>left</align>
 						<scroll>false</scroll>
@@ -253,6 +289,17 @@
 						<height>100</height>
 						<texture>osd/fullscreen/clock-green.png</texture>
 						<aspectratio aligny="center">keep</aspectratio>
+						<visible>Skin.HasSetting(osd.darkpanel)</visible>
+					</control>
+					<control type="image">
+						<description>Finish time image</description>
+						<posx>-80</posx>
+						<posy>-22</posy>
+						<width>100</width>
+						<height>100</height>
+						<texture>osd/fullscreen/clock-green-dark.png</texture>
+						<aspectratio aligny="center">keep</aspectratio>
+						<visible>!Skin.HasSetting(osd.darkpanel)</visible>
 					</control>
 					<control type="label">
 						<description>Clock label</description>
@@ -262,7 +309,7 @@
 						<label>$INFO[Player.FinishTime(hh:mm)]</label>
 						<font>Font-Alaska-S28-L</font>
 						<shadowcolor>33ffffff</shadowcolor>
-						<textcolor>mod-infotags-d</textcolor>
+						<textcolor>$VAR[osd.text.dark]</textcolor>
 						<align>left</align>
 						<scroll>false</scroll>
 					</control>
@@ -278,7 +325,7 @@
 						<label>«</label>
 						<font>Font-Alaska-S52-L</font>
 						<shadowcolor>33ffffff</shadowcolor>
-						<textcolor>mod-infotags-d</textcolor>
+						<textcolor>$VAR[osd.text.dark]</textcolor>
 						<align>right</align>
 						<scroll>false</scroll>
 						<visible>Player.Rewinding</visible>
@@ -291,7 +338,7 @@
 						<label>»</label>
 						<font>Font-Alaska-S52-L</font>
 						<shadowcolor>33ffffff</shadowcolor>
-						<textcolor>mod-infotags-d</textcolor>
+						<textcolor>$VAR[osd.text.dark]</textcolor>
 						<align>right</align>
 						<scroll>false</scroll>
 						<visible>Player.Forwarding</visible>

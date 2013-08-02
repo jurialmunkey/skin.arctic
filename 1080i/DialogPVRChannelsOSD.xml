@@ -31,6 +31,19 @@
                 <texture border="25">arctic/common/whitepanel8.png</texture>
                 <aspectratio>stretch</aspectratio>
                 <colordiffuse>mod-osdbar</colordiffuse>
+                <visible>!Skin.HasSetting(osd.darkpanel)</visible>
+            </control>
+            <control type="image">
+                <posx>-50</posx>
+				<posy>-50</posy>
+				<width>650</width>
+				<height>1180</height>
+                <bordertexture border="40">arctic/common/border-20.png</bordertexture>
+                <bordersize>20</bordersize>
+                <texture border="25">arctic/common/panel.png</texture>
+                <aspectratio>stretch</aspectratio>
+                <colordiffuse>mod-osdbar-dark</colordiffuse>
+                <visible>Skin.HasSetting(osd.darkpanel)</visible>
             </control>
             <control type="group">
                 <animation effect="fade" time="200" end="0" start="100" condition="Window.IsActive(DialogPVRGuideInfo.xml)">Conditional</animation>
@@ -42,7 +55,7 @@
                     <height>140</height>
                     <aspectratio>keep</aspectratio>
                     <texture>windows/home/icons/tv.png</texture>
-                    <colordiffuse>mod-infotags-d</colordiffuse>
+                    <colordiffuse>$VAR[osd.text.dark]</colordiffuse>
                 </control>
                 <control type="label">
                     <description>Header</description>
@@ -53,7 +66,7 @@
                     <align>left</align>
                     <label>$INFO[VideoPlayer.ChannelGroup]</label>
                     <font>Font-Alaska-S36-BL</font>
-                    <textcolor>mod-infotags-d</textcolor>
+                    <textcolor>$VAR[osd.text.dark]</textcolor>
                     <shadowcolor>33ffffff</shadowcolor>
                 </control>
                 <control type="button">
@@ -65,7 +78,7 @@
                     <align>left</align>
                     <label>$INFO[System.Date] • $INFO[System.Time]</label>
                     <font>Font-Alaska-S28-L</font>
-                    <textcolor>mod-infotags-d</textcolor>
+                    <textcolor>$VAR[osd.text.dark]</textcolor>
                     <shadowcolor>33ffffff</shadowcolor>
                 </control>
                 <control type="image">
@@ -123,8 +136,8 @@
 								<font>Font-Alaska-S45-L</font>
 								<align>right</align>
 								<label>$INFO[ListItem.ChannelNumber]</label>
-								<textcolor>mod-infotags</textcolor>
-								<selectedcolor>mod-infotags</selectedcolor>
+								<textcolor>$VAR[osd.text.normal]</textcolor>
+								<selectedcolor>$VAR[osd.text.normal]</selectedcolor>
 								<scroll>false</scroll>
 							</control>
 							<control type="label">
@@ -136,8 +149,8 @@
 								<font>Font-Alaska-S32-BL</font>
 								<align>left</align>
 								<label>$INFO[ListItem.Label]</label>
-								<textcolor>mod-infotags</textcolor>
-								<selectedcolor>mod-infotags</selectedcolor>
+								<textcolor>$VAR[osd.text.normal]</textcolor>
+								<selectedcolor>$VAR[osd.text.normal]</selectedcolor>
 								<scroll>false</scroll>
 							</control>
 							<control type="label">
@@ -149,8 +162,8 @@
 								<font>Font-Alaska-S28-L</font>
 								<align>left</align>
 								<label>$INFO[ListItem.Title]</label>
-								<textcolor>mod-infotags</textcolor>
-								<selectedcolor>mod-infotags</selectedcolor>
+								<textcolor>$VAR[osd.text.normal]</textcolor>
+								<selectedcolor>$VAR[osd.text.normal]</selectedcolor>
 								<scroll>false</scroll>
 							</control>
 							<control type="label">
@@ -162,8 +175,8 @@
 								<font>Font-Alaska-S22-L</font>
 								<align>left</align>
 								<label>$INFO[ListItem.StartTime]</label>
-								<textcolor>mod-infotags</textcolor>
-								<selectedcolor>mod-infotags</selectedcolor>
+								<textcolor>$VAR[osd.text.normal]</textcolor>
+								<selectedcolor>$VAR[osd.text.normal]</selectedcolor>
 								<scroll>false</scroll>
 							</control>
 							<control type="progress">
@@ -187,8 +200,8 @@
 								<font>Font-Alaska-S22-L</font>
 								<align>right</align>
 								<label>$INFO[ListItem.EndTime]</label>
-								<textcolor>mod-infotags</textcolor>
-								<selectedcolor>mod-infotags</selectedcolor>
+								<textcolor>$VAR[osd.text.normal]</textcolor>
+								<selectedcolor>$VAR[osd.text.normal]</selectedcolor>
 								<scroll>false</scroll>
 							</control>
 							<control type="group">
@@ -395,7 +408,7 @@
                     <width>800</width>
                     <font>Font-Alaska-S22-L</font>
                     <label>$VAR[PVRChannelsOSDItemsPageLabel]</label>
-                    <textcolor>mod-infotags-d</textcolor>
+                    <textcolor>$VAR[osd.text.dark]</textcolor>
                     <scroll>false</scroll>
                     <align>right</align>
                     <aligny>center</aligny>

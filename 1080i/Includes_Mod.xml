@@ -34,11 +34,6 @@
 		<value condition="Container.Content(artists) + !IsEmpty(ListItem.Property(Artist_Description))">$INFO[ListItem.Property(Artist_Description),[B]$LOCALIZE[21887][/B][CR],]$INFO[Window(home).Property(Artist.Album.1.Title),[CR][CR][B]$LOCALIZE[21888][/B][CR],]$INFO[Window(home).Property(Artist.Album.2.Title),[CR],]$INFO[Window(home).Property(Artist.Album.3.Title),[CR],]$INFO[Window(home).Property(Artist.Album.4.Title),[CR],]$INFO[Window(home).Property(Artist.Album.5.Title),[CR],]$INFO[Window(home).Property(Artist.Album.6.Title),[CR],]$INFO[Window(home).Property(Artist.Album.7.Title),[CR],]$INFO[Window(home).Property(Artist.Album.8.Title),[CR],]$INFO[Window(home).Property(Artist.Album.9.Title),[CR],]$INFO[Window(home).Property(Artist.Album.10.Title),[CR],]</value>
 		<value condition="Container.Content(artists) + IsEmpty(ListItem.Property(Artist_Description))">$INFO[Window(home).Property(Artist.Album.1.Title),[B]$LOCALIZE[21888][/B][CR],]$INFO[Window(home).Property(Artist.Album.2.Title),[CR],]$INFO[Window(home).Property(Artist.Album.3.Title),[CR],]$INFO[Window(home).Property(Artist.Album.4.Title),[CR],]$INFO[Window(home).Property(Artist.Album.5.Title),[CR],]$INFO[Window(home).Property(Artist.Album.6.Title),[CR],]$INFO[Window(home).Property(Artist.Album.7.Title),[CR],]$INFO[Window(home).Property(Artist.Album.8.Title),[CR],]$INFO[Window(home).Property(Artist.Album.9.Title),[CR],]$INFO[Window(home).Property(Artist.Album.10.Title),[CR],]</value>
 	</variable>
-	<variable name="covers.showcases.var">
-		<value condition="substring(ListItem.Path,videodb://1/7,left)">set</value>
-        <value condition="IntegerGreaterThan(ListItem.VideoResolution,719)">bluray</value>
-        <value>dvd</value>
-	</variable>
     <variable name="powerbutton.highlight">
 		<value condition="!StringCompare(Skin.String(homescreen.style),metro) + Control.HasFocus(85)">ff0088dd</value>
 		<value condition="StringCompare(Skin.String(homescreen.style),simple) + !Control.HasFocus(85)">mod-infotags-d</value>
@@ -2961,13 +2956,7 @@
 							<texture diffuse="views/newgloss/tile-283.png">$INFO[ListItem.Thumb]</texture>
 							<aspectratio scalediffuse="false">scale</aspectratio>
 						</control>
-						<control type="image">
-							<posx>10</posx>
-							<posy>10</posy>
-							<width>283</width>
-							<height>283</height>
-							<texture diffuse="views/newgloss/tile-283.png">views/newgloss/info-gloss.png</texture>
-						</control>
+
 						<control type="image">
 							<posx>10</posx>
 							<posy>227</posy>
@@ -3155,13 +3144,6 @@
 							<height>283</height>
 							<texture diffuse="views/newgloss/tile-283.png">$INFO[ListItem.Thumb]</texture>
 							<aspectratio scalediffuse="false">scale</aspectratio>
-						</control>
-						<control type="image">
-							<posx>10</posx>
-							<posy>10</posy>
-							<width>283</width>
-							<height>283</height>
-							<texture diffuse="views/newgloss/tile-283.png">views/newgloss/info-gloss.png</texture>
 						</control>
 						<control type="image">
 							<posx>10</posx>

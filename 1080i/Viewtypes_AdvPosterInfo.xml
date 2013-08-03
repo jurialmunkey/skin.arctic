@@ -253,15 +253,6 @@
                                     <include>overlay.visibility</include>
                                 </control>
                                 <control type="image">
-									<description>Glass</description>
-									<posx>60</posx>
-                                    <posy>70</posy>
-                                    <width>267</width>
-                                    <height>400</height>
-									<texture border="25">arctic/common/glass-ring.png</texture>
-									<visible>Skin.HasSetting(covers.showglass)</visible>
-								</control>
-                                <control type="image">
                                     <description>Border</description>
                                     <posx>50</posx>
                                     <posy>60</posy>
@@ -270,24 +261,6 @@
                                     <texture border="25">arctic/common/border.png</texture>
                                     <colordiffuse>Mod_Border</colordiffuse>
                                 </control>
-                                <control type="image">
-									<description>Case Back</description>
-									<posx>50</posx>
-                                    <posy>60</posy>
-                                    <width>287</width>
-                                    <height>420</height>
-									<texture border="100">overlays/aeon/glass.png</texture>
-									<visible>Skin.HasSetting(covers.showcases)</visible>
-								</control>
-								<control type="image">
-									<description>Case Front</description>
-									<posx>50</posx>
-                                    <posy>5</posy>
-                                    <width>287</width>
-                                    <height>475</height>
-									<texture border="20,70,20,20">overlays/aeon/dvd.png</texture>
-									<visible>Skin.HasSetting(covers.showcases)</visible>
-								</control>
                             </control>
                         </itemlayout>
                         <focusedlayout width="1344" condition="!Skin.HasSetting(old.posterinfo) + !Container.Content(episodes)">
@@ -445,15 +418,6 @@
 									<include>overlay.visibility</include>
 								</control>
 								<control type="image">
-									<description>Glass</description>
-									<posx>60</posx>
-                                    <posy>70</posy>
-                                    <width>267</width>
-                                    <height>400</height>
-									<texture border="25">arctic/common/glass-ring.png</texture>
-									<visible>Skin.HasSetting(covers.showglass)</visible>
-								</control>
-								<control type="image">
 									<description>Border</description>
 									<posx>50</posx>
 									<posy>60</posy>
@@ -461,24 +425,6 @@
 									<height>420</height>
 									<texture border="25">arctic/common/border.png</texture>
 									<colordiffuse>Mod_Border</colordiffuse>
-								</control>
-								<control type="image">
-									<description>Case Back</description>
-									<posx>50</posx>
-                                    <posy>60</posy>
-                                    <width>287</width>
-                                    <height>420</height>
-									<texture border="100">overlays/aeon/glass.png</texture>
-									<visible>Skin.HasSetting(covers.showcases)</visible>
-								</control>
-								<control type="image">
-									<description>Case Front</description>
-									<posx>50</posx>
-                                    <posy>5</posy>
-                                    <width>287</width>
-                                    <height>475</height>
-									<texture border="20,70,20,20">overlays/aeon/dvd.png</texture>
-									<visible>Skin.HasSetting(covers.showcases)</visible>
 								</control>
 							</control>
 						</focusedlayout>
@@ -554,15 +500,6 @@
                                     <include>overlay.visibility</include>
                                 </control>
                                 <control type="image">
-									<description>Glass</description>
-									<posx>60</posx>
-                                    <posy>70</posy>
-                                    <width>267</width>
-                                    <height>400</height>
-									<texture border="25">arctic/common/glass-ring.png</texture>
-									<visible>Skin.HasSetting(covers.showglass)</visible>
-								</control>
-                                <control type="image">
                                     <description>Border</description>
                                     <posx>50</posx>
                                     <posy>60</posy>
@@ -571,24 +508,6 @@
                                     <texture border="25">views/newgloss/border.png</texture>
                                     <colordiffuse>Mod_Border</colordiffuse>
                                 </control>
-                                <control type="image">
-									<description>Case Back</description>
-									<posx>50</posx>
-                                    <posy>60</posy>
-                                    <width>287</width>
-                                    <height>420</height>
-									<texture border="100">overlays/aeon/glass.png</texture>
-									<visible>Skin.HasSetting(covers.showcases)</visible>
-								</control>
-								<control type="image">
-									<description>Case Front</description>
-									<posx>50</posx>
-                                    <posy>5</posy>
-                                    <width>287</width>
-                                    <height>475</height>
-									<texture border="20,70,20,20">overlays/aeon/dvd.png</texture>
-									<visible>Skin.HasSetting(covers.showcases)</visible>
-								</control>
                             </control>
                         </focusedlayout>
 

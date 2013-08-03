@@ -45,14 +45,6 @@
 							<include>overlay.visibility</include>
 						</control> 
 						<control type="image">
-                            <posx>10</posx>
-							<posy>10</posy>
-							<width>414</width>
-							<height>232</height>
-                            <texture border="25">arctic/common/glass-ring.png</texture>
-                            <visible>Skin.HasSetting(covers.showglass)</visible>
-                        </control>
-						<control type="image">
 							<description>Border</description>
 							<posx>0</posx>
 							<posy>0</posy>
@@ -90,14 +82,6 @@
 							<aspect>keepaspect</aspect>
 							<include>overlay.visibility</include>
 						</control> 
-						<control type="image">
-                            <posx>10</posx>
-							<posy>10</posy>
-							<width>828</width>
-							<height>464</height>
-                            <texture border="25">arctic/common/glass-ring.png</texture>
-                            <visible>Skin.HasSetting(covers.showglass)</visible>
-                        </control>
 						<control type="image">
 							<description>Border</description>
 							<posx>0</posx>

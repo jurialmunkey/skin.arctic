@@ -81,7 +81,7 @@
 				<posy>964</posy>
 				<width>120</width>
 				<height>90</height>
-				<texture>windows/home/icons/games.png</texture>
+				<texture>special://skin/extras/icons/games.png</texture>
 				<colordiffuse>Mod_Tags_Alt</colordiffuse>
 			</control>
 			<control type="label">

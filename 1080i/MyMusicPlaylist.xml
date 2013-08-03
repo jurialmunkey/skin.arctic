@@ -91,20 +91,20 @@
 					<item id="1">
 						<description>View Mode</description>
 						<label>$INFO[Container.ViewMode]</label>
-						<icon>windows/home/icons/config.png</icon>
+						<icon>special://skin/extras/icons/config.png</icon>
 						<onclick>setfocus(9223)</onclick>
 						<visible>true</visible>
 					</item>
 					<item id="2">
 						<description>Shuffle On</description>
-						<icon>windows/home/icons/yes.png</icon>
+						<icon>special://skin/extras/icons/yes.png</icon>
 						<label>191</label>
 						<onclick>SendClick(20)</onclick>
 						<visible>SubString(Control.GetLabel(20),*)</visible>
 					</item>
 					<item id="3">
 						<description>Shuffle Off</description>
-						<icon>windows/home/icons/no.png</icon>
+						<icon>special://skin/extras/icons/no.png</icon>
 						<label>191</label>
 						<onclick>SendClick(20)</onclick>
 						<visible>!SubString(Control.GetLabel(20),*)</visible>
@@ -113,19 +113,19 @@
 						<description>Repeat</description>
 						<label>$INFO[Control.GetLabel(26)]</label>
 						<onclick>SendClick(26)</onclick>
-						<icon>windows/home/icons/arrows.png</icon>
+						<icon>special://skin/extras/icons/arrows.png</icon>
 					</item>
 					<item id="5">
 						<description>Save</description>
 						<label>190</label>
 						<onclick>SendClick(21)</onclick>
-						<icon>windows/home/icons/downloads.png</icon>
+						<icon>special://skin/extras/icons/downloads.png</icon>
 					</item>
 					<item id="6">
 						<description>Clear</description>
 						<label>192</label>
 						<onclick>SendClick(22)</onclick>
-						<icon>windows/home/icons/downloads2.png</icon>
+						<icon>special://skin/extras/icons/downloads2.png</icon>
 					</item>
 				</content>
 			</control>

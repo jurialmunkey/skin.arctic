@@ -84,7 +84,7 @@
 					<item id="1">
 						<description>View Mode</description>
 						<label>$INFO[Container.ViewMode]</label>
-						<icon>windows/home/icons/config.png</icon>
+						<icon>special://skin/extras/icons/config.png</icon>
 						<onclick>setfocus(9223)</onclick>
 						<visible>true</visible>
 					</item>
@@ -92,25 +92,25 @@
 						<description>View Options</description>
 						<label>$LOCALIZE[41620]</label>
 						<onclick>setfocus(9222)</onclick>
-						<icon>windows/home/icons/config2.png</icon>
+						<icon>special://skin/extras/icons/config2.png</icon>
 						<visible>true</visible>
 					</item>
 					<item id="3">
 						<description>Sort</description>
-						<icon>windows/home/icons/epg.png</icon>
+						<icon>special://skin/extras/icons/epg.png</icon>
 						<label>$INFO[Container.SortMethod]</label>
 						<onclick>SendClick(3)</onclick>
 					</item>
 					<item id="4">
 						<description>Ascending</description>
-						<icon>windows/home/icons/thumbup.png</icon>
+						<icon>special://skin/extras/icons/thumbup.png</icon>
 						<label>584</label>
 						<onclick>SendClick(4)</onclick>
 						<visible>StringCompare(Control.GetLabel(4),$LOCALIZE[584])</visible>
 					</item>
 					<item id="5">
 						<description>Descending</description>
-						<icon>windows/home/icons/thumbdown.png</icon>
+						<icon>special://skin/extras/icons/thumbdown.png</icon>
 						<label>585</label>
 						<onclick>SendClick(4)</onclick>
 						<visible>StringCompare(Control.GetLabel(4),$LOCALIZE[585])</visible>
@@ -118,19 +118,19 @@
 					<item id="6">
 						<description>Files</description>
 						<label>744</label>
-						<icon>windows/home/icons/recordings.png</icon>
+						<icon>special://skin/extras/icons/recordings.png</icon>
 						<onclick>replacewindow(musicfiles)</onclick>
 						<onclick>setfocus(50)</onclick>
 					</item>
 					<item id="7">
 						<description>Search</description>
-						<icon>windows/home/icons/search-tv.png</icon>
+						<icon>special://skin/extras/icons/search-tv.png</icon>
 						<label>137</label>
 						<onclick>SendClick(8)</onclick>
 					</item>
 					<item id="8">
 						<description>Party Mode</description>
-						<icon>windows/home/icons/chat2.png</icon>
+						<icon>special://skin/extras/icons/chat2.png</icon>
 						<label>589</label>
 						<onclick>SendClick(16)</onclick>
 					</item>
@@ -142,7 +142,7 @@
 					</item>
 					<item id="10">
 						<description>Filter Adv On</description>
-						<icon>windows/home/icons/yes.png</icon>
+						<icon>special://skin/extras/icons/yes.png</icon>
 						<label>587</label>
 						<onclick>SetFocus(50)</onclick>
 						<onclick>Filter</onclick>

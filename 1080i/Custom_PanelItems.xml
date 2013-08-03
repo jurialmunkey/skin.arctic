@@ -29,7 +29,7 @@
             	<posy>242</posy>
             	<width>80</width>
             	<height>80</height>
-            	<texture>windows/home/icons/config.png</texture>
+            	<texture>special://skin/extras/icons/config.png</texture>
             	<aspectratio>keep</aspectratio>
             </control>
             <control type="label">
@@ -131,25 +131,25 @@
 							<description>Movies</description>
 							<label>$LOCALIZE[20342]</label>
 							<onclick>SetFocus(3)</onclick>
-							<icon>windows/home/icons/video.png</icon>
+							<icon>special://skin/extras/icons/video.png</icon>
 						</item>
 						<item id="42">
 							<description>Tv shows</description>
 							<label>$LOCALIZE[20343]</label>
 							<onclick>SetFocus(3)</onclick>
-							<icon>windows/home/icons/tvshows.png</icon>
+							<icon>special://skin/extras/icons/tvshows.png</icon>
 						</item>
 						<item id="43">
 							<description>Music</description>
 							<label>$LOCALIZE[2]</label>
 							<onclick>SetFocus(3)</onclick>
-							<icon>windows/home/icons/music.png</icon>
+							<icon>special://skin/extras/icons/music.png</icon>
 						</item>
 						<item id="44">
 							<description>Programs</description>
 							<label>$LOCALIZE[0]</label>
 							<onclick>SetFocus(3)</onclick>
-							<icon>windows/home/icons/appearance.png</icon>
+							<icon>special://skin/extras/icons/appearance.png</icon>
 						</item>
 					</content>
 				</control>

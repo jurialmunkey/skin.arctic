@@ -17,7 +17,7 @@
             	<posy>130</posy>
             	<width>80</width>
             	<height>80</height>
-            	<texture>windows/home/icons/search.png</texture>
+            	<texture>special://skin/extras/icons/search.png</texture>
             	<aspectratio>keep</aspectratio>
             </control>
     	    <control type="label">

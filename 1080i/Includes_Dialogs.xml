@@ -115,7 +115,7 @@
             	<posy>232</posy>
             	<width>100</width>
             	<height>100</height>
-            	<texture>windows/home/icons/addons.png</texture>
+            	<texture>special://skin/extras/icons/addons.png</texture>
             	<aspectratio>keep</aspectratio>
             </control>
             <control type="label" id="20">
@@ -596,7 +596,7 @@
             	<posy>244</posy>
             	<width>80</width>
             	<height>80</height>
-            	<texture>windows/home/icons/config.png</texture>
+            	<texture>special://skin/extras/icons/config.png</texture>
             	<aspectratio>keep</aspectratio>
             	<animation effect="slide" end="0,-44" condition="Control.IsVisible(6)">Conditional</animation>
             </control>
@@ -1664,7 +1664,7 @@
             	<posy>184</posy>
             	<width>70</width>
             	<height>70</height>
-            	<texture>windows/home/icons/info.png</texture>
+            	<texture>special://skin/extras/icons/info.png</texture>
             	<aspectratio>keep</aspectratio>
             </control>
             <control type="label">
@@ -2108,7 +2108,7 @@
 					<posy>237</posy>
 					<width>80</width>
 					<height>80</height>
-					<texture>windows/home/icons/recordings.png</texture>
+					<texture>special://skin/extras/icons/recordings.png</texture>
 					<aspectratio>keep</aspectratio>
 				</control> 
                 <control type="label" id="411">

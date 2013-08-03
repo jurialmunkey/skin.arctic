@@ -79,33 +79,33 @@
 					<item id="1">
 						<description>View Mode</description>
 						<label>$INFO[Container.ViewMode]</label>
-						<icon>windows/home/icons/config.png</icon>
+						<icon>special://skin/extras/icons/config.png</icon>
 						<onclick>setfocus(201)</onclick>
 						<visible>true</visible>
 					</item>
 					<item id="2">
 						<description>View Options</description>
 						<label>41620</label>
-						<icon>windows/home/icons/config2.png</icon>
+						<icon>special://skin/extras/icons/config2.png</icon>
 						<onclick>setfocus(9222)</onclick>
 						<visible>true</visible>
 					</item>
 					<item id="3">
 						<description>Sort</description>
-						<icon>windows/home/icons/epg.png</icon>
+						<icon>special://skin/extras/icons/epg.png</icon>
 						<label>$INFO[Container.SortMethod]</label>
 						<onclick>SendClick(3)</onclick>
 					</item>
 					<item id="4">
 						<description>Ascending</description>
-						<icon>windows/home/icons/thumbup.png</icon>
+						<icon>special://skin/extras/icons/thumbup.png</icon>
 						<label>584</label>
 						<onclick>SendClick(4)</onclick>
 						<visible>StringCompare(Control.GetLabel(4),$LOCALIZE[584])</visible>
 					</item>
 					<item id="5">
 						<description>Descending</description>
-						<icon>windows/home/icons/thumbdown.png</icon>
+						<icon>special://skin/extras/icons/thumbdown.png</icon>
 						<label>585</label>
 						<onclick>SendClick(4)</onclick>
 						<visible>StringCompare(Control.GetLabel(4),$LOCALIZE[585])</visible>
@@ -113,13 +113,13 @@
 					<item id="6">
 						<description>Filter</description>
 						<label>587</label>
-						<icon>windows/home/icons/cloud.png</icon>
+						<icon>special://skin/extras/icons/cloud.png</icon>
 						<onclick>SendClick(19)</onclick>
 					</item>
 					<item id="7">
 						<description>Set games path</description>
 						<label>41621</label>
-						<icon>windows/home/icons/controller.png</icon>
+						<icon>special://skin/extras/icons/controller.png</icon>
 						<onclick>Skin.SetString(GameTile.Path,$INFO[Container.FolderPath])</onclick>
 						<onclick>SetProperty(BounceLeft,1,Home)</onclick>
 						<visible>substring(Container.FolderPath,plugin://plugin.program.advanced.launcher/,left)</visible>
@@ -127,7 +127,7 @@
 					<item id="8">
 						<description>Reset games path</description>
 						<label>41622</label>
-						<icon>windows/home/icons/no.png</icon>
+						<icon>special://skin/extras/icons/no.png</icon>
 						<onclick>Skin.Reset(GameTile.Path)</onclick>
 						<onclick>SetProperty(BounceRight,1,Home)</onclick>
 						<visible>substring(Container.FolderPath,plugin://plugin.program.advanced.launcher/,left)</visible>

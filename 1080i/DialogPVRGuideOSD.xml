@@ -38,7 +38,7 @@
                     <width>140</width>
                     <height>140</height>
                     <aspectratio>keep</aspectratio>
-                    <texture>windows/home/icons/tv.png</texture>
+                    <texture>special://skin/extras/icons/tv.png</texture>
                     <colordiffuse>$VAR[osd.text.dark]</colordiffuse>
                 </control>
                 <control type="label">

@@ -161,25 +161,25 @@
     </variable>
     
     <variable name="AeonFlagStudio">
-        <value condition="!IsEmpty(ListItem.Studio)">$INFO[ListItem.Studio,aeonflags/studios/,.png]</value>
-        <value>aeonflags/studios/default-studio.png</value>
+        <value condition="!IsEmpty(ListItem.Studio)">$INFO[ListItem.Studio,special://skin/extras/studioflags/,.png]</value>
+        <value>special://skin/extras/studioflags/default-studio.png</value>
     </variable>
     
     <variable name="AeonFlagRecordLabel">
-        <value condition="!IsEmpty(ListItem.Property(Album_Label))">$INFO[ListItem.Property(Album_Label),aeonflags/music/recordlabel/,.png]</value>
-        <value>aeonflags/studios/default-studio.png</value>
+        <value condition="!IsEmpty(ListItem.Property(Album_Label))">$INFO[ListItem.Property(Album_Label),special://skin/extras/recordlabel/,.png]</value>
+        <value>special://skin/extras/studioflags/default-studio.png</value>
     </variable>
     
     <variable name="AeonFlagVideoCodec">
-        <value condition="!IsEmpty(ListItem.VideoCodec) + [Container.Content(episodes) | Container.Content(movies)]">$INFO[ListItem.VideoCodec,aeonflags/source/,.png]</value>
-        <value>aeonflags/source/default.png</value>
+        <value condition="!IsEmpty(ListItem.VideoCodec) + [Container.Content(episodes) | Container.Content(movies)]">$INFO[ListItem.VideoCodec,special://skin/extras/videoflags/,.png]</value>
+        <value>special://skin/extras/videoflags/default.png</value>
     </variable>
     
     <variable name="AeonFlagAudioCodec">
-    	<value condition="!IsEmpty(ListItem.Property(Album_Label)) + Container.Content(albums)">$INFO[ListItem.Property(Album_Label),aeonflags/music/recordlabel/,.png]</value>
-        <value condition="!IsEmpty(ListItem.AudioCodec) + [Container.Content(episodes) | Container.Content(movies)]">$INFO[ListItem.AudioCodec,aeonflags/audio/,.png]</value>
-        <value condition="!IsEmpty(ListItem.FileExtension) + [Container.Content(songs)]">$INFO[ListItem.FileExtension,aeonflags/audio/,.png]</value>
-        <value>aeonflags/audio/defaultscreen.png</value>
+    	<value condition="!IsEmpty(ListItem.Property(Album_Label)) + Container.Content(albums)">$INFO[ListItem.Property(Album_Label),special://skin/extras/recordlabel/,.png]</value>
+        <value condition="!IsEmpty(ListItem.AudioCodec) + [Container.Content(episodes) | Container.Content(movies)]">$INFO[ListItem.AudioCodec,special://skin/extras/audioflags/,.png]</value>
+        <value condition="!IsEmpty(ListItem.FileExtension) + [Container.Content(songs)]">$INFO[ListItem.FileExtension,special://skin/extras/audioflags/,.png]</value>
+        <value>special://skin/extras/audioflags/defaultscreen.png</value>
     </variable>
     
     <variable name="AeonFlagStars">
@@ -489,7 +489,7 @@
 				<posy>10</posy>
 				<width>169</width>
 				<height>169</height>
-				<texture fallback="windows/home/icons/addtile.png">$INFO[ListItem.Property(poster)]</texture>
+				<texture fallback="special://skin/extras/icons/addtile.png">$INFO[ListItem.Property(poster)]</texture>
 				<colordiffuse>mod-infotags-d</colordiffuse>
 				<aspectratio scalediffuse="false" align="center" aligny="center">keep</aspectratio>
 				<visible>IsEmpty(ListItem.Property(animate))</visible>
@@ -499,7 +499,7 @@
 				<posy>10</posy>
 				<width>169</width>
 				<height>169</height>
-				<texture fallback="windows/home/icons/addtile.png">$INFO[ListItem.Property(poster)]</texture>
+				<texture fallback="special://skin/extras/icons/addtile.png">$INFO[ListItem.Property(poster)]</texture>
 				<aspectratio scalediffuse="false" align="center" aligny="center">keep</aspectratio>
 				<visible>!IsEmpty(ListItem.Property(animate))</visible>
 			</control>
@@ -531,7 +531,7 @@
 				<posy>10</posy>
 				<width>169</width>
 				<height>169</height>
-				<texture fallback="windows/home/icons/addtile.png">$INFO[ListItem.Property(poster)]</texture>
+				<texture fallback="special://skin/extras/icons/addtile.png">$INFO[ListItem.Property(poster)]</texture>
 				<colordiffuse>mod-infotags-alt</colordiffuse>
 				<aspectratio scalediffuse="false" align="center" aligny="center">keep</aspectratio>
 			</control>
@@ -562,7 +562,7 @@
 				<posy>10</posy>
 				<width>169</width>
 				<height>169</height>
-				<texture fallback="windows/home/icons/addtile.png">$INFO[ListItem.Property(poster)]</texture>
+				<texture fallback="special://skin/extras/icons/addtile.png">$INFO[ListItem.Property(poster)]</texture>
 				<colordiffuse>mod-infotags-d</colordiffuse>
 				<aspectratio scalediffuse="false" align="center" aligny="center">keep</aspectratio>
 			</control>
@@ -1039,7 +1039,7 @@
 		<!--PVR ITEMS-->
 		<item id="1">
 			<description>Channels</description>
-			<property name="Poster">windows/home/icons/tvguide.png</property>
+			<property name="Poster">special://skin/extras/icons/tvguide.png</property>
 			<label>$LOCALIZE[19023]</label>
 			<onclick>SetFocus(525)</onclick>
 			<onclick>ActivateWindow(PVR)</onclick>
@@ -1054,12 +1054,12 @@
 			<onclick>ActivateWindow(PVR)</onclick>
 			<onclick>SetFocus(36)</onclick>
 			<onclick>SetFocus(17)</onclick>
-			<property name="Poster">windows/home/icons/search-tv.png</property>
+			<property name="Poster">special://skin/extras/icons/search-tv.png</property>
 			<visible>Container(525).HasFocus(4)</visible>
 		</item>
 		<item id="3">
 			<description>Timer</description>
-			<property name="Poster">windows/home/icons/timers.png</property>
+			<property name="Poster">special://skin/extras/icons/timers.png</property>
 			<label>$LOCALIZE[19040]</label>
 			<onclick>SetFocus(525)</onclick>
 			<onclick>ActivateWindow(PVR)</onclick>
@@ -1074,12 +1074,12 @@
 			<onclick>ActivateWindow(PVR)</onclick>
 			<onclick>SetFocus(34)</onclick>
 			<onclick>SetFocus(13)</onclick>
-			<property name="Poster">windows/home/icons/recordings.png</property>
+			<property name="Poster">special://skin/extras/icons/recordings.png</property>
 			<visible>Container(525).HasFocus(4)</visible>
 		</item>
 		<item id="5">
 			<description>EPG</description>
-			<property name="Poster">windows/home/icons/epg.png</property>
+			<property name="Poster">special://skin/extras/icons/epg.png</property>
 			<label>$LOCALIZE[19069]</label>
 			<onclick>SetFocus(525)</onclick>
 			<onclick>ActivateWindow(PVR)</onclick>
@@ -1089,7 +1089,7 @@
 		</item>
 		<item id="6">
 			<description>Radio Channels</description>
-			<property name="Poster">windows/home/icons/radio.png</property>
+			<property name="Poster">special://skin/extras/icons/radio.png</property>
 			<label>$LOCALIZE[19021]</label>
 			<onclick>SetFocus(525)</onclick>
 			<onclick>ActivateWindow(PVR)</onclick>
@@ -1101,7 +1101,7 @@
 			<description>Video Addons</description>
 			<onclick>SetFocus(525)</onclick>
 			<onclick>ActivateWindow(videos,addons,return)</onclick>
-			<property name="Poster">windows/home/icons/videoaddons.png</property>
+			<property name="Poster">special://skin/extras/icons/videoaddons.png</property>
 			<label>$LOCALIZE[24001]</label> 
 			<visible>Container(525).HasFocus(4)</visible>
 		</item>
@@ -1261,7 +1261,7 @@
 		<!--SETTINGS ITEMS-->
 		<item id="1">
 			<description>Appearance</description>
-			<property name="Poster">windows/home/icons/appearance.png</property>
+			<property name="Poster">special://skin/extras/icons/appearance.png</property>
 			<label>$LOCALIZE[480]</label>
 			<onclick>SetFocus(525)</onclick>
 			<onclick>ActivateWindow(appearancesettings)</onclick>
@@ -1269,7 +1269,7 @@
 		</item>
 		<item id="2">
 			<description>System</description>
-			<property name="Poster">windows/home/icons/system.png</property>
+			<property name="Poster">special://skin/extras/icons/system.png</property>
 			<label>$LOCALIZE[13000]</label>
 			<onclick>SetFocus(525)</onclick>
 			<onclick>ActivateWindow(systemsettings)</onclick>
@@ -1277,7 +1277,7 @@
 		</item>
 		<item id="3">
 			<description>Skin</description>
-			<property name="Poster">windows/home/icons/skin.png</property>
+			<property name="Poster">special://skin/extras/icons/skin.png</property>
 			<label>$LOCALIZE[166]</label>
 			<onclick>SetFocus(525)</onclick>
 			<onclick>ActivateWindow(skinsettings)</onclick>
@@ -1285,7 +1285,7 @@
 		</item>
 		<item id="4">
 			<description>Addons</description>
-			<property name="Poster">windows/home/icons/addons.png</property>
+			<property name="Poster">special://skin/extras/icons/addons.png</property>
 			<label>$LOCALIZE[24001]</label>
 			<onclick>SetFocus(525)</onclick>
 			<onclick>ActivateWindow(addonbrowser)</onclick>
@@ -1293,7 +1293,7 @@
 		</item>
 		<item id="5">
 			<description>Services</description>
-			<property name="Poster">windows/home/icons/network.png</property>
+			<property name="Poster">special://skin/extras/icons/network.png</property>
 			<label>$LOCALIZE[14036]</label>
 			<onclick>SetFocus(525)</onclick>
 			<onclick>ActivateWindow(servicesettings)</onclick>
@@ -1301,7 +1301,7 @@
 		</item>
 		<item id="6">
 			<description>PVR</description>
-			<property name="Poster">windows/home/icons/tvguide.png</property>
+			<property name="Poster">special://skin/extras/icons/tvguide.png</property>
 			<label>$LOCALIZE[41220]</label>
 			<onclick>SetFocus(525)</onclick>
 			<onclick>ActivateWindow(pvrsettings)</onclick>
@@ -1309,7 +1309,7 @@
 		</item>
 		<item id="7">
 			<description>Pictures</description>
-			<property name="Poster">windows/home/icons/photos.png</property>
+			<property name="Poster">special://skin/extras/icons/photos.png</property>
 			<label>$LOCALIZE[1]</label>
 			<onclick>SetFocus(525)</onclick>
 			<onclick>ActivateWindow(picturessettings)</onclick>
@@ -1317,7 +1317,7 @@
 		</item>
 		<item id="8">
 			<description>Music</description>
-			<property name="Poster">windows/home/icons/music.png</property>
+			<property name="Poster">special://skin/extras/icons/music.png</property>
 			<label>$LOCALIZE[2]</label>
 			<onclick>SetFocus(525)</onclick>
 			<onclick>ActivateWindow(musicsettings)</onclick>
@@ -1325,7 +1325,7 @@
 		</item>
 		<item id="9">
 			<description>Video</description>
-			<property name="Poster">windows/home/icons/video.png</property>
+			<property name="Poster">special://skin/extras/icons/video.png</property>
 			<label>$LOCALIZE[157]</label>
 			<onclick>SetFocus(525)</onclick>
 			<onclick>ActivateWindow(videossettings)</onclick>
@@ -1333,7 +1333,7 @@
 		</item>
 		<item id="10">
 			<description>Profiles</description>
-			<property name="Poster">windows/home/icons/profiles.png</property>
+			<property name="Poster">special://skin/extras/icons/profiles.png</property>
 			<label>$LOCALIZE[13200]</label>
 			<onclick>SetFocus(525)</onclick>
 			<onclick>ActivateWindow(profiles)</onclick>
@@ -1347,7 +1347,7 @@
 			<onclick>SetFocus(525)</onclick>
 			<onclick condition="!IsEmpty(Weather.Plugin)">ActivateWindow(weather)</onclick>
 			<onclick condition="IsEmpty(Weather.Plugin)">ActivateWindow(weathersettings)</onclick>
-			<property name="Poster">windows/home/icons/weather.png</property>
+			<property name="Poster">special://skin/extras/icons/weather.png</property>
 		</item>
 		<item id="1">
 			<description>System Info button</description>
@@ -1355,7 +1355,7 @@
 			<onclick>SetFocus(525)</onclick>
 			<onclick>ActivateWindow(systeminfo)</onclick>
 			<visible>System.Loggedon</visible>
-			<property name="Poster">windows/home/icons/sysinfo.png</property>
+			<property name="Poster">special://skin/extras/icons/sysinfo.png</property>
 		</item>
 		<item id="2">
 			<description>File Manager</description>
@@ -1363,18 +1363,18 @@
 			<onclick>SetFocus(525)</onclick>
 			<onclick>ActivateWindow(filemanager)</onclick>
 			<visible>System.Loggedon</visible>
-			<property name="Poster">windows/home/icons/folder.png</property>                        
+			<property name="Poster">special://skin/extras/icons/folder.png</property>                        
 		</item>
 		<item id="3">
 			<description>Quit</description>
-			<property name="Poster">windows/home/icons/thumbdown.png</property>
+			<property name="Poster">special://skin/extras/icons/thumbdown.png</property>
 			<onclick>SetFocus(525)</onclick>
 			<label>$LOCALIZE[13012]</label>
 			<onclick>XBMC.Quit()</onclick>
 			<visible>System.ShowExitButton</visible>
 		</item>
 		<item id="4">
-			<property name="Poster">windows/home/icons/downloads2.png</property>
+			<property name="Poster">special://skin/extras/icons/downloads2.png</property>
 			<onclick>SetFocus(525)</onclick>
 			<description>Restart PC button</description>
 			<label>$LOCALIZE[13013]</label>
@@ -1383,7 +1383,7 @@
 		</item>
 		<item id="5">
 			<description>Suspend</description>
-			<property name="Poster">windows/home/icons/boxdown.png</property>
+			<property name="Poster">special://skin/extras/icons/boxdown.png</property>
 			<onclick>SetFocus(525)</onclick>
 			<label>$LOCALIZE[13011]</label>
 			<onclick>XBMC.Suspend()</onclick>
@@ -1391,7 +1391,7 @@
 		</item>
 		<item id="6">
 			<description>Power</description>
-			<property name="Poster">windows/home/icons/downloads.png</property>
+			<property name="Poster">special://skin/extras/icons/downloads.png</property>
 			<onclick>SetFocus(525)</onclick>
 			<label>$LOCALIZE[13005]</label>
 			<onclick condition="System.CanPowerDown">XBMC.Powerdown()</onclick>
@@ -1400,7 +1400,7 @@
 		</item>
 		<item id="7">
 			<description>Update Library</description>
-			<property name="Poster">windows/home/icons/arrows.png</property>
+			<property name="Poster">special://skin/extras/icons/arrows.png</property>
 			<label>$LOCALIZE[24069]</label>
 			<onclick>SetFocus(525)</onclick>
 			<onclick condition="!Library.IsScanningVideo">UpdateLibrary(video)</onclick>
@@ -1408,7 +1408,7 @@
 		</item>
 		<item id="8">
 			<description>Favourites</description>
-			<property name="Poster">windows/home/icons/star.png</property>
+			<property name="Poster">special://skin/extras/icons/star.png</property>
 			<label>$LOCALIZE[1036]</label>
 			<onclick>SetFocus(525)</onclick>
 			<onclick>ActivateWindow(Favourites)</onclick>
@@ -3243,7 +3243,7 @@
 				<width>92</width>
 				<height>48</height>
 				<aspectratio align="center" aligny="center">keep</aspectratio>
-				<texture fallback="aeonflags/studios/default-studio.png">$VAR[AeonFlagStudio]</texture>
+				<texture fallback="special://skin/extras/studioflags/default-studio.png">$VAR[AeonFlagStudio]</texture>
 				<colordiffuse>Mod_Tags_Alt</colordiffuse>
 				<visible>![Container.Content(artists) | Container.Content(albums) | Container.Content(songs)]</visible>
 				<animation effect="fade" end="90" condition="true">Conditional</animation>
@@ -3254,7 +3254,7 @@
 				<width>92</width>
 				<height>48</height>
 				<aspectratio align="center" aligny="center">keep</aspectratio>
-				<texture fallback="aeonflags/studios/default-studio.png">$VAR[AeonFlagAudioCodec]</texture>
+				<texture fallback="special://skin/extras/studioflags/default-studio.png">$VAR[AeonFlagAudioCodec]</texture>
 				<colordiffuse>Mod_Tags_Alt</colordiffuse>
 				<visible>[Container.Content(artists) | Container.Content(albums) | Container.Content(songs)]</visible>
 				<animation effect="fade" end="90" condition="true">Conditional</animation>
@@ -3274,7 +3274,7 @@
 				<width>92</width>
 				<height>48</height>
 				<aspectratio align="center" aligny="center">keep</aspectratio>
-				<texture fallback="aeonflags/studios/default-studio.png">$VAR[AeonFlagRating]</texture>
+				<texture fallback="special://skin/extras/studioflags/default-studio.png">$VAR[AeonFlagRating]</texture>
 				<colordiffuse>Mod_Tags</colordiffuse>
 				<visible>![Container.Content(artists) | Container.Content(albums) | Container.Content(songs)]</visible>
 			</control>
@@ -3361,7 +3361,7 @@
 				<width>92</width>
 				<height>48</height>
 				<aspectratio align="center" aligny="center">keep</aspectratio>
-				<texture fallback="aeonflags/studios/default-studio.png">$VAR[AeonFlagHDSD]</texture>
+				<texture fallback="special://skin/extras/studioflags/default-studio.png">$VAR[AeonFlagHDSD]</texture>
 				<colordiffuse>Mod_Tags_Alt</colordiffuse>
 				<visible>[Container.Content(episodes) | Container.Content(movies)]  + !substring(ListItem.Path,videodb://1/7,left)</visible>
 				<animation effect="fade" end="90" condition="true">Conditional</animation>
@@ -3372,7 +3372,7 @@
 				<width>92</width>
 				<height>64</height>
 				<aspectratio align="center" aligny="center">keep</aspectratio>
-				<texture fallback="aeonflags/studios/default-studio.png">flags/other/set-default.png</texture>
+				<texture fallback="special://skin/extras/studioflags/default-studio.png">flags/other/set-default.png</texture>
 				<colordiffuse>Mod_Tags_Alt</colordiffuse>
 				<visible>[Container.Content(episodes) | Container.Content(movies)] + substring(ListItem.Path,videodb://1/7,left)</visible>
 				<animation effect="fade" end="90" condition="true">Conditional</animation>
@@ -3392,7 +3392,7 @@
 				<width>92</width>
 				<height>48</height>
 				<aspectratio align="center" aligny="center">keep</aspectratio>
-				<texture fallback="aeonflags/studios/default-studio.png">$VAR[AeonFlagVideoCodec]</texture>
+				<texture fallback="special://skin/extras/studioflags/default-studio.png">$VAR[AeonFlagVideoCodec]</texture>
 				<colordiffuse>Mod_Tags</colordiffuse>
 				<visible>[Container.Content(episodes) | Container.Content(movies)] + !substring(ListItem.Path,videodb://1/7,left)</visible>
 			</control>
@@ -3411,7 +3411,7 @@
 				<width>92</width>
 				<height>48</height>
 				<aspectratio align="center" aligny="center">keep</aspectratio>
-				<texture fallback="aeonflags/studios/default-studio.png">$VAR[AeonFlagAudioCodec]</texture>
+				<texture fallback="special://skin/extras/studioflags/default-studio.png">$VAR[AeonFlagAudioCodec]</texture>
 				<colordiffuse>Mod_Tags</colordiffuse>
 				<visible>[Container.Content(episodes) | Container.Content(movies)] + !substring(ListItem.Path,videodb://1/7,left)</visible>
 			</control>

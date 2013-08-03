@@ -27,7 +27,7 @@
             	<posy>242</posy>
             	<width>80</width>
             	<height>80</height>
-            	<texture>windows/home/icons/config.png</texture>
+            	<texture>special://skin/extras/icons/config.png</texture>
             	<aspectratio>keep</aspectratio>
             </control>
             <control type="label">

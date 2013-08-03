@@ -65,7 +65,7 @@
 						<include>SettingsCustomDialogButtonVars</include>
 						<label>$LOCALIZE[41139]</label>
 						<label2>$INFO[Skin.String(HomeCustomItem.Icon)]</label2>
-						<onclick>Skin.SetFile(HomeCustomItem.Icon,.png|.jpg|.gif,special://skin/media/windows/home/icons/)</onclick>
+						<onclick>Skin.SetFile(HomeCustomItem.Icon,.png|.jpg|.gif,special://skin/media/special://skin/extras/icons/)</onclick>
 					</control>
 					<control type="radiobutton" id="2403">
 						<textcolor>mod-infotags</textcolor>

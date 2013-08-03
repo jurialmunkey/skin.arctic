@@ -702,14 +702,14 @@
                     <control type="radiobutton" id="217">
                         <description>Thumbnail</description>
                         <include>ViewOptions.Button</include>
-                        <label>$LOCALIZE[42229]</label>
+                        <label>$LOCALIZE[21371]</label>
                         <texturefocus border="2">dialogs/options/buttons/default-fo.png</texturefocus>
                         <onclick>Container.SetViewMode(500)</onclick>
                         <selected>Control.IsVisible(500)</selected>
                         <textureradioon>buttons/radio/options-radio-button-fo.png</textureradioon>
                         <textureradiooff>buttons/radio/options-radio-button-nf.png</textureradiooff>
                         <radioposx>-19</radioposx>
-                        <visible>substring(Container.FolderPath,addons,left) | substring(Container.FolderPath,plugin,left) | Container.HasFiles + ![Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(genres) | Container.Content(actors) | Container.Content(Sets)]</visible>
+                        <visible>substring(Container.FolderPath,addons,left) | substring(Container.FolderPath,plugin,left) | Container.HasFiles</visible>
                     </control>
                 </control>                      
             </control>

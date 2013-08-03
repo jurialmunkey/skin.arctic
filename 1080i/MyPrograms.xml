@@ -356,17 +356,6 @@
                     <radioposx>-19</radioposx>
                     <visible>Container.HasFiles + Container.Content(addons)</visible>
                 </control>
-                <control type="radiobutton" id="204">
-                    <description>Info</description>
-                    <include>ViewOptions.Button</include>
-                    <label>42309</label>
-                    <texturefocus border="2">dialogs/options/buttons/default-fo.png</texturefocus>
-                    <onclick>Container.SetViewMode(52)</onclick>
-                    <selected>Control.IsVisible(52)</selected>
-                    <textureradioon>buttons/radio/options-radio-button-fo.png</textureradioon>
-                    <textureradiooff>buttons/radio/options-radio-button-nf.png</textureradiooff>
-                    <radioposx>-19</radioposx>
-                </control>
                 <control type="radiobutton" id="205">
                     <description>Banner</description>
                     <include>ViewOptions.Button</include>

@@ -86,13 +86,13 @@
     <include name="PictureViews">
         <include>Viewtype-PictureList</include>
         <include>Viewtype-PictureListLargeThumb</include>
-        <include>Viewtype-AddonThumbnail</include>
+        <include>Viewtype-Thumbnail</include>
     </include>
 
     <include name="ProgramViews">
         <include>Viewtype-ProgramList</include>
         <include>Viewtype-ProgramInfo</include>
-        <include>Viewtype-AddonThumbnail</include>
+        <include>Viewtype-Thumbnail</include>
         <include>Viewtype-AdvBanner</include>
         <include>Viewtype-AdvWall</include>
         <include>Viewtype-AdvCarousel</include>
@@ -103,7 +103,7 @@
     </include>
     
     <include name="AddonViews">
-        <include>Viewtype-AddonThumbnail</include>
+        <include>Viewtype-Thumbnail</include>
         <include>Viewtype-AddonList</include>
     </include>
     

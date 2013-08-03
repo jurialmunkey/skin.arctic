@@ -29,13 +29,13 @@
                 </animation>
                 <control type="panel" id="500">
                     <posx>94</posx>
-                    <posy>174</posy>
+                    <posy>194</posy>
                     <width>1744</width>
                     <height>700</height>
                     <pagecontrol>70</pagecontrol>
                     <scrolltime tween="cubic" easing="out">500</scrolltime>
                     <orientation>vertical</orientation>
-                    <viewtype label="42229">list</viewtype>
+                    <viewtype label="21371">list</viewtype>
                     <onright>70</onright>
                     <onleft condition="!Skin.HasSetting(KioskMode)">9010</onleft>
                     <onleft condition="Skin.HasSetting(KioskMode)">500</onleft>
@@ -292,43 +292,6 @@
                             </control>
                         </control>
                     </focusedlayout>
-                </control>
-                <control type="button">
-                    <posx>126</posx>
-                    <posy>874</posy>
-                    <width>1680</width>
-                    <height>56</height>
-                    <label>$INFO[ListItem.Label]</label>
-                    <label2>$VAR[ThumbnailViewDetailInfo]</label2>
-                    <font>Font-Alaska-S28-L</font>
-                    <textcolor>Mod_Tags</textcolor>
-                    <shadowcolor>Mod_Shadow</shadowcolor>
-                    <align>left</align>
-                    <visible>!Skin.HasSetting(ThumbnailSmall)</visible>
-                </control>
-                <control type="button">
-                    <posx>185</posx>
-                    <posy>874</posy>
-                    <width>1562</width>
-                    <height>56</height>
-                    <label>$INFO[ListItem.Label]</label>
-                    <label2>$VAR[ThumbnailViewDetailInfo]</label2>
-                    <font>Font-Alaska-S28-L</font>
-                    <textcolor>Mod_Tags</textcolor>
-                    <shadowcolor>Mod_Shadow</shadowcolor>
-                    <align>left</align>
-                    <visible>Skin.HasSetting(ThumbnailSmall)</visible>
-                </control>
-                <control type="image">
-                    <description>Watched/unwatched overlay</description>
-                    <posx>1749</posx>
-                    <posy>852</posy>
-                    <width>100</width>
-                    <height>100</height>
-                    <colordiffuse>eewhite</colordiffuse>
-                    <texture>$VAR[DefaultListOverlay]</texture>
-                    <visible>!IsEmpty(ListItem.Overlay)</visible>
-                    <animation effect="slide" end="-59" time="0" condition="Skin.HasSetting(ThumbnailSmall)">Conditional</animation>
                 </control>
             </control>
         </control>

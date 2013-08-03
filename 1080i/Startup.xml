@@ -2,20 +2,19 @@
     <defaultcontrol always="true">10</defaultcontrol>
     <allowoverlay>no</allowoverlay>
     <backgroundcolor>0</backgroundcolor>
+    <onload>SetProperty(SkinInitStarted,1,home)</onload>
     <onunload condition="!Skin.HasSetting(Skin.Init.Complete)">Skin.SetBool(Skin.Init.Complete)</onunload>
     <controls>
         <include>CommonSettingsItems</include>
         <include>Common-Info-NoOptions</include>
         <control type="button" id="10">
 			<onfocus condition="Skin.HasSetting(Skin.Init.Complete) + Skin.HasSetting(NextAired.Update) + Library.HasContent(tvshows)">RunScript(script.tv.show.next.aired,silent=True)</onfocus>
-            <onfocus condition="Skin.HasSetting(Skin.Init.Complete) + Skin.HasSetting(StartupPlaylist)">PlayMedia($ESCINFO[Skin.String(StartupPlaylist.Path)])</onfocus>
-			<onfocus condition="Skin.HasSetting(Skin.Init.Complete)">ReplaceWindow(Home)</onfocus>
+            <!--<onfocus condition="Skin.HasSetting(Skin.Init.Complete) + Skin.HasSetting(StartupPlaylist)">PlayMedia($ESCINFO[Skin.String(StartupPlaylist.Path)])</onfocus>-->
+			<onfocus condition="Skin.HasSetting(Skin.Init.Complete)">SetFocus(11)</onfocus>
         	<onfocus condition="!Skin.HasSetting(Skin.Init.Complete)">AlarmClock(Skin.Init.ItemWait,SetFocus(13),00:01,silent)</onfocus>
-        	<onfocus condition="!Skin.HasSetting(Skin.Init.Complete)">SetProperty(SkinInitStarted,1,home)</onfocus>
         </control>
         <control type="button" id="11">
         	<onfocus>Skin.SetBool(Skin.Initialization.Items)</onfocus>
-            <onfocus>ClearProperty(SkinInitStarted,home)</onfocus>
             <onfocus>ReplaceWindow(Home)</onfocus>
             <animation effect="fade" start="0" end="100" time="0" delay="3000">Focus</animation>
             <onfocus>ReloadSkin()</onfocus> 

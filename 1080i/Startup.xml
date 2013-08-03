@@ -57,6 +57,7 @@
             </control>
         </control>
         <control type="button" id="13">
+        	<onfocus condition="!Skin.HasSetting(Skin.Initialization.Items)">Skin.SetBool(musicvis.hidetext)</onfocus>
             <onfocus condition="!Skin.HasSetting(Skin.Initialization.Items)">Skin.SetString(Home.Programs.Tile.10.Type,7)</onfocus>
 			<onfocus condition="!Skin.HasSetting(Skin.Initialization.Items)">Skin.SetString(Home.Programs.Tile.10.TypeName,$LOCALIZE[41151])</onfocus>
 			<onfocus condition="!Skin.HasSetting(Skin.Initialization.Items)">Skin.Reset(Home.Programs.Tile.10.Animate)</onfocus>

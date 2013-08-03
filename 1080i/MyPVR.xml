@@ -8,47 +8,42 @@
         <control type="group">
             <posx>0</posx>
             <control type="group" id="9001">
-            	<posx>-650</posx>
+            	<posx>150</posx>
                 <onup>50</onup>
                 <ondown>50</ondown>
                 <orientation>horizontal</orientation>
-                <visible allowhiddenfocus="true">ControlGroup(9001).HasFocus</visible>
+                <include>OptionsShutdownAnimation</include>
                 <animation type="WindowOpen" reversible="false">
-					<effect type="slide" start="-650,0" end="0,0" time="300" delay="0" tween="cubic" easing="inout" />
-				</animation>
-                <animation type="Visible" reversible="false">
-					<effect type="slide" start="0,0" end="650,0" time="300" delay="100" tween="cubic" easing="inout" />
-				</animation>
-				<animation type="Hidden" reversible="false">
-					<effect type="slide" start="650,0" end="0,0" time="300" tween="cubic" easing="inout" />
+					<effect type="fade" start="0" end="100" time="300" delay="300" tween="cubic" easing="inout" />
 				</animation>
 				<animation type="WindowClose" reversible="false">
-					<effect type="slide" start="0,0" end="-650,0" time="300" tween="cubic" easing="inout" />
+					<effect type="slide" start="0,0" end="150,0" time="300" tween="cubic" easing="inout" />
+					<effect type="fade" end="0" start="100" time="200" tween="cubic" easing="inout" />
+					<effect type="zoom" start="100" end="85" time="300" center="960,600" tween="sine" easing="out" />
 				</animation>
                 <include>listEndAnimation</include>
                 <posy>210</posy>
 				<control type="group">
 					<posy>-4</posy>
 					<control type="image">
-						<posx>-40</posx>
+						<posx>-30</posx>
 						<posy>-10</posy>
-						<width>452</width>
+						<width>1282</width>
 						<height>702</height>
 						<texture border="40">arctic/common/border-20.png</texture>
 					</control>
 					<control type="image">
-						<posx>-20</posx>
+						<posx>-10</posx>
 						<posy>10</posy>
-						<width>412</width>
+						<width>1242</width>
 						<height>662</height>
 						<texture border="15">arctic/common/panel.png</texture>
 					</control>
-					<!--<include>ViewOptions.Panel.NowPlaying</include>-->
 				</control>
                 <control type="image">
                     <posx>0</posx>
                     <posy>15</posy>
-                    <width>380</width>
+                    <width>1220</width>
                     <height>107</height>
                     <texture border="5">views/other/focus-mod.png</texture>
                     <animation effect="slide" end="0,107" time="0" condition="ControlGroup(9001).HasFocus(33)">Conditional</animation>

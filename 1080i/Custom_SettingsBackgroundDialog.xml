@@ -19,7 +19,7 @@
             	<posy>295</posy>
             	<width>80</width>
             	<height>80</height>
-            	<texture>windows/home/icons/photos2.png</texture>
+            	<texture>special://skin/extras/icons/photos2.png</texture>
             	<aspectratio>keep</aspectratio>
             </control>
             <control type="label">

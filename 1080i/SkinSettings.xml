@@ -125,43 +125,43 @@
                             <description>General Settings</description>
                             <label>$LOCALIZE[41100]</label>
                             <onclick>noop</onclick>
-							<icon>windows/home/icons/config.png</icon>
+							<icon>special://skin/extras/icons/config.png</icon>
                         </item>
                         <item id="32">
                             <description>Home Settings</description>
                             <label>$LOCALIZE[41130]</label>
                             <onclick>noop</onclick>
-							<icon>windows/home/icons/settings.png</icon>
+							<icon>special://skin/extras/icons/settings.png</icon>
                         </item>
                         <item id="33">
                             <description>Media Settings</description>
                             <label>$LOCALIZE[41190]</label>
                             <onclick>noop</onclick>
-							<icon>windows/home/icons/photos2.png</icon>
+							<icon>special://skin/extras/icons/photos2.png</icon>
                         </item>
                         <item id="34">
                             <description>OSD Settings</description>
                             <label>$LOCALIZE[478]</label>
                             <onclick>noop</onclick>
-							<icon>windows/home/icons/musicvideos.png</icon>
+							<icon>special://skin/extras/icons/musicvideos.png</icon>
                         </item>
                         <item id="35">
                             <description>Background Settings</description>
                             <label>$LOCALIZE[41250]</label>
                             <onclick>noop</onclick>
-                            <icon>windows/home/icons/skin.png</icon>
+                            <icon>special://skin/extras/icons/skin.png</icon>
                         </item>
                         <item id="36">
                             <description>Guide menu Settings</description>
                             <label>$LOCALIZE[41460]</label>
                             <onclick>noop</onclick>
-							<icon>windows/home/icons/tvguide.png</icon>
+							<icon>special://skin/extras/icons/tvguide.png</icon>
                         </item>
                         <item id="38">
                             <description>Add-on Settings</description>
                             <label>$LOCALIZE[41280]</label>
                             <onclick>noop</onclick>
-							<icon>windows/home/icons/addons.png</icon>
+							<icon>special://skin/extras/icons/addons.png</icon>
                         </item>
                     </content>
                 </control>

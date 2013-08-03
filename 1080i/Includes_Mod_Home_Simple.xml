@@ -112,7 +112,7 @@
 						<posy>-28</posy>
 						<width>380</width>
 						<height>380</height>
-						<texture>windows/home/icons/music.png</texture>
+						<texture>special://skin/extras/icons/music.png</texture>
 						<aspectratio align="right" aligny="center">keep</aspectratio>
 						<visible>Container(525).HasFocus(3)</visible>
 						<colordiffuse>mod-infotags-alt</colordiffuse>
@@ -580,7 +580,7 @@
 									<posy>0</posy>
 									<width>169</width>
 									<height>169</height>
-									<texture fallback="windows/home/icons/addtile.png">$INFO[ListItem.Property(poster)]</texture>
+									<texture fallback="special://skin/extras/icons/addtile.png">$INFO[ListItem.Property(poster)]</texture>
 									<colordiffuse>mod-infotags-alt</colordiffuse>
 								</control>
 								<control type="label">
@@ -690,7 +690,7 @@
 									<posy>0</posy>
 									<width>169</width>
 									<height>169</height>
-									<texture fallback="windows/home/icons/addtile.png">$INFO[ListItem.Property(poster)]</texture>
+									<texture fallback="special://skin/extras/icons/addtile.png">$INFO[ListItem.Property(poster)]</texture>
 									<colordiffuse>mod-infotags-alt</colordiffuse>
 								</control>
 								<control type="label">

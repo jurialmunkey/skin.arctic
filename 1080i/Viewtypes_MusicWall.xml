@@ -37,15 +37,6 @@
                         <colordiffuse>ffcccccc</colordiffuse>
                         <aspectratio>stretch</aspectratio>
                     </control>
-                    <control type="image">
-						<description>Glass</description>
-						<posx>6</posx>
-						<posy>6</posy>
-						<width>226</width>
-						<height>226</height>
-						<texture border="25">arctic/common/glass-ring.png</texture>
-						<visible>Skin.HasSetting(covers.showglass)</visible>
-					</control>
                     <control type="group">
 						<visible>Container.Content(artists)</visible>
 						<control type="image">
@@ -258,15 +249,6 @@
                             <aspectratio scalediffuse="false">stretch</aspectratio>
                             <texture background="true" diffuse="views/newgloss/musicwall-diffuse.png" fallback="views/fallbacks/DefaultAlbumCover.png/square-large.png">$VAR[WallPoster]</texture>
                         </control>
-                        <control type="image">
-							<description>Glass</description>
-							<posx>6</posx>
-							<posy>6</posy>
-							<width>226</width>
-							<height>226</height>
-							<texture border="25">arctic/common/glass-ring.png</texture>
-							<visible>Skin.HasSetting(covers.showglass)</visible>
-						</control>
 
                         <control type="group">
 							<visible>Container.Content(artists)</visible>

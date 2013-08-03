@@ -115,7 +115,7 @@
             	<posy>232</posy>
             	<width>100</width>
             	<height>100</height>
-            	<texture>windows/home/icons/addons.png</texture>
+            	<texture>special://skin/extras/icons/addons.png</texture>
             	<aspectratio>keep</aspectratio>
             </control>
             <control type="label" id="20">
@@ -596,7 +596,7 @@
             	<posy>244</posy>
             	<width>80</width>
             	<height>80</height>
-            	<texture>windows/home/icons/config.png</texture>
+            	<texture>special://skin/extras/icons/config.png</texture>
             	<aspectratio>keep</aspectratio>
             	<animation effect="slide" end="0,-44" condition="Control.IsVisible(6)">Conditional</animation>
             </control>
@@ -1664,7 +1664,7 @@
             	<posy>184</posy>
             	<width>70</width>
             	<height>70</height>
-            	<texture>windows/home/icons/info.png</texture>
+            	<texture>special://skin/extras/icons/info.png</texture>
             	<aspectratio>keep</aspectratio>
             </control>
             <control type="label">
@@ -1877,7 +1877,7 @@
                 <textoffsetx>30</textoffsetx>
                 <label>$INFO[ListItem.Title]</label>
                 <font>Font-Alaska-S36-BL</font>
-                <textcolor>mod-infotags-d</textcolor>
+                <textcolor>$VAR[osd.text.dark]</textcolor>
                 <shadowcolor>33ffffff</shadowcolor>
             </control>
             <control type="label">
@@ -1890,13 +1890,13 @@
                 <textoffsetx>30</textoffsetx>
                 <label>$INFO[ListItem.ChannelName]</label>
                 <font>Font-Alaska-S28-L</font>
-                <textcolor>mod-infotags-d</textcolor>
+                <textcolor>$VAR[osd.text.dark]</textcolor>
                 <shadowcolor>33ffffff</shadowcolor>
             </control>
             <control type="group">
                 <posx>0</posx>
                 <posy>124</posy>
-                <control type="button">
+                <control type="label">
                 	<description>Time</description>
                 	<posx>0</posx>
                 	<posy>0</posy>
@@ -1906,13 +1906,26 @@
                 	<textoffsetx>30</textoffsetx>
                 	<textwidth>440</textwidth>
                 	<font>Font-Alaska-S28-L</font>
-                	<textcolor>mod-infotags</textcolor>
-                	<disabledcolor>mod-infotags</disabledcolor>
+                	<textcolor>$VAR[osd.text.normal]</textcolor>
+                	<disabledcolor>$VAR[osd.text.normal]</disabledcolor>
                 	<label>[B]$LOCALIZE[142][/B]</label>
-                	<label2>$INFO[ListItem.StartTime] - $INFO[ListItem.EndTime] ($INFO[ListItem.StartDate])</label2>
                 	<enable>false</enable>
                 </control>
-                <control type="button">
+                <control type="label">
+                	<description>Time</description>
+                	<posx>580</posx>
+                	<posy>0</posy>
+                	<width>580</width>
+                	<height>70</height>
+                	<align>right</align>
+                	<textoffsetx>30</textoffsetx>
+                	<textwidth>440</textwidth>
+                	<font>Font-Alaska-S28-L</font>
+                	<textcolor>$VAR[osd.text.normal]</textcolor>
+                	<disabledcolor>$VAR[osd.text.normal]</disabledcolor>
+                	<label>$INFO[ListItem.StartTime] - $INFO[ListItem.EndTime] ($INFO[ListItem.StartDate])</label>
+                </control>
+                <control type="label">
                 	<description>Duration</description>
                 	<posx>0</posx>
                 	<posy>40</posy>
@@ -1922,13 +1935,26 @@
                 	<textoffsetx>30</textoffsetx>
                 	<textwidth>440</textwidth>
                 	<font>Font-Alaska-S28-L</font>
-                	<textcolor>mod-infotags</textcolor>
-                	<disabledcolor>mod-infotags</disabledcolor>
+                	<textcolor>$VAR[osd.text.normal]</textcolor>
+                	<disabledcolor>$VAR[osd.text.normal]</disabledcolor>
                 	<label>[B]$LOCALIZE[180]:[/B]</label>
-                	<label2>[COLOR=mod-infotags-l]$INFO[ListItem.Duration][/COLOR]</label2>
                 	<enable>false</enable>
                 </control>
-                <control type="button">
+                <control type="label">
+                	<description>Duration</description>
+                	<posx>580</posx>
+                	<posy>40</posy>
+                	<width>580</width>
+                	<height>70</height>
+                	<align>right</align>
+                	<textoffsetx>30</textoffsetx>
+                	<textwidth>440</textwidth>
+                	<font>Font-Alaska-S28-L</font>
+                	<textcolor>$VAR[osd.text.normal]</textcolor>
+                	<disabledcolor>$VAR[osd.text.normal]</disabledcolor>
+                	<label>$INFO[ListItem.Duration]</label>
+                </control>
+                <control type="label">
                 	<description>Genre</description>
                 	<posx>0</posx>
                 	<posy>80</posy>
@@ -1938,10 +1964,24 @@
                 	<textoffsetx>30</textoffsetx>
                 	<textwidth>440</textwidth>
                 	<font>Font-Alaska-S28-L</font>
-                	<textcolor>mod-infotags</textcolor>
-                	<disabledcolor>mod-infotags</disabledcolor>
+                	<textcolor>$VAR[osd.text.normal]</textcolor>
+                	<disabledcolor>$VAR[osd.text.normal]</disabledcolor>
                 	<label>[B]$LOCALIZE[135]:[/B]</label>
-                	<label2 fallback="161">[COLOR=mod-infotags-l]$INFO[ListItem.Genre][/COLOR]</label2>
+                	<enable>false</enable>
+                </control>
+                <control type="label">
+                	<description>Genre</description>
+                	<posx>580</posx>
+                	<posy>80</posy>
+                	<width>580</width>
+                	<height>70</height>
+                	<align>right</align>
+                	<textoffsetx>30</textoffsetx>
+                	<textwidth>440</textwidth>
+                	<font>Font-Alaska-S28-L</font>
+                	<textcolor>$VAR[osd.text.normal]</textcolor>
+                	<disabledcolor>$VAR[osd.text.normal]</disabledcolor>
+                	<label fallback="161">$INFO[ListItem.Genre]</label>
                 	<enable>false</enable>
                 </control>
             </control>
@@ -1953,7 +1993,7 @@
             	<height>620</height>
             	<font>Font-Condensed-S34</font>
             	<align>justify</align>
-            	<textcolor>mod-infotags</textcolor>
+            	<textcolor>$VAR[osd.text.normal]</textcolor>
             	<pagecontrol>60</pagecontrol>
             	<autoscroll delay="10000" time="3000" repeat="6000">!Control.HasFocus(60)</autoscroll>
             	<label fallback="161">$INFO[ListItem.Plot]</label>
@@ -1982,7 +2022,7 @@
                     <description>Select</description>
                     <texturefocus>buttons/cancel-fo.png</texturefocus>
                     <texturenofocus>buttons/cancel-nf.png</texturenofocus>
-                    <textcolor>mod-infotags</textcolor>
+                    <textcolor>$VAR[osd.text.normal]</textcolor>
                     <focusedcolor>ff0088bb</focusedcolor>
                     <include>DialogButtonDimensions</include>
                     <label>$LOCALIZE[42002]</label>
@@ -1997,7 +2037,7 @@
                     <label>$LOCALIZE[19165]</label>
                     <texturefocus>buttons/switch-fo.png</texturefocus>
                     <texturenofocus>buttons/switch-nf.png</texturenofocus>
-                    <textcolor>mod-infotags</textcolor>
+                    <textcolor>$VAR[osd.text.normal]</textcolor>
                     <focusedcolor>ff0088bb</focusedcolor>
                     <include>DialogButtonDimensions</include>
                     <onleft>7</onleft>
@@ -2009,7 +2049,7 @@
                     <posx>235</posx>
                     <description>Record</description>
                     <label>-</label>
-                    <textcolor>mod-infotags</textcolor>
+                    <textcolor>$VAR[osd.text.normal]</textcolor>
                     <focusedcolor>ff0088bb</focusedcolor>
                     <include>DialogButtonDimensionsRightAlign</include>
                     <texturefocus>buttons/record-fo.png</texturefocus>
@@ -2068,7 +2108,7 @@
 					<posy>237</posy>
 					<width>80</width>
 					<height>80</height>
-					<texture>windows/home/icons/recordings.png</texture>
+					<texture>special://skin/extras/icons/recordings.png</texture>
 					<aspectratio>keep</aspectratio>
 				</control> 
                 <control type="label" id="411">

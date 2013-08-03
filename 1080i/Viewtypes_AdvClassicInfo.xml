@@ -76,15 +76,6 @@
                             <include>overlay.visibility</include>
                         </control>
                         <control type="image">
-                            <description>Glass</description>
-                            <posx>-32</posx>
-                            <posy>10</posy>
-                            <width>374</width>
-                            <height>561</height>
-                            <texture border="25">arctic/common/glass-ring.png</texture>
-                            <visible>Skin.HasSetting(covers.showglass)</visible>
-                        </control>
-                        <control type="image">
                             <description>Border</description>
                             <posx>-42</posx>
                             <posy>0</posy>
@@ -94,24 +85,6 @@
                             <aspectratio>stretch</aspectratio>
                             <colordiffuse>Mod_Border</colordiffuse>
                         </control> 
-                        <control type="image">
-                            <description>Case Back</description>
-                            <posx>-42</posx>
-                            <posy>0</posy>
-                            <width>394</width>
-                            <height>581</height>
-                            <texture border="100">overlays/aeon/glass.png</texture>
-                            <visible>Skin.HasSetting(covers.showcases)</visible>
-                        </control>
-                        <control type="image">
-                            <description>Case Front</description>
-                            <posx>-42</posx>
-                            <posy>-55</posy>
-                            <width>394</width>
-                            <height>636</height>
-                            <texture border="100">overlays/aeon/dvd.png</texture>
-                            <visible>Skin.HasSetting(covers.showcases)</visible>
-                        </control>
                     </control>
                 </itemlayout>
                 <focusedlayout width="280">
@@ -189,15 +162,6 @@
                             <include>overlay.visibility</include>
                         </control>
                         <control type="image">
-                            <description>Glass</description>
-                            <posx>-32</posx>
-                            <posy>10</posy>
-                            <width>374</width>
-                            <height>561</height>
-                            <texture border="25">arctic/common/glass-ring.png</texture>
-                            <visible>Skin.HasSetting(covers.showglass)</visible>
-                        </control>
-                        <control type="image">
                             <description>Border</description>
                             <posx>-42</posx>
                             <posy>0</posy>
@@ -207,24 +171,6 @@
                             <aspectratio>stretch</aspectratio>
                             <colordiffuse>Mod_Border</colordiffuse>
                         </control> 
-                        <control type="image">
-                            <description>Case Back</description>
-                            <posx>-42</posx>
-                            <posy>0</posy>
-                            <width>394</width>
-                            <height>581</height>
-                            <texture border="100">overlays/aeon/glass.png</texture>
-                            <visible>Skin.HasSetting(covers.showcases)</visible>
-                        </control>
-                        <control type="image">
-                            <description>Case Front</description>
-                            <posx>-42</posx>
-                            <posy>-55</posy>
-                            <width>394</width>
-                            <height>636</height>
-                            <texture border="100">overlays/aeon/dvd.png</texture>
-                            <visible>Skin.HasSetting(covers.showcases)</visible>
-                        </control>
                     </control>
                 </focusedlayout>
             </control>

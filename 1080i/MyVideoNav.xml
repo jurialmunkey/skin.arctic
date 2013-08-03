@@ -1,7 +1,7 @@
 <window>
     <defaultcontrol always="true">50</defaultcontrol>
     <allowoverlay>yes</allowoverlay>
-    <views>50,51,52,53,54,55,56,57,58,59,60,61,62,63,64</views>
+    <views>50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,500</views>
     <backgroundcolor>0</backgroundcolor>
     <onload condition="System.HasAddon(script.tvtunes) + Library.HasContent(TVShows) + !Player.HasMedia + Skin.HasSetting(TVTunes.Enabled)">RunScript(script.tvtunes,backend=True&amp;loop=False)</onload>
     <onload condition="System.HasAddon(script.tv.show.next.aired) + Library.HasContent(TVShows) + Skin.HasSetting(NextAired.Enabled)">RunScript(script.tv.show.next.aired,backend=True)</onload>
@@ -36,7 +36,7 @@
                     <posx>0</posx>
                     <posy>20</posy>
                     <width>400</width>
-                    <height>720</height>
+                    <height>880</height>
                     <itemgap>0</itemgap>
                     <onleft>50</onleft>
                     <onright>50</onright>
@@ -95,41 +95,41 @@
                     	<item id="1">
                     		<description>View Mode</description>
                     		<label>$INFO[Container.ViewMode]</label>
-                    		<icon>windows/home/icons/config.png</icon>
+                    		<icon>special://skin/extras/icons/config.png</icon>
 							<onclick>setfocus(201)</onclick>
 							<visible>true</visible>
                     	</item>
                     	<item id="2">
 							<description>View Options</description>
                     		<label>14018</label>
-                    		<icon>windows/home/icons/config2.png</icon>
+                    		<icon>special://skin/extras/icons/config2.png</icon>
 							<onclick>setfocus(101)</onclick>
 							<visible>true</visible>
                     	</item>
                     	<item id="3">
                     		<description>TV Next Aired</description>
-                    		<icon>windows/home/icons/tvguide.png</icon>
+                    		<icon>special://skin/extras/icons/tvguide.png</icon>
 							<label>42160</label>
 							<onclick>RunAddon(script.tv.show.next.aired)</onclick>
 							<visible>[Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes)] + System.HasAddon(script.tv.show.next.aired)</visible>
                     	</item>
                     	<item id="4">
                     		<description>Update Art</description>
-                    		<icon>windows/home/icons/arrows.png</icon>
+                    		<icon>special://skin/extras/icons/arrows.png</icon>
 							<label>42025</label>
 							<onclick>XBMC.RunScript(script.artwork.downloader,mode=custom,mediatype=tvshow,landscape,clearlogo,clearart)</onclick>
 							<visible>Container.Content(TVShows) + System.HasAddon(script.artwork.downloader)</visible>
                     	</item>
                     	<item id="5">
                     		<description>Update Art</description>
-                    		<icon>windows/home/icons/arrows.png</icon>
+                    		<icon>special://skin/extras/icons/arrows.png</icon>
 							<label>42025</label>
 							<onclick>XBMC.RunScript(script.artwork.downloader,mode=custom,mediatype=movie,landscape,clearlogo,clearart)</onclick>
 							<visible>Container.Content(Movies) + System.HasAddon(script.artwork.downloader)</visible>
                     	</item>
                     	<item id="6">
                     		<description>Metadata Actors</description>
-                    		<icon>windows/home/icons/profiles.png</icon>
+                    		<icon>special://skin/extras/icons/profiles.png</icon>
 							<label>344</label>
 							<onclick>Action(left)</onclick>
 							<onclick>SetProperty(metadata.actors,1,home)</onclick>
@@ -138,40 +138,40 @@
                     	</item>
                     	<item id="7">
                     		<description>Sort</description>
-                    		<icon>windows/home/icons/epg.png</icon>
+                    		<icon>special://skin/extras/icons/epg.png</icon>
 							<label>$INFO[Container.SortMethod]</label>
 							<onclick>SendClick(3)</onclick>
                     	</item>
                     	<item id="8">
                     		<description>Ascending</description>
-                    		<icon>windows/home/icons/thumbup.png</icon>
+                    		<icon>special://skin/extras/icons/thumbup.png</icon>
 							<label>584</label>
 							<onclick>SendClick(4)</onclick>
 							<visible>StringCompare(Control.GetLabel(4),$LOCALIZE[584])</visible>
                     	</item>
                     	<item id="9">
                     		<description>Descending</description>
-                    		<icon>windows/home/icons/thumbdown.png</icon>
+                    		<icon>special://skin/extras/icons/thumbdown.png</icon>
 							<label>585</label>
 							<onclick>SendClick(4)</onclick>
 							<visible>StringCompare(Control.GetLabel(4),$LOCALIZE[585])</visible>
                     	</item>
                     	<item id="10">
                     		<description>Search</description>
-                    		<icon>windows/home/icons/search-tv.png</icon>
+                    		<icon>special://skin/extras/icons/search-tv.png</icon>
 							<label>137</label>
 							<onclick>SendClick(8)</onclick>
                     	</item>
                     	<item id="11">
                     		<description>Filter</description>
 							<label>587</label>
-							<icon>windows/home/icons/cloud.png</icon>
+							<icon>special://skin/extras/icons/cloud.png</icon>
 							<onclick>SendClick(19)</onclick>
 							<visible>Container.CanFilter + !Container.CanFilterAdvanced</visible>
                     	</item>
                     	<item id="12">
                     		<description>Filter Adv On</description>
-                    		<icon>windows/home/icons/yes.png</icon>
+                    		<icon>special://skin/extras/icons/yes.png</icon>
 							<label>587</label>
 							<onclick>SetFocus(50)</onclick>
 							<onclick>Filter</onclick>
@@ -179,7 +179,7 @@
                     	</item>
                     	<item id="13">
                     		<description>Filter Adv Off</description>
-                    		<icon>windows/home/icons/no.png</icon>
+                    		<icon>special://skin/extras/icons/no.png</icon>
 							<label>587</label>
 							<onclick>SetFocus(50)</onclick>
 							<onclick>Filter</onclick>
@@ -188,40 +188,40 @@
                     	<item id="14">
                     		<description>Files</description>
 							<label>744</label>
-							<icon>windows/home/icons/recordings.png</icon>
+							<icon>special://skin/extras/icons/recordings.png</icon>
 							<onclick>ActivateWindow(Videos,Files,return)</onclick>
 							<onclick>setfocus(50)</onclick>
                     	</item>
                     	<item id="15">
                     		<description>Watched Toggle</description>
-                    		<icon>windows/home/icons/yes.png</icon>
+                    		<icon>special://skin/extras/icons/yes.png</icon>
 							<label>20367</label>
 							<onclick>SendClick(14)</onclick>
-							<icon>windows/home/icons/yes.png</icon>
+							<icon>special://skin/extras/icons/yes.png</icon>
 							<visible>SubString(Control.GetLabel(14),*)</visible>
                     	</item>
                     	<item id="16">
                     		<description>Watched Toggle</description>
-                    		<icon>windows/home/icons/no.png</icon>
+                    		<icon>special://skin/extras/icons/no.png</icon>
 							<label>20367</label>
 							<onclick>SendClick(14)</onclick>
-							<icon>windows/home/icons/yes.png</icon>
+							<icon>special://skin/extras/icons/yes.png</icon>
 							<visible>!SubString(Control.GetLabel(14),*)</visible>
                     	</item>
                     	<item id="17">
                     		<description>Flatten Toggle</description>
-                    		<icon>windows/home/icons/no.png</icon>
+                    		<icon>special://skin/extras/icons/no.png</icon>
 							<label>20411</label>
 							<onclick>SendClick(17)</onclick>
-							<icon>windows/home/icons/yes.png</icon>
+							<icon>special://skin/extras/icons/yes.png</icon>
 							<visible>!SubString(Control.GetLabel(17),*)</visible>
                     	</item>
                     	<item id="18">
                     		<description>Flatten Toggle</description>
-                    		<icon>windows/home/icons/yes.png</icon>
+                    		<icon>special://skin/extras/icons/yes.png</icon>
 							<label>20411</label>
 							<onclick>SendClick(17)</onclick>
-							<icon>windows/home/icons/yes.png</icon>
+							<icon>special://skin/extras/icons/yes.png</icon>
 							<visible>SubString(Control.GetLabel(17),*)</visible>
                     	</item>
                     </content>
@@ -456,6 +456,18 @@
                         <radioposx>-19</radioposx>
                         <visible>Skin.HasSetting(showdiscart) + Container.Content(movies) + [Control.IsVisible(52) | Control.IsVisible(58) | Control.IsVisible(59) | Control.IsVisible(60)]</visible>
                     </control>
+                    <!-- Small thumbs in thumbnail -->
+                    <control type="radiobutton" id="119">
+                        <description>Use small thumbs in thumbnail view</description>
+                        <include>ViewOptions.Button</include>
+                        <label>$LOCALIZE[42024]</label>
+                        <onclick>Skin.ToggleSetting(ThumbnailSmall)</onclick>
+                        <selected>Skin.HasSetting(ThumbnailSmall)</selected>
+                        <visible>Control.IsVisible(500)</visible>
+                        <textureradioon>buttons/radio/options-radio-button-fo.png</textureradioon>
+                        <textureradiooff>buttons/radio/options-radio-button-nf.png</textureradiooff>
+                        <radioposx>-19</radioposx>
+                    </control>
                     
                     
                     <!-- GLOBAL OPTIONS -->
@@ -499,7 +511,7 @@
                     <posx>0</posx>
                     <posy>20</posy>
                     <width>400</width>
-                    <height>720</height>
+                    <height>900</height>
                     <itemgap>0</itemgap>
                     <onleft>9111</onleft>
                     <onright>9111</onright>
@@ -564,7 +576,7 @@
                         <textureradiofocus>buttons/radio/options-radio-button-fo.png</textureradiofocus>
                         <textureradionofocus>buttons/radio/options-radio-button-nf.png</textureradionofocus>
                         <radioposx>-19</radioposx>
-                        <visible>!Container.Content(genres) + !Container.Content(years) + !Container.Content(actors) + !Container.Content(directors) + !Container.Content(studios)</visible>
+                        <visible>Container.Content(episodes) | Container.Content(Seasons) | Container.Content(tvshows) | Container.Content(movies)  | Container.Content(Sets)</visible>
                     </control>
                     <!-- Wide Banner -->
                     <control type="radiobutton" id="207">
@@ -685,6 +697,19 @@
                         <textureradionofocus>buttons/radio/options-radio-button-nf.png</textureradionofocus>
                         <radioposx>-19</radioposx>
                         <visible>Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons)</visible>
+                    </control>
+                    <!-- Thumbnail -->
+                    <control type="radiobutton" id="217">
+                        <description>Thumbnail</description>
+                        <include>ViewOptions.Button</include>
+                        <label>$LOCALIZE[21371]</label>
+                        <texturefocus border="2">dialogs/options/buttons/default-fo.png</texturefocus>
+                        <onclick>Container.SetViewMode(500)</onclick>
+                        <selected>Control.IsVisible(500)</selected>
+                        <textureradioon>buttons/radio/options-radio-button-fo.png</textureradioon>
+                        <textureradiooff>buttons/radio/options-radio-button-nf.png</textureradiooff>
+                        <radioposx>-19</radioposx>
+                        <visible>substring(Container.FolderPath,addons,left) | substring(Container.FolderPath,plugin,left) | Container.HasFiles</visible>
                     </control>
                 </control>                      
             </control>

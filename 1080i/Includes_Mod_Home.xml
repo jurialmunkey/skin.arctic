@@ -808,7 +808,7 @@
 							<posy>-25</posy>
 							<width>383</width>
 							<height>383</height>
-							<texture>windows/home/icons/info.png</texture>
+							<texture>special://skin/extras/icons/info.png</texture>
 							<colordiffuse>mod-infotags-d</colordiffuse>
 							<aspectratio align="center" aligny="center">keep</aspectratio>
 							<visible>!Container(525).HasFocus(7) | Control.HasFocus(84)</visible>
@@ -818,7 +818,7 @@
 							<posy>-25</posy>
 							<width>383</width>
 							<height>383</height>
-							<texture>windows/home/icons/addons.png</texture>
+							<texture>special://skin/extras/icons/addons.png</texture>
 							<colordiffuse>mod-infotags-d</colordiffuse>
 							<aspectratio align="center" aligny="center">keep</aspectratio>
 							<visible>Container(525).HasFocus(7) + !Control.HasFocus(84)</visible>
@@ -910,7 +910,7 @@
 							<posy>-25</posy>
 							<width>383</width>
 							<height>383</height>
-							<texture>windows/home/icons/tvguide.png</texture>
+							<texture>special://skin/extras/icons/tvguide.png</texture>
 							<colordiffuse>mod-infotags-d</colordiffuse>
 							<aspectratio align="center" aligny="center">keep</aspectratio>
 						</control>

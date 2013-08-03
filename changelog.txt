@@ -46,3 +46,13 @@ Fixed text color visibility in add on settings
 Revamp of view and power menu
 Revamp of Context menu 
   - Still to do: pictures/addons menu
+Added options for dark/light osd
+Altered plot size for readability
+Modified channels and epg osd for pvr readability
+Removed videowindow from pvr slide out menu for animation speed/smoothness
+
+[B]0.2.6[/B]
+Massive cleanup of unused images, repo size now 55mb
+Moved out studioflags, audioflags, to extras folder
+Moved out icons to extras folder
+Cleaned up left over code from glass rings, borders and covers

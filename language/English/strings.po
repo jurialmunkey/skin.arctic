@@ -1125,7 +1125,7 @@ msgid "Scrolling text effect"
 msgstr ""
 
 msgctxt "#42419"
-msgid "Full width top bar"
+msgid "Full width top bar for video"
 msgstr ""
 
 msgctxt "#42420"
@@ -1186,4 +1186,8 @@ msgstr ""
 
 msgctxt "#42434"
 msgid "Show in-progress indicators"
+msgstr ""
+
+msgctxt "#42435"
+msgid "Use light osd"
 msgstr ""

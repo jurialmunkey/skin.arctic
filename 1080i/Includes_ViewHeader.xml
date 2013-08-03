@@ -692,7 +692,7 @@
                 <control type="label">
                 	<include>PVRSubLabel</include>
                 	<label>$INFO[Control.GetLabel(29)]$INFO[Control.GetLabel(30),: ,]</label>
-                	<animation effect="fade" start="100" end="0" time="250" condition="ControlGroup(9001).HasFocus">Conditional</animation>
+                	<!--<animation effect="fade" start="100" end="0" time="250" condition="ControlGroup(9001).HasFocus">Conditional</animation>-->
                 	<!--<label>$INFO[ListItem.Label]</label>-->
                 	<!--<visible>!ControlGroup(9001).HasFocus</visible>-->
                 </control>

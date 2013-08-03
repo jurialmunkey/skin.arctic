@@ -73,8 +73,8 @@
                         <onup>101</onup>
                         <ondown>101</ondown>
                         <onclick>ActivateWindow(appearancesettings)</onclick>
-                        <texturefocus>windows/home/icons/appearance.png</texturefocus>
-                        <texturenofocus>windows/home/icons/appearance.png</texturenofocus>
+                        <texturefocus>special://skin/extras/icons/appearance.png</texturefocus>
+                        <texturenofocus>special://skin/extras/icons/appearance.png</texturenofocus>
                         <colordiffuse>$VAR[SettingsIcon100]</colordiffuse>
                     </control>
                 </control>
@@ -106,8 +106,8 @@
                         <onup>100</onup>
                         <ondown>100</ondown>
                         <onclick>ActivateWindow(servicesettings)</onclick>
-                        <texturefocus>windows/home/icons/network.png</texturefocus>
-                        <texturenofocus>windows/home/icons/network.png</texturenofocus>
+                        <texturefocus>special://skin/extras/icons/network.png</texturefocus>
+                        <texturenofocus>special://skin/extras/icons/network.png</texturenofocus>
                         <colordiffuse>$VAR[SettingsIcon101]</colordiffuse>
                     </control>
                 </control>
@@ -148,8 +148,8 @@
                         <onup>103</onup>
                         <ondown>103</ondown>
                         <onclick>ActivateWindow(videossettings)</onclick>
-                        <texturefocus>windows/home/icons/video.png</texturefocus>
-                        <texturenofocus>windows/home/icons/video.png</texturenofocus>
+                        <texturefocus>special://skin/extras/icons/video.png</texturefocus>
+                        <texturenofocus>special://skin/extras/icons/video.png</texturenofocus>
                         <colordiffuse>$VAR[SettingsIcon102]</colordiffuse>
                     </control>
                 </control>
@@ -181,8 +181,8 @@
                         <onup>102</onup>
                         <ondown>102</ondown>
                         <onclick>ActivateWindow(profiles)</onclick>
-                        <texturefocus>windows/home/icons/profiles.png</texturefocus>
-                        <texturenofocus>windows/home/icons/profiles.png</texturenofocus>
+                        <texturefocus>special://skin/extras/icons/profiles.png</texturefocus>
+                        <texturenofocus>special://skin/extras/icons/profiles.png</texturenofocus>
                         <colordiffuse>$VAR[SettingsIcon103]</colordiffuse>
                     </control>
                 </control>
@@ -223,8 +223,8 @@
                         <onup>105</onup>
                         <ondown>105</ondown>
                         <onclick>ActivateWindow(musicsettings)</onclick>
-                        <texturefocus>windows/home/icons/music.png</texturefocus>
-                        <texturenofocus>windows/home/icons/music.png</texturenofocus>
+                        <texturefocus>special://skin/extras/icons/music.png</texturefocus>
+                        <texturenofocus>special://skin/extras/icons/music.png</texturenofocus>
                         <colordiffuse>$VAR[SettingsIcon104]</colordiffuse>
                     </control>
                 </control>
@@ -256,8 +256,8 @@
                         <onup>104</onup>
                         <ondown>104</ondown>
                         <onclick>ActivateWindow(addonbrowser)</onclick>
-                        <texturefocus>windows/home/icons/addons.png</texturefocus>
-                        <texturenofocus>windows/home/icons/addons.png</texturenofocus>
+                        <texturefocus>special://skin/extras/icons/addons.png</texturefocus>
+                        <texturenofocus>special://skin/extras/icons/addons.png</texturenofocus>
                         <colordiffuse>$VAR[SettingsIcon105]</colordiffuse>
                     </control>
                 </control>
@@ -298,8 +298,8 @@
                         <onup>107</onup>
                         <ondown>107</ondown>
                         <onclick>ActivateWindow(picturessettings)</onclick>
-                        <texturefocus>windows/home/icons/pictures.png</texturefocus>
-                        <texturenofocus>windows/home/icons/pictures.png</texturenofocus>
+                        <texturefocus>special://skin/extras/icons/pictures.png</texturefocus>
+                        <texturenofocus>special://skin/extras/icons/pictures.png</texturenofocus>
                         <colordiffuse>$VAR[SettingsIcon106]</colordiffuse>
                     </control>
                 </control>
@@ -331,8 +331,8 @@
                         <onup>106</onup>
                         <ondown>106</ondown>
                         <onclick>ActivateWindow(skinsettings)</onclick>
-                        <texturefocus>windows/home/icons/skin.png</texturefocus>
-                        <texturenofocus>windows/home/icons/skin.png</texturenofocus>
+                        <texturefocus>special://skin/extras/icons/skin.png</texturefocus>
+                        <texturenofocus>special://skin/extras/icons/skin.png</texturenofocus>
                         <colordiffuse>$VAR[SettingsIcon107]</colordiffuse>
                     </control>
                 </control>
@@ -373,8 +373,8 @@
                         <onup>109</onup>
                         <ondown>109</ondown>
                         <onclick>ActivateWindow(pvrsettings)</onclick>
-                        <texturefocus>windows/home/icons/tvshows.png</texturefocus>
-                        <texturenofocus>windows/home/icons/tvshows.png</texturenofocus>
+                        <texturefocus>special://skin/extras/icons/tvshows.png</texturefocus>
+                        <texturenofocus>special://skin/extras/icons/tvshows.png</texturenofocus>
                         <colordiffuse>$VAR[SettingsIcon108]</colordiffuse>
                     </control>
                 </control>
@@ -406,8 +406,8 @@
                         <onup>108</onup>
                         <ondown>108</ondown>
                         <onclick>ActivateWindow(systemsettings)</onclick>
-                        <texturefocus>windows/home/icons/system.png</texturefocus>
-                        <texturenofocus>windows/home/icons/system.png</texturenofocus>
+                        <texturefocus>special://skin/extras/icons/system.png</texturefocus>
+                        <texturenofocus>special://skin/extras/icons/system.png</texturenofocus>
                         <colordiffuse>$VAR[SettingsIcon109]</colordiffuse>
                     </control>
                 </control>
@@ -448,8 +448,8 @@
                         <onup>111</onup>
                         <ondown>111</ondown>
                         <onclick>ActivateWindow(weathersettings)</onclick>
-                        <texturefocus>windows/home/icons/weather.png</texturefocus>
-                        <texturenofocus>windows/home/icons/weather.png</texturenofocus>
+                        <texturefocus>special://skin/extras/icons/weather.png</texturefocus>
+                        <texturenofocus>special://skin/extras/icons/weather.png</texturenofocus>
                         <colordiffuse>$VAR[SettingsIcon110]</colordiffuse>
                     </control>
                 </control>
@@ -481,8 +481,8 @@
                         <onup>110</onup>
                         <ondown>110</ondown>
                         <onclick>ActivateWindow(systeminfo)</onclick>
-                        <texturefocus>windows/home/icons/sysinfo.png</texturefocus>
-                        <texturenofocus>windows/home/icons/sysinfo.png</texturenofocus>
+                        <texturefocus>special://skin/extras/icons/sysinfo.png</texturefocus>
+                        <texturenofocus>special://skin/extras/icons/sysinfo.png</texturenofocus>
                         <colordiffuse>$VAR[SettingsIcon111]</colordiffuse>
                     </control>                    
                 </control>

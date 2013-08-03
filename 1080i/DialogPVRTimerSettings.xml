@@ -25,7 +25,7 @@
             	<posy>150</posy>
             	<width>80</width>
             	<height>80</height>
-            	<texture>windows/home/icons/timers.png</texture>
+            	<texture>special://skin/extras/icons/timers.png</texture>
             	<aspectratio>keep</aspectratio>
             </control>
     	    <control type="label" id="2">

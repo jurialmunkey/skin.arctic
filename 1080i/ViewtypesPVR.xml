@@ -19,10 +19,10 @@
 	</include>
 	
 	<include name="pvr.menu.slide">
-		<animation effect="slide" start="0" end="360" time="300" tween="quadratic" easing="out" condition="ControlGroup(9001).HasFocus">Conditional</animation>
+		<animation effect="slide" start="0" end="400" time="300" tween="quadratic" easing="out" condition="ControlGroup(9001).HasFocus">Conditional</animation>
 	</include>
 	<include name="pvr.epg.menu.slide">
-		<animation effect="slide" start="0" end="360" time="300" tween="quadratic" easing="out" condition="ControlGroup(9001).HasFocus">Conditional</animation>
+		<animation effect="slide" start="0" end="400" time="300" tween="quadratic" easing="out" condition="ControlGroup(9001).HasFocus">Conditional</animation>
 	</include>
 	
     <include name="Viewtype-TVChannelView">

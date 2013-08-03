@@ -457,15 +457,6 @@
 						<fadetime>250</fadetime>
 					</control>
 					<control type="image">
-						<description>Glass</description>
-						<posx>35</posx>
-						<posy>-24</posy>
-						<width>444</width>
-						<height>444</height>
-						<texture border="25">arctic/common/glass-ring.png</texture>
-						<visible>Skin.HasSetting(covers.showglass)</visible>
-					</control>
-					<control type="image">
 						<posx>25</posx>
 						<posy>-34</posy>
 						<width>464</width>

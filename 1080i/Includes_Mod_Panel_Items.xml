@@ -26,7 +26,7 @@
 					<include>SettingsCustomDialogButtonVars</include>
 					<label>$LOCALIZE[41139]</label>
 					<label2>$INFO[Skin.String(Home.Movies.Tile.1.Icon)]</label2>
-					<onclick>Skin.SetFile(Home.Movies.Tile.1.Icon,.png|.jpg|.gif,special://skin/media/windows/home/icons/)</onclick>
+					<onclick>Skin.SetFile(Home.Movies.Tile.1.Icon,.png|.jpg|.gif,special://skin/extras/icons/)</onclick>
 				</control>
 				<control type="radiobutton" id="2403">
 					<textcolor>mod-infotags</textcolor>
@@ -181,7 +181,7 @@
 				<onclick>Skin.SetString(Home.Movies.Tile.1.TypeName,$LOCALIZE[41151])</onclick>
 				<onclick>Skin.Reset(Home.Movies.Tile.1.Animate)</onclick>
 				<onclick>Skin.Reset(Home.Movies.Tile.1.ShowLabel)</onclick>
-				<onclick>Skin.SetString(Home.Movies.Tile.1.Icon,windows/home/icons/video.png)</onclick>
+				<onclick>Skin.SetString(Home.Movies.Tile.1.Icon,special://skin/extras/icons/video.png)</onclick>
 				<onclick>Skin.SetString(Home.Movies.Tile.1.Label,$LOCALIZE[342])</onclick>
 			</control>
         </control>
@@ -213,7 +213,7 @@
 					<include>SettingsCustomDialogButtonVars</include>
 					<label>$LOCALIZE[41139]</label>
 					<label2>$INFO[Skin.String(Home.Movies.Tile.2.Icon)]</label2>
-					<onclick>Skin.SetFile(Home.Movies.Tile.2.Icon,.png|.jpg|.gif,special://skin/media/windows/home/icons/)</onclick>
+					<onclick>Skin.SetFile(Home.Movies.Tile.2.Icon,.png|.jpg|.gif,special://skin/extras/icons/)</onclick>
 				</control>
 				<control type="radiobutton" id="2403">
 					<textcolor>mod-infotags</textcolor>
@@ -368,7 +368,7 @@
 				<onclick>Skin.SetString(Home.Movies.Tile.2.TypeName,$LOCALIZE[41151])</onclick>
 				<onclick>Skin.Reset(Home.Movies.Tile.2.Animate)</onclick>
 				<onclick>Skin.Reset(Home.Movies.Tile.2.ShowLabel)</onclick>
-				<onclick>Skin.SetString(Home.Movies.Tile.2.Icon,windows/home/icons/newmovies.png)</onclick>
+				<onclick>Skin.SetString(Home.Movies.Tile.2.Icon,special://skin/extras/icons/newmovies.png)</onclick>
 				<onclick>Skin.SetString(Home.Movies.Tile.2.Label,$LOCALIZE[41450])</onclick>
 			</control>
         </control>
@@ -400,7 +400,7 @@
 					<include>SettingsCustomDialogButtonVars</include>
 					<label>$LOCALIZE[41139]</label>
 					<label2>$INFO[Skin.String(Home.Movies.Tile.3.Icon)]</label2>
-					<onclick>Skin.SetFile(Home.Movies.Tile.3.Icon,.png|.jpg|.gif,special://skin/media/windows/home/icons/)</onclick>
+					<onclick>Skin.SetFile(Home.Movies.Tile.3.Icon,.png|.jpg|.gif,special://skin/extras/icons/)</onclick>
 				</control>
 				<control type="radiobutton" id="2403">
 					<textcolor>mod-infotags</textcolor>
@@ -555,7 +555,7 @@
 				<onclick>Skin.SetString(Home.Movies.Tile.3.TypeName,$LOCALIZE[41151])</onclick>
 				<onclick>Skin.Reset(Home.Movies.Tile.3.Animate)</onclick>
 				<onclick>Skin.Reset(Home.Movies.Tile.3.ShowLabel)</onclick>
-				<onclick>Skin.SetString(Home.Movies.Tile.3.Icon,windows/home/icons/videoplaylist.png)</onclick>
+				<onclick>Skin.SetString(Home.Movies.Tile.3.Icon,special://skin/extras/icons/videoplaylist.png)</onclick>
 				<onclick>Skin.SetString(Home.Movies.Tile.3.Label,$LOCALIZE[136])</onclick>
 			</control>
         </control>
@@ -587,7 +587,7 @@
 					<include>SettingsCustomDialogButtonVars</include>
 					<label>$LOCALIZE[41139]</label>
 					<label2>$INFO[Skin.String(Home.Movies.Tile.4.Icon)]</label2>
-					<onclick>Skin.SetFile(Home.Movies.Tile.4.Icon,.png|.jpg|.gif,special://skin/media/windows/home/icons/)</onclick>
+					<onclick>Skin.SetFile(Home.Movies.Tile.4.Icon,.png|.jpg|.gif,special://skin/extras/icons/)</onclick>
 				</control>
 				<control type="radiobutton" id="2403">
 					<textcolor>mod-infotags</textcolor>
@@ -742,7 +742,7 @@
 				<onclick>Skin.SetString(Home.Movies.Tile.4.TypeName,$LOCALIZE[41151])</onclick>
 				<onclick>Skin.Reset(Home.Movies.Tile.4.Animate)</onclick>
 				<onclick>Skin.Reset(Home.Movies.Tile.4.ShowLabel)</onclick>
-				<onclick>Skin.SetString(Home.Movies.Tile.4.Icon,windows/home/icons/folder.png)</onclick>
+				<onclick>Skin.SetString(Home.Movies.Tile.4.Icon,special://skin/extras/icons/folder.png)</onclick>
 				<onclick>Skin.SetString(Home.Movies.Tile.4.Label,$LOCALIZE[1214])</onclick>
 			</control>
         </control>
@@ -774,7 +774,7 @@
 					<include>SettingsCustomDialogButtonVars</include>
 					<label>$LOCALIZE[41139]</label>
 					<label2>$INFO[Skin.String(Home.Movies.Tile.5.Icon)]</label2>
-					<onclick>Skin.SetFile(Home.Movies.Tile.5.Icon,.png|.jpg|.gif,special://skin/media/windows/home/icons/)</onclick>
+					<onclick>Skin.SetFile(Home.Movies.Tile.5.Icon,.png|.jpg|.gif,special://skin/extras/icons/)</onclick>
 				</control>
 				<control type="radiobutton" id="2403">
 					<textcolor>mod-infotags</textcolor>
@@ -929,7 +929,7 @@
 				<onclick>Skin.SetString(Home.Movies.Tile.5.TypeName,$LOCALIZE[41151])</onclick>
 				<onclick>Skin.Reset(Home.Movies.Tile.5.Animate)</onclick>
 				<onclick>Skin.Reset(Home.Movies.Tile.5.ShowLabel)</onclick>
-				<onclick>Skin.SetString(Home.Movies.Tile.5.Icon,windows/home/icons/thumbup.png)</onclick>
+				<onclick>Skin.SetString(Home.Movies.Tile.5.Icon,special://skin/extras/icons/thumbup.png)</onclick>
 				<onclick>Skin.SetString(Home.Movies.Tile.5.Label,$LOCALIZE[20348])</onclick>
 			</control>
         </control>
@@ -961,7 +961,7 @@
 					<include>SettingsCustomDialogButtonVars</include>
 					<label>$LOCALIZE[41139]</label>
 					<label2>$INFO[Skin.String(Home.Movies.Tile.6.Icon)]</label2>
-					<onclick>Skin.SetFile(Home.Movies.Tile.6.Icon,.png|.jpg|.gif,special://skin/media/windows/home/icons/)</onclick>
+					<onclick>Skin.SetFile(Home.Movies.Tile.6.Icon,.png|.jpg|.gif,special://skin/extras/icons/)</onclick>
 				</control>
 				<control type="radiobutton" id="2403">
 					<textcolor>mod-infotags</textcolor>
@@ -1116,7 +1116,7 @@
 				<onclick>Skin.SetString(Home.Movies.Tile.6.TypeName,$LOCALIZE[41151])</onclick>
 				<onclick>Skin.Reset(Home.Movies.Tile.6.Animate)</onclick>
 				<onclick>Skin.Reset(Home.Movies.Tile.6.ShowLabel)</onclick>
-				<onclick>Skin.SetString(Home.Movies.Tile.6.Icon,windows/home/icons/film.png)</onclick>
+				<onclick>Skin.SetString(Home.Movies.Tile.6.Icon,special://skin/extras/icons/film.png)</onclick>
 				<onclick>Skin.SetString(Home.Movies.Tile.6.Label,$LOCALIZE[135])</onclick>
 			</control>
         </control>
@@ -1148,7 +1148,7 @@
 					<include>SettingsCustomDialogButtonVars</include>
 					<label>$LOCALIZE[41139]</label>
 					<label2>$INFO[Skin.String(Home.Movies.Tile.7.Icon)]</label2>
-					<onclick>Skin.SetFile(Home.Movies.Tile.7.Icon,.png|.jpg|.gif,special://skin/media/windows/home/icons/)</onclick>
+					<onclick>Skin.SetFile(Home.Movies.Tile.7.Icon,.png|.jpg|.gif,special://skin/extras/icons/)</onclick>
 				</control>
 				<control type="radiobutton" id="2403">
 					<textcolor>mod-infotags</textcolor>
@@ -1335,7 +1335,7 @@
 					<include>SettingsCustomDialogButtonVars</include>
 					<label>$LOCALIZE[41139]</label>
 					<label2>$INFO[Skin.String(Home.Movies.Tile.8.Icon)]</label2>
-					<onclick>Skin.SetFile(Home.Movies.Tile.8.Icon,.png|.jpg|.gif,special://skin/media/windows/home/icons/)</onclick>
+					<onclick>Skin.SetFile(Home.Movies.Tile.8.Icon,.png|.jpg|.gif,special://skin/extras/icons/)</onclick>
 				</control>
 				<control type="radiobutton" id="2403">
 					<textcolor>mod-infotags</textcolor>
@@ -1522,7 +1522,7 @@
 					<include>SettingsCustomDialogButtonVars</include>
 					<label>$LOCALIZE[41139]</label>
 					<label2>$INFO[Skin.String(Home.Movies.Tile.9.Icon)]</label2>
-					<onclick>Skin.SetFile(Home.Movies.Tile.9.Icon,.png|.jpg|.gif,special://skin/media/windows/home/icons/)</onclick>
+					<onclick>Skin.SetFile(Home.Movies.Tile.9.Icon,.png|.jpg|.gif,special://skin/extras/icons/)</onclick>
 				</control>
 				<control type="radiobutton" id="2403">
 					<textcolor>mod-infotags</textcolor>
@@ -1709,7 +1709,7 @@
 					<include>SettingsCustomDialogButtonVars</include>
 					<label>$LOCALIZE[41139]</label>
 					<label2>$INFO[Skin.String(Home.Movies.Tile.10.Icon)]</label2>
-					<onclick>Skin.SetFile(Home.Movies.Tile.10.Icon,.png|.jpg|.gif,special://skin/media/windows/home/icons/)</onclick>
+					<onclick>Skin.SetFile(Home.Movies.Tile.10.Icon,.png|.jpg|.gif,special://skin/extras/icons/)</onclick>
 				</control>
 				<control type="radiobutton" id="2403">
 					<textcolor>mod-infotags</textcolor>
@@ -1896,7 +1896,7 @@
 					<include>SettingsCustomDialogButtonVars</include>
 					<label>$LOCALIZE[41139]</label>
 					<label2>$INFO[Skin.String(Home.Tvshows.Tile.1.Icon)]</label2>
-					<onclick>Skin.SetFile(Home.Tvshows.Tile.1.Icon,.png|.jpg|.gif,special://skin/media/windows/home/icons/)</onclick>
+					<onclick>Skin.SetFile(Home.Tvshows.Tile.1.Icon,.png|.jpg|.gif,special://skin/extras/icons/)</onclick>
 				</control>
 				<control type="radiobutton" id="2403">
 					<textcolor>mod-infotags</textcolor>
@@ -2050,7 +2050,7 @@
 				<onclick>Skin.SetString(Home.Tvshows.Tile.1.TypeName,$LOCALIZE[41151])</onclick>
 				<onclick>Skin.Reset(Home.Tvshows.Tile.1.Animate)</onclick>
 				<onclick>Skin.Reset(Home.Tvshows.Tile.1.ShowLabel)</onclick>
-				<onclick>Skin.SetString(Home.Tvshows.Tile.1.Icon,windows/home/icons/tv2.png)</onclick>
+				<onclick>Skin.SetString(Home.Tvshows.Tile.1.Icon,special://skin/extras/icons/tv2.png)</onclick>
 				<onclick>Skin.SetString(Home.Tvshows.Tile.1.Label,$LOCALIZE[20343])</onclick>
 				<onclick>Skin.SetString(Home.Tvshows.Tile.1.Path,ActivateWindow(videos,tvshowtitles,return))</onclick>
 			</control>
@@ -2083,7 +2083,7 @@
 					<include>SettingsCustomDialogButtonVars</include>
 					<label>$LOCALIZE[41139]</label>
 					<label2>$INFO[Skin.String(Home.Tvshows.Tile.2.Icon)]</label2>
-					<onclick>Skin.SetFile(Home.Tvshows.Tile.2.Icon,.png|.jpg|.gif,special://skin/media/windows/home/icons/)</onclick>
+					<onclick>Skin.SetFile(Home.Tvshows.Tile.2.Icon,.png|.jpg|.gif,special://skin/extras/icons/)</onclick>
 				</control>
 				<control type="radiobutton" id="2403">
 					<textcolor>mod-infotags</textcolor>
@@ -2237,7 +2237,7 @@
 				<onclick>Skin.SetString(Home.Tvshows.Tile.2.TypeName,$LOCALIZE[41151])</onclick>
 				<onclick>Skin.Reset(Home.Tvshows.Tile.2.Animate)</onclick>
 				<onclick>Skin.Reset(Home.Tvshows.Tile.2.ShowLabel)</onclick>
-				<onclick>Skin.SetString(Home.Tvshows.Tile.2.Icon,windows/home/icons/newepisodes.png)</onclick>
+				<onclick>Skin.SetString(Home.Tvshows.Tile.2.Icon,special://skin/extras/icons/newepisodes.png)</onclick>
 				<onclick>Skin.SetString(Home.Tvshows.Tile.2.Label,$LOCALIZE[41451])</onclick>
 				<onclick>Skin.SetString(Home.Tvshows.Tile.2.Path,ActivateWindow(videos,recentlyaddedepisodes,return))</onclick>
 			</control>
@@ -2270,7 +2270,7 @@
 					<include>SettingsCustomDialogButtonVars</include>
 					<label>$LOCALIZE[41139]</label>
 					<label2>$INFO[Skin.String(Home.Tvshows.Tile.3.Icon)]</label2>
-					<onclick>Skin.SetFile(Home.Tvshows.Tile.3.Icon,.png|.jpg|.gif,special://skin/media/windows/home/icons/)</onclick>
+					<onclick>Skin.SetFile(Home.Tvshows.Tile.3.Icon,.png|.jpg|.gif,special://skin/extras/icons/)</onclick>
 				</control>
 				<control type="radiobutton" id="2403">
 					<textcolor>mod-infotags</textcolor>
@@ -2424,7 +2424,7 @@
 				<onclick>Skin.SetString(Home.Tvshows.Tile.3.TypeName,$LOCALIZE[41151])</onclick>
 				<onclick>Skin.Reset(Home.Tvshows.Tile.3.Animate)</onclick>
 				<onclick>Skin.Reset(Home.Tvshows.Tile.3.ShowLabel)</onclick>
-				<onclick>Skin.SetString(Home.Tvshows.Tile.3.Icon,windows/home/icons/videoplaylist.png)</onclick>
+				<onclick>Skin.SetString(Home.Tvshows.Tile.3.Icon,special://skin/extras/icons/videoplaylist.png)</onclick>
 				<onclick>Skin.SetString(Home.Tvshows.Tile.3.Label,$LOCALIZE[136])</onclick>
 				<onclick>Skin.SetString(Home.Tvshows.Tile.3.Path,ActivateWindow(videos,playlists,return))</onclick>
 			</control>
@@ -2457,7 +2457,7 @@
 					<include>SettingsCustomDialogButtonVars</include>
 					<label>$LOCALIZE[41139]</label>
 					<label2>$INFO[Skin.String(Home.Tvshows.Tile.4.Icon)]</label2>
-					<onclick>Skin.SetFile(Home.Tvshows.Tile.4.Icon,.png|.jpg|.gif,special://skin/media/windows/home/icons/)</onclick>
+					<onclick>Skin.SetFile(Home.Tvshows.Tile.4.Icon,.png|.jpg|.gif,special://skin/extras/icons/)</onclick>
 				</control>
 				<control type="radiobutton" id="2403">
 					<textcolor>mod-infotags</textcolor>
@@ -2611,7 +2611,7 @@
 				<onclick>Skin.SetString(Home.Tvshows.Tile.4.TypeName,$LOCALIZE[41151])</onclick>
 				<onclick>Skin.Reset(Home.Tvshows.Tile.4.Animate)</onclick>
 				<onclick>Skin.Reset(Home.Tvshows.Tile.4.ShowLabel)</onclick>
-				<onclick>Skin.SetString(Home.Tvshows.Tile.4.Icon,windows/home/icons/folder.png)</onclick>
+				<onclick>Skin.SetString(Home.Tvshows.Tile.4.Icon,special://skin/extras/icons/folder.png)</onclick>
 				<onclick>Skin.SetString(Home.Tvshows.Tile.4.Label,$LOCALIZE[1214])</onclick>
 				<onclick>Skin.SetString(Home.Tvshows.Tile.4.Path,ActivateWindow(videos,files,return))</onclick>
 			</control>
@@ -2644,7 +2644,7 @@
 					<include>SettingsCustomDialogButtonVars</include>
 					<label>$LOCALIZE[41139]</label>
 					<label2>$INFO[Skin.String(Home.Tvshows.Tile.5.Icon)]</label2>
-					<onclick>Skin.SetFile(Home.Tvshows.Tile.5.Icon,.png|.jpg|.gif,special://skin/media/windows/home/icons/)</onclick>
+					<onclick>Skin.SetFile(Home.Tvshows.Tile.5.Icon,.png|.jpg|.gif,special://skin/extras/icons/)</onclick>
 				</control>
 				<control type="radiobutton" id="2403">
 					<textcolor>mod-infotags</textcolor>
@@ -2798,7 +2798,7 @@
 				<onclick>Skin.SetString(Home.Tvshows.Tile.5.TypeName,$LOCALIZE[41151])</onclick>
 				<onclick>Skin.Reset(Home.Tvshows.Tile.5.Animate)</onclick>
 				<onclick>Skin.Reset(Home.Tvshows.Tile.5.ShowLabel)</onclick>
-				<onclick>Skin.SetString(Home.Tvshows.Tile.5.Icon,windows/home/icons/film.png)</onclick>
+				<onclick>Skin.SetString(Home.Tvshows.Tile.5.Icon,special://skin/extras/icons/film.png)</onclick>
 				<onclick>Skin.SetString(Home.Tvshows.Tile.5.Label,$LOCALIZE[135])</onclick>
 				<onclick>Skin.SetString(Home.Tvshows.Tile.5.Path,ActivateWindow(videos,tvshowgenres,return))</onclick>
 			</control>
@@ -2831,7 +2831,7 @@
 					<include>SettingsCustomDialogButtonVars</include>
 					<label>$LOCALIZE[41139]</label>
 					<label2>$INFO[Skin.String(Home.Tvshows.Tile.6.Icon)]</label2>
-					<onclick>Skin.SetFile(Home.Tvshows.Tile.6.Icon,.png|.jpg|.gif,special://skin/media/windows/home/icons/)</onclick>
+					<onclick>Skin.SetFile(Home.Tvshows.Tile.6.Icon,.png|.jpg|.gif,special://skin/extras/icons/)</onclick>
 				</control>
 				<control type="radiobutton" id="2403">
 					<textcolor>mod-infotags</textcolor>
@@ -2985,7 +2985,7 @@
 				<onclick>Skin.SetString(Home.Tvshows.Tile.6.TypeName,$LOCALIZE[41151])</onclick>
 				<onclick>Skin.Reset(Home.Tvshows.Tile.6.Animate)</onclick>
 				<onclick>Skin.Reset(Home.Tvshows.Tile.6.ShowLabel)</onclick>
-				<onclick>Skin.SetString(Home.Tvshows.Tile.6.Icon,windows/home/icons/appletrailers.png)</onclick>
+				<onclick>Skin.SetString(Home.Tvshows.Tile.6.Icon,special://skin/extras/icons/appletrailers.png)</onclick>
 				<onclick>Skin.SetString(Home.Tvshows.Tile.6.Label,$LOCALIZE[20388])</onclick>
 				<onclick>Skin.SetString(Home.Tvshows.Tile.6.Path,ActivateWindow(videos,tvshowstudios,return))</onclick>
 			</control>
@@ -3018,7 +3018,7 @@
 					<include>SettingsCustomDialogButtonVars</include>
 					<label>$LOCALIZE[41139]</label>
 					<label2>$INFO[Skin.String(Home.Tvshows.Tile.7.Icon)]</label2>
-					<onclick>Skin.SetFile(Home.Tvshows.Tile.7.Icon,.png|.jpg|.gif,special://skin/media/windows/home/icons/)</onclick>
+					<onclick>Skin.SetFile(Home.Tvshows.Tile.7.Icon,.png|.jpg|.gif,special://skin/extras/icons/)</onclick>
 				</control>
 				<control type="radiobutton" id="2403">
 					<textcolor>mod-infotags</textcolor>
@@ -3172,7 +3172,7 @@
 				<onclick>Skin.SetString(Home.Tvshows.Tile.7.TypeName,$LOCALIZE[41151])</onclick>
 				<onclick>Skin.Reset(Home.Tvshows.Tile.7.Animate)</onclick>
 				<onclick>Skin.Reset(Home.Tvshows.Tile.7.ShowLabel)</onclick>
-				<onclick>Skin.SetString(Home.Tvshows.Tile.7.Icon,windows/home/icons/tvguide.png)</onclick>
+				<onclick>Skin.SetString(Home.Tvshows.Tile.7.Icon,special://skin/extras/icons/tvguide.png)</onclick>
 				<onclick>Skin.SetString(Home.Tvshows.Tile.7.Label,$LOCALIZE[42160] $INFO[Window.Property(NextAired.TodayTotal),(,)])</onclick>
 				<onclick>Skin.SetString(Home.Tvshows.Tile.7.Path,RunAddon(script.tv.show.next.aired))</onclick>
 			</control>
@@ -3205,7 +3205,7 @@
 					<include>SettingsCustomDialogButtonVars</include>
 					<label>$LOCALIZE[41139]</label>
 					<label2>$INFO[Skin.String(Home.Tvshows.Tile.8.Icon)]</label2>
-					<onclick>Skin.SetFile(Home.Tvshows.Tile.8.Icon,.png|.jpg|.gif,special://skin/media/windows/home/icons/)</onclick>
+					<onclick>Skin.SetFile(Home.Tvshows.Tile.8.Icon,.png|.jpg|.gif,special://skin/extras/icons/)</onclick>
 				</control>
 				<control type="radiobutton" id="2403">
 					<textcolor>mod-infotags</textcolor>
@@ -3359,7 +3359,7 @@
 				<onclick>Skin.SetString(Home.Tvshows.Tile.8.TypeName,$LOCALIZE[41151])</onclick>
 				<onclick>Skin.Reset(Home.Tvshows.Tile.8.Animate)</onclick>
 				<onclick>Skin.Reset(Home.Tvshows.Tile.8.ShowLabel)</onclick>
-				<onclick>Skin.SetString(Home.Tvshows.Tile.8.Icon,windows/home/icons/videoaddons.png)</onclick>
+				<onclick>Skin.SetString(Home.Tvshows.Tile.8.Icon,special://skin/extras/icons/videoaddons.png)</onclick>
 				<onclick>Skin.SetString(Home.Tvshows.Tile.8.Label,$LOCALIZE[24001])</onclick>
 				<onclick>Skin.SetString(Home.Tvshows.Tile.8.Path,ActivateWindow(videos,addons,return))</onclick>
 			</control>
@@ -3392,7 +3392,7 @@
 					<include>SettingsCustomDialogButtonVars</include>
 					<label>$LOCALIZE[41139]</label>
 					<label2>$INFO[Skin.String(Home.Tvshows.Tile.9.Icon)]</label2>
-					<onclick>Skin.SetFile(Home.Tvshows.Tile.9.Icon,.png|.jpg|.gif,special://skin/media/windows/home/icons/)</onclick>
+					<onclick>Skin.SetFile(Home.Tvshows.Tile.9.Icon,.png|.jpg|.gif,special://skin/extras/icons/)</onclick>
 				</control>
 				<control type="radiobutton" id="2403">
 					<textcolor>mod-infotags</textcolor>
@@ -3579,7 +3579,7 @@
 					<include>SettingsCustomDialogButtonVars</include>
 					<label>$LOCALIZE[41139]</label>
 					<label2>$INFO[Skin.String(Home.Tvshows.Tile.10.Icon)]</label2>
-					<onclick>Skin.SetFile(Home.Tvshows.Tile.10.Icon,.png|.jpg|.gif,special://skin/media/windows/home/icons/)</onclick>
+					<onclick>Skin.SetFile(Home.Tvshows.Tile.10.Icon,.png|.jpg|.gif,special://skin/extras/icons/)</onclick>
 				</control>
 				<control type="radiobutton" id="2403">
 					<textcolor>mod-infotags</textcolor>
@@ -3766,7 +3766,7 @@
 					<include>SettingsCustomDialogButtonVars</include>
 					<label>$LOCALIZE[41139]</label>
 					<label2>$INFO[Skin.String(Home.Music.Tile.1.Icon)]</label2>
-					<onclick>Skin.SetFile(Home.Music.Tile.1.Icon,.png|.jpg|.gif,special://skin/media/windows/home/icons/)</onclick>
+					<onclick>Skin.SetFile(Home.Music.Tile.1.Icon,.png|.jpg|.gif,special://skin/extras/icons/)</onclick>
 				</control>
 				<control type="radiobutton" id="2403">
 					<textcolor>mod-infotags</textcolor>
@@ -3920,7 +3920,7 @@
 				<onclick>Skin.SetString(Home.Music.Tile.1.TypeName,$LOCALIZE[41151])</onclick>
 				<onclick>Skin.Reset(Home.Music.Tile.1.Animate)</onclick>
 				<onclick>Skin.Reset(Home.Music.Tile.1.ShowLabel)</onclick>
-				<onclick>Skin.SetString(Home.Music.Tile.1.Icon,windows/home/icons/profiles.png)</onclick>
+				<onclick>Skin.SetString(Home.Music.Tile.1.Icon,special://skin/extras/icons/profiles.png)</onclick>
 				<onclick>Skin.SetString(Home.Music.Tile.1.Label,$LOCALIZE[133] $INFO[Window.Property(Music.ArtistsCount)])</onclick>
 				<onclick>Skin.SetString(Home.Music.Tile.1.Path,ActivateWindow(musiclibrary,artists,return))</onclick>
 			</control>
@@ -3953,7 +3953,7 @@
 					<include>SettingsCustomDialogButtonVars</include>
 					<label>$LOCALIZE[41139]</label>
 					<label2>$INFO[Skin.String(Home.Music.Tile.2.Icon)]</label2>
-					<onclick>Skin.SetFile(Home.Music.Tile.2.Icon,.png|.jpg|.gif,special://skin/media/windows/home/icons/)</onclick>
+					<onclick>Skin.SetFile(Home.Music.Tile.2.Icon,.png|.jpg|.gif,special://skin/extras/icons/)</onclick>
 				</control>
 				<control type="radiobutton" id="2403">
 					<textcolor>mod-infotags</textcolor>
@@ -4107,7 +4107,7 @@
 				<onclick>Skin.SetString(Home.Music.Tile.2.TypeName,$LOCALIZE[41151])</onclick>
 				<onclick>Skin.Reset(Home.Music.Tile.2.Animate)</onclick>
 				<onclick>Skin.Reset(Home.Music.Tile.2.ShowLabel)</onclick>
-				<onclick>Skin.SetString(Home.Music.Tile.2.Icon,windows/home/icons/dvd.png)</onclick>
+				<onclick>Skin.SetString(Home.Music.Tile.2.Icon,special://skin/extras/icons/dvd.png)</onclick>
 				<onclick>Skin.SetString(Home.Music.Tile.2.Label,$LOCALIZE[132] $INFO[Window.Property(Music.AlbumsCount)])</onclick>
 				<onclick>Skin.SetString(Home.Music.Tile.2.Path,ActivateWindow(musiclibrary,albums,return))</onclick>
 			</control>
@@ -4140,7 +4140,7 @@
 					<include>SettingsCustomDialogButtonVars</include>
 					<label>$LOCALIZE[41139]</label>
 					<label2>$INFO[Skin.String(Home.Music.Tile.3.Icon)]</label2>
-					<onclick>Skin.SetFile(Home.Music.Tile.3.Icon,.png|.jpg|.gif,special://skin/media/windows/home/icons/)</onclick>
+					<onclick>Skin.SetFile(Home.Music.Tile.3.Icon,.png|.jpg|.gif,special://skin/extras/icons/)</onclick>
 				</control>
 				<control type="radiobutton" id="2403">
 					<textcolor>mod-infotags</textcolor>
@@ -4294,7 +4294,7 @@
 				<onclick>Skin.SetString(Home.Music.Tile.3.TypeName,$LOCALIZE[41151])</onclick>
 				<onclick>Skin.Reset(Home.Music.Tile.3.Animate)</onclick>
 				<onclick>Skin.Reset(Home.Music.Tile.3.ShowLabel)</onclick>
-				<onclick>Skin.SetString(Home.Music.Tile.3.Icon,windows/home/icons/epg.png)</onclick>
+				<onclick>Skin.SetString(Home.Music.Tile.3.Icon,special://skin/extras/icons/epg.png)</onclick>
 				<onclick>Skin.SetString(Home.Music.Tile.3.Label,$LOCALIZE[136])</onclick>
 				<onclick>Skin.SetString(Home.Music.Tile.3.Path,ActivateWindow(musiclibrary,playlists,return))</onclick>
 			</control>
@@ -4327,7 +4327,7 @@
 					<include>SettingsCustomDialogButtonVars</include>
 					<label>$LOCALIZE[41139]</label>
 					<label2>$INFO[Skin.String(Home.Music.Tile.4.Icon)]</label2>
-					<onclick>Skin.SetFile(Home.Music.Tile.4.Icon,.png|.jpg|.gif,special://skin/media/windows/home/icons/)</onclick>
+					<onclick>Skin.SetFile(Home.Music.Tile.4.Icon,.png|.jpg|.gif,special://skin/extras/icons/)</onclick>
 				</control>
 				<control type="radiobutton" id="2403">
 					<textcolor>mod-infotags</textcolor>
@@ -4481,7 +4481,7 @@
 				<onclick>Skin.SetString(Home.Music.Tile.4.TypeName,$LOCALIZE[41151])</onclick>
 				<onclick>Skin.Reset(Home.Music.Tile.4.Animate)</onclick>
 				<onclick>Skin.Reset(Home.Music.Tile.4.ShowLabel)</onclick>
-				<onclick>Skin.SetString(Home.Music.Tile.4.Icon,windows/home/icons/folder.png)</onclick>
+				<onclick>Skin.SetString(Home.Music.Tile.4.Icon,special://skin/extras/icons/folder.png)</onclick>
 				<onclick>Skin.SetString(Home.Music.Tile.4.Label,$LOCALIZE[1214])</onclick>
 				<onclick>Skin.SetString(Home.Music.Tile.4.Path,ActivateWindow(musicfiles))</onclick>
 			</control>
@@ -4514,7 +4514,7 @@
 					<include>SettingsCustomDialogButtonVars</include>
 					<label>$LOCALIZE[41139]</label>
 					<label2>$INFO[Skin.String(Home.Music.Tile.5.Icon)]</label2>
-					<onclick>Skin.SetFile(Home.Music.Tile.5.Icon,.png|.jpg|.gif,special://skin/media/windows/home/icons/)</onclick>
+					<onclick>Skin.SetFile(Home.Music.Tile.5.Icon,.png|.jpg|.gif,special://skin/extras/icons/)</onclick>
 				</control>
 				<control type="radiobutton" id="2403">
 					<textcolor>mod-infotags</textcolor>
@@ -4668,7 +4668,7 @@
 				<onclick>Skin.SetString(Home.Music.Tile.5.TypeName,$LOCALIZE[41151])</onclick>
 				<onclick>Skin.Reset(Home.Music.Tile.5.Animate)</onclick>
 				<onclick>Skin.Reset(Home.Music.Tile.5.ShowLabel)</onclick>
-				<onclick>Skin.SetString(Home.Music.Tile.5.Icon,windows/home/icons/radio.png)</onclick>
+				<onclick>Skin.SetString(Home.Music.Tile.5.Icon,special://skin/extras/icons/radio.png)</onclick>
 				<onclick>Skin.SetString(Home.Music.Tile.5.Label,$LOCALIZE[135])</onclick>
 				<onclick>Skin.SetString(Home.Music.Tile.5.Path,ActivateWindow(musiclibrary,genres,return))</onclick>
 			</control>
@@ -4701,7 +4701,7 @@
 					<include>SettingsCustomDialogButtonVars</include>
 					<label>$LOCALIZE[41139]</label>
 					<label2>$INFO[Skin.String(Home.Music.Tile.6.Icon)]</label2>
-					<onclick>Skin.SetFile(Home.Music.Tile.6.Icon,.png|.jpg|.gif,special://skin/media/windows/home/icons/)</onclick>
+					<onclick>Skin.SetFile(Home.Music.Tile.6.Icon,.png|.jpg|.gif,special://skin/extras/icons/)</onclick>
 				</control>
 				<control type="radiobutton" id="2403">
 					<textcolor>mod-infotags</textcolor>
@@ -4855,7 +4855,7 @@
 				<onclick>Skin.SetString(Home.Music.Tile.6.TypeName,$LOCALIZE[41151])</onclick>
 				<onclick>Skin.Reset(Home.Music.Tile.6.Animate)</onclick>
 				<onclick>Skin.Reset(Home.Music.Tile.6.ShowLabel)</onclick>
-				<onclick>Skin.SetString(Home.Music.Tile.6.Icon,windows/home/icons/star.png)</onclick>
+				<onclick>Skin.SetString(Home.Music.Tile.6.Icon,special://skin/extras/icons/star.png)</onclick>
 				<onclick>Skin.SetString(Home.Music.Tile.6.Label,$LOCALIZE[271])</onclick>
 				<onclick>Skin.SetString(Home.Music.Tile.6.Path,ActivateWindow(musiclibrary,top100albums,return))</onclick>
 			</control>
@@ -4888,7 +4888,7 @@
 					<include>SettingsCustomDialogButtonVars</include>
 					<label>$LOCALIZE[41139]</label>
 					<label2>$INFO[Skin.String(Home.Music.Tile.7.Icon)]</label2>
-					<onclick>Skin.SetFile(Home.Music.Tile.7.Icon,.png|.jpg|.gif,special://skin/media/windows/home/icons/)</onclick>
+					<onclick>Skin.SetFile(Home.Music.Tile.7.Icon,.png|.jpg|.gif,special://skin/extras/icons/)</onclick>
 				</control>
 				<control type="radiobutton" id="2403">
 					<textcolor>mod-infotags</textcolor>
@@ -5042,7 +5042,7 @@
 				<onclick>Skin.SetString(Home.Music.Tile.7.TypeName,$LOCALIZE[41151])</onclick>
 				<onclick>Skin.Reset(Home.Music.Tile.7.Animate)</onclick>
 				<onclick>Skin.Reset(Home.Music.Tile.7.ShowLabel)</onclick>
-				<onclick>Skin.SetString(Home.Music.Tile.7.Icon,windows/home/icons/ipod.png)</onclick>
+				<onclick>Skin.SetString(Home.Music.Tile.7.Icon,special://skin/extras/icons/ipod.png)</onclick>
 				<onclick>Skin.SetString(Home.Music.Tile.7.Label,$LOCALIZE[41554])</onclick>
 				<onclick>Skin.SetString(Home.Music.Tile.7.Path,ActivateWindow(musiclibrary,recentlyaddedalbums,return))</onclick>
 			</control>
@@ -5075,7 +5075,7 @@
 					<include>SettingsCustomDialogButtonVars</include>
 					<label>$LOCALIZE[41139]</label>
 					<label2>$INFO[Skin.String(Home.Music.Tile.8.Icon)]</label2>
-					<onclick>Skin.SetFile(Home.Music.Tile.8.Icon,.png|.jpg|.gif,special://skin/media/windows/home/icons/)</onclick>
+					<onclick>Skin.SetFile(Home.Music.Tile.8.Icon,.png|.jpg|.gif,special://skin/extras/icons/)</onclick>
 				</control>
 				<control type="radiobutton" id="2403">
 					<textcolor>mod-infotags</textcolor>
@@ -5229,7 +5229,7 @@
 				<onclick>Skin.SetString(Home.Music.Tile.8.TypeName,$LOCALIZE[41151])</onclick>
 				<onclick>Skin.Reset(Home.Music.Tile.8.Animate)</onclick>
 				<onclick>Skin.Reset(Home.Music.Tile.8.ShowLabel)</onclick>
-				<onclick>Skin.SetString(Home.Music.Tile.8.Icon,windows/home/icons/music.png)</onclick>
+				<onclick>Skin.SetString(Home.Music.Tile.8.Icon,special://skin/extras/icons/music.png)</onclick>
 				<onclick>Skin.SetString(Home.Music.Tile.8.Label,$LOCALIZE[568])</onclick>
 				<onclick>Skin.SetString(Home.Music.Tile.8.Path,ActivateWindow(musiclibrary,recentlyplayedalbums,return))</onclick>
 			</control>
@@ -5262,7 +5262,7 @@
 					<include>SettingsCustomDialogButtonVars</include>
 					<label>$LOCALIZE[41139]</label>
 					<label2>$INFO[Skin.String(Home.Music.Tile.9.Icon)]</label2>
-					<onclick>Skin.SetFile(Home.Music.Tile.9.Icon,.png|.jpg|.gif,special://skin/media/windows/home/icons/)</onclick>
+					<onclick>Skin.SetFile(Home.Music.Tile.9.Icon,.png|.jpg|.gif,special://skin/extras/icons/)</onclick>
 				</control>
 				<control type="radiobutton" id="2403">
 					<textcolor>mod-infotags</textcolor>
@@ -5416,7 +5416,7 @@
 				<onclick>Skin.SetString(Home.Music.Tile.9.TypeName,$LOCALIZE[41151])</onclick>
 				<onclick>Skin.Reset(Home.Music.Tile.9.Animate)</onclick>
 				<onclick>Skin.Reset(Home.Music.Tile.9.ShowLabel)</onclick>
-				<onclick>Skin.SetString(Home.Music.Tile.9.Icon,windows/home/icons/musicplaylist.png)</onclick>
+				<onclick>Skin.SetString(Home.Music.Tile.9.Icon,special://skin/extras/icons/musicplaylist.png)</onclick>
 				<onclick>Skin.SetString(Home.Music.Tile.9.Label,$LOCALIZE[41443])</onclick>
 				<onclick>Skin.SetString(Home.Music.Tile.9.Path,ActivateWindow(musicplaylist))</onclick>
 			</control>
@@ -5449,7 +5449,7 @@
 					<include>SettingsCustomDialogButtonVars</include>
 					<label>$LOCALIZE[41139]</label>
 					<label2>$INFO[Skin.String(Home.Music.Tile.10.Icon)]</label2>
-					<onclick>Skin.SetFile(Home.Music.Tile.10.Icon,.png|.jpg|.gif,special://skin/media/windows/home/icons/)</onclick>
+					<onclick>Skin.SetFile(Home.Music.Tile.10.Icon,.png|.jpg|.gif,special://skin/extras/icons/)</onclick>
 				</control>
 				<control type="radiobutton" id="2403">
 					<textcolor>mod-infotags</textcolor>
@@ -5636,7 +5636,7 @@
 					<include>SettingsCustomDialogButtonVars</include>
 					<label>$LOCALIZE[41139]</label>
 					<label2>$INFO[Skin.String(Home.Programs.Tile.1.Icon)]</label2>
-					<onclick>Skin.SetFile(Home.Programs.Tile.1.Icon,.png|.jpg|.gif,special://skin/media/windows/home/icons/)</onclick>
+					<onclick>Skin.SetFile(Home.Programs.Tile.1.Icon,.png|.jpg|.gif,special://skin/extras/icons/)</onclick>
 				</control>
 				<control type="radiobutton" id="2403">
 					<textcolor>mod-infotags</textcolor>
@@ -5790,7 +5790,7 @@
 				<onclick>Skin.SetString(Home.Programs.Tile.1.TypeName,$LOCALIZE[41151])</onclick>
 				<onclick>Skin.Reset(Home.Programs.Tile.1.Animate)</onclick>
 				<onclick>Skin.Reset(Home.Programs.Tile.1.ShowLabel)</onclick>
-				<onclick>Skin.SetString(Home.Programs.Tile.1.Icon,windows/home/icons/appearance.png)</onclick>
+				<onclick>Skin.SetString(Home.Programs.Tile.1.Icon,special://skin/extras/icons/appearance.png)</onclick>
 				<onclick>Skin.SetString(Home.Programs.Tile.1.Label,$LOCALIZE[41504])</onclick>
 				<onclick>Skin.SetString(Home.Programs.Tile.1.Path,ActivateWindow(programs))</onclick>
 			</control>
@@ -5823,7 +5823,7 @@
 					<include>SettingsCustomDialogButtonVars</include>
 					<label>$LOCALIZE[41139]</label>
 					<label2>$INFO[Skin.String(Home.Programs.Tile.2.Icon)]</label2>
-					<onclick>Skin.SetFile(Home.Programs.Tile.2.Icon,.png|.jpg|.gif,special://skin/media/windows/home/icons/)</onclick>
+					<onclick>Skin.SetFile(Home.Programs.Tile.2.Icon,.png|.jpg|.gif,special://skin/extras/icons/)</onclick>
 				</control>
 				<control type="radiobutton" id="2403">
 					<textcolor>mod-infotags</textcolor>
@@ -5977,7 +5977,7 @@
 				<onclick>Skin.SetString(Home.Programs.Tile.2.TypeName,$LOCALIZE[41151])</onclick>
 				<onclick>Skin.Reset(Home.Programs.Tile.2.Animate)</onclick>
 				<onclick>Skin.Reset(Home.Programs.Tile.2.ShowLabel)</onclick>
-				<onclick>Skin.SetString(Home.Programs.Tile.2.Icon,windows/home/icons/games.png)</onclick>
+				<onclick>Skin.SetString(Home.Programs.Tile.2.Icon,special://skin/extras/icons/games.png)</onclick>
 				<onclick>Skin.SetString(Home.Programs.Tile.2.Label,$LOCALIZE[15016])</onclick>
 				<onclick>Skin.SetString(Home.Programs.Tile.2.Path,RunScript(script.games.rom.collection.browser))</onclick>
 			</control>
@@ -6010,7 +6010,7 @@
 					<include>SettingsCustomDialogButtonVars</include>
 					<label>$LOCALIZE[41139]</label>
 					<label2>$INFO[Skin.String(Home.Programs.Tile.3.Icon)]</label2>
-					<onclick>Skin.SetFile(Home.Programs.Tile.3.Icon,.png|.jpg|.gif,special://skin/media/windows/home/icons/)</onclick>
+					<onclick>Skin.SetFile(Home.Programs.Tile.3.Icon,.png|.jpg|.gif,special://skin/extras/icons/)</onclick>
 				</control>
 				<control type="radiobutton" id="2403">
 					<textcolor>mod-infotags</textcolor>
@@ -6164,7 +6164,7 @@
 				<onclick>Skin.SetString(Home.Programs.Tile.3.TypeName,$LOCALIZE[41151])</onclick>
 				<onclick>Skin.Reset(Home.Programs.Tile.3.Animate)</onclick>
 				<onclick>Skin.Reset(Home.Programs.Tile.3.ShowLabel)</onclick>
-				<onclick>Skin.SetString(Home.Programs.Tile.3.Icon,windows/home/icons/pictures.png)</onclick>
+				<onclick>Skin.SetString(Home.Programs.Tile.3.Icon,special://skin/extras/icons/pictures.png)</onclick>
 				<onclick>Skin.SetString(Home.Programs.Tile.3.Label,$LOCALIZE[1])</onclick>
 				<onclick>Skin.SetString(Home.Programs.Tile.3.Path,ActivateWindow(pictures))</onclick>
 			</control>
@@ -6197,7 +6197,7 @@
 					<include>SettingsCustomDialogButtonVars</include>
 					<label>$LOCALIZE[41139]</label>
 					<label2>$INFO[Skin.String(Home.Programs.Tile.4.Icon)]</label2>
-					<onclick>Skin.SetFile(Home.Programs.Tile.4.Icon,.png|.jpg|.gif,special://skin/media/windows/home/icons/)</onclick>
+					<onclick>Skin.SetFile(Home.Programs.Tile.4.Icon,.png|.jpg|.gif,special://skin/extras/icons/)</onclick>
 				</control>
 				<control type="radiobutton" id="2403">
 					<textcolor>mod-infotags</textcolor>
@@ -6351,7 +6351,7 @@
 				<onclick>Skin.SetString(Home.Programs.Tile.4.TypeName,$LOCALIZE[41151])</onclick>
 				<onclick>Skin.Reset(Home.Programs.Tile.4.Animate)</onclick>
 				<onclick>Skin.Reset(Home.Programs.Tile.4.ShowLabel)</onclick>
-				<onclick>Skin.SetString(Home.Programs.Tile.4.Icon,windows/home/icons/addons.png)</onclick>
+				<onclick>Skin.SetString(Home.Programs.Tile.4.Icon,special://skin/extras/icons/addons.png)</onclick>
 				<onclick>Skin.SetString(Home.Programs.Tile.4.Label,$LOCALIZE[24001])</onclick>
 				<onclick>Skin.SetString(Home.Programs.Tile.4.Path,ActivateWindow(programs,addons,return))</onclick>
 			</control>
@@ -6384,7 +6384,7 @@
 					<include>SettingsCustomDialogButtonVars</include>
 					<label>$LOCALIZE[41139]</label>
 					<label2>$INFO[Skin.String(Home.Programs.Tile.5.Icon)]</label2>
-					<onclick>Skin.SetFile(Home.Programs.Tile.5.Icon,.png|.jpg|.gif,special://skin/media/windows/home/icons/)</onclick>
+					<onclick>Skin.SetFile(Home.Programs.Tile.5.Icon,.png|.jpg|.gif,special://skin/extras/icons/)</onclick>
 				</control>
 				<control type="radiobutton" id="2403">
 					<textcolor>mod-infotags</textcolor>
@@ -6571,7 +6571,7 @@
 					<include>SettingsCustomDialogButtonVars</include>
 					<label>$LOCALIZE[41139]</label>
 					<label2>$INFO[Skin.String(Home.Programs.Tile.6.Icon)]</label2>
-					<onclick>Skin.SetFile(Home.Programs.Tile.6.Icon,.png|.jpg|.gif,special://skin/media/windows/home/icons/)</onclick>
+					<onclick>Skin.SetFile(Home.Programs.Tile.6.Icon,.png|.jpg|.gif,special://skin/extras/icons/)</onclick>
 				</control>
 				<control type="radiobutton" id="2403">
 					<textcolor>mod-infotags</textcolor>
@@ -6758,7 +6758,7 @@
 					<include>SettingsCustomDialogButtonVars</include>
 					<label>$LOCALIZE[41139]</label>
 					<label2>$INFO[Skin.String(Home.Programs.Tile.7.Icon)]</label2>
-					<onclick>Skin.SetFile(Home.Programs.Tile.7.Icon,.png|.jpg|.gif,special://skin/media/windows/home/icons/)</onclick>
+					<onclick>Skin.SetFile(Home.Programs.Tile.7.Icon,.png|.jpg|.gif,special://skin/extras/icons/)</onclick>
 				</control>
 				<control type="radiobutton" id="2403">
 					<textcolor>mod-infotags</textcolor>
@@ -6945,7 +6945,7 @@
 					<include>SettingsCustomDialogButtonVars</include>
 					<label>$LOCALIZE[41139]</label>
 					<label2>$INFO[Skin.String(Home.Programs.Tile.8.Icon)]</label2>
-					<onclick>Skin.SetFile(Home.Programs.Tile.8.Icon,.png|.jpg|.gif,special://skin/media/windows/home/icons/)</onclick>
+					<onclick>Skin.SetFile(Home.Programs.Tile.8.Icon,.png|.jpg|.gif,special://skin/extras/icons/)</onclick>
 				</control>
 				<control type="radiobutton" id="2403">
 					<textcolor>mod-infotags</textcolor>
@@ -7132,7 +7132,7 @@
 					<include>SettingsCustomDialogButtonVars</include>
 					<label>$LOCALIZE[41139]</label>
 					<label2>$INFO[Skin.String(Home.Programs.Tile.9.Icon)]</label2>
-					<onclick>Skin.SetFile(Home.Programs.Tile.9.Icon,.png|.jpg|.gif,special://skin/media/windows/home/icons/)</onclick>
+					<onclick>Skin.SetFile(Home.Programs.Tile.9.Icon,.png|.jpg|.gif,special://skin/extras/icons/)</onclick>
 				</control>
 				<control type="radiobutton" id="2403">
 					<textcolor>mod-infotags</textcolor>
@@ -7319,7 +7319,7 @@
 					<include>SettingsCustomDialogButtonVars</include>
 					<label>$LOCALIZE[41139]</label>
 					<label2>$INFO[Skin.String(Home.Programs.Tile.10.Icon)]</label2>
-					<onclick>Skin.SetFile(Home.Programs.Tile.10.Icon,.png|.jpg|.gif,special://skin/media/windows/home/icons/)</onclick>
+					<onclick>Skin.SetFile(Home.Programs.Tile.10.Icon,.png|.jpg|.gif,special://skin/extras/icons/)</onclick>
 				</control>
 				<control type="radiobutton" id="2403">
 					<textcolor>mod-infotags</textcolor>

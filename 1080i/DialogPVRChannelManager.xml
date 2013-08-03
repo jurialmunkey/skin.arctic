@@ -19,7 +19,7 @@
             	<posy>138</posy>
             	<width>140</width>
             	<height>140</height>
-            	<texture>windows/home/icons/tvshows.png</texture>
+            	<texture>special://skin/extras/icons/tvshows.png</texture>
             	<aspectratio>keep</aspectratio>
             </control>
     	    <control type="label">

@@ -37,14 +37,6 @@
 							<texture background="true" diffuse="arctic/reel/fanart.png">$VAR[ListInfoLandscapeVar]</texture>
 							<aspectratio scalediffuse="false">stretch</aspectratio>
 						</control>
-						<control type="image">
-                            <posx>10</posx>
-							<posy>10</posy>
-							<width>414</width>
-							<height>232</height>
-                            <texture border="25">arctic/common/glass-ring.png</texture>
-                            <visible>Skin.HasSetting(covers.showglass)</visible>
-                        </control>
                         <control type="group">
 							<posx>758</posx>
 							<posy>394</posy>
@@ -138,14 +130,6 @@
 							<texture background="true" diffuse="arctic/reel/fanart-big.png">$VAR[ListInfoLandscapeVar]</texture>
 							<aspectratio scalediffuse="false">stretch</aspectratio>
 						</control>
-						<control type="image">
-                            <posx>10</posx>
-							<posy>10</posy>
-							<width>828</width>
-							<height>464</height>
-                            <texture border="25">arctic/common/glass-ring.png</texture>
-                            <visible>Skin.HasSetting(covers.showglass)</visible>
-                        </control>
                         <control type="group">
 							<posx>758</posx>
 							<posy>394</posy>

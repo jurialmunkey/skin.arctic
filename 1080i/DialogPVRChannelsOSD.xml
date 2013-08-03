@@ -31,6 +31,19 @@
                 <texture border="25">arctic/common/whitepanel8.png</texture>
                 <aspectratio>stretch</aspectratio>
                 <colordiffuse>mod-osdbar</colordiffuse>
+                <visible>!Skin.HasSetting(osd.darkpanel)</visible>
+            </control>
+            <control type="image">
+                <posx>-50</posx>
+				<posy>-50</posy>
+				<width>650</width>
+				<height>1180</height>
+                <bordertexture border="40">arctic/common/border-20.png</bordertexture>
+                <bordersize>20</bordersize>
+                <texture border="25">arctic/common/panel.png</texture>
+                <aspectratio>stretch</aspectratio>
+                <colordiffuse>mod-osdbar-dark</colordiffuse>
+                <visible>Skin.HasSetting(osd.darkpanel)</visible>
             </control>
             <control type="group">
                 <animation effect="fade" time="200" end="0" start="100" condition="Window.IsActive(DialogPVRGuideInfo.xml)">Conditional</animation>
@@ -41,8 +54,8 @@
                     <width>140</width>
                     <height>140</height>
                     <aspectratio>keep</aspectratio>
-                    <texture>windows/home/icons/tv.png</texture>
-                    <colordiffuse>mod-infotags-d</colordiffuse>
+                    <texture>special://skin/extras/icons/tv.png</texture>
+                    <colordiffuse>$VAR[osd.text.dark]</colordiffuse>
                 </control>
                 <control type="label">
                     <description>Header</description>
@@ -53,7 +66,7 @@
                     <align>left</align>
                     <label>$INFO[VideoPlayer.ChannelGroup]</label>
                     <font>Font-Alaska-S36-BL</font>
-                    <textcolor>mod-infotags-d</textcolor>
+                    <textcolor>$VAR[osd.text.dark]</textcolor>
                     <shadowcolor>33ffffff</shadowcolor>
                 </control>
                 <control type="button">
@@ -65,7 +78,7 @@
                     <align>left</align>
                     <label>$INFO[System.Date] • $INFO[System.Time]</label>
                     <font>Font-Alaska-S28-L</font>
-                    <textcolor>mod-infotags-d</textcolor>
+                    <textcolor>$VAR[osd.text.dark]</textcolor>
                     <shadowcolor>33ffffff</shadowcolor>
                 </control>
                 <control type="image">
@@ -123,86 +136,74 @@
 								<font>Font-Alaska-S45-L</font>
 								<align>right</align>
 								<label>$INFO[ListItem.ChannelNumber]</label>
-								<textcolor>mod-infotags</textcolor>
-								<selectedcolor>mod-infotags</selectedcolor>
+								<textcolor>$VAR[osd.text.normal]</textcolor>
+								<selectedcolor>$VAR[osd.text.normal]</selectedcolor>
 								<scroll>false</scroll>
 							</control>
 							<control type="label">
 								<description>Label</description>
 								<posx>28</posx>
-								<posy>0</posy>
-								<width>360</width>
-								<height>40</height>
+								<posy>18</posy>
+								<width>270</width>
 								<font>Font-Alaska-S32-BL</font>
 								<align>left</align>
 								<label>$INFO[ListItem.Label]</label>
-								<textcolor>mod-infotags</textcolor>
-								<selectedcolor>mod-infotags</selectedcolor>
+								<textcolor>$VAR[osd.text.normal]</textcolor>
+								<selectedcolor>$VAR[osd.text.normal]</selectedcolor>
 								<scroll>false</scroll>
+								<animation effect="slide" end="38" time="200" condition="ListItem.HasTimer | ListItem.IsRecording">Conditional</animation>
 							</control>
 							<control type="label">
 								<description>Title</description>
 								<posx>28</posx>
-								<posy>38</posy>
+								<posy>55</posy>
 								<width>360</width>
 								<height>19</height>
 								<font>Font-Alaska-S28-L</font>
 								<align>left</align>
 								<label>$INFO[ListItem.Title]</label>
-								<textcolor>mod-infotags</textcolor>
-								<selectedcolor>mod-infotags</selectedcolor>
+								<textcolor>$VAR[osd.text.normal]</textcolor>
+								<selectedcolor>$VAR[osd.text.normal]</selectedcolor>
 								<scroll>false</scroll>
-							</control>
-							<control type="label">
-								<description>Label</description>
-								<posx>28</posx>
-								<posy>65</posy>
-								<width>100</width>
-								<height>19</height>
-								<font>Font-Alaska-S22-L</font>
-								<align>left</align>
-								<label>$INFO[ListItem.StartTime]</label>
-								<textcolor>mod-infotags</textcolor>
-								<selectedcolor>mod-infotags</selectedcolor>
-								<scroll>false</scroll>
-							</control>
-							<control type="progress">
-								<posx>127</posx>
-								<posy>70</posy>
-								<width>240</width>
-								<height>10</height>
-								<reveal>true</reveal>
-								<texturebg>osd/fullscreen/progress/back.png</texturebg>
-								<midtexture>osd/fullscreen/progress/mid.png</midtexture>
-								<lefttexture>osd/fullscreen/progress/left.png</lefttexture>
-								<righttexture>osd/fullscreen/progress/right.png</righttexture>
-								<info>ListItem.Progress</info>
 							</control>
 							<control type="label">
 								<description>Label</description>
 								<posx>470</posx>
-								<posy>65</posy>
-								<width>100</width>
+								<posy>55</posy>
+								<width>300</width>
 								<height>19</height>
 								<font>Font-Alaska-S22-L</font>
 								<align>right</align>
-								<label>$INFO[ListItem.EndTime]</label>
-								<textcolor>mod-infotags</textcolor>
-								<selectedcolor>mod-infotags</selectedcolor>
+								<label>$INFO[ListItem.StartTime]$INFO[ListItem.EndTime, ›› ,]</label>
+								<textcolor>$VAR[osd.text.normal]</textcolor>
+								<selectedcolor>$VAR[osd.text.normal]</selectedcolor>
 								<scroll>false</scroll>
+							</control>
+							<control type="progress">
+								<posx>300</posx>
+								<posy>23</posy>
+								<width>80</width>
+								<height>19</height>
+								<reveal>true</reveal>
+								<texturebg>windows/pvr/progress-back.png</texturebg>
+								<lefttexture>windows/pvr/progress-leftright.png</lefttexture>
+								<midtexture>windows/pvr/progress-mid.png</midtexture>
+								<righttexture>windows/pvr/progress-leftright.png</righttexture>
+								<info>ListItem.Progress</info>
+								<colordiffuse>$VAR[osd.text.dark]</colordiffuse>
 							</control>
 							<control type="group">
 								<visible>ListItem.IsRecording</visible>
 								<control type="image">
-									<posx>602</posx>
-									<posy>7</posy>
+									<posx>8</posx>
+									<posy>-8</posy>
 									<width>66</width>
 									<height>80</height>
 									<texture>windows/pvr/epg-recording.png</texture>
 								</control>
 								<control type="image">
-									<posx>602</posx>
-									<posy>7</posy>
+									<posx>8</posx>
+									<posy>-8</posy>
 									<width>66</width>
 									<height>80</height>
 									<texture>windows/pvr/epg-recording-pulse.png</texture>
@@ -210,8 +211,8 @@
 								</control>
 							</control>
 							<control type="image">
-								<posx>602</posx>
-								<posy>7</posy>
+								<posx>8</posx>
+								<posy>-8</posy>
 								<width>66</width>
 								<height>80</height>
 								<texture>windows/pvr/epg-timer.png</texture>
@@ -259,28 +260,15 @@
 							<control type="label">
 								<description>Label</description>
 								<posx>28</posx>
-								<posy>0</posy>
-								<width>360</width>
-								<height>40</height>
+								<posy>18</posy>
+								<width>270</width>
 								<font>Font-Alaska-S32-BL</font>
 								<align>left</align>
 								<label>$INFO[ListItem.Label]</label>
 								<textcolor>mod-infotags-alt</textcolor>
 								<selectedcolor>mod-infotags-alt</selectedcolor>
 								<scroll>false</scroll>
-							</control>
-							<control type="label">
-								<description>Title</description>
-								<posx>28</posx>
-								<posy>38</posy>
-								<width>360</width>
-								<height>19</height>
-								<font>Font-Alaska-S28-L</font>
-								<align>left</align>
-								<label>$INFO[ListItem.Title]</label>
-								<textcolor>mod-infotags-alt</textcolor>
-								<selectedcolor>mod-infotags-alt</selectedcolor>
-								<scroll>false</scroll>
+								<animation effect="slide" end="38" time="200" condition="ListItem.HasTimer | ListItem.IsRecording">Conditional</animation>
 							</control>
 							<control type="label">
 								<description>Label</description>
@@ -293,57 +281,58 @@
 								<textcolor>mod-infotags-alt</textcolor>
 								<selectedcolor>mod-infotags-alt</selectedcolor>
 								<scroll>false</scroll>
+								
+							</control>
+							<control type="label">
+								<description>Title</description>
+								<posx>28</posx>
+								<posy>55</posy>
+								<width>360</width>
+								<height>19</height>
+								<font>Font-Alaska-S28-L</font>
+								<align>left</align>
+								<label>$INFO[ListItem.Title]</label>
+								<textcolor>mod-infotags-alt</textcolor>
+								<selectedcolor>mod-infotags-alt</selectedcolor>
+								<scroll>false</scroll>
 							</control>
 							<control type="label">
 								<description>Label</description>
-								<posx>28</posx>
-								<posy>65</posy>
-								<width>100</width>
+								<posx>470</posx>
+								<posy>55</posy>
+								<width>300</width>
 								<height>19</height>
 								<font>Font-Alaska-S22-L</font>
-								<align>left</align>
-								<label>$INFO[ListItem.StartTime]</label>
+								<align>right</align>
+								<label>$INFO[ListItem.StartTime]$INFO[ListItem.EndTime, ›› ,]</label>
 								<textcolor>mod-infotags-alt</textcolor>
 								<selectedcolor>mod-infotags-alt</selectedcolor>
 								<scroll>false</scroll>
 							</control>
 							<control type="progress">
-								<posx>127</posx>
-								<posy>70</posy>
-								<width>240</width>
-								<height>10</height>
-								<reveal>true</reveal>
-								<texturebg>osd/fullscreen/progress/back.png</texturebg>
-								<midtexture>osd/fullscreen/progress/mid.png</midtexture>
-								<lefttexture>osd/fullscreen/progress/left.png</lefttexture>
-								<righttexture>osd/fullscreen/progress/right.png</righttexture>
-								<info>ListItem.Progress</info>
-							</control>
-							<control type="label">
-								<description>Label</description>
-								<posx>470</posx>
-								<posy>65</posy>
-								<width>100</width>
+								<posx>300</posx>
+								<posy>23</posy>
+								<width>80</width>
 								<height>19</height>
-								<font>Font-Alaska-S22-L</font>
-								<align>right</align>
-								<label>$INFO[ListItem.EndTime]</label>
-								<textcolor>mod-infotags-alt</textcolor>
-								<selectedcolor>mod-infotags-alt</selectedcolor>
-								<scroll>false</scroll>
+								<reveal>true</reveal>
+								<texturebg>windows/pvr/progress-back.png</texturebg>
+								<lefttexture>windows/pvr/progress-leftright.png</lefttexture>
+								<midtexture>windows/pvr/progress-mid.png</midtexture>
+								<righttexture>windows/pvr/progress-leftright.png</righttexture>
+								<info>ListItem.Progress</info>
 							</control>
 							<control type="group">
 								<visible>ListItem.IsRecording</visible>
 								<control type="image">
-									<posx>602</posx>
-									<posy>7</posy>
+									<posx>8</posx>
+									<posy>-8</posy>
 									<width>66</width>
 									<height>80</height>
 									<texture>windows/pvr/epg-recording.png</texture>
 								</control>
 								<control type="image">
-									<posx>602</posx>
-									<posy>7</posy>
+									<posx>8</posx>
+									<posy>-8</posy>
 									<width>66</width>
 									<height>80</height>
 									<texture>windows/pvr/epg-recording-pulse.png</texture>
@@ -351,8 +340,8 @@
 								</control>
 							</control>
 							<control type="image">
-								<posx>602</posx>
-								<posy>7</posy>
+								<posx>8</posx>
+								<posy>-8</posy>
 								<width>66</width>
 								<height>80</height>
 								<texture>windows/pvr/epg-timer.png</texture>
@@ -392,12 +381,23 @@
                 <control type="label">
                     <posx>560</posx>
                     <posy>1050</posy>
-                    <width>800</width>
+                    <width>300</width>
                     <font>Font-Alaska-S22-L</font>
                     <label>$VAR[PVRChannelsOSDItemsPageLabel]</label>
-                    <textcolor>mod-infotags-d</textcolor>
+                    <textcolor>$VAR[osd.text.dark]</textcolor>
                     <scroll>false</scroll>
                     <align>right</align>
+                    <aligny>center</aligny>
+                </control>
+                <control type="label">
+                    <posx>20</posx>
+                    <posy>1050</posy>
+                    <width>300</width>
+                    <font>Font-Alaska-S22-L</font>
+                    <label>$INFO[Container(11).ListItem.NextTitle,[B]NEXT:[/B] ,]</label>
+                    <textcolor>$VAR[osd.text.dark]</textcolor>
+                    <scroll>false</scroll>
+                    <align>left</align>
                     <aligny>center</aligny>
                 </control>
             </control>

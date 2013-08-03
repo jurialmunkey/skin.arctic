@@ -211,7 +211,7 @@
                     <textureradioon>buttons/radio/options-radio-button-fo.png</textureradioon>
                     <textureradiooff>buttons/radio/options-radio-button-nf.png</textureradiooff>
                     <radioposx>-19</radioposx>
-                    <visible>Container.HasFiles + Container.Content(addons)</visible>
+                    <visible>Container.HasFiles</visible>
                 </control>
             </control>
             

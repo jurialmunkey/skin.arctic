@@ -372,14 +372,14 @@
         <textcolor>Mod_Tags_Dark</textcolor>
         <scroll>false</scroll>
         <align>left</align>
-        <animation type="Visible">
-            <effect type="fade" start="0" end="100" time="250" delay="150" tween="sine" easing="inout" />
-            <effect type="slide" start="0,55" end="0,0" time="500" tween="cubic" easing="inout" />
+        <!--<animation type="Visible">
+            <effect type="fade" start="0" end="100" time="250" delay="0" tween="sine" easing="inout" />
+            <effect type="slide" start="0,55" end="0,0" time="350" tween="cubic" easing="inout" />
         </animation>
         <animation type="Hidden">
             <effect type="fade" start="100" end="0" time="250" tween="sine" easing="inout" />
             <effect type="slide" start="0,0" end="0,-55" time="500" tween="cubic" easing="inout" />
-        </animation>
+        </animation>-->
     </include>
     
     <include name="HomeProfileInfo">
@@ -418,49 +418,29 @@
                 <control type="label">
                     <include>HomeProfileInfoLabel</include>
                     <label>$INFO[Window.Property(Movies.Count),, $LOCALIZE[342]]</label>
-                    <visible>[Container(30).HasFocus(2) + !Container(525).HasFocus(1) + !Container(525).HasFocus(2) + !Container(525).HasFocus(3) + !Container(525).HasFocus(4)] | Container(525).HasFocus(1)</visible>
+                    <visible>Container(525).HasFocus(1)</visible>
                 </control>
                 <control type="label">
                     <include>HomeProfileInfoLabel</include>
                     <label>$INFO[Window.Property(TVShows.Count),, $LOCALIZE[20343]]</label>
-                    <visible>[Container(30).HasFocus(3) + !Container(525).HasFocus(1) + !Container(525).HasFocus(2) + !Container(525).HasFocus(3) + !Container(525).HasFocus(4)] | Container(525).HasFocus(2)</visible>
+                    <visible>Container(525).HasFocus(2)</visible>
                 </control>
                 <control type="label">
                     <include>HomeProfileInfoLabel</include>
                     <label>$INFO[Window.Property(Music.SongsCount),, $LOCALIZE[134]]</label>
-                    <visible>[Container(30).HasFocus(4) + !Container(525).HasFocus(1) + !Container(525).HasFocus(2) + !Container(525).HasFocus(3) + !Container(525).HasFocus(4)] | Container(525).HasFocus(3)</visible>
+                    <visible>Container(525).HasFocus(3)</visible>
                 </control>
                 <control type="label">
                     <include>HomeProfileInfoLabel</include>
                     <label>$INFO[Pvr.BackendChannels,, $LOCALIZE[19019]]</label>
                     <visible>Container(525).HasFocus(4)</visible>
                 </control>
-                <control type="wraplist" id="30">
-                    <posx>0</posx>
-                    <posy>0</posy>
-                    <height>2</height>
-                    <width>2</width>
-                    <orientation>horizontal</orientation>
-                    <focusposition>0</focusposition>
-                    <scrolltime>0</scrolltime>
-                    <viewtype>list</viewtype>
-                    <itemlayout width="2" height="2"/>
-                    <focusedlayout width="2" height="2"/>
-                    <content>
-                        <item id="2">
-                            <label>-</label>
-                            <onclick>noop</onclick>
-                        </item>
-                        <item id="3">
-                            <label>-</label>
-                            <onclick>noop</onclick>
-                        </item>
-                        <item id="4">
-                            <label>-</label>
-                            <onclick>noop</onclick>
-                        </item>
-                    </content>
+                <control type="label">
+                    <include>HomeProfileInfoLabel</include>
+                    <label>$INFO[Container(525).ListItem.Label]</label>
+                    <visible>!Container(525).HasFocus(1) + !Container(525).HasFocus(2) + !Container(525).HasFocus(3) + !Container(525).HasFocus(4)</visible>
                 </control>
+                
             </control>
         </control>
     </include>
@@ -2731,7 +2711,7 @@
 	</include>
 	<include name="Mod_525Content">
 		<item id="1">
-			<label>Movies</label>
+			<label>20342</label>
 			<visible>!Skin.HasSetting(disable.movies)</visible>
 			<property name="single">$INFO[Skin.String(HomeMoviesSingleImage)]</property>
 			<property name="multi">$INFO[Skin.String(HomeMoviesMultiImage)]</property>
@@ -2740,7 +2720,7 @@
 			<icon>DefaultMovies.png</icon>
 		</item>
 		<item id="2">
-			<label>TV</label>
+			<label>20343</label>
 			<visible>!Skin.HasSetting(disable.tvshows)</visible>
 			<property name="single">$INFO[Skin.String(HomeTVShowsSingleImage)]</property>
 			<property name="multi">$INFO[Skin.String(HomeTVShowsMultiImage)]</property>
@@ -2749,7 +2729,7 @@
 			<icon>DefaultTVShows.png</icon>
 		</item>
 		<item id="3">
-			<label>Music</label>
+			<label>2</label>
 			<visible>!Skin.HasSetting(disable.music)</visible>
 			<property name="single">$INFO[Skin.String(HomeMusicSingleImage)]</property>
 			<property name="multi">$INFO[Skin.String(HomeMusicMultiImage)]</property>
@@ -2760,7 +2740,7 @@
 			<icon>DefaultAudio.png</icon>
 		</item>
 		<item id="4">
-			<label>Live TV</label>
+			<label>41220</label>
 			<visible>!Skin.HasSetting(disable.pvr) + System.GetBool(pvrmanager.enabled)</visible>
 			<property name="single">$INFO[Skin.String(HomeLiveTVSingleImage)]</property>
 			<property name="multi">$INFO[Skin.String(HomeLiveTVMultiImage)]</property>
@@ -2771,7 +2751,7 @@
 			<icon>DefaultTVGuide.png</icon>
 		</item>
 		<item id="5">
-			<label>Pictures</label>
+			<label>1</label>
 			<visible>!Skin.HasSetting(disable.pictures)</visible>
 			<property name="single">$INFO[Skin.String(HomePicturesSingleImage)]</property>
 			<property name="multi">$INFO[Skin.String(HomePicturesMultiImage)]</property>
@@ -2779,7 +2759,7 @@
 			<icon>DefaultPicture.png</icon>
 		</item>
 		<item id="6">
-			<label>Custom</label>
+			<label>$INFO[Skin.String(HomeCustomItem.Label)]</label>
 			<visible>!Skin.HasSetting(disable.games) + StringCompare(Skin.String(homescreen.style),simple)</visible>
 			<property name="single">$INFO[Skin.String(HomeGamesSingleImage)]</property>
 			<property name="multi">$INFO[Skin.String(HomeGamesMultiImage)]</property>
@@ -2793,7 +2773,7 @@
 			<icon>DefaultGames.png</icon>
 		</item>
 		<item id="7">
-			<label>Programs</label>
+			<label>0</label>
 			<visible>!Skin.HasSetting(disable.programs)</visible>
 			<property name="single">$INFO[Skin.String(HomeProgramsSingleImage)]</property>
 			<property name="multi">$INFO[Skin.String(HomeProgramsMultiImage)]</property>
@@ -2802,7 +2782,7 @@
 			<icon>DefaultAddonProgram.png</icon>
 		</item>
 		<item id="8">
-			<label>Weather</label>
+			<label>8</label>
 			<visible>!Skin.HasSetting(disable.weather) + StringCompare(Skin.String(homescreen.style),simple)</visible>
 			<property name="single">$INFO[Skin.String(HomeWeatherSingleImage)]</property>
 			<property name="multi">$INFO[Skin.String(HomeWeatherMultiImage)]</property>
@@ -2810,7 +2790,7 @@
 			<icon>DefaultAddonWeather.png</icon>
 		</item>
 		<item id="9">
-			<label>Settings</label>
+			<label>5</label>
 			<visible>true</visible>
 			<property name="single">$INFO[Skin.String(HomeSettingsSingleImage)]</property>
 			<property name="multi">$INFO[Skin.String(HomeSettingsMultiImage)]</property>
@@ -2818,7 +2798,7 @@
 			<icon>DefaultAddonService.png</icon>
 		</item>
 		<item id="11">
-			<label>PlayDVD</label>
+			<label>341</label>
 			<property name="single">$INFO[Skin.String(HomeHomeSingleImage)]</property>
 			<property name="multi">$INFO[Skin.String(HomeHomeMultiImage)]</property>
 			<onclick>SetFocus(525)</onclick>
@@ -2826,7 +2806,7 @@
 			<visible>System.HasMediaDVD</visible>
 		</item>
 		<item id="10">
-			<label>Favourites</label>
+			<label>1036</label>
 			<property name="single">$INFO[Skin.String(HomeHomeSingleImage)]</property>
 			<property name="multi">$INFO[Skin.String(HomeHomeMultiImage)]</property>
 			<onclick>SetFocus(525)</onclick>

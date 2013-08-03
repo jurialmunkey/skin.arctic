@@ -3,25 +3,17 @@
     <allowoverlay>yes</allowoverlay>
     <backgroundcolor>0</backgroundcolor>
 	<onload condition="!Skin.HasSetting(Skin.Init.Complete)">AlarmClock(Skin.Initialization,ReplaceWindow(startup),00:01,silent)</onload>
-
-	<!-- PANEL AND SIMPLE -->
 	<onload condition="IsEmpty(Skin.String(homescreen.style))">Skin.SetString(homescreen.style,panel)</onload>
 	<onload condition="![stringcompare(Skin.String(movie.widget.type),$LOCALIZE[41550]) | stringcompare(Skin.String(movie.widget.type),$LOCALIZE[41552]) | stringcompare(Skin.String(movie.widget.type),$LOCALIZE[575])]">Skin.SetString(movie.widget.type,$LOCALIZE[41552])</onload>
 	<onload condition="![stringcompare(Skin.String(tvshow.widget.type),$LOCALIZE[41551]) | stringcompare(Skin.String(tvshow.widget.type),$LOCALIZE[41550]) | stringcompare(Skin.String(tvshow.widget.type),$LOCALIZE[41553])]">Skin.SetString(tvshow.widget.type,$LOCALIZE[41553])</onload>
 	<onload condition="![stringcompare(Skin.String(music.widget.type),$LOCALIZE[41555]) | stringcompare(Skin.String(music.widget.type),$LOCALIZE[41550]) | stringcompare(Skin.String(music.widget.type),$LOCALIZE[41554])]">Skin.SetString(music.widget.type,$LOCALIZE[41555])</onload>
 	<onload condition="![stringcompare(Skin.String(defaultpanel.widget.type),$LOCALIZE[10511]) | stringcompare(Skin.String(defaultpanel.widget.type),$LOCALIZE[129]) | stringcompare(Skin.String(defaultpanel.widget.type),$LOCALIZE[12600])]">Skin.SetString(defaultpanel.widget.type,$LOCALIZE[10511])</onload>
 	<onload condition="Skin.HasSetting(UseRCB)">RunScript(script.games.rom.collection.browser,limit=10)</onload>
-
-	<!-- PROFILE SWITCH -->
-	<onload condition="!Skin.HasSetting(HideHomeProfileInfo)">AlarmClock(ProfileMove,Control.Move(30,1),00:10,silent,loop)</onload>
-	<onunload>CancelAlarm(ProfileMove,true)</onunload>
     <controls>
     	<!-- COMMON ITEMS -->
         <include>CommonItemsHome</include>
-
         <!-- PANEL HOME -->
 		<include condition="StringCompare(Skin.String(homescreen.style),panel)">Mod_HomeList</include>
-		
 		<!-- SIMPLE HOME -->
 		<control type="group">        
         	<animation effect="slide" start="0" end="0,500" time="250" condition="StringCompare(Skin.String(homescreen.style),simple)">WindowClose</animation>
@@ -30,16 +22,10 @@
         	<animation effect="slide" end="0" start="0,500" time="250" condition="StringCompare(Skin.String(homescreen.style),simple)">Visible</animation>
 			<include condition="StringCompare(Skin.String(homescreen.style),simple)">Mod_SimpleHomeList</include>
 		</control>
-		
 		<!-- COMMON ITEMS -->
 		<include>HomeProfileInfo</include>
 		<include>FadeBackground</include>	
-		
-		<!-- SHUTDOWN ITEMS -->
-		<include condition="StringCompare(Skin.String(homescreen.style),metro) + !Skin.HasSetting(HideHomeButtons)">shutdown-favs</include>
-		
 		<!-- COMMON ITEMS-->
 		<include>Common-Home-Info</include>
-	
     </controls>
 </window>

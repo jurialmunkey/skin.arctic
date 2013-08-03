@@ -3,7 +3,6 @@
     <allowoverlay>yes</allowoverlay>
     <backgroundcolor>0</backgroundcolor>
 	<onload condition="!Skin.HasSetting(Skin.Init.Complete)">AlarmClock(Skin.Initialization,ReplaceWindow(startup),00:01,silent)</onload>
-	<onload>Skin.SetBool(hide.glass)</onload>
 
 	<!-- PANEL AND SIMPLE -->
 	<onload condition="IsEmpty(Skin.String(homescreen.style))">Skin.SetString(homescreen.style,panel)</onload>

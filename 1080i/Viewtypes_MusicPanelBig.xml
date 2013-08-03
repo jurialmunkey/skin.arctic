@@ -59,15 +59,6 @@
 							<colordiffuse>ffcccccc</colordiffuse>
 							<aspectratio>stretch</aspectratio>
 						</control>
-						<control type="image">
-							<description>Glass</description>
-							<posx>10</posx>
-							<posy>10</posy>
-							<width>464</width>
-							<height>464</height>
-							<texture border="25">arctic/common/glass-ring.png</texture>
-							<visible>Skin.HasSetting(covers.showglass)</visible>
-						</control>
 
 						<control type="image">
 							<description>Border</description>
@@ -137,15 +128,6 @@
 							<texture background="true" diffuse="arctic/covers/702.png" fallback="views/fallbacks/DefaultAlbumCover.png/square-large.png">$VAR[WallPoster]</texture>
 							<aspectratio scalediffuse="false">scale</aspectratio>
 							<fadetime>200</fadetime>
-						</control>
-						<control type="image">
-							<description>Glass</description>
-							<posx>10</posx>
-							<posy>10</posy>
-							<width>702</width>
-							<height>702</height>
-							<texture border="25">arctic/common/glass-ring.png</texture>
-							<visible>Skin.HasSetting(covers.showglass)</visible>
 						</control>
 						<control type="image">
 							<description>Border</description>

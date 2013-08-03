@@ -15,86 +15,45 @@
                 <control type="button" id="6">
                     <onfocus>SetFocus(5)</onfocus>
                 </control>
-                
+                <!-- Back -->
+				<control type="image">
+					<posx>627</posx>
+					<posy>249</posy>
+					<width>666</width>
+					<height>542</height>
+					<texture border="15">arctic/common/panel.png</texture>
+				</control>
+				<control type="image">
+					<posx>607</posx>
+					<posy>229</posy>
+					<width>706</width>
+					<height>582</height>
+					<texture border="50">arctic/common/border-20.png</texture>
+				</control> 
+                <control type="image">
+                	<posx>637</posx>
+                	<posy>299</posy>
+                	<width>646</width>
+                	<height>482</height>
+                	<texture border="5">arctic/common/whitepanel8.png</texture>
+                </control>
+                <control type="image">
+					<posx>620</posx>
+					<posy>242</posy>
+					<width>80</width>
+					<height>80</height>
+					<texture>special://skin/extras/icons/info.png</texture>
+					<aspectratio>keep</aspectratio>
+				</control>
                 <control type="label">
                     <description>Heading</description>
-                    <posx>473</posx>
-                    <posy>218</posy>
+                    <posx>695</posx>
+                    <posy>258</posy>
                     <width>974</width>
-                    <font>Font-Condensed-S34</font>
+                    <include>DialogHeaderMod</include>
                     <label>$LOCALIZE[13406]</label>
-                    <textcolor>ddwhite</textcolor>
-                    <align>center</align>
+                    <align>left</align>
                 </control>
-                
-                <control type="group">
-                    <animation type="WindowOpen" reversible="false">
-                        <effect type="fade" start="0" end="85" time="400" tween="sine" easing="inout" delay="400" />
-                        <effect type="slide" start="0,-80" end="0,0" time="550" delay="400" tween="back" easing="out" />
-                    </animation>
-                    <control type="label">
-                        <description>Footer Label</description>
-                        <posx>658</posx>
-                        <posy>802</posy>
-                        <width>404</width>
-                        <align>left</align>
-                        <font>Font-Condensed-S31</font>
-                        <textcolor>77white</textcolor>
-                        <label>$INFO[Container(5).NumItems,, $LOCALIZE[41817]]</label>
-                        <visible>IntegerGreaterThan(Container(5).NumItems,0)</visible>
-                        <animation type="Visible" reversible="false">
-                            <effect type="fade" start="0" end="85" time="400" tween="sine" easing="inout" />
-                            <effect type="slide" start="0,-80" end="0,0" time="550" tween="back" easing="out" />
-                        </animation>
-                        <animation type="Hidden" reversible="false">
-                            <effect type="fade" start="85" end="0" time="400" tween="sine" easing="inout" />
-                            <effect type="slide" start="0,0" end="0,-80" time="550" tween="back" easing="in" />
-                        </animation>
-                    </control>
-                    <control type="label">
-                        <description>Page Label</description>
-                        <posx>1262</posx>
-                        <posy>802</posy>
-                        <width>200</width>
-                        <align>right</align>
-                        <font>Font-Condensed-S31</font>
-                        <label>$INFO[Container(5).CurrentPage]/$INFO[Container(5).NumPages]</label>
-                        <textcolor>77white</textcolor>
-                        <visible>IntegerGreaterThan(Container(5).NumPages,1)</visible>
-                        <animation type="Visible" reversible="false">
-                            <effect type="fade" start="0" end="85" time="400" tween="sine" easing="inout" />
-                            <effect type="slide" start="0,-80" end="0,0" time="550" tween="back" easing="out" />
-                        </animation>
-                        <animation type="Hidden" reversible="false">
-                            <effect type="fade" start="85" end="0" time="400" tween="sine" easing="inout" />
-                            <effect type="slide" start="0,0" end="0,-80" time="550" tween="back" easing="in" />
-                        </animation>
-                    </control>
-                </control>
-                
-                <control type="image">
-                    <posx>920</posx>
-                    <posy>246</posy>
-                    <width>80</width>
-                    <height>60</height>
-                    <texture>dialogs/default/arrow.png</texture>
-                </control>
-                
-                <control type="image">
-                    <posx>604</posx>
-                    <posy>266</posy>
-                    <width>712</width>
-                    <height>548</height>
-                    <texture border="39">dialogs/default/bg.png</texture>
-                </control>
-                <control type="image">
-                	<posx>638</posx>
-                	<posy>300</posy>
-                	<width>644</width>
-                	<height>481</height>
-                	<texture border="5">dialogs/default/inner.png</texture>
-                </control>
-
                 <control type="list" id="5">
                     <posx>638</posx>
                     <posy>300</posy>
@@ -107,13 +66,6 @@
                     <pagecontrol>61</pagecontrol>
                     <scrolltime tween="cubic" easing="out">500</scrolltime>
                     <itemlayout height="60">
-                        <control type="image">
-                            <posx>0</posx>
-                            <posy>1</posy>
-                            <width>644</width>
-                            <height>60</height>
-                            <texture>dialogs/default/separator.png</texture>
-                        </control>
                         <control type="label">
                             <posx>20</posx>
                             <posy>0</posy>
@@ -144,13 +96,6 @@
                             <visible>!Control.HasFocus(5)</visible>
                             <animation effect="fade" start="0" end="100" time="300" tween="sine" easing="inout" condition="![Container(5).Scrolling | Container(5).OnScrollNext | Container(5).OnScrollPrevious]">Visible</animation>
                             <animation effect="fade" start="100" end="0" time="300" tween="sine" easing="inout" condition="![Container(5).Scrolling | Container(5).OnScrollNext | Container(5).OnScrollPrevious]">Hidden</animation>
-                            <control type="image">
-                                <posx>0</posx>
-                                <posy>1</posy>
-                                <width>644</width>
-                                <height>60</height>
-                                <texture>dialogs/default/separator.png</texture>
-                            </control>
                             <control type="label">
                                 <posx>20</posx>
                                 <posy>0</posy>
@@ -183,7 +128,7 @@
                             <control type="image">
                                 <width>644</width>
                                 <height>60</height>
-                                <texture border="2">dialogs/default/highlight.png</texture>
+                                <texture border="10">views/other/focus-mod8.png</texture>
                             </control>
                             <control type="label">
                                 <posx>20</posx>

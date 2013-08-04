@@ -1286,6 +1286,10 @@
         	<filename>alaska_black.ttf</filename>
             <size>34</size>
         </font>
-        
+         <font>
+            <name>Font-Info-Plot</name>
+            <filename>alaska_light_nocaps.ttf</filename>
+            <size>40</size>
+        </font>       
     </fontset>	
 </fonts>

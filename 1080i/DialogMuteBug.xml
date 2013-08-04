@@ -25,7 +25,7 @@
                 <width>90</width>
                 <height>90</height>
                 <texture>overlays/volume/muted.png</texture>
-                <colordiffuse>mod-infotags-d</colordiffuse>
+                <colordiffuse>$VAR[osd.text.normal]</colordiffuse>
                 <aspectratio aligny="center">keep</aspectratio>
             </control>
         </control>

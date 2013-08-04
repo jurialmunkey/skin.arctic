@@ -149,7 +149,7 @@
             <include>Animation_OptionsButton</include>
             <posx>276</posx>
             <posy>950</posy>
-            <animation effect="slide" start="0" end="-204" time="0" condition="Skin.HasSetting(HideShutdownButton)">Conditional</animation>
+            <animation effect="slide" start="0" end="-204" time="0" condition="true">Conditional</animation>
             <control type="button" id="9010">
                 <description>Options Button</description>
                 <width>100</width>
@@ -162,28 +162,6 @@
                 <texturenofocus>-</texturenofocus>
                 <onfocus>SetFocus(9111)</onfocus>
                 <visible allowhiddenfocus="true">false</visible>
-            </control>
-            <control type="image">
-                <description>Options Button texture</description>
-                <width>100</width>
-                <height>100</height>
-                <texture>$VAR[OptionsButtonTexture]</texture>
-                <include>homebuttonsanim3</include>
-                <colordiffuse>Mod_Tags</colordiffuse>
-                <visible>!Skin.HasSetting(KioskMode) + Skin.HasSetting(hide.infotags) + !Window.IsVisible(movieinformation) + !Window.IsVisible(script-Actors-DialogInfo.xml) + !Window.IsVisible(script-Actors-DialogVideoInfo.xml) + !Window.IsVisible(addoninformation) + !Window.IsVisible(musicinformation) + !Window.IsVisible(playercontrols) + !Window.IsVisible(yesnodialog) + !Window.IsVisible(progressdialog) + !Window.IsVisible(virtualkeyboard) + !Window.IsVisible(numericinput) + !Window.IsVisible(filebrowser) + !Window.IsVisible(networksetup) + !Window.IsVisible(mediasource) + !Window.IsVisible(ProfileSettings) + !Window.IsVisible(LockSettings) + !Window.IsVisible(contentsettings) + !Window.IsVisible(songinformation) + !Window.IsVisible(addonsettings) + !Window.IsVisible(textviewer) + !Window.IsVisible(selectdialog) + !Window.IsVisible(okdialog) + !Window.IsVisible(filestackingdialog) + !Window.IsVisible(1122) + !Window.IsVisible(smartplaylisteditor) + !Window.IsVisible(pvrgroupmanager) + !Window.IsVisible(pvrtimersetting) + !Window.IsVisible(pvrguidesearch) + !Window.IsVisible(pvrchannelmanager) + !Window.IsVisible(pvrguideinfo) + !Window.IsVisible(pvrrecordinginfo) + !Window.IsActive(favourites)</visible>
-            </control>
-            <control type="label">
-                <description>Options Label</description>
-                <posx>85</posx>
-                <posy>0</posy>
-                <width>180</width>
-                <height>100</height>
-                <label>$LOCALIZE[41600]</label>
-                <font>Font-Alaska-S29-BL</font>
-                <textcolor>Mod_Tags</textcolor>
-                <shadowcolor>Mod_Shadow</shadowcolor>
-                <include>homebuttonsanim4</include>
-                <visible>!Skin.HasSetting(KioskMode) + Skin.HasSetting(hide.infotags) + !Window.IsVisible(movieinformation) + !Window.IsVisible(script-Actors-DialogInfo.xml) + !Window.IsVisible(script-Actors-DialogVideoInfo.xml) + !Window.IsVisible(addoninformation) + !Window.IsVisible(musicinformation) + !Window.IsVisible(playercontrols) + !Window.IsVisible(yesnodialog) + !Window.IsVisible(progressdialog) + !Window.IsVisible(virtualkeyboard) + !Window.IsVisible(numericinput) + !Window.IsVisible(filebrowser) + !Window.IsVisible(networksetup) + !Window.IsVisible(mediasource) + !Window.IsVisible(ProfileSettings) + !Window.IsVisible(LockSettings) + !Window.IsVisible(contentsettings) + !Window.IsVisible(songinformation) + !Window.IsVisible(addonsettings) + !Window.IsVisible(textviewer) + !Window.IsVisible(selectdialog) + !Window.IsVisible(okdialog) + !Window.IsVisible(filestackingdialog) + !Window.IsVisible(1122) + !Window.IsVisible(smartplaylisteditor) + !Window.IsVisible(pvrgroupmanager) + !Window.IsVisible(pvrtimersetting) + !Window.IsVisible(pvrguidesearch) + !Window.IsVisible(pvrchannelmanager) + !Window.IsVisible(pvrguideinfo) + !Window.IsVisible(pvrrecordinginfo) + !Window.IsActive(favourites)</visible>
             </control>
         </control>
     </include>

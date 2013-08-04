@@ -612,7 +612,7 @@
 							<width>1200</width>
 							<height>170</height>
 							<label>[B]$INFO[ListItem.Tagline,,[CR]][/B]$INFO[ListItem.Plot]</label>
-							<font>Font-Condensed-S29</font>
+							<font>Font-Info-Plot</font>
 							<textcolor>Mod_Tags</textcolor>
 							<align>justify</align>
 							<autoscroll delay="13000" time="3000" repeat="13000" />

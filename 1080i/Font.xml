@@ -63,6 +63,7 @@
             <filename>alaska_light_nocaps.ttf</filename>
             <size>29</size>
         </font>
+        
         <font>
             <name>Font-Condensed-S29-B</name>
             <filename>alaska_light_nocaps.ttf</filename>
@@ -639,6 +640,10 @@
         	<filename>alaska_black.ttf</filename>
             <size>34</size>
         </font>
-        
+        <font>
+            <name>Font-Info-Plot</name>
+            <filename>alaska_light_nocaps.ttf</filename>
+            <size>29</size>
+        </font>
     </fontset>
 </fonts>

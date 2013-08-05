@@ -58,3 +58,6 @@ Moved out icons to extras folder
 Cleaned up leftover code from glass rings, borders and covers
 Removed glass edging from simple home screen
 Added gap to simplehome screen to make it more consistent with rest of theme
+Weather menu
+Pictures menu
+Fix for profile on simple homescreen so not hidden when favourites visible

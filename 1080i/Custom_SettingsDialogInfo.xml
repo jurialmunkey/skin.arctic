@@ -63,6 +63,16 @@
 					<label>42413</label>
                 </control>
                 <control type="radiobutton" id="2103">
+					<width>644</width>
+                    <height>60</height>
+                    <include>SettingsCategoryPanelRadioButtonVars</include>
+					<selected>Skin.HasSetting(infotags.numericrating)</selected>
+					<onclick>Skin.ToggleSetting(infotags.numericrating)</onclick>
+					<label> - $LOCALIZE[42436]</label>
+					<enable>!Skin.HasSetting(info.hideinfotags)</enable>
+					<animation effect="fade" start="100" end="40" condition="!Control.IsEnabled(2103)">Conditional</animation>
+				</control>
+                <control type="radiobutton" id="2104">
                     <width>644</width>
                     <height>60</height>
                     <include>SettingsCategoryPanelRadioButtonVars</include>
@@ -70,7 +80,8 @@
 					<onclick>Skin.ToggleSetting(info.hideflags)</onclick>
 					<label>42426</label>
                 </control>
-                <control type="radiobutton" id="2104">
+                
+                <control type="radiobutton" id="2105">
                     <width>644</width>
                     <height>60</height>
                     <include>SettingsCategoryPanelRadioButtonVars</include>
@@ -78,7 +89,7 @@
 					<onclick>Skin.ToggleSetting(MovieInformation.PlayTrailer)</onclick>
 					<label>$LOCALIZE[41202]</label>
                 </control>
-                <control type="radiobutton" id="2105">
+                <control type="radiobutton" id="2106">
                     <width>644</width>
                     <height>60</height>
                     <include>SettingsCategoryPanelRadioButtonVars</include>

@@ -502,6 +502,7 @@
 						<height>485</height>
 						<texture diffuse="views/posterview/diffuse-ref.png" flipy="true" background="true">$VAR[ListInfoPosterVar]</texture>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
+						<visible>!Skin.HasSetting(HideCoverReflection)</visible>
 					</control>
 					<control type="image">
 						<description>Shadow focus</description>

@@ -878,20 +878,13 @@
                     <align>left</align>
                     <animation effect="fade" start="100" end="60" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(101)">Conditional</animation>
                 </control>
-                <control type="image">
-                    <posx>100</posx>
-                    <posy>568</posy>
-                    <height>50</height>
-                    <width>512</width>
-                    <texture>dialogs/shutdown/shadow.png</texture>
-                </control>
+
 				<control type="image">
                     <posx>115</posx>
                     <posy>0</posy>
                     <width>482</width>
                     <height>570</height>
-                    <texture border="10">views/newgloss/whitepanel.png</texture>
-                    <colordiffuse>mod-infotags</colordiffuse>
+                    <texture border="10">arctic/common/panel.png</texture>
                 </control>
                 <control type="multiimage">
                     <posx>115</posx>
@@ -910,15 +903,8 @@
                     <posx>105</posx>
                     <posy>-10</posy>
                     <width>502</width>
-                    <height>270</height>
-                    <texture border="25">views/newgloss/border-top.png</texture>
-                </control>
-                <control type="image">
-                    <posx>105</posx>
-                    <posy>260</posy>
-                    <width>502</width>
-                    <height>320</height>
-                    <texture border="25">views/newgloss/border-bottom-no.png</texture>
+                    <height>590</height>
+                    <texture border="25">arctic/common/border.png</texture>
                 </control>
                 <control type="image">
                     <posx>115</posx>
@@ -1103,23 +1089,16 @@
                     <control type="group" id="2101">
                         <description>Day 1</description>
                         <width>372</width>
-                        <control type="image">
-                            <posx>-5</posx>
-                            <posy>568</posy>
-                            <height>50</height>
-                            <width>372</width>
-                            <texture>dialogs/shutdown/shadow.png</texture>
-                        </control>
+                        <posx>5</posx>
                         <control type="image">
 							<posx>0</posx>
 							<posy>0</posy>
 							<width>352</width>
 							<height>570</height>
-							<texture border="10">views/newgloss/whitepanel.png</texture>
-							<colordiffuse>mod-infotags</colordiffuse>
+							<texture border="10">arctic/common/panel.png</texture>
 						</control>
                         <control type="button" id="211">
-                            <posx>-5</posx>
+                            <posx>0</posx>
                             <posy>256</posy>
                             <width>362</width>
                             <height>320</height>
@@ -1147,15 +1126,8 @@
 							<posx>-10</posx>
 							<posy>-10</posy>
 							<width>372</width>
-							<height>270</height>
-							<texture border="25">views/newgloss/border-top.png</texture>
-						</control>
-						<control type="image">
-							<posx>-10</posx>
-							<posy>260</posy>
-							<width>372</width>
-							<height>320</height>
-							<texture border="25">views/newgloss/border-bottom-no.png</texture>
+							<height>590</height>
+							<texture border="25">arctic/common/border.png</texture>
 						</control>
 						
                         <control type="image">
@@ -1270,20 +1242,13 @@
                     <control type="group" id="2102">
                         <description>Day 2</description>
                         <width>372</width>
-                        <control type="image">
-                            <posx>-5</posx>
-                            <posy>568</posy>
-                            <height>50</height>
-                            <width>372</width>
-                            <texture>dialogs/shutdown/shadow.png</texture>
-                        </control>
+                        <posx>5</posx>
                         <control type="image">
 							<posx>0</posx>
 							<posy>0</posy>
 							<width>352</width>
 							<height>570</height>
-							<texture border="10">views/newgloss/whitepanel.png</texture>
-							<colordiffuse>mod-infotags</colordiffuse>
+							<texture border="10">arctic/common/panel.png</texture>
 						</control>
                         <control type="button" id="212">
                             <posx>-5</posx>
@@ -1314,15 +1279,8 @@
 							<posx>-10</posx>
 							<posy>-10</posy>
 							<width>372</width>
-							<height>270</height>
-							<texture border="25">views/newgloss/border-top.png</texture>
-						</control>
-						<control type="image">
-							<posx>-10</posx>
-							<posy>260</posy>
-							<width>372</width>
-							<height>320</height>
-							<texture border="25">views/newgloss/border-bottom-no.png</texture>
+							<height>590</height>
+							<texture border="25">arctic/common/border.png</texture>
 						</control>
                         <control type="image">
                             <posx>0</posx>
@@ -1437,20 +1395,13 @@
                     <control type="group" id="2103">
                         <description>Day 3</description>
                         <width>372</width>
-                        <control type="image">
-                            <posx>-5</posx>
-                            <posy>568</posy>
-                            <height>50</height>
-                            <width>372</width>
-                            <texture>dialogs/shutdown/shadow.png</texture>
-                        </control>
+                        <posx>5</posx>
                         <control type="image">
 							<posx>0</posx>
 							<posy>0</posy>
 							<width>352</width>
 							<height>570</height>
-							<texture border="10">views/newgloss/whitepanel.png</texture>
-							<colordiffuse>mod-infotags</colordiffuse>
+							<texture border="10">arctic/common/panel.png</texture>
 						</control>
                         <control type="button" id="213">
                             <posx>-5</posx>
@@ -1481,15 +1432,8 @@
 							<posx>-10</posx>
 							<posy>-10</posy>
 							<width>372</width>
-							<height>270</height>
-							<texture border="25">views/newgloss/border-top.png</texture>
-						</control>
-						<control type="image">
-							<posx>-10</posx>
-							<posy>260</posy>
-							<width>372</width>
-							<height>320</height>
-							<texture border="25">views/newgloss/border-bottom-no.png</texture>
+							<height>590</height>
+							<texture border="25">arctic/common/border.png</texture>
 						</control>
                         <control type="image">
                             <posx>0</posx>
@@ -1605,20 +1549,13 @@
                         <description>Day 4</description>
                         <animation effect="fade" start="0" end="100" delay="750">WindowOpen</animation>
                         <width>372</width>
-                        <control type="image">
-                            <posx>-5</posx>
-                            <posy>568</posy>
-                            <height>50</height>
-                            <width>372</width>
-                            <texture>dialogs/shutdown/shadow.png</texture>
-                        </control>
+                        <posx>5</posx>
                         <control type="image">
 							<posx>0</posx>
 							<posy>0</posy>
 							<width>352</width>
 							<height>570</height>
-							<texture border="10">views/newgloss/whitepanel.png</texture>
-							<colordiffuse>mod-infotags</colordiffuse>
+							<texture border="10">arctic/common/panel.png</texture>
 						</control>
                         <control type="button" id="214">
                             <posx>-5</posx>
@@ -1649,16 +1586,10 @@
 							<posx>-10</posx>
 							<posy>-10</posy>
 							<width>372</width>
-							<height>270</height>
-							<texture border="25">views/newgloss/border-top.png</texture>
+							<height>590</height>
+							<texture border="25">arctic/common/border.png</texture>
 						</control>
-						<control type="image">
-							<posx>-10</posx>
-							<posy>260</posy>
-							<width>372</width>
-							<height>320</height>
-							<texture border="25">views/newgloss/border-bottom-no.png</texture>
-						</control>
+						
                         <control type="image">
                             <posx>0</posx>
                             <posy>184</posy>
@@ -1773,6 +1704,7 @@
                         <description>Day 5</description>
                         <animation effect="fade" start="0" end="100" delay="750">WindowOpen</animation>
                         <width>372</width>
+                        <posx>5</posx>
                         <control type="image">
                             <posx>-5</posx>
                             <posy>568</posy>
@@ -1785,8 +1717,7 @@
 							<posy>0</posy>
 							<width>352</width>
 							<height>570</height>
-							<texture border="10">views/newgloss/whitepanel.png</texture>
-							<colordiffuse>mod-infotags</colordiffuse>
+							<texture border="10">arctic/common/panel.png</texture>
 						</control>
                         <control type="button" id="215">
                             <posx>-5</posx>
@@ -1817,16 +1748,10 @@
 							<posx>-10</posx>
 							<posy>-10</posy>
 							<width>372</width>
-							<height>270</height>
-							<texture border="25">views/newgloss/border-top.png</texture>
+							<height>590</height>
+							<texture border="25">arctic/common/border.png</texture>
 						</control>
-						<control type="image">
-							<posx>-10</posx>
-							<posy>260</posy>
-							<width>372</width>
-							<height>320</height>
-							<texture border="25">views/newgloss/border-bottom-no.png</texture>
-						</control>
+						
                         <control type="image">
                             <posx>0</posx>
                             <posy>184</posy>
@@ -1941,20 +1866,13 @@
                         <description>Day 6</description>
                         <animation effect="fade" start="0" end="100" delay="750">WindowOpen</animation>
                         <width>372</width>
-                        <control type="image">
-                            <posx>-5</posx>
-                            <posy>568</posy>
-                            <height>50</height>
-                            <width>372</width>
-                            <texture>dialogs/shutdown/shadow.png</texture>
-                        </control>
+                        <posx>5</posx>
                         <control type="image">
 							<posx>0</posx>
 							<posy>0</posy>
 							<width>352</width>
 							<height>570</height>
-							<texture border="10">views/newgloss/whitepanel.png</texture>
-							<colordiffuse>mod-infotags</colordiffuse>
+							<texture border="10">arctic/common/panel.png</texture>
 						</control>
                         <control type="button" id="216">
                             <posx>-5</posx>
@@ -1985,16 +1903,10 @@
 							<posx>-10</posx>
 							<posy>-10</posy>
 							<width>372</width>
-							<height>270</height>
-							<texture border="25">views/newgloss/border-top.png</texture>
+							<height>590</height>
+							<texture border="25">arctic/common/border.png</texture>
 						</control>
-						<control type="image">
-							<posx>-10</posx>
-							<posy>260</posy>
-							<width>372</width>
-							<height>320</height>
-							<texture border="25">views/newgloss/border-bottom-no.png</texture>
-						</control>
+						
                         <control type="image">
                             <posx>0</posx>
                             <posy>184</posy>
@@ -2109,20 +2021,13 @@
                         <description>Day 7</description>
                         <animation effect="fade" start="0" end="100" delay="750">WindowOpen</animation>
                         <width>372</width>
-                        <control type="image">
-                            <posx>-5</posx>
-                            <posy>568</posy>
-                            <height>50</height>
-                            <width>372</width>
-                            <texture>dialogs/shutdown/shadow.png</texture>
-                        </control>
+                        <posx>5</posx>
                         <control type="image">
 							<posx>0</posx>
 							<posy>0</posy>
 							<width>352</width>
 							<height>570</height>
-							<texture border="10">views/newgloss/whitepanel.png</texture>
-							<colordiffuse>mod-infotags</colordiffuse>
+							<texture border="10">arctic/common/panel.png</texture>
 						</control>
                         <control type="button" id="217">
                             <posx>-5</posx>
@@ -2153,16 +2058,10 @@
 							<posx>-10</posx>
 							<posy>-10</posy>
 							<width>372</width>
-							<height>270</height>
-							<texture border="25">views/newgloss/border-top.png</texture>
+							<height>590</height>
+							<texture border="25">arctic/common/border.png</texture>
 						</control>
-						<control type="image">
-							<posx>-10</posx>
-							<posy>260</posy>
-							<width>372</width>
-							<height>320</height>
-							<texture border="25">views/newgloss/border-bottom-no.png</texture>
-						</control>
+						
                         <control type="image">
                             <posx>0</posx>
                             <posy>184</posy>
@@ -2277,20 +2176,13 @@
                         <description>Day 8</description>
                         <animation effect="fade" start="0" end="100" delay="750">WindowOpen</animation>
                         <width>372</width>
-                        <control type="image">
-                            <posx>-5</posx>
-                            <posy>568</posy>
-                            <height>50</height>
-                            <width>372</width>
-                            <texture>dialogs/shutdown/shadow.png</texture>
-                        </control>
+                        <posx>5</posx>
                         <control type="image">
 							<posx>0</posx>
 							<posy>0</posy>
 							<width>352</width>
 							<height>570</height>
-							<texture border="10">views/newgloss/whitepanel.png</texture>
-							<colordiffuse>mod-infotags</colordiffuse>
+							<texture border="10">arctic/common/panel.png</texture>
 						</control>
                         <control type="button" id="218">
                             <posx>-5</posx>
@@ -2321,16 +2213,10 @@
 							<posx>-10</posx>
 							<posy>-10</posy>
 							<width>372</width>
-							<height>270</height>
-							<texture border="25">views/newgloss/border-top.png</texture>
+							<height>590</height>
+							<texture border="25">arctic/common/border.png</texture>
 						</control>
-						<control type="image">
-							<posx>-10</posx>
-							<posy>260</posy>
-							<width>372</width>
-							<height>320</height>
-							<texture border="25">views/newgloss/border-bottom-no.png</texture>
-						</control>
+						
                         <control type="image">
                             <posx>0</posx>
                             <posy>184</posy>
@@ -2445,20 +2331,13 @@
                         <description>Day 9</description>
                         <animation effect="fade" start="0" end="100" delay="750">WindowOpen</animation>
                         <width>372</width>
-                        <control type="image">
-                            <posx>-5</posx>
-                            <posy>568</posy>
-                            <height>50</height>
-                            <width>372</width>
-                            <texture>dialogs/shutdown/shadow.png</texture>
-                        </control>
+                        <posx>5</posx>
                         <control type="image">
 							<posx>0</posx>
 							<posy>0</posy>
 							<width>352</width>
 							<height>570</height>
-							<texture border="10">views/newgloss/whitepanel.png</texture>
-							<colordiffuse>mod-infotags</colordiffuse>
+							<texture border="10">arctic/common/panel.png</texture>
 						</control>
                         <control type="button" id="219">
                             <posx>-5</posx>
@@ -2489,16 +2368,10 @@
 							<posx>-10</posx>
 							<posy>-10</posy>
 							<width>372</width>
-							<height>270</height>
-							<texture border="25">views/newgloss/border-top.png</texture>
+							<height>590</height>
+							<texture border="25">arctic/common/border.png</texture>
 						</control>
-						<control type="image">
-							<posx>-10</posx>
-							<posy>260</posy>
-							<width>372</width>
-							<height>320</height>
-							<texture border="25">views/newgloss/border-bottom-no.png</texture>
-						</control>
+						
                         <control type="image">
                             <posx>0</posx>
                             <posy>184</posy>
@@ -2613,20 +2486,13 @@
                         <description>Day 10</description>
                         <animation effect="fade" start="0" end="100" delay="750">WindowOpen</animation>
                         <width>372</width>
-                        <control type="image">
-                            <posx>-5</posx>
-                            <posy>568</posy>
-                            <height>50</height>
-                            <width>372</width>
-                            <texture>dialogs/shutdown/shadow.png</texture>
-                        </control>
+                        <posx>5</posx>
                         <control type="image">
 							<posx>0</posx>
 							<posy>0</posy>
 							<width>352</width>
 							<height>570</height>
-							<texture border="10">views/newgloss/whitepanel.png</texture>
-							<colordiffuse>mod-infotags</colordiffuse>
+							<texture border="10">arctic/common/panel.png</texture>
 						</control>
                         <control type="button" id="220">
                             <posx>-5</posx>
@@ -2657,16 +2523,10 @@
 							<posx>-10</posx>
 							<posy>-10</posy>
 							<width>372</width>
-							<height>270</height>
-							<texture border="25">views/newgloss/border-top.png</texture>
+							<height>590</height>
+							<texture border="25">arctic/common/border.png</texture>
 						</control>
-						<control type="image">
-							<posx>-10</posx>
-							<posy>260</posy>
-							<width>372</width>
-							<height>320</height>
-							<texture border="25">views/newgloss/border-bottom-no.png</texture>
-						</control>
+						
                         <control type="image">
                             <posx>0</posx>
                             <posy>184</posy>
@@ -2856,20 +2716,12 @@
                     <animation effect="fade" start="100" end="60" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(301)">Conditional</animation>
                 </control>
                 <control type="image">
-                    <posx>11</posx>
-                    <posy>568</posy>
-                    <height>50</height>
-                    <width>720</width>
-                    <texture>dialogs/shutdown/shadow.png</texture>
-                </control>
-                <control type="image">
                     <description>List Panel</description>
                     <posx>14</posx>
                     <posy>-3</posy>
                     <width>714</width>
                     <height>575</height>
-                    <texture border="5">views/newgloss/whitepanel.png</texture>
-                    <colordiffuse>mod-infotags</colordiffuse>
+                    <texture border="15">arctic/common/panel.png</texture>
                 </control>
                 <control type="image">
                     <description>List Border</description>
@@ -2877,7 +2729,7 @@
                     <posy>-13</posy>
                     <width>734</width>
                     <height>595</height>
-                    <texture border="25">views/newgloss/border.png</texture>
+                    <texture border="25">arctic/common/border.png</texture>
                 </control>
                 <control type="list" id="310">
                     <posx>16</posx>

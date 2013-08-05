@@ -3321,6 +3321,21 @@
 				<aspectratio align="right" aligny="center">keep</aspectratio>
 				<texture fallback="aeonflags/music/rating/rating0.png">$VAR[AeonFlagStars]</texture>
 				<colordiffuse>Mod_Tags</colordiffuse>
+				<visible>!Skin.HasSetting(infotags.numericrating)</visible>
+			</control>
+			<control type="label">
+				<font>Font-Alaska-S25-BL</font>
+				<textcolor>Mod_Tags</textcolor>
+				<posx>-100</posx>
+				<posy>60</posy>
+				<width>92</width>
+				<height>48</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label fallback="0.0">$INFO[ListItem.Rating]</label>
+				<scroll>false</scroll>
+				<visible>Skin.HasSetting(infotags.numericrating)</visible>
+				<animation effect="slide" end="4" condition="Container.Content(artists) | Container.Content(albums) | Container.Content(songs)">Conditional</animation>
 			</control>
 			<control type="image">
 				<posx>20</posx>

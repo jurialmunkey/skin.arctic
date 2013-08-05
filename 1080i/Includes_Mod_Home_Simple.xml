@@ -5,15 +5,6 @@
 			<control type="group">
 				<posy>1100</posy>
 				<animation effect="slide" start="0" end="0,-870" time="550" delay="150" tween="back" easing="out" condition="Control.HasFocus(82)">Conditional</animation>
-				<!-- GLass -->
-				<!--<control type="image">
-					<posx>-10</posx>
-					<posy>-40</posy>
-					<width>1940</width>
-					<height>800</height>
-					<texture border="25">views/newgloss/border-glass.png</texture>
-					<colordiffuse>77ffffff</colordiffuse>
-				</control>-->
 				<!-- DARK PANEL -->
 				<control type="image">
 					<posx>-10</posx>
@@ -59,15 +50,6 @@
 				<include>listEndAnimation</include>
 				<posy>695</posy>
 				<animation effect="slide" start="0" end="0,-230" time="250" condition="Control.HasFocus(83) | Control.HasFocus(84)">Conditional</animation>
-				<!-- GLASS BORDER -->
-				<!--<control type="image">
-					<posx>-10</posx>
-					<posy>140</posy>
-					<width>1940</width>
-					<height>500</height>
-					<texture border="25">views/newgloss/border-glass.png</texture>
-					<colordiffuse>77ffffff</colordiffuse>
-				</control>-->
 				<!-- DARK PANEL -->
 				<control type="image">
 					<posx>-10</posx>

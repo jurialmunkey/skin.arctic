@@ -1191,3 +1191,7 @@ msgstr ""
 msgctxt "#42435"
 msgid "Use light osd"
 msgstr ""
+
+msgctxt "#42436"
+msgid "Prefer numeric rating"
+msgstr ""

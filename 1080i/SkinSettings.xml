@@ -553,6 +553,15 @@
 							<onclick>Skin.ToggleSetting(HideCoverReflection)</onclick>
 							<label>42432</label>
 						</control>
+						<control type="radiobutton" id="3012">
+							<width>1210</width>
+							<include>SettingsCategoryRadioButtonVars</include>
+							<selected>Skin.HasSetting(infotags.numericrating)</selected>
+							<onclick>Skin.ToggleSetting(infotags.numericrating)</onclick>
+							<label>42436</label>
+							<enable>!Skin.HasSetting(HideInfoTags)</enable>
+							<animation effect="fade" start="100" end="42" time="0" condition="!Control.IsEnabled(3012)">Conditional</animation>
+						</control>
 					</control>
 				
 					<!-- OSD Settings -->
@@ -672,6 +681,7 @@
 							<onclick>ClearProperty(CustomDialog)</onclick>
 							<onclick>SetProperty(Dialog,$LOCALIZE[342])</onclick>
 							<onclick>ActivateWindow(3002)</onclick>
+							<visible>!Skin.HasSetting(disable.movies)</visible>
 						</control>
 						<control type="button" id="5003">
 							<width>1210</width>
@@ -681,6 +691,7 @@
 							<onclick>ClearProperty(CustomDialog)</onclick>
 							<onclick>SetProperty(Dialog,$LOCALIZE[20343])</onclick>
 							<onclick>ActivateWindow(3002)</onclick>
+							<visible>!Skin.HasSetting(disable.tvshows)</visible>
 						</control>
 						<control type="button" id="5006">
 							<width>1210</width>
@@ -690,6 +701,7 @@
 							<onclick>ClearProperty(CustomDialog)</onclick>
 							<onclick>SetProperty(Dialog,$LOCALIZE[2])</onclick>
 							<onclick>ActivateWindow(3002)</onclick>
+							<visible>!Skin.HasSetting(disable.music)</visible>
 						</control>
 						<control type="button" id="5009">
 							<width>1210</width>
@@ -699,6 +711,7 @@
 							<onclick>ClearProperty(CustomDialog)</onclick>
 							<onclick>SetProperty(Dialog,$LOCALIZE[41504])</onclick>
 							<onclick>ActivateWindow(3002)</onclick>
+							<visible>!Skin.HasSetting(disable.programs)</visible>
 						</control>
 						<control type="button" id="5010">
 							<width>1210</width>
@@ -708,6 +721,7 @@
 							<onclick>ClearProperty(CustomDialog)</onclick>
 							<onclick>SetProperty(Dialog,$LOCALIZE[12600])</onclick>
 							<onclick>ActivateWindow(3002)</onclick>
+							<visible>!Skin.HasSetting(disable.weather) + StringCompare(Skin.String(homescreen.style),simple)</visible>
 						</control>
 						<!-- USE WEATHER FANART -->
 						<control type="radiobutton" id="5014">
@@ -716,6 +730,7 @@
 							<selected>Skin.HasSetting(weather.usefanart)</selected>
 							<onclick>Skin.ToggleSetting(weather.usefanart)</onclick>
 							<label>42420</label>
+							<visible>!Skin.HasSetting(disable.weather) + StringCompare(Skin.String(homescreen.style),simple)</visible>
 						</control>
 						<!-- LIVE TV BACKGROUND -->
 						<control type="button" id="5011">
@@ -726,6 +741,7 @@
 							<onclick>ClearProperty(CustomDialog)</onclick>
 							<onclick>SetProperty(Dialog,$LOCALIZE[41220])</onclick>
 							<onclick>ActivateWindow(3002)</onclick>
+							<visible>!Skin.HasSetting(disable.pvr)</visible>
 						</control>
 						<!-- Pictures BACKGROUND -->
 						<control type="button" id="5012">
@@ -736,6 +752,7 @@
 							<onclick>ClearProperty(CustomDialog)</onclick>
 							<onclick>SetProperty(Dialog,$LOCALIZE[10002])</onclick>
 							<onclick>ActivateWindow(3002)</onclick>
+							<visible>!Skin.HasSetting(disable.pictures)</visible>
 						</control>
 						<!-- Games BACKGROUND -->
 						<control type="button" id="5013">
@@ -746,6 +763,7 @@
 							<onclick>ClearProperty(CustomDialog)</onclick>
 							<onclick>SetProperty(Dialog,$LOCALIZE[15016])</onclick>
 							<onclick>ActivateWindow(3002)</onclick>
+							<visible>!Skin.HasSetting(disable.games) + StringCompare(Skin.String(homescreen.style),simple)</visible>
 						</control>
 					</control>
 				

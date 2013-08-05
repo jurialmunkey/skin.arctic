@@ -1,4 +1,94 @@
 <includes>
+	<include name="Home-Fanart-Info-Content">
+		<control type="image">
+			<posx>30</posx>
+			<posy>20</posy>
+			<width>391</width>
+			<height>200</height>
+			<texture diffuse="arctic/home/fanart.png">$INFO[Container(82).ListItem.Icon]</texture>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<visible>!IsEmpty(Container(82).ListItem.Icon)</visible>
+		</control>
+		<control type="image">
+			<posx>30</posx>
+			<posy>20</posy>
+			<width>391</width>
+			<height>200</height>
+			<texture diffuse="arctic/home/fanart.png">$INFO[Container(82).ListItem.Property(poster)]</texture>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<visible>IsEmpty(Container(82).ListItem.Icon)</visible>
+		</control>
+		<control type="image">
+			<posx>20</posx>
+			<posy>10</posy>
+			<width>411</width>
+			<height>220</height>
+			<texture border="25">arctic/common/border.png</texture>
+			<visible>!IsEmpty(Container(82).ListItem.Icon) | !IsEmpty(Container(82).ListItem.Property(poster))</visible>
+		</control>
+		<control type="label">
+			<posx>440</posx>
+			<posy>22</posy>
+			<label>$INFO[Container(82).ListItem.Label]</label>
+			<align>left</align>
+			<font>Font-ModHome</font>
+			<textcolor>eedddddd</textcolor>
+			<width>1010</width>
+			<scroll>false</scroll>
+		</control>
+		<control type="label">
+			<posx>440</posx>
+			<posy>54</posy>
+			<label>$INFO[Container(82).ListItem.Label2]</label>
+			<align>left</align>
+			<font>Font-Alaska-S28-L</font>
+			<textcolor>eebbbbbb</textcolor>
+			<width>1010</width>
+			<scroll>false</scroll>
+		</control>
+		<control type="textbox">
+			<posx>440</posx>
+			<posy>86</posy>
+			<label>$INFO[Container(82).ListItem.Property(Plot)]</label>
+			<align>justify</align>
+			<font>Font-Condensed-S28</font>
+			<textcolor>eebbbbbb</textcolor>
+			<width>1010</width>
+			<height>135</height>
+			<autoscroll delay="13000" time="3000" repeat="13000" />
+			<visible>Container(525).HasFocus(3) | system.getbool(videolibrary.showunwatchedplots) | [!Container(525).HasFocus(3) + !system.getbool(videolibrary.showunwatchedplots) + Container(82).ListItem.Property(Overlay)]</visible>
+		</control>
+		<control type="textbox">
+			<posx>440</posx>
+			<posy>86</posy>
+			<label>$LOCALIZE[20370]</label>
+			<align>justify</align>
+			<font>Font-Condensed-S28</font>
+			<textcolor>eebbbbbb</textcolor>
+			<width>1010</width>
+			<height>135</height>
+			<autoscroll delay="13000" time="3000" repeat="13000" />
+			<visible>!Container(525).HasFocus(3) + !Container(82).ListItem.Property(Overlay) + !system.getbool(videolibrary.showunwatchedplots)</visible>
+		</control>
+		<control type="image">
+			<posx>1480</posx>
+			<posy>10</posy>
+			<width>400</width>
+			<height>220</height>
+			<texture>$INFO[Container(82).ListItem.Property(logo)]</texture>
+			<aspectratio align="center" aligny="center">keep</aspectratio>
+			<visible>!Container(525).HasFocus(3)</visible>
+		</control>
+		<control type="image">
+			<posx>1480</posx>
+			<posy>10</posy>
+			<width>400</width>
+			<height>220</height>
+			<texture fallback="DefaultAudio.png">$INFO[Skin.String(cdartlocation)]$INFO[Container(82).ListItem.Label,,/logo.png]</texture>
+			<aspectratio align="center" aligny="center">keep</aspectratio>
+			<visible>Container(525).HasFocus(3)</visible>
+		</control>
+	</include>
 	<include name="Mod_HomeLabel">
 		<align>left</align>
 		<font>Font-ModHome</font>
@@ -23,9 +113,9 @@
 		<texture border="35">views/newgloss/whitepanel-15.png</texture>
 	</include>
 	<include name="Mod_GreyPanelDimensions2">
-		<posx>-15</posx>
+		<posx>-5</posx>
 		<posy>205</posy>
-		<width>1950</width>
+		<width>1930</width>
 		<height>1490</height>
 		<texture border="35">views/newgloss/whitepanel-15.png</texture>
 	</include>
@@ -441,94 +531,7 @@
 					<visible>Control.HasFocus(82)</visible>
 					<include>panel.slidedown.anim</include>
 					<animation effect="fade" start="0" end="100" time="450" tween="cubic" easing="out" reversible="false">Visible</animation>
-					<control type="image">
-						<posx>30</posx>
-						<posy>20</posy>
-						<width>391</width>
-						<height>200</height>
-						<texture diffuse="arctic/home/fanart.png">$INFO[Container(82).ListItem.Icon]</texture>
-						<aspectratio scalediffuse="false">scale</aspectratio>
-						<visible>!IsEmpty(Container(82).ListItem.Icon)</visible>
-					</control>
-					<control type="image">
-						<posx>30</posx>
-						<posy>20</posy>
-						<width>391</width>
-						<height>200</height>
-						<texture diffuse="arctic/home/fanart.png">$INFO[Container(82).ListItem.Property(poster)]</texture>
-						<aspectratio scalediffuse="false">scale</aspectratio>
-						<visible>IsEmpty(Container(82).ListItem.Icon)</visible>
-					</control>
-					<control type="image">
-						<posx>20</posx>
-						<posy>10</posy>
-						<width>411</width>
-						<height>220</height>
-						<texture border="25">arctic/common/border.png</texture>
-						<visible>!IsEmpty(Container(82).ListItem.Icon) | !IsEmpty(Container(82).ListItem.Property(poster))</visible>
-					</control>
-					<control type="label">
-						<posx>440</posx>
-						<posy>22</posy>
-						<label>$INFO[Container(82).ListItem.Label]</label>
-						<align>left</align>
-						<font>Font-ModHome</font>
-						<textcolor>eedddddd</textcolor>
-						<width>1010</width>
-						<scroll>false</scroll>
-					</control>
-					<control type="label">
-						<posx>440</posx>
-						<posy>54</posy>
-						<label>$INFO[Container(82).ListItem.Label2]</label>
-						<align>left</align>
-						<font>Font-Alaska-S28-L</font>
-						<textcolor>eebbbbbb</textcolor>
-						<width>1010</width>
-						<scroll>false</scroll>
-					</control>
-					<control type="textbox">
-						<posx>440</posx>
-						<posy>86</posy>
-						<label>$INFO[Container(82).ListItem.Property(Plot)]</label>
-						<align>justify</align>
-						<font>Font-Condensed-S28</font>
-						<textcolor>eebbbbbb</textcolor>
-						<width>1010</width>
-						<height>135</height>
-						<autoscroll delay="13000" time="3000" repeat="13000" />
-						<visible>Container(525).HasFocus(3) | system.getbool(videolibrary.showunwatchedplots) | [!Container(525).HasFocus(3) + !system.getbool(videolibrary.showunwatchedplots) + Container(82).ListItem.Property(Overlay)]</visible>
-					</control>
-					<control type="textbox">
-						<posx>440</posx>
-						<posy>86</posy>
-						<label>$LOCALIZE[20370]</label>
-						<align>justify</align>
-						<font>Font-Condensed-S28</font>
-						<textcolor>eebbbbbb</textcolor>
-						<width>1010</width>
-						<height>135</height>
-						<autoscroll delay="13000" time="3000" repeat="13000" />
-						<visible>!Container(525).HasFocus(3) + !Container(82).ListItem.Property(Overlay) + !system.getbool(videolibrary.showunwatchedplots)</visible>
-					</control>
-					<control type="image">
-						<posx>1480</posx>
-						<posy>10</posy>
-						<width>400</width>
-						<height>220</height>
-						<texture>$INFO[Container(82).ListItem.Property(logo)]</texture>
-						<aspectratio align="center" aligny="center">keep</aspectratio>
-						<visible>!Container(525).HasFocus(3)</visible>
-					</control>
-					<control type="image">
-						<posx>1480</posx>
-						<posy>10</posy>
-						<width>400</width>
-						<height>220</height>
-						<texture fallback="DefaultAudio.png">$INFO[Skin.String(cdartlocation)]$INFO[Container(82).ListItem.Label,,/logo.png]</texture>
-						<aspectratio align="center" aligny="center">keep</aspectratio>
-						<visible>Container(525).HasFocus(3)</visible>
-					</control>
+					<include>Home-Fanart-Info-Content</include>
 				</control>
 			
 				<control type="group">

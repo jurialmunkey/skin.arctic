@@ -3,120 +3,32 @@
 		<control type="group">
 			<animation effect="slide" start="0" end="0,164" time="250" condition="Skin.HasSetting(simple.lowerbar)">Conditional</animation>
 			<control type="group">
-				<posy>1080</posy>
-				<animation effect="slide" start="0" end="0,-840" time="550" delay="150" tween="back" easing="out" condition="Control.HasFocus(82)">Conditional</animation>
+				<posy>1100</posy>
+				<animation effect="slide" start="0" end="0,-870" time="550" delay="150" tween="back" easing="out" condition="Control.HasFocus(82)">Conditional</animation>
 				<!-- GLass -->
-				<control type="image">
+				<!--<control type="image">
 					<posx>-10</posx>
 					<posy>-40</posy>
 					<width>1940</width>
 					<height>800</height>
 					<texture border="25">views/newgloss/border-glass.png</texture>
 					<colordiffuse>77ffffff</colordiffuse>
-				</control>
+				</control>-->
 				<!-- DARK PANEL -->
 				<control type="image">
-					<posx>0</posx>
-					<posy>-20</posy>
-					<width>1920</width>
-					<height>760</height>
-					<texture border="5">views/newgloss/whitepanel.png</texture>
-					<colordiffuse>dd000000</colordiffuse>
+					<posx>-10</posx>
+					<posy>-40</posy>
+					<width>1940</width>
+					<height>1000</height>
+					<texture border="15">arctic/common/panel.png</texture>
+					<bordertexture border="40">arctic/common/border-20.png</bordertexture>
+					<bordersize>20</bordersize>
 				</control>
 				<!-- BOTTOM FANART AND INFO PANEL -->
 				<control type="group">
 					<posy>-20</posy>
 					<animation effect="fade" start="0" end="100" time="450" tween="cubic" easing="out" reversible="false">VisibleChange</animation>
-					<control type="image">
-						<posx>20</posx>
-						<posy>20</posy>
-						<width>391</width>
-						<height>200</height>
-						<texture diffuse="views/newgloss/landscape-391-220.png">$INFO[Container(82).ListItem.Icon]</texture>
-						<aspectratio>scale</aspectratio>
-						<visible>!IsEmpty(Container(82).ListItem.Icon)</visible>
-					</control>
-					<control type="image">
-						<posx>20</posx>
-						<posy>20</posy>
-						<width>391</width>
-						<height>200</height>
-						<texture diffuse="views/newgloss/landscape-391-220.png">$INFO[Container(82).ListItem.Property(poster)]</texture>
-						<aspectratio>scale</aspectratio>
-						<visible>IsEmpty(Container(82).ListItem.Icon)</visible>
-					</control>
-					<control type="image">
-						<posx>10</posx>
-						<posy>10</posy>
-						<width>411</width>
-						<height>220</height>
-						<texture border="25">views/newgloss/border.png</texture>
-						<colordiffuse>55ffffff</colordiffuse>
-						<visible>!IsEmpty(Container(82).ListItem.Icon) | !IsEmpty(Container(82).ListItem.Property(poster))</visible>
-					</control>
-					<control type="label">
-						<posx>440</posx>
-						<posy>22</posy>
-						<label>$INFO[Container(82).ListItem.Label]</label>
-						<align>left</align>
-						<font>Font-ModHome</font>
-						<textcolor>eedddddd</textcolor>
-						<width>700</width>
-						<scroll>false</scroll>
-					</control>
-					<control type="label">
-						<posx>440</posx>
-						<posy>54</posy>
-						<label>$INFO[Container(82).ListItem.Label2]</label>
-						<align>left</align>
-						<font>Font-Alaska-S28-L</font>
-						<textcolor>eebbbbbb</textcolor>
-						<width>700</width>
-						<scroll>false</scroll>
-					</control>
-					<control type="textbox">
-						<posx>440</posx>
-						<posy>86</posy>
-						<label>$INFO[Container(82).ListItem.Property(Plot)]</label>
-						<align>justify</align>
-						<font>Font-Condensed-S28</font>
-						<textcolor>eebbbbbb</textcolor>
-						<width>1010</width>
-						<height>135</height>
-						<autoscroll delay="13000" time="3000" repeat="13000" />
-						<visible>Container(525).HasFocus(3) | system.getbool(videolibrary.showunwatchedplots) | [!Container(525).HasFocus(3) + !system.getbool(videolibrary.showunwatchedplots) + Container(82).ListItem.Property(Overlay)]</visible>
-					</control>
-					<control type="textbox">
-						<posx>440</posx>
-						<posy>86</posy>
-						<label>$LOCALIZE[20370]</label>
-						<align>justify</align>
-						<font>Font-Condensed-S28</font>
-						<textcolor>eebbbbbb</textcolor>
-						<width>1010</width>
-						<height>135</height>
-						<autoscroll delay="13000" time="3000" repeat="13000" />
-						<visible>!Container(525).HasFocus(3) + !Container(82).ListItem.Property(Overlay) + !system.getbool(videolibrary.showunwatchedplots)</visible>
-					</control>
-					<control type="image">
-						<posx>1480</posx>
-						<posy>10</posy>
-						<width>400</width>
-						<height>220</height>
-						<texture>$INFO[Container(82).ListItem.Property(logo)]</texture>
-						<aspectratio align="center" aligny="center">keep</aspectratio>
-						<visible>!Container(525).HasFocus(3)</visible>
-					</control>
-					<control type="image">
-						<posx>1572</posx>
-						<posy>-28</posy>
-						<width>380</width>
-						<height>380</height>
-						<texture>special://skin/extras/icons/music.png</texture>
-						<aspectratio align="right" aligny="center">keep</aspectratio>
-						<visible>Container(525).HasFocus(3)</visible>
-						<colordiffuse>mod-infotags-alt</colordiffuse>
-					</control>
+					<include>Home-Fanart-Info-Content</include>
 				</control>
 			
 				<!-- Panel -->
@@ -148,22 +60,23 @@
 				<posy>695</posy>
 				<animation effect="slide" start="0" end="0,-230" time="250" condition="Control.HasFocus(83) | Control.HasFocus(84)">Conditional</animation>
 				<!-- GLASS BORDER -->
-				<control type="image">
+				<!--<control type="image">
 					<posx>-10</posx>
 					<posy>140</posy>
 					<width>1940</width>
 					<height>500</height>
 					<texture border="25">views/newgloss/border-glass.png</texture>
 					<colordiffuse>77ffffff</colordiffuse>
-				</control>
+				</control>-->
 				<!-- DARK PANEL -->
 				<control type="image">
-					<posx>0</posx>
-					<posy>160</posy>
-					<width>1920</width>
-					<height>450</height>
-					<texture border="5">views/newgloss/whitepanel.png</texture>
-					<colordiffuse>dd000000</colordiffuse>
+					<posx>-10</posx>
+					<posy>140</posy>
+					<width>1940</width>
+					<height>500</height>
+					<texture border="15">arctic/common/panel.png</texture>
+					<bordertexture border="40">arctic/common/border-20.png</bordertexture>
+					<bordersize>20</bordersize>
 				</control>
 				<control type="grouplist">
 					<visible>!Skin.HasSetting(simplehome.carousel)</visible>
@@ -559,7 +472,7 @@
 									<posy>10</posy>
 									<width>353</width>
 									<height>169</height>
-									<texture border="5">views/newgloss/whitepanel.png</texture>
+									<texture border="15">arctic/common/whitepanel8.png</texture>
 									<colordiffuse>mod-infotags-d</colordiffuse>
 								</control>
 								<control type="multiimage">
@@ -572,7 +485,7 @@
 									<randomize>true</randomize>
 									<fadetime>600</fadetime>
 									<loop>yes</loop>
-									<imagepath>$INFO[ListItem.Property(WeatherArt)]</imagepath>
+									<imagepath diffuse="arctic/home/fanart.png">$INFO[ListItem.Property(WeatherArt)]</imagepath>
 									<colordiffuse>ff555555</colordiffuse>
 								</control>
 								<control type="image">
@@ -580,7 +493,7 @@
 									<posy>0</posy>
 									<width>169</width>
 									<height>169</height>
-									<texture fallback="special://skin/extras/icons/addtile.png">$INFO[ListItem.Property(poster)]</texture>
+									<texture>$INFO[ListItem.Property(poster)]</texture>
 									<colordiffuse>mod-infotags-alt</colordiffuse>
 								</control>
 								<control type="label">
@@ -668,7 +581,7 @@
 									<posy>10</posy>
 									<width>353</width>
 									<height>169</height>
-									<texture border="5">views/newgloss/whitepanel.png</texture>
+									<texture border="15">arctic/common/whitepanel8.png</texture>
 									<colordiffuse>mod-infotags-d</colordiffuse>
 								</control>
 								<control type="multiimage">
@@ -682,7 +595,7 @@
 									<randomize>true</randomize>
 									<fadetime>600</fadetime>
 									<loop>yes</loop>
-									<imagepath>$INFO[ListItem.Property(WeatherArt)]</imagepath>
+									<imagepath diffuse="arctic/home/fanart.png">$INFO[ListItem.Property(WeatherArt)]</imagepath>
 									<colordiffuse>ff555555</colordiffuse>
 								</control>
 								<control type="image">
@@ -690,7 +603,7 @@
 									<posy>0</posy>
 									<width>169</width>
 									<height>169</height>
-									<texture fallback="special://skin/extras/icons/addtile.png">$INFO[ListItem.Property(poster)]</texture>
+									<texture>$INFO[ListItem.Property(poster)]</texture>
 									<colordiffuse>mod-infotags-alt</colordiffuse>
 								</control>
 								<control type="label">
@@ -839,9 +752,9 @@
 			</control>
 		
 			<control type="image">
-				<posx>-15</posx>
+				<posx>-5</posx>
 				<posy>900</posy>
-				<width>1950</width>
+				<width>1930</width>
 				<height>286</height>
 				<texture border="35">views/newgloss/whitepanel-15.png</texture>
 			</control>

@@ -55,4 +55,6 @@ Removed videowindow from pvr slide out menu for animation speed/smoothness
 Massive cleanup of unused images, repo size now 55mb
 Moved out studioflags, audioflags, to extras folder
 Moved out icons to extras folder
-Cleaned up left over code from glass rings, borders and covers
+Cleaned up leftover code from glass rings, borders and covers
+Removed glass edging from simple home screen
+Added gap to simplehome screen to make it more consistent with rest of theme

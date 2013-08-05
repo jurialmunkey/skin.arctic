@@ -197,7 +197,6 @@
                     		<icon>special://skin/extras/icons/yes.png</icon>
 							<label>20367</label>
 							<onclick>SendClick(14)</onclick>
-							<icon>special://skin/extras/icons/yes.png</icon>
 							<visible>SubString(Control.GetLabel(14),*)</visible>
                     	</item>
                     	<item id="16">
@@ -205,7 +204,6 @@
                     		<icon>special://skin/extras/icons/no.png</icon>
 							<label>20367</label>
 							<onclick>SendClick(14)</onclick>
-							<icon>special://skin/extras/icons/yes.png</icon>
 							<visible>!SubString(Control.GetLabel(14),*)</visible>
                     	</item>
                     	<item id="17">

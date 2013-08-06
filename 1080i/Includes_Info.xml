@@ -32,7 +32,7 @@
 						<height>78</height>
 						<label>$INFO[System.Time(hh:mm:xx)]</label>
 						<font>Font-Alaska-S52-BL</font>
-						<textcolor>Mod_Tags</textcolor>
+						<textcolor>Mod_Tags_Dark</textcolor>
 						<align>right</align>
 						<scroll>false</scroll>
 					</control>
@@ -70,7 +70,7 @@
 						<height>78</height>
 						<label>$INFO[System.Time(hh:mm:xx)]</label>
 						<font>Font-Alaska-S52-BL</font>
-						<textcolor>mod-infotags</textcolor>
+						<textcolor>mod-infotags-d</textcolor>
 						<align>right</align>
 						<scroll>false</scroll>
 					</control>
@@ -351,6 +351,14 @@
 		<control type="group">        
 			<animation effect="slide" start="0" end="0,500" time="250" condition="StringCompare(Skin.String(homescreen.style),simple)">WindowClose</animation>
 			<animation effect="slide" start="0" end="0,500" time="250" condition="StringCompare(Skin.String(homescreen.style),simple)">Hidden</animation>
+			<animation type="WindowOpen" reversible="false" condition="StringCompare(Skin.String(homescreen.style),simple)">
+                <effect type="fade" start="0" end="100" time="300" tween="sine" easing="inout" />
+                <effect type="slide" start="0,500" end="0" time="250" />
+            </animation>
+            <animation type="Visible" reversible="false" condition="StringCompare(Skin.String(homescreen.style),simple)">
+                <effect type="fade" start="0" end="100" time="300" tween="sine" easing="inout" />
+                <effect type="slide" start="0,500" end="0" time="250" />
+            </animation>
 			<include>Common-Clock</include>
 		</control>
         <include>Common-NowPlaying</include>

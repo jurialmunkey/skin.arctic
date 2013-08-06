@@ -29,6 +29,7 @@
 						<posy>470</posy>
 						<texture background="true" diffuse="views/posterview/diffuse-ref.png" border="15" flipy="true">arctic/common/panel.png</texture>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
+						<visible>!Skin.HasSetting(HideCoverReflection)</visible>
 					</control>
 					<control type="image">
 						<description>Shadow Bottom</description>
@@ -198,7 +199,7 @@
 							<texture background="true" diffuse="views/posterview/diffuse-ref.png" fallback="views/fallbacks/DefaultAudio.png/square-large.png" border="5" flipy="true">$VAR[ListInfoLandscapeVar]</texture>
 							<aspectratio scalediffuse="false">scale</aspectratio>
 							<fadetime>200</fadetime>
-							<visible>!Skin.HasSetting(music.panellist.showplot)</visible>
+							<visible>!Skin.HasSetting(music.panellist.showplot) + !Skin.HasSetting(HideCoverReflection)</visible>
 						</control>
 						<control type="image">
 							<description>Landscape</description>
@@ -209,7 +210,7 @@
 							<texture background="true" diffuse="views/posterview/diffuse-ref.png" fallback="views/fallbacks/DefaultAudio.png/square-large.png" border="5" flipy="true">$VAR[ListInfoLandscapeVar]</texture>
 							<aspectratio scalediffuse="false">scale</aspectratio>
 							<fadetime>200</fadetime>
-							<visible>Skin.HasSetting(music.panellist.showplot)</visible>
+							<visible>Skin.HasSetting(music.panellist.showplot) + !Skin.HasSetting(HideCoverReflection)</visible>
 							<colordiffuse>77white</colordiffuse>
 						</control>
 						<control type="image">
@@ -275,6 +276,7 @@
 						<texture background="true" diffuse="views/posterview/diffuse-ref.png" border="5" flipy="true"  fallback="views/fallbacks/DefaultAlbumCover.png/square-large.png">$VAR[WallPoster]</texture>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
 						<fadetime>200</fadetime>
+						<visible>!Skin.HasSetting(HideCoverReflection)</visible>
 					</control>
 					<control type="image">
 						<description>Shadow Bottom</description>

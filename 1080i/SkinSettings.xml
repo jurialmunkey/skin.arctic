@@ -240,7 +240,7 @@
 						</control>
 						<control type="button" id="1009">
 							<width>1210</width>
-							<label> • $LOCALIZE[559]:</label>
+							<label> - $LOCALIZE[559]:</label>
 							<label2>$INFO[Skin.String(StartupPlaylist.Path)]</label2>
 							<include>SettingsCategoryDefaultButtonVars</include>
 							<onclick>Skin.SetFile(StartupPlaylist.Path,.m3u|.xsp,special://profile/playlists/music/)</onclick>
@@ -313,6 +313,7 @@
 							<onfocus condition="!IsEmpty(Window(Home).Property(ReloadSkin))">ReloadSkin</onfocus>
 							<onfocus condition="!IsEmpty(Window(Home).Property(ReloadSkin))">ClearProperty(ReloadSkin,Home)</onfocus>
 							<label>$LOCALIZE[41131]</label>
+							<label2>›››   </label2>
 						</control>
 						<control type="button" id="2002">
 							<width>1210</width>
@@ -320,12 +321,14 @@
 							<onclick>SetProperty(Dialog,$LOCALIZE[41136])</onclick>
 							<onclick>ActivateWindow(3054)</onclick>
 							<label>$LOCALIZE[41136]</label>
+							<label2>›››   </label2>
 						</control>       
 						<control type="button" id="2008">
 							<width>1210</width>
 							<include>SettingsCategoryDefaultButtonVars</include>
 							<onclick>ActivateWindow(3051)</onclick>
 							<label>$LOCALIZE[41140]</label>
+							<label2>›››   </label2>
 						</control>              
 					
 					
@@ -479,6 +482,59 @@
 						<onleft>30</onleft>
 						<include>SettingsCategoryGrouplistVars</include>
 						<visible>Container(30).HasFocus(33)</visible>
+						<control type="button" id="3009">
+							<width>1210</width>
+							<include>SettingsCategoryDefaultButtonVars</include>
+							<label>$LOCALIZE[20159]</label>
+							<label2>›››   </label2>
+							<onclick>ActivateWindow(3056)</onclick>
+						</control>
+						<control type="radiobutton" id="3007">
+							<width>1210</width>
+							<include>SettingsCategoryRadioButtonVars</include>
+							<selected>!Skin.HasSetting(HideProgressOverlay)</selected>
+							<onclick>Skin.ToggleSetting(HideProgressOverlay)</onclick>
+							<label>42434</label>
+						</control>
+						<control type="radiobutton" id="3002">
+							<width>1210</width>
+							<include>SettingsCategoryRadioButtonVars</include>
+							<selected>!Skin.HasSetting(HideInfoTags)</selected>
+							<onclick>Skin.ToggleSetting(HideInfoTags)</onclick>
+							<label>$LOCALIZE[42413]</label>
+						</control>
+						<control type="radiobutton" id="3003">
+							<width>1210</width>
+							<include>SettingsCategoryRadioButtonVars</include>
+							<selected>Skin.HasSetting(ShowLowerLogo)</selected>
+							<onclick>Skin.ToggleSetting(ShowLowerLogo)</onclick>
+							<label> - $LOCALIZE[42414]</label>
+							<enable>!Skin.HasSetting(HideInfoTags)</enable>
+							<animation effect="fade" start="100" end="42" time="0" condition="!Control.IsEnabled(3003)">Conditional</animation>
+						</control>
+						<control type="radiobutton" id="3012">
+							<width>1210</width>
+							<include>SettingsCategoryRadioButtonVars</include>
+							<selected>Skin.HasSetting(infotags.numericrating)</selected>
+							<onclick>Skin.ToggleSetting(infotags.numericrating)</onclick>
+							<label> - $LOCALIZE[42436]</label>
+							<enable>!Skin.HasSetting(HideInfoTags)</enable>
+							<animation effect="fade" start="100" end="42" time="0" condition="!Control.IsEnabled(3012)">Conditional</animation>
+						</control>
+						<control type="radiobutton" id="3004">
+							<width>1210</width>
+							<include>SettingsCategoryRadioButtonVars</include>
+							<selected>!Skin.HasSetting(hide.viewheader)</selected>
+							<onclick>Skin.ToggleSetting(hide.viewheader)</onclick>
+							<label>42415</label>
+						</control>
+						<control type="radiobutton" id="3005">
+							<width>1210</width>
+							<include>SettingsCategoryRadioButtonVars</include>
+							<selected>!Skin.HasSetting(hide.commonclock)</selected>
+							<onclick>Skin.ToggleSetting(hide.commonclock)</onclick>
+							<label>41270</label>
+						</control>
 						<control type="radiobutton" id="3001">
 							<width>1210</width>
 							<include>SettingsCategoryRadioButtonVars</include>
@@ -502,49 +558,6 @@
 							<onclick>Skin.ToggleSetting(disable.dimfanart)</onclick>
 							<label>42412</label>
 							<visible>!Skin.HasSetting(NoDimFade)</visible>
-						</control>
-						<control type="radiobutton" id="3002">
-							<width>1210</width>
-							<include>SettingsCategoryRadioButtonVars</include>
-							<selected>!Skin.HasSetting(HideInfoTags)</selected>
-							<onclick>Skin.ToggleSetting(HideInfoTags)</onclick>
-							<label>42413</label>
-						</control>
-						<control type="radiobutton" id="3003">
-							<width>1210</width>
-							<include>SettingsCategoryRadioButtonVars</include>
-							<selected>Skin.HasSetting(ShowLowerLogo)</selected>
-							<onclick>Skin.ToggleSetting(ShowLowerLogo)</onclick>
-							<label>42414</label>
-							<enable>!Skin.HasSetting(HideInfoTags)</enable>
-							<animation effect="fade" start="100" end="42" time="0" condition="!Control.IsEnabled(3003)">Conditional</animation>
-						</control>
-						<control type="radiobutton" id="3004">
-							<width>1210</width>
-							<include>SettingsCategoryRadioButtonVars</include>
-							<selected>!Skin.HasSetting(hide.viewheader)</selected>
-							<onclick>Skin.ToggleSetting(hide.viewheader)</onclick>
-							<label>42415</label>
-						</control>
-						<control type="radiobutton" id="3005">
-							<width>1210</width>
-							<include>SettingsCategoryRadioButtonVars</include>
-							<selected>!Skin.HasSetting(hide.commonclock)</selected>
-							<onclick>Skin.ToggleSetting(hide.commonclock)</onclick>
-							<label>41270</label>
-						</control>
-						<control type="radiobutton" id="3007">
-							<width>1210</width>
-							<include>SettingsCategoryRadioButtonVars</include>
-							<selected>!Skin.HasSetting(HideProgressOverlay)</selected>
-							<onclick>Skin.ToggleSetting(HideProgressOverlay)</onclick>
-							<label>42434</label>
-						</control>
-						<control type="button" id="3009">
-							<width>1210</width>
-							<include>SettingsCategoryDefaultButtonVars</include>
-							<label>$LOCALIZE[5]: $LOCALIZE[20159]</label>
-							<onclick>ActivateWindow(3056)</onclick>
 						</control>
 						<control type="radiobutton" id="3011">
 							<width>1210</width>
@@ -574,7 +587,7 @@
 							<selected>Skin.HasSetting(OSDVisualisation.ShowFanart)</selected>
 							<onclick>Skin.ToggleSetting(OSDVisualisation.ShowFanart)</onclick>
 							<visible>Skin.HasSetting(OSDVisualisation.Enabled)</visible>
-							<label> • $LOCALIZE[41106]</label>
+							<label> - $LOCALIZE[41106]</label>
 						</control>
 						<control type="radiobutton" id="8003">
 							<width>1210</width>
@@ -591,7 +604,7 @@
 							<selected>Skin.HasSetting(ArtistSlideShow.Animate)</selected>
 							<onclick>Skin.ToggleSetting(ArtistSlideShow.Animate)</onclick>
 							<visible>Skin.HasSetting(ArtistSlideShow.Enabled)</visible>
-							<label> • $LOCALIZE[41105]</label>
+							<label> - $LOCALIZE[41105]</label>
 						</control>
 						
 						<control type="radiobutton" id="8008">
@@ -650,6 +663,7 @@
 							<width>1210</width>
 							<include>SettingsCategoryDefaultButtonVars</include>
 							<label>$LOCALIZE[41251]</label>
+							<label2>›››   </label2>
 							<onclick>ClearProperty(CustomDialogType)</onclick>
 							<onclick>ClearProperty(CustomDialog)</onclick>
 							<onclick>SetProperty(Dialog,$LOCALIZE[41251])</onclick>
@@ -659,6 +673,7 @@
 							<width>1210</width>
 							<include>SettingsCategoryDefaultButtonVars</include>
 							<label>$LOCALIZE[5]</label>
+							<label2>›››   </label2>
 							<onclick>ClearProperty(CustomDialogType)</onclick>
 							<onclick>ClearProperty(CustomDialog)</onclick>
 							<onclick>SetProperty(Dialog,$LOCALIZE[5])</onclick>
@@ -668,46 +683,56 @@
 							<width>1210</width>
 							<include>SettingsCategoryDefaultButtonVars</include>
 							<label>$LOCALIZE[342]</label>
+							<label2>›››   </label2>
 							<onclick>ClearProperty(CustomDialogType)</onclick>
 							<onclick>ClearProperty(CustomDialog)</onclick>
 							<onclick>SetProperty(Dialog,$LOCALIZE[342])</onclick>
 							<onclick>ActivateWindow(3002)</onclick>
+							<visible>!Skin.HasSetting(disable.movies)</visible>
 						</control>
 						<control type="button" id="5003">
 							<width>1210</width>
 							<include>SettingsCategoryDefaultButtonVars</include>
 							<label>$LOCALIZE[20343]</label>
+							<label2>›››   </label2>
 							<onclick>ClearProperty(CustomDialogType)</onclick>
 							<onclick>ClearProperty(CustomDialog)</onclick>
 							<onclick>SetProperty(Dialog,$LOCALIZE[20343])</onclick>
 							<onclick>ActivateWindow(3002)</onclick>
+							<visible>!Skin.HasSetting(disable.tvshows)</visible>
 						</control>
 						<control type="button" id="5006">
 							<width>1210</width>
 							<include>SettingsCategoryDefaultButtonVars</include>
 							<label>$LOCALIZE[2]</label>
+							<label2>›››   </label2>
 							<onclick>ClearProperty(CustomDialogType)</onclick>
 							<onclick>ClearProperty(CustomDialog)</onclick>
 							<onclick>SetProperty(Dialog,$LOCALIZE[2])</onclick>
 							<onclick>ActivateWindow(3002)</onclick>
+							<visible>!Skin.HasSetting(disable.music)</visible>
 						</control>
 						<control type="button" id="5009">
 							<width>1210</width>
 							<include>SettingsCategoryDefaultButtonVars</include>
 							<label>$LOCALIZE[41504]</label>
+							<label2>›››   </label2>
 							<onclick>ClearProperty(CustomDialogType)</onclick>
 							<onclick>ClearProperty(CustomDialog)</onclick>
 							<onclick>SetProperty(Dialog,$LOCALIZE[41504])</onclick>
 							<onclick>ActivateWindow(3002)</onclick>
+							<visible>!Skin.HasSetting(disable.programs)</visible>
 						</control>
 						<control type="button" id="5010">
 							<width>1210</width>
 							<include>SettingsCategoryDefaultButtonVars</include>
 							<label>$LOCALIZE[12600]</label>
+							<label2>›››   </label2>
 							<onclick>ClearProperty(CustomDialogType)</onclick>
 							<onclick>ClearProperty(CustomDialog)</onclick>
 							<onclick>SetProperty(Dialog,$LOCALIZE[12600])</onclick>
 							<onclick>ActivateWindow(3002)</onclick>
+							<visible>!Skin.HasSetting(disable.weather) + StringCompare(Skin.String(homescreen.style),simple)</visible>
 						</control>
 						<!-- USE WEATHER FANART -->
 						<control type="radiobutton" id="5014">
@@ -716,36 +741,44 @@
 							<selected>Skin.HasSetting(weather.usefanart)</selected>
 							<onclick>Skin.ToggleSetting(weather.usefanart)</onclick>
 							<label>42420</label>
+							<label2>›››   </label2>
+							<visible>!Skin.HasSetting(disable.weather) + StringCompare(Skin.String(homescreen.style),simple)</visible>
 						</control>
 						<!-- LIVE TV BACKGROUND -->
 						<control type="button" id="5011">
 							<width>1210</width>
 							<include>SettingsCategoryDefaultButtonVars</include>
 							<label>$LOCALIZE[41220]</label>
+							<label2>›››   </label2>
 							<onclick>ClearProperty(CustomDialogType)</onclick>
 							<onclick>ClearProperty(CustomDialog)</onclick>
 							<onclick>SetProperty(Dialog,$LOCALIZE[41220])</onclick>
 							<onclick>ActivateWindow(3002)</onclick>
+							<visible>!Skin.HasSetting(disable.pvr)</visible>
 						</control>
 						<!-- Pictures BACKGROUND -->
 						<control type="button" id="5012">
 							<width>1210</width>
 							<include>SettingsCategoryDefaultButtonVars</include>
 							<label>$LOCALIZE[10002]</label>
+							<label2>›››   </label2>
 							<onclick>ClearProperty(CustomDialogType)</onclick>
 							<onclick>ClearProperty(CustomDialog)</onclick>
 							<onclick>SetProperty(Dialog,$LOCALIZE[10002])</onclick>
 							<onclick>ActivateWindow(3002)</onclick>
+							<visible>!Skin.HasSetting(disable.pictures)</visible>
 						</control>
 						<!-- Games BACKGROUND -->
 						<control type="button" id="5013">
 							<width>1210</width>
 							<include>SettingsCategoryDefaultButtonVars</include>
 							<label>$LOCALIZE[20190]</label>
+							<label2>›››   </label2>
 							<onclick>ClearProperty(CustomDialogType)</onclick>
 							<onclick>ClearProperty(CustomDialog)</onclick>
 							<onclick>SetProperty(Dialog,$LOCALIZE[15016])</onclick>
 							<onclick>ActivateWindow(3002)</onclick>
+							<visible>!Skin.HasSetting(disable.games) + StringCompare(Skin.String(homescreen.style),simple)</visible>
 						</control>
 					</control>
 				
@@ -779,7 +812,7 @@
 							<onclick>SetProperty(Dialog,$LOCALIZE[41272])</onclick>
 							<onclick>SetProperty(Guide.Custom,1)</onclick>
 							<onclick>ActivateWindow(3001)</onclick>
-							<label> • $LOCALIZE[41276]</label>
+							<label> - $LOCALIZE[41276]</label>
 							<label2>$INFO[Skin.String(Guide.Custom1.Label)]</label2>
 							<visible>Skin.HasSetting(Guide.Custom1)</visible>
 						</control>
@@ -799,7 +832,7 @@
 							<onclick>SetProperty(Dialog,$LOCALIZE[41273])</onclick>
 							<onclick>SetProperty(Guide.Custom,2)</onclick>
 							<onclick>ActivateWindow(3001)</onclick>
-							<label> • $LOCALIZE[41276]</label>
+							<label> - $LOCALIZE[41276]</label>
 							<label2>$INFO[Skin.String(Guide.Custom2.Label)]</label2>
 							<visible>Skin.HasSetting(Guide.Custom2)</visible>
 						</control>
@@ -819,7 +852,7 @@
 							<onclick>SetProperty(Dialog,$LOCALIZE[41274])</onclick>
 							<onclick>SetProperty(Guide.Custom,3)</onclick>
 							<onclick>ActivateWindow(3001)</onclick>
-							<label> • $LOCALIZE[41276]</label>
+							<label> - $LOCALIZE[41276]</label>
 							<label2>$INFO[Skin.String(Guide.Custom3.Label)]</label2>
 							<visible>Skin.HasSetting(Guide.Custom3)</visible>
 						</control>
@@ -839,7 +872,7 @@
 							<onclick>SetProperty(Dialog,$LOCALIZE[41275])</onclick>
 							<onclick>SetProperty(Guide.Custom,4)</onclick>
 							<onclick>ActivateWindow(3001)</onclick>
-							<label> • $LOCALIZE[41276]</label>
+							<label> - $LOCALIZE[41276]</label>
 							<label2>$INFO[Skin.String(Guide.Custom4.Label)]</label2>
 							<visible>Skin.HasSetting(Guide.Custom4)</visible>
 						</control>
@@ -877,7 +910,7 @@
 							<width>1210</width>
 							<include>SettingsCategoryDefaultButtonVars</include>
 							<onclick>XBMC.RunScript(script.tvtunes)</onclick>
-							<label> • $LOCALIZE[41284]</label>
+							<label> - $LOCALIZE[41284]</label>
 							<visible>Skin.HasSetting(TVTunes.Enabled)</visible>
 						</control>
 						<control type="radiobutton" id="7007">
@@ -892,13 +925,13 @@
 							<include>SettingsCategoryRadioButtonVars</include>
 							<selected>Skin.HasSetting(NextAired.Update)</selected>
 							<onclick>Skin.ToggleSetting(NextAired.Update)</onclick>
-							<label> • $LOCALIZE[41293]</label>
+							<label> - $LOCALIZE[41293]</label>
 						</control>
 						<control type="button" id="7009">
 							<width>1210</width>
 							<include>SettingsCategoryDefaultButtonVars</include>
 							<onclick>Addon.OpenSettings(script.tv.show.next.aired)</onclick>
-							<label> • $LOCALIZE[41290]</label>
+							<label> - $LOCALIZE[41290]</label>
 							<visible>Skin.HasSetting(NextAired.Enabled)</visible>
 						</control>
 						<control type="radiobutton" id="7010">

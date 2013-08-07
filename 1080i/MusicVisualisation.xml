@@ -131,14 +131,7 @@
 						<animation effect="slide" start="395" end="0" time="350">Visible</animation>
 						<visible>Skin.HasSetting(CDArt.Enabled)</visible>
 					</control>
-					<control type="image">
-						<posx>514</posx>
-						<posy>-40</posy>
-						<width>1196</width>
-						<height>357</height>
-						<texture border="50">arctic/osd/white-25.png</texture>
-						<colordiffuse>99181818</colordiffuse>
-					</control>
+					
 					<control type="image">
 						<posx>539</posx>
 						<posy>-15</posy>
@@ -255,6 +248,13 @@
 						<height>307</height>
 						<texture border="1,150,1,150">arctic/common/separator-v.png</texture>
 						<aspectratio>stretch</aspectratio>
+					</control>
+					<control type="image">
+						<posx>514</posx>
+						<posy>-40</posy>
+						<width>1196</width>
+						<height>357</height>
+						<texture border="50">arctic/osd/white-25.png</texture>
 					</control>
 					<control type="group">
 						<posy>5</posy>

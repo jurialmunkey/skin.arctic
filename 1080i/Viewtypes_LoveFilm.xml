@@ -9,7 +9,7 @@
 				<posy>0</posy>
 				<width>1810</width>
 				<height>734</height>
-				<texture border="100">arctic/osd/white-25.png</texture>
+				<texture border="50">arctic/osd/white-25.png</texture>
 				<colordiffuse>ff181818</colordiffuse>
 			</control>
 			<control type="image">

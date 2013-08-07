@@ -318,7 +318,7 @@
             </control> 
             
             <control type="group" id="10">
-                <posx>1140</posx>
+                <posx>750</posx>
                 <posy>715</posy>
                 <control type="button" id="5">
                     <description>Close</description>
@@ -329,6 +329,7 @@
                     <onright>3</onright>
                     <onup>4</onup>
                     <ondown>4</ondown>
+                    
                     <label>$LOCALIZE[42002]</label>
                     <onclick>PreviousMenu</onclick>
                 </control>

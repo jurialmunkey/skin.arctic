@@ -45,7 +45,6 @@
                 <width>1210</width>
                 <height>91</height>
                 <texture border="5">views/other/focus-mod.png</texture>
-                <animation effect="fade" start="100" end="50" tween="sine" easing="inout" time="2000" pulse="true" reversible="false" condition="true">Conditional</animation>
                 <animation effect="fade" end="100" tween="sine" easing="inout" time="200">Visible</animation>
                 <animation effect="fade" end="0" tween="sine" easing="inout" time="200">Hidden</animation>
                 <visible>Control.HasFocus(4)</visible>

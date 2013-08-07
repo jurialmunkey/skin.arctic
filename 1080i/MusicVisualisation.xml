@@ -132,18 +132,18 @@
 						<visible>Skin.HasSetting(CDArt.Enabled)</visible>
 					</control>
 					<control type="image">
-						<posx>549</posx>
+						<posx>539</posx>
 						<posy>-15</posy>
-						<width>1137</width>
+						<width>1147</width>
 						<height>307</height>
 						<texture border="24">arctic/common/whitepanel8.png</texture>
 						<colordiffuse>mod-osdbar</colordiffuse>
 						<visible>!Skin.HasSetting(osd.darkpanel)</visible>
 					</control>
 					<control type="image">
-						<posx>549</posx>
+						<posx>539</posx>
 						<posy>-15</posy>
-						<width>1137</width>
+						<width>1147</width>
 						<height>307</height>
 						<texture border="24">arctic/common/panel.png</texture>
 						<colordiffuse>mod-osdbar-dark</colordiffuse>
@@ -224,26 +224,34 @@
 					</control>
 					<control type="image">
 						<description>Thumb</description>
-						<posx>559</posx>
-						<posy>-5</posy>
-						<width>287</width>
-						<height>287</height>
+						<posx>539</posx>
+						<posy>-15</posy>
+						<width>307</width>
+						<height>307</height>
 						<texture background="true" diffuse="arctic/osd/287.png">windows/common/black.png</texture>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
 					</control>	
 					<control type="image">
 						<description>Thumb</description>
-						<posx>559</posx>
-						<posy>-5</posy>
-						<width>287</width>
-						<height>287</height>
-						<texture background="true" diffuse="arctic/osd/287.png">$VAR[ArcticOSDPoster]</texture>
+						<posx>539</posx>
+						<posy>-15</posy>
+						<width>307</width>
+						<height>307</height>
+						<texture background="true" diffuse="arctic/banner/sq-16.png">$VAR[ArcticOSDPoster]</texture>
 						<aspectratio scalediffuse="false">scale</aspectratio>
 					</control>
 					<control type="image">
-						<posx>485</posx>
+						<posx>846</posx>
+						<posy>-15</posy>
+						<width>3</width>
+						<height>307</height>
+						<texture border="1,150,1,150">arctic/common/separator-v.png</texture>
+						<aspectratio>stretch</aspectratio>
+					</control>
+					<control type="image">
+						<posx>475</posx>
 						<posy>-79</posy>
-						<width>1265</width>
+						<width>1275</width>
 						<height>435</height>
 						<texture border="100">arctic/common/border-64.png</texture>
 						<colordiffuse>77white</colordiffuse>

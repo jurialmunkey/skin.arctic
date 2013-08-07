@@ -163,7 +163,7 @@
 						<width>100</width>
 						<height>100</height>
 						<texture>overlays/nowplaying/play.png</texture>
-						<colordiffuse>ff00cf18</colordiffuse>
+						<colordiffuse>$VAR[osd.text.dark]</colordiffuse>
 						<visible>Player.Playing</visible>
 					</control>
 					<control type="image">
@@ -172,7 +172,7 @@
 						<width>100</width>
 						<height>100</height>
 						<texture>overlays/nowplaying/pause.png</texture>
-						<colordiffuse>ff00cf18</colordiffuse>
+						<colordiffuse>$VAR[osd.text.dark]</colordiffuse>
 						<visible>Player.Paused</visible>
 					</control>
 					<control type="label">
@@ -181,7 +181,7 @@
 						<width>661</width>
 						<label>»</label>
 						<font>Font-Alaska-S45-BL</font>
-						<textcolor>ff00cf18</textcolor>
+						<textcolor>$VAR[osd.text.dark]</textcolor>
 						<scroll>false</scroll>
 						<align>left</align>
 						<visible>Player.Forwarding</visible>
@@ -192,7 +192,7 @@
 						<width>661</width>
 						<label>«</label>
 						<font>Font-Alaska-S45-BL</font>
-						<textcolor>ff00cf18</textcolor>
+						<textcolor>$VAR[osd.text.dark]</textcolor>
 						<scroll>false</scroll>
 						<align>left</align>
 						<visible>Player.Rewinding</visible>

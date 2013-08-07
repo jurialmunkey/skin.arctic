@@ -132,12 +132,20 @@
 						<visible>Skin.HasSetting(CDArt.Enabled)</visible>
 					</control>
 					<control type="image">
+						<posx>514</posx>
+						<posy>-40</posy>
+						<width>1196</width>
+						<height>357</height>
+						<texture border="50">arctic/osd/white-25.png</texture>
+						<colordiffuse>99181818</colordiffuse>
+					</control>
+					<control type="image">
 						<posx>539</posx>
 						<posy>-15</posy>
 						<width>1147</width>
 						<height>307</height>
-						<texture border="24">arctic/common/whitepanel8.png</texture>
-						<colordiffuse>mod-osdbar</colordiffuse>
+						<texture border="24">arctic/common/16panel-light.png</texture>
+						<colordiffuse>mod-osdbar-light</colordiffuse>
 						<visible>!Skin.HasSetting(osd.darkpanel)</visible>
 					</control>
 					<control type="image">
@@ -145,7 +153,7 @@
 						<posy>-15</posy>
 						<width>1147</width>
 						<height>307</height>
-						<texture border="24">arctic/common/panel.png</texture>
+						<texture border="24">arctic/common/16panel.png</texture>
 						<colordiffuse>mod-osdbar-dark</colordiffuse>
 						<visible>Skin.HasSetting(osd.darkpanel)</visible>
 					</control>
@@ -228,7 +236,7 @@
 						<posy>-15</posy>
 						<width>307</width>
 						<height>307</height>
-						<texture background="true" diffuse="arctic/osd/287.png">windows/common/black.png</texture>
+						<texture background="true" diffuse="arctic/banner/sq-16.png">windows/common/black.png</texture>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
 					</control>	
 					<control type="image">
@@ -247,14 +255,6 @@
 						<height>307</height>
 						<texture border="1,150,1,150">arctic/common/separator-v.png</texture>
 						<aspectratio>stretch</aspectratio>
-					</control>
-					<control type="image">
-						<posx>475</posx>
-						<posy>-79</posy>
-						<width>1275</width>
-						<height>435</height>
-						<texture border="100">arctic/common/border-64.png</texture>
-						<colordiffuse>77white</colordiffuse>
 					</control>
 					<control type="group">
 						<posy>5</posy>

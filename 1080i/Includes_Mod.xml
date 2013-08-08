@@ -1673,7 +1673,6 @@
 		<!-- recent movies -->
 		<item id="1">
 			<onclick>PlayMedia($ESCINFO[Window.Property(RecentMovie.1.File)])</onclick>
-			<onclick>SetFocus(525)</onclick>
 			<icon>$INFO[Window.Property(RecentMovie.1.Art(fanart))]</icon>
 			<property name="Poster">$INFO[Window.Property(RecentMovie.1.Art(poster))]</property>
 			<property name="Overlay">$INFO[Window.Property(RecentMovie.1.Watched)]</property>
@@ -1686,7 +1685,6 @@
 		</item>
 		<item id="2">
 			<onclick>PlayMedia($ESCINFO[Window.Property(RecentMovie.2.File)])</onclick>
-			<onclick>SetFocus(525)</onclick>
 			<icon>$INFO[Window.Property(RecentMovie.2.Art(fanart))]</icon>
 			<property name="Poster">$INFO[Window.Property(RecentMovie.2.Art(poster))]</property>
 			<property name="Overlay">$INFO[Window.Property(RecentMovie.2.Watched)]</property>
@@ -1699,7 +1697,6 @@
 		</item>
 		<item id="3">
 			<onclick>PlayMedia($ESCINFO[Window.Property(RecentMovie.3.File)])</onclick>
-			<onclick>SetFocus(525)</onclick>
 			<icon>$INFO[Window.Property(RecentMovie.3.Art(fanart))]</icon>
 			<property name="Poster">$INFO[Window.Property(RecentMovie.3.Art(poster))]</property>
 			<property name="Overlay">$INFO[Window.Property(RecentMovie.3.Watched)]</property>
@@ -1712,7 +1709,6 @@
 		</item>
 		<item id="4">
 			<onclick>PlayMedia($ESCINFO[Window.Property(RecentMovie.4.File)])</onclick>
-			<onclick>SetFocus(525)</onclick>
 			<icon>$INFO[Window.Property(RecentMovie.4.Art(fanart))]</icon>
 			<property name="Poster">$INFO[Window.Property(RecentMovie.4.Art(poster))]</property>
 			<property name="Overlay">$INFO[Window.Property(RecentMovie.4.Watched)]</property>
@@ -1725,7 +1721,6 @@
 		</item>
 		<item id="5">
 			<onclick>PlayMedia($ESCINFO[Window.Property(RecentMovie.5.File)])</onclick>
-			<onclick>SetFocus(525)</onclick>
 			<icon>$INFO[Window.Property(RecentMovie.5.Art(fanart))]</icon>
 			<property name="Poster">$INFO[Window.Property(RecentMovie.5.Art(poster))]</property>
 			<property name="Overlay">$INFO[Window.Property(RecentMovie.5.Watched)]</property>
@@ -1738,7 +1733,6 @@
 		</item>
 		<item id="6">
 			<onclick>PlayMedia($ESCINFO[Window.Property(RecentMovie.6.File)])</onclick>
-			<onclick>SetFocus(525)</onclick>
 			<icon>$INFO[Window.Property(RecentMovie.6.Art(fanart))]</icon>
 			<property name="Poster">$INFO[Window.Property(RecentMovie.6.Art(poster))]</property>
 			<property name="Overlay">$INFO[Window.Property(RecentMovie.6.Watched)]</property>
@@ -1751,7 +1745,6 @@
 		</item>
 		<item id="7">
 			<onclick>PlayMedia($ESCINFO[Window.Property(RecentMovie.7.File)])</onclick>
-			<onclick>SetFocus(525)</onclick>
 			<icon>$INFO[Window.Property(RecentMovie.7.Art(fanart))]</icon>
 			<property name="Poster">$INFO[Window.Property(RecentMovie.7.Art(poster))]</property>
 			<property name="Overlay">$INFO[Window.Property(RecentMovie.7.Watched)]</property>
@@ -1764,7 +1757,6 @@
 		</item>
 		<item id="8">
 			<onclick>PlayMedia($ESCINFO[Window.Property(RecentMovie.8.File)])</onclick>
-			<onclick>SetFocus(525)</onclick>
 			<icon>$INFO[Window.Property(RecentMovie.8.Art(fanart))]</icon>
 			<property name="Poster">$INFO[Window.Property(RecentMovie.8.Art(poster))]</property>
 			<property name="Overlay">$INFO[Window.Property(RecentMovie.8.Watched)]</property>
@@ -1777,7 +1769,6 @@
 		</item>
 		<item id="9">
 			<onclick>PlayMedia($ESCINFO[Window.Property(RecentMovie.9.File)])</onclick>
-			<onclick>SetFocus(525)</onclick>
 			<icon>$INFO[Window.Property(RecentMovie.9.Art(fanart))]</icon>
 			<property name="Poster">$INFO[Window.Property(RecentMovie.9.Art(poster))]</property>
 			<property name="Overlay">$INFO[Window.Property(RecentMovie.9.Watched)]</property>
@@ -1790,7 +1781,6 @@
 		</item>
 		<item id="10">
 			<onclick>PlayMedia($ESCINFO[Window.Property(RecentMovie.10.File)])</onclick>
-			<onclick>SetFocus(525)</onclick>
 			<icon>$INFO[Window.Property(RecentMovie.10.Art(fanart))]</icon>
 			<property name="Poster">$INFO[Window.Property(RecentMovie.10.Art(poster))]</property>
 			<property name="Overlay">$INFO[Window.Property(RecentMovie.10.Watched)]</property>
@@ -1804,7 +1794,6 @@
 		<!-- recommended movies -->
 		<item id="1">
 			<onclick>PlayMedia($ESCINFO[Window.Property(RecommendedMovie.1.File)])</onclick>
-			<onclick>SetFocus(525)</onclick>
 			<icon>$INFO[Window.Property(RecommendedMovie.1.Art(fanart))]</icon>
 			<property name="Poster">$INFO[Window.Property(RecommendedMovie.1.Art(poster))]</property>
 			<property name="Overlay">$INFO[Window.Property(RecommendedMovie.1.Watched)]</property>
@@ -1817,7 +1806,6 @@
 		</item>
 		<item id="2">
 			<onclick>PlayMedia($ESCINFO[Window.Property(RecommendedMovie.2.File)])</onclick>
-			<onclick>SetFocus(525)</onclick>
 			<icon>$INFO[Window.Property(RecommendedMovie.2.Art(fanart))]</icon>
 			<property name="Poster">$INFO[Window.Property(RecommendedMovie.2.Art(poster))]</property>
 			<property name="Overlay">$INFO[Window.Property(RecommendedMovie.2.Watched)]</property>
@@ -1830,7 +1818,6 @@
 		</item>
 		<item id="3">
 			<onclick>PlayMedia($ESCINFO[Window.Property(RecommendedMovie.3.File)])</onclick>
-			<onclick>SetFocus(525)</onclick>
 			<icon>$INFO[Window.Property(RecommendedMovie.3.Art(fanart))]</icon>
 			<property name="Poster">$INFO[Window.Property(RecommendedMovie.3.Art(poster))]</property>
 			<property name="Overlay">$INFO[Window.Property(RecommendedMovie.3.Watched)]</property>
@@ -1843,7 +1830,6 @@
 		</item>
 		<item id="4">
 			<onclick>PlayMedia($ESCINFO[Window.Property(RecommendedMovie.4.File)])</onclick>
-			<onclick>SetFocus(525)</onclick>
 			<icon>$INFO[Window.Property(RecommendedMovie.4.Art(fanart))]</icon>
 			<property name="Poster">$INFO[Window.Property(RecommendedMovie.4.Art(poster))]</property>
 			<property name="Overlay">$INFO[Window.Property(RecommendedMovie.4.Watched)]</property>
@@ -1856,7 +1842,6 @@
 		</item>
 		<item id="5">
 			<onclick>PlayMedia($ESCINFO[Window.Property(RecommendedMovie.5.File)])</onclick>
-			<onclick>SetFocus(525)</onclick>
 			<icon>$INFO[Window.Property(RecommendedMovie.5.Art(fanart))]</icon>
 			<property name="Poster">$INFO[Window.Property(RecommendedMovie.5.Art(poster))]</property>
 			<property name="Overlay">$INFO[Window.Property(RecommendedMovie.5.Watched)]</property>
@@ -1869,7 +1854,6 @@
 		</item>
 		<item id="6">
 			<onclick>PlayMedia($ESCINFO[Window.Property(RecommendedMovie.6.File)])</onclick>
-			<onclick>SetFocus(525)</onclick>
 			<icon>$INFO[Window.Property(RecommendedMovie.6.Art(fanart))]</icon>
 			<property name="Poster">$INFO[Window.Property(RecommendedMovie.6.Art(poster))]</property>
 			<property name="Overlay">$INFO[Window.Property(RecommendedMovie.6.Watched)]</property>
@@ -1882,7 +1866,6 @@
 		</item>
 		<item id="7">
 			<onclick>PlayMedia($ESCINFO[Window.Property(RecommendedMovie.7.File)])</onclick>
-			<onclick>SetFocus(525)</onclick>
 			<icon>$INFO[Window.Property(RecommendedMovie.7.Art(fanart))]</icon>
 			<property name="Poster">$INFO[Window.Property(RecommendedMovie.7.Art(poster))]</property>
 			<property name="Overlay">$INFO[Window.Property(RecommendedMovie.7.Watched)]</property>
@@ -1895,7 +1878,6 @@
 		</item>
 		<item id="8">
 			<onclick>PlayMedia($ESCINFO[Window.Property(RecommendedMovie.8.File)])</onclick>
-			<onclick>SetFocus(525)</onclick>
 			<icon>$INFO[Window.Property(RecommendedMovie.8.Art(fanart))]</icon>
 			<property name="Poster">$INFO[Window.Property(RecommendedMovie.8.Art(poster))]</property>
 			<property name="Overlay">$INFO[Window.Property(RecommendedMovie.8.Watched)]</property>
@@ -1908,7 +1890,6 @@
 		</item>
 		<item id="9">
 			<onclick>PlayMedia($ESCINFO[Window.Property(RecommendedMovie.9.File)])</onclick>
-			<onclick>SetFocus(525)</onclick>
 			<icon>$INFO[Window.Property(RecommendedMovie.9.Art(fanart))]</icon>
 			<property name="Poster">$INFO[Window.Property(RecommendedMovie.9.Art(poster))]</property>
 			<property name="Overlay">$INFO[Window.Property(RecommendedMovie.9.Watched)]</property>
@@ -1921,7 +1902,6 @@
 		</item>
 		<item id="10">
 			<onclick>PlayMedia($ESCINFO[Window.Property(RecommendedMovie.10.File)])</onclick>
-			<onclick>SetFocus(525)</onclick>
 			<icon>$INFO[Window.Property(RecommendedMovie.10.Art(fanart))]</icon>
 			<property name="Poster">$INFO[Window.Property(RecommendedMovie.10.Art(poster))]</property>
 			<property name="Overlay">$INFO[Window.Property(RecommendedMovie.10.Watched)]</property>
@@ -1935,7 +1915,6 @@
 		<!-- Random movies -->
 		<item id="1">
 			<onclick>PlayMedia($ESCINFO[Window.Property(RandomMovie.1.File)])</onclick>
-			<onclick>SetFocus(525)</onclick>
 			<icon>$INFO[Window.Property(RandomMovie.1.Art(fanart))]</icon>
 			<property name="Poster">$INFO[Window.Property(RandomMovie.1.Art(poster))]</property>
 			<property name="Overlay">$INFO[Window.Property(RandomMovie.1.Watched)]</property>
@@ -1948,7 +1927,6 @@
 		</item>
 		<item id="2">
 			<onclick>PlayMedia($ESCINFO[Window.Property(RandomMovie.2.File)])</onclick>
-			<onclick>SetFocus(525)</onclick>
 			<icon>$INFO[Window.Property(RandomMovie.2.Art(fanart))]</icon>
 			<property name="Poster">$INFO[Window.Property(RandomMovie.2.Art(poster))]</property>
 			<property name="Overlay">$INFO[Window.Property(RandomMovie.2.Watched)]</property>
@@ -1961,7 +1939,6 @@
 		</item>
 		<item id="3">
 			<onclick>PlayMedia($ESCINFO[Window.Property(RandomMovie.3.File)])</onclick>
-			<onclick>SetFocus(525)</onclick>
 			<icon>$INFO[Window.Property(RandomMovie.3.Art(fanart))]</icon>
 			<property name="Poster">$INFO[Window.Property(RandomMovie.3.Art(poster))]</property>
 			<property name="Overlay">$INFO[Window.Property(RandomMovie.3.Watched)]</property>
@@ -1974,7 +1951,6 @@
 		</item>
 		<item id="4">
 			<onclick>PlayMedia($ESCINFO[Window.Property(RandomMovie.4.File)])</onclick>
-			<onclick>SetFocus(525)</onclick>
 			<icon>$INFO[Window.Property(RandomMovie.4.Art(fanart))]</icon>
 			<property name="Poster">$INFO[Window.Property(RandomMovie.4.Art(poster))]</property>
 			<property name="Overlay">$INFO[Window.Property(RandomMovie.4.Watched)]</property>
@@ -1987,7 +1963,6 @@
 		</item>
 		<item id="5">
 			<onclick>PlayMedia($ESCINFO[Window.Property(RandomMovie.5.File)])</onclick>
-			<onclick>SetFocus(525)</onclick>
 			<icon>$INFO[Window.Property(RandomMovie.5.Art(fanart))]</icon>
 			<property name="Poster">$INFO[Window.Property(RandomMovie.5.Art(poster))]</property>
 			<property name="Overlay">$INFO[Window.Property(RandomMovie.5.Watched)]</property>
@@ -2000,7 +1975,6 @@
 		</item>
 		<item id="6">
 			<onclick>PlayMedia($ESCINFO[Window.Property(RandomMovie.6.File)])</onclick>
-			<onclick>SetFocus(525)</onclick>
 			<icon>$INFO[Window.Property(RandomMovie.6.Art(fanart))]</icon>
 			<property name="Poster">$INFO[Window.Property(RandomMovie.6.Art(poster))]</property>
 			<property name="Overlay">$INFO[Window.Property(RandomMovie.6.Watched)]</property>
@@ -2013,7 +1987,6 @@
 		</item>
 		<item id="7">
 			<onclick>PlayMedia($ESCINFO[Window.Property(RandomMovie.7.File)])</onclick>
-			<onclick>SetFocus(525)</onclick>
 			<icon>$INFO[Window.Property(RandomMovie.7.Art(fanart))]</icon>
 			<property name="Poster">$INFO[Window.Property(RandomMovie.7.Art(poster))]</property>
 			<property name="Overlay">$INFO[Window.Property(RandomMovie.7.Watched)]</property>
@@ -2026,7 +1999,6 @@
 		</item>
 		<item id="8">
 			<onclick>PlayMedia($ESCINFO[Window.Property(RandomMovie.8.File)])</onclick>
-			<onclick>SetFocus(525)</onclick>
 			<icon>$INFO[Window.Property(RandomMovie.8.Art(fanart))]</icon>
 			<property name="Poster">$INFO[Window.Property(RandomMovie.8.Art(poster))]</property>
 			<property name="Overlay">$INFO[Window.Property(RandomMovie.8.Watched)]</property>
@@ -2039,7 +2011,6 @@
 		</item>
 		<item id="9">
 			<onclick>PlayMedia($ESCINFO[Window.Property(RandomMovie.9.File)])</onclick>
-			<onclick>SetFocus(525)</onclick>
 			<icon>$INFO[Window.Property(RandomMovie.9.Art(fanart))]</icon>
 			<property name="Poster">$INFO[Window.Property(RandomMovie.9.Art(poster))]</property>
 			<property name="Overlay">$INFO[Window.Property(RandomMovie.9.Watched)]</property>
@@ -2052,7 +2023,6 @@
 		</item>
 		<item id="10">
 			<onclick>PlayMedia($ESCINFO[Window.Property(RandomMovie.10.File)])</onclick>
-			<onclick>SetFocus(525)</onclick>
 			<icon>$INFO[Window.Property(RandomMovie.10.Art(fanart))]</icon>
 			<property name="Poster">$INFO[Window.Property(RandomMovie.10.Art(poster))]</property>
 			<property name="Overlay">$INFO[Window.Property(RandomMovie.10.Watched)]</property>
@@ -2066,7 +2036,6 @@
 		<!-- recent tv -->
 		<item id="1">
 			<onclick>PlayMedia($ESCINFO[Window.Property(RecentEpisode.1.File)])</onclick>
-			<onclick>SetFocus(525)</onclick>
 			<icon>$INFO[Window.Property(RecentEpisode.1.Art(thumb))]</icon>
 			<property name="Poster">$INFO[Window.Property(RecentEpisode.1.Art(tvshow.poster))]</property>
 			<property name="Overlay">$INFO[Window.Property(RecentEpisode.1.Watched)]</property>
@@ -2078,7 +2047,6 @@
 		</item>
 		<item id="2">
 			<onclick>PlayMedia($ESCINFO[Window.Property(RecentEpisode.2.File)])</onclick>
-			<onclick>SetFocus(525)</onclick>
 			<icon>$INFO[Window.Property(RecentEpisode.2.Art(thumb))]</icon>
 			<property name="Poster">$INFO[Window.Property(RecentEpisode.2.Art(tvshow.poster))]</property>
 			<property name="Overlay">$INFO[Window.Property(RecentEpisode.2.Watched)]</property>
@@ -2090,7 +2058,6 @@
 		</item>
 		<item id="3">
 			<onclick>PlayMedia($ESCINFO[Window.Property(RecentEpisode.3.File)])</onclick>
-			<onclick>SetFocus(525)</onclick>
 			<icon>$INFO[Window.Property(RecentEpisode.3.Art(thumb))]</icon>
 			<property name="Poster">$INFO[Window.Property(RecentEpisode.3.Art(tvshow.poster))]</property>
 			<property name="Overlay">$INFO[Window.Property(RecentEpisode.3.Watched)]</property>
@@ -2102,7 +2069,6 @@
 		</item>
 		<item id="4">
 			<onclick>PlayMedia($ESCINFO[Window.Property(RecentEpisode.4.File)])</onclick>
-			<onclick>SetFocus(525)</onclick>
 			<icon>$INFO[Window.Property(RecentEpisode.4.Art(thumb))]</icon>
 			<property name="Poster">$INFO[Window.Property(RecentEpisode.4.Art(tvshow.poster))]</property>
 			<property name="Overlay">$INFO[Window.Property(RecentEpisode.4.Watched)]</property>
@@ -2114,7 +2080,6 @@
 		</item>
 		<item id="5">
 			<onclick>PlayMedia($ESCINFO[Window.Property(RecentEpisode.5.File)])</onclick>
-			<onclick>SetFocus(525)</onclick>
 			<icon>$INFO[Window.Property(RecentEpisode.5.Art(thumb))]</icon>
 			<property name="Poster">$INFO[Window.Property(RecentEpisode.5.Art(tvshow.poster))]</property>
 			<property name="Overlay">$INFO[Window.Property(RecentEpisode.5.Watched)]</property>
@@ -2126,7 +2091,6 @@
 		</item>
 		<item id="6">
 			<onclick>PlayMedia($ESCINFO[Window.Property(RecentEpisode.6.File)])</onclick>
-			<onclick>SetFocus(525)</onclick>
 			<icon>$INFO[Window.Property(RecentEpisode.6.Art(thumb))]</icon>
 			<property name="Poster">$INFO[Window.Property(RecentEpisode.6.Art(tvshow.poster))]</property>
 			<property name="Overlay">$INFO[Window.Property(RecentEpisode.6.Watched)]</property>
@@ -2138,7 +2102,6 @@
 		</item>
 		<item id="7">
 			<onclick>PlayMedia($ESCINFO[Window.Property(RecentEpisode.7.File)])</onclick>
-			<onclick>SetFocus(525)</onclick>
 			<icon>$INFO[Window.Property(RecentEpisode.7.Art(thumb))]</icon>
 			<property name="Poster">$INFO[Window.Property(RecentEpisode.7.Art(tvshow.poster))]</property>
 			<property name="Overlay">$INFO[Window.Property(RecentEpisode.7.Watched)]</property>
@@ -2150,7 +2113,6 @@
 		</item>
 		<item id="8">
 			<onclick>PlayMedia($ESCINFO[Window.Property(RecentEpisode.8.File)])</onclick>
-			<onclick>SetFocus(525)</onclick>
 			<icon>$INFO[Window.Property(RecentEpisode.8.Art(thumb))]</icon>
 			<property name="Poster">$INFO[Window.Property(RecentEpisode.8.Art(tvshow.poster))]</property>
 			<property name="Overlay">$INFO[Window.Property(RecentEpisode.8.Watched)]</property>
@@ -2162,7 +2124,6 @@
 		</item>
 		<item id="9">
 			<onclick>PlayMedia($ESCINFO[Window.Property(RecentEpisode.9.File)])</onclick>
-			<onclick>SetFocus(525)</onclick>
 			<icon>$INFO[Window.Property(RecentEpisode.9.Art(thumb))]</icon>
 			<property name="Poster">$INFO[Window.Property(RecentEpisode.9.Art(tvshow.poster))]</property>
 			<property name="Overlay">$INFO[Window.Property(RecentEpisode.9.Watched)]</property>
@@ -2174,7 +2135,6 @@
 		</item>
 		<item id="10">
 			<onclick>PlayMedia($ESCINFO[Window.Property(RecentEpisode.10.File)])</onclick>
-			<onclick>SetFocus(525)</onclick>
 			<icon>$INFO[Window.Property(RecentEpisode.10.Art(thumb))]</icon>
 			<property name="Poster">$INFO[Window.Property(RecentEpisode.10.Art(tvshow.poster))]</property>
 			<property name="Overlay">$INFO[Window.Property(RecentEpisode.10.Watched)]</property>
@@ -2187,7 +2147,6 @@
 		<!-- recommended tv -->
 		<item id="1">
 			<onclick>PlayMedia($ESCINFO[Window.Property(RecommendedEpisode.1.File)])</onclick>
-			<onclick>SetFocus(525)</onclick>
 			<icon>$INFO[Window.Property(RecommendedEpisode.1.Art(thumb))]</icon>
 			<property name="Poster">$INFO[Window.Property(RecommendedEpisode.1.Art(tvshow.poster))]</property>
 			<property name="Overlay">$INFO[Window.Property(RecommendedEpisode.1.Watched)]</property>
@@ -2199,7 +2158,6 @@
 		</item>
 		<item id="2">
 			<onclick>PlayMedia($ESCINFO[Window.Property(RecommendedEpisode.2.File)])</onclick>
-			<onclick>SetFocus(525)</onclick>
 			<icon>$INFO[Window.Property(RecommendedEpisode.2.Art(thumb))]</icon>
 			<property name="Poster">$INFO[Window.Property(RecommendedEpisode.2.Art(tvshow.poster))]</property>
 			<property name="Overlay">$INFO[Window.Property(RecommendedEpisode.2.Watched)]</property>
@@ -2211,7 +2169,6 @@
 		</item>
 		<item id="3">
 			<onclick>PlayMedia($ESCINFO[Window.Property(RecommendedEpisode.3.File)])</onclick>
-			<onclick>SetFocus(525)</onclick>
 			<icon>$INFO[Window.Property(RecommendedEpisode.3.Art(thumb))]</icon>
 			<property name="Poster">$INFO[Window.Property(RecommendedEpisode.3.Art(tvshow.poster))]</property>
 			<property name="Overlay">$INFO[Window.Property(RecommendedEpisode.3.Watched)]</property>
@@ -2223,7 +2180,6 @@
 		</item>
 		<item id="4">
 			<onclick>PlayMedia($ESCINFO[Window.Property(RecommendedEpisode.4.File)])</onclick>
-			<onclick>SetFocus(525)</onclick>
 			<icon>$INFO[Window.Property(RecommendedEpisode.4.Art(thumb))]</icon>
 			<property name="Poster">$INFO[Window.Property(RecommendedEpisode.4.Art(tvshow.poster))]</property>
 			<property name="Overlay">$INFO[Window.Property(RecommendedEpisode.4.Watched)]</property>
@@ -2235,7 +2191,6 @@
 		</item>
 		<item id="5">
 			<onclick>PlayMedia($ESCINFO[Window.Property(RecommendedEpisode.5.File)])</onclick>
-			<onclick>SetFocus(525)</onclick>
 			<icon>$INFO[Window.Property(RecommendedEpisode.5.Art(thumb))]</icon>
 			<property name="Poster">$INFO[Window.Property(RecommendedEpisode.5.Art(tvshow.poster))]</property>
 			<property name="Overlay">$INFO[Window.Property(RecommendedEpisode.5.Watched)]</property>
@@ -2247,7 +2202,6 @@
 		</item>
 		<item id="6">
 			<onclick>PlayMedia($ESCINFO[Window.Property(RecommendedEpisode.6.File)])</onclick>
-			<onclick>SetFocus(525)</onclick>
 			<icon>$INFO[Window.Property(RecommendedEpisode.6.Art(thumb))]</icon>
 			<property name="Poster">$INFO[Window.Property(RecommendedEpisode.6.Art(tvshow.poster))]</property>
 			<property name="Overlay">$INFO[Window.Property(RecommendedEpisode.6.Watched)]</property>
@@ -2259,7 +2213,6 @@
 		</item>
 		<item id="7">
 			<onclick>PlayMedia($ESCINFO[Window.Property(RecommendedEpisode.7.File)])</onclick>
-			<onclick>SetFocus(525)</onclick>
 			<icon>$INFO[Window.Property(RecommendedEpisode.7.Art(thumb))]</icon>
 			<property name="Poster">$INFO[Window.Property(RecommendedEpisode.7.Art(tvshow.poster))]</property>
 			<property name="Overlay">$INFO[Window.Property(RecommendedEpisode.7.Watched)]</property>
@@ -2271,7 +2224,6 @@
 		</item>
 		<item id="8">
 			<onclick>PlayMedia($ESCINFO[Window.Property(RecommendedEpisode.8.File)])</onclick>
-			<onclick>SetFocus(525)</onclick>
 			<icon>$INFO[Window.Property(RecommendedEpisode.8.Art(thumb))]</icon>
 			<property name="Poster">$INFO[Window.Property(RecommendedEpisode.8.Art(tvshow.poster))]</property>
 			<property name="Overlay">$INFO[Window.Property(RecommendedEpisode.8.Watched)]</property>
@@ -2283,7 +2235,6 @@
 		</item>
 		<item id="9">
 			<onclick>PlayMedia($ESCINFO[Window.Property(RecommendedEpisode.9.File)])</onclick>
-			<onclick>SetFocus(525)</onclick>
 			<icon>$INFO[Window.Property(RecommendedEpisode.9.Art(thumb))]</icon>
 			<property name="Poster">$INFO[Window.Property(RecommendedEpisode.9.Art(tvshow.poster))]</property>
 			<property name="Overlay">$INFO[Window.Property(RecommendedEpisode.9.Watched)]</property>
@@ -2295,7 +2246,6 @@
 		</item>
 		<item id="10">
 			<onclick>PlayMedia($ESCINFO[Window.Property(RecommendedEpisode.10.File)])</onclick>
-			<onclick>SetFocus(525)</onclick>
 			<icon>$INFO[Window.Property(RecommendedEpisode.10.Art(thumb))]</icon>
 			<property name="Poster">$INFO[Window.Property(RecommendedEpisode.10.Art(tvshow.poster))]</property>
 			<property name="Overlay">$INFO[Window.Property(RecommendedEpisode.10.Watched)]</property>
@@ -2308,7 +2258,6 @@
 		<!-- random tv -->
 		<item id="1">
 			<onclick>PlayMedia($ESCINFO[Window.Property(RandomEpisode.1.File)])</onclick>
-			<onclick>SetFocus(525)</onclick>
 			<icon>$INFO[Window.Property(RandomEpisode.1.Art(thumb))]</icon>
 			<property name="Poster">$INFO[Window.Property(RandomEpisode.1.Art(tvshow.poster))]</property>
 			<property name="Overlay">$INFO[Window.Property(RandomEpisode.1.Watched)]</property>
@@ -2320,7 +2269,6 @@
 		</item>
 		<item id="2">
 			<onclick>PlayMedia($ESCINFO[Window.Property(RandomEpisode.2.File)])</onclick>
-			<onclick>SetFocus(525)</onclick>
 			<icon>$INFO[Window.Property(RandomEpisode.2.Art(thumb))]</icon>
 			<property name="Poster">$INFO[Window.Property(RandomEpisode.2.Art(tvshow.poster))]</property>
 			<property name="Overlay">$INFO[Window.Property(RandomEpisode.2.Watched)]</property>
@@ -2332,7 +2280,6 @@
 		</item>
 		<item id="3">
 			<onclick>PlayMedia($ESCINFO[Window.Property(RandomEpisode.3.File)])</onclick>
-			<onclick>SetFocus(525)</onclick>
 			<icon>$INFO[Window.Property(RandomEpisode.3.Art(thumb))]</icon>
 			<property name="Poster">$INFO[Window.Property(RandomEpisode.3.Art(tvshow.poster))]</property>
 			<property name="Overlay">$INFO[Window.Property(RandomEpisode.3.Watched)]</property>
@@ -2344,7 +2291,6 @@
 		</item>
 		<item id="4">
 			<onclick>PlayMedia($ESCINFO[Window.Property(RandomEpisode.4.File)])</onclick>
-			<onclick>SetFocus(525)</onclick>
 			<icon>$INFO[Window.Property(RandomEpisode.4.Art(thumb))]</icon>
 			<property name="Poster">$INFO[Window.Property(RandomEpisode.4.Art(tvshow.poster))]</property>
 			<property name="Overlay">$INFO[Window.Property(RandomEpisode.4.Watched)]</property>
@@ -2356,7 +2302,6 @@
 		</item>
 		<item id="5">
 			<onclick>PlayMedia($ESCINFO[Window.Property(RandomEpisode.5.File)])</onclick>
-			<onclick>SetFocus(525)</onclick>
 			<icon>$INFO[Window.Property(RandomEpisode.5.Art(thumb))]</icon>
 			<property name="Poster">$INFO[Window.Property(RandomEpisode.5.Art(tvshow.poster))]</property>
 			<property name="Overlay">$INFO[Window.Property(RandomEpisode.5.Watched)]</property>
@@ -2368,7 +2313,6 @@
 		</item>
 		<item id="6">
 			<onclick>PlayMedia($ESCINFO[Window.Property(RandomEpisode.6.File)])</onclick>
-			<onclick>SetFocus(525)</onclick>
 			<icon>$INFO[Window.Property(RandomEpisode.6.Art(thumb))]</icon>
 			<property name="Poster">$INFO[Window.Property(RandomEpisode.6.Art(tvshow.poster))]</property>
 			<property name="Overlay">$INFO[Window.Property(RandomEpisode.6.Watched)]</property>
@@ -2380,7 +2324,6 @@
 		</item>
 		<item id="7">
 			<onclick>PlayMedia($ESCINFO[Window.Property(RandomEpisode.7.File)])</onclick>
-			<onclick>SetFocus(525)</onclick>
 			<icon>$INFO[Window.Property(RandomEpisode.7.Art(thumb))]</icon>
 			<property name="Poster">$INFO[Window.Property(RandomEpisode.7.Art(tvshow.poster))]</property>
 			<property name="Overlay">$INFO[Window.Property(RandomEpisode.7.Watched)]</property>
@@ -2392,7 +2335,6 @@
 		</item>
 		<item id="8">
 			<onclick>PlayMedia($ESCINFO[Window.Property(RandomEpisode.8.File)])</onclick>
-			<onclick>SetFocus(525)</onclick>
 			<icon>$INFO[Window.Property(RandomEpisode.8.Art(thumb))]</icon>
 			<property name="Poster">$INFO[Window.Property(RandomEpisode.8.Art(tvshow.poster))]</property>
 			<property name="Overlay">$INFO[Window.Property(RandomEpisode.8.Watched)]</property>
@@ -2404,7 +2346,6 @@
 		</item>
 		<item id="9">
 			<onclick>PlayMedia($ESCINFO[Window.Property(RandomEpisode.9.File)])</onclick>
-			<onclick>SetFocus(525)</onclick>
 			<icon>$INFO[Window.Property(RandomEpisode.9.Art(thumb))]</icon>
 			<property name="Poster">$INFO[Window.Property(RandomEpisode.9.Art(tvshow.poster))]</property>
 			<property name="Overlay">$INFO[Window.Property(RandomEpisode.9.Watched)]</property>
@@ -2416,7 +2357,6 @@
 		</item>
 		<item id="10">
 			<onclick>PlayMedia($ESCINFO[Window.Property(RandomEpisode.10.File)])</onclick>
-			<onclick>SetFocus(525)</onclick>
 			<icon>$INFO[Window.Property(RandomEpisode.10.Art(thumb))]</icon>
 			<property name="Poster">$INFO[Window.Property(RandomEpisode.10.Art(tvshow.poster))]</property>
 			<property name="Overlay">$INFO[Window.Property(RandomEpisode.10.Watched)]</property>

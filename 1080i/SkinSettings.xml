@@ -615,10 +615,10 @@
 						<control type="radiobutton" id="8012">
 							<width>1210</width>
 							<include>SettingsCategoryRadioButtonVars</include>
-							<selected>!Skin.HasSetting(osd.darkpanel)</selected>
+							<selected>Skin.HasSetting(osd.darkpanel)</selected>
 							<onclick>Skin.ToggleSetting(osd.darkpanel)</onclick>
 							<onclick>ReloadSkin()</onclick>
-							<label>42435</label>
+							<label>42437</label>
 						</control>
 						<control type="radiobutton" id="8006">
 							<width>1210</width>

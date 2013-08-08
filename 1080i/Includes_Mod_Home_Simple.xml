@@ -153,7 +153,13 @@
 						<include>visiblehidefadeinfo</include>
 						<colordiffuse>white</colordiffuse>
 						<animation effect="fade" start="100" end="0" time="250" condition="!Container(525).HasFocus(4) | Control.HasFocus(83)  | Control.HasFocus(84) | Control.HasFocus(85)">Conditional</animation>
-						<visible>!Skin.HasSetting(disable.pvr) + System.GetBool(pvrmanager.enabled)</visible>
+						<visible>!Skin.HasSetting(disable.pvr) + System.GetBool(pvrmanager.enabled) + !Skin.HasSetting(HomeClicksSubmenu)</visible>
+					</control>
+					<control type="image">
+						<width>19</width>
+						<height>28</height>
+						<texture>-</texture>
+						<visible>!Skin.HasSetting(disable.pvr) + System.GetBool(pvrmanager.enabled) + Skin.HasSetting(HomeClicksSubmenu)</visible>
 					</control>
 					<control type="label">
 						<label>41220</label>
@@ -192,7 +198,13 @@
 						<include>visiblehidefadeinfo</include>
 						<colordiffuse>white</colordiffuse>
 						<animation effect="fade" start="100" end="0" time="250" condition="!Container(525).HasFocus(7) | Control.HasFocus(83)  | Control.HasFocus(84) | Control.HasFocus(85)">Conditional</animation>
-						<visible>!Skin.HasSetting(disable.programs)</visible>
+						<visible>!Skin.HasSetting(disable.programs) + !Skin.HasSetting(HomeClicksSubmenu)</visible>
+					</control>
+					<control type="image">
+						<width>19</width>
+						<height>28</height>
+						<texture>-</texture>
+						<visible>!Skin.HasSetting(disable.programs) + Skin.HasSetting(HomeClicksSubmenu)</visible>
 					</control>
 					<control type="label">
 						<label>0</label>
@@ -211,7 +223,12 @@
 						<include>visiblehidefadeinfo</include>
 						<colordiffuse>white</colordiffuse>
 						<animation effect="fade" start="100" end="0" time="250" condition="!Container(525).HasFocus(8) | Control.HasFocus(83)  | Control.HasFocus(84) | Control.HasFocus(85)">Conditional</animation>
-						<visible>!Skin.HasSetting(disable.weather)</visible>
+						<visible>!Skin.HasSetting(disable.weather) + !Skin.HasSetting(HomeClicksSubmenu)</visible>
+					</control>
+					<control type="image">
+						<width>19</width>
+						<height>28</height>
+						<visible>!Skin.HasSetting(disable.weather) + Skin.HasSetting(HomeClicksSubmenu)</visible>
 					</control>
 					<control type="label">
 						<label>8</label>

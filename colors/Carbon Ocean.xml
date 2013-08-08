@@ -6,8 +6,10 @@
 	<color name="Mod_Tags_Dark">ff111111</color>
 	<color name="Mod_Tags_Shadow">55ffffff</color>
 	
-	<color name="Mod_Overlay_Floor">bb7b8888</color>
-	<color name="Mod_Overlay_Dimfanart">da7b8888</color>
+	<!--<color name="Mod_Overlay_Floor">bb7b8888</color>
+	<color name="Mod_Overlay_Dimfanart">da7b8888</color>-->
+	<color name="Mod_Overlay_Floor">bb9baaaa</color>
+	<color name="Mod_Overlay_Dimfanart">da9baaaa</color>
 	<color name="Mod_Overlay_Dimfanart_Extra">22000000</color>
 	
 	<color name="Mod_Border">88ffffff</color>

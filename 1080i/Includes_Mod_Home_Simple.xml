@@ -223,12 +223,7 @@
 						<include>visiblehidefadeinfo</include>
 						<colordiffuse>white</colordiffuse>
 						<animation effect="fade" start="100" end="0" time="250" condition="!Container(525).HasFocus(8) | Control.HasFocus(83)  | Control.HasFocus(84) | Control.HasFocus(85)">Conditional</animation>
-						<visible>!Skin.HasSetting(disable.weather) + !Skin.HasSetting(HomeClicksSubmenu)</visible>
-					</control>
-					<control type="image">
-						<width>19</width>
-						<height>28</height>
-						<visible>!Skin.HasSetting(disable.weather) + Skin.HasSetting(HomeClicksSubmenu)</visible>
+						<visible>!Skin.HasSetting(disable.weather)</visible>
 					</control>
 					<control type="label">
 						<label>8</label>
@@ -247,7 +242,7 @@
 					</control>
 				</control>
 				<control type="wraplist" id="525">
-					<onup condition="!Skin.HasSetting(HomeClicksSubmenu)">SetFocus(83,0)</onup>
+					<onup condition="!Skin.HasSetting(HomeClicksSubmenu) | Container(525).HasFocus(8)">SetFocus(83,0)</onup>
 					<onup condition="Skin.HasSetting(HomeClicksSubmenu)">SetFocus(82,0)</onup>
 					<ondown>85</ondown>
 					<onleft>525</onleft>

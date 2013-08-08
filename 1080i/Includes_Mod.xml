@@ -2791,8 +2791,7 @@
 			<visible>!Skin.HasSetting(disable.weather) + StringCompare(Skin.String(homescreen.style),simple)</visible>
 			<property name="single">$INFO[Skin.String(HomeWeatherSingleImage)]</property>
 			<property name="multi">$INFO[Skin.String(HomeWeatherMultiImage)]</property>
-			<onclick condition="!Skin.HasSetting(HomeClicksSubmenu)">ActivateWindow(weather)</onclick>
-			<onclick condition="Skin.HasSetting(HomeClicksSubmenu)">SetFocus(83,0)</onclick>
+			<onclick>ActivateWindow(weather)</onclick>
 			<icon>DefaultAddonWeather.png</icon>
 		</item>
 		<item id="9">

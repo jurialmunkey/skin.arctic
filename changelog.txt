@@ -63,6 +63,7 @@ Pictures menu
 Fix for profile on simple homescreen so not hidden when favourites visible
 Added ability to choose between resume and play on home widgets
 Smart playlist dialogs complete
-Content Settings dialog
-Network Settings dialog
+Content settings dialog
+Network settings dialog
 Addon settings dialog
+PVR group management dialog

@@ -338,7 +338,7 @@
                         <align>left</align>
                         <textoffsetx>20</textoffsetx>
                         <label>$LOCALIZE[41716]</label>
-                        <textcolor>FF585858</textcolor>
+                        <textcolor>mod-infotags-alt</textcolor>
                         <shadowcolor>20FFFFFF</shadowcolor>
                         <font>Font-Condensed-S30</font>
                     </control>

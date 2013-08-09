@@ -1188,10 +1188,10 @@ msgctxt "#42434"
 msgid "Show in-progress indicators"
 msgstr ""
 
-msgctxt "#42435"
-msgid "Use light osd"
-msgstr ""
-
 msgctxt "#42436"
 msgid "Prefer numeric rating"
+msgstr ""
+
+msgctxt "#42437"
+msgid "Use dark osd"
 msgstr ""

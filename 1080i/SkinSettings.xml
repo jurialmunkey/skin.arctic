@@ -217,37 +217,14 @@
 							<onclick>Skin.ToggleSetting(BackgroundVideo)</onclick>
 							<label>$LOCALIZE[41102]</label>
 						</control>
-						<control type="radiobutton" id="1014">
+						<control type="radiobutton" id="1003">
 							<width>1210</width>
 							<include>SettingsCategoryRadioButtonVars</include>
 							<selected>Skin.HasSetting(OSDVisualation.Background)</selected>
 							<onclick>Skin.ToggleSetting(OSDVisualation.Background)</onclick>
 							<label>42408</label>
 						</control>
-						<!--<control type="radiobutton" id="1012">
-							<width>1210</width>
-							<include>SettingsCategoryRadioButtonVars</include>
-							<selected>!Skin.HasSetting(SpinControl.Default)</selected>
-							<onclick>Skin.ToggleSetting(SpinControl.Default)</onclick>
-							<label>$LOCALIZE[41112]</label>
-						</control>
-						<control type="radiobutton" id="1008">
-							<width>1210</width>
-							<include>SettingsCategoryRadioButtonVars</include>
-							<selected>Skin.HasSetting(StartupPlaylist)</selected>
-							<onclick>Skin.ToggleSetting(StartupPlaylist)</onclick>
-							<label>$LOCALIZE[21398]</label>
-						</control>
-						<control type="button" id="1009">
-							<width>1210</width>
-							<label> - $LOCALIZE[559]:</label>
-							<label2>$INFO[Skin.String(StartupPlaylist.Path)]</label2>
-							<include>SettingsCategoryDefaultButtonVars</include>
-							<onclick>Skin.SetFile(StartupPlaylist.Path,.m3u|.xsp,special://profile/playlists/music/)</onclick>
-							<enable>Skin.HasSetting(StartupPlaylist)</enable>
-							<animation effect="fade" start="100" end="42" time="0" condition="!Control.IsEnabled(1009)">Conditional</animation>
-						</control>-->
-						<control type="radiobutton" id="1007">
+						<control type="radiobutton" id="1004">
 							<width>1210</width>
 							<include>SettingsCategoryRadioButtonVars</include>
 							<selected>Skin.HasSetting(rss.enabled)</selected>
@@ -255,7 +232,7 @@
 							<label>$LOCALIZE[20304]</label>
 						</control>
 					
-						<control type="button" id="1013">
+						<control type="button" id="1005">
 							<width>1210</width>
 							<font>Font-Condensed-S30</font>
 							<include>SettingsCategoryDefaultButtonVars</include>
@@ -266,14 +243,14 @@
 							<ondown>1001</ondown>
 						</control>
 						
-						<control type="radiobutton" id="1014">
+						<control type="radiobutton" id="1006">
 							<width>1210</width>
 							<include>SettingsCategoryRadioButtonVars</include>
 							<selected>Skin.HasSetting(CDArt.Enabled)</selected>
 							<onclick>Skin.ToggleSetting(CDArt.Enabled)</onclick>
 							<label>$LOCALIZE[41107]</label>
 						</control>
-						<control type="radiobutton" id="1015">
+						<control type="radiobutton" id="1007">
 							<width>1210</width>
 							<include>SettingsCategoryRadioButtonVars</include>
 							<selected>Skin.HasSetting(PreferLandscapeArt)</selected>
@@ -638,10 +615,10 @@
 						<control type="radiobutton" id="8012">
 							<width>1210</width>
 							<include>SettingsCategoryRadioButtonVars</include>
-							<selected>!Skin.HasSetting(osd.darkpanel)</selected>
+							<selected>Skin.HasSetting(osd.darkpanel)</selected>
 							<onclick>Skin.ToggleSetting(osd.darkpanel)</onclick>
 							<onclick>ReloadSkin()</onclick>
-							<label>42435</label>
+							<label>42437</label>
 						</control>
 						<control type="radiobutton" id="8006">
 							<width>1210</width>

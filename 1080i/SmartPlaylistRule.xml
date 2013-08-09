@@ -11,28 +11,30 @@
                 <include>OptionsShutdownAnimation</include>
                 <visible>!Window.IsVisible(virtualkeyboard) + !Window.IsVisible(selectdialog) + !Window.IsVisible(filebrowser)</visible>
                 <control type="image">
-                    <posx>920</posx>
-                    <posy>419</posy>
-                    <width>80</width>
-                    <height>60</height>
-                    <texture>dialogs/default/arrow.png</texture>
+                    <posx>445</posx>
+                    <posy>399</posy>
+                    <width>1030</width>
+                    <height>290</height>
+                    <texture border="39">arctic/common/panel.png</texture>
+                    <bordertexture border="40">arctic/common/border-20.png</bordertexture>
+                    <bordersize>20</bordersize>
                 </control>
                 <control type="image">
-                    <posx>445</posx>
-                    <posy>439</posy>
-                    <width>1030</width>
-                    <height>202</height>
-                    <texture border="39">dialogs/default/bg.png</texture>
-                </control>
+					<posx>455</posx>
+					<posy>402</posy>
+					<width>80</width>
+					<height>80</height>
+					<texture>special://skin/extras/icons/addtile.png</texture>
+					<aspectratio>keep</aspectratio>
+				</control>
                 <control type="label">
                     <description>Heading</description>
-                    <posx>473</posx>
-                    <posy>391</posy>
+                    <posx>526</posx>
+                    <posy>427</posy>
                     <width>974</width>
-                    <font>Font-Condensed-S34</font>
+                    <include>DialogHeader</include>
                     <label>$LOCALIZE[21421]</label>
-                    <textcolor>ddwhite</textcolor>
-                    <align>center</align>
+                    <align>left</align>
                 </control>
                 <control type="group" id="8001">
                     <posx>479</posx>
@@ -42,7 +44,7 @@
                     	<posy>0</posy>
                     	<width>474</width>
                     	<height>61</height>
-                    	<texture border="5">dialogs/default/inner.png</texture>
+                    	<texture border="8">arctic/common/whitepanel8.png</texture>
                     </control>
                     <control type="spincontrolex" id="15">
                         <description>Set Playlist type</description>
@@ -54,7 +56,7 @@
                         <texturedown>buttons/spinctrl/arrow-light-down-nf.png</texturedown>
                         <textureupfocus>buttons/spinctrl/arrow-light-up-fo.png</textureupfocus>
                         <texturedownfocus>buttons/spinctrl/arrow-light-down-fo.png</texturedownfocus>
-                        <texturefocus border="2">dialogs/default/highlight.png</texturefocus>
+                        <texturefocus border="8">views/other/focus-mod8.png</texturefocus>
                         <textcolor>FF585858</textcolor>
                         <focusedcolor>eewhite</focusedcolor>
                         <disabledcolor>77585858</disabledcolor>
@@ -71,7 +73,7 @@
                     	<posy>0</posy>
                     	<width>474</width>
                     	<height>61</height>
-                    	<texture border="5">dialogs/default/inner.png</texture>
+                    	<texture border="8">arctic/common/whitepanel8.png</texture>
                     </control>
                     <control type="spincontrolex" id="16">
                         <description>Set Playlist type</description>
@@ -83,7 +85,7 @@
                         <texturedown>buttons/spinctrl/arrow-light-down-nf.png</texturedown>
                         <textureupfocus>buttons/spinctrl/arrow-light-up-fo.png</textureupfocus>
                         <texturedownfocus>buttons/spinctrl/arrow-light-down-fo.png</texturedownfocus>
-                        <texturefocus border="2">dialogs/default/highlight.png</texturefocus>
+                        <texturefocus border="8">views/other/focus-mod8.png</texturefocus>
                         <textcolor>FF585858</textcolor>
                         <focusedcolor>eewhite</focusedcolor>
                         <disabledcolor>77585858</disabledcolor>
@@ -104,7 +106,7 @@
                     	<posy>0</posy>
                     	<width>690</width>
                     	<height>61</height>
-                    	<texture border="5">dialogs/default/inner.png</texture>
+                    	<texture border="8">arctic/common/whitepanel8.png</texture>
                     </control>
                     <control type="button" id="17">
                         <description>Name Button</description>
@@ -120,7 +122,7 @@
                         <shadowcolor>20FFFFFF</shadowcolor>
                         <font>Font-Condensed-S32</font>
                         <pulseonselect>false</pulseonselect>
-                        <texturefocus border="2">dialogs/default/highlight.png</texturefocus>
+                        <texturefocus border="8">views/other/focus-mod8.png</texturefocus>
                         <onup>8001</onup>
                         <onleft>20</onleft>
                         <onright>20</onright>
@@ -132,7 +134,7 @@
                     	<posy>0</posy>
                     	<width>258</width>
                     	<height>61</height>
-                    	<texture border="5">dialogs/default/inner.png</texture>
+                    	<texture border="8">arctic/common/whitepanel8.png</texture>
                     </control>
                     <control type="image">
                         <posx>617</posx>
@@ -174,7 +176,7 @@
                 </control>
                 <control type="group" id="8000">
                     <posx>466</posx>
-                    <posy>603</posy>
+                    <posy>587</posy>
                     <control type="button" id="18">
                         <description>Select</description>
                         <label>$LOCALIZE[42000]</label>

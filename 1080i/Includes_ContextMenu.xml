@@ -52,13 +52,12 @@
         </coordinates>
     </include>
     
-    <include name="ContextCoordinates-Side">
-    	<coordinates>
-			<system>1</system>
-			<posx>0</posx>
-			<posy>0</posy>
-			<origin x="0" y="0" />
-		</coordinates> 
+    <include name="ContextCoordinates-Home">
+        <coordinates>
+            <posx>0</posx>
+            <origin x="36" y="240">!StringCompare(Skin.String(homescreen.style),panel)</origin>
+            <origin x="36" y="858">StringCompare(Skin.String(homescreen.style),panel)</origin>
+        </coordinates>
     </include>
     
     <include name="ContextMenuDefault">
@@ -148,24 +147,34 @@
     </include>
     
     <include name="ContextMenuHome">
-        <control type="image" id="999">
-            <description>background image</description>
-            <width>380</width>
-            <height>660</height>
-            <include>ContextMenuBackgroundVars</include>
-        </control>
-        <control type="grouplist" id="996">
-            <description>grouplist for context buttons</description>
-            <width>380</width>
-            <height min="0" max="660">auto</height>
-            <include>ContextMenuGroupListVars</include>
-        </control>
-        <control type="button" id="1000">
-            <description>button template</description>
-            <width>380</width>
-            <textcolor>aawhite</textcolor>
-            <texturefocus border="45,2,45,2">dialogs/context/selection.png</texturefocus>
-            <include>ContextMenuButtonVars</include>
+    	<control type="image">
+			<description>background image</description>
+			<posx>-30</posx>
+			<posy>-30</posy>
+			<width>440</width>
+			<height>240</height>
+			<texture border="20">arctic/common/panel.png</texture>
+			<bordertexture border="40">arctic/common/border-20.png</bordertexture>
+			<bordersize>20</bordersize>
+		</control>
+    	<control type="group">
+			<control type="image" id="999">
+				<description>background image</description>
+				<texture>-</texture>
+			</control>
+			<control type="grouplist" id="996">
+				<description>grouplist for context buttons</description>
+				<width>380</width>
+				<height min="0" max="660">auto</height>
+				<include>ContextMenuGroupListVars</include>
+			</control>
+			<control type="button" id="1000">
+				<description>button template</description>
+				<width>380</width>
+				<textcolor>aawhite</textcolor>
+				<texturefocus border="8">views/other/focus-mod8.png</texturefocus>
+				<include>ContextMenuButtonVars</include>
+			</control>
         </control>
     </include>
     

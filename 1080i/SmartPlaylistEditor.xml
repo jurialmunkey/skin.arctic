@@ -7,28 +7,30 @@
             <include>OptionsShutdownAnimation</include>
             <visible>!Window.IsVisible(virtualkeyboard) + !Window.IsVisible(smartplaylistrule) + !Window.IsVisible(selectdialog)</visible>
             <control type="image">
-                <posx>920</posx>
-                <posy>158</posy>
-                <width>80</width>
-                <height>60</height>
-                <texture>dialogs/default/arrow.png</texture>
+                <posx>445</posx>
+                <posy>128</posy>
+                <width>1030</width>
+                <height>824</height>
+                <texture border="39">arctic/common/panel.png</texture>
+                <bordertexture border="40">arctic/common/border-20.png</bordertexture>
+                <bordersize>20</bordersize>
             </control>
             <control type="image">
-                <posx>445</posx>
-                <posy>178</posy>
-                <width>1030</width>
-                <height>724</height>
-                <texture border="39">dialogs/default/bg.png</texture>
+            	<posx>455</posx>
+            	<posy>142</posy>
+            	<width>80</width>
+            	<height>80</height>
+            	<texture>special://skin/extras/icons/epg.png</texture>
+            	<aspectratio>keep</aspectratio>
             </control>
             <control type="label" id="2">
                 <description>Heading</description>
-                <posx>473</posx>
-                <posy>130</posy>
+                <posx>526</posx>
+                <posy>158</posy>
                 <width>974</width>
-                <font>Font-Condensed-S34</font>
+                <include>DialogHeader</include>
                 <label>$LOCALIZE[21432]</label>
-                <textcolor>ddwhite</textcolor>
-                <align>center</align>
+                <align>left</align>
             </control>
             <control type="group">
                 <posx>479</posx>
@@ -38,7 +40,7 @@
                 	<posy>0</posy>
                 	<width>962</width>
                 	<height>61</height>
-                	<texture border="5">dialogs/default/inner.png</texture>
+                	<texture border="15">arctic/common/whitepanel8.png</texture>
                 </control>
                 <control type="spincontrolex" id="22">
                     <description>Set Playlist type</description>
@@ -50,7 +52,7 @@
                     <texturedown>buttons/spinctrl/arrow-light-down-nf.png</texturedown>
                     <textureupfocus>buttons/spinctrl/arrow-light-up-fo.png</textureupfocus>
                     <texturedownfocus>buttons/spinctrl/arrow-light-down-fo.png</texturedownfocus>
-                    <texturefocus border="2">dialogs/default/highlight.png</texturefocus>
+                    <texturefocus border="8">views/other/focus-mod8.png</texturefocus>
                     <textcolor>FF585858</textcolor>
                     <focusedcolor>eewhite</focusedcolor>
                     <disabledcolor>77585858</disabledcolor>
@@ -73,7 +75,7 @@
                         <align>left</align>
                         <textoffsetx>20</textoffsetx>
                         <label>$LOCALIZE[21433]</label>
-                        <textcolor>FF585858</textcolor>
+                        <textcolor>mod-infotags-alt</textcolor>
                         <shadowcolor>20FFFFFF</shadowcolor>
                         <font>Font-Condensed-S30</font>
                     </control>
@@ -82,7 +84,7 @@
                     	<posy>40</posy>
                     	<width>962</width>
                     	<height>61</height>
-                    	<texture border="5">dialogs/default/inner.png</texture>
+                    	<texture border="15">arctic/common/whitepanel8.png</texture>
                     </control>
                     <control type="edit" id="12">
                         <description>Name Button</description>
@@ -99,7 +101,7 @@
                         <shadowcolor>20FFFFFF</shadowcolor>
                         <font>Font-Condensed-S32</font>
                         <pulseonselect>false</pulseonselect>
-                        <texturefocus border="2">dialogs/default/highlight.png</texturefocus>
+                        <texturefocus border="8">views/other/focus-mod8.png</texturefocus>
                         <onup>22</onup>
                         <onleft>12</onleft>
                         <onright>12</onright>
@@ -111,7 +113,7 @@
                         <posy>40</posy>
                         <width>74</width>
                         <height>60</height>
-                        <texture>dialogs/mediasource/keyboard-nf.png</texture>
+                        <texture border="8">dialogs/mediasource/keyboard-nf.png</texture>
                         <visible>!Control.HasFocus(12)</visible>
                     </control>
                     <control type="image">
@@ -119,7 +121,7 @@
                         <posy>40</posy>
                         <width>74</width>
                         <height>60</height>
-                        <texture>dialogs/mediasource/keyboard-fo.png</texture>
+                        <texture border="8">dialogs/mediasource/keyboard-fo.png</texture>
                         <visible>Control.HasFocus(12)</visible>
                     </control>
                 </control>
@@ -133,7 +135,7 @@
                         <align>left</align>
                         <textoffsetx>20</textoffsetx>
                         <label>$LOCALIZE[21434]</label>
-                        <textcolor>FF585858</textcolor>
+                        <textcolor>mod-infotags-alt</textcolor>
                         <shadowcolor>20FFFFFF</shadowcolor>
                         <font>Font-Condensed-S30</font>
                     </control>
@@ -142,7 +144,7 @@
                     	<posy>230</posy>
                     	<width>691</width>
                     	<height>181</height>
-                    	<texture border="5">dialogs/default/inner.png</texture>
+                    	<texture border="15">arctic/common/whitepanel8.png</texture>
                     </control>
                     <control type="list" id="10">
                         <posx>0</posx>
@@ -151,7 +153,7 @@
                         <height>180</height>
                         <onup>12</onup>
                         <onleft>8002</onleft>
-                        <onright>60</onright>
+                        <onright>8002</onright>
                         <ondown>16</ondown>
                         <pagecontrol>60</pagecontrol>
                         <scrolltime>0</scrolltime>
@@ -211,7 +213,7 @@
                                 <control type="image">
                                     <width>690</width>
                                     <height>60</height>
-                                    <texture border="2">dialogs/default/highlight.png</texture>
+                                    <texture border="8">views/other/focus-mod8.png</texture>
                                 </control>
                                 <control type="label">
                                     <posx>20</posx>
@@ -250,22 +252,6 @@
                         <animation effect="fade" start="100" end="0" time="0" delay="1000">Hidden</animation>
                         <visible>!Control.HasFocus(60) + [Container(10).Scrolling | Container(10).OnScrollNext | Container(10).OnScrollPrevious]</visible>
                     </control>
-                    <control type="scrollbar" id="60">
-                        <posx>1155</posx>
-                        <posy>416</posy>
-                        <width>11</width>
-                        <height>174</height>
-                        <texturesliderbackground>-</texturesliderbackground>
-                        <texturesliderbar border="0,6,0,6">dialogs/default/scrollbar.png</texturesliderbar>
-                        <texturesliderbarfocus border="0,6,0,6">dialogs/default/scrollbar.png</texturesliderbarfocus>
-                        <textureslidernib>-</textureslidernib>
-                        <textureslidernibfocus>-</textureslidernibfocus>
-                        <onleft>10</onleft>
-                        <onright>8002</onright>
-                        <showonepage>false</showonepage>
-                        <orientation>vertical</orientation>
-                        <animation effect="fade" start="75" end="0" time="300" tween="sine" easing="inout" condition="!Control.IsVisible(61)">Conditional</animation>
-                    </control>
     
                     <control type="group" id="8002">
                         <posx>704</posx>
@@ -274,13 +260,13 @@
                         	<posy>230</posy>
                         	<width>258</width>
                         	<height>181</height>
-                        	<texture border="5">dialogs/default/inner.png</texture>
+                        	<texture border="15">arctic/common/whitepanel8.png</texture>
                         </control>
                         <control type="button" id="13">
                             <description>Add Rule Button</description>
                             <posy>230</posy>
                             <label>$LOCALIZE[15019]</label>
-                            <texturefocus border="54,2,2,2">dialogs/mediasource/add-fo.png</texturefocus>
+                            <texturefocus border="54,2,8,2">dialogs/mediasource/add-fo.png</texturefocus>
                             <texturenofocus>dialogs/mediasource/add-nf.png</texturenofocus>
                             <textcolor>FF585858</textcolor>
                             <focusedcolor>eewhite</focusedcolor>
@@ -301,7 +287,7 @@
                             <description>Remove Rule Button</description>
                             <posy>290</posy>
                             <label>$LOCALIZE[1210]</label>
-                            <texturefocus border="54,2,2,2">dialogs/mediasource/remove-fo.png</texturefocus>
+                            <texturefocus border="54,2,8,2">dialogs/mediasource/remove-fo.png</texturefocus>
                             <texturenofocus>dialogs/mediasource/remove-nf.png</texturenofocus>
                             <textcolor>FF585858</textcolor>
                             <focusedcolor>eewhite</focusedcolor>
@@ -322,7 +308,7 @@
                             <description>Edit Rule Button</description>
                             <posy>350</posy>
                             <label>$LOCALIZE[21435]</label>
-                            <texturefocus border="54,2,2,2">dialogs/mediasource/edit-fo.png</texturefocus>
+                            <texturefocus border="54,2,8,2">dialogs/mediasource/edit-fo.png</texturefocus>
                             <texturenofocus>dialogs/mediasource/edit-nf.png</texturenofocus>
                             <textcolor>FF585858</textcolor>
                             <focusedcolor>eewhite</focusedcolor>
@@ -352,7 +338,7 @@
                         <align>left</align>
                         <textoffsetx>20</textoffsetx>
                         <label>$LOCALIZE[41716]</label>
-                        <textcolor>FF585858</textcolor>
+                        <textcolor>mod-infotags-alt</textcolor>
                         <shadowcolor>20FFFFFF</shadowcolor>
                         <font>Font-Condensed-S30</font>
                     </control>
@@ -361,7 +347,7 @@
                     	<posy>40</posy>
                     	<width>962</width>
                     	<height>121</height>
-                    	<texture border="5">dialogs/default/inner.png</texture>
+                    	<texture border="15">arctic/common/whitepanel8.png</texture>
                     </control>
                     <control type="image">
                         <posx>0</posx>
@@ -379,7 +365,7 @@
                         <texturedown>buttons/spinctrl/arrow-light-down-nf.png</texturedown>
                         <textureupfocus>buttons/spinctrl/arrow-light-up-fo.png</textureupfocus>
                         <texturedownfocus>buttons/spinctrl/arrow-light-down-fo.png</texturedownfocus>
-                        <texturefocus border="2">dialogs/default/highlight.png</texturefocus>
+                        <texturefocus border="8">views/other/focus-mod8.png</texturefocus>
                         <textcolor>FF585858</textcolor>
                         <focusedcolor>eewhite</focusedcolor>
                         <disabledcolor>FF585858</disabledcolor>
@@ -401,7 +387,7 @@
                         <texturedown>buttons/spinctrl/arrow-light-down-nf.png</texturedown>
                         <textureupfocus>buttons/spinctrl/arrow-light-up-fo.png</textureupfocus>
                         <texturedownfocus>buttons/spinctrl/arrow-light-down-fo.png</texturedownfocus>
-                        <texturefocus border="2">dialogs/default/highlight.png</texturefocus>
+                        <texturefocus border="8">views/other/focus-mod8.png</texturefocus>
                         <textcolor>FF585858</textcolor>
                         <focusedcolor>eewhite</focusedcolor>
                         <disabledcolor>FF585858</disabledcolor>
@@ -421,7 +407,7 @@
                         	<posy>0</posy>
                         	<width>690</width>
                         	<height>61</height>
-                        	<texture border="5">dialogs/default/inner.png</texture>
+                        	<texture border="15">arctic/common/whitepanel8.png</texture>
                         </control>
                         <control type="spincontrolex" id="18">
                             <posx>0</posx>
@@ -432,7 +418,7 @@
                             <texturedown>buttons/spinctrl/arrow-light-down-nf.png</texturedown>
                             <textureupfocus>buttons/spinctrl/arrow-light-up-fo.png</textureupfocus>
                             <texturedownfocus>buttons/spinctrl/arrow-light-down-fo.png</texturedownfocus>
-                            <texturefocus border="2">dialogs/default/highlight.png</texturefocus>
+                            <texturefocus border="8">views/other/focus-mod8.png</texturefocus>
                             <textcolor>FF585858</textcolor>
                             <focusedcolor>eewhite</focusedcolor>
                             <disabledcolor>FF585858</disabledcolor>
@@ -450,16 +436,16 @@
                         	<posy>0</posy>
                         	<width>258</width>
                         	<height>61</height>
-                        	<texture border="5">dialogs/default/inner.png</texture>
+                        	<texture border="15">arctic/common/whitepanel8.png</texture>
                         </control>
                         <control type="togglebutton" id="19">
                             <posx>705</posx>
                             <posy>0</posy>
                             <width>258</width>
                             <height>60</height> 
-                            <texturefocus border="54,2,2,2">dialogs/mediasource/desc-fo.png</texturefocus>
+                            <texturefocus border="54,2,8,2">dialogs/mediasource/desc-fo.png</texturefocus>
                             <texturenofocus>dialogs/mediasource/desc-nf.png</texturenofocus>
-                            <alttexturefocus border="54,2,2,2">dialogs/mediasource/asc-fo.png</alttexturefocus>
+                            <alttexturefocus border="54,2,8,2">dialogs/mediasource/asc-fo.png</alttexturefocus>
                             <alttexturenofocus>dialogs/mediasource/asc-nf.png</alttexturenofocus>
                             <textcolor>FF585858</textcolor>
                             <focusedcolor>eewhite</focusedcolor>
@@ -481,7 +467,7 @@
             </control>
             <control type="group" id="8000">
                 <posx>466</posx>
-                <posy>864</posy>
+                <posy>852</posy>
                 <control type="button" id="20">
                     <description>Select</description>
                     <label>$LOCALIZE[42000]</label>

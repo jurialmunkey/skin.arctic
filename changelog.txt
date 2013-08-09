@@ -61,3 +61,9 @@ Added gap to simplehome screen to make it more consistent with rest of theme
 Weather menu
 Pictures menu
 Fix for profile on simple homescreen so not hidden when favourites visible
+Added ability to choose between resume and play on home widgets
+Smart playlist dialogs complete
+Content settings dialog
+Network settings dialog
+Addon settings dialog
+PVR group management dialog

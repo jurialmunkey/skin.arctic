@@ -1672,8 +1672,7 @@
 	<include name="Mod_82Content">
 		<!-- recent movies -->
 		<item id="1">
-			<onclick>SetFocus(525)</onclick>
-			<onclick>$INFO[Window.Property(RecentMovie.1.Play)]</onclick>
+			<onclick>PlayMedia($ESCINFO[Window.Property(RecentMovie.1.File)])</onclick>
 			<icon>$INFO[Window.Property(RecentMovie.1.Art(fanart))]</icon>
 			<property name="Poster">$INFO[Window.Property(RecentMovie.1.Art(poster))]</property>
 			<property name="Overlay">$INFO[Window.Property(RecentMovie.1.Watched)]</property>
@@ -1685,8 +1684,7 @@
 			<visible>Container(525).HasFocus(1) + StringCompare(Skin.String(movie.widget.type),$LOCALIZE[41552]) + !IsEmpty(Window.Property(RecentMovie.1.Title))</visible>
 		</item>
 		<item id="2">
-			<onclick>SetFocus(525)</onclick>
-			<onclick>$INFO[Window.Property(RecentMovie.2.Play)]</onclick>
+			<onclick>PlayMedia($ESCINFO[Window.Property(RecentMovie.2.File)])</onclick>
 			<icon>$INFO[Window.Property(RecentMovie.2.Art(fanart))]</icon>
 			<property name="Poster">$INFO[Window.Property(RecentMovie.2.Art(poster))]</property>
 			<property name="Overlay">$INFO[Window.Property(RecentMovie.2.Watched)]</property>
@@ -1698,8 +1696,7 @@
 			<visible>Container(525).HasFocus(1) + StringCompare(Skin.String(movie.widget.type),$LOCALIZE[41552]) + !IsEmpty(Window.Property(RecentMovie.2.Title))</visible>
 		</item>
 		<item id="3">
-			<onclick>SetFocus(525)</onclick>
-			<onclick>$INFO[Window.Property(RecentMovie.3.Play)]</onclick>
+			<onclick>PlayMedia($ESCINFO[Window.Property(RecentMovie.3.File)])</onclick>
 			<icon>$INFO[Window.Property(RecentMovie.3.Art(fanart))]</icon>
 			<property name="Poster">$INFO[Window.Property(RecentMovie.3.Art(poster))]</property>
 			<property name="Overlay">$INFO[Window.Property(RecentMovie.3.Watched)]</property>
@@ -1711,8 +1708,7 @@
 			<visible>Container(525).HasFocus(1) + StringCompare(Skin.String(movie.widget.type),$LOCALIZE[41552]) + !IsEmpty(Window.Property(RecentMovie.3.Title))</visible>
 		</item>
 		<item id="4">
-			<onclick>SetFocus(525)</onclick>
-			<onclick>$INFO[Window.Property(RecentMovie.4.Play)]</onclick>
+			<onclick>PlayMedia($ESCINFO[Window.Property(RecentMovie.4.File)])</onclick>
 			<icon>$INFO[Window.Property(RecentMovie.4.Art(fanart))]</icon>
 			<property name="Poster">$INFO[Window.Property(RecentMovie.4.Art(poster))]</property>
 			<property name="Overlay">$INFO[Window.Property(RecentMovie.4.Watched)]</property>
@@ -1724,8 +1720,7 @@
 			<visible>Container(525).HasFocus(1) + StringCompare(Skin.String(movie.widget.type),$LOCALIZE[41552]) + !IsEmpty(Window.Property(RecentMovie.4.Title))</visible>
 		</item>
 		<item id="5">
-			<onclick>SetFocus(525)</onclick>
-			<onclick>$INFO[Window.Property(RecentMovie.5.Play)]</onclick>
+			<onclick>PlayMedia($ESCINFO[Window.Property(RecentMovie.5.File)])</onclick>
 			<icon>$INFO[Window.Property(RecentMovie.5.Art(fanart))]</icon>
 			<property name="Poster">$INFO[Window.Property(RecentMovie.5.Art(poster))]</property>
 			<property name="Overlay">$INFO[Window.Property(RecentMovie.5.Watched)]</property>
@@ -1737,8 +1732,7 @@
 			<visible>Container(525).HasFocus(1) + StringCompare(Skin.String(movie.widget.type),$LOCALIZE[41552]) + !IsEmpty(Window.Property(RecentMovie.5.Title))</visible>
 		</item>
 		<item id="6">
-			<onclick>SetFocus(525)</onclick>
-			<onclick>$INFO[Window.Property(RecentMovie.6.Play)]</onclick>
+			<onclick>PlayMedia($ESCINFO[Window.Property(RecentMovie.6.File)])</onclick>
 			<icon>$INFO[Window.Property(RecentMovie.6.Art(fanart))]</icon>
 			<property name="Poster">$INFO[Window.Property(RecentMovie.6.Art(poster))]</property>
 			<property name="Overlay">$INFO[Window.Property(RecentMovie.6.Watched)]</property>
@@ -1750,8 +1744,7 @@
 			<visible>Container(525).HasFocus(1) + StringCompare(Skin.String(movie.widget.type),$LOCALIZE[41552]) + !IsEmpty(Window.Property(RecentMovie.6.Title))</visible>
 		</item>
 		<item id="7">
-			<onclick>SetFocus(525)</onclick>
-			<onclick>$INFO[Window.Property(RecentMovie.7.Play)]</onclick>
+			<onclick>PlayMedia($ESCINFO[Window.Property(RecentMovie.7.File)])</onclick>
 			<icon>$INFO[Window.Property(RecentMovie.7.Art(fanart))]</icon>
 			<property name="Poster">$INFO[Window.Property(RecentMovie.7.Art(poster))]</property>
 			<property name="Overlay">$INFO[Window.Property(RecentMovie.7.Watched)]</property>
@@ -1763,8 +1756,7 @@
 			<visible>Container(525).HasFocus(1) + StringCompare(Skin.String(movie.widget.type),$LOCALIZE[41552]) + !IsEmpty(Window.Property(RecentMovie.7.Title))</visible>
 		</item>
 		<item id="8">
-			<onclick>SetFocus(525)</onclick>
-			<onclick>$INFO[Window.Property(RecentMovie.8.Play)]</onclick>
+			<onclick>PlayMedia($ESCINFO[Window.Property(RecentMovie.8.File)])</onclick>
 			<icon>$INFO[Window.Property(RecentMovie.8.Art(fanart))]</icon>
 			<property name="Poster">$INFO[Window.Property(RecentMovie.8.Art(poster))]</property>
 			<property name="Overlay">$INFO[Window.Property(RecentMovie.8.Watched)]</property>
@@ -1776,8 +1768,7 @@
 			<visible>Container(525).HasFocus(1) + StringCompare(Skin.String(movie.widget.type),$LOCALIZE[41552]) + !IsEmpty(Window.Property(RecentMovie.8.Title))</visible>
 		</item>
 		<item id="9">
-			<onclick>SetFocus(525)</onclick>
-			<onclick>$INFO[Window.Property(RecentMovie.9.Play)]</onclick>
+			<onclick>PlayMedia($ESCINFO[Window.Property(RecentMovie.9.File)])</onclick>
 			<icon>$INFO[Window.Property(RecentMovie.9.Art(fanart))]</icon>
 			<property name="Poster">$INFO[Window.Property(RecentMovie.9.Art(poster))]</property>
 			<property name="Overlay">$INFO[Window.Property(RecentMovie.9.Watched)]</property>
@@ -1789,8 +1780,7 @@
 			<visible>Container(525).HasFocus(1) + StringCompare(Skin.String(movie.widget.type),$LOCALIZE[41552]) + !IsEmpty(Window.Property(RecentMovie.9.Title))</visible>
 		</item>
 		<item id="10">
-			<onclick>SetFocus(525)</onclick>
-			<onclick>$INFO[Window.Property(RecentMovie.10.Play)]</onclick>
+			<onclick>PlayMedia($ESCINFO[Window.Property(RecentMovie.10.File)])</onclick>
 			<icon>$INFO[Window.Property(RecentMovie.10.Art(fanart))]</icon>
 			<property name="Poster">$INFO[Window.Property(RecentMovie.10.Art(poster))]</property>
 			<property name="Overlay">$INFO[Window.Property(RecentMovie.10.Watched)]</property>
@@ -1803,8 +1793,7 @@
 		</item>
 		<!-- recommended movies -->
 		<item id="1">
-			<onclick>SetFocus(525)</onclick>
-			<onclick>$INFO[Window.Property(RecommendedMovie.1.Play)]</onclick>
+			<onclick>PlayMedia($ESCINFO[Window.Property(RecommendedMovie.1.File)])</onclick>
 			<icon>$INFO[Window.Property(RecommendedMovie.1.Art(fanart))]</icon>
 			<property name="Poster">$INFO[Window.Property(RecommendedMovie.1.Art(poster))]</property>
 			<property name="Overlay">$INFO[Window.Property(RecommendedMovie.1.Watched)]</property>
@@ -1816,8 +1805,7 @@
 			<visible>Container(525).HasFocus(1) + StringCompare(Skin.String(movie.widget.type),$LOCALIZE[575]) + !IsEmpty(Window.Property(RecommendedMovie.1.Title))</visible>
 		</item>
 		<item id="2">
-			<onclick>SetFocus(525)</onclick>
-			<onclick>$INFO[Window.Property(RecommendedMovie.2.Play)]</onclick>
+			<onclick>PlayMedia($ESCINFO[Window.Property(RecommendedMovie.2.File)])</onclick>
 			<icon>$INFO[Window.Property(RecommendedMovie.2.Art(fanart))]</icon>
 			<property name="Poster">$INFO[Window.Property(RecommendedMovie.2.Art(poster))]</property>
 			<property name="Overlay">$INFO[Window.Property(RecommendedMovie.2.Watched)]</property>
@@ -1829,8 +1817,7 @@
 			<visible>Container(525).HasFocus(1) + StringCompare(Skin.String(movie.widget.type),$LOCALIZE[575]) + !IsEmpty(Window.Property(RecommendedMovie.2.Title))</visible>
 		</item>
 		<item id="3">
-			<onclick>SetFocus(525)</onclick>
-			<onclick>$INFO[Window.Property(RecommendedMovie.3.Play)]</onclick>
+			<onclick>PlayMedia($ESCINFO[Window.Property(RecommendedMovie.3.File)])</onclick>
 			<icon>$INFO[Window.Property(RecommendedMovie.3.Art(fanart))]</icon>
 			<property name="Poster">$INFO[Window.Property(RecommendedMovie.3.Art(poster))]</property>
 			<property name="Overlay">$INFO[Window.Property(RecommendedMovie.3.Watched)]</property>
@@ -1842,8 +1829,7 @@
 			<visible>Container(525).HasFocus(1) + StringCompare(Skin.String(movie.widget.type),$LOCALIZE[575]) + !IsEmpty(Window.Property(RecommendedMovie.3.Title))</visible>
 		</item>
 		<item id="4">
-			<onclick>SetFocus(525)</onclick>
-			<onclick>$INFO[Window.Property(RecommendedMovie.4.Play)]</onclick>
+			<onclick>PlayMedia($ESCINFO[Window.Property(RecommendedMovie.4.File)])</onclick>
 			<icon>$INFO[Window.Property(RecommendedMovie.4.Art(fanart))]</icon>
 			<property name="Poster">$INFO[Window.Property(RecommendedMovie.4.Art(poster))]</property>
 			<property name="Overlay">$INFO[Window.Property(RecommendedMovie.4.Watched)]</property>
@@ -1855,8 +1841,7 @@
 			<visible>Container(525).HasFocus(1) + StringCompare(Skin.String(movie.widget.type),$LOCALIZE[575]) + !IsEmpty(Window.Property(RecommendedMovie.4.Title))</visible>
 		</item>
 		<item id="5">
-			<onclick>SetFocus(525)</onclick>
-			<onclick>$INFO[Window.Property(RecommendedMovie.5.Play)]</onclick>
+			<onclick>PlayMedia($ESCINFO[Window.Property(RecommendedMovie.5.File)])</onclick>
 			<icon>$INFO[Window.Property(RecommendedMovie.5.Art(fanart))]</icon>
 			<property name="Poster">$INFO[Window.Property(RecommendedMovie.5.Art(poster))]</property>
 			<property name="Overlay">$INFO[Window.Property(RecommendedMovie.5.Watched)]</property>
@@ -1868,8 +1853,7 @@
 			<visible>Container(525).HasFocus(1) + StringCompare(Skin.String(movie.widget.type),$LOCALIZE[575]) + !IsEmpty(Window.Property(RecommendedMovie.5.Title))</visible>
 		</item>
 		<item id="6">
-			<onclick>SetFocus(525)</onclick>
-			<onclick>$INFO[Window.Property(RecommendedMovie.6.Play)]</onclick>
+			<onclick>PlayMedia($ESCINFO[Window.Property(RecommendedMovie.6.File)])</onclick>
 			<icon>$INFO[Window.Property(RecommendedMovie.6.Art(fanart))]</icon>
 			<property name="Poster">$INFO[Window.Property(RecommendedMovie.6.Art(poster))]</property>
 			<property name="Overlay">$INFO[Window.Property(RecommendedMovie.6.Watched)]</property>
@@ -1881,8 +1865,7 @@
 			<visible>Container(525).HasFocus(1) + StringCompare(Skin.String(movie.widget.type),$LOCALIZE[575]) + !IsEmpty(Window.Property(RecommendedMovie.6.Title))</visible>
 		</item>
 		<item id="7">
-			<onclick>SetFocus(525)</onclick>
-			<onclick>$INFO[Window.Property(RecommendedMovie.7.Play)]</onclick>
+			<onclick>PlayMedia($ESCINFO[Window.Property(RecommendedMovie.7.File)])</onclick>
 			<icon>$INFO[Window.Property(RecommendedMovie.7.Art(fanart))]</icon>
 			<property name="Poster">$INFO[Window.Property(RecommendedMovie.7.Art(poster))]</property>
 			<property name="Overlay">$INFO[Window.Property(RecommendedMovie.7.Watched)]</property>
@@ -1894,8 +1877,7 @@
 			<visible>Container(525).HasFocus(1) + StringCompare(Skin.String(movie.widget.type),$LOCALIZE[575]) + !IsEmpty(Window.Property(RecommendedMovie.7.Title))</visible>
 		</item>
 		<item id="8">
-			<onclick>SetFocus(525)</onclick>
-			<onclick>$INFO[Window.Property(RecommendedMovie.8.Play)]</onclick>
+			<onclick>PlayMedia($ESCINFO[Window.Property(RecommendedMovie.8.File)])</onclick>
 			<icon>$INFO[Window.Property(RecommendedMovie.8.Art(fanart))]</icon>
 			<property name="Poster">$INFO[Window.Property(RecommendedMovie.8.Art(poster))]</property>
 			<property name="Overlay">$INFO[Window.Property(RecommendedMovie.8.Watched)]</property>
@@ -1907,8 +1889,7 @@
 			<visible>Container(525).HasFocus(1) + StringCompare(Skin.String(movie.widget.type),$LOCALIZE[575]) + !IsEmpty(Window.Property(RecommendedMovie.8.Title))</visible>
 		</item>
 		<item id="9">
-			<onclick>SetFocus(525)</onclick>
-			<onclick>$INFO[Window.Property(RecommendedMovie.9.Play)]</onclick>
+			<onclick>PlayMedia($ESCINFO[Window.Property(RecommendedMovie.9.File)])</onclick>
 			<icon>$INFO[Window.Property(RecommendedMovie.9.Art(fanart))]</icon>
 			<property name="Poster">$INFO[Window.Property(RecommendedMovie.9.Art(poster))]</property>
 			<property name="Overlay">$INFO[Window.Property(RecommendedMovie.9.Watched)]</property>
@@ -1920,8 +1901,7 @@
 			<visible>Container(525).HasFocus(1) + StringCompare(Skin.String(movie.widget.type),$LOCALIZE[575]) + !IsEmpty(Window.Property(RecommendedMovie.9.Title))</visible>
 		</item>
 		<item id="10">
-			<onclick>SetFocus(525)</onclick>
-			<onclick>$INFO[Window.Property(RecommendedMovie.10.Play)]</onclick>
+			<onclick>PlayMedia($ESCINFO[Window.Property(RecommendedMovie.10.File)])</onclick>
 			<icon>$INFO[Window.Property(RecommendedMovie.10.Art(fanart))]</icon>
 			<property name="Poster">$INFO[Window.Property(RecommendedMovie.10.Art(poster))]</property>
 			<property name="Overlay">$INFO[Window.Property(RecommendedMovie.10.Watched)]</property>
@@ -1934,8 +1914,7 @@
 		</item>
 		<!-- Random movies -->
 		<item id="1">
-			<onclick>SetFocus(525)</onclick>
-			<onclick>$INFO[Window.Property(RandomMovie.1.Play)]</onclick>
+			<onclick>PlayMedia($ESCINFO[Window.Property(RandomMovie.1.File)])</onclick>
 			<icon>$INFO[Window.Property(RandomMovie.1.Art(fanart))]</icon>
 			<property name="Poster">$INFO[Window.Property(RandomMovie.1.Art(poster))]</property>
 			<property name="Overlay">$INFO[Window.Property(RandomMovie.1.Watched)]</property>
@@ -1947,8 +1926,7 @@
 			<visible>Container(525).HasFocus(1) + StringCompare(Skin.String(movie.widget.type),$LOCALIZE[41550]) + !IsEmpty(Window.Property(RandomMovie.1.Title))</visible>
 		</item>
 		<item id="2">
-			<onclick>SetFocus(525)</onclick>
-			<onclick>$INFO[Window.Property(RandomMovie.2.Play)]</onclick>
+			<onclick>PlayMedia($ESCINFO[Window.Property(RandomMovie.2.File)])</onclick>
 			<icon>$INFO[Window.Property(RandomMovie.2.Art(fanart))]</icon>
 			<property name="Poster">$INFO[Window.Property(RandomMovie.2.Art(poster))]</property>
 			<property name="Overlay">$INFO[Window.Property(RandomMovie.2.Watched)]</property>
@@ -1960,8 +1938,7 @@
 			<visible>Container(525).HasFocus(1) + StringCompare(Skin.String(movie.widget.type),$LOCALIZE[41550]) + !IsEmpty(Window.Property(RandomMovie.2.Title))</visible>
 		</item>
 		<item id="3">
-			<onclick>SetFocus(525)</onclick>
-			<onclick>$INFO[Window.Property(RandomMovie.3.Play)]</onclick>
+			<onclick>PlayMedia($ESCINFO[Window.Property(RandomMovie.3.File)])</onclick>
 			<icon>$INFO[Window.Property(RandomMovie.3.Art(fanart))]</icon>
 			<property name="Poster">$INFO[Window.Property(RandomMovie.3.Art(poster))]</property>
 			<property name="Overlay">$INFO[Window.Property(RandomMovie.3.Watched)]</property>
@@ -1973,8 +1950,7 @@
 			<visible>Container(525).HasFocus(1) + StringCompare(Skin.String(movie.widget.type),$LOCALIZE[41550]) + !IsEmpty(Window.Property(RandomMovie.3.Title))</visible>
 		</item>
 		<item id="4">
-			<onclick>SetFocus(525)</onclick>
-			<onclick>$INFO[Window.Property(RandomMovie.4.Play)]</onclick>
+			<onclick>PlayMedia($ESCINFO[Window.Property(RandomMovie.4.File)])</onclick>
 			<icon>$INFO[Window.Property(RandomMovie.4.Art(fanart))]</icon>
 			<property name="Poster">$INFO[Window.Property(RandomMovie.4.Art(poster))]</property>
 			<property name="Overlay">$INFO[Window.Property(RandomMovie.4.Watched)]</property>
@@ -1986,8 +1962,7 @@
 			<visible>Container(525).HasFocus(1) + StringCompare(Skin.String(movie.widget.type),$LOCALIZE[41550]) + !IsEmpty(Window.Property(RandomMovie.4.Title))</visible>
 		</item>
 		<item id="5">
-			<onclick>SetFocus(525)</onclick>
-			<onclick>$INFO[Window.Property(RandomMovie.5.Play)]</onclick>
+			<onclick>PlayMedia($ESCINFO[Window.Property(RandomMovie.5.File)])</onclick>
 			<icon>$INFO[Window.Property(RandomMovie.5.Art(fanart))]</icon>
 			<property name="Poster">$INFO[Window.Property(RandomMovie.5.Art(poster))]</property>
 			<property name="Overlay">$INFO[Window.Property(RandomMovie.5.Watched)]</property>
@@ -1999,8 +1974,7 @@
 			<visible>Container(525).HasFocus(1) + StringCompare(Skin.String(movie.widget.type),$LOCALIZE[41550]) + !IsEmpty(Window.Property(RandomMovie.5.Title))</visible>
 		</item>
 		<item id="6">
-			<onclick>SetFocus(525)</onclick>
-			<onclick>$INFO[Window.Property(RandomMovie.6.Play)]</onclick>
+			<onclick>PlayMedia($ESCINFO[Window.Property(RandomMovie.6.File)])</onclick>
 			<icon>$INFO[Window.Property(RandomMovie.6.Art(fanart))]</icon>
 			<property name="Poster">$INFO[Window.Property(RandomMovie.6.Art(poster))]</property>
 			<property name="Overlay">$INFO[Window.Property(RandomMovie.6.Watched)]</property>
@@ -2012,8 +1986,7 @@
 			<visible>Container(525).HasFocus(1) + StringCompare(Skin.String(movie.widget.type),$LOCALIZE[41550]) + !IsEmpty(Window.Property(RandomMovie.6.Title))</visible>
 		</item>
 		<item id="7">
-			<onclick>SetFocus(525)</onclick>
-			<onclick>$INFO[Window.Property(RandomMovie.7.Play)]</onclick>
+			<onclick>PlayMedia($ESCINFO[Window.Property(RandomMovie.7.File)])</onclick>
 			<icon>$INFO[Window.Property(RandomMovie.7.Art(fanart))]</icon>
 			<property name="Poster">$INFO[Window.Property(RandomMovie.7.Art(poster))]</property>
 			<property name="Overlay">$INFO[Window.Property(RandomMovie.7.Watched)]</property>
@@ -2025,8 +1998,7 @@
 			<visible>Container(525).HasFocus(1) + StringCompare(Skin.String(movie.widget.type),$LOCALIZE[41550]) + !IsEmpty(Window.Property(RandomMovie.7.Title))</visible>
 		</item>
 		<item id="8">
-			<onclick>SetFocus(525)</onclick>
-			<onclick>$INFO[Window.Property(RandomMovie.8.Play)]</onclick>
+			<onclick>PlayMedia($ESCINFO[Window.Property(RandomMovie.8.File)])</onclick>
 			<icon>$INFO[Window.Property(RandomMovie.8.Art(fanart))]</icon>
 			<property name="Poster">$INFO[Window.Property(RandomMovie.8.Art(poster))]</property>
 			<property name="Overlay">$INFO[Window.Property(RandomMovie.8.Watched)]</property>
@@ -2038,8 +2010,7 @@
 			<visible>Container(525).HasFocus(1) + StringCompare(Skin.String(movie.widget.type),$LOCALIZE[41550]) + !IsEmpty(Window.Property(RandomMovie.8.Title))</visible>
 		</item>
 		<item id="9">
-			<onclick>SetFocus(525)</onclick>
-			<onclick>$INFO[Window.Property(RandomMovie.9.Play)]</onclick>
+			<onclick>PlayMedia($ESCINFO[Window.Property(RandomMovie.9.File)])</onclick>
 			<icon>$INFO[Window.Property(RandomMovie.9.Art(fanart))]</icon>
 			<property name="Poster">$INFO[Window.Property(RandomMovie.9.Art(poster))]</property>
 			<property name="Overlay">$INFO[Window.Property(RandomMovie.9.Watched)]</property>
@@ -2051,8 +2022,7 @@
 			<visible>Container(525).HasFocus(1) + StringCompare(Skin.String(movie.widget.type),$LOCALIZE[41550]) + !IsEmpty(Window.Property(RandomMovie.9.Title))</visible>
 		</item>
 		<item id="10">
-			<onclick>SetFocus(525)</onclick>
-			<onclick>$INFO[Window.Property(RandomMovie.10.Play)]</onclick>
+			<onclick>PlayMedia($ESCINFO[Window.Property(RandomMovie.10.File)])</onclick>
 			<icon>$INFO[Window.Property(RandomMovie.10.Art(fanart))]</icon>
 			<property name="Poster">$INFO[Window.Property(RandomMovie.10.Art(poster))]</property>
 			<property name="Overlay">$INFO[Window.Property(RandomMovie.10.Watched)]</property>
@@ -2065,8 +2035,7 @@
 		</item>
 		<!-- recent tv -->
 		<item id="1">
-			<onclick>SetFocus(525)</onclick>
-			<onclick>$INFO[Window.Property(RecentEpisode.1.Play)]</onclick>
+			<onclick>PlayMedia($ESCINFO[Window.Property(RecentEpisode.1.File)])</onclick>
 			<icon>$INFO[Window.Property(RecentEpisode.1.Art(thumb))]</icon>
 			<property name="Poster">$INFO[Window.Property(RecentEpisode.1.Art(tvshow.poster))]</property>
 			<property name="Overlay">$INFO[Window.Property(RecentEpisode.1.Watched)]</property>
@@ -2077,8 +2046,7 @@
 			<visible>Container(525).HasFocus(2) + StringCompare(Skin.String(tvshow.widget.type),$LOCALIZE[41553]) + !IsEmpty(Window.Property(RecentEpisode.1.Title))</visible>
 		</item>
 		<item id="2">
-			<onclick>SetFocus(525)</onclick>
-			<onclick>$INFO[Window.Property(RecentEpisode.2.Play)]</onclick>
+			<onclick>PlayMedia($ESCINFO[Window.Property(RecentEpisode.2.File)])</onclick>
 			<icon>$INFO[Window.Property(RecentEpisode.2.Art(thumb))]</icon>
 			<property name="Poster">$INFO[Window.Property(RecentEpisode.2.Art(tvshow.poster))]</property>
 			<property name="Overlay">$INFO[Window.Property(RecentEpisode.2.Watched)]</property>
@@ -2089,8 +2057,7 @@
 			<visible>Container(525).HasFocus(2) + StringCompare(Skin.String(tvshow.widget.type),$LOCALIZE[41553] + !IsEmpty(Window.Property(RecentEpisode.2.Title))</visible>
 		</item>
 		<item id="3">
-			<onclick>SetFocus(525)</onclick>
-			<onclick>$INFO[Window.Property(RecentEpisode.3.Play)]</onclick>
+			<onclick>PlayMedia($ESCINFO[Window.Property(RecentEpisode.3.File)])</onclick>
 			<icon>$INFO[Window.Property(RecentEpisode.3.Art(thumb))]</icon>
 			<property name="Poster">$INFO[Window.Property(RecentEpisode.3.Art(tvshow.poster))]</property>
 			<property name="Overlay">$INFO[Window.Property(RecentEpisode.3.Watched)]</property>
@@ -2101,8 +2068,7 @@
 			<visible>Container(525).HasFocus(2) + StringCompare(Skin.String(tvshow.widget.type),$LOCALIZE[41553] + !IsEmpty(Window.Property(RecentEpisode.3.Title))</visible>
 		</item>
 		<item id="4">
-			<onclick>SetFocus(525)</onclick>
-			<onclick>$INFO[Window.Property(RecentEpisode.4.Play)]</onclick>
+			<onclick>PlayMedia($ESCINFO[Window.Property(RecentEpisode.4.File)])</onclick>
 			<icon>$INFO[Window.Property(RecentEpisode.4.Art(thumb))]</icon>
 			<property name="Poster">$INFO[Window.Property(RecentEpisode.4.Art(tvshow.poster))]</property>
 			<property name="Overlay">$INFO[Window.Property(RecentEpisode.4.Watched)]</property>
@@ -2113,8 +2079,7 @@
 			<visible>Container(525).HasFocus(2) + StringCompare(Skin.String(tvshow.widget.type),$LOCALIZE[41553] + !IsEmpty(Window.Property(RecentEpisode.4.Title))</visible>
 		</item>
 		<item id="5">
-			<onclick>SetFocus(525)</onclick>
-			<onclick>$INFO[Window.Property(RecentEpisode.5.Play)]</onclick>
+			<onclick>PlayMedia($ESCINFO[Window.Property(RecentEpisode.5.File)])</onclick>
 			<icon>$INFO[Window.Property(RecentEpisode.5.Art(thumb))]</icon>
 			<property name="Poster">$INFO[Window.Property(RecentEpisode.5.Art(tvshow.poster))]</property>
 			<property name="Overlay">$INFO[Window.Property(RecentEpisode.5.Watched)]</property>
@@ -2125,8 +2090,7 @@
 			<visible>Container(525).HasFocus(2) + StringCompare(Skin.String(tvshow.widget.type),$LOCALIZE[41553] + !IsEmpty(Window.Property(RecentEpisode.5.Title))</visible>
 		</item>
 		<item id="6">
-			<onclick>SetFocus(525)</onclick>
-			<onclick>$INFO[Window.Property(RecentEpisode.6.Play)]</onclick>
+			<onclick>PlayMedia($ESCINFO[Window.Property(RecentEpisode.6.File)])</onclick>
 			<icon>$INFO[Window.Property(RecentEpisode.6.Art(thumb))]</icon>
 			<property name="Poster">$INFO[Window.Property(RecentEpisode.6.Art(tvshow.poster))]</property>
 			<property name="Overlay">$INFO[Window.Property(RecentEpisode.6.Watched)]</property>
@@ -2137,8 +2101,7 @@
 			<visible>Container(525).HasFocus(2) + StringCompare(Skin.String(tvshow.widget.type),$LOCALIZE[41553] + !IsEmpty(Window.Property(RecentEpisode.6.Title))</visible>
 		</item>
 		<item id="7">
-			<onclick>SetFocus(525)</onclick>
-			<onclick>$INFO[Window.Property(RecentEpisode.7.Play)]</onclick>
+			<onclick>PlayMedia($ESCINFO[Window.Property(RecentEpisode.7.File)])</onclick>
 			<icon>$INFO[Window.Property(RecentEpisode.7.Art(thumb))]</icon>
 			<property name="Poster">$INFO[Window.Property(RecentEpisode.7.Art(tvshow.poster))]</property>
 			<property name="Overlay">$INFO[Window.Property(RecentEpisode.7.Watched)]</property>
@@ -2149,8 +2112,7 @@
 			<visible>Container(525).HasFocus(2) + StringCompare(Skin.String(tvshow.widget.type),$LOCALIZE[41553] + !IsEmpty(Window.Property(RecentEpisode.7.Title))</visible>
 		</item>
 		<item id="8">
-			<onclick>SetFocus(525)</onclick>
-			<onclick>$INFO[Window.Property(RecentEpisode.8.Play)]</onclick>
+			<onclick>PlayMedia($ESCINFO[Window.Property(RecentEpisode.8.File)])</onclick>
 			<icon>$INFO[Window.Property(RecentEpisode.8.Art(thumb))]</icon>
 			<property name="Poster">$INFO[Window.Property(RecentEpisode.8.Art(tvshow.poster))]</property>
 			<property name="Overlay">$INFO[Window.Property(RecentEpisode.8.Watched)]</property>
@@ -2161,8 +2123,7 @@
 			<visible>Container(525).HasFocus(2) + StringCompare(Skin.String(tvshow.widget.type),$LOCALIZE[41553] + !IsEmpty(Window.Property(RecentEpisode.8.Title))</visible>
 		</item>
 		<item id="9">
-			<onclick>SetFocus(525)</onclick>
-			<onclick>$INFO[Window.Property(RecentEpisode.9.Play)]</onclick>
+			<onclick>PlayMedia($ESCINFO[Window.Property(RecentEpisode.9.File)])</onclick>
 			<icon>$INFO[Window.Property(RecentEpisode.9.Art(thumb))]</icon>
 			<property name="Poster">$INFO[Window.Property(RecentEpisode.9.Art(tvshow.poster))]</property>
 			<property name="Overlay">$INFO[Window.Property(RecentEpisode.9.Watched)]</property>
@@ -2173,8 +2134,7 @@
 			<visible>Container(525).HasFocus(2) + StringCompare(Skin.String(tvshow.widget.type),$LOCALIZE[41553] + !IsEmpty(Window.Property(RecentEpisode.9.Title))</visible>
 		</item>
 		<item id="10">
-			<onclick>SetFocus(525)</onclick>
-			<onclick>$INFO[Window.Property(RecentEpisode.10.Play)]</onclick>
+			<onclick>PlayMedia($ESCINFO[Window.Property(RecentEpisode.10.File)])</onclick>
 			<icon>$INFO[Window.Property(RecentEpisode.10.Art(thumb))]</icon>
 			<property name="Poster">$INFO[Window.Property(RecentEpisode.10.Art(tvshow.poster))]</property>
 			<property name="Overlay">$INFO[Window.Property(RecentEpisode.10.Watched)]</property>
@@ -2186,8 +2146,7 @@
 		</item>
 		<!-- recommended tv -->
 		<item id="1">
-			<onclick>SetFocus(525)</onclick>
-			<onclick>$INFO[Window.Property(RecommendedEpisode.1.Play)]</onclick>
+			<onclick>PlayMedia($ESCINFO[Window.Property(RecommendedEpisode.1.File)])</onclick>
 			<icon>$INFO[Window.Property(RecommendedEpisode.1.Art(thumb))]</icon>
 			<property name="Poster">$INFO[Window.Property(RecommendedEpisode.1.Art(tvshow.poster))]</property>
 			<property name="Overlay">$INFO[Window.Property(RecommendedEpisode.1.Watched)]</property>
@@ -2198,8 +2157,7 @@
 			<visible>Container(525).HasFocus(2) + StringCompare(Skin.String(tvshow.widget.type),$LOCALIZE[41551]) + !IsEmpty(Window.Property(RecommendedEpisode.1.Title))</visible>
 		</item>
 		<item id="2">
-			<onclick>SetFocus(525)</onclick>
-			<onclick>$INFO[Window.Property(RecommendedEpisode.2.Play)]</onclick>
+			<onclick>PlayMedia($ESCINFO[Window.Property(RecommendedEpisode.2.File)])</onclick>
 			<icon>$INFO[Window.Property(RecommendedEpisode.2.Art(thumb))]</icon>
 			<property name="Poster">$INFO[Window.Property(RecommendedEpisode.2.Art(tvshow.poster))]</property>
 			<property name="Overlay">$INFO[Window.Property(RecommendedEpisode.2.Watched)]</property>
@@ -2210,8 +2168,7 @@
 			<visible>Container(525).HasFocus(2) + StringCompare(Skin.String(tvshow.widget.type),$LOCALIZE[41551] + !IsEmpty(Window.Property(RecommendedEpisode.2.Title))</visible>
 		</item>
 		<item id="3">
-			<onclick>SetFocus(525)</onclick>
-			<onclick>$INFO[Window.Property(RecommendedEpisode.3.Play)]</onclick>
+			<onclick>PlayMedia($ESCINFO[Window.Property(RecommendedEpisode.3.File)])</onclick>
 			<icon>$INFO[Window.Property(RecommendedEpisode.3.Art(thumb))]</icon>
 			<property name="Poster">$INFO[Window.Property(RecommendedEpisode.3.Art(tvshow.poster))]</property>
 			<property name="Overlay">$INFO[Window.Property(RecommendedEpisode.3.Watched)]</property>
@@ -2222,8 +2179,7 @@
 			<visible>Container(525).HasFocus(2) + StringCompare(Skin.String(tvshow.widget.type),$LOCALIZE[41551] + !IsEmpty(Window.Property(RecommendedEpisode.3.Title))</visible>
 		</item>
 		<item id="4">
-			<onclick>SetFocus(525)</onclick>
-			<onclick>$INFO[Window.Property(RecommendedEpisode.4.Play)]</onclick>
+			<onclick>PlayMedia($ESCINFO[Window.Property(RecommendedEpisode.4.File)])</onclick>
 			<icon>$INFO[Window.Property(RecommendedEpisode.4.Art(thumb))]</icon>
 			<property name="Poster">$INFO[Window.Property(RecommendedEpisode.4.Art(tvshow.poster))]</property>
 			<property name="Overlay">$INFO[Window.Property(RecommendedEpisode.4.Watched)]</property>
@@ -2234,8 +2190,7 @@
 			<visible>Container(525).HasFocus(2) + StringCompare(Skin.String(tvshow.widget.type),$LOCALIZE[41551] + !IsEmpty(Window.Property(RecommendedEpisode.4.Title))</visible>
 		</item>
 		<item id="5">
-			<onclick>SetFocus(525)</onclick>
-			<onclick>$INFO[Window.Property(RecommendedEpisode.5.Play)]</onclick>
+			<onclick>PlayMedia($ESCINFO[Window.Property(RecommendedEpisode.5.File)])</onclick>
 			<icon>$INFO[Window.Property(RecommendedEpisode.5.Art(thumb))]</icon>
 			<property name="Poster">$INFO[Window.Property(RecommendedEpisode.5.Art(tvshow.poster))]</property>
 			<property name="Overlay">$INFO[Window.Property(RecommendedEpisode.5.Watched)]</property>
@@ -2246,8 +2201,7 @@
 			<visible>Container(525).HasFocus(2) + StringCompare(Skin.String(tvshow.widget.type),$LOCALIZE[41551] + !IsEmpty(Window.Property(RecommendedEpisode.5.Title))</visible>
 		</item>
 		<item id="6">
-			<onclick>SetFocus(525)</onclick>
-			<onclick>$INFO[Window.Property(RecommendedEpisode.6.Play)]</onclick>
+			<onclick>PlayMedia($ESCINFO[Window.Property(RecommendedEpisode.6.File)])</onclick>
 			<icon>$INFO[Window.Property(RecommendedEpisode.6.Art(thumb))]</icon>
 			<property name="Poster">$INFO[Window.Property(RecommendedEpisode.6.Art(tvshow.poster))]</property>
 			<property name="Overlay">$INFO[Window.Property(RecommendedEpisode.6.Watched)]</property>
@@ -2258,8 +2212,7 @@
 			<visible>Container(525).HasFocus(2) + StringCompare(Skin.String(tvshow.widget.type),$LOCALIZE[41551] + !IsEmpty(Window.Property(RecommendedEpisode.6.Title))</visible>
 		</item>
 		<item id="7">
-			<onclick>SetFocus(525)</onclick>
-			<onclick>$INFO[Window.Property(RecommendedEpisode.7.Play)]</onclick>
+			<onclick>PlayMedia($ESCINFO[Window.Property(RecommendedEpisode.7.File)])</onclick>
 			<icon>$INFO[Window.Property(RecommendedEpisode.7.Art(thumb))]</icon>
 			<property name="Poster">$INFO[Window.Property(RecommendedEpisode.7.Art(tvshow.poster))]</property>
 			<property name="Overlay">$INFO[Window.Property(RecommendedEpisode.7.Watched)]</property>
@@ -2270,8 +2223,7 @@
 			<visible>Container(525).HasFocus(2) + StringCompare(Skin.String(tvshow.widget.type),$LOCALIZE[41551] + !IsEmpty(Window.Property(RecommendedEpisode.7.Title))</visible>
 		</item>
 		<item id="8">
-			<onclick>SetFocus(525)</onclick>
-			<onclick>$INFO[Window.Property(RecommendedEpisode.8.Play)]</onclick>
+			<onclick>PlayMedia($ESCINFO[Window.Property(RecommendedEpisode.8.File)])</onclick>
 			<icon>$INFO[Window.Property(RecommendedEpisode.8.Art(thumb))]</icon>
 			<property name="Poster">$INFO[Window.Property(RecommendedEpisode.8.Art(tvshow.poster))]</property>
 			<property name="Overlay">$INFO[Window.Property(RecommendedEpisode.8.Watched)]</property>
@@ -2282,8 +2234,7 @@
 			<visible>Container(525).HasFocus(2) + StringCompare(Skin.String(tvshow.widget.type),$LOCALIZE[41551] + !IsEmpty(Window.Property(RecommendedEpisode.8.Title))</visible>
 		</item>
 		<item id="9">
-			<onclick>SetFocus(525)</onclick>
-			<onclick>$INFO[Window.Property(RecommendedEpisode.9.Play)]</onclick>
+			<onclick>PlayMedia($ESCINFO[Window.Property(RecommendedEpisode.9.File)])</onclick>
 			<icon>$INFO[Window.Property(RecommendedEpisode.9.Art(thumb))]</icon>
 			<property name="Poster">$INFO[Window.Property(RecommendedEpisode.9.Art(tvshow.poster))]</property>
 			<property name="Overlay">$INFO[Window.Property(RecommendedEpisode.9.Watched)]</property>
@@ -2294,8 +2245,7 @@
 			<visible>Container(525).HasFocus(2) + StringCompare(Skin.String(tvshow.widget.type),$LOCALIZE[41551] + !IsEmpty(Window.Property(RecommendedEpisode.9.Title))</visible>
 		</item>
 		<item id="10">
-			<onclick>SetFocus(525)</onclick>
-			<onclick>$INFO[Window.Property(RecommendedEpisode.10.Play)]</onclick>
+			<onclick>PlayMedia($ESCINFO[Window.Property(RecommendedEpisode.10.File)])</onclick>
 			<icon>$INFO[Window.Property(RecommendedEpisode.10.Art(thumb))]</icon>
 			<property name="Poster">$INFO[Window.Property(RecommendedEpisode.10.Art(tvshow.poster))]</property>
 			<property name="Overlay">$INFO[Window.Property(RecommendedEpisode.10.Watched)]</property>
@@ -2307,8 +2257,7 @@
 		</item>
 		<!-- random tv -->
 		<item id="1">
-			<onclick>SetFocus(525)</onclick>
-			<onclick>$INFO[Window.Property(RandomEpisode.1.Play)]</onclick>
+			<onclick>PlayMedia($ESCINFO[Window.Property(RandomEpisode.1.File)])</onclick>
 			<icon>$INFO[Window.Property(RandomEpisode.1.Art(thumb))]</icon>
 			<property name="Poster">$INFO[Window.Property(RandomEpisode.1.Art(tvshow.poster))]</property>
 			<property name="Overlay">$INFO[Window.Property(RandomEpisode.1.Watched)]</property>
@@ -2319,8 +2268,7 @@
 			<visible>Container(525).HasFocus(2) + StringCompare(Skin.String(tvshow.widget.type),$LOCALIZE[41550]) + !IsEmpty(Window.Property(RandomEpisode.1.Title))</visible>
 		</item>
 		<item id="2">
-			<onclick>SetFocus(525)</onclick>
-			<onclick>$INFO[Window.Property(RandomEpisode.2.Play)]</onclick>
+			<onclick>PlayMedia($ESCINFO[Window.Property(RandomEpisode.2.File)])</onclick>
 			<icon>$INFO[Window.Property(RandomEpisode.2.Art(thumb))]</icon>
 			<property name="Poster">$INFO[Window.Property(RandomEpisode.2.Art(tvshow.poster))]</property>
 			<property name="Overlay">$INFO[Window.Property(RandomEpisode.2.Watched)]</property>
@@ -2331,8 +2279,7 @@
 			<visible>Container(525).HasFocus(2) + StringCompare(Skin.String(tvshow.widget.type),$LOCALIZE[41550] + !IsEmpty(Window.Property(RandomEpisode.2.Title))</visible>
 		</item>
 		<item id="3">
-			<onclick>SetFocus(525)</onclick>
-			<onclick>$INFO[Window.Property(RandomEpisode.3.Play)]</onclick>
+			<onclick>PlayMedia($ESCINFO[Window.Property(RandomEpisode.3.File)])</onclick>
 			<icon>$INFO[Window.Property(RandomEpisode.3.Art(thumb))]</icon>
 			<property name="Poster">$INFO[Window.Property(RandomEpisode.3.Art(tvshow.poster))]</property>
 			<property name="Overlay">$INFO[Window.Property(RandomEpisode.3.Watched)]</property>
@@ -2343,8 +2290,7 @@
 			<visible>Container(525).HasFocus(2) + StringCompare(Skin.String(tvshow.widget.type),$LOCALIZE[41550] + !IsEmpty(Window.Property(RandomEpisode.3.Title))</visible>
 		</item>
 		<item id="4">
-			<onclick>SetFocus(525)</onclick>
-			<onclick>$INFO[Window.Property(RandomEpisode.4.Play)]</onclick>
+			<onclick>PlayMedia($ESCINFO[Window.Property(RandomEpisode.4.File)])</onclick>
 			<icon>$INFO[Window.Property(RandomEpisode.4.Art(thumb))]</icon>
 			<property name="Poster">$INFO[Window.Property(RandomEpisode.4.Art(tvshow.poster))]</property>
 			<property name="Overlay">$INFO[Window.Property(RandomEpisode.4.Watched)]</property>
@@ -2355,8 +2301,7 @@
 			<visible>Container(525).HasFocus(2) + StringCompare(Skin.String(tvshow.widget.type),$LOCALIZE[41550] + !IsEmpty(Window.Property(RandomEpisode.4.Title))</visible>
 		</item>
 		<item id="5">
-			<onclick>SetFocus(525)</onclick>
-			<onclick>$INFO[Window.Property(RandomEpisode.5.Play)]</onclick>
+			<onclick>PlayMedia($ESCINFO[Window.Property(RandomEpisode.5.File)])</onclick>
 			<icon>$INFO[Window.Property(RandomEpisode.5.Art(thumb))]</icon>
 			<property name="Poster">$INFO[Window.Property(RandomEpisode.5.Art(tvshow.poster))]</property>
 			<property name="Overlay">$INFO[Window.Property(RandomEpisode.5.Watched)]</property>
@@ -2367,8 +2312,7 @@
 			<visible>Container(525).HasFocus(2) + StringCompare(Skin.String(tvshow.widget.type),$LOCALIZE[41550] + !IsEmpty(Window.Property(RandomEpisode.5.Title))</visible>
 		</item>
 		<item id="6">
-			<onclick>SetFocus(525)</onclick>
-			<onclick>$INFO[Window.Property(RandomEpisode.6.Play)]</onclick>
+			<onclick>PlayMedia($ESCINFO[Window.Property(RandomEpisode.6.File)])</onclick>
 			<icon>$INFO[Window.Property(RandomEpisode.6.Art(thumb))]</icon>
 			<property name="Poster">$INFO[Window.Property(RandomEpisode.6.Art(tvshow.poster))]</property>
 			<property name="Overlay">$INFO[Window.Property(RandomEpisode.6.Watched)]</property>
@@ -2379,8 +2323,7 @@
 			<visible>Container(525).HasFocus(2) + StringCompare(Skin.String(tvshow.widget.type),$LOCALIZE[41550] + !IsEmpty(Window.Property(RandomEpisode.6.Title))</visible>
 		</item>
 		<item id="7">
-			<onclick>SetFocus(525)</onclick>
-			<onclick>$INFO[Window.Property(RandomEpisode.7.Play)]</onclick>
+			<onclick>PlayMedia($ESCINFO[Window.Property(RandomEpisode.7.File)])</onclick>
 			<icon>$INFO[Window.Property(RandomEpisode.7.Art(thumb))]</icon>
 			<property name="Poster">$INFO[Window.Property(RandomEpisode.7.Art(tvshow.poster))]</property>
 			<property name="Overlay">$INFO[Window.Property(RandomEpisode.7.Watched)]</property>
@@ -2391,8 +2334,7 @@
 			<visible>Container(525).HasFocus(2) + StringCompare(Skin.String(tvshow.widget.type),$LOCALIZE[41550] + !IsEmpty(Window.Property(RandomEpisode.7.Title))</visible>
 		</item>
 		<item id="8">
-			<onclick>SetFocus(525)</onclick>
-			<onclick>$INFO[Window.Property(RandomEpisode.8.Play)]</onclick>
+			<onclick>PlayMedia($ESCINFO[Window.Property(RandomEpisode.8.File)])</onclick>
 			<icon>$INFO[Window.Property(RandomEpisode.8.Art(thumb))]</icon>
 			<property name="Poster">$INFO[Window.Property(RandomEpisode.8.Art(tvshow.poster))]</property>
 			<property name="Overlay">$INFO[Window.Property(RandomEpisode.8.Watched)]</property>
@@ -2403,8 +2345,7 @@
 			<visible>Container(525).HasFocus(2) + StringCompare(Skin.String(tvshow.widget.type),$LOCALIZE[41550] + !IsEmpty(Window.Property(RandomEpisode.8.Title))</visible>
 		</item>
 		<item id="9">
-			<onclick>SetFocus(525)</onclick>
-			<onclick>$INFO[Window.Property(RandomEpisode.9.Play)]</onclick>
+			<onclick>PlayMedia($ESCINFO[Window.Property(RandomEpisode.9.File)])</onclick>
 			<icon>$INFO[Window.Property(RandomEpisode.9.Art(thumb))]</icon>
 			<property name="Poster">$INFO[Window.Property(RandomEpisode.9.Art(tvshow.poster))]</property>
 			<property name="Overlay">$INFO[Window.Property(RandomEpisode.9.Watched)]</property>
@@ -2415,8 +2356,7 @@
 			<visible>Container(525).HasFocus(2) + StringCompare(Skin.String(tvshow.widget.type),$LOCALIZE[41550] + !IsEmpty(Window.Property(RandomEpisode.9.Title))</visible>
 		</item>
 		<item id="10">
-			<onclick>SetFocus(525)</onclick>
-			<onclick>$INFO[Window.Property(RandomEpisode.10.Play)]</onclick>
+			<onclick>PlayMedia($ESCINFO[Window.Property(RandomEpisode.10.File)])</onclick>
 			<icon>$INFO[Window.Property(RandomEpisode.10.Art(thumb))]</icon>
 			<property name="Poster">$INFO[Window.Property(RandomEpisode.10.Art(tvshow.poster))]</property>
 			<property name="Overlay">$INFO[Window.Property(RandomEpisode.10.Watched)]</property>
@@ -2851,7 +2791,8 @@
 			<visible>!Skin.HasSetting(disable.weather) + StringCompare(Skin.String(homescreen.style),simple)</visible>
 			<property name="single">$INFO[Skin.String(HomeWeatherSingleImage)]</property>
 			<property name="multi">$INFO[Skin.String(HomeWeatherMultiImage)]</property>
-			<onclick>ActivateWindow(weather)</onclick>
+			<onclick condition="!Skin.HasSetting(HomeClicksSubmenu)">ActivateWindow(weather)</onclick>
+			<onclick condition="Skin.HasSetting(HomeClicksSubmenu)">SetFocus(83,0)</onclick>
 			<icon>DefaultAddonWeather.png</icon>
 		</item>
 		<item id="9">

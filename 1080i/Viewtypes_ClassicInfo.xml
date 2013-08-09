@@ -218,25 +218,40 @@
 					<posy>70</posy>
 					<width>1140</width>
 					<height>100</height>
-					<label>$INFO[ListItem.Plot]</label>
+					<label>$INFO[ListItem.Property(TotalEpisodes),$LOCALIZE[20360]: ,[CR]]$INFO[ListItem.Property(UnWatchedEpisodes),$LOCALIZE[16101]: ,[CR]]</label>
 					<font>Font-Alaska-S25-NC</font>
 					<textcolor>Mod_Tags</textcolor>
-					<align>justify</align>
-					<autoscroll delay="13000" time="3000" repeat="13000" />
-					<visible>!substring(ListItem.Path,videodb://1/7,left)</visible>
+					<scroll>false</scroll>
+					<align>left</align>
+					<visible>Container.Content(seasons)</visible>
 				</control>
-				<control type="textbox">
-					<description>Plot</description>
-					<posx>24</posx>
-					<posy>70</posy>
-					<width>1140</width>
-					<height>100</height>
-					<font>Font-Alaska-S25-NC</font>
-					<textcolor>Mod_Tags</textcolor>
-					<align>justify</align>
-					<autoscroll delay="13000" time="3000" repeat="13000" />
-					<info>Window(home).Property(Set.Movies.ExtendedPlot)</info>
-					<visible>substring(ListItem.Path,videodb://1/7,left)</visible>
+				<control type="group">
+					<visible>!Container.Content(seasons)</visible>
+					<control type="textbox">
+						<posx>24</posx>
+						<posy>70</posy>
+						<width>1140</width>
+						<height>100</height>
+						<label>$INFO[ListItem.Plot]</label>
+						<font>Font-Alaska-S25-NC</font>
+						<textcolor>Mod_Tags</textcolor>
+						<align>justify</align>
+						<autoscroll delay="13000" time="3000" repeat="13000" />
+						<visible>!substring(ListItem.Path,videodb://1/7,left)</visible>
+					</control>
+					<control type="textbox">
+						<description>Plot</description>
+						<posx>24</posx>
+						<posy>70</posy>
+						<width>1140</width>
+						<height>100</height>
+						<font>Font-Alaska-S25-NC</font>
+						<textcolor>Mod_Tags</textcolor>
+						<align>justify</align>
+						<autoscroll delay="13000" time="3000" repeat="13000" />
+						<info>Window(home).Property(Set.Movies.ExtendedPlot)</info>
+						<visible>substring(ListItem.Path,videodb://1/7,left)</visible>
+					</control>
 				</control>
 			</control>
         </control>

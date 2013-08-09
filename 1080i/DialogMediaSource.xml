@@ -7,49 +7,53 @@
             <include>OptionsShutdownAnimation</include>
             <visible>!Window.IsVisible(virtualkeyboard) + !Window.IsVisible(filebrowser)</visible>
             
+            
+            <control type="image">
+            	<posx>448</posx>
+            	<posy>300</posy>
+            	<width>1024</width>
+            	<height>500</height>
+            	<texture border="10">arctic/common/panel.png</texture>
+            	<bordertexture border="40">arctic/common/border-20.png</bordertexture>
+            	<bordersize>20</bordersize>
+            </control>
+            <control type="image">
+            	<posx>460</posx>
+            	<posy>312</posy>
+            	<width>80</width>
+            	<height>80</height>
+            	<texture>special://skin/extras/icons/config.png</texture>
+            	<aspectratio>keep</aspectratio>
+            </control>
             <control type="label" id="2">
                 <description>Heading</description>
-                <posx>473</posx>
-                <posy>292</posy>
+                <posx>533</posx>
+                <posy>330</posy>
                 <width>974</width>
                 <include>DialogHeaderMod</include>
                 <label>$LOCALIZE[20333]</label>
-                <align>center</align>
-            </control>
-            <control type="image">
-                <posx>920</posx>
-                <posy>320</posy>
-                <width>80</width>
-                <height>60</height>
-                <texture>dialogs/default/arrow.png</texture>
-            </control>
-            <control type="image">
-                <posx>445</posx>
-                <posy>340</posy>
-                <width>1030</width>
-                <height>401</height>
-                <texture border="39">dialogs/default/bg.png</texture>
+                <align>left</align>
             </control>
             <control type="image">
             	<posx>479</posx>
             	<posy>413</posy>
             	<width>690</width>
             	<height>181</height>
-            	<texture border="5">dialogs/default/inner.png</texture>
+            	<texture border="10">arctic/common/whitepanel8.png</texture>
             </control>
             <control type="image">
-            	<posx>1183</posx>
+            	<posx>1182</posx>
             	<posy>413</posy>
-            	<width>258</width>
+            	<width>260</width>
             	<height>181</height>
-            	<texture border="5">dialogs/default/inner.png</texture>
+            	<texture border="10">arctic/common/whitepanel8.png</texture>
             </control>
             <control type="image">
             	<posx>479</posx>
             	<posy>647</posy>
             	<width>962</width>
             	<height>61</height>
-            	<texture border="5">dialogs/default/inner.png</texture>
+            	<texture border="10">arctic/common/whitepanel8.png</texture>
             </control>
             
             <control type="group" id="9002">
@@ -62,7 +66,7 @@
                     <align>left</align>
                     <textoffsetx>20</textoffsetx>
                     <label>1021</label>
-                    <textcolor>FF585858</textcolor>
+                    <textcolor>mod-infotags-alt</textcolor>
                     <shadowcolor>20FFFFFF</shadowcolor>
                     <font>Font-Condensed-S30</font>
                 </control>
@@ -94,7 +98,7 @@
                             <scroll>false</scroll>
                         </control>
                         <control type="image">
-                            <posx>616</posx>
+                            <posx>610</posx>
                             <width>74</width>
                             <height>60</height>
                             <texture>dialogs/mediasource/keyboard-nf.png</texture>
@@ -120,7 +124,7 @@
                                 <scroll>false</scroll>
                             </control>
                             <control type="image">
-                                <posx>616</posx>
+                                <posx>610</posx>
                                 <width>74</width>
                                 <height>60</height>
                                 <texture>dialogs/mediasource/rules-nf.png</texture>
@@ -132,7 +136,7 @@
                             <control type="image">
                                 <width>690</width>
                                 <height>60</height>
-                                <texture border="2">dialogs/default/highlight.png</texture>
+                                <texture border="10">views/other/focus-mod8.png</texture>
                             </control>
                             <control type="label">
                                 <posx>20</posx>
@@ -144,7 +148,7 @@
                                 <scroll>false</scroll>
                             </control>
                             <control type="image">
-                                <posx>616</posx>
+                                <posx>610</posx>
                                 <width>74</width>
                                 <height>60</height>
                                 <texture>dialogs/mediasource/rules-fo.png</texture>
@@ -194,7 +198,7 @@
                         <description>Browse</description>
                         <posy>413</posy>
                         <label>$LOCALIZE[1024]</label>
-                        <texturefocus border="54,2,2,2">dialogs/mediasource/browse-fo.png</texturefocus>
+                        <texturefocus border="54,2,8,2">dialogs/mediasource/browse-fo.png</texturefocus>
                         <texturenofocus>dialogs/mediasource/browse-nf.png</texturenofocus>
                         <textcolor>FF585858</textcolor>
                         <focusedcolor>eewhite</focusedcolor>
@@ -215,7 +219,7 @@
                         <description>Add</description>
                         <posy>473</posy>
                         <label>$LOCALIZE[15019]</label>
-                        <texturefocus border="54,2,2,2">dialogs/mediasource/add-fo.png</texturefocus>
+                        <texturefocus border="54,2,8,2">dialogs/mediasource/add-fo.png</texturefocus>
                         <texturenofocus>dialogs/mediasource/add-nf.png</texturenofocus>
                         <textcolor>FF585858</textcolor>
                         <focusedcolor>eewhite</focusedcolor>
@@ -236,7 +240,7 @@
                         <description>remove</description>
                         <posy>533</posy>
                         <label>$LOCALIZE[1210]</label>
-                        <texturefocus border="54,2,2,2">dialogs/mediasource/remove-fo.png</texturefocus>
+                        <texturefocus border="54,2,8,2">dialogs/mediasource/remove-fo.png</texturefocus>
                         <texturenofocus>dialogs/mediasource/remove-nf.png</texturenofocus>
                         <textcolor>FF585858</textcolor>
                         <focusedcolor>eewhite</focusedcolor>
@@ -265,7 +269,7 @@
                     <align>left</align>
                     <textoffsetx>20</textoffsetx>
                     <label>1022</label>
-                    <textcolor>FF585858</textcolor>
+                    <textcolor>mod-infotags-alt</textcolor>
                     <shadowcolor>20FFFFFF</shadowcolor>
                     <font>Font-Condensed-S30</font>
                 </control>
@@ -282,7 +286,7 @@
                     <disabledcolor>FF585858</disabledcolor>
                     <shadowcolor>20FFFFFF</shadowcolor>
                     <font>Font-Condensed-S32</font>
-                    <texturefocus border="2">dialogs/default/highlight.png</texturefocus>
+                    <texturefocus border="8">views/other/focus-mod8.png</texturefocus>
                     <onup>9002</onup>
                     <onleft>noop</onleft>
                     <onright>noop</onright>
@@ -308,7 +312,7 @@
             </control>
             <control type="group" id="9001">
                 <posx>466</posx>
-                <posy>703</posy>
+                <posy>695</posy>
                 <control type="button" id="18">
                     <description>Select</description>
                     <label>$LOCALIZE[42000]</label>

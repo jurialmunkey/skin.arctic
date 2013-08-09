@@ -11,28 +11,31 @@
                 <include>OptionsShutdownAnimation</include>
                 <visible>!Window.IsVisible(virtualkeyboard) + !Window.IsVisible(numericinput) + !Window.IsVisible(okdialog) + ![Window.IsVisible(filebrowser) + !IsEmpty(Window(Home).Property(ShowDialog))]</visible>
                 <control type="image">
-                    <posx>920</posx>
-                    <posy>292</posy>
-                    <width>80</width>
-                    <height>60</height>
-                    <texture>dialogs/default/arrow.png</texture>
-                </control>
-                <control type="image">
                     <posx>445</posx>
-                    <posy>312</posy>
+                    <posy>267</posy>
                     <width>1030</width>
-                    <height>456</height>
-                    <texture border="39">dialogs/default/bg.png</texture>
+                    <height>556</height>
+                    <texture border="20">arctic/common/panel.png</texture>
+                    <bordertexture border="40">arctic/common/border-20.png</bordertexture>
+                    <bordersize>20</bordersize>
                 </control>
                 <control type="label" id="2">
                     <description>Heading</description>
-                    <posx>473</posx>
-                    <posy>264</posy>
+                    <posx>526</posx>
+                    <posy>298</posy>
                     <width>974</width>
                     <include>DialogHeaderMod</include>
                     <label>1007</label>
-                    <align>center</align>
+                    <align>left</align>
                 </control>
+                <control type="image">
+					<posx>455</posx>
+					<posy>280</posy>
+					<width>80</width>
+					<height>80</height>
+					<texture>special://skin/extras/icons/network.png</texture>
+					<aspectratio>keep</aspectratio>
+				</control>
                 <control type="group" id="9001">
                     <posx>479</posx>
                     <posy>347</posy>
@@ -41,28 +44,28 @@
                     	<posy>0</posy>
                     	<width>962</width>
                     	<height>61</height>
-                    	<texture border="5">dialogs/default/inner.png</texture>
+                    	<texture border="15">arctic/common/whitepanel8.png</texture>
                     </control>
                     <control type="image">
                     	<posx>0</posx>
                     	<posy>74</posy>
                     	<width>690</width>
                     	<height>61</height>
-                    	<texture border="5">dialogs/default/inner.png</texture>
+                    	<texture border="15">arctic/common/whitepanel8.png</texture>
                     </control>
                     <control type="image">
                     	<posx>704</posx>
                     	<posy>74</posy>
                     	<width>258</width>
                     	<height>61</height>
-                    	<texture border="5">dialogs/default/inner.png</texture>
+                    	<texture border="15">arctic/common/whitepanel8.png</texture>
                     </control>
                     <control type="image">
                     	<posx>0</posx>
                     	<posy>148</posy>
                     	<width>962</width>
                     	<height>241</height>
-                    	<texture border="5">dialogs/default/inner.png</texture>
+                    	<texture border="15">arctic/common/whitepanel8.png</texture>
                     </control>
                     <control type="image">
                     	<posx>0</posx>
@@ -95,7 +98,7 @@
                         <texturedown>buttons/spinctrl/arrow-light-down-nf.png</texturedown>
                         <textureupfocus>buttons/spinctrl/arrow-light-up-fo.png</textureupfocus>
                         <texturedownfocus>buttons/spinctrl/arrow-light-down-fo.png</texturedownfocus>
-                        <texturefocus border="2">dialogs/default/highlight.png</texturefocus>
+                        <texturefocus border="8">views/other/focus-mod8.png</texturefocus>
                         <textcolor>FF585858</textcolor>
                         <focusedcolor>eewhite</focusedcolor>
                         <disabledcolor>77585858</disabledcolor>
@@ -121,7 +124,7 @@
                             <disabledcolor>77585858</disabledcolor>
                             <shadowcolor>20FFFFFF</shadowcolor>
                             <font>Font-Condensed-S32</font>
-                            <texturefocus border="2">dialogs/default/highlight.png</texturefocus>
+                            <texturefocus border="8">views/other/focus-mod8.png</texturefocus>
                             <onup>10</onup>
                             <onleft>12</onleft>
                             <onright>12</onright>
@@ -163,7 +166,7 @@
                         <disabledcolor>77585858</disabledcolor>
                         <shadowcolor>20FFFFFF</shadowcolor>
                         <font>Font-Condensed-S32</font>
-                        <texturefocus border="2">dialogs/default/highlight.png</texturefocus>
+                        <texturefocus border="8">views/other/focus-mod8.png</texturefocus>
                         <onup>9003</onup>
                         <onleft>16</onleft>
                         <onright>16</onright>
@@ -182,7 +185,7 @@
                         <disabledcolor>77585858</disabledcolor>
                         <shadowcolor>20FFFFFF</shadowcolor>
                         <font>Font-Condensed-S32</font>
-                        <texturefocus border="2">dialogs/default/highlight.png</texturefocus>
+                        <texturefocus border="8">views/other/focus-mod8.png</texturefocus>
                         <label>1013</label>
                         <onup>16</onup>
                         <onleft>13</onleft>
@@ -202,7 +205,7 @@
                         <disabledcolor>77585858</disabledcolor>
                         <shadowcolor>20FFFFFF</shadowcolor>
                         <font>Font-Condensed-S32</font>
-                        <texturefocus border="2">dialogs/default/highlight.png</texturefocus>
+                        <texturefocus border="8">views/other/focus-mod8.png</texturefocus>
                         <label>1014</label>
                         <onup>13</onup>
                         <onleft>14</onleft>
@@ -222,7 +225,7 @@
                         <disabledcolor>80585858</disabledcolor>
                         <shadowcolor>20FFFFFF</shadowcolor>
                         <font>Font-Condensed-S32</font>
-                        <texturefocus border="2">dialogs/default/highlight.png</texturefocus>
+                        <texturefocus border="8">views/other/focus-mod8.png</texturefocus>
                         <label>15052</label>
                         <onup>14</onup>
                         <onleft>15</onleft>
@@ -291,7 +294,7 @@
             
                 <control type="group" id="9002">
                     <posx>466</posx>
-                    <posy>730</posy>
+                    <posy>718</posy>
                     <control type="button" id="18">
                         <description>Select</description>
                         <label>$LOCALIZE[42000]</label>

@@ -9,29 +9,34 @@
             <control type="group">
                 <include>KeyboardAnimations</include>
                 <visible>!Window.IsVisible(addonsettings)</visible>
-                <control type="image">
-                    <posx>920</posx>
-                    <posy>232</posy>
-                    <width>80</width>
-                    <height>60</height>
-                    <texture>dialogs/default/arrow.png</texture>
-                </control>
+
                 <control type="image">
                     <posx>445</posx>
-                    <posy>252</posy>
+                    <posy>205</posy>
                     <width>1030</width>
-                    <height>576</height>
-                    <texture border="39">dialogs/default/bg.png</texture>
+                    <height>676</height>
+                    <texture border="20">arctic/common/panel.png</texture>
+                    <bordertexture border="40">arctic/common/border-20.png</bordertexture>
+                    <bordersize>20</bordersize>
                 </control>
-                <control type="label" id="1">
+                <control type="label" id="2">
                     <description>Heading</description>
-                    <posx>473</posx>
-                    <posy>204</posy>
+                    <posx>526</posx>
+                    <posy>238</posy>
                     <width>974</width>
                     <include>DialogHeaderMod</include>
                     <label>20333</label>
-                    <align>center</align>
+                    <align>left</align>
                 </control>
+                <control type="image">
+					<posx>455</posx>
+					<posy>220</posy>
+					<width>80</width>
+					<height>80</height>
+					<texture>special://skin/extras/icons/config.png</texture>
+					<aspectratio>keep</aspectratio>
+				</control>
+
                 <control type="group" id="8001">
                     <posx>479</posx>
                     <posy>286</posy>
@@ -40,28 +45,28 @@
                     	<posy>0</posy>
                     	<width>962</width>
                     	<height>61</height>
-                    	<texture border="5">dialogs/default/inner.png</texture>
+                    	<texture border="15">arctic/common/whitepanel8.png</texture>
                     </control>
                     <control type="image">
                     	<posx>0</posx>
                     	<posy>74</posy>
                     	<width>768</width>
                     	<height>181</height>
-                    	<texture border="5">dialogs/default/inner.png</texture>
+                    	<texture border="15">arctic/common/whitepanel8.png</texture>
                     </control>
                     <control type="image">
                     	<posx>782</posx>
                     	<posy>74</posy>
                     	<width>180</width>
                     	<height>181</height>
-                    	<texture border="5">dialogs/default/inner.png</texture>
+                    	<texture border="15">arctic/common/whitepanel8.png</texture>
                     </control>
                     <control type="image">
                     	<posx>0</posx>
                     	<posy>268</posy>
                     	<width>962</width>
                     	<height>241</height>
-                    	<texture border="5">dialogs/default/inner.png</texture>
+                    	<texture border="15">arctic/common/whitepanel8.png</texture>
                     </control>
                     <control type="spincontrolex" id="3">
                         <description>Directory Content</description>
@@ -73,7 +78,7 @@
                         <texturedown>buttons/spinctrl/arrow-light-down-nf.png</texturedown>
                         <textureupfocus>buttons/spinctrl/arrow-light-up-fo.png</textureupfocus>
                         <texturedownfocus>buttons/spinctrl/arrow-light-down-fo.png</texturedownfocus>
-                        <texturefocus border="2">dialogs/default/highlight.png</texturefocus>
+                        <texturefocus border="8">views/other/focus-mod8.png</texturefocus>
                         <textcolor>FF585858</textcolor>
                         <focusedcolor>eewhite</focusedcolor>
                         <disabledcolor>77585858</disabledcolor>
@@ -168,7 +173,7 @@
                             <control type="image">
                                 <width>768</width>
                                 <height>60</height>
-                                <texture border="2">dialogs/default/highlight.png</texture>
+                                <texture border="8">views/other/focus-mod8.png</texture>
                                 <visible>Control.HasFocus(4)</visible>
                             </control>
                             <control type="image">
@@ -309,13 +314,13 @@
                         <shadowcolor>20FFFFFF</shadowcolor>
                         <textureradioon>buttons/radio/radio-light-fo.png</textureradioon>
                         <textureradiooff>buttons/radio/radio-light-nf.png</textureradiooff>
-                        <texturefocus>dialogs/default/highlight.png</texturefocus>
+                        <texturefocus border="8">views/other/focus-mod8.png</texturefocus>
                         <texturenofocus>dialogs/default/separator-btn.png</texturenofocus>
                     </control>
                 </control>
                 <control type="group" id="8002">
                     <posx>466</posx>
-                    <posy>793</posy>
+                    <posy>776</posy>
                     <control type="button" id="28">
                         <description>Select</description>
                         <label>$LOCALIZE[42000]</label>

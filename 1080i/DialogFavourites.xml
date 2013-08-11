@@ -107,8 +107,7 @@
                     </control>
                 </control>
             </control>
-            <include condition="StringCompare(Skin.String(homescreen.style),metro)">metro-favourites</include>
-            <include condition="!StringCompare(Skin.String(homescreen.style),metro)">mod-favourites</include>
+            <include>mod-favourites</include>
         </control>
     </controls>
 </window>

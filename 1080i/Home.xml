@@ -2,7 +2,7 @@
     <defaultcontrol>525</defaultcontrol>
     <allowoverlay>yes</allowoverlay>
     <backgroundcolor>0</backgroundcolor>
-	<onload condition="!Skin.HasSetting(Skin.Init.Complete) | [IsEmpty(Window(home).Property(SkinInitStarted)) + Skin.HasSetting(NextAired.Update) + Library.HasContent(tvshows)]">AlarmClock(Skin.Initialization,ReplaceWindow(startup),00:01,silent)</onload>
+	<onload condition="!Skin.HasSetting(Skin.Init.Complete) | !Skin.HasSetting(Skin.Initialization.Items) | !Skin.HasSetting(Skin.Initialization.Items2) | [IsEmpty(Window(home).Property(SkinInitStarted)) + Skin.HasSetting(NextAired.Update) + Library.HasContent(tvshows)]">AlarmClock(Skin.Initialization,ReplaceWindow(startup),00:01,silent)</onload>
 	<onload condition="IsEmpty(Skin.String(homescreen.style))">Skin.SetString(homescreen.style,panel)</onload>
 	<onload condition="![stringcompare(Skin.String(movie.widget.type),$LOCALIZE[41550]) | stringcompare(Skin.String(movie.widget.type),$LOCALIZE[41552]) | stringcompare(Skin.String(movie.widget.type),$LOCALIZE[575])]">Skin.SetString(movie.widget.type,$LOCALIZE[41552])</onload>
 	<onload condition="![stringcompare(Skin.String(tvshow.widget.type),$LOCALIZE[41551]) | stringcompare(Skin.String(tvshow.widget.type),$LOCALIZE[41550]) | stringcompare(Skin.String(tvshow.widget.type),$LOCALIZE[41553])]">Skin.SetString(tvshow.widget.type,$LOCALIZE[41553])</onload>

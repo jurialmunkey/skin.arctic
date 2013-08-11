@@ -47,46 +47,6 @@
             <control type="grouplist" id="3">
                 <include>SettingsDialogGrouplistVars</include>
                 <visible>stringcompare(Window(skinsettings).property(Dialog),$LOCALIZE[41131])</visible>
-                <control type="radiobutton" id="2101">
-                    <width>644</width>
-                    <height>60</height>
-                    <include>SettingsCategoryPanelRadioButtonVars</include>
-                    <selected>!Skin.HasSetting(HomeMovies)</selected>
-                    <onclick>Skin.ToggleSetting(HomeMovies)</onclick>
-                    <onclick>SetProperty(ReloadSkin,1,Home)</onclick>
-                    <label>$LOCALIZE[342]</label>
-                    <visible>StringCompare(Skin.String(homescreen.style),metro)</visible>
-                </control>
-                <control type="radiobutton" id="2102">
-                    <width>644</width>
-                    <height>60</height>
-                    <include>SettingsCategoryPanelRadioButtonVars</include>
-                    <selected>!Skin.HasSetting(HomeTVShows)</selected>
-                    <onclick>Skin.ToggleSetting(HomeTVShows)</onclick>
-                    <onclick>SetProperty(ReloadSkin,1,Home)</onclick>
-                    <label>$LOCALIZE[20343]</label>
-                    <visible>StringCompare(Skin.String(homescreen.style),metro)</visible>
-                </control>
-                <control type="radiobutton" id="2103">
-                    <width>644</width>
-                    <height>60</height>
-                    <include>SettingsCategoryPanelRadioButtonVars</include>
-                    <selected>!Skin.HasSetting(HomeMusic)</selected>
-                    <onclick>Skin.ToggleSetting(HomeMusic)</onclick>
-                    <onclick>SetProperty(ReloadSkin,1,Home)</onclick>
-                    <label>$LOCALIZE[2]</label>
-                    <visible>StringCompare(Skin.String(homescreen.style),metro)</visible>
-                </control>
-                <control type="radiobutton" id="2104">
-                    <width>644</width>
-                    <height>60</height>
-                    <include>SettingsCategoryPanelRadioButtonVars</include>
-                    <selected>!Skin.HasSetting(HomePrograms)</selected>
-                    <onclick>Skin.ToggleSetting(HomePrograms)</onclick>
-                    <onclick>SetProperty(ReloadSkin,1,Home)</onclick>
-                    <label>$LOCALIZE[41504]</label>
-                    <visible>StringCompare(Skin.String(homescreen.style),metro)</visible>
-                </control>
                 <!-- PANEL CATEGORIES -->
                 <control type="radiobutton" id="2105">
                     <width>644</width>
@@ -94,8 +54,7 @@
                     <include>SettingsCategoryPanelRadioButtonVars</include>
                     <selected>!Skin.HasSetting(disable.movies)</selected>
                     <onclick>Skin.ToggleSetting(disable.movies)</onclick>
-                    <label>$LOCALIZE[20342]</label>
-                    <visible>!StringCompare(Skin.String(homescreen.style),metro)</visible>
+                    <label>$INFO[Skin.String(Home.Movies.Tile.0.Label)]</label>
                 </control>
                 <control type="radiobutton" id="2106">
                     <width>644</width>
@@ -103,8 +62,7 @@
                     <include>SettingsCategoryPanelRadioButtonVars</include>
                     <selected>!Skin.HasSetting(disable.tvshows)</selected>
                     <onclick>Skin.ToggleSetting(disable.tvshows)</onclick>
-                    <label>$LOCALIZE[20343]</label>
-                    <visible>!StringCompare(Skin.String(homescreen.style),metro)</visible>
+                    <label>$INFO[Skin.String(Home.TvShows.Tile.0.Label)]</label>
                 </control>
                 <control type="radiobutton" id="2107">
                     <width>644</width>
@@ -112,8 +70,7 @@
                     <include>SettingsCategoryPanelRadioButtonVars</include>
                     <selected>!Skin.HasSetting(disable.music)</selected>
                     <onclick>Skin.ToggleSetting(disable.music)</onclick>
-                    <label>$LOCALIZE[2]</label>
-                    <visible>!StringCompare(Skin.String(homescreen.style),metro)</visible>
+                    <label>$INFO[Skin.String(Home.Music.Tile.0.Label)]</label>
                 </control>
                 <control type="radiobutton" id="2108">
                     <width>644</width>
@@ -122,7 +79,6 @@
                     <selected>!Skin.HasSetting(disable.pvr)</selected>
                     <onclick>Skin.ToggleSetting(disable.pvr)</onclick>
                     <label>$LOCALIZE[41220]</label>
-                    <visible>!StringCompare(Skin.String(homescreen.style),metro)</visible>
                 </control>
                 <control type="radiobutton" id="2109">
                     <width>644</width>
@@ -131,7 +87,6 @@
                     <selected>!Skin.HasSetting(disable.weather)</selected>
                     <onclick>Skin.ToggleSetting(disable.weather)</onclick>
                     <label>$LOCALIZE[8]</label>
-                    <visible>StringCompare(Skin.String(homescreen.style),simple)</visible>
                 </control>
                 <control type="radiobutton" id="2110">
                     <width>644</width>
@@ -140,7 +95,6 @@
                     <selected>!Skin.HasSetting(disable.favourites)</selected>
                     <onclick>Skin.ToggleSetting(disable.favourites)</onclick>
                     <label>$LOCALIZE[1036]</label>
-                    <visible>!StringCompare(Skin.String(homescreen.style),metro)</visible>
                 </control>
                 <control type="radiobutton" id="2111">
                     <width>644</width>
@@ -148,8 +102,7 @@
                     <include>SettingsCategoryPanelRadioButtonVars</include>
                     <selected>!Skin.HasSetting(disable.programs)</selected>
                     <onclick>Skin.ToggleSetting(disable.programs)</onclick>
-                    <label>$LOCALIZE[0]</label>
-                    <visible>!StringCompare(Skin.String(homescreen.style),metro)</visible>
+                    <label>$INFO[Skin.String(Home.Programs.Tile.0.Label)]</label>
                 </control>
                 <control type="radiobutton" id="2112">
                     <width>644</width>
@@ -157,27 +110,7 @@
                     <include>SettingsCategoryPanelRadioButtonVars</include>
                     <selected>!Skin.HasSetting(disable.pictures)</selected>
                     <onclick>Skin.ToggleSetting(disable.pictures)</onclick>
-                    <label>$LOCALIZE[1]</label>
-                    <visible>!StringCompare(Skin.String(homescreen.style),metro)</visible>
-                </control>
-                <control type="radiobutton" id="2113">
-                    <width>644</width>
-                    <height>60</height>
-                    <include>SettingsCategoryPanelRadioButtonVars</include>
-                    <selected>!Skin.HasSetting(disable.games)</selected>
-                    <onclick>Skin.ToggleSetting(disable.games)</onclick>
-                    <label>$LOCALIZE[636]</label>
-                    <visible>StringCompare(Skin.String(homescreen.style),simple)</visible>
-                </control>
-                <control type="button" id="2114">
-                    <width>644</width>
-                    <height>60</height>
-                    <include>SettingsCategoryPanelRadioButtonVars</include>
-                    <label>42425</label>
-                    <visible>StringCompare(Skin.String(homescreen.style),simple) + !Skin.HasSetting(disable.games)</visible>
-					<onclick condition="IsEmpty(Skin.String(HomeCustomItem.Type))">Skin.SetString(HomeCustomItem.Type,0)</onclick>
-					<onclick condition="IsEmpty(Skin.String(HomeCustomItem.TypeName))">Skin.SetString(HomeCustomItem.TypeName,$LOCALIZE[41145])</onclick>
-					<onclick>ActivateWindow(3055)</onclick>
+                    <label>$INFO[Skin.String(Home.Pictures.Tile.0.Label)]</label>
                 </control>
             </control>
             

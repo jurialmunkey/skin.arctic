@@ -196,137 +196,10 @@
 					<align>center</align>
 					<aligny>center</aligny>
 					<itemgap>5</itemgap>
-					<control type="image">
-						<width>30</width>
-						<height>30</height>
-						<texture>osd/fullscreen/cd.png</texture>
-						<animation effect="fade" start="100" end="30" time="250" condition="!Control.HasFocus(525) | !Container(525).HasFocus(11)">Conditional</animation>
-						<visible>System.HasMediaDVD</visible>
-					</control>
-					<control type="image">
-						<width>30</width>
-						<height>30</height>
-						<texture>windows/home/favourites.png</texture>
-						<animation effect="fade" start="100" end="30" time="250" condition="!Control.HasFocus(525) | !Container(525).HasFocus(10)">Conditional</animation>
-						<visible>!Skin.HasSetting(disable.favourites)</visible>
-					</control>
-					<control type="image">
-						<width>30</width>
-						<visible>!Skin.HasSetting(disable.movies)</visible>
-					</control>
-					<control type="image">
-						<width>19</width>
-						<height>28</height>
-						<texture>windows/home/submenu-arrow.png</texture>
-						<include>visiblehidefadeinfo</include>
-						<colordiffuse>white</colordiffuse>
-						<animation effect="fade" start="100" end="0" time="250" condition="!Control.HasFocus(525) | !Container(525).HasFocus(1)">Conditional</animation>
-						<visible>!Skin.HasSetting(disable.movies)</visible>
-					</control>
-					<control type="label">
-						<label>$LOCALIZE[20342]</label>
-						<include>Mod_HomeLabel</include>
-						<animation effect="fade" start="100" end="30" time="250" condition="!Control.HasFocus(525) | !Container(525).HasFocus(1)">Conditional</animation>
-						<visible>!Skin.HasSetting(disable.movies)</visible>
-					</control>
-					<control type="image">
-						<width>30</width>
-						<visible>!Skin.HasSetting(disable.tvshows)</visible>
-					</control>
-					<control type="image">
-						<width>19</width>
-						<height>28</height>
-						<texture>windows/home/submenu-arrow.png</texture>
-						<include>visiblehidefadeinfo</include>
-						<colordiffuse>white</colordiffuse>
-						<animation effect="fade" start="100" end="0" time="250" condition="!Control.HasFocus(525) | !Container(525).HasFocus(2)">Conditional</animation>
-						<visible>!Skin.HasSetting(disable.tvshows)</visible>
-					</control>
-					<control type="label">
-						<label>20343</label>
-						<include>Mod_HomeLabel</include>
-						<animation effect="fade" start="100" end="30" time="250" condition="!Control.HasFocus(525) | !Container(525).HasFocus(2)">Conditional</animation>
-						<visible>!Skin.HasSetting(disable.tvshows)</visible>
-					</control>
-					<control type="image">
-						<width>30</width>
-						<visible>!Skin.HasSetting(disable.music)</visible>
-					</control>
-					<control type="image">
-						<width>19</width>
-						<height>28</height>
-						<texture>windows/home/submenu-arrow.png</texture>
-						<include>visiblehidefadeinfo</include>
-						<colordiffuse>white</colordiffuse>
-						<animation effect="fade" start="100" end="0" time="250" condition="!Control.HasFocus(525) | !Container(525).HasFocus(3)">Conditional</animation>
-						<visible>!Skin.HasSetting(disable.music)</visible>
-					</control>
-					<control type="label">
-						<label>2</label>
-						<include>Mod_HomeLabel</include>
-						<animation effect="fade" start="100" end="30" time="250" condition="!Control.HasFocus(525) | !Container(525).HasFocus(3)">Conditional</animation>
-						<visible>!Skin.HasSetting(disable.music)</visible>
-					</control>
-					<control type="image">
-						<width>30</width>
-						<visible>!Skin.HasSetting(disable.pvr) + System.GetBool(pvrmanager.enabled)</visible>
-					</control>
-					<control type="image">
-						<width>19</width>
-						<height>28</height>
-						<texture>windows/home/submenu-arrow.png</texture>
-						<include>visiblehidefadeinfo</include>
-						<colordiffuse>white</colordiffuse>
-						<animation effect="fade" start="100" end="0" time="250" condition="!Control.HasFocus(525) | !Container(525).HasFocus(4)">Conditional</animation>
-						<visible>!Skin.HasSetting(disable.pvr) + System.GetBool(pvrmanager.enabled)</visible>
-					</control>
-					<control type="label">
-						<label>41220</label>
-						<include>Mod_HomeLabel</include>
-						<animation effect="fade" start="100" end="30" time="250" condition="!Control.HasFocus(525) | !Container(525).HasFocus(4)">Conditional</animation>
-						<visible>!Skin.HasSetting(disable.pvr) + System.GetBool(pvrmanager.enabled)</visible>
-					</control>
-					<control type="image">
-						<width>49</width>
-						<visible>!Skin.HasSetting(disable.pictures)</visible>
-					</control>
-					<control type="label">
-						<label>10002</label>
-						<include>Mod_HomeLabel</include>
-						<animation effect="fade" start="100" end="30" time="250" condition="!Control.HasFocus(525) | !Container(525).HasFocus(5)">Conditional</animation>
-						<visible>!Skin.HasSetting(disable.pictures)</visible>
-					</control>
-					<control type="image">
-						<width>30</width>
-						<visible>!Skin.HasSetting(disable.programs)</visible>
-					</control>
-					<control type="image">
-						<width>19</width>
-						<height>28</height>
-						<texture>windows/home/submenu-arrow.png</texture>
-						<include>visiblehidefadeinfo</include>
-						<colordiffuse>white</colordiffuse>
-						<animation effect="fade" start="100" end="0" time="250" condition="!Control.HasFocus(525) | !Container(525).HasFocus(7)">Conditional</animation>
-						<visible>!Skin.HasSetting(disable.programs)</visible>
-					</control>
-					<control type="label">
-						<label>0</label>
-						<include>Mod_HomeLabel</include>
-						<animation effect="fade" start="100" end="30" time="250" condition="!Control.HasFocus(525) | !Container(525).HasFocus(7)">Conditional</animation>
-						<visible>!Skin.HasSetting(disable.programs)</visible>
-					</control>
-					<control type="image">
-						<width>49</width>
-					</control>
-					<control type="image">
-						<width>30</width>
-						<height>30</height>
-						<texture>windows/home/settings.png</texture>
-						<animation effect="fade" start="100" end="30" time="250" condition="!Control.HasFocus(525) | !Container(525).HasFocus(9)">Conditional</animation>
-					</control>
+					<include>Mod_525GroupList</include>
 				</control>
 				<control type="list" id="525">
-					<onup condition="!Container(525).HasFocus(5)">SetFocus(83,0)</onup>
+					<onup>SetFocus(83,0)</onup>
 					<ondown condition="Container(525).HasFocus(1) | Container(525).HasFocus(2) | Container(525).HasFocus(3) | [Container(525).HasFocus(7) + !IsEmpty(Window(Home).Property(MostPlayedROM.1.Title)) + Skin.HasSetting(UseRCB)]">SetFocus(82)</ondown>
 					<ondown condition="Container(525).HasFocus(9) | Container(525).HasFocus(10) | Container(525).HasFocus(11)">SetFocus(84,0)</ondown>
 					<ondown condition="Container(525).HasFocus(4) | Container(525).HasFocus(5) | Container(525).HasFocus(6) | [Container(525).HasFocus(7) + [IsEmpty(Window(Home).Property(MostPlayedROM.1.Title)) | !Skin.HasSetting(UseRCB)]] | Container(525).HasFocus(8)">SetFocus(84,0)</ondown>
@@ -923,7 +796,7 @@
 					<control type="group">
 						<posx>35</posx>
 						<posy>325</posy>
-						<visible>[Control.HasFocus(84) + Container(84).HasFocus(0)] | [stringcompare(Skin.String(defaultpanel.widget.type),$LOCALIZE[12600]) + [!Control.HasFocus(84) + [[Container(525).HasFocus(5) + IsEmpty(Skin.String(pictures.slideshowpath2))] | Container(525).HasFocus(10) | Container(525).HasFocus(11) | [Container(525).HasFocus(7) + [IsEmpty(Window(Home).Property(MostPlayedROM.1.Title)) | !Skin.HasSetting(UseRCB)]] | [Container(525).HasFocus(9) + Skin.HasSetting(settings.widget.usedefault)]]]]</visible>
+						<visible>Container(525).HasFocus(8) | [Control.HasFocus(84) + Container(84).HasFocus(0)] | [stringcompare(Skin.String(defaultpanel.widget.type),$LOCALIZE[12600]) + [!Control.HasFocus(84) + [[Container(525).HasFocus(5) + IsEmpty(Skin.String(pictures.slideshowpath2))] | Container(525).HasFocus(10) | Container(525).HasFocus(11) | [Container(525).HasFocus(7) + [IsEmpty(Window(Home).Property(MostPlayedROM.1.Title)) | !Skin.HasSetting(UseRCB)]] | [Container(525).HasFocus(9) + Skin.HasSetting(settings.widget.usedefault)]]]]</visible>
 						<animation effect="fade" start="0" end="100" time="250">Visible</animation>
 						<animation effect="fade" start="100" end="0" time="450" condition="Window.IsActive(favourites)">Conditional</animation>
 						<animation effect="fade" start="0" end="100" delay="150" time="450" condition="!Window.IsActive(favourites)">Conditional</animation>

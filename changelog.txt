@@ -67,3 +67,9 @@ Content settings dialog
 Network settings dialog
 Addon settings dialog
 PVR group management dialog
+
+[B]0.3.0[/B]
+All main categories (movies, tvshows, music, pictures, programs) customisable
+Dropped custom category (old games menu)
+Pictures now has a custom submenu
+Rearranged categories so LiveTV is on the left of movies

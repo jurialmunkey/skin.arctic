@@ -1195,3 +1195,7 @@ msgstr ""
 msgctxt "#42437"
 msgid "Use dark osd"
 msgstr ""
+
+msgctxt "#42438"
+msgid "Item"
+msgstr ""

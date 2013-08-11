@@ -1145,7 +1145,157 @@
 			<label>$LOCALIZE[24001]</label> 
 			<visible>Container(525).HasFocus(4)</visible>
 		</item>
-		
+		<!-- PICTURES ITEMS -->
+		<item id="1">
+			<label>$INFO[Skin.String(Home.Pictures.Tile.1.Label)]</label>
+			<onclick>SetFocus(525)</onclick>
+			<onclick condition="IsEmpty(Skin.String(Home.Pictures.Tile.1.Path))">ActivateWindow(3054)</onclick>
+			<onclick condition="!stringcompare(Skin.String(Home.Pictures.Tile.1.Type),4) + !stringcompare(Skin.String(Home.Pictures.Tile.1.Type),5) + !stringcompare(Skin.String(Home.Pictures.Tile.1.Type),6) + !stringcompare(Skin.String(Home.Pictures.Tile.1.Type),7)">RunAddon($INFO[Skin.String(Home.Pictures.Tile.1.Path)])</onclick>
+			<onclick condition="stringcompare(Skin.String(Home.Pictures.Tile.1.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(Home.Pictures.Tile.1.Path)],return)</onclick>
+			<onclick condition="stringcompare(Skin.String(Home.Pictures.Tile.1.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(Home.Pictures.Tile.1.Path)],return)</onclick>
+			<onclick condition="[stringcompare(Skin.String(Home.Pictures.Tile.1.Type),6) | stringcompare(Skin.String(Home.Pictures.Tile.1.Type),7)]">$INFO[Skin.String(Home.Pictures.Tile.1.Path)]</onclick>
+			<property name="Poster">$INFO[Skin.String(Home.Pictures.Tile.1.Icon)]</property>
+			<property name="showlabel">$INFO[Skin.String(Home.Pictures.Tile.1.ShowLabel)]</property>
+			<property name="path">$INFO[Skin.String(Home.Pictures.Tile.1.Path)]</property>
+			<property name="animate">$INFO[Skin.String(Home.Pictures.Tile.1.Animate)]</property>
+			<property name="custom">1</property>
+			<visible>Container(525).HasFocus(5)</visible>
+		</item>
+		<item id="5">
+			<label>$INFO[Skin.String(Home.Pictures.Tile.2.Label)]</label>
+			<onclick>SetFocus(525)</onclick>
+			<onclick condition="IsEmpty(Skin.String(Home.Pictures.Tile.2.Path))">ActivateWindow(3054)</onclick>
+			<onclick condition="!stringcompare(Skin.String(Home.Pictures.Tile.2.Type),4) + !stringcompare(Skin.String(Home.Pictures.Tile.2.Type),5) + !stringcompare(Skin.String(Home.Pictures.Tile.2.Type),6) + !stringcompare(Skin.String(Home.Pictures.Tile.2.Type),7)">RunAddon($INFO[Skin.String(Home.Pictures.Tile.2.Path)])</onclick>
+			<onclick condition="stringcompare(Skin.String(Home.Pictures.Tile.2.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(Home.Pictures.Tile.2.Path)],return)</onclick>
+			<onclick condition="stringcompare(Skin.String(Home.Pictures.Tile.2.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(Home.Pictures.Tile.2.Path)],return)</onclick>
+			<onclick condition="[stringcompare(Skin.String(Home.Pictures.Tile.2.Type),6) | stringcompare(Skin.String(Home.Pictures.Tile.2.Type),7)]">$INFO[Skin.String(Home.Pictures.Tile.2.Path)]</onclick>
+			<property name="Poster">$INFO[Skin.String(Home.Pictures.Tile.2.Icon)]</property>
+			<property name="showlabel">$INFO[Skin.String(Home.Pictures.Tile.2.ShowLabel)]</property>
+			<property name="path">$INFO[Skin.String(Home.Pictures.Tile.2.Path)]</property>
+			<property name="animate">$INFO[Skin.String(Home.Pictures.Tile.2.Animate)]</property>
+			<property name="custom">1</property>
+			<visible>Container(525).HasFocus(5)</visible>
+		</item>
+		<item id="6">
+			<label>$INFO[Skin.String(Home.Pictures.Tile.3.Label)]</label>
+			<onclick>SetFocus(525)</onclick>
+			<onclick condition="IsEmpty(Skin.String(Home.Pictures.Tile.3.Path))">ActivateWindow(3054)</onclick>
+			<onclick condition="!stringcompare(Skin.String(Home.Pictures.Tile.3.Type),4) + !stringcompare(Skin.String(Home.Pictures.Tile.3.Type),5) + !stringcompare(Skin.String(Home.Pictures.Tile.3.Type),6) + !stringcompare(Skin.String(Home.Pictures.Tile.3.Type),7)">RunAddon($INFO[Skin.String(Home.Pictures.Tile.3.Path)])</onclick>
+			<onclick condition="stringcompare(Skin.String(Home.Pictures.Tile.3.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(Home.Pictures.Tile.3.Path)],return)</onclick>
+			<onclick condition="stringcompare(Skin.String(Home.Pictures.Tile.3.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(Home.Pictures.Tile.3.Path)],return)</onclick>
+			<onclick condition="[stringcompare(Skin.String(Home.Pictures.Tile.3.Type),6) | stringcompare(Skin.String(Home.Pictures.Tile.3.Type),7)]">$INFO[Skin.String(Home.Pictures.Tile.3.Path)]</onclick>
+			<property name="Poster">$INFO[Skin.String(Home.Pictures.Tile.3.Icon)]</property>
+			<property name="showlabel">$INFO[Skin.String(Home.Pictures.Tile.3.ShowLabel)]</property>
+			<property name="path">$INFO[Skin.String(Home.Pictures.Tile.3.Path)]</property>
+			<property name="animate">$INFO[Skin.String(Home.Pictures.Tile.3.Animate)]</property>
+			<property name="custom">1</property>
+			<visible>Container(525).HasFocus(5)</visible>
+		</item>
+		<item id="2">
+			<label>$INFO[Skin.String(Home.Pictures.Tile.4.Label)]</label>
+			<onclick>SetFocus(525)</onclick>
+			<onclick condition="IsEmpty(Skin.String(Home.Pictures.Tile.4.Path))">ActivateWindow(3054)</onclick>
+			<onclick condition="!stringcompare(Skin.String(Home.Pictures.Tile.4.Type),4) + !stringcompare(Skin.String(Home.Pictures.Tile.4.Type),5) + !stringcompare(Skin.String(Home.Pictures.Tile.4.Type),6) + !stringcompare(Skin.String(Home.Pictures.Tile.4.Type),7)">RunAddon($INFO[Skin.String(Home.Pictures.Tile.4.Path)])</onclick>
+			<onclick condition="stringcompare(Skin.String(Home.Pictures.Tile.4.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(Home.Pictures.Tile.4.Path)],return)</onclick>
+			<onclick condition="stringcompare(Skin.String(Home.Pictures.Tile.4.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(Home.Pictures.Tile.4.Path)],return)</onclick>
+			<onclick condition="[stringcompare(Skin.String(Home.Pictures.Tile.4.Type),6) | stringcompare(Skin.String(Home.Pictures.Tile.4.Type),7)]">$INFO[Skin.String(Home.Pictures.Tile.4.Path)]</onclick>
+			<property name="Poster">$INFO[Skin.String(Home.Pictures.Tile.4.Icon)]</property>
+			<property name="showlabel">$INFO[Skin.String(Home.Pictures.Tile.4.ShowLabel)]</property>
+			<property name="path">$INFO[Skin.String(Home.Pictures.Tile.4.Path)]</property>
+			<property name="animate">$INFO[Skin.String(Home.Pictures.Tile.4.Animate)]</property>
+			<property name="custom">1</property>
+			<visible>Container(525).HasFocus(5)</visible>
+		</item>
+		<item id="3">
+			<label>$INFO[Skin.String(Home.Pictures.Tile.5.Label)]</label>
+			<onclick>SetFocus(525)</onclick>
+			<onclick condition="IsEmpty(Skin.String(Home.Pictures.Tile.5.Path))">ActivateWindow(3054)</onclick>
+			<onclick condition="!stringcompare(Skin.String(Home.Pictures.Tile.5.Type),4) + !stringcompare(Skin.String(Home.Pictures.Tile.5.Type),5) + !stringcompare(Skin.String(Home.Pictures.Tile.5.Type),6) + !stringcompare(Skin.String(Home.Pictures.Tile.5.Type),7)">RunAddon($INFO[Skin.String(Home.Pictures.Tile.5.Path)])</onclick>
+			<onclick condition="stringcompare(Skin.String(Home.Pictures.Tile.5.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(Home.Pictures.Tile.5.Path)],return)</onclick>
+			<onclick condition="stringcompare(Skin.String(Home.Pictures.Tile.5.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(Home.Pictures.Tile.5.Path)],return)</onclick>
+			<onclick condition="[stringcompare(Skin.String(Home.Pictures.Tile.5.Type),6) | stringcompare(Skin.String(Home.Pictures.Tile.5.Type),7)]">$INFO[Skin.String(Home.Pictures.Tile.5.Path)]</onclick>
+			<property name="Poster">$INFO[Skin.String(Home.Pictures.Tile.5.Icon)]</property>
+			<property name="showlabel">$INFO[Skin.String(Home.Pictures.Tile.5.ShowLabel)]</property>
+			<property name="path">$INFO[Skin.String(Home.Pictures.Tile.5.Path)]</property>
+			<property name="animate">$INFO[Skin.String(Home.Pictures.Tile.5.Animate)]</property>
+			<property name="custom">1</property>
+			<visible>Container(525).HasFocus(5)</visible>                    
+		</item>
+		<item id="4">
+			<label>$INFO[Skin.String(Home.Pictures.Tile.6.Label)]</label>
+			<onclick>SetFocus(525)</onclick>
+			<onclick condition="IsEmpty(Skin.String(Home.Pictures.Tile.6.Path))">ActivateWindow(3054)</onclick>
+			<onclick condition="!stringcompare(Skin.String(Home.Pictures.Tile.6.Type),4) + !stringcompare(Skin.String(Home.Pictures.Tile.6.Type),5) + !stringcompare(Skin.String(Home.Pictures.Tile.6.Type),6) + !stringcompare(Skin.String(Home.Pictures.Tile.6.Type),7)">RunAddon($INFO[Skin.String(Home.Pictures.Tile.6.Path)])</onclick>
+			<onclick condition="stringcompare(Skin.String(Home.Pictures.Tile.6.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(Home.Pictures.Tile.6.Path)],return)</onclick>
+			<onclick condition="stringcompare(Skin.String(Home.Pictures.Tile.6.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(Home.Pictures.Tile.6.Path)],return)</onclick>
+			<onclick condition="[stringcompare(Skin.String(Home.Pictures.Tile.6.Type),6) | stringcompare(Skin.String(Home.Pictures.Tile.6.Type),7)]">$INFO[Skin.String(Home.Pictures.Tile.6.Path)]</onclick>
+			<property name="Poster">$INFO[Skin.String(Home.Pictures.Tile.6.Icon)]</property>
+			<property name="showlabel">$INFO[Skin.String(Home.Pictures.Tile.6.ShowLabel)]</property>
+			<property name="path">$INFO[Skin.String(Home.Pictures.Tile.6.Path)]</property>
+			<property name="animate">$INFO[Skin.String(Home.Pictures.Tile.6.Animate)]</property>
+			<property name="custom">1</property>
+			<visible>Container(525).HasFocus(5)</visible>
+		</item>
+		<item id="7">
+			<label>$INFO[Skin.String(Home.Pictures.Tile.7.Label)]</label>
+			<onclick>SetFocus(525)</onclick>
+			<onclick condition="IsEmpty(Skin.String(Home.Pictures.Tile.7.Path))">ActivateWindow(3054)</onclick>
+			<onclick condition="!stringcompare(Skin.String(Home.Pictures.Tile.7.Type),4) + !stringcompare(Skin.String(Home.Pictures.Tile.7.Type),5) + !stringcompare(Skin.String(Home.Pictures.Tile.7.Type),6) + !stringcompare(Skin.String(Home.Pictures.Tile.7.Type),7)">RunAddon($INFO[Skin.String(Home.Pictures.Tile.7.Path)])</onclick>
+			<onclick condition="stringcompare(Skin.String(Home.Pictures.Tile.7.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(Home.Pictures.Tile.7.Path)],return)</onclick>
+			<onclick condition="stringcompare(Skin.String(Home.Pictures.Tile.7.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(Home.Pictures.Tile.7.Path)],return)</onclick>
+			<onclick condition="[stringcompare(Skin.String(Home.Pictures.Tile.7.Type),6) | stringcompare(Skin.String(Home.Pictures.Tile.7.Type),7)]">$INFO[Skin.String(Home.Pictures.Tile.7.Path)]</onclick>
+			<property name="Poster">$INFO[Skin.String(Home.Pictures.Tile.7.Icon)]</property>
+			<property name="showlabel">$INFO[Skin.String(Home.Pictures.Tile.7.ShowLabel)]</property>
+			<property name="path">$INFO[Skin.String(Home.Pictures.Tile.7.Path)]</property>
+			<property name="animate">$INFO[Skin.String(Home.Pictures.Tile.7.Animate)]</property>
+			<property name="custom">1</property>
+			<visible>Container(525).HasFocus(5)</visible>
+		</item>
+		<item id="8">
+			<label>$INFO[Skin.String(Home.Pictures.Tile.8.Label)]</label>
+			<onclick>SetFocus(525)</onclick>
+			<onclick condition="IsEmpty(Skin.String(Home.Pictures.Tile.8.Path))">ActivateWindow(3054)</onclick>
+			<onclick condition="!stringcompare(Skin.String(Home.Pictures.Tile.8.Type),4) + !stringcompare(Skin.String(Home.Pictures.Tile.8.Type),5) + !stringcompare(Skin.String(Home.Pictures.Tile.8.Type),6) + !stringcompare(Skin.String(Home.Pictures.Tile.8.Type),7)">RunAddon($INFO[Skin.String(Home.Pictures.Tile.8.Path)])</onclick>
+			<onclick condition="stringcompare(Skin.String(Home.Pictures.Tile.8.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(Home.Pictures.Tile.8.Path)],return)</onclick>
+			<onclick condition="stringcompare(Skin.String(Home.Pictures.Tile.8.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(Home.Pictures.Tile.8.Path)],return)</onclick>
+			<onclick condition="[stringcompare(Skin.String(Home.Pictures.Tile.8.Type),6) | stringcompare(Skin.String(Home.Pictures.Tile.8.Type),7)]">$INFO[Skin.String(Home.Pictures.Tile.8.Path)]</onclick>
+			<property name="Poster">$INFO[Skin.String(Home.Pictures.Tile.8.Icon)]</property>
+			<property name="showlabel">$INFO[Skin.String(Home.Pictures.Tile.8.ShowLabel)]</property>
+			<property name="path">$INFO[Skin.String(Home.Pictures.Tile.8.Path)]</property>
+			<property name="animate">$INFO[Skin.String(Home.Pictures.Tile.8.Animate)]</property>
+			<property name="custom">1</property>
+			<visible>Container(525).HasFocus(5)</visible>
+		</item>
+		<item id="9">
+			<label>$INFO[Skin.String(Home.Pictures.Tile.9.Label)]</label>
+			<onclick>SetFocus(525)</onclick>
+			<onclick condition="IsEmpty(Skin.String(Home.Pictures.Tile.9.Path))">ActivateWindow(3054)</onclick>
+			<onclick condition="!stringcompare(Skin.String(Home.Pictures.Tile.9.Type),4) + !stringcompare(Skin.String(Home.Pictures.Tile.9.Type),5) + !stringcompare(Skin.String(Home.Pictures.Tile.9.Type),6) + !stringcompare(Skin.String(Home.Pictures.Tile.9.Type),7)">RunAddon($INFO[Skin.String(Home.Pictures.Tile.9.Path)])</onclick>
+			<onclick condition="stringcompare(Skin.String(Home.Pictures.Tile.9.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(Home.Pictures.Tile.9.Path)],return)</onclick>
+			<onclick condition="stringcompare(Skin.String(Home.Pictures.Tile.9.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(Home.Pictures.Tile.9.Path)],return)</onclick>
+			<onclick condition="[stringcompare(Skin.String(Home.Pictures.Tile.9.Type),6) | stringcompare(Skin.String(Home.Pictures.Tile.9.Type),7)]">$INFO[Skin.String(Home.Pictures.Tile.9.Path)]</onclick>
+			<property name="Poster">$INFO[Skin.String(Home.Pictures.Tile.9.Icon)]</property>
+			<property name="showlabel">$INFO[Skin.String(Home.Pictures.Tile.9.ShowLabel)]</property>
+			<property name="path">$INFO[Skin.String(Home.Pictures.Tile.9.Path)]</property>
+			<property name="animate">$INFO[Skin.String(Home.Pictures.Tile.9.Animate)]</property>
+			<property name="custom">1</property>
+			<visible>Container(525).HasFocus(5)</visible>
+		</item>
+		<item id="10">
+			<label>$INFO[Skin.String(Home.Pictures.Tile.10.Label)]</label>
+			<onclick>SetFocus(525)</onclick>
+			<onclick condition="IsEmpty(Skin.String(Home.Pictures.Tile.10.Path))">ActivateWindow(3054)</onclick>
+			<onclick condition="!stringcompare(Skin.String(Home.Pictures.Tile.10.Type),4) + !stringcompare(Skin.String(Home.Pictures.Tile.10.Type),5) + !stringcompare(Skin.String(Home.Pictures.Tile.10.Type),6) + !stringcompare(Skin.String(Home.Pictures.Tile.10.Type),7)">RunAddon($INFO[Skin.String(Home.Pictures.Tile.10.Path)])</onclick>
+			<onclick condition="stringcompare(Skin.String(Home.Pictures.Tile.10.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(Home.Pictures.Tile.10.Path)],return)</onclick>
+			<onclick condition="stringcompare(Skin.String(Home.Pictures.Tile.10.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(Home.Pictures.Tile.10.Path)],return)</onclick>
+			<onclick condition="[stringcompare(Skin.String(Home.Pictures.Tile.10.Type),6) | stringcompare(Skin.String(Home.Pictures.Tile.10.Type),7)]">$INFO[Skin.String(Home.Pictures.Tile.10.Path)]</onclick>
+			<property name="Poster">$INFO[Skin.String(Home.Pictures.Tile.10.Icon)]</property>
+			<property name="showlabel">$INFO[Skin.String(Home.Pictures.Tile.10.ShowLabel)]</property>
+			<property name="path">$INFO[Skin.String(Home.Pictures.Tile.10.Path)]</property>
+			<property name="animate">$INFO[Skin.String(Home.Pictures.Tile.10.Animate)]</property>
+			<property name="custom">1</property>
+			<visible>Container(525).HasFocus(5)</visible>
+		</item>
 		<!--PROGRAMS ITEMS-->
 		<item id="1">
 			<label>$INFO[Skin.String(Home.Programs.Tile.1.Label)]</label>
@@ -2711,8 +2861,188 @@
 			<label10>$INFO[Window(Home).Property(MostPlayedROM.10.Console)]</label10>
 			<visible>Container(525).HasFocus(7) + !IsEmpty(Window(Home).Property(MostPlayedROM.10.Title))</visible>
 		</item>
+	</include>
+	<include name="Mod_525GroupList">
+		<control type="image">
+			<width>30</width>
+			<height>30</height>
+			<texture>osd/fullscreen/cd.png</texture>
+			<animation effect="fade" start="100" end="30" time="250" condition="!Control.HasFocus(525) | !Container(525).HasFocus(11)">Conditional</animation>
+			<visible>System.HasMediaDVD</visible>
+		</control>
+		<control type="image">
+			<width>30</width>
+			<height>30</height>
+			<texture>windows/home/favourites.png</texture>
+			<animation effect="fade" start="100" end="30" time="250" condition="Control.HasFocus(85) | Control.HasFocus(84) | !Container(525).HasFocus(10)">Conditional</animation>
+			<visible>!Skin.HasSetting(disable.favourites)</visible>
+		</control>
+		<control type="image">
+			<width>30</width>
+			<visible>!Skin.HasSetting(disable.pvr) + System.GetBool(pvrmanager.enabled)</visible>
+		</control>
+		<control type="image">
+			<width>19</width>
+			<height>28</height>
+			<texture>windows/home/submenu-arrow.png</texture>
+			<include>visiblehidefadeinfo</include>
+			<colordiffuse>white</colordiffuse>
+			<animation effect="fade" start="100" end="0" time="250" condition="!Container(525).HasFocus(4) | Control.HasFocus(83)  | Control.HasFocus(84) | Control.HasFocus(85)">Conditional</animation>
+			<visible>!Skin.HasSetting(disable.pvr) + System.GetBool(pvrmanager.enabled) + [!Skin.HasSetting(HomeClicksSubmenu) | StringCompare(Skin.String(homescreen.style),panel)]</visible>
+		</control>
+		<control type="image">
+			<width>19</width>
+			<height>28</height>
+			<texture>-</texture>
+			<visible>!Skin.HasSetting(disable.pvr) + System.GetBool(pvrmanager.enabled) + Skin.HasSetting(HomeClicksSubmenu) + StringCompare(Skin.String(homescreen.style),simple)</visible>
+		</control>
+		<control type="label">
+			<label>41220</label>
+			<include>Mod_HomeLabel</include>
+			<animation effect="fade" start="100" end="30" time="250" condition="Control.HasFocus(85) | Control.HasFocus(84) | !Container(525).HasFocus(4)">Conditional</animation>
+			<visible>!Skin.HasSetting(disable.pvr) + System.GetBool(pvrmanager.enabled)</visible>
+		</control>
+		<control type="image">
+			<width>30</width>
+			<visible>!Skin.HasSetting(disable.movies)</visible>
+		</control>
+		<control type="image">
+			<width>19</width>
+			<height>28</height>
+			<texture>windows/home/submenu-arrow.png</texture>
+			<include>visiblehidefadeinfo</include>
+			<colordiffuse>white</colordiffuse>
+			<animation effect="fade" start="100" end="0" time="250" condition="!Container(525).HasFocus(1) | Control.HasFocus(84) | Control.HasFocus(85)">Conditional</animation>
+			<visible>!Skin.HasSetting(disable.movies)</visible>
+		</control>
+		<control type="label">
+			<label>$INFO[Skin.String(Home.Movies.Tile.0.Label)]</label>
+			<include>Mod_HomeLabel</include>
+			<animation effect="fade" start="100" end="30" time="250" condition="Control.HasFocus(85) | Control.HasFocus(84) | !Container(525).HasFocus(1)">Conditional</animation>
+			<visible>!Skin.HasSetting(disable.movies)</visible>
+		</control>
+		<control type="image">
+			<width>30</width>
+			<visible>!Skin.HasSetting(disable.tvshows)</visible>
+		</control>
+		<control type="image">
+			<width>19</width>
+			<height>28</height>
+			<texture>windows/home/submenu-arrow.png</texture>
+			<include>visiblehidefadeinfo</include>
+			<colordiffuse>white</colordiffuse>
+			<animation effect="fade" start="100" end="0" time="250" condition="!Container(525).HasFocus(2) | Control.HasFocus(84) | Control.HasFocus(85)">Conditional</animation>
+			<visible>!Skin.HasSetting(disable.tvshows)</visible>
+		</control>
 
-
+		<control type="label">
+			<label>$INFO[Skin.String(Home.TvShows.Tile.0.Label)]</label>
+			<include>Mod_HomeLabel</include>
+			<animation effect="fade" start="100" end="30" time="250" condition="Control.HasFocus(85) | Control.HasFocus(84) | !Container(525).HasFocus(2)">Conditional</animation>
+			<visible>!Skin.HasSetting(disable.tvshows)</visible>
+		</control>
+		<control type="image">
+			<width>30</width>
+			<visible>!Skin.HasSetting(disable.music)</visible>
+		</control>
+		<control type="image">
+			<width>19</width>
+			<height>28</height>
+			<texture>windows/home/submenu-arrow.png</texture>
+			<include>visiblehidefadeinfo</include>
+			<colordiffuse>white</colordiffuse>
+			<animation effect="fade" start="100" end="0" time="250" condition="!Container(525).HasFocus(3) | Control.HasFocus(84) | Control.HasFocus(85)">Conditional</animation>
+			<visible>!Skin.HasSetting(disable.music)</visible>
+		</control>
+		<control type="label">
+			<label>$INFO[Skin.String(Home.Music.Tile.0.Label)]</label>
+			<include>Mod_HomeLabel</include>
+			<animation effect="fade" start="100" end="30" time="250" condition="Control.HasFocus(85) | Control.HasFocus(84) | !Container(525).HasFocus(3)">Conditional</animation>
+			<visible>!Skin.HasSetting(disable.music)</visible>
+		</control>
+		<control type="image">
+			<width>30</width>
+			<visible>!Skin.HasSetting(disable.pictures)</visible>
+		</control>
+		<control type="image">
+			<width>19</width>
+			<height>28</height>
+			<texture>windows/home/submenu-arrow.png</texture>
+			<include>visiblehidefadeinfo</include>
+			<colordiffuse>white</colordiffuse>
+			<animation effect="fade" start="100" end="0" time="250" condition="!Container(525).HasFocus(5) | Control.HasFocus(83)  | Control.HasFocus(84) | Control.HasFocus(85)">Conditional</animation>
+			<visible>!Skin.HasSetting(disable.pictures) + [!Skin.HasSetting(HomeClicksSubmenu) | StringCompare(Skin.String(homescreen.style),panel)]</visible>
+		</control>
+		<control type="image">
+			<width>19</width>
+			<height>28</height>
+			<texture>-</texture>
+			<visible>!Skin.HasSetting(disable.pictures) + Skin.HasSetting(HomeClicksSubmenu) + StringCompare(Skin.String(homescreen.style),simple)</visible>
+		</control>
+		<control type="label">
+			<label>$INFO[Skin.String(Home.Pictures.Tile.0.Label)]</label>
+			<include>Mod_HomeLabel</include>
+			<animation effect="fade" start="100" end="30" time="250" condition="Control.HasFocus(85) | Control.HasFocus(84) | !Container(525).HasFocus(5)">Conditional</animation>
+			<visible>!Skin.HasSetting(disable.pictures)</visible>
+		</control>
+		<control type="image">
+			<width>30</width>
+			<visible>!Skin.HasSetting(disable.programs)</visible>
+		</control>
+		<control type="image">
+			<width>19</width>
+			<height>28</height>
+			<texture>windows/home/submenu-arrow.png</texture>
+			<include>visiblehidefadeinfo</include>
+			<colordiffuse>white</colordiffuse>
+			<animation effect="fade" start="100" end="0" time="250" condition="!Container(525).HasFocus(7) | Control.HasFocus(83)  | Control.HasFocus(84) | Control.HasFocus(85)">Conditional</animation>
+			<visible>!Skin.HasSetting(disable.programs) + [!Skin.HasSetting(HomeClicksSubmenu) | StringCompare(Skin.String(homescreen.style),panel)]</visible>
+		</control>
+		<control type="image">
+			<width>19</width>
+			<height>28</height>
+			<texture>-</texture>
+			<visible>!Skin.HasSetting(disable.programs) + Skin.HasSetting(HomeClicksSubmenu) + StringCompare(Skin.String(homescreen.style),simple)</visible>
+		</control>
+		<control type="label">
+			<label>$INFO[Skin.String(Home.Programs.Tile.0.Label)]</label>
+			<include>Mod_HomeLabel</include>
+			<animation effect="fade" start="100" end="30" time="250" condition="Control.HasFocus(85) | Control.HasFocus(84) | !Container(525).HasFocus(7)">Conditional</animation>
+			<visible>!Skin.HasSetting(disable.programs)</visible>
+		</control>
+		<control type="image">
+			<width>30</width>
+			<visible>!Skin.HasSetting(disable.weather)</visible>
+		</control>
+		<control type="image">
+			<width>19</width>
+			<height>28</height>
+			<texture>windows/home/submenu-arrow.png</texture>
+			<include>visiblehidefadeinfo</include>
+			<colordiffuse>white</colordiffuse>
+			<animation effect="fade" start="100" end="0" time="250" condition="!Container(525).HasFocus(8) | Control.HasFocus(83)  | Control.HasFocus(84) | Control.HasFocus(85)">Conditional</animation>
+			<visible>!Skin.HasSetting(disable.weather) + !Skin.HasSetting(HomeClicksSubmenu) + StringCompare(Skin.String(homescreen.style),simple)</visible>
+		</control>
+		<control type="image">
+			<width>19</width>
+			<height>28</height>
+			<visible>!Skin.HasSetting(disable.weather) + [Skin.HasSetting(HomeClicksSubmenu) | StringCompare(Skin.String(homescreen.style),panel)]</visible>
+		</control>
+		<control type="label">
+			<label>8</label>
+			<include>Mod_HomeLabel</include>
+			<animation effect="fade" start="100" end="30" time="250" condition="Control.HasFocus(85) | Control.HasFocus(84) | !Container(525).HasFocus(8)">Conditional</animation>
+			<visible>!Skin.HasSetting(disable.weather)</visible>
+		</control>
+		<control type="image">
+			<width>49</width>
+		</control>
+		<control type="image">
+			<width>30</width>
+			<height>30</height>
+			<texture>windows/home/settings.png</texture>
+			<animation effect="fade" start="100" end="30" time="250" condition="Control.HasFocus(84) | !Container(525).HasFocus(9)">Conditional</animation>
+		</control>
 	</include>
 	<include name="Mod_525Content">
 		<item id="1">
@@ -2720,7 +3050,11 @@
 			<visible>!Skin.HasSetting(disable.movies)</visible>
 			<property name="single">$INFO[Skin.String(HomeMoviesSingleImage)]</property>
 			<property name="multi">$INFO[Skin.String(HomeMoviesMultiImage)]</property>
-			<onclick condition="!Skin.HasSetting(HomeClicksSubmenu)">ActivateWindow(videos,movietitles,return)</onclick>
+			<onclick condition="!Skin.HasSetting(HomeClicksSubmenu) + IsEmpty(Skin.String(Home.Movies.Tile.0.Path))">ActivateWindow(3054)</onclick>
+			<onclick condition="!Skin.HasSetting(HomeClicksSubmenu) + !stringcompare(Skin.String(Home.Movies.Tile.0.Type),4) + !stringcompare(Skin.String(Home.Movies.Tile.0.Type),5) + !stringcompare(Skin.String(Home.Movies.Tile.0.Type),6) + !stringcompare(Skin.String(Home.Movies.Tile.0.Type),7)">RunAddon($INFO[Skin.String(Home.Movies.Tile.0.Path)])</onclick>
+			<onclick condition="!Skin.HasSetting(HomeClicksSubmenu) + stringcompare(Skin.String(Home.Movies.Tile.0.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(Home.Movies.Tile.0.Path)],return)</onclick>
+			<onclick condition="!Skin.HasSetting(HomeClicksSubmenu) + stringcompare(Skin.String(Home.Movies.Tile.0.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(Home.Movies.Tile.0.Path)],return)</onclick>
+			<onclick condition="!Skin.HasSetting(HomeClicksSubmenu) + [stringcompare(Skin.String(Home.Movies.Tile.0.Type),6) | stringcompare(Skin.String(Home.Movies.Tile.0.Type),7)]">$INFO[Skin.String(Home.Movies.Tile.0.Path)]</onclick>
 			<onclick condition="Skin.HasSetting(HomeClicksSubmenu)">SetFocus(83,0)</onclick>
 			<icon>DefaultMovies.png</icon>
 		</item>
@@ -2729,7 +3063,11 @@
 			<visible>!Skin.HasSetting(disable.tvshows)</visible>
 			<property name="single">$INFO[Skin.String(HomeTVShowsSingleImage)]</property>
 			<property name="multi">$INFO[Skin.String(HomeTVShowsMultiImage)]</property>
-			<onclick condition="!Skin.HasSetting(HomeClicksSubmenu)">ActivateWindow(videos,tvshowtitles,return)</onclick>
+			<onclick condition="!Skin.HasSetting(HomeClicksSubmenu) + IsEmpty(Skin.String(Home.TvShows.Tile.0.Path))">ActivateWindow(3054)</onclick>
+			<onclick condition="!Skin.HasSetting(HomeClicksSubmenu) + !stringcompare(Skin.String(Home.TvShows.Tile.0.Type),4) + !stringcompare(Skin.String(Home.TvShows.Tile.0.Type),5) + !stringcompare(Skin.String(Home.TvShows.Tile.0.Type),6) + !stringcompare(Skin.String(Home.TvShows.Tile.0.Type),7)">RunAddon($INFO[Skin.String(Home.TvShows.Tile.0.Path)])</onclick>
+			<onclick condition="!Skin.HasSetting(HomeClicksSubmenu) + stringcompare(Skin.String(Home.TvShows.Tile.0.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(Home.TvShows.Tile.0.Path)],return)</onclick>
+			<onclick condition="!Skin.HasSetting(HomeClicksSubmenu) + stringcompare(Skin.String(Home.TvShows.Tile.0.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(Home.TvShows.Tile.0.Path)],return)</onclick>
+			<onclick condition="!Skin.HasSetting(HomeClicksSubmenu) + [stringcompare(Skin.String(Home.TvShows.Tile.0.Type),6) | stringcompare(Skin.String(Home.TvShows.Tile.0.Type),7)]">$INFO[Skin.String(Home.TvShows.Tile.0.Path)]</onclick>
 			<onclick condition="Skin.HasSetting(HomeClicksSubmenu)">SetFocus(83,0)</onclick>
 			<icon>DefaultTVShows.png</icon>
 		</item>
@@ -2738,61 +3076,47 @@
 			<visible>!Skin.HasSetting(disable.music)</visible>
 			<property name="single">$INFO[Skin.String(HomeMusicSingleImage)]</property>
 			<property name="multi">$INFO[Skin.String(HomeMusicMultiImage)]</property>
-			<onclick condition="!Skin.HasSetting(HomeClicksSubmenu) + !Library.HasContent(music)">ActivateWindow(musicfiles)</onclick>
-			<onclick condition="!Skin.HasSetting(HomeClicksSubmenu) + Library.HasContent(music) + IsEmpty(Skin.String(music.path))">ActivateWindow(musiclibrary)</onclick>
-			<onclick condition="!Skin.HasSetting(HomeClicksSubmenu) + Library.HasContent(music) + !IsEmpty(Skin.String(music.path))">ActivateWindow(musiclibrary,$INFO[Skin.String(music.path)],return)</onclick>
+			<onclick condition="!Skin.HasSetting(HomeClicksSubmenu) + IsEmpty(Skin.String(Home.Music.Tile.0.Path))">ActivateWindow(3054)</onclick>
+			<onclick condition="!Skin.HasSetting(HomeClicksSubmenu) + !stringcompare(Skin.String(Home.Music.Tile.0.Type),4) + !stringcompare(Skin.String(Home.Music.Tile.0.Type),5) + !stringcompare(Skin.String(Home.Music.Tile.0.Type),6) + !stringcompare(Skin.String(Home.Music.Tile.0.Type),7)">RunAddon($INFO[Skin.String(Home.Music.Tile.0.Path)])</onclick>
+			<onclick condition="!Skin.HasSetting(HomeClicksSubmenu) + stringcompare(Skin.String(Home.Music.Tile.0.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(Home.Music.Tile.0.Path)],return)</onclick>
+			<onclick condition="!Skin.HasSetting(HomeClicksSubmenu) + stringcompare(Skin.String(Home.Music.Tile.0.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(Home.Music.Tile.0.Path)],return)</onclick>
+			<onclick condition="!Skin.HasSetting(HomeClicksSubmenu) + [stringcompare(Skin.String(Home.Music.Tile.0.Type),6) | stringcompare(Skin.String(Home.Music.Tile.0.Type),7)]">$INFO[Skin.String(Home.Music.Tile.0.Path)]</onclick>
 			<onclick condition="Skin.HasSetting(HomeClicksSubmenu)">SetFocus(83,0)</onclick>
 			<icon>DefaultAudio.png</icon>
-		</item>
-		<item id="4">
-			<label>41220</label>
-			<visible>!Skin.HasSetting(disable.pvr) + System.GetBool(pvrmanager.enabled)</visible>
-			<property name="single">$INFO[Skin.String(HomeLiveTVSingleImage)]</property>
-			<property name="multi">$INFO[Skin.String(HomeLiveTVMultiImage)]</property>
-			<onclick condition="!Skin.HasSetting(HomeClicksSubmenu)">ActivateWindow(PVR)</onclick>
-			<onclick condition="!Skin.HasSetting(HomeClicksSubmenu)">SetFocus(32)</onclick>
-			<onclick condition="!Skin.HasSetting(HomeClicksSubmenu)">SetFocus(11)</onclick>
-			<onclick condition="Skin.HasSetting(HomeClicksSubmenu)">SetFocus(83,0)</onclick>
-			<icon>DefaultTVGuide.png</icon>
 		</item>
 		<item id="5">
 			<label>1</label>
 			<visible>!Skin.HasSetting(disable.pictures)</visible>
 			<property name="single">$INFO[Skin.String(HomePicturesSingleImage)]</property>
 			<property name="multi">$INFO[Skin.String(HomePicturesMultiImage)]</property>
-			<onclick>ActivateWindow(pictures)</onclick>
+			<onclick condition="!Skin.HasSetting(HomeClicksSubmenu) + IsEmpty(Skin.String(Home.Pictures.Tile.0.Path))">ActivateWindow(3054)</onclick>
+			<onclick condition="!Skin.HasSetting(HomeClicksSubmenu) + !stringcompare(Skin.String(Home.Pictures.Tile.0.Type),4) + !stringcompare(Skin.String(Home.Pictures.Tile.0.Type),5) + !stringcompare(Skin.String(Home.Pictures.Tile.0.Type),6) + !stringcompare(Skin.String(Home.Pictures.Tile.0.Type),7)">RunAddon($INFO[Skin.String(Home.Pictures.Tile.0.Path)])</onclick>
+			<onclick condition="!Skin.HasSetting(HomeClicksSubmenu) + stringcompare(Skin.String(Home.Pictures.Tile.0.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(Home.Pictures.Tile.0.Path)],return)</onclick>
+			<onclick condition="!Skin.HasSetting(HomeClicksSubmenu) + stringcompare(Skin.String(Home.Pictures.Tile.0.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(Home.Pictures.Tile.0.Path)],return)</onclick>
+			<onclick condition="!Skin.HasSetting(HomeClicksSubmenu) + [stringcompare(Skin.String(Home.Pictures.Tile.0.Type),6) | stringcompare(Skin.String(Home.Pictures.Tile.0.Type),7)]">$INFO[Skin.String(Home.Pictures.Tile.0.Path)]</onclick>
+			<onclick condition="Skin.HasSetting(HomeClicksSubmenu)">SetFocus(83,0)</onclick>
 			<icon>DefaultPicture.png</icon>
-		</item>
-		<item id="6">
-			<label>$INFO[Skin.String(HomeCustomItem.Label)]</label>
-			<visible>!Skin.HasSetting(disable.games) + StringCompare(Skin.String(homescreen.style),simple)</visible>
-			<property name="single">$INFO[Skin.String(HomeGamesSingleImage)]</property>
-			<property name="multi">$INFO[Skin.String(HomeGamesMultiImage)]</property>
-			<onclick condition="IsEmpty(Skin.String(HomeCustomItem.Path)) + IsEmpty(Skin.String(GameTile.Path)) + !Skin.HasSetting(UseRCB)">ActivateWindow(10001,plugin://plugin.program.advanced.launcher,return)</onclick>
-			<onclick condition="IsEmpty(Skin.String(HomeCustomItem.Path)) + !IsEmpty(Skin.String(GameTile.Path)) + !Skin.HasSetting(UseRCB)">ActivateWindow(10001,$INFO[Skin.String(GameTile.Path)],return)</onclick>
-			<onclick condition="IsEmpty(Skin.String(HomeCustomItem.Path)) + Skin.HasSetting(UseRCB)">RunScript(script.games.rom.collection.browser)</onclick>
-			<onclick condition="!stringcompare(Skin.String(HomeCustomItem.Type),4) + !stringcompare(Skin.String(HomeCustomItem.Type),5) + !stringcompare(Skin.String(HomeCustomItem.Type),6) + !stringcompare(Skin.String(HomeCustomItem.Type),7)">RunAddon($INFO[Skin.String(HomeCustomItem.Path)])</onclick>
-			<onclick condition="stringcompare(Skin.String(HomeCustomItem.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(HomeCustomItem.Path)],return)</onclick>
-			<onclick condition="stringcompare(Skin.String(HomeCustomItem.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(HomeCustomItem.Path)],return)</onclick>
-			<onclick condition="[stringcompare(Skin.String(HomeCustomItem.Type),6) | stringcompare(Skin.String(HomeCustomItem.Type),7)]">$INFO[Skin.String(HomeCustomItem.Path)]</onclick>
-			<icon>DefaultGames.png</icon>
 		</item>
 		<item id="7">
 			<label>0</label>
 			<visible>!Skin.HasSetting(disable.programs)</visible>
 			<property name="single">$INFO[Skin.String(HomeProgramsSingleImage)]</property>
 			<property name="multi">$INFO[Skin.String(HomeProgramsMultiImage)]</property>
-			<onclick condition="!Skin.HasSetting(HomeClicksSubmenu)">ActivateWindow(programs)</onclick>
+			<onclick condition="!Skin.HasSetting(HomeClicksSubmenu) + IsEmpty(Skin.String(Home.Programs.Tile.0.Path))">ActivateWindow(3054)</onclick>
+			<onclick condition="!Skin.HasSetting(HomeClicksSubmenu) + !stringcompare(Skin.String(Home.Programs.Tile.0.Type),4) + !stringcompare(Skin.String(Home.Programs.Tile.0.Type),5) + !stringcompare(Skin.String(Home.Programs.Tile.0.Type),6) + !stringcompare(Skin.String(Home.Programs.Tile.0.Type),7)">RunAddon($INFO[Skin.String(Home.Programs.Tile.0.Path)])</onclick>
+			<onclick condition="!Skin.HasSetting(HomeClicksSubmenu) + stringcompare(Skin.String(Home.Programs.Tile.0.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(Home.Programs.Tile.0.Path)],return)</onclick>
+			<onclick condition="!Skin.HasSetting(HomeClicksSubmenu) + stringcompare(Skin.String(Home.Programs.Tile.0.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(Home.Programs.Tile.0.Path)],return)</onclick>
+			<onclick condition="!Skin.HasSetting(HomeClicksSubmenu) + [stringcompare(Skin.String(Home.Programs.Tile.0.Type),6) | stringcompare(Skin.String(Home.Programs.Tile.0.Type),7)]">$INFO[Skin.String(Home.Programs.Tile.0.Path)]</onclick>
 			<onclick condition="Skin.HasSetting(HomeClicksSubmenu)">SetFocus(83,0)</onclick>
 			<icon>DefaultAddonProgram.png</icon>
 		</item>
 		<item id="8">
 			<label>8</label>
-			<visible>!Skin.HasSetting(disable.weather) + StringCompare(Skin.String(homescreen.style),simple)</visible>
+			<visible>!Skin.HasSetting(disable.weather)</visible>
 			<property name="single">$INFO[Skin.String(HomeWeatherSingleImage)]</property>
 			<property name="multi">$INFO[Skin.String(HomeWeatherMultiImage)]</property>
-			<onclick condition="!Skin.HasSetting(HomeClicksSubmenu)">ActivateWindow(weather)</onclick>
-			<onclick condition="Skin.HasSetting(HomeClicksSubmenu)">SetFocus(83,0)</onclick>
+			<onclick condition="!Skin.HasSetting(HomeClicksSubmenu) | StringCompare(Skin.String(homescreen.style),panel)">ActivateWindow(weather)</onclick>
+			<onclick condition="Skin.HasSetting(HomeClicksSubmenu) + StringCompare(Skin.String(homescreen.style),simple)">SetFocus(83,0)</onclick>
 			<icon>DefaultAddonWeather.png</icon>
 		</item>
 		<item id="9">
@@ -2820,6 +3144,17 @@
 			<visible>!Skin.HasSetting(disable.favourites)</visible>
 			<icon>DefaultFavourites.png</icon>
 		</item>
+		<item id="4">
+			<label>41220</label>
+			<visible>!Skin.HasSetting(disable.pvr) + System.GetBool(pvrmanager.enabled)</visible>
+			<property name="single">$INFO[Skin.String(HomeLiveTVSingleImage)]</property>
+			<property name="multi">$INFO[Skin.String(HomeLiveTVMultiImage)]</property>
+			<onclick condition="!Skin.HasSetting(HomeClicksSubmenu)">ActivateWindow(PVR)</onclick>
+			<onclick condition="!Skin.HasSetting(HomeClicksSubmenu)">SetFocus(32)</onclick>
+			<onclick condition="!Skin.HasSetting(HomeClicksSubmenu)">SetFocus(11)</onclick>
+			<onclick condition="Skin.HasSetting(HomeClicksSubmenu)">SetFocus(83,0)</onclick>
+			<icon>DefaultTVGuide.png</icon>
+		</item>
 		
 	</include>
 	
@@ -2827,199 +3162,6 @@
 		<value condition="Container(150).ListItem.Property(LibraryHasMovie)">  ★</value>
 		<value></value>
 	</variable>
-	<include name="metro-favourites">
-		<control type="group">
-			<animation type="WindowOpen" reversible="false">
-				<effect type="fade" start="0" end="100" time="300" tween="sine" easing="in" delay="200"  />
-				<effect type="slide" start="0,-75" end="0,0" time="350" tween="cubic" easing="out" delay="200" />
-			</animation>
-			<animation type="WindowClose" reversible="false">
-				<effect type="fade" start="100" end="0" time="250" tween="sine" easing="out" />
-				<effect type="slide" start="0,0" end="0,-75" time="300" tween="sine" easing="out" />
-			</animation>
-			<animation type="Conditional" condition="Window.IsActive(shutdownmenu)" reversible="false">
-				<effect type="zoom" start="100" end="92" time="300" delay="100" center="auto" tween="sine" easing="out"  />
-			</animation>
-			<animation type="Conditional" condition="!Window.IsActive(shutdownmenu)" reversible="false">
-				<effect type="zoom" start="92" end="100" time="300" delay="250" center="auto" tween="sine" easing="in"  />
-			</animation>
-			<control type="panel" id="450">
-				<description>Fav list</description>
-				<posx>51</posx>
-				<posy>197</posy>
-				<width>1818</width>
-				<height>606</height>
-				<onleft>60</onleft>
-				<onup>450</onup>
-				<onright>450</onright>
-				<ondown>450</ondown>
-				<pagecontrol>60</pagecontrol>
-				<viewtype label="List">List</viewtype>
-				<scrolltime tween="cubic" easing="out">500</scrolltime>
-				<orientation>vertical</orientation>
-				<preloaditems>2</preloaditems>
-				<focusposition>2</focusposition>
-				<movement>1</movement>
-				<itemlayout width="303" height="303">
-					<control type="group">
-						<animation effect="fade" end="100" time="0" condition="true">Conditional</animation>
-						<control type="image">
-							<posx>-5</posx>
-							<posy>-5</posy>
-							<width>313</width>
-							<height>313</height>
-							<texture border="35">views/newgloss/whitepanel-15.png</texture>
-							<colordiffuse>mod-osd</colordiffuse>
-						</control>
-						<control type="image">
-							<posx>10</posx>
-							<posy>10</posy>
-							<width>283</width>
-							<height>283</height>
-							<texture border="35">views/newgloss/whitepanel.png</texture>
-							<colordiffuse>mod-infotags</colordiffuse>
-						</control>
-						<control type="image">
-							<posx>10</posx>
-							<posy>10</posy>
-							<width>283</width>
-							<height>283</height>
-							<texture diffuse="views/newgloss/tile-283.png">$INFO[ListItem.Thumb]</texture>
-							<aspectratio scalediffuse="false">scale</aspectratio>
-						</control>
-						<control type="image">
-							<posx>10</posx>
-							<posy>227</posy>
-							<width>283</width>
-							<height>66</height>
-							<texture border="7">windows/home/tile-overlay-r.png</texture>
-							<colordiffuse>99FFFFFF</colordiffuse>
-						</control>
-						<control type="image">
-							<posx>0</posx>
-							<posy>0</posy>
-							<width>303</width>
-							<height>303</height>
-							<texture border="25">views/newgloss/border.png</texture>
-						</control>
-						<control type="label">
-							<posx>10</posx>
-							<posy>227</posy>
-							<width>283</width>
-							<height>66</height>
-							<label>$INFO[ListItem.Label]</label>
-							<font>Font-Alaska-S33</font>
-							<textcolor>aawhite</textcolor>
-							<align>left</align>
-							<aligny>center</aligny>
-							<textoffsetx>20</textoffsetx>
-						</control>
-					</control>
-				</itemlayout>
-				<focusedlayout width="303" height="303">
-					<control type="group">
-						<control type="image">
-							<posx>-5</posx>
-							<posy>-5</posy>
-							<width>313</width>
-							<height>313</height>
-							<texture border="35">views/newgloss/whitepanel-15.png</texture>
-							<colordiffuse>mod-osd</colordiffuse>
-						</control>
-						<control type="image">
-							<posx>10</posx>
-							<posy>10</posy>
-							<width>283</width>
-							<height>283</height>
-							<texture border="35">views/newgloss/whitepanel.png</texture>
-							<colordiffuse>mod-infotags-d</colordiffuse>
-						</control>
-						<control type="image">
-							<posx>10</posx>
-							<posy>10</posy>
-							<width>283</width>
-							<height>283</height>
-							<texture diffuse="views/newgloss/tile-283.png">$INFO[ListItem.Thumb]</texture>
-							<aspectratio scalediffuse="false">scale</aspectratio>
-						</control>
-
-						<control type="image">
-							<posx>10</posx>
-							<posy>227</posy>
-							<width>283</width>
-							<height>66</height>
-							<texture border="7">windows/home/tile-overlay-r.png</texture>
-							<colordiffuse>99FFFFFF</colordiffuse>
-						</control>
-						<control type="image">
-							<posx>0</posx>
-							<posy>0</posy>
-							<width>303</width>
-							<height>303</height>
-							<texture border="25">views/newgloss/border.png</texture>
-						</control>
-						<control type="image">
-							<posx>0</posx>
-							<posy>0</posy>
-							<width>303</width>
-							<height>303</height>
-							<texture border="25">views/newgloss/border-fo.png</texture>
-						</control>
-						<control type="label">
-							<posx>10</posx>
-							<posy>227</posy>
-							<width>283</width>
-							<height>66</height>
-							<label>$INFO[ListItem.Label]</label>
-							<font>Font-Alaska-S33</font>
-							<textcolor>ffffffff</textcolor>
-							<align>left</align>
-							<aligny>center</aligny>
-							<textoffsetx>20</textoffsetx>
-						</control>
-					</control>
-				</focusedlayout>
-			</control>
-			<control type="image" id="62">
-				<animation effect="fade" start="100" end="0" time="0" delay="1500">WindowOpen</animation>
-			</control>
-			<control type="image" id="61">
-				<animation effect="fade" start="0" end="100" time="0">Visible</animation>
-				<animation effect="fade" start="100" end="0" time="0">Hidden</animation>
-				<visible>Control.HasFocus(60) | !Control.IsVisible(62)</visible>
-			</control>
-			<control type="image" id="61">
-				<animation effect="fade" start="0" end="100" time="0">Visible</animation>
-				<animation effect="fade" start="100" end="0" time="0" delay="1500">Hidden</animation>
-				<visible>!Control.HasFocus(60) + [Container(450).Scrolling | Container(450).OnScrollNext | Container(450).OnScrollPrevious]</visible>
-			</control>
-			<control type="image">
-				<description>Scrollbar background (visible on focus)</description>
-				<posx>26</posx>
-				<posy>267</posy>
-				<width>6</width>
-				<height>550</height>
-				<texture border="3,6,3,6">views/other/scrollbar.png</texture>
-				<visible>Control.HasFocus(60)</visible>
-				<animation effect="fade" start="0" end="25" time="300" tween="sine" easing="inout">Visible</animation>
-				<animation effect="fade" start="25" end="0" time="300" tween="sine" easing="inout">Hidden</animation>
-			</control>
-			<control type="scrollbar" id="60">
-				<description>Scrollbar</description>
-				<posx>26</posx>
-				<posy>267</posy>
-				<width>6</width>
-				<height>550</height>
-				<orientation>vertical</orientation>
-				<texturesliderbar border="3,6,3,6">views/other/scrollbar.png</texturesliderbar>
-				<texturesliderbarfocus border="3,6,3,6">views/other/scrollbar.png</texturesliderbarfocus>
-				<showonepage>false</showonepage>
-				<onleft>450</onleft>
-				<onright>450</onright>
-				<animation effect="fade" start="40" end="0" time="300" tween="sine" easing="inout" condition="!Control.IsVisible(61)">Conditional</animation>
-			</control>
-		</control>
-	</include>
 	<include name="mod-favourites">
 		<control type="group">
 			<animation type="WindowOpen" reversible="false">

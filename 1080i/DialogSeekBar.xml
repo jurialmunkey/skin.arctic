@@ -53,7 +53,7 @@
             <control type="group">
 				<animation effect="slide" end="0,-65" time="300" tween="cubic" easing="inout" condition="Window.IsActive(videoosd)">Conditional</animation>
 				<control type="group">
-					<visible>!Skin.HasSetting(videoosd.clearlogo) | [[Player.ShowInfo | Window.IsVisible(fullscreeninfo)] + !Window.IsActive(videoosd) + !IsEmpty(Window(seekbar).Property(ExtendPlot)) + !VideoPlayer.Content(LiveTV)] | ![Player.ShowInfo | Window.IsVisible(fullscreeninfo)]</visible>
+					<visible>!Skin.HasSetting(videoosd.clearlogo) | [IsEmpty(Player.Art(clearlogo)) + IsEmpty(Player.Art(tvshow.clearlogo))] | [[Player.ShowInfo | Window.IsVisible(fullscreeninfo)] + !Window.IsActive(videoosd) + !IsEmpty(Window(seekbar).Property(ExtendPlot)) + !VideoPlayer.Content(LiveTV)] | ![Player.ShowInfo | Window.IsVisible(fullscreeninfo)]</visible>
 					<animation type="Visible" reversible="false">
 						<effect type="fade" start="0" end="100" time="300" tween="sine" easing="inout" delay="150" />
 					</animation>
@@ -246,12 +246,12 @@
 						<animation effect="slide" end="0,-120" time="300" tween="cubic" easing="inout" condition="[[Player.ShowInfo | Window.IsVisible(fullscreeninfo)] + !Window.IsActive(videoosd) + !IsEmpty(Window(seekbar).Property(ExtendPlot)) + !VideoPlayer.Content(LiveTV)]">Conditional</animation>
 					</control>
 					<control type="group">
-						<visible>!VideoPlayer.Content(LiveTV) + !Skin.HasSetting(videoosd.clearlogo)</visible>
+						<visible>!VideoPlayer.Content(LiveTV) + [!Skin.HasSetting(videoosd.clearlogo) | [IsEmpty(Player.Art(clearlogo)) + IsEmpty(Player.Art(tvshow.clearlogo))]]</visible>
 						<posx>-28</posx>
 						<posy>-62</posy>
 						<control type="image">
 							<posx>592</posx>
-							<posy>-200</posy>
+							<posy>-192</posy>
 							<width>236</width>
 							<height>236</height>
 							<texture background="true" fallback="osd/fullscreen/cd.png">$INFO[Player.Art(discart)]</texture>
@@ -263,9 +263,9 @@
 						<control type="image">
 							<description>Thumb</description>
 							<posx>518</posx>
-							<posy>-148</posy>
+							<posy>-140</posy>
 							<width>384</width>
-							<height>512</height>
+							<height>504</height>
 							<texture background="true" border="100">arctic/common/16border64.png</texture>
 							<aspectratio scalediffuse="false">stretch</aspectratio>
 							<animation effect="slide" end="0,-62" time="300" tween="cubic" easing="inout" condition="[Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding]">Conditional</animation>
@@ -273,9 +273,9 @@
 						<control type="image">
 							<description>Thumb</description>
 							<posx>582</posx>
-							<posy>-84</posy>
+							<posy>-76</posy>
 							<width>256</width>
-							<height>384</height>
+							<height>376</height>
 							<texture background="true" diffuse="arctic/osd/poster.png">windows/common/black.png</texture>
 							<aspectratio scalediffuse="false">stretch</aspectratio>
 							<animation effect="slide" end="0,-62" time="300" tween="cubic" easing="inout" condition="[Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding]">Conditional</animation>
@@ -283,9 +283,9 @@
 						<control type="image">
 							<description>Thumb</description>
 							<posx>582</posx>
-							<posy>-84</posy>
+							<posy>-76</posy>
 							<width>256</width>
-							<height>384</height>
+							<height>376</height>
 							<texture background="true" diffuse="arctic/osd/poster.png">$VAR[ArcticOSDPoster]</texture>
 							<aspectratio scalediffuse="false">scale</aspectratio>
 							<animation effect="slide" end="0,-62" time="300" tween="cubic" easing="inout" condition="[Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding]">Conditional</animation>

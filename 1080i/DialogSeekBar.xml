@@ -251,7 +251,7 @@
 						<posy>-62</posy>
 						<control type="image">
 							<posx>592</posx>
-							<posy>-192</posy>
+							<posy>-200</posy>
 							<width>236</width>
 							<height>236</height>
 							<texture background="true" fallback="osd/fullscreen/cd.png">$INFO[Player.Art(discart)]</texture>
@@ -263,9 +263,9 @@
 						<control type="image">
 							<description>Thumb</description>
 							<posx>518</posx>
-							<posy>-140</posy>
+							<posy>-148</posy>
 							<width>384</width>
-							<height>504</height>
+							<height>512</height>
 							<texture background="true" border="100">arctic/common/16border64.png</texture>
 							<aspectratio scalediffuse="false">stretch</aspectratio>
 							<animation effect="slide" end="0,-62" time="300" tween="cubic" easing="inout" condition="[Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding]">Conditional</animation>
@@ -273,9 +273,9 @@
 						<control type="image">
 							<description>Thumb</description>
 							<posx>582</posx>
-							<posy>-76</posy>
+							<posy>-84</posy>
 							<width>256</width>
-							<height>376</height>
+							<height>384</height>
 							<texture background="true" diffuse="arctic/osd/poster.png">windows/common/black.png</texture>
 							<aspectratio scalediffuse="false">stretch</aspectratio>
 							<animation effect="slide" end="0,-62" time="300" tween="cubic" easing="inout" condition="[Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding]">Conditional</animation>
@@ -283,9 +283,9 @@
 						<control type="image">
 							<description>Thumb</description>
 							<posx>582</posx>
-							<posy>-76</posy>
+							<posy>-84</posy>
 							<width>256</width>
-							<height>376</height>
+							<height>384</height>
 							<texture background="true" diffuse="arctic/osd/poster.png">$VAR[ArcticOSDPoster]</texture>
 							<aspectratio scalediffuse="false">scale</aspectratio>
 							<animation effect="slide" end="0,-62" time="300" tween="cubic" easing="inout" condition="[Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding]">Conditional</animation>

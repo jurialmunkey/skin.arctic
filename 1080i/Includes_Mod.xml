@@ -1610,9 +1610,9 @@
 			<control type="group">
 				<control type="image">
 					<posx>10</posx>
-					<posy>259</posy>
+					<posy>264</posy>
 					<width>169</width>
-					<height>249</height>
+					<height>254</height>
 					<texture background="true"  diffuse="views/posterview/diffuse-ref.png" flipy="true" fallback="views/fallbacks/DefaultVideo.png/large.png">$INFO[ListItem.Property(poster)]</texture>
 					<visible>!Skin.HasSetting(HideCoverReflection)</visible>
 				</control>
@@ -1620,13 +1620,13 @@
 					<posx>10</posx>
 					<posy>10</posy>
 					<width>169</width>
-					<height>249</height>
+					<height>254</height>
 					<texture background="true"  diffuse="arctic/home/poster.png" fallback="views/fallbacks/DefaultVideo.png/large.png">$INFO[ListItem.Property(poster)]</texture>
 				</control>
 			</control>
 			<control type="image">
 				<width>189</width>
-				<height>269</height>
+				<height>274</height>
 				<texture border="25">arctic/common/border.png</texture>
 				<colordiffuse>Mod_Border_Fade</colordiffuse>
 			</control>
@@ -1634,7 +1634,7 @@
 				<posx>10</posx>
 				<posy>10</posy>
 				<width>169</width>
-				<height>249</height>
+				<height>254</height>
 				<texture border="5">views/newgloss/whitepanel.png</texture>
 				<visible>Control.HasFocus(82)</visible>
 				<colordiffuse>Mod_Cover_Fade</colordiffuse>
@@ -1644,9 +1644,9 @@
 			<control type="group">
 				<control type="image">
 					<posx>10</posx>
-					<posy>259</posy>
+					<posy>264</posy>
 					<width>169</width>
-					<height>249</height>
+					<height>254</height>
 					<texture background="true" diffuse="views/posterview/diffuse-ref.png" flipy="true" fallback="views/fallbacks/DefaultVideo.png/large.png">$INFO[ListItem.Property(poster)]</texture>
 					<aspectratio align="center" scalediffuse="false">scale</aspectratio>
 					<visible>!Skin.HasSetting(HideCoverReflection)</visible>
@@ -1655,14 +1655,14 @@
 					<posx>10</posx>
 					<posy>10</posy>
 					<width>169</width>
-					<height>249</height>
+					<height>254</height>
 					<texture  background="true" diffuse="arctic/home/poster.png" fallback="views/fallbacks/DefaultVideo.png/large.png">$INFO[ListItem.Property(poster)]</texture>
 					<aspectratio align="center" scalediffuse="false">scale</aspectratio>
 				</control>
 			</control>
 			<control type="image">
 				<width>189</width>
-				<height>269</height>
+				<height>274</height>
 				<texture border="25">arctic/common/border.png</texture>
 				<colordiffuse>Mod_Border_Fade</colordiffuse>
 			</control>
@@ -1670,7 +1670,7 @@
 				<posx>10</posx>
 				<posy>10</posy>
 				<width>169</width>
-				<height>249</height>
+				<height>254</height>
 				<texture border="5">views/newgloss/whitepanel.png</texture>
 				<visible>Control.HasFocus(82)</visible>
 				<colordiffuse>Mod_Cover_Fade</colordiffuse>
@@ -1717,9 +1717,9 @@
 			<control type="group">
 				<control type="image">
 					<posx>10</posx>
-					<posy>259</posy>
+					<posy>264</posy>
 					<width>169</width>
-					<height>249</height>
+					<height>254</height>
 					<texture background="true"  diffuse="views/posterview/diffuse-ref.png" flipy="true" fallback="views/fallbacks/DefaultVideo.png/large.png">$INFO[ListItem.Property(poster)]</texture>
 					<visible>!Skin.HasSetting(HideCoverReflection)</visible>
 				</control>
@@ -1727,13 +1727,13 @@
 					<posx>10</posx>
 					<posy>10</posy>
 					<width>169</width>
-					<height>249</height>
+					<height>254</height>
 					<texture background="true"  diffuse="arctic/home/poster.png" fallback="views/fallbacks/DefaultVideo.png/large.png">$INFO[ListItem.Property(poster)]</texture>
 				</control>
 			</control>
 			<control type="image">
 				<width>189</width>
-				<height>269</height>
+				<height>274</height>
 				<texture border="25">arctic/common/border.png</texture>
 				<colordiffuse>Mod_Border</colordiffuse>
 			</control>
@@ -1741,7 +1741,7 @@
 				<posx>-10</posx>
 				<posy>-10</posy>
 				<width>209</width>
-				<height>289</height>
+				<height>294</height>
 				<texture border="52">arctic/common/border-glo.png</texture>
 				<visible>Control.HasFocus(82)</visible>
 				<colordiffuse>Mod_Glow_Border</colordiffuse>
@@ -1751,9 +1751,9 @@
 			<control type="group">
 				<control type="image">
 					<posx>10</posx>
-					<posy>259</posy>
+					<posy>264</posy>
 					<width>169</width>
-					<height>249</height>
+					<height>254</height>
 					<texture background="true"  diffuse="views/posterview/diffuse-ref.png" flipy="true" fallback="views/fallbacks/DefaultVideo.png/large.png">$INFO[ListItem.Property(poster)]</texture>
 					<aspectratio align="center" scalediffuse="false">scale</aspectratio>
 					<visible>!Skin.HasSetting(HideCoverReflection)</visible>
@@ -1762,21 +1762,21 @@
 					<posx>10</posx>
 					<posy>10</posy>
 					<width>169</width>
-					<height>249</height>
+					<height>254</height>
 					<texture background="true"  diffuse="arctic/home/poster.png" fallback="views/fallbacks/DefaultVideo.png/large.png">$INFO[ListItem.Property(poster)]</texture>
 					<aspectratio align="center" scalediffuse="false">scale</aspectratio>
 				</control>
 			</control>
 			<control type="image">
 				<width>189</width>
-				<height>269</height>
+				<height>274</height>
 				<texture border="25">arctic/common/border.png</texture>
 			</control>
 			<control type="image">
 				<posx>-10</posx>
 				<posy>-10</posy>
 				<width>209</width>
-				<height>289</height>
+				<height>294</height>
 				<texture border="52">arctic/common/border-glo.png</texture>
 				<visible>Control.HasFocus(82)</visible>
 				<colordiffuse>Mod_Glow_Border</colordiffuse>

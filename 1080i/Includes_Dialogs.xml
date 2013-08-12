@@ -2133,7 +2133,7 @@
                     <height>478</height>
                     <aspectratio>keep</aspectratio>
                     <texture>$INFO[ListItem.FileNameAndPath]</texture>
-                    <visible>IsEmpty(Container(450).ListItem.Thumb) + SubString(ListItem.FileNameAndPath,windows/home/icons)</visible>
+                    <visible>IsEmpty(Container(450).ListItem.Thumb) + !IsEmpty(Window(3054).Property(ChooseArt))</visible>
                 </control>
                 
                 <control type="image">
@@ -2143,7 +2143,7 @@
                     <height>478</height>
                     <aspectratio>keep</aspectratio>
                     <texture>$INFO[ListItem.ActualIcon,dialogs/filebrowser/icons/,]</texture>
-                    <visible>IsEmpty(Container(450).ListItem.Thumb) + !SubString(ListItem.FileNameAndPath,windows/home/icons)</visible>
+                    <visible>IsEmpty(Container(450).ListItem.Thumb) + IsEmpty(Window(3054).Property(ChooseArt))</visible>
                 </control>
                 
                 <control type="image">

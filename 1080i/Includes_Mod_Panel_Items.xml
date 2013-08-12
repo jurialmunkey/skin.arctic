@@ -143,9 +143,21 @@
 				<onclick condition="stringcompare(Skin.String(Home.Movies.Tile.0.Type),6)">RunScript(script.favourites,property=Home.Movies.Tile.0)</onclick>
 				<onclick condition="stringcompare(Skin.String(Home.Movies.Tile.0.Type),7)">Skin.SetString(Home.Movies.Tile.0.Path)</onclick>
 			</control>
-			<control type="button" id="2407">
-				<posx>0</posx>
+			<control type="radiobutton" id="2407">
+				<onleft>3</onleft>
+				<onright>5</onright>
+				<onup>2406</onup>
+				<ondown>2408</ondown>
 				<posy>180</posy>
+				<textcolor>mod-infotags</textcolor>
+				<include>SettingsCustomDialogRadioButtonVars</include>
+				<label>305</label>
+				<onclick>Skin.ToggleSetting(disable.movies)</onclick>
+				<selected>!Skin.HasSetting(disable.movies)</selected>
+			</control>
+			<control type="button" id="2408">
+				<posx>0</posx>
+				<posy>240</posy>
 				<onleft>3</onleft>
 				<onright>5</onright>
 				<onup>2406</onup>
@@ -326,6 +338,7 @@
 				<onclick condition="stringcompare(Skin.String(Home.Movies.Tile.1.Type),5)">Skin.SetFile(Home.Movies.Tile.1.Path,.xsp|.m3u,special://profile/playlists/music/)</onclick>
 				<onclick condition="stringcompare(Skin.String(Home.Movies.Tile.1.Type),6)">RunScript(script.favourites,property=Home.Movies.Tile.1)</onclick>
 				<onclick condition="stringcompare(Skin.String(Home.Movies.Tile.1.Type),7)">Skin.SetString(Home.Movies.Tile.1.Path)</onclick>
+				<onclick>Skin.SetFile(Home.Movies.Tile.1.Icon,.png|.jpg|.gif,special://skin/extras/icons/)</onclick>
 			</control>
 			<control type="button" id="2407">
 				<posx>0</posx>
@@ -513,6 +526,7 @@
 				<onclick condition="stringcompare(Skin.String(Home.Movies.Tile.2.Type),5)">Skin.SetFile(Home.Movies.Tile.2.Path,.xsp|.m3u,special://profile/playlists/music/)</onclick>
 				<onclick condition="stringcompare(Skin.String(Home.Movies.Tile.2.Type),6)">RunScript(script.favourites,property=Home.Movies.Tile.2)</onclick>
 				<onclick condition="stringcompare(Skin.String(Home.Movies.Tile.2.Type),7)">Skin.SetString(Home.Movies.Tile.2.Path)</onclick>
+				<onclick>Skin.SetFile(Home.Movies.Tile.2.Icon,.png|.jpg|.gif,special://skin/extras/icons/)</onclick>
 			</control>
 			<control type="button" id="2407">
 				<posx>0</posx>
@@ -700,6 +714,7 @@
 				<onclick condition="stringcompare(Skin.String(Home.Movies.Tile.3.Type),5)">Skin.SetFile(Home.Movies.Tile.3.Path,.xsp|.m3u,special://profile/playlists/music/)</onclick>
 				<onclick condition="stringcompare(Skin.String(Home.Movies.Tile.3.Type),6)">RunScript(script.favourites,property=Home.Movies.Tile.3)</onclick>
 				<onclick condition="stringcompare(Skin.String(Home.Movies.Tile.3.Type),7)">Skin.SetString(Home.Movies.Tile.3.Path)</onclick>
+				<onclick>Skin.SetFile(Home.Movies.Tile.3.Icon,.png|.jpg|.gif,special://skin/extras/icons/)</onclick>
 			</control>
 			<control type="button" id="2407">
 				<posx>0</posx>
@@ -841,6 +856,7 @@
 					<onclick condition="stringcompare(Skin.String(Home.Movies.Tile.4.Type),0)">Skin.SetString(Home.Movies.Tile.4.TypeName,$LOCALIZE[41146])</onclick>
 					<onclick condition="stringcompare(Skin.String(Home.Movies.Tile.4.Type),7)">Skin.SetString(Home.Movies.Tile.4.Type,0)</onclick>
 					<onclick condition="stringcompare(Skin.String(Home.Movies.Tile.4.Type),7)">Skin.SetString(Home.Movies.Tile.4.TypeName,$LOCALIZE[41145])</onclick>
+					<onclick>Skin.SetFile(Home.Movies.Tile.4.Icon,.png|.jpg|.gif,special://skin/extras/icons/)</onclick>
 				</control>
 				<control type="button" id="24052">
 					<width>43</width>
@@ -887,6 +903,7 @@
 				<onclick condition="stringcompare(Skin.String(Home.Movies.Tile.4.Type),5)">Skin.SetFile(Home.Movies.Tile.4.Path,.xsp|.m3u,special://profile/playlists/music/)</onclick>
 				<onclick condition="stringcompare(Skin.String(Home.Movies.Tile.4.Type),6)">RunScript(script.favourites,property=Home.Movies.Tile.4)</onclick>
 				<onclick condition="stringcompare(Skin.String(Home.Movies.Tile.4.Type),7)">Skin.SetString(Home.Movies.Tile.4.Path)</onclick>
+				<onclick>Skin.SetFile(Home.Movies.Tile.4.Icon,.png|.jpg|.gif,special://skin/extras/icons/)</onclick>
 			</control>
 			<control type="button" id="2407">
 				<posx>0</posx>
@@ -1074,6 +1091,7 @@
 				<onclick condition="stringcompare(Skin.String(Home.Movies.Tile.5.Type),5)">Skin.SetFile(Home.Movies.Tile.5.Path,.xsp|.m3u,special://profile/playlists/music/)</onclick>
 				<onclick condition="stringcompare(Skin.String(Home.Movies.Tile.5.Type),6)">RunScript(script.favourites,property=Home.Movies.Tile.5)</onclick>
 				<onclick condition="stringcompare(Skin.String(Home.Movies.Tile.5.Type),7)">Skin.SetString(Home.Movies.Tile.5.Path)</onclick>
+				<onclick>Skin.SetFile(Home.Movies.Tile.5.Icon,.png|.jpg|.gif,special://skin/extras/icons/)</onclick>
 			</control>
 			<control type="button" id="2407">
 				<posx>0</posx>
@@ -1261,6 +1279,7 @@
 				<onclick condition="stringcompare(Skin.String(Home.Movies.Tile.6.Type),5)">Skin.SetFile(Home.Movies.Tile.6.Path,.xsp|.m3u,special://profile/playlists/music/)</onclick>
 				<onclick condition="stringcompare(Skin.String(Home.Movies.Tile.6.Type),6)">RunScript(script.favourites,property=Home.Movies.Tile.6)</onclick>
 				<onclick condition="stringcompare(Skin.String(Home.Movies.Tile.6.Type),7)">Skin.SetString(Home.Movies.Tile.6.Path)</onclick>
+				<onclick>Skin.SetFile(Home.Movies.Tile.6.Icon,.png|.jpg|.gif,special://skin/extras/icons/)</onclick>
 			</control>
 			<control type="button" id="2407">
 				<posx>0</posx>
@@ -1448,6 +1467,7 @@
 				<onclick condition="stringcompare(Skin.String(Home.Movies.Tile.7.Type),5)">Skin.SetFile(Home.Movies.Tile.7.Path,.xsp|.m3u,special://profile/playlists/music/)</onclick>
 				<onclick condition="stringcompare(Skin.String(Home.Movies.Tile.7.Type),6)">RunScript(script.favourites,property=Home.Movies.Tile.7)</onclick>
 				<onclick condition="stringcompare(Skin.String(Home.Movies.Tile.7.Type),7)">Skin.SetString(Home.Movies.Tile.7.Path)</onclick>
+				<onclick>Skin.SetFile(Home.Movies.Tile.7.Icon,.png|.jpg|.gif,special://skin/extras/icons/)</onclick>
 			</control>
 			<control type="button" id="2407">
 				<posx>0</posx>
@@ -1635,6 +1655,7 @@
 				<onclick condition="stringcompare(Skin.String(Home.Movies.Tile.8.Type),5)">Skin.SetFile(Home.Movies.Tile.8.Path,.xsp|.m3u,special://profile/playlists/music/)</onclick>
 				<onclick condition="stringcompare(Skin.String(Home.Movies.Tile.8.Type),6)">RunScript(script.favourites,property=Home.Movies.Tile.8)</onclick>
 				<onclick condition="stringcompare(Skin.String(Home.Movies.Tile.8.Type),7)">Skin.SetString(Home.Movies.Tile.8.Path)</onclick>
+				<onclick>Skin.SetFile(Home.Movies.Tile.8.Icon,.png|.jpg|.gif,special://skin/extras/icons/)</onclick>
 			</control>
 			<control type="button" id="2407">
 				<posx>0</posx>
@@ -1822,6 +1843,7 @@
 				<onclick condition="stringcompare(Skin.String(Home.Movies.Tile.9.Type),5)">Skin.SetFile(Home.Movies.Tile.9.Path,.xsp|.m3u,special://profile/playlists/music/)</onclick>
 				<onclick condition="stringcompare(Skin.String(Home.Movies.Tile.9.Type),6)">RunScript(script.favourites,property=Home.Movies.Tile.9)</onclick>
 				<onclick condition="stringcompare(Skin.String(Home.Movies.Tile.9.Type),7)">Skin.SetString(Home.Movies.Tile.9.Path)</onclick>
+				<onclick>Skin.SetFile(Home.Movies.Tile.9.Icon,.png|.jpg|.gif,special://skin/extras/icons/)</onclick>
 			</control>
 			<control type="button" id="2407">
 				<posx>0</posx>
@@ -2009,6 +2031,7 @@
 				<onclick condition="stringcompare(Skin.String(Home.Movies.Tile.10.Type),5)">Skin.SetFile(Home.Movies.Tile.10.Path,.xsp|.m3u,special://profile/playlists/music/)</onclick>
 				<onclick condition="stringcompare(Skin.String(Home.Movies.Tile.10.Type),6)">RunScript(script.favourites,property=Home.Movies.Tile.10)</onclick>
 				<onclick condition="stringcompare(Skin.String(Home.Movies.Tile.10.Type),7)">Skin.SetString(Home.Movies.Tile.10.Path)</onclick>
+				<onclick>Skin.SetFile(Home.Movies.Tile.10.Icon,.png|.jpg|.gif,special://skin/extras/icons/)</onclick>
 			</control>
 			<control type="button" id="2407">
 				<posx>0</posx>
@@ -2175,12 +2198,24 @@
 				<onclick condition="stringcompare(Skin.String(Home.Tvshows.Tile.0.Type),6)">RunScript(script.favourites,property=Home.Tvshows.Tile.0)</onclick>
 				<onclick condition="stringcompare(Skin.String(Home.Tvshows.Tile.0.Type),7)">Skin.SetString(Home.Tvshows.Tile.0.Path)</onclick>
 			</control>
-			<control type="button" id="2407">
-				<posx>0</posx>
-				<posy>180</posy>
+			<control type="radiobutton" id="2407">
 				<onleft>3</onleft>
 				<onright>5</onright>
 				<onup>2406</onup>
+				<ondown>2408</ondown>
+				<posy>180</posy>
+				<textcolor>mod-infotags</textcolor>
+				<include>SettingsCustomDialogRadioButtonVars</include>
+				<label>305</label>
+				<onclick>Skin.ToggleSetting(disable.tvshows)</onclick>
+				<selected>!Skin.HasSetting(disable.tvshows)</selected>
+			</control>
+			<control type="button" id="2408">
+				<posx>0</posx>
+				<posy>240</posy>
+				<onleft>3</onleft>
+				<onright>5</onright>
+				<onup>2407</onup>
 				<ondown>5</ondown>
 				<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogButtonVars</include>
@@ -2358,6 +2393,7 @@
 				<onclick condition="stringcompare(Skin.String(Home.Tvshows.Tile.1.Type),5)">Skin.SetFile(Home.Tvshows.Tile.1.Path,.xsp|.m3u,special://profile/playlists/music/)</onclick>
 				<onclick condition="stringcompare(Skin.String(Home.Tvshows.Tile.1.Type),6)">RunScript(script.favourites,property=Home.Tvshows.Tile.1)</onclick>
 				<onclick condition="stringcompare(Skin.String(Home.Tvshows.Tile.1.Type),7)">Skin.SetString(Home.Tvshows.Tile.1.Path)</onclick>
+				<onclick>Skin.SetFile(Home.Tvshows.Tile.1.Icon,.png|.jpg|.gif,special://skin/extras/icons/)</onclick>
 			</control>
 			<control type="button" id="2407">
 				<posx>0</posx>
@@ -2545,6 +2581,7 @@
 				<onclick condition="stringcompare(Skin.String(Home.Tvshows.Tile.2.Type),5)">Skin.SetFile(Home.Tvshows.Tile.2.Path,.xsp|.m3u,special://profile/playlists/music/)</onclick>
 				<onclick condition="stringcompare(Skin.String(Home.Tvshows.Tile.2.Type),6)">RunScript(script.favourites,property=Home.Tvshows.Tile.2)</onclick>
 				<onclick condition="stringcompare(Skin.String(Home.Tvshows.Tile.2.Type),7)">Skin.SetString(Home.Tvshows.Tile.2.Path)</onclick>
+				<onclick>Skin.SetFile(Home.Tvshows.Tile.2.Icon,.png|.jpg|.gif,special://skin/extras/icons/)</onclick>
 			</control>
 			<control type="button" id="2407">
 				<posx>0</posx>
@@ -2732,6 +2769,7 @@
 				<onclick condition="stringcompare(Skin.String(Home.Tvshows.Tile.3.Type),5)">Skin.SetFile(Home.Tvshows.Tile.3.Path,.xsp|.m3u,special://profile/playlists/music/)</onclick>
 				<onclick condition="stringcompare(Skin.String(Home.Tvshows.Tile.3.Type),6)">RunScript(script.favourites,property=Home.Tvshows.Tile.3)</onclick>
 				<onclick condition="stringcompare(Skin.String(Home.Tvshows.Tile.3.Type),7)">Skin.SetString(Home.Tvshows.Tile.3.Path)</onclick>
+				<onclick>Skin.SetFile(Home.Tvshows.Tile.3.Icon,.png|.jpg|.gif,special://skin/extras/icons/)</onclick>
 			</control>
 			<control type="button" id="2407">
 				<posx>0</posx>
@@ -2919,6 +2957,7 @@
 				<onclick condition="stringcompare(Skin.String(Home.Tvshows.Tile.4.Type),5)">Skin.SetFile(Home.Tvshows.Tile.4.Path,.xsp|.m3u,special://profile/playlists/music/)</onclick>
 				<onclick condition="stringcompare(Skin.String(Home.Tvshows.Tile.4.Type),6)">RunScript(script.favourites,property=Home.Tvshows.Tile.4)</onclick>
 				<onclick condition="stringcompare(Skin.String(Home.Tvshows.Tile.4.Type),7)">Skin.SetString(Home.Tvshows.Tile.4.Path)</onclick>
+				<onclick>Skin.SetFile(Home.Tvshows.Tile.4.Icon,.png|.jpg|.gif,special://skin/extras/icons/)</onclick>
 			</control>
 			<control type="button" id="2407">
 				<posx>0</posx>
@@ -3106,6 +3145,7 @@
 				<onclick condition="stringcompare(Skin.String(Home.Tvshows.Tile.5.Type),5)">Skin.SetFile(Home.Tvshows.Tile.5.Path,.xsp|.m3u,special://profile/playlists/music/)</onclick>
 				<onclick condition="stringcompare(Skin.String(Home.Tvshows.Tile.5.Type),6)">RunScript(script.favourites,property=Home.Tvshows.Tile.5)</onclick>
 				<onclick condition="stringcompare(Skin.String(Home.Tvshows.Tile.5.Type),7)">Skin.SetString(Home.Tvshows.Tile.5.Path)</onclick>
+				<onclick>Skin.SetFile(Home.Tvshows.Tile.5.Icon,.png|.jpg|.gif,special://skin/extras/icons/)</onclick>
 			</control>
 			<control type="button" id="2407">
 				<posx>0</posx>
@@ -3293,6 +3333,7 @@
 				<onclick condition="stringcompare(Skin.String(Home.Tvshows.Tile.6.Type),5)">Skin.SetFile(Home.Tvshows.Tile.6.Path,.xsp|.m3u,special://profile/playlists/music/)</onclick>
 				<onclick condition="stringcompare(Skin.String(Home.Tvshows.Tile.6.Type),6)">RunScript(script.favourites,property=Home.Tvshows.Tile.6)</onclick>
 				<onclick condition="stringcompare(Skin.String(Home.Tvshows.Tile.6.Type),7)">Skin.SetString(Home.Tvshows.Tile.6.Path)</onclick>
+				<onclick>Skin.SetFile(Home.Tvshows.Tile.6.Icon,.png|.jpg|.gif,special://skin/extras/icons/)</onclick>
 			</control>
 			<control type="button" id="2407">
 				<posx>0</posx>
@@ -3480,6 +3521,7 @@
 				<onclick condition="stringcompare(Skin.String(Home.Tvshows.Tile.7.Type),5)">Skin.SetFile(Home.Tvshows.Tile.7.Path,.xsp|.m3u,special://profile/playlists/music/)</onclick>
 				<onclick condition="stringcompare(Skin.String(Home.Tvshows.Tile.7.Type),6)">RunScript(script.favourites,property=Home.Tvshows.Tile.7)</onclick>
 				<onclick condition="stringcompare(Skin.String(Home.Tvshows.Tile.7.Type),7)">Skin.SetString(Home.Tvshows.Tile.7.Path)</onclick>
+				<onclick>Skin.SetFile(Home.Tvshows.Tile.7.Icon,.png|.jpg|.gif,special://skin/extras/icons/)</onclick>
 			</control>
 			<control type="button" id="2407">
 				<posx>0</posx>
@@ -3667,6 +3709,7 @@
 				<onclick condition="stringcompare(Skin.String(Home.Tvshows.Tile.8.Type),5)">Skin.SetFile(Home.Tvshows.Tile.8.Path,.xsp|.m3u,special://profile/playlists/music/)</onclick>
 				<onclick condition="stringcompare(Skin.String(Home.Tvshows.Tile.8.Type),6)">RunScript(script.favourites,property=Home.Tvshows.Tile.8)</onclick>
 				<onclick condition="stringcompare(Skin.String(Home.Tvshows.Tile.8.Type),7)">Skin.SetString(Home.Tvshows.Tile.8.Path)</onclick>
+				<onclick>Skin.SetFile(Home.Tvshows.Tile.8.Icon,.png|.jpg|.gif,special://skin/extras/icons/)</onclick>
 			</control>
 			<control type="button" id="2407">
 				<posx>0</posx>
@@ -3854,6 +3897,7 @@
 				<onclick condition="stringcompare(Skin.String(Home.Tvshows.Tile.9.Type),5)">Skin.SetFile(Home.Tvshows.Tile.9.Path,.xsp|.m3u,special://profile/playlists/music/)</onclick>
 				<onclick condition="stringcompare(Skin.String(Home.Tvshows.Tile.9.Type),6)">RunScript(script.favourites,property=Home.Tvshows.Tile.9)</onclick>
 				<onclick condition="stringcompare(Skin.String(Home.Tvshows.Tile.9.Type),7)">Skin.SetString(Home.Tvshows.Tile.9.Path)</onclick>
+				<onclick>Skin.SetFile(Home.Tvshows.Tile.9.Icon,.png|.jpg|.gif,special://skin/extras/icons/)</onclick>
 			</control>
 			<control type="button" id="2407">
 				<posx>0</posx>
@@ -4041,6 +4085,7 @@
 				<onclick condition="stringcompare(Skin.String(Home.Tvshows.Tile.10.Type),5)">Skin.SetFile(Home.Tvshows.Tile.10.Path,.xsp|.m3u,special://profile/playlists/music/)</onclick>
 				<onclick condition="stringcompare(Skin.String(Home.Tvshows.Tile.10.Type),6)">RunScript(script.favourites,property=Home.Tvshows.Tile.10)</onclick>
 				<onclick condition="stringcompare(Skin.String(Home.Tvshows.Tile.10.Type),7)">Skin.SetString(Home.Tvshows.Tile.10.Path)</onclick>
+				<onclick>Skin.SetFile(Home.Tvshows.Tile.10.Icon,.png|.jpg|.gif,special://skin/extras/icons/)</onclick>
 			</control>
 			<control type="button" id="2407">
 				<posx>0</posx>
@@ -4206,12 +4251,24 @@
 				<onclick condition="stringcompare(Skin.String(Home.Music.Tile.0.Type),6)">RunScript(script.favourites,property=Home.Music.Tile.0)</onclick>
 				<onclick condition="stringcompare(Skin.String(Home.Music.Tile.0.Type),7)">Skin.SetString(Home.Music.Tile.0.Path)</onclick>
 			</control>
-			<control type="button" id="2407">
-				<posx>0</posx>
-				<posy>180</posy>
+			<control type="radiobutton" id="2407">
 				<onleft>3</onleft>
 				<onright>5</onright>
 				<onup>2406</onup>
+				<ondown>2408</ondown>
+				<posy>180</posy>
+				<textcolor>mod-infotags</textcolor>
+				<include>SettingsCustomDialogRadioButtonVars</include>
+				<label>305</label>
+				<onclick>Skin.ToggleSetting(disable.music)</onclick>
+				<selected>!Skin.HasSetting(disable.music)</selected>
+			</control>
+			<control type="button" id="2408">
+				<posx>0</posx>
+				<posy>240</posy>
+				<onleft>3</onleft>
+				<onright>5</onright>
+				<onup>2407</onup>
 				<ondown>5</ondown>
 				<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogButtonVars</include>
@@ -4389,6 +4446,7 @@
 				<onclick condition="stringcompare(Skin.String(Home.Music.Tile.1.Type),5)">Skin.SetFile(Home.Music.Tile.1.Path,.xsp|.m3u,special://profile/playlists/music/)</onclick>
 				<onclick condition="stringcompare(Skin.String(Home.Music.Tile.1.Type),6)">RunScript(script.favourites,property=Home.Music.Tile.1)</onclick>
 				<onclick condition="stringcompare(Skin.String(Home.Music.Tile.1.Type),7)">Skin.SetString(Home.Music.Tile.1.Path)</onclick>
+				<onclick>Skin.SetFile(Home.Music.Tile.1.Icon,.png|.jpg|.gif,special://skin/extras/icons/)</onclick>
 			</control>
 			<control type="button" id="2407">
 				<posx>0</posx>
@@ -4576,6 +4634,7 @@
 				<onclick condition="stringcompare(Skin.String(Home.Music.Tile.2.Type),5)">Skin.SetFile(Home.Music.Tile.2.Path,.xsp|.m3u,special://profile/playlists/music/)</onclick>
 				<onclick condition="stringcompare(Skin.String(Home.Music.Tile.2.Type),6)">RunScript(script.favourites,property=Home.Music.Tile.2)</onclick>
 				<onclick condition="stringcompare(Skin.String(Home.Music.Tile.2.Type),7)">Skin.SetString(Home.Music.Tile.2.Path)</onclick>
+				<onclick>Skin.SetFile(Home.Music.Tile.2.Icon,.png|.jpg|.gif,special://skin/extras/icons/)</onclick>
 			</control>
 			<control type="button" id="2407">
 				<posx>0</posx>
@@ -4763,6 +4822,7 @@
 				<onclick condition="stringcompare(Skin.String(Home.Music.Tile.3.Type),5)">Skin.SetFile(Home.Music.Tile.3.Path,.xsp|.m3u,special://profile/playlists/music/)</onclick>
 				<onclick condition="stringcompare(Skin.String(Home.Music.Tile.3.Type),6)">RunScript(script.favourites,property=Home.Music.Tile.3)</onclick>
 				<onclick condition="stringcompare(Skin.String(Home.Music.Tile.3.Type),7)">Skin.SetString(Home.Music.Tile.3.Path)</onclick>
+				<onclick>Skin.SetFile(Home.Music.Tile.3.Icon,.png|.jpg|.gif,special://skin/extras/icons/)</onclick>
 			</control>
 			<control type="button" id="2407">
 				<posx>0</posx>
@@ -4950,6 +5010,7 @@
 				<onclick condition="stringcompare(Skin.String(Home.Music.Tile.4.Type),5)">Skin.SetFile(Home.Music.Tile.4.Path,.xsp|.m3u,special://profile/playlists/music/)</onclick>
 				<onclick condition="stringcompare(Skin.String(Home.Music.Tile.4.Type),6)">RunScript(script.favourites,property=Home.Music.Tile.4)</onclick>
 				<onclick condition="stringcompare(Skin.String(Home.Music.Tile.4.Type),7)">Skin.SetString(Home.Music.Tile.4.Path)</onclick>
+				<onclick>Skin.SetFile(Home.Music.Tile.4.Icon,.png|.jpg|.gif,special://skin/extras/icons/)</onclick>
 			</control>
 			<control type="button" id="2407">
 				<posx>0</posx>
@@ -5137,6 +5198,7 @@
 				<onclick condition="stringcompare(Skin.String(Home.Music.Tile.5.Type),5)">Skin.SetFile(Home.Music.Tile.5.Path,.xsp|.m3u,special://profile/playlists/music/)</onclick>
 				<onclick condition="stringcompare(Skin.String(Home.Music.Tile.5.Type),6)">RunScript(script.favourites,property=Home.Music.Tile.5)</onclick>
 				<onclick condition="stringcompare(Skin.String(Home.Music.Tile.5.Type),7)">Skin.SetString(Home.Music.Tile.5.Path)</onclick>
+				<onclick>Skin.SetFile(Home.Music.Tile.5.Icon,.png|.jpg|.gif,special://skin/extras/icons/)</onclick>
 			</control>
 			<control type="button" id="2407">
 				<posx>0</posx>
@@ -5324,6 +5386,7 @@
 				<onclick condition="stringcompare(Skin.String(Home.Music.Tile.6.Type),5)">Skin.SetFile(Home.Music.Tile.6.Path,.xsp|.m3u,special://profile/playlists/music/)</onclick>
 				<onclick condition="stringcompare(Skin.String(Home.Music.Tile.6.Type),6)">RunScript(script.favourites,property=Home.Music.Tile.6)</onclick>
 				<onclick condition="stringcompare(Skin.String(Home.Music.Tile.6.Type),7)">Skin.SetString(Home.Music.Tile.6.Path)</onclick>
+				<onclick>Skin.SetFile(Home.Music.Tile.6.Icon,.png|.jpg|.gif,special://skin/extras/icons/)</onclick>
 			</control>
 			<control type="button" id="2407">
 				<posx>0</posx>
@@ -5511,6 +5574,7 @@
 				<onclick condition="stringcompare(Skin.String(Home.Music.Tile.7.Type),5)">Skin.SetFile(Home.Music.Tile.7.Path,.xsp|.m3u,special://profile/playlists/music/)</onclick>
 				<onclick condition="stringcompare(Skin.String(Home.Music.Tile.7.Type),6)">RunScript(script.favourites,property=Home.Music.Tile.7)</onclick>
 				<onclick condition="stringcompare(Skin.String(Home.Music.Tile.7.Type),7)">Skin.SetString(Home.Music.Tile.7.Path)</onclick>
+				<onclick>Skin.SetFile(Home.Music.Tile.7.Icon,.png|.jpg|.gif,special://skin/extras/icons/)</onclick>
 			</control>
 			<control type="button" id="2407">
 				<posx>0</posx>
@@ -5698,6 +5762,7 @@
 				<onclick condition="stringcompare(Skin.String(Home.Music.Tile.8.Type),5)">Skin.SetFile(Home.Music.Tile.8.Path,.xsp|.m3u,special://profile/playlists/music/)</onclick>
 				<onclick condition="stringcompare(Skin.String(Home.Music.Tile.8.Type),6)">RunScript(script.favourites,property=Home.Music.Tile.8)</onclick>
 				<onclick condition="stringcompare(Skin.String(Home.Music.Tile.8.Type),7)">Skin.SetString(Home.Music.Tile.8.Path)</onclick>
+				<onclick>Skin.SetFile(Home.Music.Tile.8.Icon,.png|.jpg|.gif,special://skin/extras/icons/)</onclick>
 			</control>
 			<control type="button" id="2407">
 				<posx>0</posx>
@@ -5885,6 +5950,7 @@
 				<onclick condition="stringcompare(Skin.String(Home.Music.Tile.9.Type),5)">Skin.SetFile(Home.Music.Tile.9.Path,.xsp|.m3u,special://profile/playlists/music/)</onclick>
 				<onclick condition="stringcompare(Skin.String(Home.Music.Tile.9.Type),6)">RunScript(script.favourites,property=Home.Music.Tile.9)</onclick>
 				<onclick condition="stringcompare(Skin.String(Home.Music.Tile.9.Type),7)">Skin.SetString(Home.Music.Tile.9.Path)</onclick>
+				<onclick>Skin.SetFile(Home.Music.Tile.9.Icon,.png|.jpg|.gif,special://skin/extras/icons/)</onclick>
 			</control>
 			<control type="button" id="2407">
 				<posx>0</posx>
@@ -6072,6 +6138,7 @@
 				<onclick condition="stringcompare(Skin.String(Home.Music.Tile.10.Type),5)">Skin.SetFile(Home.Music.Tile.10.Path,.xsp|.m3u,special://profile/playlists/music/)</onclick>
 				<onclick condition="stringcompare(Skin.String(Home.Music.Tile.10.Type),6)">RunScript(script.favourites,property=Home.Music.Tile.10)</onclick>
 				<onclick condition="stringcompare(Skin.String(Home.Music.Tile.10.Type),7)">Skin.SetString(Home.Music.Tile.10.Path)</onclick>
+				<onclick>Skin.SetFile(Home.Music.Tile.10.Icon,.png|.jpg|.gif,special://skin/extras/icons/)</onclick>
 			</control>
 			<control type="button" id="2407">
 				<posx>0</posx>
@@ -6236,12 +6303,24 @@
 				<onclick condition="stringcompare(Skin.String(Home.Programs.Tile.0.Type),6)">RunScript(script.favourites,property=Home.Programs.Tile.0)</onclick>
 				<onclick condition="stringcompare(Skin.String(Home.Programs.Tile.0.Type),7)">Skin.SetString(Home.Programs.Tile.0.Path)</onclick>
 			</control>
-			<control type="button" id="2407">
-				<posx>0</posx>
-				<posy>180</posy>
+			<control type="radiobutton" id="2407">
 				<onleft>3</onleft>
 				<onright>5</onright>
 				<onup>2406</onup>
+				<ondown>2408</ondown>
+				<posy>180</posy>
+				<textcolor>mod-infotags</textcolor>
+				<include>SettingsCustomDialogRadioButtonVars</include>
+				<label>305</label>
+				<onclick>Skin.ToggleSetting(disable.programs)</onclick>
+				<selected>!Skin.HasSetting(disable.programs)</selected>
+			</control>
+			<control type="button" id="2408">
+				<posx>0</posx>
+				<posy>240</posy>
+				<onleft>3</onleft>
+				<onright>5</onright>
+				<onup>2407</onup>
 				<ondown>5</ondown>
 				<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogButtonVars</include>
@@ -6419,6 +6498,7 @@
 				<onclick condition="stringcompare(Skin.String(Home.Programs.Tile.1.Type),5)">Skin.SetFile(Home.Programs.Tile.1.Path,.xsp|.m3u,special://profile/playlists/music/)</onclick>
 				<onclick condition="stringcompare(Skin.String(Home.Programs.Tile.1.Type),6)">RunScript(script.favourites,property=Home.Programs.Tile.1)</onclick>
 				<onclick condition="stringcompare(Skin.String(Home.Programs.Tile.1.Type),7)">Skin.SetString(Home.Programs.Tile.1.Path)</onclick>
+				<onclick>Skin.SetFile(Home.Programs.Tile.1.Icon,.png|.jpg|.gif,special://skin/extras/icons/)</onclick>
 			</control>
 			<control type="button" id="2407">
 				<posx>0</posx>
@@ -6606,6 +6686,7 @@
 				<onclick condition="stringcompare(Skin.String(Home.Programs.Tile.2.Type),5)">Skin.SetFile(Home.Programs.Tile.2.Path,.xsp|.m3u,special://profile/playlists/music/)</onclick>
 				<onclick condition="stringcompare(Skin.String(Home.Programs.Tile.2.Type),6)">RunScript(script.favourites,property=Home.Programs.Tile.2)</onclick>
 				<onclick condition="stringcompare(Skin.String(Home.Programs.Tile.2.Type),7)">Skin.SetString(Home.Programs.Tile.2.Path)</onclick>
+				<onclick>Skin.SetFile(Home.Programs.Tile.2.Icon,.png|.jpg|.gif,special://skin/extras/icons/)</onclick>
 			</control>
 			<control type="button" id="2407">
 				<posx>0</posx>
@@ -6793,6 +6874,7 @@
 				<onclick condition="stringcompare(Skin.String(Home.Programs.Tile.3.Type),5)">Skin.SetFile(Home.Programs.Tile.3.Path,.xsp|.m3u,special://profile/playlists/music/)</onclick>
 				<onclick condition="stringcompare(Skin.String(Home.Programs.Tile.3.Type),6)">RunScript(script.favourites,property=Home.Programs.Tile.3)</onclick>
 				<onclick condition="stringcompare(Skin.String(Home.Programs.Tile.3.Type),7)">Skin.SetString(Home.Programs.Tile.3.Path)</onclick>
+				<onclick>Skin.SetFile(Home.Programs.Tile.3.Icon,.png|.jpg|.gif,special://skin/extras/icons/)</onclick>
 			</control>
 			<control type="button" id="2407">
 				<posx>0</posx>
@@ -6980,6 +7062,7 @@
 				<onclick condition="stringcompare(Skin.String(Home.Programs.Tile.4.Type),5)">Skin.SetFile(Home.Programs.Tile.4.Path,.xsp|.m3u,special://profile/playlists/music/)</onclick>
 				<onclick condition="stringcompare(Skin.String(Home.Programs.Tile.4.Type),6)">RunScript(script.favourites,property=Home.Programs.Tile.4)</onclick>
 				<onclick condition="stringcompare(Skin.String(Home.Programs.Tile.4.Type),7)">Skin.SetString(Home.Programs.Tile.4.Path)</onclick>
+				<onclick>Skin.SetFile(Home.Programs.Tile.4.Icon,.png|.jpg|.gif,special://skin/extras/icons/)</onclick>
 			</control>
 			<control type="button" id="2407">
 				<posx>0</posx>
@@ -7167,6 +7250,7 @@
 				<onclick condition="stringcompare(Skin.String(Home.Programs.Tile.5.Type),5)">Skin.SetFile(Home.Programs.Tile.5.Path,.xsp|.m3u,special://profile/playlists/music/)</onclick>
 				<onclick condition="stringcompare(Skin.String(Home.Programs.Tile.5.Type),6)">RunScript(script.favourites,property=Home.Programs.Tile.5)</onclick>
 				<onclick condition="stringcompare(Skin.String(Home.Programs.Tile.5.Type),7)">Skin.SetString(Home.Programs.Tile.5.Path)</onclick>
+				<onclick>Skin.SetFile(Home.Programs.Tile.5.Icon,.png|.jpg|.gif,special://skin/extras/icons/)</onclick>
 			</control>
 			<control type="button" id="2407">
 				<posx>0</posx>
@@ -7354,6 +7438,7 @@
 				<onclick condition="stringcompare(Skin.String(Home.Programs.Tile.6.Type),5)">Skin.SetFile(Home.Programs.Tile.6.Path,.xsp|.m3u,special://profile/playlists/music/)</onclick>
 				<onclick condition="stringcompare(Skin.String(Home.Programs.Tile.6.Type),6)">RunScript(script.favourites,property=Home.Programs.Tile.6)</onclick>
 				<onclick condition="stringcompare(Skin.String(Home.Programs.Tile.6.Type),7)">Skin.SetString(Home.Programs.Tile.6.Path)</onclick>
+				<onclick>Skin.SetFile(Home.Programs.Tile.6.Icon,.png|.jpg|.gif,special://skin/extras/icons/)</onclick>
 			</control>
 			<control type="button" id="2407">
 				<posx>0</posx>
@@ -7541,6 +7626,7 @@
 				<onclick condition="stringcompare(Skin.String(Home.Programs.Tile.7.Type),5)">Skin.SetFile(Home.Programs.Tile.7.Path,.xsp|.m3u,special://profile/playlists/music/)</onclick>
 				<onclick condition="stringcompare(Skin.String(Home.Programs.Tile.7.Type),6)">RunScript(script.favourites,property=Home.Programs.Tile.7)</onclick>
 				<onclick condition="stringcompare(Skin.String(Home.Programs.Tile.7.Type),7)">Skin.SetString(Home.Programs.Tile.7.Path)</onclick>
+				<onclick>Skin.SetFile(Home.Programs.Tile.7.Icon,.png|.jpg|.gif,special://skin/extras/icons/)</onclick>
 			</control>
 			<control type="button" id="2407">
 				<posx>0</posx>
@@ -7728,6 +7814,7 @@
 				<onclick condition="stringcompare(Skin.String(Home.Programs.Tile.8.Type),5)">Skin.SetFile(Home.Programs.Tile.8.Path,.xsp|.m3u,special://profile/playlists/music/)</onclick>
 				<onclick condition="stringcompare(Skin.String(Home.Programs.Tile.8.Type),6)">RunScript(script.favourites,property=Home.Programs.Tile.8)</onclick>
 				<onclick condition="stringcompare(Skin.String(Home.Programs.Tile.8.Type),7)">Skin.SetString(Home.Programs.Tile.8.Path)</onclick>
+				<onclick>Skin.SetFile(Home.Programs.Tile.8.Icon,.png|.jpg|.gif,special://skin/extras/icons/)</onclick>
 			</control>
 			<control type="button" id="2407">
 				<posx>0</posx>
@@ -7915,6 +8002,7 @@
 				<onclick condition="stringcompare(Skin.String(Home.Programs.Tile.9.Type),5)">Skin.SetFile(Home.Programs.Tile.9.Path,.xsp|.m3u,special://profile/playlists/music/)</onclick>
 				<onclick condition="stringcompare(Skin.String(Home.Programs.Tile.9.Type),6)">RunScript(script.favourites,property=Home.Programs.Tile.9)</onclick>
 				<onclick condition="stringcompare(Skin.String(Home.Programs.Tile.9.Type),7)">Skin.SetString(Home.Programs.Tile.9.Path)</onclick>
+				<onclick>Skin.SetFile(Home.Programs.Tile.9.Icon,.png|.jpg|.gif,special://skin/extras/icons/)</onclick>
 			</control>
 			<control type="button" id="2407">
 				<posx>0</posx>
@@ -8102,6 +8190,7 @@
 				<onclick condition="stringcompare(Skin.String(Home.Programs.Tile.10.Type),5)">Skin.SetFile(Home.Programs.Tile.10.Path,.xsp|.m3u,special://profile/playlists/music/)</onclick>
 				<onclick condition="stringcompare(Skin.String(Home.Programs.Tile.10.Type),6)">RunScript(script.favourites,property=Home.Programs.Tile.10)</onclick>
 				<onclick condition="stringcompare(Skin.String(Home.Programs.Tile.10.Type),7)">Skin.SetString(Home.Programs.Tile.10.Path)</onclick>
+				<onclick>Skin.SetFile(Home.Programs.Tile.10.Icon,.png|.jpg|.gif,special://skin/extras/icons/)</onclick>
 			</control>
 			<control type="button" id="2407">
 				<posx>0</posx>
@@ -8266,12 +8355,24 @@
 				<onclick condition="stringcompare(Skin.String(Home.Pictures.Tile.0.Type),6)">RunScript(script.favourites,property=Home.Pictures.Tile.0)</onclick>
 				<onclick condition="stringcompare(Skin.String(Home.Pictures.Tile.0.Type),7)">Skin.SetString(Home.Pictures.Tile.0.Path)</onclick>
 			</control>
-			<control type="button" id="2407">
-				<posx>0</posx>
-				<posy>180</posy>
+			<control type="radiobutton" id="2407">
 				<onleft>3</onleft>
 				<onright>5</onright>
 				<onup>2406</onup>
+				<ondown>2408</ondown>
+				<posy>180</posy>
+				<textcolor>mod-infotags</textcolor>
+				<include>SettingsCustomDialogRadioButtonVars</include>
+				<label>305</label>
+				<onclick>Skin.ToggleSetting(disable.pictures)</onclick>
+				<selected>!Skin.HasSetting(disable.pictures)</selected>
+			</control>
+			<control type="button" id="2408">
+				<posx>0</posx>
+				<posy>240</posy>
+				<onleft>3</onleft>
+				<onright>5</onright>
+				<onup>2407</onup>
 				<ondown>5</ondown>
 				<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogButtonVars</include>
@@ -8449,6 +8550,7 @@
 				<onclick condition="stringcompare(Skin.String(Home.Pictures.Tile.1.Type),5)">Skin.SetFile(Home.Pictures.Tile.1.Path,.xsp|.m3u,special://profile/playlists/music/)</onclick>
 				<onclick condition="stringcompare(Skin.String(Home.Pictures.Tile.1.Type),6)">RunScript(script.favourites,property=Home.Pictures.Tile.1)</onclick>
 				<onclick condition="stringcompare(Skin.String(Home.Pictures.Tile.1.Type),7)">Skin.SetString(Home.Pictures.Tile.1.Path)</onclick>
+				<onclick>Skin.SetFile(Home.Pictures.Tile.1.Icon,.png|.jpg|.gif,special://skin/extras/icons/)</onclick>
 			</control>
 			<control type="button" id="2407">
 				<posx>0</posx>
@@ -8636,6 +8738,7 @@
 				<onclick condition="stringcompare(Skin.String(Home.Pictures.Tile.2.Type),5)">Skin.SetFile(Home.Pictures.Tile.2.Path,.xsp|.m3u,special://profile/playlists/music/)</onclick>
 				<onclick condition="stringcompare(Skin.String(Home.Pictures.Tile.2.Type),6)">RunScript(script.favourites,property=Home.Pictures.Tile.2)</onclick>
 				<onclick condition="stringcompare(Skin.String(Home.Pictures.Tile.2.Type),7)">Skin.SetString(Home.Pictures.Tile.2.Path)</onclick>
+				<onclick>Skin.SetFile(Home.Pictures.Tile.2.Icon,.png|.jpg|.gif,special://skin/extras/icons/)</onclick>
 			</control>
 			<control type="button" id="2407">
 				<posx>0</posx>
@@ -8823,6 +8926,7 @@
 				<onclick condition="stringcompare(Skin.String(Home.Pictures.Tile.3.Type),5)">Skin.SetFile(Home.Pictures.Tile.3.Path,.xsp|.m3u,special://profile/playlists/music/)</onclick>
 				<onclick condition="stringcompare(Skin.String(Home.Pictures.Tile.3.Type),6)">RunScript(script.favourites,property=Home.Pictures.Tile.3)</onclick>
 				<onclick condition="stringcompare(Skin.String(Home.Pictures.Tile.3.Type),7)">Skin.SetString(Home.Pictures.Tile.3.Path)</onclick>
+				<onclick>Skin.SetFile(Home.Pictures.Tile.3.Icon,.png|.jpg|.gif,special://skin/extras/icons/)</onclick>
 			</control>
 			<control type="button" id="2407">
 				<posx>0</posx>
@@ -9010,6 +9114,7 @@
 				<onclick condition="stringcompare(Skin.String(Home.Pictures.Tile.4.Type),5)">Skin.SetFile(Home.Pictures.Tile.4.Path,.xsp|.m3u,special://profile/playlists/music/)</onclick>
 				<onclick condition="stringcompare(Skin.String(Home.Pictures.Tile.4.Type),6)">RunScript(script.favourites,property=Home.Pictures.Tile.4)</onclick>
 				<onclick condition="stringcompare(Skin.String(Home.Pictures.Tile.4.Type),7)">Skin.SetString(Home.Pictures.Tile.4.Path)</onclick>
+				<onclick>Skin.SetFile(Home.Pictures.Tile.4.Icon,.png|.jpg|.gif,special://skin/extras/icons/)</onclick>
 			</control>
 			<control type="button" id="2407">
 				<posx>0</posx>
@@ -9197,6 +9302,7 @@
 				<onclick condition="stringcompare(Skin.String(Home.Pictures.Tile.5.Type),5)">Skin.SetFile(Home.Pictures.Tile.5.Path,.xsp|.m3u,special://profile/playlists/music/)</onclick>
 				<onclick condition="stringcompare(Skin.String(Home.Pictures.Tile.5.Type),6)">RunScript(script.favourites,property=Home.Pictures.Tile.5)</onclick>
 				<onclick condition="stringcompare(Skin.String(Home.Pictures.Tile.5.Type),7)">Skin.SetString(Home.Pictures.Tile.5.Path)</onclick>
+				<onclick>Skin.SetFile(Home.Pictures.Tile.5.Icon,.png|.jpg|.gif,special://skin/extras/icons/)</onclick>
 			</control>
 			<control type="button" id="2407">
 				<posx>0</posx>
@@ -9384,6 +9490,7 @@
 				<onclick condition="stringcompare(Skin.String(Home.Pictures.Tile.6.Type),5)">Skin.SetFile(Home.Pictures.Tile.6.Path,.xsp|.m3u,special://profile/playlists/music/)</onclick>
 				<onclick condition="stringcompare(Skin.String(Home.Pictures.Tile.6.Type),6)">RunScript(script.favourites,property=Home.Pictures.Tile.6)</onclick>
 				<onclick condition="stringcompare(Skin.String(Home.Pictures.Tile.6.Type),7)">Skin.SetString(Home.Pictures.Tile.6.Path)</onclick>
+				<onclick>Skin.SetFile(Home.Pictures.Tile.6.Icon,.png|.jpg|.gif,special://skin/extras/icons/)</onclick>
 			</control>
 			<control type="button" id="2407">
 				<posx>0</posx>
@@ -9571,6 +9678,7 @@
 				<onclick condition="stringcompare(Skin.String(Home.Pictures.Tile.7.Type),5)">Skin.SetFile(Home.Pictures.Tile.7.Path,.xsp|.m3u,special://profile/playlists/music/)</onclick>
 				<onclick condition="stringcompare(Skin.String(Home.Pictures.Tile.7.Type),6)">RunScript(script.favourites,property=Home.Pictures.Tile.7)</onclick>
 				<onclick condition="stringcompare(Skin.String(Home.Pictures.Tile.7.Type),7)">Skin.SetString(Home.Pictures.Tile.7.Path)</onclick>
+				<onclick>Skin.SetFile(Home.Pictures.Tile.7.Icon,.png|.jpg|.gif,special://skin/extras/icons/)</onclick>
 			</control>
 			<control type="button" id="2407">
 				<posx>0</posx>
@@ -9758,6 +9866,7 @@
 				<onclick condition="stringcompare(Skin.String(Home.Pictures.Tile.8.Type),5)">Skin.SetFile(Home.Pictures.Tile.8.Path,.xsp|.m3u,special://profile/playlists/music/)</onclick>
 				<onclick condition="stringcompare(Skin.String(Home.Pictures.Tile.8.Type),6)">RunScript(script.favourites,property=Home.Pictures.Tile.8)</onclick>
 				<onclick condition="stringcompare(Skin.String(Home.Pictures.Tile.8.Type),7)">Skin.SetString(Home.Pictures.Tile.8.Path)</onclick>
+				<onclick>Skin.SetFile(Home.Pictures.Tile.8.Icon,.png|.jpg|.gif,special://skin/extras/icons/)</onclick>
 			</control>
 			<control type="button" id="2407">
 				<posx>0</posx>
@@ -9945,6 +10054,7 @@
 				<onclick condition="stringcompare(Skin.String(Home.Pictures.Tile.9.Type),5)">Skin.SetFile(Home.Pictures.Tile.9.Path,.xsp|.m3u,special://profile/playlists/music/)</onclick>
 				<onclick condition="stringcompare(Skin.String(Home.Pictures.Tile.9.Type),6)">RunScript(script.favourites,property=Home.Pictures.Tile.9)</onclick>
 				<onclick condition="stringcompare(Skin.String(Home.Pictures.Tile.9.Type),7)">Skin.SetString(Home.Pictures.Tile.9.Path)</onclick>
+				<onclick>Skin.SetFile(Home.Pictures.Tile.9.Icon,.png|.jpg|.gif,special://skin/extras/icons/)</onclick>
 			</control>
 			<control type="button" id="2407">
 				<posx>0</posx>
@@ -10132,6 +10242,7 @@
 				<onclick condition="stringcompare(Skin.String(Home.Pictures.Tile.10.Type),5)">Skin.SetFile(Home.Pictures.Tile.10.Path,.xsp|.m3u,special://profile/playlists/music/)</onclick>
 				<onclick condition="stringcompare(Skin.String(Home.Pictures.Tile.10.Type),6)">RunScript(script.favourites,property=Home.Pictures.Tile.10)</onclick>
 				<onclick condition="stringcompare(Skin.String(Home.Pictures.Tile.10.Type),7)">Skin.SetString(Home.Pictures.Tile.10.Path)</onclick>
+				<onclick>Skin.SetFile(Home.Pictures.Tile.10.Icon,.png|.jpg|.gif,special://skin/extras/icons/)</onclick>
 			</control>
 			<control type="button" id="2407">
 				<posx>0</posx>

@@ -73,3 +73,8 @@ All main categories (movies, tvshows, music, pictures, programs) customisable
 Dropped custom category (old games menu)
 Pictures now has a custom submenu
 Rearranged categories so LiveTV is on the left of movies
+
+[B]0.3.1[/B]
+Fixed icon selection not showing image
+Can enable and disable category from custom home items menu
+Auto prompt to select icon from extras after choosing path for custom item

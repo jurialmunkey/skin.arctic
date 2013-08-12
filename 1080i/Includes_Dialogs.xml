@@ -2124,6 +2124,17 @@
                     <include>DialogHeaderMod</include>
                     <label>-</label>
                     <align>left</align>
+                    <visible>IsEmpty(Window(3054).Property(ChooseArt))</visible>
+                </control>
+                <control type="label">
+                    <description>Heading</description>
+                    <posx>550</posx>
+                    <posy>254</posy>
+                    <width>974</width>
+                    <include>DialogHeaderMod</include>
+                    <label>42439</label>
+                    <align>left</align>
+                    <visible>!IsEmpty(Window(3054).Property(ChooseArt))</visible>
                 </control>
                 
                 <control type="image">

@@ -78,3 +78,4 @@ Rearranged categories so LiveTV is on the left of movies
 Fixed icon selection not showing image
 Can enable and disable category from custom home items menu
 Auto prompt to select icon from extras after choosing path for custom item
+Fixed poster aspect for widgets

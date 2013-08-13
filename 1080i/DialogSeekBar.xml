@@ -18,6 +18,15 @@
 				<effect type="fade" start="0" end="100" time="250" tween="sine" easing="inout" />
 				<effect type="slide" start="0,200" end="0" time="250" tween="cubic" easing="out"/>
 			</animation>
+			<!--<control type="image">
+				<description>ClearArt</description>
+				<posx>600r</posx>
+				<posy>-375</posy>
+				<width>600</width>
+				<height>600</height>
+				<texture background="true">$INFO[Player.Art(tvshow.clearart)]</texture>
+				<aspectratio scalediffuse="false" align="right" aligny="bottom">keep</aspectratio>
+			</control>-->
 			<control type="image">
                 <posx>-50</posx>
 				<posy>195</posy>

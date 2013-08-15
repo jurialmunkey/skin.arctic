@@ -1199,3 +1199,7 @@ msgstr ""
 msgctxt "#42438"
 msgid "Item"
 msgstr ""
+
+msgctxt "#42439"
+msgid "Select Icon"
+msgstr ""

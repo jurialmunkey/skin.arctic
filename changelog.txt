@@ -73,3 +73,16 @@ All main categories (movies, tvshows, music, pictures, programs) customisable
 Dropped custom category (old games menu)
 Pictures now has a custom submenu
 Rearranged categories so LiveTV is on the left of movies
+
+[B]0.3.1[/B]
+Fixed icon selection not showing image
+Can enable and disable category from custom home items menu
+Auto prompt to select icon from extras after choosing path for custom item
+Fixed weather scrolling issue (hopefully?)
+Fixed thumbs in plugins to show large and small
+Fixed weather panel issue
+
+[B]0.3.2[/B]
+Fixed bug when selecting favourites being hidden by icon selection
+Fixed bug when selecting playlist incorrectly shows "select icon" instead of "select file"
+Added thumbnails view to advanced launcher.

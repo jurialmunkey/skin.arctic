@@ -18,6 +18,15 @@
 				<effect type="fade" start="0" end="100" time="250" tween="sine" easing="inout" />
 				<effect type="slide" start="0,200" end="0" time="250" tween="cubic" easing="out"/>
 			</animation>
+			<!--<control type="image">
+				<description>ClearArt</description>
+				<posx>600r</posx>
+				<posy>-375</posy>
+				<width>600</width>
+				<height>600</height>
+				<texture background="true">$INFO[Player.Art(tvshow.clearart)]</texture>
+				<aspectratio scalediffuse="false" align="right" aligny="bottom">keep</aspectratio>
+			</control>-->
 			<control type="image">
                 <posx>-50</posx>
 				<posy>195</posy>
@@ -53,7 +62,7 @@
             <control type="group">
 				<animation effect="slide" end="0,-65" time="300" tween="cubic" easing="inout" condition="Window.IsActive(videoosd)">Conditional</animation>
 				<control type="group">
-					<visible>!Skin.HasSetting(videoosd.clearlogo) | [[Player.ShowInfo | Window.IsVisible(fullscreeninfo)] + !Window.IsActive(videoosd) + !IsEmpty(Window(seekbar).Property(ExtendPlot)) + !VideoPlayer.Content(LiveTV)] | ![Player.ShowInfo | Window.IsVisible(fullscreeninfo)]</visible>
+					<visible>!Skin.HasSetting(videoosd.clearlogo) | [IsEmpty(Player.Art(clearlogo)) + IsEmpty(Player.Art(tvshow.clearlogo))] | [[Player.ShowInfo | Window.IsVisible(fullscreeninfo)] + !Window.IsActive(videoosd) + !IsEmpty(Window(seekbar).Property(ExtendPlot)) + !VideoPlayer.Content(LiveTV)] | ![Player.ShowInfo | Window.IsVisible(fullscreeninfo)]</visible>
 					<animation type="Visible" reversible="false">
 						<effect type="fade" start="0" end="100" time="300" tween="sine" easing="inout" delay="150" />
 					</animation>
@@ -246,7 +255,7 @@
 						<animation effect="slide" end="0,-120" time="300" tween="cubic" easing="inout" condition="[[Player.ShowInfo | Window.IsVisible(fullscreeninfo)] + !Window.IsActive(videoosd) + !IsEmpty(Window(seekbar).Property(ExtendPlot)) + !VideoPlayer.Content(LiveTV)]">Conditional</animation>
 					</control>
 					<control type="group">
-						<visible>!VideoPlayer.Content(LiveTV) + !Skin.HasSetting(videoosd.clearlogo)</visible>
+						<visible>!VideoPlayer.Content(LiveTV) + [!Skin.HasSetting(videoosd.clearlogo) | [IsEmpty(Player.Art(clearlogo)) + IsEmpty(Player.Art(tvshow.clearlogo))]]</visible>
 						<posx>-28</posx>
 						<posy>-62</posy>
 						<control type="image">

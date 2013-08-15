@@ -2089,7 +2089,7 @@
             <control type="group">
                 <include>KeyboardAnimations</include>
                 <include>OptionsShutdownAnimation</include>
-                <visible>!Window.IsVisible(virtualkeyboard) + ![Window.IsVisible(networksetup) + IsEmpty(Window.Property(ShowDialog))]</visible>
+                <visible>!Window.IsVisible(virtualkeyboard) + ![Window.IsVisible(networksetup) + IsEmpty(Window.Property(ShowDialog))] + !Window.IsVisible(DialogSelect.xml)</visible>
 				<control type="image">
                 	<posx>449</posx>
                 	<posy>220</posy>

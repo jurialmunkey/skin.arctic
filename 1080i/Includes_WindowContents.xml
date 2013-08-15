@@ -203,7 +203,6 @@
 		<control type="image">
 			<include>FullscreenDimensions</include>
 			<texture>arctic/common/nofanart.png</texture>
-			<colordiffuse>Mod_EmptyBG</colordiffuse>
 		</control>
 		<control type="multiimage">
 			<description>Custom Wallpaper Image</description>

@@ -85,3 +85,4 @@ Fixed weather panel issue
 [B]0.3.2[/B]
 Fixed bug when selecting favourites being hidden by icon selection
 Fixed bug when selecting playlist incorrectly shows "select icon" instead of "select file"
+Added thumbnails view to advanced launcher.

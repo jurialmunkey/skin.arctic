@@ -187,7 +187,7 @@
                                     <font>Font-Alaska-S28-L</font>
                                     <textcolor>99FFFFFF</textcolor>
                                     <shadowcolor>22000000</shadowcolor>
-                                    <scroll>true</scroll>
+                                    <scroll>false</scroll>
                                     <align>left</align>
                                 </control>
                                 <control type="image">

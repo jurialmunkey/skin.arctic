@@ -71,19 +71,6 @@
                     <onclick>PreviousMenu</onclick>
                 </control>
             </control>
-            <!--<control type="textbox">
-                <posx>490</posx>
-                <posy>785</posy>
-                <width>1232</width>
-                <height>195</height>
-                <label>[B]$LOCALIZE[207][/B][CR]$VAR[OSDPlot]</label>
-                <textcolor>mod-infotags</textcolor>
-                <font>Font-Condensed-S32</font>
-                <align>justify</align>
-                <autoscroll delay="11500" time="5000" repeat="7500" />
-                <include>visiblehidefadeinfo</include>
-                <visible>!IsEmpty(VideoPlayer.Plot) + !IsEmpty(Window(seekbar).Property(ExtendPlot))</visible>
-            </control>-->
         </control>
     </controls>
 </window>

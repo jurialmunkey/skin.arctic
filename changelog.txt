@@ -88,3 +88,4 @@ Fixed bug when selecting playlist incorrectly shows "select icon" instead of "se
 Added thumbnails view to advanced launcher.
 Added years, studios, genres as defaults for movies
 Fixed bug in Reel
+Fix thumbnails to show scrolling text

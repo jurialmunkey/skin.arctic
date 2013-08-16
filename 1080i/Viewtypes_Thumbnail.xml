@@ -145,7 +145,7 @@
                             <visible>!IsEmpty(ListItem.Overlay)</visible>
                         </control>
                     </itemlayout>
-                    <focusedlayout width="344" height="344" condition="!Skin.HasSetting(ThumbnailSmall) = ![substring(Container.FolderPath,addons,left)]">
+                    <focusedlayout width="344" height="344" condition="!Skin.HasSetting(ThumbnailSmall) + ![substring(Container.FolderPath,addons,left)]">
                         <control type="group">
                             <animation type="Focus">
                                 <effect type="fade" start="93.36" end="100" time="200" tween="sine" easing="in" />
@@ -187,7 +187,7 @@
                                     <font>Font-Alaska-S28-L</font>
                                     <textcolor>99FFFFFF</textcolor>
                                     <shadowcolor>22000000</shadowcolor>
-                                    <scroll>false</scroll>
+                                    <scroll>true</scroll>
                                     <align>left</align>
                                 </control>
                                 <control type="image">
@@ -261,7 +261,7 @@
                                     <font>Font-Condensed-S25</font>
                                     <textcolor>99FFFFFF</textcolor>
                                     <shadowcolor>22000000</shadowcolor>
-                                    <scroll>false</scroll>
+                                    <scroll>true</scroll>
                                     <align>left</align>
                                 </control>
                                 <control type="image">

@@ -1491,13 +1491,13 @@
 				<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogButtonVars</include>
 				<label>$LOCALIZE[409]</label>
+				<onclick>Skin.SetString(Home.Movies.Tile.7.Path,ActivateWindow(videos,movieactors,return))</onclick>
 				<onclick>Skin.SetString(Home.Movies.Tile.7.Type,7)</onclick>
 				<onclick>Skin.SetString(Home.Movies.Tile.7.TypeName,$LOCALIZE[41151])</onclick>
 				<onclick>Skin.Reset(Home.Movies.Tile.7.Animate)</onclick>
 				<onclick>Skin.Reset(Home.Movies.Tile.7.ShowLabel)</onclick>
-				<onclick>Skin.Reset(Home.Movies.Tile.7.Icon)</onclick>
-				<onclick>Skin.Reset(Home.Movies.Tile.7.Label)</onclick>
-				<onclick>Skin.Reset(Home.Movies.Tile.7.Path)</onclick>
+				<onclick>Skin.SetString(Home.Movies.Tile.7.Icon,special://skin/extras/icons/profiles.png)</onclick>
+				<onclick>Skin.SetString(Home.Movies.Tile.7.Label,$LOCALIZE[344])</onclick>
 			</control>
         </control>
     </include>
@@ -1681,13 +1681,13 @@
 				<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogButtonVars</include>
 				<label>$LOCALIZE[409]</label>
+				<onclick>Skin.SetString(Home.Movies.Tile.8.Path,ActivateWindow(videos,movieyears,return))</onclick>
 				<onclick>Skin.SetString(Home.Movies.Tile.8.Type,7)</onclick>
 				<onclick>Skin.SetString(Home.Movies.Tile.8.TypeName,$LOCALIZE[41151])</onclick>
 				<onclick>Skin.Reset(Home.Movies.Tile.8.Animate)</onclick>
 				<onclick>Skin.Reset(Home.Movies.Tile.8.ShowLabel)</onclick>
-				<onclick>Skin.Reset(Home.Movies.Tile.8.Icon)</onclick>
-				<onclick>Skin.Reset(Home.Movies.Tile.8.Label)</onclick>
-				<onclick>Skin.Reset(Home.Movies.Tile.8.Path)</onclick>
+				<onclick>Skin.SetString(Home.Movies.Tile.8.Icon,special://skin/extras/icons/ticket2.png)</onclick>
+				<onclick>Skin.SetString(Home.Movies.Tile.8.Label,$LOCALIZE[652])</onclick>
 			</control>
         </control>
     </include>
@@ -1871,13 +1871,13 @@
 				<textcolor>mod-infotags</textcolor>
 					<include>SettingsCustomDialogButtonVars</include>
 				<label>$LOCALIZE[409]</label>
+				<onclick>Skin.SetString(Home.Movies.Tile.9.Path,ActivateWindow(videos,moviestudios,return))</onclick>
 				<onclick>Skin.SetString(Home.Movies.Tile.9.Type,7)</onclick>
 				<onclick>Skin.SetString(Home.Movies.Tile.9.TypeName,$LOCALIZE[41151])</onclick>
 				<onclick>Skin.Reset(Home.Movies.Tile.9.Animate)</onclick>
 				<onclick>Skin.Reset(Home.Movies.Tile.9.ShowLabel)</onclick>
-				<onclick>Skin.Reset(Home.Movies.Tile.9.Icon)</onclick>
-				<onclick>Skin.Reset(Home.Movies.Tile.9.Label)</onclick>
-				<onclick>Skin.Reset(Home.Movies.Tile.9.Path)</onclick>
+				<onclick>Skin.SetString(Home.Movies.Tile.9.Icon,special://skin/extras/icons/appletrailers.png)</onclick>
+				<onclick>Skin.SetString(Home.Movies.Tile.9.Label,$LOCALIZE[20388])</onclick>
 			</control>
         </control>
     </include>

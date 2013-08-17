@@ -419,8 +419,18 @@
 			</control>
 			<control type="label">
 				<include>HomeProfileInfoLabel</include>
+				<label>$INFO[Window(Weather).Property(Current.Condition)]$INFO[Window(Weather).Property(Current.Temperature), ,]$INFO[System.TemperatureUnits]</label>
+				<visible>Container(525).HasFocus(8) + Weather.IsFetched</visible>
+			</control>
+			<control type="label">
+				<include>HomeProfileInfoLabel</include>
+				<label>503</label>
+				<visible>Container(525).HasFocus(8) + !Weather.IsFetched</visible>
+			</control>
+			<control type="label">
+				<include>HomeProfileInfoLabel</include>
 				<label>$INFO[Container(525).ListItem.Label]</label>
-				<visible>!Container(525).HasFocus(1) + !Container(525).HasFocus(2) + !Container(525).HasFocus(3) + !Container(525).HasFocus(4)</visible>
+				<visible>!Container(525).HasFocus(1) + !Container(525).HasFocus(2) + !Container(525).HasFocus(3) + !Container(525).HasFocus(4) + !Container(525).HasFocus(8)</visible>
 			</control>
 		</control>
     </include>

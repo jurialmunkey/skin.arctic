@@ -359,13 +359,17 @@
 		<value condition="IsEmpty(Window.Property(ExtendPlot))">bbwhite</value>
     </variable>
     
+    <variable name="HomeProfileColorDark">
+    	<value condition="Window.IsActive(home) + StringCompare(Skin.String(homescreen.style),simple)">mod-infotags-d</value>
+    	<value>Mod_Tags_Dark</value>
+    </variable>
     <include name="HomeProfileInfoLabel">
         <posx>110</posx>
         <posy>64</posy>
         <width>600</width>
         <height>60</height>
         <font>Font-Alaska-S28-L</font>
-        <textcolor>Mod_Tags_Dark</textcolor>
+        <textcolor>$VAR[HomeProfileColorDark]</textcolor>
         <scroll>false</scroll>
         <align>left</align>
     </include>
@@ -392,7 +396,7 @@
 				<width>600</width>
 				<height>60</height>
 				<font>Font-Alaska-S36-BL</font>
-				<textcolor>Mod_Tags_Dark</textcolor>
+				<textcolor>$VAR[HomeProfileColorDark]</textcolor>
 				<scroll>false</scroll>
 				<align>left</align>
 				<label>$INFO[System.ProfileName]</label>

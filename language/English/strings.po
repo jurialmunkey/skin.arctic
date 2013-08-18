@@ -1046,6 +1046,10 @@ msgctxt "#42317"
 msgid "Cover panel"
 msgstr ""
 
+msgctxt "#42318"
+msgid "Big info"
+msgstr ""
+
 # Range to 42399 reserved for viewtypes
 
 msgctxt "#42400"

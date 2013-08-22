@@ -20,7 +20,29 @@
 		<itemlayout height="108">							
 			<control type="group">
 				<posx>1065</posx>
-				<posy>40</posy>
+				<posy>60</posy>
+				<control type="label">
+					<posx>-20</posx>
+					<posy>4</posy>
+					<width>900</width>
+					<label>$INFO[ListItem.TVShowTitle]</label>
+					<font>Font-Alaska-S34-BL</font>
+					<textcolor>Mod_Tags_Dark</textcolor>
+					<scroll>false</scroll>
+					<align>right</align>
+					<animation effect="slide" end="-50" condition="!SubString(ListItem.Overlay,UnWatched.png) + SubString(ListItem.Overlay,Watched.png) + [Container.Content(movies) | Container.Content(episodes) | Container.Content(seasons)]">Conditional</animation>
+				</control>
+				<control type="label">
+					<posx>-20</posx>
+					<posy>34</posy>
+					<width>900</width>
+					<label>Season $INFO[ListItem.Season]</label>
+					<font>Font-Alaska-S25-L</font>
+					<textcolor>Mod_Tags_Light</textcolor>
+					<scroll>false</scroll>
+					<align>right</align>
+					<animation effect="slide" end="-50" condition="!SubString(ListItem.Overlay,UnWatched.png) + SubString(ListItem.Overlay,Watched.png) + [Container.Content(movies) | Container.Content(episodes) | Container.Content(seasons)]">Conditional</animation>
+				</control>					
 				<control type="label">
 					<posx>0</posx>
 					<posy>22</posy>
@@ -65,7 +87,7 @@
 					<textcolor>ff00dd44</textcolor>
 					<scroll>false</scroll>
 					<align>right</align>
-					<visible>!SubString(ListItem.Overlay,UnWatched.png) + SubString(ListItem.Overlay,Watched.png) + [Container.Content(movies) | Container.Content(episodes)]</visible>
+					<visible>!SubString(ListItem.Overlay,UnWatched.png) + SubString(ListItem.Overlay,Watched.png) + [Container.Content(movies) | Container.Content(episodes) | Container.Content(seasons)]</visible>
 				</control>
 			</control>
 		</itemlayout>

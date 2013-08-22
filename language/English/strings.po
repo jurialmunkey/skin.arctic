@@ -1207,3 +1207,11 @@ msgstr ""
 msgctxt "#42439"
 msgid "Select Icon"
 msgstr ""
+
+msgctxt "#42440"
+msgid "Backup Skin Settings"
+msgstr ""
+
+msgctxt "#42441"
+msgid "Restore Skin Settings"
+msgstr ""

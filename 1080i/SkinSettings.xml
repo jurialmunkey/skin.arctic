@@ -787,6 +787,22 @@
 							<onclick>Skin.ToggleSetting(EPGGenreColors.Enabled)</onclick>
 							<label>$LOCALIZE[41221]</label>
 						</control>
+						<control type="button" id="7012">
+							<width>1210</width>
+							<include>SettingsCategoryDefaultButtonVars</include>
+							<label>$LOCALIZE[42440]</label>
+							<!--<label2>›››   </label2>-->
+							<onclick>RunScript(script.extendedinfo,exportsettings=true)</onclick>
+							<visible>System.HasAddon(script.extendedinfo)</visible>
+						</control>
+						<control type="button" id="7013">
+							<width>1210</width>
+							<include>SettingsCategoryDefaultButtonVars</include>
+							<label>$LOCALIZE[42441]</label>
+							<!--<label2>›››   </label2>-->
+							<onclick>RunScript(script.extendedinfo,importsettings=true)</onclick>
+							<visible>System.HasAddon(script.extendedinfo)</visible>							
+						</control>						
 					</control>
                 </control>
                 <control type="image" id="42">

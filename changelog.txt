@@ -91,3 +91,9 @@ Fixed bug in Reel
 Fix thumbnails to show scrolling text
 Fixed profile info color on simple home
 Re-added Big Info view for advanced launcher
+
+[B]0.3.3[/B]
+OSD controls at top of screen
+Pause now shows movie info
+Option for smaller OSD/info for videos
+OSD cleanup

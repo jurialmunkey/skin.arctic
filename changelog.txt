@@ -97,3 +97,4 @@ OSD controls at top of screen
 Pause now shows movie info
 Option for smaller OSD/info for videos
 OSD cleanup
+classic poster for genres

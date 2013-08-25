@@ -257,7 +257,7 @@
 							<width>275</width>
 							<height>135</height>
 						<texture background="true">$INFO[Player.Art(thumb)]</texture>
-						<aspectratio scalediffuse="false" align="right" aligny="center">keep</aspectratio>
+						<aspectratio scalediffuse="false" align="center" aligny="center">keep</aspectratio>
 						<visible>VideoPlayer.Content(LiveTV)</visible>
 						<animation effect="slide" end="0,-120" time="300" tween="cubic" easing="inout" condition="[[Window.IsVisible(fullscreeninfo) | !IsEmpty(Window(seekbar).Property(ShowInfo))] + !IsEmpty(Window(seekbar).Property(ExtendPlot))]">Conditional</animation>
 					</control>
@@ -268,7 +268,7 @@
 							<width>275</width>
 							<height>155</height>
 						<texture background="true">$INFO[Player.Art(clearlogo)]</texture>
-						<aspectratio scalediffuse="false" align="right" aligny="center">keep</aspectratio>
+						<aspectratio scalediffuse="false" align="center" aligny="center">keep</aspectratio>
 						<visible>!VideoPlayer.Content(LiveTV) + Skin.HasSetting(videoosd.clearlogo) + VideoPlayer.Content(movies)</visible>
 						<animation effect="slide" end="0,-120" time="300" tween="cubic" easing="inout" condition="[[Window.IsVisible(fullscreeninfo) | !IsEmpty(Window(seekbar).Property(ShowInfo))] + !IsEmpty(Window(seekbar).Property(ExtendPlot))]">Conditional</animation>
 					</control>
@@ -279,7 +279,7 @@
 							<width>275</width>
 							<height>155</height>
 						<texture background="true">$INFO[Player.Art(tvshow.clearlogo)]</texture>
-						<aspectratio scalediffuse="false" align="right" aligny="center">keep</aspectratio>
+						<aspectratio scalediffuse="false" align="center" aligny="center">keep</aspectratio>
 						<visible>!VideoPlayer.Content(LiveTV) + Skin.HasSetting(videoosd.clearlogo) + !VideoPlayer.Content(movies)</visible>
 						<animation effect="slide" end="0,-120" time="300" tween="cubic" easing="inout" condition="[[Window.IsVisible(fullscreeninfo) | !IsEmpty(Window(seekbar).Property(ShowInfo))] + !IsEmpty(Window(seekbar).Property(ExtendPlot))]">Conditional</animation>
 					</control>

@@ -98,3 +98,8 @@ Pause now shows movie info
 Option for smaller OSD/info for videos
 OSD cleanup
 classic poster for genres
+
+[B]0.3.4[/B]
+fixed dialogbusy colour issue
+videoinfo shows path and premiered when refresh is hovered
+fixed dialogslider wrong path for git

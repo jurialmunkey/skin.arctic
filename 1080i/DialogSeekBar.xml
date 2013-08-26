@@ -1,7 +1,7 @@
 <window>
     <defaultcontrol>23</defaultcontrol>
     <visible>Window.IsActive(fullscreenvideo) + [[!IsEmpty(Window(videoosd).Property(ShowInfo)) + !IsEmpty(Window(seekbar).Property(ShowInfo)) + Window.IsActive(videoosd)] | Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Window.IsVisible(fullscreeninfo)] + !Window.IsVisible(sliderdialog) + ![!Window.IsActive(videoosd) + [Window.IsActive(script-XBMC-Subtitles-main.xml) | Window.IsActive(pvrguideinfo) | Window.IsActive(pvrosdchannels) | Window.IsActive(pvrosdguide) | Window.IsActive(yesnodialog) | Window.IsActive(okdialog) | Window.IsActive(progressdialog) | Window.IsActive(virtualkeyboard) | Window.IsActive(numericinput) | Window.IsActive(shutdownmenu) | Window.IsActive(osdvideosettings) | Window.IsActive(osdaudiosettings) | Window.IsActive(videobookmarks)]]</visible>
-    <onload condition="Skin.HasSetting(videoosd.showposterinfo)">SetProperty(ShowInfo,1,seekbar)</onload>
+    <onload condition="!Skin.HasSetting(videoosd.hideposterinfo)">SetProperty(ShowInfo,1,seekbar)</onload>
     <onunload>ClearProperty(ShowInfo,seekbar)</onunload>
     <controls>
         <control type="group">
@@ -307,7 +307,7 @@
 							<height>512</height>
 							<texture background="true" border="100">arctic/common/16border64.png</texture>
 							<aspectratio scalediffuse="false">stretch</aspectratio>
-							<animation effect="slide" end="0,-62" time="300" tween="cubic" easing="inout" condition="[Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding]">Conditional</animation>
+							<animation effect="slide" end="0,-62" time="300" tween="cubic" easing="inout" condition="[Player.Seeking | Player.Paused | Player.Forwarding | Player.Rewinding]">Conditional</animation>
 						</control>
 						<control type="image">
 							<description>Thumb</description>
@@ -317,7 +317,7 @@
 							<height>384</height>
 							<texture background="true" diffuse="arctic/osd/poster.png">windows/common/black.png</texture>
 							<aspectratio scalediffuse="false">stretch</aspectratio>
-							<animation effect="slide" end="0,-62" time="300" tween="cubic" easing="inout" condition="[Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding]">Conditional</animation>
+							<animation effect="slide" end="0,-62" time="300" tween="cubic" easing="inout" condition="[Player.Seeking | Player.Paused | Player.Forwarding | Player.Rewinding]">Conditional</animation>
 						</control>
 						<control type="image">
 							<description>Thumb</description>
@@ -327,7 +327,7 @@
 							<height>384</height>
 							<texture background="true" diffuse="arctic/osd/poster.png">$VAR[ArcticOSDPoster]</texture>
 							<aspectratio scalediffuse="false">scale</aspectratio>
-							<animation effect="slide" end="0,-62" time="300" tween="cubic" easing="inout" condition="[Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding]">Conditional</animation>
+							<animation effect="slide" end="0,-62" time="300" tween="cubic" easing="inout" condition="[Player.Seeking | Player.Paused | Player.Forwarding | Player.Rewinding]">Conditional</animation>
 						</control>
 					</control>
 					

@@ -57,7 +57,7 @@
     <include name="OSDChapterInfo">
         <control type="group">
         	<visible>[[!IsEmpty(Window(seekbar).Property(ShowInfo)) | Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Window.IsActive(videoosd) | Window.IsActive(musicosd) | Window.IsActive(fullscreenvideo)] + !Player.ShowCodec + !Window.IsActive(script-XBMC_Lyrics-main.xml) + !IsEmpty(Player.Chapter) + IntegerGreaterThan(Player.ChapterCount,0)]</visible>
-            <animation effect="slide" end="-80"  time="200" tween="sine" easing="inout" condition="[Window.IsVisible(volumebar) | Window.IsVisible(mutebug)] + !Skin.HasSetting(osd.wideinfo)">Conditional</animation>
+            <animation effect="slide" end="-80"  time="200" tween="sine" easing="inout" condition="[[Window.IsVisible(volumebar) | Window.IsVisible(mutebug)] + !Skin.HasSetting(osd.wideinfo)]">Conditional</animation>
             <animation effect="slide" end="1000" condition="!Window.IsVisible(videoosd) + !Skin.HasSetting(osd.wideinfo)">Conditional</animation>
             <animation type="WindowOpen">
                 <effect type="fade" start="0" end="100" time="200" tween="sine" easing="inout" />
@@ -76,7 +76,7 @@
                 <effect type="slide" start="0,0" end="0,-70" time="300" tween="cubic" easing="inout" />
             </animation>
             <control type="group">
-            	<visible>!Skin.HasSetting(osd.wideinfo)</visible>
+            	<visible>!Skin.HasSetting(osd.wideinfo) | [Skin.HasSetting(osd.wideinfo) + !Window.IsVisible(videoosd)] | [Skin.HasSetting(osd.wideinfo) + !Window.IsVisible(videoosd)]</visible>
 				<control type="image">
 					<posx>150</posx>
 					<posy>-30</posy>
@@ -145,11 +145,12 @@
             </animation>
 			<!-- Clocks -->
             <control type="group">
-            	<animation effect="slide" end="-80" time="200" tween="sine" easing="inout" condition="[Window.IsVisible(volumebar) | Window.IsVisible(mutebug)] + [!Skin.HasSetting(osd.wideinfo) | Window.IsActive(visualisation)]">Conditional</animation>
+            	<animation effect="slide" end="-80" time="200" tween="sine" easing="inout" condition="[Window.IsVisible(volumebar) | Window.IsVisible(mutebug)] + [!Skin.HasSetting(osd.wideinfo) | Window.IsActive(visualisation) | [Skin.HasSetting(osd.wideinfo) + !Window.IsVisible(videoosd) + !IntegerGreaterThan(Player.ChapterCount,0)]]">Conditional</animation>
             	<animation effect="slide" end="140" time="200" tween="sine" easing="inout" condition="!Window.IsVisible(volumebar) + !Window.IsVisible(mutebug) + Window.IsActive(visualisation)">Conditional</animation>
             	<posx>1430</posx>
             	<control type="group">
-					<visible>[!Skin.HasSetting(osd.wideinfo) + !Window.IsVisible(videoosd)] | Window.IsActive(visualisation)</visible>
+					<!--<visible>[!Skin.HasSetting(osd.wideinfo) + !Window.IsVisible(videoosd)] | Window.IsActive(visualisation) | [Skin.HasSetting(osd.wideinfo) + !Window.IsVisible(videoosd) + !IntegerGreaterThan(Player.ChapterCount,0)]</visible>-->
+					<visible>[!Skin.HasSetting(osd.wideinfo) + !Window.IsVisible(videoosd)] | Window.IsActive(visualisation) | [Skin.HasSetting(osd.wideinfo) + !Window.IsVisible(videoosd)]</visible>
 					<control type="image">
 						<posx>0</posx>
 						<posy>-30</posy>
@@ -176,7 +177,8 @@
 					</control>
 				</control>
 				<control type="group">
-					<visible>Skin.HasSetting(osd.wideinfo) + !Window.IsActive(visualisation)</visible>
+					<!--<visible>Skin.HasSetting(osd.wideinfo) + !Window.IsActive(visualisation) + [Window.IsVisible(videoosd) | IntegerGreaterThan(Player.ChapterCount,0)]</visible>-->
+					<visible>Skin.HasSetting(osd.wideinfo) + !Window.IsActive(visualisation) + Window.IsVisible(videoosd)</visible>
 					<control type="image">
 						<posx>-1600</posx>
 						<posy>-30</posy>

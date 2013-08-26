@@ -310,12 +310,11 @@
                         <width>80</width>
                         <texturefocus>osd/fullscreen/buttons/info-fo.png</texturefocus>
                         <texturenofocus>osd/fullscreen/buttons/info-nofo-dark.png</texturenofocus>
+                        <onclick condition="IsEmpty(Window(seekbar).Property(ExtendPlot))">SetProperty(ShowInfo,1,seekbar)</onclick>
+                        <onclick condition="IsEmpty(Window(seekbar).Property(ExtendPlot))">SetProperty(ShowInfo,1,videoosd)</onclick>
                         <onclick condition="IsEmpty(Window(seekbar).Property(ExtendPlot))">SetProperty(ExtendPlot,1,seekbar)</onclick>
-                        <onclick condition="IsEmpty(Window(seekbar).Property(ShowInfo))">SetProperty(ShowInfo,1,seekbar)</onclick>
-                        <onclick condition="IsEmpty(Window(videoosd).Property(ShowInfo))">SetProperty(ShowInfo,1,videoosd)</onclick>
+                        <onclick condition="!IsEmpty(Window(seekbar).Property(ExtendPlot))">ClearProperty(ShowInfo,videoosd)</onclick>
                         <onclick condition="!IsEmpty(Window(seekbar).Property(ExtendPlot))">ClearProperty(ExtendPlot,seekbar)</onclick>
-                        <onclick condition="!IsEmpty(Window(seekbar).Property(ShowInfo))">ClearProperty(ShowInfo,seekbar)</onclick>
-                        <onclick condition="!IsEmpty(Window(videoosd).Property(ShowInfo))">ClearProperty(ShowInfo,videoosd)</onclick>
                         <onleft>10</onleft>
                         <onright>9</onright>
                         <onup condition="!IsEmpty(Window(seekbar).Property(ShowInfo))">SetProperty(ExtendPlot,1,seekbar)</onup>
@@ -701,12 +700,11 @@
                         <width>80</width>
                         <texturefocus>osd/fullscreen/buttons/info-fo.png</texturefocus>
                         <texturenofocus>osd/fullscreen/buttons/info-nofo.png</texturenofocus>
+                        <onclick condition="IsEmpty(Window(seekbar).Property(ExtendPlot))">SetProperty(ShowInfo,1,seekbar)</onclick>
+                        <onclick condition="IsEmpty(Window(seekbar).Property(ExtendPlot))">SetProperty(ShowInfo,1,videoosd)</onclick>
                         <onclick condition="IsEmpty(Window(seekbar).Property(ExtendPlot))">SetProperty(ExtendPlot,1,seekbar)</onclick>
-                        <onclick condition="IsEmpty(Window(seekbar).Property(ShowInfo))">SetProperty(ShowInfo,1,seekbar)</onclick>
-                        <onclick condition="IsEmpty(Window(videoosd).Property(ShowInfo))">SetProperty(ShowInfo,1,videoosd)</onclick>
+                        <onclick condition="!IsEmpty(Window(seekbar).Property(ExtendPlot))">ClearProperty(ShowInfo,videoosd)</onclick>
                         <onclick condition="!IsEmpty(Window(seekbar).Property(ExtendPlot))">ClearProperty(ExtendPlot,seekbar)</onclick>
-                        <onclick condition="!IsEmpty(Window(seekbar).Property(ShowInfo))">ClearProperty(ShowInfo,seekbar)</onclick>
-                        <onclick condition="!IsEmpty(Window(videoosd).Property(ShowInfo))">ClearProperty(ShowInfo,videoosd)</onclick>
                         <onleft>10</onleft>
                         <onright>9</onright>
                         <onup condition="!IsEmpty(Window(seekbar).Property(ShowInfo))">SetProperty(ExtendPlot,1,seekbar)</onup>

@@ -76,7 +76,7 @@
                 <effect type="slide" start="0,0" end="0,-70" time="300" tween="cubic" easing="inout" />
             </animation>
             <control type="group">
-            	<visible>!Skin.HasSetting(osd.wideinfo) | [Skin.HasSetting(osd.wideinfo) + !Window.IsVisible(videoosd)] | [Skin.HasSetting(osd.wideinfo) + !Window.IsVisible(videoosd)]</visible>
+            	<visible>!Skin.HasSetting(osd.wideinfo)</visible>
 				<control type="image">
 					<posx>150</posx>
 					<posy>-30</posy>
@@ -149,8 +149,7 @@
             	<animation effect="slide" end="140" time="200" tween="sine" easing="inout" condition="!Window.IsVisible(volumebar) + !Window.IsVisible(mutebug) + Window.IsActive(visualisation)">Conditional</animation>
             	<posx>1430</posx>
             	<control type="group">
-					<!--<visible>[!Skin.HasSetting(osd.wideinfo) + !Window.IsVisible(videoosd)] | Window.IsActive(visualisation) | [Skin.HasSetting(osd.wideinfo) + !Window.IsVisible(videoosd) + !IntegerGreaterThan(Player.ChapterCount,0)]</visible>-->
-					<visible>[!Skin.HasSetting(osd.wideinfo) + !Window.IsVisible(videoosd)] | Window.IsActive(visualisation) | [Skin.HasSetting(osd.wideinfo) + !Window.IsVisible(videoosd)]</visible>
+					<visible>[!Skin.HasSetting(osd.wideinfo) + !Window.IsVisible(videoosd)] | Window.IsActive(visualisation) | [Skin.HasSetting(osd.wideinfo) + !Window.IsVisible(videoosd) + !IntegerGreaterThan(Player.ChapterCount,0)]</visible>
 					<control type="image">
 						<posx>0</posx>
 						<posy>-30</posy>
@@ -177,8 +176,7 @@
 					</control>
 				</control>
 				<control type="group">
-					<!--<visible>Skin.HasSetting(osd.wideinfo) + !Window.IsActive(visualisation) + [Window.IsVisible(videoosd) | IntegerGreaterThan(Player.ChapterCount,0)]</visible>-->
-					<visible>Skin.HasSetting(osd.wideinfo) + !Window.IsActive(visualisation) + Window.IsVisible(videoosd)</visible>
+					<visible>Skin.HasSetting(osd.wideinfo) + !Window.IsActive(visualisation) + [Window.IsVisible(videoosd) | IntegerGreaterThan(Player.ChapterCount,0)]</visible>
 					<control type="image">
 						<posx>-1600</posx>
 						<posy>-30</posy>

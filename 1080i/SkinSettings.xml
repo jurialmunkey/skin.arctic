@@ -493,6 +493,13 @@
 							<onclick>ReloadSkin()</onclick>
 							<label>42437</label>
 						</control>
+						<control type="radiobutton" id="8013">
+							<width>1210</width>
+							<include>SettingsCategoryRadioButtonVars</include>
+							<selected>!Skin.HasSetting(videoosd.showposterinfo)</selected>
+							<onclick>Skin.ToggleSetting(videoosd.showposterinfo)</onclick>
+							<label>42442</label>
+						</control>
 						<!--<control type="radiobutton" id="8006">
 							<width>1210</width>
 							<include>SettingsCategoryRadioButtonVars</include>

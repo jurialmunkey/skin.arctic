@@ -1211,3 +1211,7 @@ msgstr ""
 msgctxt "#42441"
 msgid "Smaller video info"
 msgstr ""
+
+msgctxt "#42442"
+msgid "Simplified seekbar"
+msgstr ""

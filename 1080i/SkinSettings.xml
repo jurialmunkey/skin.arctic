@@ -453,7 +453,6 @@
 							<include>SettingsCategoryRadioButtonVars</include>
 							<selected>Skin.HasSetting(ArtistSlideShow.Animate)</selected>
 							<onclick>Skin.ToggleSetting(ArtistSlideShow.Animate)</onclick>
-							<visible>Skin.HasSetting(ArtistSlideShow.Enabled)</visible>
 							<label> - $LOCALIZE[41105]</label>
 						</control>
 						

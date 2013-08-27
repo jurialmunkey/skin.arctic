@@ -1219,3 +1219,7 @@ msgstr ""
 msgctxt "#42443"
 msgid "Automatically start lyrics"
 msgstr ""
+
+msgctxt "#42444"
+msgid "Automatically show plot after 1 second delay"
+msgstr ""

@@ -109,3 +109,4 @@ Fixed volume colours for dark theme.
 Added option to start lyrics automatically
 Updated lyrics to look similar to scrolling music vis text
 OSD fixes
+Auto show plot option

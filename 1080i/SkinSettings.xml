@@ -499,7 +499,7 @@
 							<onclick>Skin.ToggleSetting(videoosd.hideposterinfo)</onclick>
 							<label>42442</label>
 						</control>
-						<control type="radiobutton" id="8014">
+						<!--<control type="radiobutton" id="8014">
 							<width>1210</width>
 							<include>SettingsCategoryRadioButtonVars</include>
 							<selected>Skin.HasSetting(videoosd.autoshowplot)</selected>
@@ -507,7 +507,7 @@
 							<label>42444</label>
 							<enable>!Skin.HasSetting(videoosd.hideposterinfo)</enable>
 							<animation effect="fade" start="100" end="42" time="0" condition="!Control.IsEnabled(8014)">Conditional</animation>
-						</control>
+						</control>-->
 					</control>
 				
 					<!-- Background Settings -->

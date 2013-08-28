@@ -110,3 +110,5 @@ Added option to start lyrics automatically
 Updated lyrics to look similar to scrolling music vis text
 OSD fixes
 Auto show plot option
+Colour fixes for dark theme in addon list and info
+Syntax error fixes

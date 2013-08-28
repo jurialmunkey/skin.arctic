@@ -117,10 +117,10 @@
 						<textoffsetx>25</textoffsetx>
 						<align>left</align>
 						<font>Font-Alaska-S34-BL</font>
-						<textcolor>Mod_Tags</textcolor>
+						<textcolor>mod-infotags</textcolor>
 						<focusedcolor>eewhite</focusedcolor>
-						<disabledcolor>Mod_Tags_Light</disabledcolor>
-						<shadowcolor>Mod_Shadow</shadowcolor>
+						<disabledcolor>mod-infotags-l</disabledcolor>
+						<shadowcolor>mod-shadow</shadowcolor>
 						<texturenofocus border="3,90,3,90">views/list/other/separator-v.png</texturenofocus>
 						<texturefocus border="10">views/other/focus-mod.png</texturefocus>
 						<visible>Control.IsEnabled(9)</visible>
@@ -134,10 +134,10 @@
 						<textoffsetx>25</textoffsetx>
 						<align>left</align>
 						<font>Font-Alaska-S34-BL</font>
-						<textcolor>Mod_Tags</textcolor>
+						<textcolor>mod-infotags</textcolor>
 						<focusedcolor>eewhite</focusedcolor>
-						<disabledcolor>Mod_Tags_Light</disabledcolor>
-						<shadowcolor>Mod_Shadow</shadowcolor>
+						<disabledcolor>mod-infotags-l</disabledcolor>
+						<shadowcolor>mod-shadow</shadowcolor>
 						<texturenofocus border="3,90,3,90">views/list/other/separator-v.png</texturenofocus>
 						<texturefocus border="10">views/other/focus-mod.png</texturefocus>
 						<visible>Control.IsEnabled(7)</visible>
@@ -151,10 +151,10 @@
 						<textoffsetx>25</textoffsetx>
 						<align>left</align>
 						<font>Font-Alaska-S34-BL</font>
-						<textcolor>Mod_Tags</textcolor>
+						<textcolor>mod-infotags</textcolor>
 						<focusedcolor>eewhite</focusedcolor>
-						<disabledcolor>Mod_Tags_Light</disabledcolor>
-						<shadowcolor>Mod_Shadow</shadowcolor>
+						<disabledcolor>mod-infotags-l</disabledcolor>
+						<shadowcolor>mod-shadow</shadowcolor>
 						<texturenofocus border="3,90,3,90">views/list/other/separator-v.png</texturenofocus>
 						<texturefocus border="10">views/other/focus-mod.png</texturefocus>
 						<visible>Control.IsEnabled(6)</visible>
@@ -169,10 +169,10 @@
 						<textoffsetx>25</textoffsetx>
 						<align>left</align>
 						<font>Font-Alaska-S34-BL</font>
-						<textcolor>Mod_Tags</textcolor>
+						<textcolor>mod-infotags</textcolor>
 						<focusedcolor>eewhite</focusedcolor>
-						<disabledcolor>Mod_Tags_Light</disabledcolor>
-						<shadowcolor>Mod_Shadow</shadowcolor>
+						<disabledcolor>mod-infotags-l</disabledcolor>
+						<shadowcolor>mod-shadow</shadowcolor>
 						<texturenofocus border="3,90,3,90">views/list/other/separator-v.png</texturenofocus>
 						<texturefocus border="10">views/other/focus-mod.png</texturefocus>
 						<visible>Control.IsEnabled(8)</visible>
@@ -187,10 +187,10 @@
 						<textoffsetx>25</textoffsetx>
 						<align>left</align>
 						<font>Font-Alaska-S34-BL</font>
-						<textcolor>Mod_Tags</textcolor>
+						<textcolor>mod-infotags</textcolor>
 						<focusedcolor>eewhite</focusedcolor>
-						<disabledcolor>Mod_Tags_Light</disabledcolor>
-						<shadowcolor>Mod_Shadow</shadowcolor>
+						<disabledcolor>mod-infotags-l</disabledcolor>
+						<shadowcolor>mod-shadow</shadowcolor>
 						<texturenofocus border="3,90,3,90">views/list/other/separator-v.png</texturenofocus>
 						<texturefocus border="10">views/other/focus-mod.png</texturefocus>
 						<visible>Control.IsEnabled(11)</visible>
@@ -277,7 +277,7 @@
 					<font>Font-Condensed-S34</font>
 					<align>left</align>
 					<label>[B]$LOCALIZE[24052][/B]</label>
-					<textcolor>mod-infotags-l</textcolor>
+					<textcolor>Mod_Tags_Light</textcolor>
 					<scroll>false</scroll>
 				</control>
 				<control type="label">
@@ -287,7 +287,7 @@
 					<font>Font-Condensed-S34</font>
 					<align>left</align>
 					<label>$INFO[ListItem.Property(Addon.Disclaimer)]</label>
-					<textcolor>mod-infotags-l</textcolor>
+					<textcolor>Mod_Tags_Light</textcolor>
 					<scroll>false</scroll>
 				</control>
 			</control>
@@ -313,7 +313,7 @@
 					<font>Font-Condensed-S34</font>
 					<align>left</align>
 					<label>[B]$LOCALIZE[24096][/B]</label>
-					<textcolor>mod-infotags-l</textcolor>
+					<textcolor>Mod_Tags_Light</textcolor>
 					<scroll>false</scroll>
 				</control>
 				<control type="label">
@@ -323,7 +323,7 @@
 					<font>Font-Condensed-S34</font>
 					<align>left</align>
 					<label>$INFO[ListItem.Property(Addon.broken)]</label>
-					<textcolor>mod-infotags-l</textcolor>
+					<textcolor>Mod_Tags_Light</textcolor>
 					<scroll>false</scroll>
 				</control>
 			</control>

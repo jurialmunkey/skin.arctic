@@ -5,7 +5,6 @@
     <include file="ViewtypesPVR.xml" />
     <include file="Viewtypes_AdvBanner.xml" />
     <include file="Viewtypes_AdvWall.xml" />
-    <include file="Viewtypes_AdvCarousel.xml" />
     <include file="Viewtypes_AdvReel.xml" />
     <include file="Viewtypes_AdvLandscape.xml" />
     <include file="Viewtypes_AdvClassicInfo.xml" />
@@ -38,7 +37,6 @@
     <include file="Viewtypes_MusicPanelFanart.xml" />
     <include file="Viewtypes_MusicWall.xml" />
 	<include file="Viewtypes_MusicCoverInfo.xml" />
-	<include file="Viewtypes_MusicBanner.xml" />
 	<include file="Viewtypes_MusicShortList.xml" />
 	<include file="Viewtypes_MusicSongInfo.xml" />
 	<include file="Viewtypes_MusicInfoList.xml" />

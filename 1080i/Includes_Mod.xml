@@ -3248,12 +3248,20 @@
 							<height>303</height>
 							<texture border="25">views/newgloss/border.png</texture>
 						</control>
-						<control type="image">
+						<!--<control type="image">
 							<posx>0</posx>
 							<posy>0</posy>
 							<width>303</width>
 							<height>303</height>
 							<texture border="25">views/newgloss/border-fo.png</texture>
+						</control>-->
+						<control type="image">
+							<posx>-12</posx>
+							<posy>-12</posy>
+							<width>327</width>
+							<height>327</height>
+							<texture border="52">arctic/common/border-glo.png</texture>
+							<colordiffuse>Mod_Glow_Border</colordiffuse>
 						</control>
 						<control type="label">
 							<posx>10</posx>

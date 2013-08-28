@@ -1219,3 +1219,11 @@ msgstr ""
 msgctxt "#42443"
 msgid "Automatically start lyrics"
 msgstr ""
+
+msgctxt "#42444"
+msgid "Show label on favourites"
+msgstr ""
+
+msgctxt "#42445"
+msgid "Show labels"
+msgstr ""

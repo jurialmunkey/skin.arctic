@@ -70,6 +70,7 @@
                             <width>332</width>
                             <height>72</height>
                             <texture border="8">arctic/thumb/332-72.png</texture>
+                            <visible>!Skin.HasSetting(thumbnails.hidelabel)</visible>
                         </control>
                         <control type="label">
                             <posx>27</posx>
@@ -82,6 +83,7 @@
                             <shadowcolor>22000000</shadowcolor>
                             <scroll>false</scroll>
                             <align>left</align>
+                            <visible>!Skin.HasSetting(thumbnails.hidelabel)</visible>
                         </control>
                         <control type="image">
                             <description>Watched/unwatched overlay</description>
@@ -122,6 +124,7 @@
                             <height>50</height>
                             <texture border="8">arctic/thumb/332-72.png</texture>
                             <colordiffuse>DFFFFFFF</colordiffuse>
+                            <visible>!Skin.HasSetting(thumbnails.hidelabel)</visible>
                         </control>
                         <control type="label">
                             <posx>27</posx>
@@ -134,6 +137,7 @@
                             <shadowcolor>22000000</shadowcolor>
                             <scroll>false</scroll>
                             <align>left</align>
+                            <visible>!Skin.HasSetting(thumbnails.hidelabel)</visible>
                         </control>
                         <control type="image">
                             <posx>174</posx>
@@ -177,6 +181,7 @@
 									<width>332</width>
 									<height>72</height>
 									<texture border="8">arctic/thumb/332-72.png</texture>
+									<visible>!Skin.HasSetting(thumbnails.hidelabel)</visible>
 								</control>
                                 <control type="label">
                                     <posx>27</posx>
@@ -189,6 +194,7 @@
                                     <shadowcolor>22000000</shadowcolor>
                                     <scroll>true</scroll>
                                     <align>left</align>
+                                    <visible>!Skin.HasSetting(thumbnails.hidelabel)</visible>
                                 </control>
                                 <control type="image">
                                     <description>Watched/unwatched overlay</description>
@@ -251,6 +257,7 @@
                                     <height>50</height>
                                     <texture border="8">arctic/thumb/332-72.png</texture>
                                     <colordiffuse>F0FFFFFF</colordiffuse>
+                                    <visible>!Skin.HasSetting(thumbnails.hidelabel)</visible>
                                 </control>
                                 <control type="label">
                                     <posx>27</posx>
@@ -263,6 +270,7 @@
                                     <shadowcolor>22000000</shadowcolor>
                                     <scroll>true</scroll>
                                     <align>left</align>
+                                    <visible>!Skin.HasSetting(thumbnails.hidelabel)</visible>
                                 </control>
                                 <control type="image">
                                     <posx>174</posx>

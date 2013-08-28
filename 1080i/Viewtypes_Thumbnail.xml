@@ -140,7 +140,7 @@
                             <posy>174</posy>
                             <width>60</width>
                             <height>60</height>
-                            <texture>$VAR[InfoListOverlay]</texture>
+                            <texture>$VAR[DefaultListOverlay]</texture>
                             <colordiffuse>eewhite</colordiffuse>
                             <visible>!IsEmpty(ListItem.Overlay)</visible>
                         </control>
@@ -269,7 +269,7 @@
                                     <posy>174</posy>
                                     <width>60</width>
                                     <height>60</height>
-                                    <texture>$VAR[InfoListOverlay]</texture>
+                                    <texture>$VAR[DefaultListOverlay]</texture>
                                     <colordiffuse>eewhite</colordiffuse>
                                     <visible>!IsEmpty(ListItem.Overlay)</visible>
                                 </control>

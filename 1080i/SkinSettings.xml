@@ -257,6 +257,13 @@
 							<onclick>Skin.ToggleSetting(PreferLandscapeArt)</onclick>
 							<label>42416</label>
 						</control>
+						<control type="radiobutton" id="1008">
+							<width>1210</width>
+							<include>SettingsCategoryRadioButtonVars</include>
+							<selected>!Skin.HasSetting(favourites.hidelabel)</selected>
+							<onclick>Skin.ToggleSetting(favourites.hidelabel)</onclick>
+							<label>42444</label>
+						</control>
 					</control>
 			
 					<!-- ============= -->  

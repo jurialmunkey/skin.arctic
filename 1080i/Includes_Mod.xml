@@ -3296,7 +3296,7 @@
 			<itemgap>0</itemgap>
 			<orientation>horizontal</orientation>
 			<usecontrolcoords>true</usecontrolcoords>
-			<visible>[IsEmpty(Window(Home).Property(script.metadata.actors.isactive)) + !Skin.HasSetting(HideInfoTags) + !Window.IsActive(movieinformation) + !Window.IsActive(musicinformation) + [Container.Content(movies) | Container.Content(sets) | Container.Content(episodes) | Container.Content(seasons) | Container.Content(tvshows) | Container.Content(songs) | Container.Content(albums) | Container.Content(artists)]] | [[Window.IsActive(movieinformation) | Window.IsActive(musicinformation) + !Skin.HasSetting(info.hideinfotags)]</visible>
+			<visible>[IsEmpty(Window(Home).Property(script.metadata.actors.isactive)) + !Skin.HasSetting(HideInfoTags) + !Window.IsActive(movieinformation) + !Window.IsActive(musicinformation) + [Container.Content(movies) | Container.Content(sets) | Container.Content(episodes) | Container.Content(seasons) | Container.Content(tvshows) | Container.Content(songs) | Container.Content(albums) | Container.Content(artists)]] | [[Window.IsActive(movieinformation) | Window.IsActive(musicinformation)] + !Skin.HasSetting(info.hideinfotags)]</visible>
 			<animation effect="fade" start="0" end="100" time="450" tween="sine" easing="inout">VisibleChange</animation>
 			<animation effect="fade" start="0" end="100" time="450" tween="sine" easing="inout">WindowOpen</animation>
 			<animation effect="fade" start="100" end="0" time="350" tween="sine" easing="inout">WindowClose</animation>

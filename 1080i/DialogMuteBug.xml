@@ -20,7 +20,7 @@
                 <effect type="fade" start="100" end="0" time="200" tween="sine" easing="inout" />
                 <effect type="slide" start="0" end="0,-20" time="200" tween="sine" easing="inout" />
             </animation>
-            <animation effect="slide" end="20" condition="Skin.HasSetting(osd.wideinfo) + Window.IsActive(seekbar)">Conditional</animation>
+            <animation effect="slide" end="20" condition="Skin.HasSetting(osd.wideinfo) + Window.IsActive(videoosd)">Conditional</animation>
             <posy>-30</posy>
 			<posx>1670</posx>
 			<control type="image">

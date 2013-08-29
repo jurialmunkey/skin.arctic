@@ -817,7 +817,7 @@
             </control>
         </control>
         <control type="group">
-        	<visible>Window.IsActive(seekbar)</visible>
+        	<visible>Window.IsActive(seekbar) | Skin.HasSetting(osd.alwaysshowclocks)</visible>
     		<include>OSDWeatherClock</include>
 			<include>OSDChapterInfo</include>
     	</control>

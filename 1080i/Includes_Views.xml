@@ -439,6 +439,7 @@
     
     <variable name="ThumbIcon">
         <value condition="!IsEmpty(ListItem.Art(thumb))">$INFO[ListItem.Art(thumb)]</value>
+        <value condition="!IsEmpty(ListItem.Icon)">$INFO[ListItem.Icon]</value>
         <value>$INFO[ListItem.ActualIcon,views/fallbacks/,/square-medium.png]</value>
     </variable>
     

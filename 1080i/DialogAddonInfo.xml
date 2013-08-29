@@ -15,7 +15,14 @@
                 <effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
                 <effect type="zoom" start="0,0,1920,1080" end="335,125,1440,810" time="300" tween="cubic" easing="out" />
             </animation>
-            <visible>Container.Content(addons)</visible>
+            <animation type="Visible">
+                <effect type="slide" start="-1920" end="0" time="600" delay="0" tween="sine" easing="inout" />
+            </animation>
+            <animation type="Hidden">
+                <effect type="zoom" start="100" end="75" center="640,540" time="300" tween="sine" easing="inout" />
+                <effect type="slide" end="-2320" time="600" delay="0" tween="sine" easing="inout" />
+            </animation>
+            <visible>Container.Content(addons) + !Window.IsActive(DialogTextViewer.xml)</visible>
             <!-- TITLE -->
 			<control type="group">
 				<posx>680</posx>
@@ -101,7 +108,7 @@
 					<width>1200</width>
 					<height>83</height>
 					<onleft condition="!Window.IsVisible(3008)">SetProperty(BounceLeft,1,Home)</onleft>
-					<onright>9333</onright>
+					<onright>9334</onright>
 					<onup>9333</onup>
 					<ondown>9333</ondown>
 					<scrolltime>0</scrolltime>

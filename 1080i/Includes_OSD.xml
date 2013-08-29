@@ -149,7 +149,7 @@
             	<animation effect="slide" end="140" time="200" tween="sine" easing="inout" condition="!Window.IsVisible(volumebar) + !Window.IsVisible(mutebug) + Window.IsActive(visualisation)">Conditional</animation>
             	<posx>1430</posx>
             	<control type="group">
-					<visible>[!Skin.HasSetting(osd.wideinfo) + !Window.IsVisible(videoosd)] | Window.IsActive(visualisation) | [Skin.HasSetting(osd.wideinfo) + !Window.IsVisible(videoosd) + !IntegerGreaterThan(Player.ChapterCount,0)]</visible>
+					<visible>[!Skin.HasSetting(osd.wideinfo) + [!Window.IsVisible(videoosd) | !IsEmpty(Window(seekbar).Property(ShowInfo))]] | Window.IsActive(visualisation) | [Skin.HasSetting(osd.wideinfo) + !Window.IsVisible(videoosd) + !IntegerGreaterThan(Player.ChapterCount,0)]</visible>
 					<control type="image">
 						<posx>0</posx>
 						<posy>-30</posy>
@@ -176,7 +176,7 @@
 					</control>
 				</control>
 				<control type="group">
-					<visible>Skin.HasSetting(osd.wideinfo) + !Window.IsActive(visualisation) + [Window.IsVisible(videoosd) | IntegerGreaterThan(Player.ChapterCount,0)]</visible>
+					<visible>Skin.HasSetting(osd.wideinfo) + !Window.IsActive(visualisation) + !Window.IsVisible(videoosd) + IntegerGreaterThan(Player.ChapterCount,0)</visible>
 					<control type="image">
 						<posx>-1600</posx>
 						<posy>-30</posy>
@@ -203,7 +203,7 @@
 					</control>
 				</control>
 				<control type="group">
-					<visible>!Window.IsVisible(videoosd)</visible>
+					<!--<visible>!Window.IsVisible(videoosd) | [!Skin.HasSetting(osd.wideinfo) + !IsEmpty(Window(seekbar).Property(ShowInfo))]</visible>-->
 					<control type="group">
 						<posx>90</posx>
 						<control type="image">
@@ -276,7 +276,8 @@
 					</control>
 				</control>
 				<control type="group">
-					<visible>[Player.Forwarding | Player.Rewinding] + [[!Skin.HasSetting(osd.wideinfo) + !Window.IsVisible(videoosd)] | Skin.HasSetting(osd.wideinfo)]</visible>
+					<!--<visible>[Player.Forwarding | Player.Rewinding] + [[!Skin.HasSetting(osd.wideinfo) + !Window.IsVisible(videoosd)] | Skin.HasSetting(osd.wideinfo)]</visible>-->
+					<visible>[Player.Forwarding | Player.Rewinding]</visible>
 					<include>visiblehidefadeinfo</include>
 					<control type="label">
 						<description>Rewind</description>

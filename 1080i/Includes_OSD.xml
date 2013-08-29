@@ -149,7 +149,7 @@
             	<animation effect="slide" end="140" time="200" tween="sine" easing="inout" condition="!Window.IsVisible(volumebar) + !Window.IsVisible(mutebug) + Window.IsActive(visualisation)">Conditional</animation>
             	<posx>1430</posx>
             	<control type="group">
-					<visible>[!Skin.HasSetting(osd.wideinfo) + [!Window.IsVisible(videoosd) | !IsEmpty(Window(seekbar).Property(ShowInfo))]] | Window.IsActive(visualisation) | [Skin.HasSetting(osd.wideinfo) + !Window.IsVisible(videoosd) + !IntegerGreaterThan(Player.ChapterCount,0)]</visible>
+					<visible>[!Skin.HasSetting(osd.wideinfo) + [!Window.IsVisible(videoosd) | Window.IsActive(seekbar)]] | Window.IsActive(visualisation) | [Skin.HasSetting(osd.wideinfo) + !Window.IsVisible(videoosd) + !IntegerGreaterThan(Player.ChapterCount,0)]</visible>
 					<control type="image">
 						<posx>0</posx>
 						<posy>-30</posy>

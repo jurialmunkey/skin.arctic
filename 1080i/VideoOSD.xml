@@ -28,7 +28,7 @@
 			</animation>
             <posx>210</posx>
             <animation effect="slide" end="80" time="200" tween="sine" easing="inout" condition="[!Window.IsVisible(mutebug) + !Window.IsVisible(volumebar)] | Skin.HasSetting(osd.wideinfo) | Window.IsVisible(videoosd)">Conditional</animation>
-            <animation effect="slide" end="-80" time="200" tween="sine" easing="inout" condition="[Window.IsVisible(volumebar) | Window.IsVisible(mutebug)] + !Skin.HasSetting(osd.wideinfo) + !IsEmpty(Window(seekbar).Property(ShowInfo))">Conditional</animation>
+            <animation effect="slide" end="-80" time="200" tween="sine" easing="inout" condition="[Window.IsVisible(volumebar) | Window.IsVisible(mutebug)] + !Skin.HasSetting(osd.wideinfo) + Window.IsActive(seekbar)">Conditional</animation>
             <control type="image">
 				<posx>150</posx>
 				<posy>-30</posy>
@@ -433,6 +433,7 @@
 			</animation>
             <posx>210</posx>
             <animation effect="slide" end="80" time="200" tween="sine" easing="inout" condition="[!Window.IsVisible(mutebug) + !Window.IsVisible(volumebar)] | Skin.HasSetting(osd.wideinfo) | Window.IsVisible(videoosd)">Conditional</animation>
+            <animation effect="slide" end="-80" time="200" tween="sine" easing="inout" condition="[Window.IsVisible(volumebar) | Window.IsVisible(mutebug)] + !Skin.HasSetting(osd.wideinfo) + Window.IsActive(seekbar)">Conditional</animation>
             <control type="image">
 				<posx>150</posx>
 				<posy>-30</posy>
@@ -816,7 +817,7 @@
             </control>
         </control>
         <control type="group">
-        	<visible>!IsEmpty(Window(seekbar).Property(ShowInfo))</visible>
+        	<visible>Window.IsActive(seekbar)</visible>
     		<include>OSDWeatherClock</include>
 			<include>OSDChapterInfo</include>
     	</control>

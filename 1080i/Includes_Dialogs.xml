@@ -1626,8 +1626,8 @@
                 <label>-</label>
                 <font>Font-Condensed-S40</font>
                 <align>left</align>
-                <textcolor>aawhite</textcolor>
-                <selectedcolor>white</selectedcolor>
+                <textcolor>Mod_Tags</textcolor>
+                <selectedcolor>Mod_Tags_Dark</selectedcolor>
                 <pagecontrol>61</pagecontrol>
             </control>
             <control type="scrollbar" id="61">

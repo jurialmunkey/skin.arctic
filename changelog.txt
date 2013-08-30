@@ -114,3 +114,4 @@ Colour fixes for dark theme in addon list and info
 Syntax error fixes
 thumb addon icon fix
 changelog addon fix
+Fixed music scale artwork

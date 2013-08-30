@@ -31,7 +31,6 @@
 
     <include file="Viewtypes_MusicList.xml" />
     <include file="Viewtypes_MusicListLow.xml" />
-    <include file="Viewtypes_MusicBigList.xml" />
     <include file="Viewtypes_MusicPanel.xml" />
     <include file="Viewtypes_MusicPanelBig.xml" />
     <include file="Viewtypes_MusicPanelFanart.xml" />
@@ -71,7 +70,6 @@
         <include>Viewtype-MusicPanelBig</include>		<!-- (55) -->
         <include>Viewtype-ClassicCoverView</include>	<!-- (56) -->
         <include>Viewtype-MusicShortList</include>		<!-- (57) -->
-        <include>Viewtype-MusicBigList</include>		<!-- (58) -->
         <include>Viewtype-SongInfo</include>			<!-- (59) -->
         <include>Viewtype-CoverList</include>			<!-- (60) -->
         <include>Viewtype-MusicInfoList</include>		<!-- (61) -->

@@ -119,3 +119,4 @@ Fixed music scale artwork
 [B]0.3.5[/B]
 Added progress bar cache
 Added option to change live tv to open epg
+banner and medium list now show label rather than title for recently added

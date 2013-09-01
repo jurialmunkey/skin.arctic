@@ -1,4 +1,8 @@
 <includes>
+	<variable name="LiveTVOpens">
+		<value condition="Skin.HasSetting(pvr.epgdefault)">$LOCALIZE[19222]</value>
+		<value>$LOCALIZE[19023]</value>
+	</variable>
 	<variable name="osd.text.normal">
 		<value condition="Skin.HasSetting(osd.darkpanel)">mod-infotags-alt2</value>
 		<value>mod-infotags</value>
@@ -280,9 +284,6 @@
     
     <variable name="MusicCarouselArt">
         <value condition="!IsEmpty(ListItem.Art(fanart))">$INFO[ListItem.Art(fanart)]</value>
-        <!--<value condition="!IsEmpty(ListItem.Art(album))">$INFO[ListItem.Art(album)]</value>
-        <value>$INFO[ListItem.Icon]</value>-->
-        <!--<value>views/fallbacks/DefaultArtist.png/square-large.png</value>-->
         <value>DefaultMusicArtists.png</value>
     </variable>
     
@@ -1044,24 +1045,14 @@
 			<onclick>SetFocus(11)</onclick>
 			<visible>Container(525).HasFocus(4)</visible>
 		</item>
-		<item id="2">
-			<description>Search</description>
-			<label>$LOCALIZE[137]</label>
+		<item id="5">
+			<description>EPG</description>
+			<property name="Poster">special://skin/extras/icons/epg.png</property>
+			<label>$LOCALIZE[19069]</label>
 			<onclick>SetFocus(525)</onclick>
 			<onclick>ActivateWindow(PVR)</onclick>
-			<onclick>SetFocus(36)</onclick>
-			<onclick>SetFocus(17)</onclick>
-			<property name="Poster">special://skin/extras/icons/search-tv.png</property>
-			<visible>Container(525).HasFocus(4)</visible>
-		</item>
-		<item id="3">
-			<description>Timer</description>
-			<property name="Poster">special://skin/extras/icons/timers.png</property>
-			<label>$LOCALIZE[19040]</label>
-			<onclick>SetFocus(525)</onclick>
-			<onclick>ActivateWindow(PVR)</onclick>
-			<onclick>SetFocus(35)</onclick>
-			<onclick>SetFocus(14)</onclick>
+			<onclick>SetFocus(31)</onclick>
+			<onclick>SetFocus(10)</onclick>
 			<visible>Container(525).HasFocus(4)</visible>
 		</item>
 		<item id="4">
@@ -1074,14 +1065,24 @@
 			<property name="Poster">special://skin/extras/icons/recordings.png</property>
 			<visible>Container(525).HasFocus(4)</visible>
 		</item>
-		<item id="5">
-			<description>EPG</description>
-			<property name="Poster">special://skin/extras/icons/epg.png</property>
-			<label>$LOCALIZE[19069]</label>
+		<item id="3">
+			<description>Timer</description>
+			<property name="Poster">special://skin/extras/icons/timers.png</property>
+			<label>$LOCALIZE[19040]</label>
 			<onclick>SetFocus(525)</onclick>
 			<onclick>ActivateWindow(PVR)</onclick>
-			<onclick>SetFocus(31)</onclick>
-			<onclick>SetFocus(10)</onclick>
+			<onclick>SetFocus(35)</onclick>
+			<onclick>SetFocus(14)</onclick>
+			<visible>Container(525).HasFocus(4)</visible>
+		</item>
+		<item id="2">
+			<description>Search</description>
+			<label>$LOCALIZE[137]</label>
+			<onclick>SetFocus(525)</onclick>
+			<onclick>ActivateWindow(PVR)</onclick>
+			<onclick>SetFocus(36)</onclick>
+			<onclick>SetFocus(17)</onclick>
+			<property name="Poster">special://skin/extras/icons/search-tv.png</property>
 			<visible>Container(525).HasFocus(4)</visible>
 		</item>
 		<item id="6">
@@ -3107,8 +3108,10 @@
 			<property name="single">$INFO[Skin.String(HomeLiveTVSingleImage)]</property>
 			<property name="multi">$INFO[Skin.String(HomeLiveTVMultiImage)]</property>
 			<onclick condition="!Skin.HasSetting(HomeClicksSubmenu)">ActivateWindow(PVR)</onclick>
-			<onclick condition="!Skin.HasSetting(HomeClicksSubmenu)">SetFocus(32)</onclick>
-			<onclick condition="!Skin.HasSetting(HomeClicksSubmenu)">SetFocus(11)</onclick>
+			<onclick condition="!Skin.HasSetting(HomeClicksSubmenu) + !Skin.HasSetting(pvr.epgdefault)">SetFocus(32)</onclick>
+			<onclick condition="!Skin.HasSetting(HomeClicksSubmenu) + !Skin.HasSetting(pvr.epgdefault)">SetFocus(11)</onclick>
+			<onclick condition="!Skin.HasSetting(HomeClicksSubmenu) + Skin.HasSetting(pvr.epgdefault)">SetFocus(31)</onclick>
+			<onclick condition="!Skin.HasSetting(HomeClicksSubmenu) + Skin.HasSetting(pvr.epgdefault)">SetFocus(10)</onclick>
 			<onclick condition="Skin.HasSetting(HomeClicksSubmenu)">SetFocus(83,0)</onclick>
 			<icon>DefaultTVGuide.png</icon>
 		</item>

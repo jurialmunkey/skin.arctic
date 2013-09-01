@@ -1227,3 +1227,7 @@ msgstr ""
 msgctxt "#42445"
 msgid "Show labels"
 msgstr ""
+
+msgctxt "#42446"
+msgid "Live TV opens"
+msgstr ""

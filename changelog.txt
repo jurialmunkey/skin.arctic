@@ -115,3 +115,7 @@ Syntax error fixes
 thumb addon icon fix
 changelog addon fix
 Fixed music scale artwork
+
+[B]0.3.5[/B]
+Added progress bar cache
+Added option to change live tv to open epg

@@ -155,7 +155,7 @@
                             <description>Guide menu Settings</description>
                             <label>$LOCALIZE[41460]</label>
                             <onclick>noop</onclick>
-							<icon>special://skin/extras/icons/tvguide.png</icon>
+							<icon>special://skin/extras/icons/tvcatchup.png</icon>
                         </item>
                         <item id="38">
                             <description>Add-on Settings</description>
@@ -329,6 +329,23 @@
 							<selected>Skin.HasSetting(HomeClicksSubmenu)</selected>
 							<onclick>Skin.ToggleSetting(HomeClicksSubmenu)</onclick>
 							<label>42411</label>
+						</control>
+						<control type="button" id="2006">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>1210</width>
+							<height>77</height>
+							<align>left</align>
+							<aligny>center</aligny>
+							<textoffsetx>35</textoffsetx>
+							<font>Font-Condensed-S30</font>
+							<include>SettingsCategoryDefaultButtonVars</include>
+							<onclick>Skin.ToggleSetting(pvr.epgdefault)</onclick>
+							<label>42446</label>
+							<label2>[UPPERCASE]$VAR[LiveTVOpens][/UPPERCASE]</label2>
+							<visible>!Skin.HasSetting(disable.pvr) + System.GetBool(pvrmanager.enabled)</visible>
+							<enable>!Skin.HasSetting(HomeClicksSubmenu)</enable>
+							<animation effect="fade" start="100" end="42" time="0" condition="!Control.IsEnabled(2006)">Conditional</animation>
 						</control>
 					</control>              
 				
@@ -506,15 +523,6 @@
 							<onclick>Skin.ToggleSetting(videoosd.hideposterinfo)</onclick>
 							<label>42442</label>
 						</control>
-						<!--<control type="radiobutton" id="8014">
-							<width>1210</width>
-							<include>SettingsCategoryRadioButtonVars</include>
-							<selected>Skin.HasSetting(videoosd.autoshowplot)</selected>
-							<onclick>Skin.ToggleSetting(videoosd.autoshowplot)</onclick>
-							<label>42444</label>
-							<enable>!Skin.HasSetting(videoosd.hideposterinfo)</enable>
-							<animation effect="fade" start="100" end="42" time="0" condition="!Control.IsEnabled(8014)">Conditional</animation>
-						</control>-->
 					</control>
 				
 					<!-- Background Settings -->

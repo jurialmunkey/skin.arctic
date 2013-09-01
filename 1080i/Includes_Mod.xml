@@ -24,6 +24,8 @@
 		<value>$INFO[ListItem.Genre]</value>
 	</variable>
 	<variable name="MainTitle">
+		<value condition="stringcompare(Container.FolderPath,library://video/recentlyaddedmovies.xml/) | stringcompare(Container.FolderPath,videodb://4/)">$INFO[ListItem.Label]</value>
+        <value condition="stringcompare(Container.FolderPath,library://video/recentlyaddedepisodes.xml/) | stringcompare(Container.FolderPath,videodb://5/)">$INFO[ListItem.Label]</value>
 		<value condition="Container.Content(episodes) | Container.Content(tvshows)">$INFO[ListItem.Title]</value>
 		<value condition="Container.Content(movies)">$INFO[ListItem.Label]</value>
 		<value condition="Container.Content(seasons) + !IsEmpty(ListItem.Season)">$LOCALIZE[20373]</value>

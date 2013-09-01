@@ -138,7 +138,7 @@
                 <effect type="fade" end="0" time="200" tween="sine" easing="out" />
                 <effect type="slide" start="0,0" end="0,-70" time="300" tween="cubic" easing="inout" />
             </animation>
-            <visible>[Player.Muted | substring(Player.Volume,-60.0) | Window.IsActive(volumebar) | Window.IsActive(mutebug) | !IsEmpty(Window(seekbar).Property(ShowInfo)) | Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Window.IsActive(videoosd) | Window.IsActive(musicosd) | Window.IsActive(fullscreenvideo) | Window.IsActive(visualisation)] + !Player.ShowCodec + !Window.IsActive(script-XBMC_Lyrics-main.xml)</visible>
+            <visible>[Player.Muted | substring(Player.Volume,-60.0) | Window.IsActive(volumebar) | Window.IsActive(mutebug) | !IsEmpty(Window(seekbar).Property(ShowInfo)) | Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Window.IsActive(videoosd) | Window.IsActive(musicosd) | Window.IsActive(fullscreenvideo) | Window.IsActive(visualisation)] + !Player.ShowCodec</visible>
             <animation type="Conditional" condition="Window.IsActive(infodialog)">
                 <effect type="fade" start="100" end="8" tween="sine" easing="out" time="300" /> 
                 <effect type="zoom" start="100" end="50" center="1569,97" tween="sine" easing="inout" time="300" />

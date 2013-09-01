@@ -120,3 +120,4 @@ Fixed music scale artwork
 Added progress bar cache
 Added option to change live tv to open epg
 banner and medium list now show label rather than title for recently added
+Look for local artwork in videoplayer

@@ -344,6 +344,17 @@
 							<aspectratio scalediffuse="false">scale</aspectratio>
 							<animation effect="slide" end="0,-62" time="300" tween="cubic" easing="inout" condition="[Player.Seeking | Player.Paused | Player.Forwarding | Player.Rewinding]">Conditional</animation>
 						</control>
+						<control type="image">
+							<description>Season Poster</description>
+							<posx>582</posx>
+							<posy>-84</posy>
+							<width>256</width>
+							<height>384</height>
+							<texture background="true" diffuse="arctic/osd/poster.png">$INFO[Player.Folderpath]$INFO[VideoPlayer.Season,../season,-poster.jpg]</texture>
+							<aspectratio scalediffuse="false">scale</aspectratio>
+							<animation effect="slide" end="0,-62" time="300" tween="cubic" easing="inout" condition="[Player.Seeking | Player.Paused | Player.Forwarding | Player.Rewinding]">Conditional</animation>
+							<visible>VideoPlayer.Content(episodes)</visible>
+						</control>
 					</control>
 					
 					<!-- Flags and Info -->

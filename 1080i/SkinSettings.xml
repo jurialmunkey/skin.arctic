@@ -313,9 +313,7 @@
 							<onclick>ActivateWindow(3051)</onclick>
 							<label>$LOCALIZE[41140]</label>
 							<label2>›››   </label2>
-						</control>              
-					
-					
+						</control> 
 						<control type="radiobutton" id="2004">
 							<width>1210</width>
 							<include>SettingsCategoryRadioButtonVars</include>

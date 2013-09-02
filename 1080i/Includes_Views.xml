@@ -91,7 +91,6 @@
         <include>Viewtype-Thumbnail</include>
         <include>Viewtype-AdvBanner</include>
         <include>Viewtype-AdvWall</include>
-        <include>Viewtype-AdvCarousel</include>
         <include>Viewtype-AdvReel</include>
         <include>Viewtype-AdvLandscape</include>
         <include>Viewtype-AdvClassicInfo</include>

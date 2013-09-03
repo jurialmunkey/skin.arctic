@@ -43,14 +43,6 @@
             <visible>![Window.IsVisible(home) + StringCompare(Skin.String(homescreen.style),simple)] + !Skin.HasSetting(NoDimFade)</visible>
         </control>
         
-        <control type="image">
-            <include>FullscreenDimensions</include>
-            <texture>arctic/common/nofanart.png</texture>
-            <colordiffuse>Mod_Overlay_Dimfanart_Extra</colordiffuse>
-            <include>visiblehidefadeinfo</include>
-            <visible>Skin.HasSetting(disable.dimfanart) + ![Window.IsVisible(home) + !StringCompare(Skin.String(homescreen.style),metro)] + !Skin.HasSetting(NoDimFade)</visible>
-        </control>
-        
         <control type="image">   
             <include>FullscreenDimensions</include>
             <aspectratio>stretch</aspectratio>

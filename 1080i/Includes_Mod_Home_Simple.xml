@@ -281,8 +281,8 @@
 				<!-- SUBMENU ITEMS -->
 				<control type="list" id="83">
 					<animation effect="slide" end="276" condition="Container(525).HasFocus(4)">Conditional</animation>
-					<onup condition="!Skin.HasSetting(HomeClicksSubmenu) + [Container(525).HasFocus(1) | Container(525).HasFocus(2) | Container(525).HasFocus(3)]">82</onup>
-					<onup condition="!Skin.HasSetting(HomeClicksSubmenu) + ![Container(525).HasFocus(1) | Container(525).HasFocus(2) | Container(525).HasFocus(3)]">AlarmClock(bounce.up.alarm,noop,00:01,silent)</onup>
+					<onup condition="!Skin.HasSetting(HomeClicksSubmenu) + [Container(525).HasFocus(1) | Container(525).HasFocus(2) | Container(525).HasFocus(3) | [Container(525).HasFocus(7) + Skin.HasSetting(UseRCB)]]">82</onup>
+					<onup condition="!Skin.HasSetting(HomeClicksSubmenu) + ![Container(525).HasFocus(1) | Container(525).HasFocus(2) | Container(525).HasFocus(3) | [Container(525).HasFocus(7) + Skin.HasSetting(UseRCB)]]">AlarmClock(bounce.up.alarm,noop,00:01,silent)</onup>
 					<onup condition="Skin.HasSetting(HomeClicksSubmenu)">AlarmClock(bounce.up.alarm,noop,00:01,silent)</onup>
 					<ondown>525</ondown>
 					<onleft>83</onleft>

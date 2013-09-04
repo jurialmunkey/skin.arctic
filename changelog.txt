@@ -5,6 +5,7 @@ banner and medium list now show label rather than title for recently added
 Look for local artwork in videoplayer
 Artwork Downloader updates
 Transifex Download
+Fixed music vis info not showing when show in background enabled
 
 [B]0.3.4[/B]
 fixed dialogbusy colour issue

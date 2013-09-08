@@ -2,7 +2,7 @@
     <defaultcontrol>23</defaultcontrol>
     <visible>Window.IsActive(fullscreenvideo) + [[!IsEmpty(Window(videoosd).Property(ShowInfo)) + !IsEmpty(Window(seekbar).Property(ShowInfo)) + Window.IsActive(videoosd)] | Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Window.IsActive(fullscreeninfo)] + !Window.IsVisible(sliderdialog) + ![Window.IsActive(script-XBMC-Subtitles-main.xml) | Window.IsActive(pvrguideinfo) | Window.IsActive(pvrosdchannels) | Window.IsActive(pvrosdguide) | Window.IsActive(yesnodialog) | Window.IsActive(okdialog) | Window.IsActive(progressdialog) | Window.IsActive(virtualkeyboard) | Window.IsActive(numericinput) | Window.IsActive(shutdownmenu) | Window.IsActive(osdvideosettings) | Window.IsActive(osdaudiosettings) | Window.IsActive(videobookmarks)]</visible>
     <onload condition="!Skin.HasSetting(videoosd.hideposterinfo)">SetProperty(ShowInfo,1,seekbar)</onload>
-    <onunload>ClearProperty(ShowInfo,seekbar)</onunload>
+    <onunload condition="Skin.HasSetting(osd.wideinfo)">ClearProperty(ShowInfo,seekbar)</onunload>
     <onunload>ClearProperty(ExtendPlot,seekbar)</onunload>
     <controls>
         <control type="group">

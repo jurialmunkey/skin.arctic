@@ -220,10 +220,10 @@
                 <control type="togglebutton" id="56">
                     <width>70</width>
                     <height>70</height>
-                    <texturefocus>osd/fullscreen/buttons/record-fo.png</texturefocus>
-                    <texturenofocus>osd/fullscreen/buttons/record-nofo.png</texturenofocus>
-                    <alttexturefocus>osd/fullscreen/buttons/record-fo.png</alttexturefocus>
-                    <alttexturenofocus>osd/fullscreen/buttons/record-nofo-dark.png</alttexturenofocus>
+                    <texturefocus>osd/fullscreen/buttons/record-off-fo.png</texturefocus>
+                    <texturenofocus>osd/fullscreen/buttons/record-off-nofo.png</texturenofocus>
+                    <alttexturefocus>osd/fullscreen/buttons/record-off-fo.png</alttexturefocus>
+                    <alttexturenofocus>osd/fullscreen/buttons/record-off-nofo-dark.png</alttexturenofocus>
                     <usealttexture>!Skin.HasSetting(osd.darkpanel)</usealttexture>
                     <onclick>PlayerControl(Record)</onclick>
 					<enable>Player.CanRecord</enable>

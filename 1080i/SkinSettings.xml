@@ -520,6 +520,7 @@
 							<selected>Skin.HasSetting(videoosd.hideposterinfo)</selected>
 							<onclick>Skin.ToggleSetting(videoosd.hideposterinfo)</onclick>
 							<label>42442</label>
+							<visible>Skin.HasSetting(osd.wideinfo)</visible>
 						</control>
 					</control>
 				

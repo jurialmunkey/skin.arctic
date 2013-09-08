@@ -18,6 +18,11 @@
 		<value condition="Player.HasVideo">views/fallbacks/DefaultVideo.png/large.png</value>
 		<value condition="!Player.HasVideo">views/fallbacks/DefaultAudio.png/square-large.png</value>
 	</variable>
+	<variable name="ArcticOSDClearlogo">
+		<value condition="!IsEmpty(Player.Art(clearlogo))">$INFO[Player.Art(clearlogo)]</value>
+		<value condition="!IsEmpty(Player.Art(tvshow.clearlogo))">$INFO[Player.Art(tvshow.clearlogo)]</value>
+		<value condition="!IsEmpty(Player.Art(thumb))">$INFO[Player.Art(thumb)]</value>
+	</variable>
 	<variable name="UnderTitle">
 		<value condition="Container.Content(seasons) | Container.Content(tvshows)">$INFO[ListItem.Property(TotalEpisodes),, $LOCALIZE[20360]]$INFO[ListItem.Property(UnWatchedEpisodes),  •  , $LOCALIZE[16101]]</value>
 		<value condition="Container.Content(episodes)">$INFO[ListItem.Premiered]$INFO[ListItem.Duration, • , $LOCALIZE[12391]]</value>

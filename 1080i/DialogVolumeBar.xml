@@ -5,22 +5,7 @@
     		<visible>Window.IsActive(fullscreenvideo) | Window.IsActive(visualisation)</visible>
     		<!-- Volume Control -->
 			<control type="group">  
-				<animation type="WindowOpen">
-					<effect type="fade" start="0" end="100" time="300" tween="sine" easing="inout" />
-					<effect type="slide" start="0,-20" end="0" time="280" tween="sine" easing="inout" />
-				</animation>
-				<animation type="WindowClose">
-					<effect type="fade" start="100" end="0" time="200" tween="sine" easing="inout" />
-					<effect type="slide" start="0" end="0,-20" time="200" tween="sine" easing="inout" />
-				</animation>
-				<animation type="Visible">
-					<effect type="fade" start="0" end="100" time="300" tween="sine" easing="inout" />
-					<effect type="slide" start="0,-20" end="0" time="280" tween="sine" easing="inout" />
-				</animation>
-				<animation type="Hidden">
-					<effect type="fade" start="100" end="0" time="200" tween="sine" easing="inout" />
-					<effect type="slide" start="0" end="0,-20" time="200" tween="sine" easing="inout" />
-				</animation>
+				<include>OSDClockAnimation</include>
 				<animation effect="slide" end="20" condition="Skin.HasSetting(osd.wideinfo) + Window.IsActive(videoosd)">Conditional</animation>
 				<visible>!Player.Passthrough + [Window.IsActive(fullscreenvideo) | Window.IsActive(visualisation)] + Window.IsActive(volumebar) + ![Player.Muted | substring(Player.Volume,-60.0)]</visible>
 				<posy>-66</posy>

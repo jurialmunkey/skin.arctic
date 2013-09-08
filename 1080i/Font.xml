@@ -320,6 +320,11 @@
             <size>22</size>
         </font>
         <font>
+            <name>Font-OSD-Small</name>
+            <filename>alaska_regular.ttf</filename>
+            <size>22</size>
+        </font>
+        <font>
             <name>Font-Alaska-S22-L</name>
             <filename>alaska_regular.ttf</filename>
             <size>22</size>

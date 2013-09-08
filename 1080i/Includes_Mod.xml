@@ -26,7 +26,7 @@
 	<variable name="UnderTitle">
 		<value condition="Container.Content(seasons) | Container.Content(tvshows)">$INFO[ListItem.Property(TotalEpisodes),, $LOCALIZE[20360]]$INFO[ListItem.Property(UnWatchedEpisodes),  •  , $LOCALIZE[16101]]</value>
 		<value condition="Container.Content(episodes)">$INFO[ListItem.Premiered]$INFO[ListItem.Duration, • , $LOCALIZE[12391]]</value>
-		<value>$INFO[ListItem.Genre]</value>
+		<value condition="Container.Content(movies)">$INFO[ListItem.Genre]$INFO[ListItem.Duration, • , $LOCALIZE[12391]]</value>
 	</variable>
 	<variable name="MainTitle">
 		<value condition="stringcompare(Container.FolderPath,library://video/recentlyaddedmovies.xml/) | stringcompare(Container.FolderPath,videodb://4/)">$INFO[ListItem.Label]</value>

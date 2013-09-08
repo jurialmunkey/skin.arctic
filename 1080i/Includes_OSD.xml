@@ -1,5 +1,50 @@
 <includes>
 
+	<include name="OSDClockAnimation">
+		<animation type="WindowOpen">
+			<effect type="fade" start="0" end="100" time="300" tween="sine" easing="inout" />
+			<effect type="slide" start="0,-70" end="0,0" time="300" tween="sine" easing="inout" />
+		</animation>
+		<animation type="WindowClose">
+			<effect type="fade" end="0" time="200" tween="sine" easing="inout" />
+			<effect type="slide" start="0,0" end="0,-70" time="200" tween="sine" easing="inout" />
+		</animation>
+		<animation type="Visible">
+			<effect type="fade" start="0" end="100" time="300" tween="sine" easing="inout" />
+			<effect type="slide" start="0,-70" end="0,0" time="300" tween="sine" easing="inout" />
+		</animation>
+		<animation type="Hidden">
+			<effect type="fade" end="0" time="200" tween="sine" easing="inout" />
+			<effect type="slide" start="0,0" end="0,-70" time="200" tween="sine" easing="inout" />
+		</animation>
+	</include>
+	
+	<include name="OSDSmallAnimation">
+		<animation type="WindowOpen" reversible="false" condition="!Player.Paused">
+			<effect type="fade" start="0" end="100" time="300" tween="sine" easing="inout" />
+			<effect type="slide" start="-300" end="0" time="300" tween="sine" easing="inout" />
+		</animation>
+		<animation type="WindowOpen" reversible="false" condition="Player.Paused">
+			<effect type="fade" start="0" end="100" time="300" tween="sine" easing="inout" />
+		</animation>
+		<animation type="Visible" reversible="false">
+			<effect type="fade" start="0" end="100" time="300" tween="sine" easing="inout"/>
+			<effect type="slide" start="-300" end="0" time="300" tween="sine" easing="inout" />
+		</animation>
+		<animation type="WindowClose" reversible="false" condition="!Player.Paused">
+			<effect type="fade" end="0" start="100" time="200" tween="sine" easing="inout" />
+			<effect type="slide" end="-300" start="0" time="200" tween="sine" easing="inout" />
+		</animation>
+		<animation type="WindowClose" reversible="false" condition="Player.Paused">
+			<effect type="fade" end="0" start="100" time="200" tween="sine" easing="inout" />
+		</animation>
+		<animation type="Hidden" reversible="false">
+			<effect type="fade" start="100" end="0" time="200" tween="sine" easing="inout" />
+			<effect type="slide" end="-300" start="0" time="200" tween="sine" easing="inout" />
+		</animation>
+	</include>
+	
+	
     <include name="OSDVisualisation">
         <control type="visualisation" id="2">
             <description>visualisation</description>
@@ -59,22 +104,7 @@
         	<visible>[[!IsEmpty(Window(seekbar).Property(ShowInfo)) | Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Window.IsActive(videoosd) | Window.IsActive(musicosd) | Window.IsActive(fullscreenvideo)] + !Player.ShowCodec + !Window.IsActive(script-XBMC_Lyrics-main.xml) + !IsEmpty(Player.Chapter) + IntegerGreaterThan(Player.ChapterCount,0)]</visible>
             <animation effect="slide" end="-80"  time="200" tween="sine" easing="inout" condition="[[Window.IsVisible(volumebar) | Window.IsVisible(mutebug)] + !Skin.HasSetting(osd.wideinfo)]">Conditional</animation>
             <animation effect="slide" end="1000" condition="!Window.IsVisible(videoosd) + !Skin.HasSetting(osd.wideinfo)">Conditional</animation>
-            <animation type="WindowOpen">
-                <effect type="fade" start="0" end="100" time="200" tween="sine" easing="inout" />
-                <effect type="slide" start="0,-70" end="0,0" time="300" tween="cubic" easing="out" />
-            </animation>
-            <animation type="WindowClose">
-                <effect type="fade" start="100" end="0" time="200" tween="sine" easing="out" />
-                <effect type="slide" start="0,0" end="0,-70" time="300" tween="cubic" easing="inout" />
-            </animation>
-            <animation type="Visible">
-                <effect type="fade" start="0" end="100" time="175" tween="sine" easing="inout" delay="100" />
-                <effect type="slide" start="0,-70" end="0,0" time="275" tween="cubic" easing="inout" />
-            </animation>
-            <animation type="Hidden">
-                <effect type="fade" start="100" end="0" time="200" tween="sine" easing="out" />
-                <effect type="slide" start="0,0" end="0,-70" time="300" tween="cubic" easing="inout" />
-            </animation>
+            <include>OSDClockAnimation</include>
             <control type="group">
             	<visible>!Skin.HasSetting(osd.wideinfo)</visible>
 				<control type="image">
@@ -119,25 +149,9 @@
 
     <include name="OSDWeatherClock">
         <control type="group">
-        	<posx>10</posx>
         	<animation effect="slide" end="150" condition="[!IsEmpty(Window(seekbar).Property(ShowInfo)) | Window.IsVisible(fullscreeninfo)] + Window.IsVisible(visualisation)">Conditional</animation>
         	<animation effect="slide" time="300" end="-150" condition="[!IsEmpty(Window(seekbar).Property(ShowInfo)) | Window.IsVisible(fullscreeninfo)] + Window.IsVisible(visualisation) + [Player.Muted | substring(Player.Volume,-60.0) | Window.IsActive(volumebar) | Control.IsVisible(99221)]">Conditional</animation>
-            <animation type="WindowOpen">
-                <effect type="fade" start="0" end="100" time="200" tween="sine" easing="inout" />
-                <effect type="slide" start="0,-70" end="0,0" time="300" tween="cubic" easing="out" />
-            </animation>
-            <animation type="WindowClose">
-                <effect type="fade" end="0" time="200" tween="sine" easing="out" />
-                <effect type="slide" start="0,0" end="0,-70" time="300" tween="cubic" easing="inout" />
-            </animation>
-            <animation type="Visible">
-                <effect type="fade" start="0" end="100" time="175" tween="sine" easing="inout" delay="100" />
-                <effect type="slide" start="0,-70" end="0,0" time="275" tween="cubic" easing="inout" />
-            </animation>
-            <animation type="Hidden">
-                <effect type="fade" end="0" time="200" tween="sine" easing="out" />
-                <effect type="slide" start="0,0" end="0,-70" time="300" tween="cubic" easing="inout" />
-            </animation>
+            <include>OSDClockAnimation</include>
             <visible>[Player.Muted | substring(Player.Volume,-60.0) | Window.IsActive(volumebar) | Window.IsActive(mutebug) | !IsEmpty(Window(seekbar).Property(ShowInfo)) | Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Window.IsActive(videoosd) | Window.IsActive(musicosd) | Window.IsActive(fullscreenvideo) | Window.IsActive(visualisation)] + !Player.ShowCodec</visible>
             <animation type="Conditional" condition="Window.IsActive(infodialog)">
                 <effect type="fade" start="100" end="8" tween="sine" easing="out" time="300" /> 
@@ -145,8 +159,8 @@
             </animation>
 			<!-- Clocks -->
             <control type="group">
-            	<animation effect="slide" end="-80" time="200" tween="sine" easing="inout" condition="[Window.IsVisible(volumebar) | Window.IsVisible(mutebug)] + [!Skin.HasSetting(osd.wideinfo) | Window.IsActive(visualisation) | [Skin.HasSetting(osd.wideinfo) + !Window.IsVisible(videoosd) + !IntegerGreaterThan(Player.ChapterCount,0)]]">Conditional</animation>
-            	<animation effect="slide" end="140" time="200" tween="sine" easing="inout" condition="!Window.IsVisible(volumebar) + !Window.IsVisible(mutebug) + Window.IsActive(visualisation)">Conditional</animation>
+            	<animation effect="slide" end="-70" time="200" tween="sine" easing="inout" condition="[Window.IsVisible(volumebar) | Window.IsVisible(mutebug)] + [!Skin.HasSetting(osd.wideinfo) | Window.IsActive(visualisation) | [Skin.HasSetting(osd.wideinfo) + !Window.IsVisible(videoosd) + !IntegerGreaterThan(Player.ChapterCount,0)]]">Conditional</animation>
+            	<animation effect="slide" end="150" time="200" tween="sine" easing="inout" condition="!Window.IsVisible(volumebar) + !Window.IsVisible(mutebug) + [Window.IsActive(visualisation) | !Skin.HasSetting(osd.wideinfo)]">Conditional</animation>
             	<posx>1430</posx>
             	<control type="group">
 					<visible>!Skin.HasSetting(osd.wideinfo) | Window.IsActive(visualisation) | [Skin.HasSetting(osd.wideinfo) + !Window.IsVisible(videoosd) + !IntegerGreaterThan(Player.ChapterCount,0)]</visible>

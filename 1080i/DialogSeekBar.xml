@@ -504,19 +504,7 @@
 				<texture border="50">arctic/common/16panel.png</texture>
 				<aspectratio>stretch</aspectratio>
 				<colordiffuse>mod-osdbar-dark</colordiffuse>
-				<visible>Skin.HasSetting(osd.darkpanel) + !Window.IsVisible(fullscreeninfo)</visible>
-			</control>
-			<control type="image">
-				<posx>-5</posx>
-				<posy>755</posy>
-				<width>1200</width>
-				<height>330</height>
-				<bordertexture border="60">arctic/osd/white-25.png</bordertexture>
-				<bordersize>25</bordersize>
-				<texture border="50">arctic/common/16panel.png</texture>
-				<aspectratio>stretch</aspectratio>
-				<colordiffuse>mod-osdbar-dark</colordiffuse>
-				<visible>Skin.HasSetting(osd.darkpanel) + Window.IsVisible(fullscreeninfo)</visible>
+				<visible>Skin.HasSetting(osd.darkpanel)</visible>
 			</control>
 			<control type="image">
 				<posx>-5</posx>
@@ -528,19 +516,7 @@
 				<texture border="50">arctic/common/16panel-light.png</texture>
 				<aspectratio>stretch</aspectratio>
 				<colordiffuse>mod-osdbar-light</colordiffuse>
-				<visible>!Skin.HasSetting(osd.darkpanel) + !Window.IsVisible(fullscreeninfo)</visible>
-			</control>
-			<control type="image">
-				<posx>-5</posx>
-				<posy>755</posy>
-				<width>1200</width>
-				<height>330</height>
-				<bordertexture border="60">arctic/osd/white-25.png</bordertexture>
-				<bordersize>25</bordersize>
-				<texture border="50">arctic/common/16panel-light.png</texture>
-				<aspectratio>stretch</aspectratio>
-				<colordiffuse>mod-osdbar-light</colordiffuse>
-				<visible>!Skin.HasSetting(osd.darkpanel) + Window.IsVisible(fullscreeninfo)</visible>
+				<visible>!Skin.HasSetting(osd.darkpanel)</visible>
 			</control>
 			<control type="image">
 				<description>Thumb</description>

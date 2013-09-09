@@ -22,25 +22,27 @@
 	<include name="OSDSmallAnimation">
 		<animation type="WindowOpen" reversible="false" condition="!Player.Paused">
 			<effect type="fade" start="0" end="100" time="300" tween="sine" easing="inout" />
-			<effect type="slide" start="-300" end="0" time="300" tween="sine" easing="inout" />
+			<effect type="slide" start="0,70" end="0" time="300" tween="sine" easing="inout" />
 		</animation>
 		<animation type="WindowOpen" reversible="false" condition="Player.Paused">
 			<effect type="fade" start="0" end="100" time="300" tween="sine" easing="inout" />
+			<effect type="slide" start="0,70" end="0" time="300" tween="sine" easing="inout" />
 		</animation>
 		<animation type="Visible" reversible="false">
 			<effect type="fade" start="0" end="100" time="300" tween="sine" easing="inout"/>
-			<effect type="slide" start="-300" end="0" time="300" tween="sine" easing="inout" />
+			<effect type="slide" start="0,70" end="0" time="300" tween="sine" easing="inout" />
 		</animation>
 		<animation type="WindowClose" reversible="false" condition="!Player.Paused">
 			<effect type="fade" end="0" start="100" time="200" tween="sine" easing="inout" />
-			<effect type="slide" end="-300" start="0" time="200" tween="sine" easing="inout" />
+			<effect type="slide" end="0,70" start="0" time="200" tween="sine" easing="inout" />
 		</animation>
 		<animation type="WindowClose" reversible="false" condition="Player.Paused">
 			<effect type="fade" end="0" start="100" time="200" tween="sine" easing="inout" />
+			<effect type="slide" end="0,70" start="0" time="200" tween="sine" easing="inout" />
 		</animation>
 		<animation type="Hidden" reversible="false">
 			<effect type="fade" start="100" end="0" time="200" tween="sine" easing="inout" />
-			<effect type="slide" end="-300" start="0" time="200" tween="sine" easing="inout" />
+			<effect type="slide" end="0,70" start="0" time="200" tween="sine" easing="inout" />
 		</animation>
 	</include>
 	
@@ -102,11 +104,12 @@
     <include name="OSDChapterInfo">
         <control type="group">
         	<visible>[[!IsEmpty(Window(seekbar).Property(ShowInfo)) | Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Window.IsActive(videoosd) | Window.IsActive(musicosd) | Window.IsActive(fullscreenvideo)] + !Player.ShowCodec + !Window.IsActive(script-XBMC_Lyrics-main.xml) + !IsEmpty(Player.Chapter) + IntegerGreaterThan(Player.ChapterCount,0)]</visible>
-            <animation effect="slide" end="-80"  time="200" tween="sine" easing="inout" condition="[[Window.IsVisible(volumebar) | Window.IsVisible(mutebug)] + !Skin.HasSetting(osd.wideinfo)]">Conditional</animation>
-            <animation effect="slide" end="1000" condition="!Window.IsVisible(videoosd) + !Skin.HasSetting(osd.wideinfo)">Conditional</animation>
+            <animation effect="slide" end="-80"  time="200" tween="sine" easing="inout" condition="[Window.IsVisible(volumebar) | Window.IsVisible(mutebug)] + Skin.HasSetting(osd.wideinfo)">Conditional</animation>
+            <animation effect="slide" end="-220"  time="200" tween="sine" easing="inout" condition="[Window.IsVisible(volumebar) | Window.IsVisible(mutebug)] + !Skin.HasSetting(osd.wideinfo)">Conditional</animation>
+            <animation effect="slide" end="1150" condition="!Skin.HasSetting(osd.wideinfo)">Conditional</animation>
             <include>OSDClockAnimation</include>
+            <posx>-10</posx>
             <control type="group">
-            	<visible>!Skin.HasSetting(osd.wideinfo)</visible>
 				<control type="image">
 					<posx>150</posx>
 					<posy>-30</posy>
@@ -159,11 +162,10 @@
             </animation>
 			<!-- Clocks -->
             <control type="group">
-            	<animation effect="slide" end="-70" time="200" tween="sine" easing="inout" condition="[Window.IsVisible(volumebar) | Window.IsVisible(mutebug)] + [!Skin.HasSetting(osd.wideinfo) | Window.IsActive(visualisation) | [Skin.HasSetting(osd.wideinfo) + !Window.IsVisible(videoosd) + !IntegerGreaterThan(Player.ChapterCount,0)]]">Conditional</animation>
+            	<animation effect="slide" end="-70" time="200" tween="sine" easing="inout" condition="[Window.IsVisible(volumebar) | Window.IsVisible(mutebug)]">Conditional</animation>
             	<animation effect="slide" end="150" time="200" tween="sine" easing="inout" condition="!Window.IsVisible(volumebar) + !Window.IsVisible(mutebug) + [Window.IsActive(visualisation) | !Skin.HasSetting(osd.wideinfo)]">Conditional</animation>
             	<posx>1430</posx>
             	<control type="group">
-					<visible>!Skin.HasSetting(osd.wideinfo) | Window.IsActive(visualisation) | [Skin.HasSetting(osd.wideinfo) + !Window.IsVisible(videoosd) + !IntegerGreaterThan(Player.ChapterCount,0)]</visible>
 					<control type="image">
 						<posx>0</posx>
 						<posy>-30</posy>
@@ -180,33 +182,6 @@
 						<posx>0</posx>
 						<posy>-30</posy>
 						<width>340</width>
-						<height>110</height>
-						<bordertexture border="40">arctic/common/border-20.png</bordertexture>
-						<bordersize>20</bordersize>
-						<texture border="25">arctic/common/panel.png</texture>
-						<aspectratio>stretch</aspectratio>
-						<colordiffuse>mod-osdbar-dark</colordiffuse>
-						<visible>Skin.HasSetting(osd.darkpanel)</visible>
-					</control>
-				</control>
-				<control type="group">
-					<visible>Skin.HasSetting(osd.wideinfo) + !Window.IsActive(visualisation) + !Window.IsVisible(videoosd) + IntegerGreaterThan(Player.ChapterCount,0)</visible>
-					<control type="image">
-						<posx>-1600</posx>
-						<posy>-30</posy>
-						<width>2400</width>
-						<height>110</height>
-						<bordertexture border="40">arctic/common/border-20.png</bordertexture>
-						<bordersize>20</bordersize>
-						<texture border="25">arctic/common/whitepanel8.png</texture>
-						<aspectratio>stretch</aspectratio>
-						<colordiffuse>mod-osdbar</colordiffuse>
-						<visible>!Skin.HasSetting(osd.darkpanel)</visible>
-					</control>
-					<control type="image">
-						<posx>-1600</posx>
-						<posy>-30</posy>
-						<width>2400</width>
 						<height>110</height>
 						<bordertexture border="40">arctic/common/border-20.png</bordertexture>
 						<bordersize>20</bordersize>

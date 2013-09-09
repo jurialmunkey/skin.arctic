@@ -98,6 +98,8 @@
 				<onup condition="IsEmpty(Window(seekbar).Property(ExtendPlot))">SetProperty(ExtendPlot,1,seekbar)</onup>
                 <ondown condition="IsEmpty(Window(seekbar).Property(ExtendPlot))">Back</ondown>
                 <ondown condition="!IsEmpty(Window(seekbar).Property(ExtendPlot))">ClearProperty(ExtendPlot,seekbar)</ondown>
+                <animation effect="fade" end="0" time="0" condition="true">Conditional</animation>
+                <onfocus>SetProperty(ExtendPlot,1,seekbar)</onfocus>
 			</control>
         </control>
     </controls>

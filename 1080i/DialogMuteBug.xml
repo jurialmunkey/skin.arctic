@@ -5,7 +5,6 @@
         <control type="group">
             <visible>Window.IsActive(fullscreenvideo) | Window.IsActive(visualisation)</visible>
             <include>OSDClockAnimation</include>
-            <animation effect="slide" end="20" condition="Skin.HasSetting(osd.wideinfo) + Window.IsActive(videoosd)">Conditional</animation>
             <posy>-30</posy>
 			<posx>1670</posx>
 			<control type="image">
@@ -18,7 +17,7 @@
 				<texture border="25">arctic/common/whitepanel8.png</texture>
 				<aspectratio>stretch</aspectratio>
 				<colordiffuse>mod-osdbar</colordiffuse>
-				<visible>!Skin.HasSetting(osd.darkpanel) + [!Skin.HasSetting(osd.wideinfo) | [!Window.IsActive(seekbar) + !Window.IsActive(videoosd)] | [Skin.HasSetting(osd.wideinfo) + !Window.IsVisible(videoosd)]]</visible>
+				<visible>!Skin.HasSetting(osd.darkpanel)</visible>
 			</control>
 			<control type="image">
 				<posx>0</posx>
@@ -30,7 +29,7 @@
 				<texture border="25">arctic/common/panel.png</texture>
 				<aspectratio>stretch</aspectratio>
 				<colordiffuse>mod-osdbar-dark</colordiffuse>
-				<visible>Skin.HasSetting(osd.darkpanel) + [!Skin.HasSetting(osd.wideinfo) | [!Window.IsActive(seekbar) + !Window.IsActive(videoosd)] | [Skin.HasSetting(osd.wideinfo) + !Window.IsVisible(videoosd)]]</visible>
+				<visible>Skin.HasSetting(osd.darkpanel)</visible>
 			</control>
 			<control type="label">
 				<description>Mute Label</description>

@@ -6,7 +6,6 @@
     <onunload>ClearProperty(ExtendPlot,seekbar)</onunload>
     <controls>
         <control type="group">
-        	<visible>[[Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Window.IsVisible(fullscreeninfo)] + !Window.IsVisible(videoosd)] | !Skin.HasSetting(osd.wideinfo)</visible>
 			<include>OSDWeatherClock</include>
 			<include>OSDChapterInfo</include>
         </control>
@@ -492,7 +491,7 @@
 		<!-- SMALL INFO -->
 		<control type="group">
 			<include>OSDSmallAnimation</include>
-			
+			<posx>390</posx>
 			<visible>!Skin.HasSetting(osd.wideinfo)</visible>
 			<control type="image">
 				<posx>-5</posx>

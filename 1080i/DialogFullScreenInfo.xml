@@ -83,152 +83,22 @@
 				<effect type="fade" end="0" start="100" time="200" tween="sine" easing="inout"/>
 			</animation>
         	<include>OSDSmallAnimation</include>
-        	<control type="grouplist" id="5">
-                <posx>1102</posx>
-                <posy>764</posy>
-                <width>100</width>
-                <height>300</height>
-                <align>right</align>
-                <orientation>vertical</orientation>
-                <itemgap>-26</itemgap>
-                <visible>!VideoPlayer.Content(LiveTV)</visible>
-                <control type="togglebutton" id="51">
-                    <width>70</width>
-                    <height>70</height>
-                    <texturefocus>osd/fullscreen/buttons/info-fo.png</texturefocus>
-                    <texturenofocus>osd/fullscreen/buttons/info-nofo.png</texturenofocus>
-                    <alttexturefocus>osd/fullscreen/buttons/info-fo.png</alttexturefocus>
-                    <alttexturenofocus>osd/fullscreen/buttons/info-nofo-dark.png</alttexturenofocus>
-                    <usealttexture>!Skin.HasSetting(osd.darkpanel)</usealttexture>
-                    <onclick condition="IsEmpty(Window(seekbar).Property(ExtendPlot))">SetProperty(ExtendPlot,1,seekbar)</onclick>
-                    <onclick condition="!IsEmpty(Window(seekbar).Property(ExtendPlot))">ClearProperty(ExtendPlot,seekbar)</onclick>
-                </control>
-                <control type="togglebutton" id="52">
-                    <width>70</width>
-                    <height>70</height>
-                    <texturefocus>osd/fullscreen/buttons/dvd-fo.png</texturefocus>
-                    <texturenofocus>osd/fullscreen/buttons/dvd-nofo.png</texturenofocus>
-                    <alttexturefocus>osd/fullscreen/buttons/dvd-fo.png</alttexturefocus>
-                    <alttexturenofocus>osd/fullscreen/buttons/dvd-nofo-dark.png</alttexturenofocus>
-                    <usealttexture>!Skin.HasSetting(osd.darkpanel)</usealttexture>
-                    <onclick condition="VideoPlayer.HasMenu">PlayerControl(ShowVideoMenu)</onclick>
-                </control>
-                <control type="togglebutton" id="53">
-                    <width>70</width>
-                    <height>70</height>
-                    <texturefocus>osd/fullscreen/buttons/subtitles-fo.png</texturefocus>
-                    <texturenofocus>osd/fullscreen/buttons/subtitles-nofo.png</texturenofocus>
-                    <alttexturefocus>osd/fullscreen/buttons/subtitles-fo.png</alttexturefocus>
-                    <alttexturenofocus>osd/fullscreen/buttons/subtitles-nofo-dark.png</alttexturenofocus>
-                    <usealttexture>!Skin.HasSetting(osd.darkpanel)</usealttexture>
-					<onclick condition="IsEmpty(Skin.String(SubtitleScript_Path))">Skin.SetAddon(SubtitleScript_Path,xbmc.python.subtitles)</onclick>
-                    <onclick>XBMC.RunScript($INFO[Skin.String(SubtitleScript_Path)])</onclick>
-                </control>
-                <control type="togglebutton" id="54">
-                    <width>70</width>
-                    <height>70</height>
-                    <texturefocus>osd/fullscreen/buttons/audio-settings-fo.png</texturefocus>
-                    <texturenofocus>osd/fullscreen/buttons/audio-settings-nofo.png</texturenofocus>
-                    <alttexturefocus>osd/fullscreen/buttons/audio-settings-fo.png</alttexturefocus>
-                    <alttexturenofocus>osd/fullscreen/buttons/audio-settings-nofo-dark.png</alttexturenofocus>
-                    <usealttexture>!Skin.HasSetting(osd.darkpanel)</usealttexture>
-                    <onclick>activatewindow(124)</onclick>
-                </control>
-                <control type="togglebutton" id="55">
-                    <width>70</width>
-                    <height>70</height>
-                    <texturefocus>osd/fullscreen/buttons/video-settings-fo.png</texturefocus>
-                    <texturenofocus>osd/fullscreen/buttons/video-settings-nofo.png</texturenofocus>
-                    <alttexturefocus>osd/fullscreen/buttons/video-settings-fo.png</alttexturefocus>
-                    <alttexturenofocus>osd/fullscreen/buttons/video-settings-nofo-dark.png</alttexturenofocus>
-                    <usealttexture>!Skin.HasSetting(osd.darkpanel)</usealttexture>
-                    <onclick>activatewindow(123)</onclick>
-                </control>
-                <control type="togglebutton" id="56">
-                    <width>70</width>
-                    <height>70</height>
-                    <texturefocus>osd/fullscreen/buttons/bookmarks-fo.png</texturefocus>
-                    <texturenofocus>osd/fullscreen/buttons/bookmarks-nofo.png</texturenofocus>
-                    <alttexturefocus>osd/fullscreen/buttons/bookmarks-fo.png</alttexturefocus>
-                    <alttexturenofocus>osd/fullscreen/buttons/bookmarks-nofo-dark.png</alttexturenofocus>
-                    <usealttexture>!Skin.HasSetting(osd.darkpanel)</usealttexture>
-                    <onclick>ActivateWindow(125)</onclick>
-                </control>
-            </control>
-            <control type="grouplist" id="5">
-                <posx>1102</posx>
-                <posy>764</posy>
-                <width>100</width>
-                <height>300</height>
-                <align>right</align>
-                <orientation>vertical</orientation>
-                <itemgap>-26</itemgap>
-                <visible>VideoPlayer.Content(LiveTV)</visible>
-                <control type="togglebutton" id="51">
-                    <width>70</width>
-                    <height>70</height>
-                    <texturefocus>osd/fullscreen/buttons/info-fo.png</texturefocus>
-                    <texturenofocus>osd/fullscreen/buttons/info-nofo.png</texturenofocus>
-                    <alttexturefocus>osd/fullscreen/buttons/info-fo.png</alttexturefocus>
-                    <alttexturenofocus>osd/fullscreen/buttons/info-nofo-dark.png</alttexturenofocus>
-                    <usealttexture>!Skin.HasSetting(osd.darkpanel)</usealttexture>
-                    <onclick condition="IsEmpty(Window(seekbar).Property(ExtendPlot))">SetProperty(ExtendPlot,1,seekbar)</onclick>
-                    <onclick condition="!IsEmpty(Window(seekbar).Property(ExtendPlot))">ClearProperty(ExtendPlot,seekbar)</onclick>
-                </control>
-                <control type="togglebutton" id="52">
-                    <width>70</width>
-                    <height>70</height>
-                    <texturefocus>osd/fullscreen/buttons/up-fo.png</texturefocus>
-                    <texturenofocus>osd/fullscreen/buttons/up-nofo.png</texturenofocus>
-                    <alttexturefocus>osd/fullscreen/buttons/up-fo.png</alttexturefocus>
-                    <alttexturenofocus>osd/fullscreen/buttons/up-nofo-dark.png</alttexturenofocus>
-                    <usealttexture>!Skin.HasSetting(osd.darkpanel)</usealttexture>
-                    <onclick condition="VideoPlayer.Content(LiveTV) + IsEmpty(Window(seekbar).Property(ShowNext))">SetProperty(ShowNext,1,seekbar)</onclick>
-                    <onclick condition="VideoPlayer.Content(LiveTV) + !IsEmpty(Window(seekbar).Property(ShowNext))">ClearProperty(ShowNext,seekbar)</onclick>
-                </control>
-                <control type="togglebutton" id="53">
-                    <width>70</width>
-                    <height>70</height>
-                    <texturefocus>osd/fullscreen/buttons/text-fo.png</texturefocus>
-                    <texturenofocus>osd/fullscreen/buttons/text-nofo.png</texturenofocus>
-                    <alttexturefocus>osd/fullscreen/buttons/text-fo.png</alttexturefocus>
-                    <alttexturenofocus>osd/fullscreen/buttons/text-nofo-dark.png</alttexturenofocus>
-                    <usealttexture>!Skin.HasSetting(osd.darkpanel)</usealttexture>
-					<onclick>ActivateWindow(Teletext)</onclick>
-                </control>
-                <control type="togglebutton" id="54">
-                    <width>70</width>
-                    <height>70</height>
-                    <texturefocus>osd/fullscreen/buttons/audio-settings-fo.png</texturefocus>
-                    <texturenofocus>osd/fullscreen/buttons/audio-settings-nofo.png</texturenofocus>
-                    <alttexturefocus>osd/fullscreen/buttons/audio-settings-fo.png</alttexturefocus>
-                    <alttexturenofocus>osd/fullscreen/buttons/audio-settings-nofo-dark.png</alttexturenofocus>
-                    <usealttexture>!Skin.HasSetting(osd.darkpanel)</usealttexture>
-                    <onclick>activatewindow(124)</onclick>
-                </control>
-                <control type="togglebutton" id="55">
-                    <width>70</width>
-                    <height>70</height>
-                    <texturefocus>osd/fullscreen/buttons/video-settings-fo.png</texturefocus>
-                    <texturenofocus>osd/fullscreen/buttons/video-settings-nofo.png</texturenofocus>
-                    <alttexturefocus>osd/fullscreen/buttons/video-settings-fo.png</alttexturefocus>
-                    <alttexturenofocus>osd/fullscreen/buttons/video-settings-nofo-dark.png</alttexturenofocus>
-                    <usealttexture>!Skin.HasSetting(osd.darkpanel)</usealttexture>
-                    <onclick>activatewindow(123)</onclick>
-                </control>
-                <control type="togglebutton" id="56">
-                    <width>70</width>
-                    <height>70</height>
-                    <texturefocus>osd/fullscreen/buttons/record-off-fo.png</texturefocus>
-                    <texturenofocus>osd/fullscreen/buttons/record-off-nofo.png</texturenofocus>
-                    <alttexturefocus>osd/fullscreen/buttons/record-off-fo.png</alttexturefocus>
-                    <alttexturenofocus>osd/fullscreen/buttons/record-off-nofo-dark.png</alttexturenofocus>
-                    <usealttexture>!Skin.HasSetting(osd.darkpanel)</usealttexture>
-                    <onclick>PlayerControl(Record)</onclick>
-					<enable>Player.CanRecord</enable>
-					<animation effect="fade" start="100" end="50" time="150" tween="sine" easing="inout" condition="!Player.CanRecord">Conditional</animation>
-                </control>
-            </control>
+        	<control type="togglebutton" id="5">
+				<posx>1050</posx>
+				<posy>775</posy>
+				<width>70</width>
+				<height>70</height>
+				<texturefocus>osd/fullscreen/buttons/info-fo.png</texturefocus>
+				<texturenofocus>osd/fullscreen/buttons/info-nofo.png</texturenofocus>
+				<alttexturefocus>osd/fullscreen/buttons/info-fo.png</alttexturefocus>
+				<alttexturenofocus>osd/fullscreen/buttons/info-nofo-dark.png</alttexturenofocus>
+				<usealttexture>!Skin.HasSetting(osd.darkpanel)</usealttexture>
+				<onclick condition="IsEmpty(Window(seekbar).Property(ExtendPlot))">SetProperty(ExtendPlot,1,seekbar)</onclick>
+				<onclick condition="!IsEmpty(Window(seekbar).Property(ExtendPlot))">ClearProperty(ExtendPlot,seekbar)</onclick>
+				<onup condition="IsEmpty(Window(seekbar).Property(ExtendPlot))">SetProperty(ExtendPlot,1,seekbar)</onup>
+                <ondown condition="IsEmpty(Window(seekbar).Property(ExtendPlot))">Back</ondown>
+                <ondown condition="!IsEmpty(Window(seekbar).Property(ExtendPlot))">ClearProperty(ExtendPlot,seekbar)</ondown>
+			</control>
         </control>
     </controls>
 </window>

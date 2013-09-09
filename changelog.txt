@@ -2,6 +2,8 @@
 New small style osd and video info
 Fixed Weather labels wrong colour for dark theme
 OSD fix for small info not showing after audio/video osd settings
+RCB updates - info tags, info wall, updated banner list view
+
 
 [B]0.3.5[/B]
 Added progress bar cache

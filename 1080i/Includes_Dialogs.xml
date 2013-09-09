@@ -577,7 +577,7 @@
 				<description>Heading</description>
 				<posx>80</posx>
 				<posy>262</posy>
-				<width>710</width>
+				<width>590</width>
 				<include>DialogHeaderMod</include>
 				<label>-</label>
 				<align>left</align>

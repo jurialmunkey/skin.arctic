@@ -62,7 +62,6 @@
                     <usealttexture>!IsEmpty(Window(seekbar).Property(ExtendPlot))</usealttexture>
                     <onclick condition="IsEmpty(Window(seekbar).Property(ExtendPlot))">SetProperty(ExtendPlot,1,seekbar)</onclick>
                     <onclick condition="!IsEmpty(Window(seekbar).Property(ExtendPlot))">ClearProperty(ExtendPlot,seekbar)</onclick>
-                    <visible>!VideoPlayer.Content(LiveTV)</visible>
                 </control>
                 <control type="button" id="53">
                     <posx>0</posx>

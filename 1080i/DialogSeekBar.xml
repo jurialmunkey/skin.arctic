@@ -400,9 +400,9 @@
 									<colordiffuse>$VAR[osd.text.dark]</colordiffuse>
 								</control>
 								<control type="label">
-									<width>30</width>
+									<width>35</width>
 									<height>70</height>
-									<label>$INFO[VideoPlayer.AudioChannels,,.1]</label>
+									<label>$VAR[OSDAudioChannels]</label>
 									<align>right</align>
 									<font>Font-OSD-AudioChannels</font>
 									<visible>IntegerGreaterThan(VideoPlayer.AudioChannels,0)</visible>
@@ -617,9 +617,9 @@
 						<colordiffuse>$VAR[osd.text.dark]</colordiffuse>
 					</control>
 					<control type="label">
-						<width>30</width>
+						<width>35</width>
 						<height>70</height>
-						<label>$INFO[VideoPlayer.AudioChannels,,.1]</label>
+						<label>$VAR[OSDAudioChannels]</label>
 						<align>right</align>
 						<font>Font-OSD-AudioChannels</font>
 						<visible>IntegerGreaterThan(VideoPlayer.AudioChannels,0)</visible>

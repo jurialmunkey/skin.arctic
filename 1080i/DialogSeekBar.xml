@@ -364,41 +364,50 @@
 							<posy>120</posy>
 							<animation effect="slide" end="0,-120" time="300" tween="cubic" easing="inout" condition="[[Window.IsVisible(fullscreeninfo) | !IsEmpty(Window(seekbar).Property(ShowInfo))] + !IsEmpty(Window(seekbar).Property(ExtendPlot))]">Conditional</animation>
 							<control type="grouplist">
-								<posx>1775</posx>
-								<posy>-6</posy>
-								<width>300</width>
+								<posx>1725</posx>
+								<posy>-26</posy>
+								<width>350</width>
 								<orientation>horizontal</orientation>
-								<itemgap>10</itemgap>
+								<itemgap>0</itemgap>
 								<align>right</align>
-								<control type="image">
-									<posx>0</posx>
-									<posy>0</posy>
-									<width>35</width>
-									<height>28</height>
-									<colordiffuse>$VAR[osd.text.dark]</colordiffuse>
-									<texture>flags/other/3d-osd.png</texture>
-									<include>visiblehidefadeflags</include>
+								<control type="label">
+									<width>70</width>
+									<height>70</height>
+									<label>3D</label>
+									<align>center</align>
+									<font>Font-OSD-AudioChannels</font>
 									<visible>substring(Player.FileNameAndPath,.3D.) | substring(Player.FileNameAndPath,-3D.)</visible>
+									<textcolor>$VAR[osd.text.dark]</textcolor>
 								</control>
 								<control type="image">
-									<posx>0</posx>
-									<posy>0</posy>
-									<width>84</width>
-									<height>28</height>
+									<width>70</width>
+									<height>70</height>
+									<aspectratio>keep</aspectratio>
+									<texture>$VAR[OSDFlagHDSD]</texture>
 									<colordiffuse>$VAR[osd.text.dark]</colordiffuse>
-									<texture>$INFO[VideoPlayer.VideoResolution,flags/res/osd/,.png]</texture>
-									<include>visiblehidefadeflags</include>
-									<visible>!IsEmpty(VideoPlayer.VideoResolution)</visible>
 								</control>
 								<control type="image">
-									<posx>0</posx>
-									<posy>0</posy>
-									<width>68</width>
-									<height>28</height>
+									<width>70</width>
+									<height>70</height>
+									<aspectratio>keep</aspectratio>
+									<texture>$INFO[VideoPlayer.VideoCodec,special://skin/extras/videoflags/,.png]</texture>
 									<colordiffuse>$VAR[osd.text.dark]</colordiffuse>
-									<texture>$INFO[VideoPlayer.AudioCodec,flags/audio/osd/,.png]</texture>
-									<include>visiblehidefadeflags</include>
-									<visible>!IsEmpty(VideoPlayer.AudioCodec)</visible>
+								</control>
+								<control type="label">
+									<width>70</width>
+									<height>70</height>
+									<label>$INFO[VideoPlayer.AudioChannels,,.1]</label>
+									<align>center</align>
+									<font>Font-OSD-AudioChannels</font>
+									<visible>IntegerGreaterThan(VideoPlayer.AudioChannels,0)</visible>
+									<textcolor>$VAR[osd.text.dark]</textcolor>
+								</control>
+								<control type="image">
+									<width>70</width>
+									<height>70</height>
+									<aspectratio>keep</aspectratio>
+									<texture>$INFO[VideoPlayer.AudioCodec,special://skin/extras/audioflags/,.png]</texture>
+									<colordiffuse>$VAR[osd.text.dark]</colordiffuse>
 								</control>
 							</control>
 							<control type="group">
@@ -547,13 +556,60 @@
 				<control type="label">
 					<posx>0</posx>
 					<posy>0</posy>
-					<width>875</width>
+					<width>575</width>
 					<label>$VAR[OSDTitle]</label>
 					<font>Font-Alaska-S38-BL</font>
 					<textcolor>$VAR[osd.text.dark]</textcolor>
 					<shadowcolor>18eeeeee</shadowcolor>
 					<scroll>false</scroll>
 					<align>left</align>
+				</control>
+				<control type="grouplist">
+					<orientation>horizontal</orientation>
+					<align>right</align>
+					<itemgap>0</itemgap>
+					<posx>521</posx>
+					<posy>-20</posy>
+					<width>350</width>
+					<control type="label">
+						<width>70</width>
+						<height>70</height>
+						<label>3D</label>
+						<align>center</align>
+						<font>Font-OSD-AudioChannels</font>
+						<visible>substring(Player.FileNameAndPath,.3D.) | substring(Player.FileNameAndPath,-3D.)</visible>
+						<textcolor>$VAR[osd.text.dark]</textcolor>
+					</control>
+					<control type="image">
+						<width>70</width>
+						<height>70</height>
+						<aspectratio>keep</aspectratio>
+						<texture>$VAR[OSDFlagHDSD]</texture>
+						<colordiffuse>$VAR[osd.text.dark]</colordiffuse>
+					</control>
+					<control type="image">
+						<width>70</width>
+						<height>70</height>
+						<aspectratio>keep</aspectratio>
+						<texture>$INFO[VideoPlayer.VideoCodec,special://skin/extras/videoflags/,.png]</texture>
+						<colordiffuse>$VAR[osd.text.dark]</colordiffuse>
+					</control>
+					<control type="label">
+						<width>70</width>
+						<height>70</height>
+						<label>$INFO[VideoPlayer.AudioChannels,,.1]</label>
+						<align>center</align>
+						<font>Font-OSD-AudioChannels</font>
+						<visible>IntegerGreaterThan(VideoPlayer.AudioChannels,0)</visible>
+						<textcolor>$VAR[osd.text.dark]</textcolor>
+					</control>
+					<control type="image">
+						<width>70</width>
+						<height>70</height>
+						<aspectratio>keep</aspectratio>
+						<texture>$INFO[VideoPlayer.AudioCodec,special://skin/extras/audioflags/,.png]</texture>
+						<colordiffuse>$VAR[osd.text.dark]</colordiffuse>
+					</control>
 				</control>
 				<control type="button">
 					<posx>0</posx>

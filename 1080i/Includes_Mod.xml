@@ -156,6 +156,14 @@
         <value>aeonflags/resolution/480.png</value>
     </variable>
     
+    <variable name="OSDFlagHDSD">
+        <value condition="IntegerGreaterThan(VideoPlayer.VideoResolution,1079)">aeonflags/resolution/1080.png</value>
+        <value condition="IntegerGreaterThan(VideoPlayer.VideoResolution,719)">aeonflags/resolution/720.png</value>
+        <value condition="IntegerGreaterThan(VideoPlayer.VideoResolution,575)">aeonflags/resolution/576.png</value>
+        <value condition="IntegerGreaterThan(VideoPlayer.VideoResolution,539)">aeonflags/resolution/540.png</value>
+        <value>aeonflags/resolution/480.png</value>
+    </variable>
+    
     <variable name="AeonFlagRating">
         <value condition="substring(listitem.mpaa,TV-Y) + ![substring(listitem.mpaa,TV-Y7) | substring(listitem.mpaa,TV-Y7-FV)]">aeonflags/rating/tv-y.png</value>
         <value condition="substring(listitem.mpaa,TV-Y7) | substring(listitem.mpaa,TV-Y7-FV)">aeonflags/rating/tv-y7.png</value>

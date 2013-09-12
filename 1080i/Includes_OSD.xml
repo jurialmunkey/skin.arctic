@@ -1,50 +1,6 @@
 <includes>
 
-	<include name="OSDClockAnimation">
-		<animation type="WindowOpen">
-			<effect type="fade" start="0" end="100" time="300" tween="sine" easing="inout" />
-			<effect type="slide" start="0,-70" end="0,0" time="300" tween="sine" easing="inout" />
-		</animation>
-		<animation type="WindowClose">
-			<effect type="fade" end="0" time="200" tween="sine" easing="inout" />
-			<effect type="slide" start="0,0" end="0,-70" time="200" tween="sine" easing="inout" />
-		</animation>
-		<animation type="Visible">
-			<effect type="fade" start="0" end="100" time="300" tween="sine" easing="inout" />
-			<effect type="slide" start="0,-70" end="0,0" time="300" tween="sine" easing="inout" />
-		</animation>
-		<animation type="Hidden">
-			<effect type="fade" end="0" time="200" tween="sine" easing="inout" />
-			<effect type="slide" start="0,0" end="0,-70" time="200" tween="sine" easing="inout" />
-		</animation>
-	</include>
 	
-	<include name="OSDSmallAnimation">
-		<animation type="WindowOpen" reversible="false" condition="!Player.Paused">
-			<effect type="fade" start="0" end="100" time="300" tween="sine" easing="inout" />
-			<effect type="slide" start="0,70" end="0" time="300" tween="sine" easing="inout" />
-		</animation>
-		<animation type="WindowOpen" reversible="false" condition="Player.Paused">
-			<effect type="fade" start="0" end="100" time="300" tween="sine" easing="inout" />
-			<effect type="slide" start="0,70" end="0" time="300" tween="sine" easing="inout" />
-		</animation>
-		<animation type="Visible" reversible="false">
-			<effect type="fade" start="0" end="100" time="300" tween="sine" easing="inout"/>
-			<effect type="slide" start="0,70" end="0" time="300" tween="sine" easing="inout" />
-		</animation>
-		<animation type="WindowClose" reversible="false" condition="!Player.Paused">
-			<effect type="fade" end="0" start="100" time="200" tween="sine" easing="inout" />
-			<effect type="slide" end="0,70" start="0" time="200" tween="sine" easing="inout" />
-		</animation>
-		<animation type="WindowClose" reversible="false" condition="Player.Paused">
-			<effect type="fade" end="0" start="100" time="200" tween="sine" easing="inout" />
-			<effect type="slide" end="0,70" start="0" time="200" tween="sine" easing="inout" />
-		</animation>
-		<animation type="Hidden" reversible="false">
-			<effect type="fade" start="100" end="0" time="200" tween="sine" easing="inout" />
-			<effect type="slide" end="0,70" start="0" time="200" tween="sine" easing="inout" />
-		</animation>
-	</include>
 	
 	
     <include name="OSDVisualisation">
@@ -162,7 +118,7 @@
 			<!-- Clocks -->
             <control type="group">
             	<animation effect="slide" end="-70" time="200" tween="sine" easing="inout" condition="[Window.IsVisible(volumebar) | Window.IsVisible(mutebug)]">Conditional</animation>
-            	<animation effect="slide" end="150" time="200" tween="sine" easing="inout" condition="!Window.IsVisible(volumebar) + !Window.IsVisible(mutebug) + [Window.IsActive(visualisation) | !Skin.HasSetting(osd.wideinfo)]">Conditional</animation>
+            	<animation effect="slide" end="150" time="200" tween="sine" easing="inout" condition="Window.IsVisible(visualisation) | [!Window.IsVisible(volumebar) + !Window.IsVisible(mutebug) + !Skin.HasSetting(osd.wideinfo)]">Conditional</animation>
             	<posx>1430</posx>
             	<control type="group">
 					<control type="image">

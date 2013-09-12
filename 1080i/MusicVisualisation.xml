@@ -101,12 +101,7 @@
 			<!-- SHOW INFO -->
 			<control type="group">
 				<visible>[Player.ShowInfo | Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Window.IsActive(musicosd)]</visible>
-				<animation type="Visible" reversible="false">
-					<effect type="fade" start="0" end="100" time="300" tween="sine" easing="inout" delay="150" />
-				</animation>
-				<animation type="Hidden" reversible="false">
-					<effect type="fade" start="100" end="0" time="200" tween="sine" easing="out" />
-				</animation>
+				<include>OSDSmallAnimation</include>
 				<posx>-365</posx>
 				<posy>760</posy>				
 				<control type="group">
@@ -684,7 +679,10 @@
 			</control>
         </control>
     
-        <include>OSDWeatherClock</include>
-        
+    	<control type="group">
+    		<include>OSDClockAnimation</include>
+    		<visible>[Player.ShowInfo | Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Window.IsActive(musicosd)]</visible>
+			<include>OSDWeatherClock</include>
+		</control>        
     </controls>
 </window>

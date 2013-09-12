@@ -152,7 +152,6 @@
 
     <include name="OSDWeatherClock">
         <control type="group">
-        	<animation effect="slide" end="150" condition="[!IsEmpty(Window(seekbar).Property(ShowInfo)) | Window.IsVisible(fullscreeninfo)] + Window.IsVisible(visualisation)">Conditional</animation>
         	<animation effect="slide" time="300" end="-150" condition="[!IsEmpty(Window(seekbar).Property(ShowInfo)) | Window.IsVisible(fullscreeninfo)] + Window.IsVisible(visualisation) + [Player.Muted | substring(Player.Volume,-60.0) | Window.IsActive(volumebar) | Control.IsVisible(99221)]">Conditional</animation>
             <include>OSDClockAnimation</include>
             <visible>[Player.Muted | substring(Player.Volume,-60.0) | Window.IsActive(volumebar) | Window.IsActive(mutebug) | !IsEmpty(Window(seekbar).Property(ShowInfo)) | Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Window.IsActive(videoosd) | Window.IsActive(musicosd) | Window.IsActive(fullscreenvideo) | Window.IsActive(visualisation)] + !Player.ShowCodec</visible>

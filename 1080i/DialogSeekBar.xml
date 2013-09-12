@@ -30,7 +30,7 @@
 					<effect type="fade" end="0" start="100" time="250" tween="sine" easing="inout" />
 				</animation>
 				<control type="group">
-					<visible>!Skin.HasSetting(osd.wideinfo)</visible>
+					<visible>Skin.HasSetting(osd.fullwidthinfo)</visible>
 					<control type="image">
 						<posx>150</posx>
 						<posy>195</posy>
@@ -61,7 +61,7 @@
 					</control>
 				</control>
 				<control type="group">
-					<visible>Skin.HasSetting(osd.wideinfo)</visible>
+					<visible>!Skin.HasSetting(osd.fullwidthinfo)</visible>
 					<control type="image">
 						<posx>-50</posx>
 						<posy>195</posy>
@@ -311,7 +311,7 @@
 								<height>236</height>
 								<texture background="true" fallback="osd/fullscreen/cd.png">$INFO[Player.Art(discart)]</texture>
 								<aspectratio align="center">keep</aspectratio>
-								<animation effect="rotate" center="auto" reversible="false" start="360" end="0" time="2500" loop="true" condition="Player.Playing">Conditional</animation>
+								<animation effect="rotate" center="auto" reversible="false" start="360" end="0" time="7500" loop="true" condition="Player.Playing">Conditional</animation>
 								<animation effect="slide" start="395" end="0" time="350">Visible</animation>
 								<visible>Skin.HasSetting(CDArt.Enabled) + !IsEmpty(Player.Art(discart))</visible>
 							</control>
@@ -493,6 +493,7 @@
 			<include>OSDSmallAnimation</include>
 			<posx>390</posx>
 			<visible>!Skin.HasSetting(osd.wideinfo)</visible>
+			
 			<control type="image">
 				<posx>-5</posx>
 				<posy>755</posy>
@@ -517,12 +518,15 @@
 				<colordiffuse>mod-osdbar-light</colordiffuse>
 				<visible>!Skin.HasSetting(osd.darkpanel)</visible>
 			</control>
+			
 			<control type="image">
 				<description>Thumb</description>
-				<posx>20</posx>
-				<posy>780</posy>
-				<width>187</width>
-				<height>280</height>
+				<posx>5</posx>
+				<posy>765</posy>
+				<width>223</width>
+				<height>310</height>
+				<bordertexture border="60">arctic/osd/white-25.png</bordertexture>
+				<bordersize>25</bordersize>
 				<texture background="true" diffuse="arctic/osd/poster-16.png">$VAR[ArcticOSDPoster]</texture>
 				<aspectratio scalediffuse="false">scale</aspectratio>
 				<visible>!VideoPlayer.Content(LiveTV) + [!Skin.HasSetting(videoosd.clearlogo) | [IsEmpty(Player.Art(tvshow.clearlogo)) + IsEmpty(Player.Art(clearlogo))]]</visible>

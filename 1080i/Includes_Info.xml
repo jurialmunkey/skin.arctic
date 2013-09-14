@@ -217,9 +217,9 @@
                     <textcolor>$VAR[NowPlayingColor]</textcolor>
                     <scroll>false</scroll>
                     <align>right</align>
-                    <animation effect="slide" end="0,16" time="300" tween="sine" easing="inout" condition="IsEmpty(Control.GetLabel(934)) + !VideoPlayer.Content(LiveTV)">Conditional</animation>
+                    <animation effect="slide" end="0,16" time="300" tween="sine" easing="inout" condition="IsEmpty(Control.GetLabel(935))">Conditional</animation>
                 </control>
-                <control type="label" id="934">
+                <control type="label" id="935">
                     <description>Sub label</description>
                     <posx>0</posx>
                     <posy>32</posy>

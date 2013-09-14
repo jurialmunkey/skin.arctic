@@ -32,30 +32,30 @@
 				<control type="group">
 					<visible>Skin.HasSetting(osd.fullwidthinfo)</visible>
 					<control type="image">
-						<posx>150</posx>
-						<posy>195</posy>
-						<width>1620</width>
-						<height>420</height>
-						<bordertexture border="40">arctic/common/border-20.png</bordertexture>
-						<bordersize>20</bordersize>
-						<texture border="25">arctic/common/whitepanel8.png</texture>
+						<posx>145</posx>
+						<posy>190</posy>
+						<width>1630</width>
+						<height>430</height>
+						<bordertexture border="40">arctic/osd/white-25.png</bordertexture>
+						<bordersize>25</bordersize>
+						<texture border="40">arctic/common/16panel-light.png</texture>
 						<aspectratio>stretch</aspectratio>
-						<colordiffuse>mod-osdbar</colordiffuse>
+						<colordiffuse>mod-osdbar-light</colordiffuse>
 						<visible>!Skin.HasSetting(osd.darkpanel)</visible>
 						<animation effect="slide" end="0,-195" time="300" tween="cubic" easing="inout" condition="[Window.IsVisible(fullscreeninfo) | !IsEmpty(Window(seekbar).Property(ShowInfo))] + !IsEmpty(Window(seekbar).Property(ExtendPlot))">Conditional</animation>
 						<animation effect="slide" end="0,-78" time="300" tween="cubic" easing="inout" condition="[Window.IsVisible(fullscreeninfo) | !IsEmpty(Window(seekbar).Property(ShowInfo))] + IsEmpty(Window(seekbar).Property(ExtendPlot))">Conditional</animation>
 					</control>
 					<control type="image">
-						<posx>150</posx>
-						<posy>195</posy>
-						<width>1620</width>
-						<height>420</height>
-						<bordertexture border="40">arctic/common/border-20.png</bordertexture>
-						<bordersize>20</bordersize>
-						<texture border="25">arctic/common/panel.png</texture>
+						<posx>145</posx>
+						<posy>190</posy>
+						<width>1630</width>
+						<height>430</height>
+						<bordertexture border="40">arctic/osd/white-25.png</bordertexture>
+						<bordersize>25</bordersize>
+						<texture border="40">arctic/common/16panel-light.png</texture>
 						<aspectratio>stretch</aspectratio>
 						<visible>Skin.HasSetting(osd.darkpanel)</visible>
-						<colordiffuse>mod-osdbar-dark</colordiffuse>
+						<colordiffuse>mod-infotags-d</colordiffuse>
 						<animation effect="slide" end="0,-195" time="300" tween="cubic" easing="inout" condition="[Window.IsVisible(fullscreeninfo) | !IsEmpty(Window(seekbar).Property(ShowInfo))] + !IsEmpty(Window(seekbar).Property(ExtendPlot))">Conditional</animation>
 						<animation effect="slide" end="0,-78" time="300" tween="cubic" easing="inout" condition="[Window.IsVisible(fullscreeninfo) | !IsEmpty(Window(seekbar).Property(ShowInfo))] + IsEmpty(Window(seekbar).Property(ExtendPlot))">Conditional</animation>
 					</control>
@@ -67,11 +67,11 @@
 						<posy>195</posy>
 						<width>2020</width>
 						<height>500</height>
-						<bordertexture border="40">arctic/common/border-20.png</bordertexture>
-						<bordersize>20</bordersize>
-						<texture border="25">arctic/common/whitepanel8.png</texture>
+						<bordertexture border="40">arctic/osd/white-25.png</bordertexture>
+						<bordersize>25</bordersize>
+						<texture border="40">arctic/common/16panel-light.png</texture>
 						<aspectratio>stretch</aspectratio>
-						<colordiffuse>mod-osdbar</colordiffuse>
+						<colordiffuse>mod-osdbar-light</colordiffuse>
 						<visible>!Skin.HasSetting(osd.darkpanel)</visible>
 						<animation effect="slide" end="0,-195" time="300" tween="cubic" easing="inout" condition="[Window.IsVisible(fullscreeninfo) | !IsEmpty(Window(seekbar).Property(ShowInfo))] + !IsEmpty(Window(seekbar).Property(ExtendPlot))">Conditional</animation>
 						<animation effect="slide" end="0,-78" time="300" tween="cubic" easing="inout" condition="[Window.IsVisible(fullscreeninfo) | !IsEmpty(Window(seekbar).Property(ShowInfo))] + IsEmpty(Window(seekbar).Property(ExtendPlot))">Conditional</animation>
@@ -81,12 +81,12 @@
 						<posy>195</posy>
 						<width>2020</width>
 						<height>500</height>
-						<bordertexture border="40">arctic/common/border-20.png</bordertexture>
-						<bordersize>20</bordersize>
-						<texture border="25">arctic/common/panel.png</texture>
+						<bordertexture border="40">arctic/osd/white-25.png</bordertexture>
+						<bordersize>25</bordersize>
+						<texture border="40">arctic/common/16panel-light.png</texture>
 						<aspectratio>stretch</aspectratio>
 						<visible>Skin.HasSetting(osd.darkpanel)</visible>
-						<colordiffuse>mod-osdbar-dark</colordiffuse>
+						<colordiffuse>mod-infotags-d</colordiffuse>
 						<animation effect="slide" end="0,-195" time="300" tween="cubic" easing="inout" condition="[Window.IsVisible(fullscreeninfo) | !IsEmpty(Window(seekbar).Property(ShowInfo))] + !IsEmpty(Window(seekbar).Property(ExtendPlot))">Conditional</animation>
 						<animation effect="slide" end="0,-78" time="300" tween="cubic" easing="inout" condition="[Window.IsVisible(fullscreeninfo) | !IsEmpty(Window(seekbar).Property(ShowInfo))] + IsEmpty(Window(seekbar).Property(ExtendPlot))">Conditional</animation>
 					</control>
@@ -525,9 +525,9 @@
 				<height>330</height>
 				<bordertexture border="60">arctic/osd/white-25.png</bordertexture>
 				<bordersize>25</bordersize>
-				<texture border="50">arctic/common/16panel.png</texture>
+				<texture border="50">arctic/common/16panel-light.png</texture>
 				<aspectratio>stretch</aspectratio>
-				<colordiffuse>mod-osdbar-dark</colordiffuse>
+				<colordiffuse>mod-infotags-d</colordiffuse>
 				<visible>Skin.HasSetting(osd.darkpanel)</visible>
 			</control>
 			<control type="image">
@@ -618,7 +618,7 @@
 					</control>
 					<control type="label">
 						<width>35</width>
-						<height>73</height>
+						<height>70</height>
 						<label>$VAR[OSDAudioChannels]</label>
 						<align>right</align>
 						<font>Font-OSD-AudioChannels</font>

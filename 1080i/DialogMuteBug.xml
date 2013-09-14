@@ -26,9 +26,9 @@
 				<height>110</height>
 				<bordertexture border="40">arctic/common/border-20.png</bordertexture>
 				<bordersize>20</bordersize>
-				<texture border="25">arctic/common/panel.png</texture>
+				<texture border="25">arctic/common/whitepanel8.png</texture>
 				<aspectratio>stretch</aspectratio>
-				<colordiffuse>mod-osdbar-dark</colordiffuse>
+				<colordiffuse>mod-infotags-d</colordiffuse>
 				<visible>Skin.HasSetting(osd.darkpanel)</visible>
 			</control>
 			<control type="label">

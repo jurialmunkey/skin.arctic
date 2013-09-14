@@ -435,11 +435,11 @@
 	
 	<include name="Viewtype-RadioChannelView">
 	    <control type="group" id="120">
-			<animation type="Visible" reversible="false">
-			    <effect type="fade" start="0" end="100" time="300" />
-			</animation>
 	        <control type="group">
 	            <visible>Control.IsVisible(12) + !Window.IsActive(favourites)</visible>
+	            <animation type="Visible" reversible="false">
+					<effect type="fade" start="0" end="100" time="300" />
+				</animation>
 				<control type="group">
 					<posx>155</posx>
 					<posy>158</posy>

@@ -108,7 +108,7 @@
                 </control>
             </control>
             <control type="image">
-                <posx>85r</posx>
+                <posx>95r</posx>
                 <posy>128r</posy>
                 <width>90</width>
                 <height>90</height>
@@ -180,7 +180,7 @@
     	<value condition="StringCompare(Skin.String(homescreen.style),simple) + Window.IsActive(home)">mod-infotags-l</value>
     	<value>Mod_Tags_Light</value>
     </variable>
-    
+            
     <include name="Common-NowPlaying">
         <control type="group">
             <posx>1741</posx>
@@ -188,7 +188,7 @@
             <visible>Player.HasMedia + IsEmpty(Window(videos).property(TvTunesIsAlive)) + !Window.IsActive(visualisation)</visible>
             <include>BannerListInfoAnimation</include>
             <animation effect="slide" end="-76" time="300" tween="sine" easing="inout" condition="Window.IsActive(busydialog)">Conditional</animation>
-            <animation type="Conditional" condition="[Window.IsActive(infodialog) | Window.IsActive(extendedprogressdialog) | Window.IsActive(volumebar)]">
+            <animation type="Conditional" condition="[Window.IsActive(infodialog) | Window.IsActive(extendedprogressdialog) | Window.IsActive(volumebar) | [Window.IsVisible(home) + StringCompare(Skin.String(homescreen.style),simple) + Container(525).HasFocus(4) + [PVR.IsRecording | PVR.HasTimer]]]">
                 <effect type="fade" start="100" end="8" tween="sine" easing="out" time="300" />
                 <effect type="zoom" start="100" end="50" center="1745,100" tween="sine" easing="inout" time="300" />
             </animation>

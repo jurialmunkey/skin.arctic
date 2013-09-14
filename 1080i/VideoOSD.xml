@@ -443,23 +443,10 @@
 					<height>110</height>
 					<bordertexture border="40">arctic/common/border-20.png</bordertexture>
 					<bordersize>20</bordersize>
-					<texture border="25">arctic/common/panel.png</texture>
+					<texture border="25">arctic/common/whitepanel8.png</texture>
 					<aspectratio>stretch</aspectratio>
-					<colordiffuse>mod-osdbar-dark</colordiffuse>
-					<!--<visible>!Skin.HasSetting(osd.wideinfo)</visible>-->
+					<colordiffuse>mod-infotags-d</colordiffuse>
 				</control>
-				<!--<control type="image">
-					<posx>-340</posx>
-					<posy>-30</posy>
-					<width>2400</width>
-					<height>110</height>
-					<bordertexture border="40">arctic/common/border-20.png</bordertexture>
-					<bordersize>20</bordersize>
-					<texture border="25">arctic/common/panel.png</texture>
-					<aspectratio>stretch</aspectratio>
-					<colordiffuse>mod-osdbar-dark</colordiffuse>
-					<visible>Skin.HasSetting(osd.wideinfo)</visible>
-				</control>-->
 				<control type="group">
 					<!-- control buttons -->
 					<posx>-290</posx>

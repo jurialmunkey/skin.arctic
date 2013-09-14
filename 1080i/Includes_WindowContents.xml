@@ -581,13 +581,29 @@
         <focusedcolor>DDFFFFFF</focusedcolor>
         <disabledcolor>FF484848</disabledcolor>
         <textoffsetx>90</textoffsetx>
-        <textwidth>300</textwidth>
+        <textwidth>280</textwidth>
         <scroll>false</scroll>   
         <texturefocus border="8">views/other/focus-mod8-right.png</texturefocus>   
         <radioposx>-16</radioposx>
         <radioposy>10</radioposy>
     </include>
-    
+    <include name="ViewOptions.Button3">
+        <posx>0</posx>
+        <posy>0</posy>
+        <width>480</width>
+        <height>60</height>
+        <font>Font-Condensed-S32</font>
+        <align>left</align>
+        <textcolor>mod-infotags-alt</textcolor>
+        <focusedcolor>DDFFFFFF</focusedcolor>
+        <disabledcolor>FF484848</disabledcolor>
+        <textoffsetx>20</textoffsetx>
+        <textwidth>440</textwidth>
+        <scroll>false</scroll>   
+        <texturefocus border="8">views/other/focus-mod8-right.png</texturefocus>   
+        <radioposx>-16</radioposx>
+        <radioposy>10</radioposy>
+    </include>
     <include name="ViewOptions.Panel">
     	<include>OptionsAnimations</include>
 		<posy>20</posy>

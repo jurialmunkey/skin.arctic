@@ -371,7 +371,7 @@
 								<align>right</align>
 								<control type="label">
 									<width>70</width>
-									<height>73</height>
+									<height>70</height>
 									<label>3D</label>
 									<align>center</align>
 									<font>Font-OSD-AudioChannels</font>
@@ -401,7 +401,7 @@
 								</control>
 								<control type="label">
 									<width>35</width>
-									<height>73</height>
+									<height>70</height>
 									<label>$VAR[OSDAudioChannels]</label>
 									<align>right</align>
 									<font>Font-OSD-AudioChannels</font>
@@ -588,7 +588,7 @@
 					<width>350</width>
 					<control type="label">
 						<width>70</width>
-						<height>73</height>
+						<height>70</height>
 						<label>3D</label>
 						<align>right</align>
 						<font>Font-OSD-AudioChannels</font>

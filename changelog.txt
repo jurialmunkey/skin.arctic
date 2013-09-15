@@ -1,6 +1,8 @@
 [B]0.3.7[/B]
 Added infotags to OSD
 Music small info shows osd like video player
+Scroll title of focused pvrosdchannel
+Buttons on pvrosdchannel info focus color to white
 
 [B]0.3.6[/B]
 New small style osd and video info

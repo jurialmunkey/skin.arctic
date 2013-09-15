@@ -294,7 +294,7 @@
 								<label>$INFO[ListItem.Title]</label>
 								<textcolor>mod-infotags-alt</textcolor>
 								<selectedcolor>mod-infotags-alt</selectedcolor>
-								<scroll>false</scroll>
+								<scroll>true</scroll>
 							</control>
 							<control type="label">
 								<description>Label</description>

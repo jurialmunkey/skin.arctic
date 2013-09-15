@@ -475,12 +475,12 @@
 										<align>left</align>
 										<itemgap>-20</itemgap>
 										<posx>0</posx>
-										<posy>35</posy>
-										<width>350</width>
+										<posy>37</posy>
+										<width>1120</width>
 										<control type="label">
 											<posx>0</posx>
 											<posy>35</posy>
-											<width max="850">auto</width>
+											<width max="1120">auto</width>
 											<label>$INFO[VideoPlayer.Year]$INFO[VideoPlayer.Genre, • ,]$INFO[VideoPlayer.Rating, • ,]</label>
 											<font>Font-Alaska-S28-L</font>
 											<textcolor>$VAR[osd.text.normal]</textcolor>
@@ -492,7 +492,7 @@
 										<control type="label">
 											<posx>0</posx>
 											<posy>35</posy>
-											<width max="850">auto</width>
+											<width max="1120">auto</width>
 											<label>$INFO[VideoPlayer.TVShowTitle,, • ]$INFO[VideoPlayer.Season,S,]$INFO[VideoPlayer.Episode,E,]$INFO[VideoPlayer.Premiered, • ,]$INFO[VideoPlayer.Rating, • ,]</label>
 											<font>Font-Alaska-S28-L</font>
 											<textcolor>$VAR[osd.text.normal]</textcolor>
@@ -504,7 +504,7 @@
 										<control type="label">
 											<posx>0</posx>
 											<posy>35</posy>
-											<width max="850">auto</width>
+											<width max="1120">auto</width>
 											<label>$INFO[VideoPlayer.ChannelNumber,$LOCALIZE[19029] ,]$INFO[VideoPlayer.ChannelName, • ,]$INFO[VideoPlayer.Genre, • ,]$INFO[VideoPlayer.Rating, • ,]</label>
 											<font>Font-Alaska-S28-L</font>
 											<textcolor>$VAR[osd.text.normal]</textcolor>

@@ -134,6 +134,9 @@
 
 		<!-- VIEWTYPES -->
         <control type="group" id="200">
+        	<visible>!Window.IsVisible(script-RCB-gameinfo.xml)</visible>
+        	<include>OptionsShutdownAnimation</include>
+			<include>BannerListAnimations</include>
         	<!-- BANNER VIEW -->
         	<control type="group">
 				<include>FullscreenDimensions</include>

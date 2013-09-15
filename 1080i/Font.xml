@@ -503,7 +503,12 @@
         <font>
             <name>Font-OSD-AudioChannels</name>
             <filename>alaska_black.ttf</filename>
-            <size>24</size>
+            <size>20</size>
+        </font>
+        <font>
+            <name>Font-OSD-AudioCodec</name>
+            <filename>alaska_regular.ttf</filename>
+            <size>20</size>
         </font>
     </fontset>
 </fonts>

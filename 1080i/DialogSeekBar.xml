@@ -363,50 +363,76 @@
 							<posy>120</posy>
 							<animation effect="slide" end="0,-120" time="300" tween="cubic" easing="inout" condition="[[Window.IsVisible(fullscreeninfo) | !IsEmpty(Window(seekbar).Property(ShowInfo))] + !IsEmpty(Window(seekbar).Property(ExtendPlot))]">Conditional</animation>
 							<control type="grouplist">
-								<posx>1725</posx>
-								<posy>-26</posy>
-								<width>350</width>
 								<orientation>horizontal</orientation>
-								<itemgap>5</itemgap>
 								<align>right</align>
-								<control type="label">
+								<itemgap>5</itemgap>
+								<posx>1733</posx>
+								<posy>-5</posy>
+								<width>350</width>
+								<usecontrolcoords>true</usecontrolcoords>
+								<control type="image">
 									<width>70</width>
-									<height>72</height>
-									<label>3D</label>
+									<height>28</height>
+									<texture border="10">arctic/flags/left.png</texture>
+									<colordiffuse>$VAR[osd.text.dark]</colordiffuse>
+								</control>
+								<control type="label">
+									<posx>-70</posx>
+									<width>55</width>
+									<height>28</height>
+									<label>$INFO[VideoPlayer.VideoResolution]</label>
 									<align>center</align>
-									<font>Font-OSD-AudioChannels</font>
-									<visible>substring(Player.FileNameAndPath,.3D.) | substring(Player.FileNameAndPath,-3D.)</visible>
-									<textcolor>$VAR[osd.text.dark]</textcolor>
+									<font>Font-OSD-AudioCodec</font>
+									<textcolor>$VAR[osd.text.alt]</textcolor>
 								</control>
 								<control type="image">
 									<width>70</width>
-									<height>70</height>
-									<aspectratio>keep</aspectratio>
-									<texture>$VAR[OSDFlagHDSD]</texture>
+									<height>28</height>
+									<texture border="10">arctic/flags/right.png</texture>
 									<colordiffuse>$VAR[osd.text.dark]</colordiffuse>
 								</control>
 								<control type="image">
-									<width>70</width>
-									<height>70</height>
+									<posx>-70</posx>
+									<width>55</width>
+									<height>28</height>
 									<aspectratio>keep</aspectratio>
 									<texture>$INFO[VideoPlayer.VideoCodec,special://skin/extras/videoflags/,.png]</texture>
 									<colordiffuse>$VAR[osd.text.dark]</colordiffuse>
 								</control>
 								<control type="image">
+									<posx>15</posx>
 									<width>70</width>
-									<height>70</height>
-									<aspectratio>keep</aspectratio>
-									<texture>$INFO[VideoPlayer.AudioCodec,special://skin/extras/audioflags/,.png]</texture>
+									<height>28</height>
+									<texture border="10">arctic/flags/left.png</texture>
 									<colordiffuse>$VAR[osd.text.dark]</colordiffuse>
 								</control>
 								<control type="label">
-									<width>35</width>
-									<height>72</height>
+									<posx>-70</posx>
+									<width>55</width>
+									<height>28</height>
 									<label>$VAR[OSDAudioChannels]</label>
-									<align>right</align>
-									<font>Font-OSD-AudioChannels</font>
-									<visible>IntegerGreaterThan(VideoPlayer.AudioChannels,0)</visible>
+									<align>center</align>
+									<font>Font-OSD-AudioCodec</font>
+									<textcolor>$VAR[osd.text.alt]</textcolor>
+								</control>
+								<control type="image">
+									<width>70</width>
+									<height>28</height>
+									<texture border="10">arctic/flags/right.png</texture>
+									<colordiffuse>$VAR[osd.text.dark]</colordiffuse>
+								</control>
+								<control type="label">
+									<posx>-70</posx>
+									<width>57</width>
+									<height>28</height>
+									<label>$INFO[VideoPlayer.AudioCodec]</label>
+									<align>center</align>
+									<font>Font-OSD-AudioCodec</font>
 									<textcolor>$VAR[osd.text.dark]</textcolor>
+								</control>
+								<control type="image">
+									<width>13</width>
+									<height>28</height>
 								</control>
 							</control>
 							<control type="group">
@@ -436,7 +462,7 @@
 									<control type="label">
 										<posx>0</posx>
 										<posy>4</posy>
-										<width>1020</width>
+										<width>950</width>
 										<label>$VAR[OSDTitle]</label>
 										<font>Font-Alaska-S38-BL</font>
 										<textcolor>$VAR[osd.text.dark]</textcolor>
@@ -444,45 +470,50 @@
 										<scroll>false</scroll>
 										<align>left</align>
 									</control>
-									<control type="button">
-										<posx>0</posx>
-										<posy>34</posy>
-										<width>1231</width>
-										<label>$INFO[VideoPlayer.Year]$INFO[VideoPlayer.Genre, • ,]</label>
-										<label2>$INFO[VideoPlayer.Rating, ★ ,]</label2>
-										<font>Font-Alaska-S28-L</font>
-										<textcolor>$VAR[osd.text.normal]</textcolor>
-										<shadowcolor>18eeeeee</shadowcolor>
-										<scroll>false</scroll>
+									<control type="grouplist">
+										<orientation>horizontal</orientation>
 										<align>left</align>
-										<visible>!VideoPlayer.Content(LiveTV) + !VideoPlayer.Content(episodes)</visible>
+										<itemgap>-20</itemgap>
+										<posx>0</posx>
+										<posy>35</posy>
+										<width>350</width>
+										<control type="label">
+											<posx>0</posx>
+											<posy>35</posy>
+											<width max="850">auto</width>
+											<label>$INFO[VideoPlayer.Year]$INFO[VideoPlayer.Genre, • ,]$INFO[VideoPlayer.Rating, • ,]</label>
+											<font>Font-Alaska-S28-L</font>
+											<textcolor>$VAR[osd.text.normal]</textcolor>
+											<shadowcolor>18eeeeee</shadowcolor>
+											<scroll>false</scroll>
+											<align>left</align>
+											<visible>!VideoPlayer.Content(LiveTV) + !VideoPlayer.Content(episodes)</visible>
+										</control>	
+										<control type="label">
+											<posx>0</posx>
+											<posy>35</posy>
+											<width max="850">auto</width>
+											<label>$INFO[VideoPlayer.TVShowTitle,, • ]$INFO[VideoPlayer.Season,S,]$INFO[VideoPlayer.Episode,E,]$INFO[VideoPlayer.Premiered, • ,]$INFO[VideoPlayer.Rating, • ,]</label>
+											<font>Font-Alaska-S28-L</font>
+											<textcolor>$VAR[osd.text.normal]</textcolor>
+											<shadowcolor>18eeeeee</shadowcolor>
+											<scroll>false</scroll>
+											<align>left</align>
+											<visible>VideoPlayer.Content(episodes)</visible>
+										</control>	
+										<control type="label">
+											<posx>0</posx>
+											<posy>35</posy>
+											<width max="850">auto</width>
+											<label>$INFO[VideoPlayer.ChannelNumber,$LOCALIZE[19029] ,]$INFO[VideoPlayer.ChannelName, • ,]$INFO[VideoPlayer.Genre, • ,]$INFO[VideoPlayer.Rating, • ,]</label>
+											<font>Font-Alaska-S28-L</font>
+											<textcolor>$VAR[osd.text.normal]</textcolor>
+											<shadowcolor>18eeeeee</shadowcolor>
+											<scroll>false</scroll>
+											<align>left</align>
+											<visible>VideoPlayer.Content(LiveTV)</visible>
+										</control>	
 									</control>	
-									<control type="button">
-										<posx>0</posx>
-										<posy>34</posy>
-										<width>1231</width>
-										<label>$INFO[VideoPlayer.Season,$LOCALIZE[20373] , • ]$INFO[VideoPlayer.Episode,$LOCALIZE[20359] ,]$INFO[VideoPlayer.TVShowTitle, • ,]</label>
-										<label2>$INFO[VideoPlayer.Rating, ★ ,]</label2>
-										<font>Font-Alaska-S28-L</font>
-										<textcolor>$VAR[osd.text.normal]</textcolor>
-										<shadowcolor>18eeeeee</shadowcolor>
-										<scroll>false</scroll>
-										<align>left</align>
-										<visible>VideoPlayer.Content(episodes)</visible>
-									</control>	
-									<control type="button">
-										<posx>0</posx>
-										<posy>40</posy>
-										<width>1231</width>
-										<label>$INFO[VideoPlayer.ChannelName]$INFO[VideoPlayer.Genre, • ,] • $VAR[OSDNextTitle]</label>
-										<label2>$INFO[VideoPlayer.Rating, ★ ,]</label2>
-										<font>Font-Alaska-S28-L</font>
-										<textcolor>$VAR[osd.text.normal]</textcolor>
-										<shadowcolor>18eeeeee</shadowcolor>
-										<scroll>false</scroll>
-										<align>left</align>
-										<visible>VideoPlayer.Content(LiveTV)</visible>
-									</control>		
 								</control>
 
 								<control type="textbox">
@@ -571,7 +602,7 @@
 				<control type="label">
 					<posx>0</posx>
 					<posy>0</posy>
-					<width>575</width>
+					<width>585</width>
 					<label>$VAR[OSDTitle]</label>
 					<font>Font-Alaska-S38-BL</font>
 					<textcolor>$VAR[osd.text.dark]</textcolor>
@@ -583,89 +614,120 @@
 					<orientation>horizontal</orientation>
 					<align>right</align>
 					<itemgap>5</itemgap>
-					<posx>521</posx>
-					<posy>-21</posy>
+					<posx>535</posx>
+					<posy>1</posy>
 					<width>350</width>
-					<control type="label">
+					<usecontrolcoords>true</usecontrolcoords>
+					<control type="image">
 						<width>70</width>
-						<height>72</height>
-						<label>3D</label>
-						<align>right</align>
-						<font>Font-OSD-AudioChannels</font>
-						<visible>substring(Player.FileNameAndPath,.3D.) | substring(Player.FileNameAndPath,-3D.)</visible>
-						<textcolor>$VAR[osd.text.dark]</textcolor>
+						<height>28</height>
+						<texture border="10">arctic/flags/left.png</texture>
+						<colordiffuse>$VAR[osd.text.dark]</colordiffuse>
+					</control>
+					<control type="label">
+						<posx>-70</posx>
+						<width>55</width>
+						<height>28</height>
+						<label>$INFO[VideoPlayer.VideoResolution]</label>
+						<align>center</align>
+						<font>Font-OSD-AudioCodec</font>
+						<textcolor>$VAR[osd.text.alt]</textcolor>
 					</control>
 					<control type="image">
 						<width>70</width>
-						<height>70</height>
-						<aspectratio>keep</aspectratio>
-						<texture>$VAR[OSDFlagHDSD]</texture>
+						<height>28</height>
+						<texture border="10">arctic/flags/right.png</texture>
 						<colordiffuse>$VAR[osd.text.dark]</colordiffuse>
 					</control>
 					<control type="image">
-						<width>70</width>
-						<height>70</height>
+						<posx>-70</posx>
+						<width>55</width>
+						<height>28</height>
 						<aspectratio>keep</aspectratio>
 						<texture>$INFO[VideoPlayer.VideoCodec,special://skin/extras/videoflags/,.png]</texture>
 						<colordiffuse>$VAR[osd.text.dark]</colordiffuse>
 					</control>
 					<control type="image">
+						<posx>15</posx>
 						<width>70</width>
-						<height>70</height>
-						<aspectratio>keep</aspectratio>
-						<texture>$INFO[VideoPlayer.AudioCodec,special://skin/extras/audioflags/,.png]</texture>
+						<height>28</height>
+						<texture border="10">arctic/flags/left.png</texture>
 						<colordiffuse>$VAR[osd.text.dark]</colordiffuse>
 					</control>
 					<control type="label">
-						<width>35</width>
-						<height>72</height>
+						<posx>-70</posx>
+						<width>55</width>
+						<height>28</height>
 						<label>$VAR[OSDAudioChannels]</label>
-						<align>right</align>
-						<font>Font-OSD-AudioChannels</font>
-						<visible>IntegerGreaterThan(VideoPlayer.AudioChannels,0)</visible>
+						<align>center</align>
+						<font>Font-OSD-AudioCodec</font>
+						<textcolor>$VAR[osd.text.alt]</textcolor>
+					</control>
+					<control type="image">
+						<width>70</width>
+						<height>28</height>
+						<texture border="10">arctic/flags/right.png</texture>
+						<colordiffuse>$VAR[osd.text.dark]</colordiffuse>
+					</control>
+					<control type="label">
+						<posx>-70</posx>
+						<width>57</width>
+						<height>28</height>
+						<label>$INFO[VideoPlayer.AudioCodec]</label>
+						<align>center</align>
+						<font>Font-OSD-AudioCodec</font>
 						<textcolor>$VAR[osd.text.dark]</textcolor>
 					</control>
+					<control type="image">
+						<width>13</width>
+						<height>28</height>
+					</control>
 				</control>
-				<control type="button">
+				<control type="grouplist">
+					<orientation>horizontal</orientation>
+					<align>left</align>
+					<itemgap>-20</itemgap>
 					<posx>0</posx>
 					<posy>35</posy>
-					<width>875</width>
-					<label>$INFO[VideoPlayer.Year]$INFO[VideoPlayer.Genre, • ,]</label>
-					<label2>$INFO[VideoPlayer.Rating, ★ ,]</label2>
-					<font>Font-Alaska-S28-L</font>
-					<textcolor>$VAR[osd.text.normal]</textcolor>
-					<shadowcolor>18eeeeee</shadowcolor>
-					<scroll>false</scroll>
-					<align>left</align>
-					<visible>!VideoPlayer.Content(LiveTV) + !VideoPlayer.Content(episodes)</visible>
-				</control>	
-				<control type="button">
-					<posx>0</posx>
-					<posy>35</posy>
-					<width>875</width>
-					<label>$INFO[VideoPlayer.Season,$LOCALIZE[20373] , • ]$INFO[VideoPlayer.Episode,$LOCALIZE[20359] ,]$INFO[VideoPlayer.TVShowTitle, • ,]</label>
-					<label2>$INFO[VideoPlayer.Rating, ★ ,]</label2>
-					<font>Font-Alaska-S28-L</font>
-					<textcolor>$VAR[osd.text.normal]</textcolor>
-					<shadowcolor>18eeeeee</shadowcolor>
-					<scroll>false</scroll>
-					<align>left</align>
-					<visible>VideoPlayer.Content(episodes)</visible>
-				</control>	
-				<control type="button">
-					<posx>0</posx>
-					<posy>35</posy>
-					<width>875</width>
-					<label>$INFO[VideoPlayer.ChannelNumber,$LOCALIZE[19029] ,]$INFO[VideoPlayer.ChannelName, • ,]$INFO[VideoPlayer.Genre, • ,]</label>
-					<label2>$INFO[VideoPlayer.Rating, ★ ,]</label2>
-					<font>Font-Alaska-S28-L</font>
-					<textcolor>$VAR[osd.text.normal]</textcolor>
-					<shadowcolor>18eeeeee</shadowcolor>
-					<scroll>false</scroll>
-					<align>left</align>
-					<visible>VideoPlayer.Content(LiveTV)</visible>
-				</control>	
-				<control type="button">
+					<width>885</width>
+					<control type="label">
+						<posx>0</posx>
+						<posy>35</posy>
+						<width max="885">auto</width>
+						<label>$INFO[VideoPlayer.Year]$INFO[VideoPlayer.Genre, • ,]$INFO[VideoPlayer.Rating, • ,]</label>
+						<font>Font-Alaska-S28-L</font>
+						<textcolor>$VAR[osd.text.normal]</textcolor>
+						<shadowcolor>18eeeeee</shadowcolor>
+						<scroll>false</scroll>
+						<align>left</align>
+						<visible>!VideoPlayer.Content(LiveTV) + !VideoPlayer.Content(episodes)</visible>
+					</control>	
+					<control type="label">
+						<posx>0</posx>
+						<posy>35</posy>
+						<width max="885">auto</width>
+						<label>$INFO[VideoPlayer.TVShowTitle,, • ]$INFO[VideoPlayer.Season,S,]$INFO[VideoPlayer.Episode,E,]$INFO[VideoPlayer.Premiered, • ,]$INFO[VideoPlayer.Rating, • ,]</label>
+						<font>Font-Alaska-S28-L</font>
+						<textcolor>$VAR[osd.text.normal]</textcolor>
+						<shadowcolor>18eeeeee</shadowcolor>
+						<scroll>false</scroll>
+						<align>left</align>
+						<visible>VideoPlayer.Content(episodes)</visible>
+					</control>	
+					<control type="label">
+						<posx>0</posx>
+						<posy>35</posy>
+						<width max="885">auto</width>
+						<label>$INFO[VideoPlayer.ChannelNumber,$LOCALIZE[19029] ,]$INFO[VideoPlayer.ChannelName, • ,]$INFO[VideoPlayer.Genre, • ,]$INFO[VideoPlayer.Rating, • ,]</label>
+						<font>Font-Alaska-S28-L</font>
+						<textcolor>$VAR[osd.text.normal]</textcolor>
+						<shadowcolor>18eeeeee</shadowcolor>
+						<scroll>false</scroll>
+						<align>left</align>
+						<visible>VideoPlayer.Content(LiveTV)</visible>
+					</control>	
+				</control>
+				<control type="label">
 					<posx>0</posx>
 					<posy>70</posy>
 					<width>875</width>

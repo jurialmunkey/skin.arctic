@@ -1,3 +1,7 @@
+[B]0.3.7[/B]
+Added infotags to OSD
+Music small info shows osd like video player
+
 [B]0.3.6[/B]
 New small style osd and video info
 Fixed Weather labels wrong colour for dark theme

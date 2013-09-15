@@ -28,9 +28,8 @@
 					<effect type="fade" start="100" end="0" time="200" tween="sine" easing="inout" />
 					<effect type="slide" start="0" end="0,-20" time="200" tween="sine" easing="inout" />
 				</animation>
-				<posx>200</posx>
-				<animation effect="slide" end="80" time="200" tween="sine" easing="inout" condition="[!Window.IsVisible(mutebug) + !Window.IsVisible(volumebar)] | Skin.HasSetting(osd.wideinfo) | Window.IsVisible(videoosd)">Conditional</animation>
-				<animation effect="slide" end="-70" time="200" tween="sine" easing="inout" condition="[Window.IsVisible(volumebar) | Window.IsVisible(mutebug)] + !Skin.HasSetting(osd.wideinfo) + Window.IsActive(seekbar)">Conditional</animation>
+				<posx>280</posx>
+				<animation effect="slide" end="-70" time="200" tween="sine" easing="inout" condition="[Window.IsVisible(volumebar) | Window.IsVisible(mutebug)] + Window.IsActive(DialogSeekBar.xml)">Conditional</animation>
 				<control type="image">
 					<posx>150</posx>
 					<posy>-30</posy>
@@ -433,9 +432,8 @@
 					<effect type="fade" start="100" end="0" time="200" tween="sine" easing="inout" />
 					<effect type="slide" start="0" end="0,-20" time="200" tween="sine" easing="inout" />
 				</animation>
-				<posx>200</posx>
-				<animation effect="slide" end="80" time="200" tween="sine" easing="inout" condition="true">Conditional</animation>
-				<animation effect="slide" end="-70" time="200" tween="sine" easing="inout" condition="[Window.IsVisible(volumebar) | Window.IsVisible(mutebug)] + Window.IsActive(seekbar)">Conditional</animation>
+				<posx>280</posx>
+				<animation effect="slide" end="-70" time="200" tween="sine" easing="inout" condition="[Window.IsVisible(volumebar) | Window.IsVisible(mutebug)] + Window.IsActive(DialogSeekBar.xml)">Conditional</animation>
 				<control type="image">
 					<posx>150</posx>
 					<posy>-30</posy>

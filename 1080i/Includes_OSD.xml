@@ -57,7 +57,7 @@
     <include name="OSDChapterInfo">
         <control type="group">
         	<visible>[[!IsEmpty(Window(seekbar).Property(ShowInfo)) | Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Window.IsActive(videoosd) | Window.IsActive(musicosd) | Window.IsActive(fullscreenvideo)] + !Player.ShowCodec + !Window.IsActive(script-XBMC_Lyrics-main.xml) + !IsEmpty(Player.Chapter) + IntegerGreaterThan(Player.ChapterCount,0)]</visible>
-            <animation effect="slide" end="-80"  time="200" tween="sine" easing="inout" condition="[Window.IsVisible(volumebar) | Window.IsVisible(mutebug)] + Skin.HasSetting(osd.wideinfo)">Conditional</animation>
+            <animation effect="slide" end="-70"  time="200" tween="sine" easing="inout" condition="[Window.IsVisible(volumebar) | Window.IsVisible(mutebug)] + Skin.HasSetting(osd.wideinfo)">Conditional</animation>
             <animation effect="slide" end="-220"  time="200" tween="sine" easing="inout" condition="[Window.IsVisible(volumebar) | Window.IsVisible(mutebug)] + !Skin.HasSetting(osd.wideinfo)">Conditional</animation>
             <animation effect="slide" end="1150" condition="!Skin.HasSetting(osd.wideinfo)">Conditional</animation>
             <include>OSDClockAnimation</include>

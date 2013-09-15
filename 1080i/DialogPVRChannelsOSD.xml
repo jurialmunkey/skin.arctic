@@ -267,7 +267,7 @@
 								<label>$INFO[ListItem.Label]</label>
 								<textcolor>mod-infotags-alt</textcolor>
 								<selectedcolor>mod-infotags-alt</selectedcolor>
-								<scroll>false</scroll>
+								<scroll>true</scroll>
 								<animation effect="slide" end="38" time="200" condition="ListItem.HasTimer | ListItem.IsRecording">Conditional</animation>
 							</control>
 							<control type="label">

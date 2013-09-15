@@ -1075,7 +1075,7 @@
 						<posy>0</posy>
 						<width>68</width>
 						<height>78</height>
-						<font>Font-Condensed-S28</font>
+						<font>Font-Condensed-S30</font>
 						<aligny>center</aligny>
 						<textcolor>mod-infotags</textcolor>
 						<selectedcolor>mod-infotags</selectedcolor>
@@ -1154,7 +1154,7 @@
 						<posy>0</posy>
 						<width>0</width>
 						<height>78</height>
-						<font>Font-Condensed-S28</font>
+						<font>Font-Condensed-S30</font>
 						<aligny>center</aligny>
 						<textcolor>ffffffff</textcolor>
 						<textoffsetx>11</textoffsetx>

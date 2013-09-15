@@ -3,6 +3,7 @@ Added infotags to OSD
 Music small info shows osd like video player
 Scroll title of focused pvrosdchannel
 Buttons on pvrosdchannel info focus color to white
+Bumped EPG font size up one
 
 [B]0.3.6[/B]
 New small style osd and video info

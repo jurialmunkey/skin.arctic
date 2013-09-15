@@ -99,44 +99,53 @@
 						<animation type="Hidden" reversible="false">
 							<effect type="fade" start="100" end="0" time="200" tween="sine" easing="out" />
 						</animation>
-						<control type="label">
-							<posx>400</posx>
-							<posy>249</posy>
-							<width>210</width>
-							<label>208</label>
-							<font>Font-Alaska-S28-L</font>
-							<textcolor>$VAR[osd.text.dark]</textcolor>
-							<shadowcolor>18eeeeee</shadowcolor>
-							<scroll>false</scroll>
-							<align>right</align>
-							<visible>Player.Playing</visible>
-						</control>	
-						<control type="label">
-							<posx>400</posx>
-							<posy>249</posy>
-							<width>210</width>
-							<label>112</label>
-							<font>Font-Alaska-S28-L</font>
-							<textcolor>$VAR[osd.text.dark]</textcolor>
-							<shadowcolor>18eeeeee</shadowcolor>
-							<scroll>false</scroll>
-							<align>right</align>
-							<visible>Player.Paused</visible>
-						</control>	
-						<control type="label">
-							<posx>400</posx>
-							<posy>249</posy>
-							<width>210</width>
-							<label>773</label>
-							<font>Font-Alaska-S28-L</font>
-							<textcolor>$VAR[osd.text.dark]</textcolor>
-							<shadowcolor>18eeeeee</shadowcolor>
-							<scroll>false</scroll>
-							<align>right</align>
-							<visible>Player.Seeking | Player.Forwarding | Player.Rewinding</visible>
+						<control type="group">
+							<visible>[!VideoPlayer.Content(LiveTV) + [!Skin.HasSetting(videoosd.clearlogo) | [IsEmpty(Player.Art(clearlogo)) + IsEmpty(Player.Art(tvshow.clearlogo))]]] | IsEmpty(Window(seekbar).Property(ShowInfo)) | !IsEmpty(Window(seekbar).Property(ExtendPlot))</visible>
+							<animation type="Visible" reversible="false">
+								<effect type="fade" start="0" end="100" time="300" tween="sine" easing="inout" delay="150" />
+							</animation>
+							<animation type="Hidden" reversible="false">
+								<effect type="fade" start="100" end="0" time="200" tween="sine" easing="out" />
+							</animation>
+							<control type="label">
+								<posx>200</posx>
+								<posy>249</posy>
+								<width>275</width>
+								<label>13350</label>
+								<font>Font-Alaska-S28-L</font>
+								<textcolor>$VAR[osd.text.dark]</textcolor>
+								<shadowcolor>18eeeeee</shadowcolor>
+								<scroll>false</scroll>
+								<align>center</align>
+								<visible>Player.Playing</visible>
+							</control>	
+							<control type="label">
+								<posx>200</posx>
+								<posy>249</posy>
+								<width>275</width>
+								<label>112</label>
+								<font>Font-Alaska-S28-L</font>
+								<textcolor>$VAR[osd.text.dark]</textcolor>
+								<shadowcolor>18eeeeee</shadowcolor>
+								<scroll>false</scroll>
+								<align>center</align>
+								<visible>Player.Paused</visible>
+							</control>	
+							<control type="label">
+								<posx>200</posx>
+								<posy>249</posy>
+								<width>275</width>
+								<label>773</label>
+								<font>Font-Alaska-S28-L</font>
+								<textcolor>$VAR[osd.text.dark]</textcolor>
+								<shadowcolor>18eeeeee</shadowcolor>
+								<scroll>false</scroll>
+								<align>center</align>
+								<visible>Player.Seeking | Player.Forwarding | Player.Rewinding</visible>
+							</control>
 						</control>
 						<control type="image">
-							<posx>390</posx>
+							<posx>448</posx>
 							<posy>213</posy>
 							<width>100</width>
 							<height>100</height>
@@ -145,7 +154,7 @@
 							<visible>Player.Playing</visible>
 						</control>
 						<control type="image">
-							<posx>390</posx>
+							<posx>448</posx>
 							<posy>213</posy>
 							<width>100</width>
 							<height>100</height>
@@ -154,7 +163,7 @@
 							<visible>Player.Paused</visible>
 						</control>
 						<control type="label">
-							<posx>430</posx>
+							<posx>490</posx>
 							<posy>244</posy>
 							<width>661</width>
 							<label>»</label>
@@ -165,7 +174,7 @@
 							<visible>Player.Forwarding</visible>
 						</control>	
 						<control type="label">
-							<posx>430</posx>
+							<posx>490</posx>
 							<posy>244</posy>
 							<width>661</width>
 							<label>«</label>
@@ -177,9 +186,9 @@
 						</control>	
 					</control>
 					<control type="progress">
-						<posx>480</posx>
-						<posy>254</posy>
-						<width>960</width>
+						<posx>525</posx>
+						<posy>253</posy>
+						<width>930</width>
 						<height>20</height>
 						<info>Player.ProgressCache</info>
 						<reveal>true</reveal>
@@ -190,9 +199,9 @@
 						<overlaytexture>-</overlaytexture>
 					</control>
 					<control type="progress">
-						<posx>480</posx>
-						<posy>254</posy>
-						<width>960</width>
+						<posx>525</posx>
+						<posy>253</posy>
+						<width>930</width>
 						<height>20</height>
 						<info>Player.Progress</info>
 						<reveal>true</reveal>
@@ -268,21 +277,21 @@
 					<control type="group">
 						<control type="image">
 							<description>Thumb</description>
-							<posx>610</posx>
+							<posx>550</posx>
 							<posy>110</posy>
-							<width>200</width>
-							<height>70</height>
+							<width>260</width>
+							<height>120</height>
 							<texture background="true">$INFO[Player.Art(thumb)]</texture>
-							<aspectratio align="right" aligny="top">keep</aspectratio>
+							<aspectratio align="center" aligny="top">keep</aspectratio>
 							<visible>VideoPlayer.Content(LiveTV)</visible>
 							<animation effect="slide" end="0,-120" time="300" tween="cubic" easing="inout" condition="[[Window.IsVisible(fullscreeninfo) | !IsEmpty(Window(seekbar).Property(ShowInfo))] + !IsEmpty(Window(seekbar).Property(ExtendPlot))]">Conditional</animation>
 						</control>
 						<control type="image">
 							<description>Thumb</description>
-							<posx>610</posx>
+							<posx>550</posx>
 							<posy>110</posy>
-							<width>200</width>
-							<height>70</height>
+							<width>260</width>
+							<height>120</height>
 							<texture background="true">$INFO[Player.Art(clearlogo)]</texture>
 							<aspectratio scalediffuse="false" align="center" aligny="center">keep</aspectratio>
 							<visible>!VideoPlayer.Content(LiveTV) + Skin.HasSetting(videoosd.clearlogo) + VideoPlayer.Content(movies)</visible>

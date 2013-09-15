@@ -299,10 +299,10 @@
 						</control>
 						<control type="image">
 							<description>Thumb</description>
-							<posx>610</posx>
+							<posx>550</posx>
 							<posy>110</posy>
-							<width>200</width>
-							<height>70</height>
+							<width>260</width>
+							<height>120</height>
 							<texture background="true">$INFO[Player.Art(tvshow.clearlogo)]</texture>
 							<aspectratio scalediffuse="false" align="center" aligny="center">keep</aspectratio>
 							<visible>!VideoPlayer.Content(LiveTV) + Skin.HasSetting(videoosd.clearlogo) + !VideoPlayer.Content(movies)</visible>

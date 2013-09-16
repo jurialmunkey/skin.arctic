@@ -585,9 +585,9 @@
 				<posx>35</posx>
 				<posy>800</posy>
 				<width>172</width>
-				<height>240</height>
+				<height>172</height>
 				<texture background="true">$VAR[ArcticOSDClearlogo]</texture>
-				<aspectratio scalediffuse="false" aligny="top">keep</aspectratio>
+				<aspectratio scalediffuse="false" aligny="top" align="center">keep</aspectratio>
 				<visible>VideoPlayer.Content(LiveTV) | [!VideoPlayer.Content(LiveTV) + Skin.HasSetting(videoosd.clearlogo) + [[VideoPlayer.Content(episodes) + !IsEmpty(Player.Art(tvshow.clearlogo))] | [VideoPlayer.Content(movies) + !IsEmpty(Player.Art(clearlogo))]]]</visible>
 			</control>
 			<control type="group">

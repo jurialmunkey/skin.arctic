@@ -10,6 +10,7 @@ Poster on wider osd made smaller
 Changed aspect for thumbs on osd
 OSD Settings Clean-up
 Merge transifex
+Show info on livetv even with simplified seekbar
 
 [B]0.3.7[/B]
 Added infotags to OSD

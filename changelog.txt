@@ -5,6 +5,7 @@ Fixed RCB Autoplay video in banner and info wall
 Altered Cover and Info RCB views to remove borders for 3d boxart
 Added option to enable/disable submenu arrow
 Fixed Dark theme volume on simple wrong colour
+Thumbnail view available for all views
 
 [B]0.3.7[/B]
 Added infotags to OSD

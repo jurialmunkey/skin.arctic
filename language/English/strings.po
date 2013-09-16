@@ -1246,3 +1246,7 @@ msgstr ""
 msgctxt "#42447"
 msgid "Full-width video info"
 msgstr ""
+
+msgctxt "#42448"
+msgid "Show submenu arrow"
+msgstr ""

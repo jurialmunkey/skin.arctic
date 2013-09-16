@@ -1,3 +1,10 @@
+[B]0.3.8[/B]
+Fixed Poster Panel Label
+Updates to RCB info screen (play game, trailer, selectable art)
+Fixed RCB Autoplay video in banner and info wall
+Altered Cover and Info RCB views to remove borders for 3d boxart
+Added option to enable/disable submenu arrow
+
 [B]0.3.7[/B]
 Added infotags to OSD
 Music small info shows osd like video player

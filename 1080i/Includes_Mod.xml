@@ -2874,13 +2874,13 @@
 			<include>visiblehidefadeinfo</include>
 			<colordiffuse>white</colordiffuse>
 			<animation effect="fade" start="100" end="0" time="250" condition="!Container(525).HasFocus(4) | Control.HasFocus(83)  | Control.HasFocus(84) | Control.HasFocus(85)">Conditional</animation>
-			<visible>!Skin.HasSetting(disable.pvr) + System.GetBool(pvrmanager.enabled) + [!Skin.HasSetting(HomeClicksSubmenu) | StringCompare(Skin.String(homescreen.style),panel)]</visible>
+			<visible>!Skin.HasSetting(disable.pvr) + System.GetBool(pvrmanager.enabled) + [!Skin.HasSetting(HomeClicksSubmenu) | StringCompare(Skin.String(homescreen.style),panel)] + !Skin.HasSetting(HideSubmenuArrows)</visible>
 		</control>
 		<control type="image">
 			<width>19</width>
 			<height>28</height>
 			<texture>-</texture>
-			<visible>!Skin.HasSetting(disable.pvr) + System.GetBool(pvrmanager.enabled) + Skin.HasSetting(HomeClicksSubmenu) + StringCompare(Skin.String(homescreen.style),simple)</visible>
+			<visible>!Skin.HasSetting(disable.pvr) + System.GetBool(pvrmanager.enabled) + [[Skin.HasSetting(HomeClicksSubmenu) + StringCompare(Skin.String(homescreen.style),simple)] | Skin.HasSetting(HideSubmenuArrows)]</visible>
 		</control>
 		<control type="label">
 			<label>41220</label>
@@ -2899,7 +2899,13 @@
 			<include>visiblehidefadeinfo</include>
 			<colordiffuse>white</colordiffuse>
 			<animation effect="fade" start="100" end="0" time="250" condition="!Container(525).HasFocus(1) | Control.HasFocus(84) | Control.HasFocus(85)">Conditional</animation>
-			<visible>!Skin.HasSetting(disable.movies)</visible>
+			<visible>!Skin.HasSetting(disable.movies) + !Skin.HasSetting(HideSubmenuArrows)</visible>
+		</control>
+		<control type="image">
+			<width>19</width>
+			<height>28</height>
+			<texture>-</texture>
+			<visible>!Skin.HasSetting(disable.movies) + Skin.HasSetting(HideSubmenuArrows)]</visible>
 		</control>
 		<control type="label">
 			<label>$INFO[Skin.String(Home.Movies.Tile.0.Label)]</label>
@@ -2918,7 +2924,13 @@
 			<include>visiblehidefadeinfo</include>
 			<colordiffuse>white</colordiffuse>
 			<animation effect="fade" start="100" end="0" time="250" condition="!Container(525).HasFocus(2) | Control.HasFocus(84) | Control.HasFocus(85)">Conditional</animation>
-			<visible>!Skin.HasSetting(disable.tvshows)</visible>
+			<visible>!Skin.HasSetting(disable.tvshows) + !Skin.HasSetting(HideSubmenuArrows)</visible>
+		</control>
+		<control type="image">
+			<width>19</width>
+			<height>28</height>
+			<texture>-</texture>
+			<visible>!Skin.HasSetting(disable.tvshows) + Skin.HasSetting(HideSubmenuArrows)]</visible>
 		</control>
 
 		<control type="label">
@@ -2938,7 +2950,13 @@
 			<include>visiblehidefadeinfo</include>
 			<colordiffuse>white</colordiffuse>
 			<animation effect="fade" start="100" end="0" time="250" condition="!Container(525).HasFocus(3) | Control.HasFocus(84) | Control.HasFocus(85)">Conditional</animation>
-			<visible>!Skin.HasSetting(disable.music)</visible>
+			<visible>!Skin.HasSetting(disable.music) + !Skin.HasSetting(HideSubmenuArrows)</visible>
+		</control>
+		<control type="image">
+			<width>19</width>
+			<height>28</height>
+			<texture>-</texture>
+			<visible>!Skin.HasSetting(disable.music) + Skin.HasSetting(HideSubmenuArrows)]</visible>
 		</control>
 		<control type="label">
 			<label>$INFO[Skin.String(Home.Music.Tile.0.Label)]</label>
@@ -2957,13 +2975,13 @@
 			<include>visiblehidefadeinfo</include>
 			<colordiffuse>white</colordiffuse>
 			<animation effect="fade" start="100" end="0" time="250" condition="!Container(525).HasFocus(5) | Control.HasFocus(83)  | Control.HasFocus(84) | Control.HasFocus(85)">Conditional</animation>
-			<visible>!Skin.HasSetting(disable.pictures) + [!Skin.HasSetting(HomeClicksSubmenu) | StringCompare(Skin.String(homescreen.style),panel)]</visible>
+			<visible>!Skin.HasSetting(disable.pictures) + [!Skin.HasSetting(HomeClicksSubmenu) | StringCompare(Skin.String(homescreen.style),panel)] + !Skin.HasSetting(HideSubmenuArrows)</visible>
 		</control>
 		<control type="image">
 			<width>19</width>
 			<height>28</height>
 			<texture>-</texture>
-			<visible>!Skin.HasSetting(disable.pictures) + Skin.HasSetting(HomeClicksSubmenu) + StringCompare(Skin.String(homescreen.style),simple)</visible>
+			<visible>!Skin.HasSetting(disable.pictures) + [[Skin.HasSetting(HomeClicksSubmenu) + StringCompare(Skin.String(homescreen.style),simple)] | Skin.HasSetting(HideSubmenuArrows)]</visible>
 		</control>
 		<control type="label">
 			<label>$INFO[Skin.String(Home.Pictures.Tile.0.Label)]</label>
@@ -2982,13 +3000,13 @@
 			<include>visiblehidefadeinfo</include>
 			<colordiffuse>white</colordiffuse>
 			<animation effect="fade" start="100" end="0" time="250" condition="!Container(525).HasFocus(7) | Control.HasFocus(83)  | Control.HasFocus(84) | Control.HasFocus(85)">Conditional</animation>
-			<visible>!Skin.HasSetting(disable.programs) + [!Skin.HasSetting(HomeClicksSubmenu) | StringCompare(Skin.String(homescreen.style),panel)]</visible>
+			<visible>!Skin.HasSetting(disable.programs) + [!Skin.HasSetting(HomeClicksSubmenu) | StringCompare(Skin.String(homescreen.style),panel)] + !Skin.HasSetting(HideSubmenuArrows)</visible>
 		</control>
 		<control type="image">
 			<width>19</width>
 			<height>28</height>
 			<texture>-</texture>
-			<visible>!Skin.HasSetting(disable.programs) + Skin.HasSetting(HomeClicksSubmenu) + StringCompare(Skin.String(homescreen.style),simple)</visible>
+			<visible>!Skin.HasSetting(disable.programs) + [[Skin.HasSetting(HomeClicksSubmenu) + StringCompare(Skin.String(homescreen.style),simple)] | Skin.HasSetting(HideSubmenuArrows)]</visible>
 		</control>
 		<control type="label">
 			<label>$INFO[Skin.String(Home.Programs.Tile.0.Label)]</label>
@@ -3007,12 +3025,12 @@
 			<include>visiblehidefadeinfo</include>
 			<colordiffuse>white</colordiffuse>
 			<animation effect="fade" start="100" end="0" time="250" condition="!Container(525).HasFocus(8) | Control.HasFocus(83)  | Control.HasFocus(84) | Control.HasFocus(85)">Conditional</animation>
-			<visible>!Skin.HasSetting(disable.weather) + !Skin.HasSetting(HomeClicksSubmenu) + StringCompare(Skin.String(homescreen.style),simple)</visible>
+			<visible>!Skin.HasSetting(disable.weather) + !Skin.HasSetting(HomeClicksSubmenu) + StringCompare(Skin.String(homescreen.style),simple) + !Skin.HasSetting(HideSubmenuArrows)</visible>
 		</control>
 		<control type="image">
 			<width>19</width>
 			<height>28</height>
-			<visible>!Skin.HasSetting(disable.weather) + [Skin.HasSetting(HomeClicksSubmenu) | StringCompare(Skin.String(homescreen.style),panel)]</visible>
+			<visible>!Skin.HasSetting(disable.weather) + [Skin.HasSetting(HomeClicksSubmenu) | StringCompare(Skin.String(homescreen.style),panel) | Skin.HasSetting(HideSubmenuArrows)]</visible>
 		</control>
 		<control type="label">
 			<label>8</label>

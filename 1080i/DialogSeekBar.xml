@@ -321,7 +321,7 @@
 								<aspectratio align="center">keep</aspectratio>
 								<animation effect="rotate" center="auto" reversible="false" start="360" end="0" time="7500" loop="true" condition="Player.Playing">Conditional</animation>
 								<animation effect="slide" start="395" end="0" time="350">Visible</animation>
-								<visible>Skin.HasSetting(CDArt.Enabled) + !IsEmpty(Player.Art(discart))</visible>
+								<visible>Skin.HasSetting(CDArt.Enabled) + !IsEmpty(Player.Art(discart)) + [!IsEmpty(Player.Art(poster)) | !IsEmpty(Player.Art(tvshow.poster))]</visible>
 							</control>
 							<control type="image">
 								<description>Thumb</description>

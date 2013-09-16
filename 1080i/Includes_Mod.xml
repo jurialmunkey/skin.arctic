@@ -3595,13 +3595,14 @@
 			<control type="label">
 				<font>Font-Alaska-S29-BL</font>
 				<textcolor>Mod_Tags</textcolor>
-				<posx>55</posx>
+				<posx>155</posx>
 				<posy>31</posy>
-				<width>590</width>
+				<width>390</width>
 				<height>120</height>
 				<align>center</align>
 				<aligny>center</aligny>
 				<label>$INFO[ListItem.Label]</label>
+				<wrapmultiline>true</wrapmultiline>
 				<visible>StringCompare(Control.GetLabel(9991),blank.png) + Skin.HasSetting(ShowLowerLogo) + ![Container.Content(albums) | Container.Content(artists) | Container.Content(songs)]</visible>
 			</control>
 			<control type="image" id="9991">
@@ -3626,13 +3627,14 @@
 			<control type="label">
 				<font>Font-Alaska-S29-BL</font>
 				<textcolor>Mod_Tags</textcolor>
-				<posx>50</posx>
+				<posx>150</posx>
 				<posy>31</posy>
-				<width>670</width>
+				<width>470</width>
 				<height>120</height>
 				<align>center</align>
 				<aligny>center</aligny>
 				<label>$INFO[ListItem.Artist]</label>
+				<wrapmultiline>true</wrapmultiline>
 				<visible>StringCompare(Control.GetLabel(9992),blank.png) + Skin.HasSetting(ShowLowerLogo) + [Container.Content(albums) | Container.Content(artists) | Container.Content(songs)]</visible>
 			</control>
 			<control type="image" id="9992">

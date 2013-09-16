@@ -313,10 +313,10 @@
 							<posx>-28</posx>
 							<posy>-62</posy>
 							<control type="image">
-								<posx>592</posx>
-								<posy>-200</posy>
-								<width>236</width>
-								<height>236</height>
+								<posx>590</posx>
+								<posy>-105</posy>
+								<width>193</width>
+								<height>193</height>
 								<texture background="true" fallback="osd/fullscreen/cd.png">$INFO[Player.Art(discart)]</texture>
 								<aspectratio align="center">keep</aspectratio>
 								<animation effect="rotate" center="auto" reversible="false" start="360" end="0" time="7500" loop="true" condition="Player.Playing">Conditional</animation>

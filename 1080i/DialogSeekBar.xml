@@ -583,7 +583,7 @@
 			<control type="image">
 				<description>Thumb</description>
 				<posx>35</posx>
-				<posy>800</posy>
+				<posy>795</posy>
 				<width>172</width>
 				<height>172</height>
 				<texture background="true">$VAR[ArcticOSDClearlogo]</texture>

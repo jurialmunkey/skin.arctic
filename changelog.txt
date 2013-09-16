@@ -4,6 +4,7 @@ Updates to RCB info screen (play game, trailer, selectable art)
 Fixed RCB Autoplay video in banner and info wall
 Altered Cover and Info RCB views to remove borders for 3d boxart
 Added option to enable/disable submenu arrow
+Fixed Dark theme volume on simple wrong colour
 
 [B]0.3.7[/B]
 Added infotags to OSD

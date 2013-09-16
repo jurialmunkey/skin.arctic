@@ -328,7 +328,14 @@
 							<onclick>Skin.ToggleSetting(HomeClicksSubmenu)</onclick>
 							<label>42411</label>
 						</control>
-						<control type="button" id="2006">
+						<control type="radiobutton" id="2006">
+							<width>1210</width>
+							<include>SettingsCategoryRadioButtonVars</include>
+							<selected>!Skin.HasSetting(HideSubmenuArrows)</selected>
+							<onclick>Skin.ToggleSetting(HideSubmenuArrows)</onclick>
+							<label>42448</label>
+						</control>
+						<control type="button" id="2007">
 							<posx>0</posx>
 							<posy>0</posy>
 							<width>1210</width>

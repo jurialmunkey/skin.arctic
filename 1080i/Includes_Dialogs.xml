@@ -2479,8 +2479,8 @@
                 <posy>215</posy>
                 <width>398</width>
                 <height>624</height>
-                <aspectratio>scale</aspectratio>
-                <texture background="true">$VAR[FileBrowserArtThumbLarge]</texture>
+                <aspectratio scalediffuse="false">scale</aspectratio>
+                <texture background="true" diffuse="arctic/chooseart/big-poster.png" >$VAR[FileBrowserArtThumbLarge]</texture>
                 <fadetime>500</fadetime>
                 <visible>StringCompare(Window(3004).Property(ChooseArt),poster)</visible>
             </control>
@@ -2924,8 +2924,8 @@
                 <posy>215</posy>
                 <width>398</width>
                 <height>624</height>
-                <aspectratio>scale</aspectratio>
-                <texture background="true" fallback="views/fallbacks/DefaultVideo.png/large.png">$INFO[Container(6).ListItem.Icon]</texture>
+                <aspectratio scalediffuse="false">scale</aspectratio>
+                <texture background="true" diffuse="arctic/chooseart/big-poster.png" fallback="views/fallbacks/DefaultVideo.png/large.png">$INFO[Container(6).ListItem.Icon]</texture>
                 <fadetime>500</fadetime>
                 <visible>StringCompare(Window(3004).Property(ChooseArt),poster)</visible>
             </control>

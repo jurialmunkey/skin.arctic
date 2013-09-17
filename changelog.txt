@@ -12,6 +12,7 @@ OSD Settings Clean-up
 Merge transifex
 Show info on livetv even with simplified seekbar
 Added DeleteTimer.xml and RecordPrefs.xml to skin wmc pvr backend
+Added "movie sets" undertitle label
 
 [B]0.3.7[/B]
 Added infotags to OSD

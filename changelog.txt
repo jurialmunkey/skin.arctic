@@ -15,6 +15,10 @@ Added DeleteTimer.xml and RecordPrefs.xml to skin wmc pvr backend
 Added "movie sets" undertitle label
 Fixed Fade theme artworkdownloader gui
 Artwork Downloader gui added rounded posters
+Added watched indicators to fonts black and regular
+Added watched indicators in medium and banner list under title
+Clean-up of includes
+View Header only tvshow info if infotags or clearlogo disabled
 
 [B]0.3.7[/B]
 Added infotags to OSD

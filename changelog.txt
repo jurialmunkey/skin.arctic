@@ -1,5 +1,6 @@
 [B]0.3.9[/B]
 Moved ratings and resolution flags out to extras folder for user customisation
+Dialog.Close(all,force) to Home.xml -- prevent DialogVideoInfo.xml staying open.
 
 [B]0.3.8[/B]
 Fixed Poster Panel Label

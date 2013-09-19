@@ -197,6 +197,7 @@
 						<lefttexture>osd/fullscreen/progress/cache-left.png</lefttexture>
 						<righttexture>osd/fullscreen/progress/cache-right.png</righttexture>
 						<overlaytexture>-</overlaytexture>
+						<colordiffuse>$VAR[osd.text.dark]</colordiffuse>
 					</control>
 					<control type="progress">
 						<posx>475</posx>
@@ -771,6 +772,20 @@
 				<animation type="Hidden" reversible="false">
 					<effect type="fade" start="100" end="0" time="200" tween="sine" easing="out" />
 				</animation>
+				<control type="progress">
+					<posx>-4</posx>
+					<posy>163</posy>
+					<width>882</width>
+					<height>25</height>
+					<info>Player.ProgressCache</info>
+					<reveal>true</reveal>
+					<texturebg>osd/fullscreen/progress/cache-back.png</texturebg>
+					<midtexture>osd/fullscreen/progress/cache-mid.png</midtexture>
+					<lefttexture>osd/fullscreen/progress/cache-left.png</lefttexture>
+					<righttexture>osd/fullscreen/progress/cache-right.png</righttexture>
+					<overlaytexture>-</overlaytexture>
+					<colordiffuse>$VAR[osd.text.dark]</colordiffuse>
+				</control>
 				<control type="progress">
 					<posx>-4</posx>
 					<posy>163</posy>

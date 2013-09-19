@@ -1,3 +1,6 @@
+[B]0.3.9[/B]
+Moved ratings and resolution flags out to extras folder for user customisation
+
 [B]0.3.8[/B]
 Fixed Poster Panel Label
 Updates to RCB info screen (play game, trailer, selectable art)

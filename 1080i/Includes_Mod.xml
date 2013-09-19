@@ -2971,21 +2971,21 @@
 	<!-- INFO TAGS -->
 	<!--------------->
 	<variable name="AeonFlagHDSD">
-        <value condition="IntegerGreaterThan(ListItem.VideoResolution,1079)">aeonflags/resolution/1080.png</value>
-        <value condition="IntegerGreaterThan(ListItem.VideoResolution,719)">aeonflags/resolution/720.png</value>
-        <value condition="IntegerGreaterThan(ListItem.VideoResolution,575)">aeonflags/resolution/576.png</value>
-        <value condition="IntegerGreaterThan(ListItem.VideoResolution,539)">aeonflags/resolution/540.png</value>
-        <value>aeonflags/resolution/480.png</value>
+        <value condition="IntegerGreaterThan(ListItem.VideoResolution,1079)">special://skin/extras/resolution/1080.png</value>
+        <value condition="IntegerGreaterThan(ListItem.VideoResolution,719)">special://skin/extras/resolution/720.png</value>
+        <value condition="IntegerGreaterThan(ListItem.VideoResolution,575)">special://skin/extras/resolution/576.png</value>
+        <value condition="IntegerGreaterThan(ListItem.VideoResolution,539)">special://skin/extras/resolution/540.png</value>
+        <value>special://skin/extras/resolution/480.png</value>
     </variable>
     
     <variable name="AeonFlagRating">
-        <value condition="substring(listitem.mpaa,TV-Y) + ![substring(listitem.mpaa,TV-Y7) | substring(listitem.mpaa,TV-Y7-FV)]">aeonflags/rating/tv-y.png</value>
-        <value condition="substring(listitem.mpaa,TV-Y7) | substring(listitem.mpaa,TV-Y7-FV)">aeonflags/rating/tv-y7.png</value>
-        <value condition="substring(listitem.mpaa,TV-G)">aeonflags/rating/TV-G_Certificate_US.png</value>
-        <value condition="substring(listitem.mpaa,TV-PG)">aeonflags/rating/TV-PG_Certificate_US.png</value>
-        <value condition="substring(listitem.mpaa,TV-14)">aeonflags/rating/TV-14_Certificate_US.png</value>
-        <value condition="substring(listitem.mpaa,TV-MA)">aeonflags/rating/TV-MA_Certificate_US.png</value>
-        <value>aeonflags/rating/$VAR[MovieMPAAVar].png</value>
+        <value condition="substring(listitem.mpaa,TV-Y) + ![substring(listitem.mpaa,TV-Y7) | substring(listitem.mpaa,TV-Y7-FV)]">special://skin/extras/rating/tv-y.png</value>
+        <value condition="substring(listitem.mpaa,TV-Y7) | substring(listitem.mpaa,TV-Y7-FV)">special://skin/extras/rating/tv-y7.png</value>
+        <value condition="substring(listitem.mpaa,TV-G)">special://skin/extras/rating/TV-G_Certificate_US.png</value>
+        <value condition="substring(listitem.mpaa,TV-PG)">special://skin/extras/rating/TV-PG_Certificate_US.png</value>
+        <value condition="substring(listitem.mpaa,TV-14)">special://skin/extras/rating/TV-14_Certificate_US.png</value>
+        <value condition="substring(listitem.mpaa,TV-MA)">special://skin/extras/rating/TV-MA_Certificate_US.png</value>
+        <value>special://skin/extras/rating/$VAR[MovieMPAAVar].png</value>
     </variable>
     
     <variable name="AeonFlagStudio">

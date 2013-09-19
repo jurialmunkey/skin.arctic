@@ -24,6 +24,11 @@
         <height>100</height>
     </include>
     
+    <include name="DialogHeaderMod">
+    	<textcolor>ddwhite</textcolor>
+		<font>Font-Condensed-S34</font>
+    </include>
+    
     <include name="PVRGuideInfoZOrder">
         <zorder>3</zorder>
     </include>
@@ -3262,32 +3267,6 @@
                     <animation effect="fade" start="100" end="0" time="0" delay="1500">Hidden</animation>
                     <visible>!Control.HasFocus(61) + [Container(3).Scrolling | Container(3).OnScrollNext | Container(3).OnScrollPrevious | Container(6).Scrolling | Container(6).OnScrollNext | Container(6).OnScrollPrevious]</visible>
                 </control>
-                <!--<control type="image">
-                    <description>Scrollbar background (visible on focus)</description>
-                    <posx>75</posx>
-                    <posy>220</posy>
-                    <width>6</width>
-                    <height>687</height>
-                    <texture border="1">views/other/scrollbar-sq.png</texture>
-                    <visible>Control.HasFocus(61)</visible>
-                    <animation effect="fade" start="0" end="25" time="300" tween="sine" easing="inout">Visible</animation>
-                    <animation effect="fade" start="25" end="0" time="300" tween="sine" easing="inout">Hidden</animation>
-                </control>
-                <control type="scrollbar" id="61">
-                    <description>Scrollbar</description>
-                    <posx>75</posx>
-                    <posy>220</posy>
-                    <width>6</width>
-                    <height>687</height>
-                    <onright>6</onright>
-                    <onleft>6</onleft>
-                    <texturesliderbar border="1">views/other/scrollbar-sq.png</texturesliderbar>
-                    <texturesliderbarfocus border="1">views/other/scrollbar-sq.png</texturesliderbarfocus>
-                    <orientation>vertical</orientation>
-                    <showonepage>false</showonepage>
-                    <animation effect="fade" start="50" end="0" time="300" tween="sine" easing="inout" condition="!Control.IsVisible(62)">Conditional</animation>
-                    <visible>Control.IsVisible(3) | Control.IsVisible(6)</visible>
-                </control>-->
             </control>
         </control>
         

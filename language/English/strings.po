@@ -1255,3 +1255,7 @@ msgstr ""
 msgctxt "#42451"
 msgid "Full-width"
 msgstr ""
+
+msgctxt "#42452"
+msgid "Watched Overlay"
+msgstr ""

@@ -2,6 +2,7 @@
 Moved ratings and resolution flags out to extras folder for user customisation
 Dialog.Close(all,force) to Home.xml -- prevent DialogVideoInfo.xml staying open.
 Made Seekbar cache bar more visible for light osd
+More OSD updates...
 
 [B]0.3.8[/B]
 Fixed Poster Panel Label

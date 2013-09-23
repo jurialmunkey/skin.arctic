@@ -467,6 +467,7 @@
 									<texture>DefaultTVShows.png</texture>
 									<colordiffuse>$VAR[osd.text.dark]</colordiffuse>
 									<aspectratio align="right">keep</aspectratio>
+									<visible>VideoPlayer.Content(LiveTV)</visible>
 								</control>
 								<control type="group">
 									<animation effect="slide" end="50" condition="VideoPlayer.Content(LiveTV) + IntegerGreaterThan(VideoPlayer.ChannelNumber,0)">Conditional</animation>
@@ -649,6 +650,7 @@
 					<texture>DefaultTVShows.png</texture>
 					<colordiffuse>$VAR[osd.text.dark]</colordiffuse>
 					<aspectratio align="right">keep</aspectratio>
+					<visible>VideoPlayer.Content(LiveTV)</visible>
 				</control>
 				<control type="label">
 					<posx>0</posx>
@@ -659,7 +661,7 @@
 					<textcolor>$VAR[osd.text.dark]</textcolor>
 					<shadowcolor>18eeeeee</shadowcolor>
 					<scroll>true</scroll>
-					<scrollsuffix> </scrollsuffix>
+					<scrollsuffix> • </scrollsuffix>
 					<align>left</align>
 					<animation effect="slide" end="50" condition="VideoPlayer.Content(LiveTV) + IntegerGreaterThan(VideoPlayer.ChannelNumber,0)">Conditional</animation>
 					<animation effect="slide" end="40" condition="VideoPlayer.Content(LiveTV) + IntegerGreaterThan(VideoPlayer.ChannelNumber,9)">Conditional</animation>
@@ -767,7 +769,7 @@
 				<control type="label">
 					<posx>0</posx>
 					<posy>35</posy>
-					<width>700</width>
+					<width>580</width>
 					<label>$INFO[VideoPlayer.Year]$INFO[VideoPlayer.Genre, • ,]</label>
 					<font>Font-Alaska-S28-L</font>
 					<textcolor>$VAR[osd.text.normal]</textcolor>
@@ -779,7 +781,7 @@
 				<control type="label">
 					<posx>0</posx>
 					<posy>35</posy>
-					<width>700</width>
+					<width>580</width>
 					<label>$INFO[VideoPlayer.TVShowTitle,, • ]$INFO[VideoPlayer.Season,S,]$INFO[VideoPlayer.Episode,E,]$INFO[VideoPlayer.Premiered, • ,]</label>
 					<font>Font-Alaska-S28-L</font>
 					<textcolor>$VAR[osd.text.normal]</textcolor>
@@ -791,7 +793,7 @@
 				<control type="label">
 					<posx>0</posx>
 					<posy>35</posy>
-					<width>820</width>
+					<width>580</width>
 					<label>$INFO[VideoPlayer.ChannelName]$INFO[VideoPlayer.Genre, • ,]</label>
 					<font>Font-Alaska-S28-L</font>
 					<textcolor>$VAR[osd.text.normal]</textcolor>

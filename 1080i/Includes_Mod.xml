@@ -389,7 +389,7 @@
 				<texture diffuse="arctic/home/small-poster.png">$VAR[HomeWidget-Poster]</texture>
 				<aspectratio scalediffuse="false">scale</aspectratio>
 				<fadetime>200</fadetime>
-				<visible>Control.HasFocus(88) | Control.HasFocus(89)</visible>
+				<visible>[Control.HasFocus(88) | Control.HasFocus(89)] + Container(525).HasFocus(1)</visible>
 			</control>
 			<control type="image">
 				<posx>23</posx>
@@ -401,7 +401,7 @@
 				<texture diffuse="arctic/home/fanart.png">$VAR[HomeWidget-Fanart]</texture>
 				<aspectratio scalediffuse="false">scale</aspectratio>
 				<fadetime>200</fadetime>
-				<visible>Control.HasFocus(90) | Control.HasFocus(82)</visible>
+				<visible>Control.HasFocus(90) | Control.HasFocus(82) | Container(525).HasFocus(2)</visible>
 			</control>
 			<control type="image">
 				<posx>1500</posx>
@@ -413,7 +413,7 @@
 				<fadetime>200</fadetime>
 			</control>
 			<control type="group">
-				<visible>Control.HasFocus(90) | Control.HasFocus(82)</visible>
+				<visible>Control.HasFocus(90) | Control.HasFocus(82) | Container(525).HasFocus(2)</visible>
 				<control type="label">
 					<posx>448</posx>
 					<posy>22</posy>
@@ -460,7 +460,7 @@
 				</control>
 			</control>
 			<control type="group">
-				<visible>Control.HasFocus(88) | Control.HasFocus(89)</visible>
+				<visible>[Control.HasFocus(88) | Control.HasFocus(89)] + Container(525).HasFocus(1)</visible>
 				<control type="label">
 					<posx>187</posx>
 					<posy>22</posy>
@@ -4240,7 +4240,7 @@
 		<!-- Recommended tv -->
 		<item id="1">
 			<onclick>PlayMedia($ESCINFO[Window.Property(RecommendedEpisode.1.File)])</onclick>
-			<icon>$INFO[Window.Property(RecommendedEpisode.1.Art(thumb))]</icon>
+			<icon>$INFO[Window.Property(RecommendedEpisode.1.Art(tvshow.fanart))]</icon>
 			<property name="Poster">$INFO[Window.Property(RecommendedEpisode.1.Art(tvshow.poster))]</property>
 			<property name="Overlay">$INFO[Window.Property(RecommendedEpisode.1.Watched)]</property>
 			<property name="Plot">$INFO[Window.Property(RecommendedEpisode.1.Plot)]</property>
@@ -4251,7 +4251,7 @@
 		</item>
 		<item id="2">
 			<onclick>PlayMedia($ESCINFO[Window.Property(RecommendedEpisode.2.File)])</onclick>
-			<icon>$INFO[Window.Property(RecommendedEpisode.2.Art(thumb))]</icon>
+			<icon>$INFO[Window.Property(RecommendedEpisode.2.Art(tvshow.fanart))]</icon>
 			<property name="Poster">$INFO[Window.Property(RecommendedEpisode.2.Art(tvshow.poster))]</property>
 			<property name="Overlay">$INFO[Window.Property(RecommendedEpisode.2.Watched)]</property>
 			<property name="Plot">$INFO[Window.Property(RecommendedEpisode.2.Plot)]</property>
@@ -4262,7 +4262,7 @@
 		</item>
 		<item id="3">
 			<onclick>PlayMedia($ESCINFO[Window.Property(RecommendedEpisode.3.File)])</onclick>
-			<icon>$INFO[Window.Property(RecommendedEpisode.3.Art(thumb))]</icon>
+			<icon>$INFO[Window.Property(RecommendedEpisode.3.Art(tvshow.fanart))]</icon>
 			<property name="Poster">$INFO[Window.Property(RecommendedEpisode.3.Art(tvshow.poster))]</property>
 			<property name="Overlay">$INFO[Window.Property(RecommendedEpisode.3.Watched)]</property>
 			<property name="Plot">$INFO[Window.Property(RecommendedEpisode.3.Plot)]</property>
@@ -4273,7 +4273,7 @@
 		</item>
 		<item id="4">
 			<onclick>PlayMedia($ESCINFO[Window.Property(RecommendedEpisode.4.File)])</onclick>
-			<icon>$INFO[Window.Property(RecommendedEpisode.4.Art(thumb))]</icon>
+			<icon>$INFO[Window.Property(RecommendedEpisode.4.Art(tvshow.fanart))]</icon>
 			<property name="Poster">$INFO[Window.Property(RecommendedEpisode.4.Art(tvshow.poster))]</property>
 			<property name="Overlay">$INFO[Window.Property(RecommendedEpisode.4.Watched)]</property>
 			<property name="Plot">$INFO[Window.Property(RecommendedEpisode.4.Plot)]</property>

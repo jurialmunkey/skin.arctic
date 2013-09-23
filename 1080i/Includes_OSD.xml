@@ -48,10 +48,15 @@
     <variable name="OSDTextRating">
     	<value condition="Skin.HasSetting(infotags.numericrating)">$INFO[VideoPlayer.Rating, ● ,]</value>
         <value condition="IntegerGreaterThan(VideoPlayer.Rating,9)">●●●●●</value>
+        <value condition="IntegerGreaterThan(VideoPlayer.Rating,8)">◎●●●●</value>
         <value condition="IntegerGreaterThan(VideoPlayer.Rating,7)">●●●●</value>
+        <value condition="IntegerGreaterThan(VideoPlayer.Rating,6)">◎●●●</value>
         <value condition="IntegerGreaterThan(VideoPlayer.Rating,5)">●●●</value>
+        <value condition="IntegerGreaterThan(VideoPlayer.Rating,4)">◎●●</value>
         <value condition="IntegerGreaterThan(VideoPlayer.Rating,3)">●●</value>
+        <value condition="IntegerGreaterThan(VideoPlayer.Rating,2)">◎●</value>
         <value condition="IntegerGreaterThan(VideoPlayer.Rating,1)">●</value>
+        <value condition="IntegerGreaterThan(VideoPlayer.Rating,0)">◎</value>
         <value></value>
     </variable>
 

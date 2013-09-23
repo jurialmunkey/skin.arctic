@@ -5,7 +5,6 @@
     <backgroundcolor>0</backgroundcolor>
     <onload condition="System.HasAddon(script.tvtunes) + Library.HasContent(TVShows) + !Player.HasMedia + Skin.HasSetting(TVTunes.Enabled)">RunScript(script.tvtunes,backend=True&amp;loop=False)</onload>
     <onload condition="System.HasAddon(script.tv.show.next.aired) + Library.HasContent(TVShows) + Skin.HasSetting(NextAired.Enabled)">RunScript(script.tv.show.next.aired,backend=True)</onload>
-    <onload condition="System.HasAddon(script.extendedinfo)">Runscript(script.extendedinfo, backend="true")</onload>
     <controls>
         
         <control type="group">

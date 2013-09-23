@@ -807,7 +807,7 @@
 				</control>	
 				<control type="label">
 					<posx>0</posx>
-					<posy>70</posy>
+					<posy>74</posy>
 					<width>875</width>
 					<label>$VAR[OSDNextTitle]</label>
 					<font>Font-Alaska-S28-L</font>

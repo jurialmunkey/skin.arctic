@@ -389,9 +389,10 @@
 				<texture diffuse="arctic/home/small-poster.png">$VAR[HomeWidget-Poster]</texture>
 				<aspectratio scalediffuse="false">scale</aspectratio>
 				<fadetime>200</fadetime>
+				<visible>Control.HasFocus(88) | Control.HasFocus(89)</visible>
 			</control>
 			<control type="image">
-				<posx>1485</posx>
+				<posx>23</posx>
 				<posy>10</posy>
 				<width>411</width>
 				<height>220</height>
@@ -400,59 +401,110 @@
 				<texture diffuse="arctic/home/fanart.png">$VAR[HomeWidget-Fanart]</texture>
 				<aspectratio scalediffuse="false">scale</aspectratio>
 				<fadetime>200</fadetime>
+				<visible>Control.HasFocus(90) | Control.HasFocus(82)</visible>
 			</control>
 			<control type="image">
-				<posx>1058</posx>
-				<posy>18</posy>
-				<width>411</width>
-				<height>58</height>
+				<posx>1500</posx>
+				<posy>20</posy>
+				<width>370</width>
+				<height>200</height>
 				<texture diffuse="arctic/home/fanart.png">$VAR[HomeWidget-Logo]</texture>
-				<aspectratio align="right" aligny="center" scalediffuse="false">keep</aspectratio>
+				<aspectratio align="center" aligny="center" scalediffuse="false">keep</aspectratio>
 				<fadetime>200</fadetime>
 			</control>
-			<control type="label">
-				<posx>190</posx>
-				<posy>22</posy>
-				<label>$VAR[HomeWidget-Label]</label>
-				<align>left</align>
-				<font>Font-ModHome</font>
-				<textcolor>eedddddd</textcolor>
-				<width>1010</width>
-				<scroll>false</scroll>
+			<control type="group">
+				<visible>Control.HasFocus(90) | Control.HasFocus(82)</visible>
+				<control type="label">
+					<posx>448</posx>
+					<posy>22</posy>
+					<label>$VAR[HomeWidget-Label]</label>
+					<align>left</align>
+					<font>Font-ModHome</font>
+					<textcolor>eedddddd</textcolor>
+					<width>1010</width>
+					<scroll>false</scroll>
+				</control>
+				<control type="label">
+					<posx>448</posx>
+					<posy>54</posy>
+					<label>$VAR[HomeWidget-Label2]</label>
+					<align>left</align>
+					<font>Font-Alaska-S28-L</font>
+					<textcolor>eebbbbbb</textcolor>
+					<width>1010</width>
+					<scroll>false</scroll>
+				</control>
+				<control type="textbox">
+					<posx>448</posx>
+					<posy>86</posy>
+					<label>$VAR[HomeWidget-Plot]</label>
+					<align>justify</align>
+					<font>Font-Condensed-S28</font>
+					<textcolor>eebbbbbb</textcolor>
+					<width>1010</width>
+					<height>135</height>
+					<autoscroll delay="13000" time="3000" repeat="13000" />
+					<visible>system.getbool(videolibrary.showunwatchedplots) | [!system.getbool(videolibrary.showunwatchedplots) + Container(82).ListItem.Property(Overlay)]</visible>
+				</control>
+				<control type="textbox">
+					<posx>448</posx>
+					<posy>86</posy>
+					<label>$LOCALIZE[20370]</label>
+					<align>justify</align>
+					<font>Font-Condensed-S28</font>
+					<textcolor>eebbbbbb</textcolor>
+					<width>1010</width>
+					<height>135</height>
+					<autoscroll delay="13000" time="3000" repeat="13000" />
+					<visible>!Container(82).ListItem.Property(Overlay) + !system.getbool(videolibrary.showunwatchedplots)</visible>
+				</control>
 			</control>
-			<control type="label">
-				<posx>190</posx>
-				<posy>54</posy>
-				<label>$VAR[HomeWidget-Label2]</label>
-				<align>left</align>
-				<font>Font-Alaska-S28-L</font>
-				<textcolor>eebbbbbb</textcolor>
-				<width>1010</width>
-				<scroll>false</scroll>
-			</control>
-			<control type="textbox">
-				<posx>190</posx>
-				<posy>86</posy>
-				<label>$VAR[HomeWidget-Plot]</label>
-				<align>justify</align>
-				<font>Font-Condensed-S28</font>
-				<textcolor>eebbbbbb</textcolor>
-				<width>1280</width>
-				<height>135</height>
-				<autoscroll delay="13000" time="3000" repeat="13000" />
-				<visible>system.getbool(videolibrary.showunwatchedplots) | [!system.getbool(videolibrary.showunwatchedplots) + Container(82).ListItem.Property(Overlay)]</visible>
-			</control>
-			<control type="textbox">
-				<posx>190</posx>
-				<posy>86</posy>
-				<label>$LOCALIZE[20370]</label>
-				<align>justify</align>
-				<font>Font-Condensed-S28</font>
-				<textcolor>eebbbbbb</textcolor>
-				<width>1010</width>
-				<height>135</height>
-				<autoscroll delay="13000" time="3000" repeat="13000" />
-				<visible>!Container(82).ListItem.Property(Overlay) + !system.getbool(videolibrary.showunwatchedplots)</visible>
+			<control type="group">
+				<visible>Control.HasFocus(88) | Control.HasFocus(89)</visible>
+				<control type="label">
+					<posx>187</posx>
+					<posy>22</posy>
+					<label>$VAR[HomeWidget-Label]</label>
+					<align>left</align>
+					<font>Font-ModHome</font>
+					<textcolor>eedddddd</textcolor>
+					<width>1268</width>
+					<scroll>false</scroll>
+				</control>
+				<control type="label">
+					<posx>187</posx>
+					<posy>54</posy>
+					<label>$VAR[HomeWidget-Label2]</label>
+					<align>left</align>
+					<font>Font-Alaska-S28-L</font>
+					<textcolor>eebbbbbb</textcolor>
+					<width>1268</width>
+					<scroll>false</scroll>
+				</control>
+				<control type="textbox">
+					<posx>187</posx>
+					<posy>86</posy>
+					<label>$VAR[HomeWidget-Plot]</label>
+					<align>justify</align>
+					<font>Font-Condensed-S28</font>
+					<textcolor>eebbbbbb</textcolor>
+					<width>1268</width>
+					<height>135</height>
+					<autoscroll delay="13000" time="3000" repeat="13000" />
+					<visible>system.getbool(videolibrary.showunwatchedplots) | [!system.getbool(videolibrary.showunwatchedplots) + Container(82).ListItem.Property(Overlay)]</visible>
+				</control>
+				<control type="textbox">
+					<posx>187</posx>
+					<posy>86</posy>
+					<label>$LOCALIZE[20370]</label>
+					<align>justify</align>
+					<font>Font-Condensed-S28</font>
+					<textcolor>eebbbbbb</textcolor>
+					<width>1268</width>
+					<height>135</height>
+					<autoscroll delay="13000" time="3000" repeat="13000" />
+					<visible>!Container(82).ListItem.Property(Overlay) + !system.getbool(videolibrary.showunwatchedplots)</visible>
+				</control>
 			</control>
 		</control>
 		<control type="group">
@@ -460,17 +512,6 @@
 			<control type="image">
 				<posx>23</posx>
 				<posy>10</posy>
-				<width>220</width>
-				<height>220</height>
-				<bordertexture border="25">arctic/common/border.png</bordertexture>
-				<bordersize>10</bordersize>
-				<texture diffuse="arctic/home/small-poster.png">$VAR[HomeWidget-Poster]</texture>
-				<aspectratio scalediffuse="false">scale</aspectratio>
-				<fadetime>200</fadetime>
-			</control>
-			<control type="image">
-				<posx>1485</posx>
-				<posy>10</posy>
 				<width>411</width>
 				<height>220</height>
 				<bordertexture border="25">arctic/common/border.png</bordertexture>
@@ -480,16 +521,16 @@
 				<fadetime>200</fadetime>
 			</control>
 			<control type="image">
-				<posx>1058</posx>
-				<posy>18</posy>
-				<width>411</width>
-				<height>58</height>
+				<posx>1500</posx>
+				<posy>20</posy>
+				<width>370</width>
+				<height>200</height>
 				<texture>$INFO[Skin.String(cdartlocation)]$VAR[HomeWidget-Label,,/logo.png]</texture>
 				<aspectratio align="right" aligny="center" scalediffuse="false">keep</aspectratio>
 				<fadetime>200</fadetime>
 			</control>
 			<control type="label">
-				<posx>257</posx>
+				<posx>448</posx>
 				<posy>22</posy>
 				<label>$VAR[HomeWidget-Label]</label>
 				<align>left</align>
@@ -499,7 +540,7 @@
 				<scroll>false</scroll>
 			</control>
 			<control type="label">
-				<posx>257</posx>
+				<posx>448</posx>
 				<posy>54</posy>
 				<label>$VAR[HomeWidget-Label2]</label>
 				<align>left</align>
@@ -509,13 +550,13 @@
 				<scroll>false</scroll>
 			</control>
 			<control type="textbox">
-				<posx>257</posx>
+				<posx>448</posx>
 				<posy>86</posy>
 				<label>$VAR[HomeWidget-Plot]</label>
 				<align>justify</align>
 				<font>Font-Condensed-S28</font>
 				<textcolor>eebbbbbb</textcolor>
-				<width>1213</width>
+				<width>1010</width>
 				<height>135</height>
 				<autoscroll delay="13000" time="3000" repeat="13000" />
 			</control>
@@ -4035,7 +4076,7 @@
 			<property name="Plot">$INFO[Window.Property(RandomAlbum.1.Description)]</property>
 			<label>$INFO[Window.Property(RandomAlbum.1.Artist)]</label>
 			<label2>$INFO[Window.Property(RandomAlbum.1.Title)]$INFO[Window.Property(RandomAlbum.1.Year), • ,]</label2>
-			<visible>Container(525).HasFocus(3) + !IsEmpty(Window.Property(RandomAlbum.1.Art(fanart)))</visible>
+			<visible>Container(525).HasFocus(3) + !IsEmpty(Window.Property(RandomAlbum.1.Title))</visible>
 		</item>
 		<item id="2">
 			<onclick>noop</onclick>
@@ -4045,7 +4086,7 @@
 			<property name="Plot">$INFO[Window.Property(RandomAlbum.2.Description)]</property>
 			<label>$INFO[Window.Property(RandomAlbum.2.Artist)]</label>
 			<label2>$INFO[Window.Property(RandomAlbum.2.Title)]$INFO[Window.Property(RandomAlbum.2.Year), • ,]</label2>
-			<visible>Container(525).HasFocus(3) + !IsEmpty(Window.Property(RandomAlbum.2.Art(fanart)))</visible>
+			<visible>Container(525).HasFocus(3) + !IsEmpty(Window.Property(RandomAlbum.2.Title))</visible>
 		</item>
 		<item id="3">
 			<onclick>noop</onclick>
@@ -4055,7 +4096,7 @@
 			<property name="Plot">$INFO[Window.Property(RandomAlbum.3.Description)]</property>
 			<label>$INFO[Window.Property(RandomAlbum.3.Artist)]</label>
 			<label2>$INFO[Window.Property(RandomAlbum.3.Title)]$INFO[Window.Property(RandomAlbum.3.Year), • ,]</label2>
-			<visible>Container(525).HasFocus(3) + !IsEmpty(Window.Property(RandomAlbum.3.Art(fanart)))</visible>
+			<visible>Container(525).HasFocus(3) + !IsEmpty(Window.Property(RandomAlbum.3.Title))</visible>
 		</item>
 		<item id="4">
 			<onclick>noop</onclick>
@@ -4065,7 +4106,7 @@
 			<property name="Plot">$INFO[Window.Property(RandomAlbum.4.Description)]</property>
 			<label>$INFO[Window.Property(RandomAlbum.4.Artist)]</label>
 			<label2>$INFO[Window.Property(RandomAlbum.4.Title)]$INFO[Window.Property(RandomAlbum.4.Year), • ,]</label2>
-			<visible>Container(525).HasFocus(3) + !IsEmpty(Window.Property(RandomAlbum.4.Art(fanart)))</visible>
+			<visible>Container(525).HasFocus(3) + !IsEmpty(Window.Property(RandomAlbum.4.Title))</visible>
 		</item>
 		<item id="5">
 			<onclick>noop</onclick>
@@ -4075,7 +4116,7 @@
 			<property name="Plot">$INFO[Window.Property(RandomAlbum.5.Description)]</property>
 			<label>$INFO[Window.Property(RandomAlbum.5.Artist)]</label>
 			<label2>$INFO[Window.Property(RandomAlbum.5.Title)]$INFO[Window.Property(RandomAlbum.5.Year), • ,]</label2>
-			<visible>Container(525).HasFocus(3) + !IsEmpty(Window.Property(RandomAlbum.5.Art(fanart)))</visible>
+			<visible>Container(525).HasFocus(3) + !IsEmpty(Window.Property(RandomAlbum.5.Title))</visible>
 		</item>
 		<item id="6">
 			<onclick>noop</onclick>
@@ -4085,7 +4126,7 @@
 			<property name="Plot">$INFO[Window.Property(RandomAlbum.6.Description)]</property>
 			<label>$INFO[Window.Property(RandomAlbum.6.Artist)]</label>
 			<label2>$INFO[Window.Property(RandomAlbum.6.Title)]$INFO[Window.Property(RandomAlbum.6.Year), • ,]</label2>
-			<visible>Container(525).HasFocus(3) + !IsEmpty(Window.Property(RandomAlbum.6.Art(fanart)))</visible>
+			<visible>Container(525).HasFocus(3) + !IsEmpty(Window.Property(RandomAlbum.6.Title))</visible>
 		</item>
 		<item id="7">
 			<onclick>noop</onclick>
@@ -4095,7 +4136,7 @@
 			<property name="Plot">$INFO[Window.Property(RandomAlbum.7.Description)]</property>
 			<label>$INFO[Window.Property(RandomAlbum.7.Artist)]</label>
 			<label2>$INFO[Window.Property(RandomAlbum.7.Title)]$INFO[Window.Property(RandomAlbum.7.Year), • ,]</label2>
-			<visible>Container(525).HasFocus(3) + !IsEmpty(Window.Property(RandomAlbum.7.Art(fanart)))</visible>
+			<visible>Container(525).HasFocus(3) + !IsEmpty(Window.Property(RandomAlbum.7.Title))</visible>
 		</item>
 	</include>
 	<include name="Mod_90Content">
@@ -4199,7 +4240,7 @@
 		<!-- Recommended tv -->
 		<item id="1">
 			<onclick>PlayMedia($ESCINFO[Window.Property(RecommendedEpisode.1.File)])</onclick>
-			<icon>$INFO[Window.Property(RecommendedEpisode.1.Art(tvshow.fanart))]</icon>
+			<icon>$INFO[Window.Property(RecommendedEpisode.1.Art(thumb))]</icon>
 			<property name="Poster">$INFO[Window.Property(RecommendedEpisode.1.Art(tvshow.poster))]</property>
 			<property name="Overlay">$INFO[Window.Property(RecommendedEpisode.1.Watched)]</property>
 			<property name="Plot">$INFO[Window.Property(RecommendedEpisode.1.Plot)]</property>
@@ -4210,7 +4251,7 @@
 		</item>
 		<item id="2">
 			<onclick>PlayMedia($ESCINFO[Window.Property(RecommendedEpisode.2.File)])</onclick>
-			<icon>$INFO[Window.Property(RecommendedEpisode.2.Art(tvshow.fanart))]</icon>
+			<icon>$INFO[Window.Property(RecommendedEpisode.2.Art(thumb))]</icon>
 			<property name="Poster">$INFO[Window.Property(RecommendedEpisode.2.Art(tvshow.poster))]</property>
 			<property name="Overlay">$INFO[Window.Property(RecommendedEpisode.2.Watched)]</property>
 			<property name="Plot">$INFO[Window.Property(RecommendedEpisode.2.Plot)]</property>
@@ -4221,7 +4262,7 @@
 		</item>
 		<item id="3">
 			<onclick>PlayMedia($ESCINFO[Window.Property(RecommendedEpisode.3.File)])</onclick>
-			<icon>$INFO[Window.Property(RecommendedEpisode.3.Art(tvshow.fanart))]</icon>
+			<icon>$INFO[Window.Property(RecommendedEpisode.3.Art(thumb))]</icon>
 			<property name="Poster">$INFO[Window.Property(RecommendedEpisode.3.Art(tvshow.poster))]</property>
 			<property name="Overlay">$INFO[Window.Property(RecommendedEpisode.3.Watched)]</property>
 			<property name="Plot">$INFO[Window.Property(RecommendedEpisode.3.Plot)]</property>
@@ -4232,7 +4273,7 @@
 		</item>
 		<item id="4">
 			<onclick>PlayMedia($ESCINFO[Window.Property(RecommendedEpisode.4.File)])</onclick>
-			<icon>$INFO[Window.Property(RecommendedEpisode.4.Art(tvshow.fanart))]</icon>
+			<icon>$INFO[Window.Property(RecommendedEpisode.4.Art(thumb))]</icon>
 			<property name="Poster">$INFO[Window.Property(RecommendedEpisode.4.Art(tvshow.poster))]</property>
 			<property name="Overlay">$INFO[Window.Property(RecommendedEpisode.4.Watched)]</property>
 			<property name="Plot">$INFO[Window.Property(RecommendedEpisode.4.Plot)]</property>

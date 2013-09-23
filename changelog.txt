@@ -1,3 +1,13 @@
+[B]0.4.0[/B]
+Addition of Mixed Widget
+Fixed video library update label not long enough
+Fixed DialogExtendedProgress.xml from closing on Home.xml
+Added banner and info-wall to add-ons
+Added half stars to Alaska Black font
+Re-instated Arctic fade for simple home screen
+-- add to guisettings.xml to revert: 
+-- <setting type="bool" name="skin.arctic.home.simple.fade">true</setting>
+
 [B]0.3.9[/B]
 Moved ratings and resolution flags out to extras folder for user customisation
 Dialog.Close(all,force) to Home.xml -- prevent DialogVideoInfo.xml staying open.

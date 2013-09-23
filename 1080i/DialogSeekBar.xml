@@ -362,7 +362,7 @@
 								<align>right</align>
 								<itemgap>5</itemgap>
 								<posx>1733</posx>
-								<posy>30</posy>
+								<posy>28</posy>
 								<width>350</width>
 								<usecontrolcoords>true</usecontrolcoords>
 								<control type="image">
@@ -450,23 +450,32 @@
 								</animation>
 								<control type="label">
 									<posx>0</posx>
-									<posy>25</posy>
+									<posy>19</posy>
 									<width>150</width>
 									<label>$INFO[VideoPlayer.ChannelNumber]</label>
-									<font>Font-Episode-Large</font>
+									<font>Font-OSD-ChannelNumber</font>
 									<textcolor>$VAR[osd.text.dark]</textcolor>
 									<scroll>false</scroll>
 									<align>left</align>
 									<visible>VideoPlayer.Content(LiveTV)</visible>
 								</control>
+								<control type="image">
+									<posx>1232</posx>
+									<posy>-18</posy>
+									<width>55</width>
+									<height>55</height>
+									<texture>DefaultTVShows.png</texture>
+									<colordiffuse>$VAR[osd.text.dark]</colordiffuse>
+									<aspectratio align="right">keep</aspectratio>
+								</control>
 								<control type="group">
-									<animation effect="slide" end="55" condition="VideoPlayer.Content(LiveTV) + IntegerGreaterThan(VideoPlayer.ChannelNumber,0)">Conditional</animation>
-									<animation effect="slide" end="45" condition="VideoPlayer.Content(LiveTV) + IntegerGreaterThan(VideoPlayer.ChannelNumber,9)">Conditional</animation>
-									<animation effect="slide" end="50" condition="VideoPlayer.Content(LiveTV) + IntegerGreaterThan(VideoPlayer.ChannelNumber,99)">Conditional</animation>
+									<animation effect="slide" end="50" condition="VideoPlayer.Content(LiveTV) + IntegerGreaterThan(VideoPlayer.ChannelNumber,0)">Conditional</animation>
+									<animation effect="slide" end="40" condition="VideoPlayer.Content(LiveTV) + IntegerGreaterThan(VideoPlayer.ChannelNumber,9)">Conditional</animation>
+									<animation effect="slide" end="45" condition="VideoPlayer.Content(LiveTV) + IntegerGreaterThan(VideoPlayer.ChannelNumber,99)">Conditional</animation>
 									<control type="label">
 										<posx>0</posx>
-										<posy>0</posy>
-										<width>1100</width>
+										<posy>-4</posy>
+										<width>980</width>
 										<label>$VAR[OSDTitle]</label>
 										<font>Font-Alaska-S38-BL</font>
 										<textcolor>$VAR[osd.text.dark]</textcolor>
@@ -476,7 +485,7 @@
 									</control>
 									<control type="label">
 										<posx>1282</posx>
-										<posy>0</posy>
+										<posy>-4</posy>
 										<width>200</width>
 										<label>●●●●●</label>
 										<font>Font-Alaska-S38-BL</font>
@@ -489,7 +498,7 @@
 									</control>
 									<control type="label">
 										<posx>1282</posx>
-										<posy>0</posy>
+										<posy>-4</posy>
 										<width>200</width>
 										<label>$VAR[OSDTextRating]</label>
 										<font>Font-Alaska-S38-BL</font>
@@ -499,49 +508,41 @@
 										<align>right</align>
 										<visible>!VideoPlayer.Content(LiveTV)</visible>
 									</control>
-									<control type="grouplist">
-										<orientation>horizontal</orientation>
-										<align>left</align>
-										<itemgap>-20</itemgap>
+									<control type="label">
 										<posx>0</posx>
-										<posy>37</posy>
-										<width>1170</width>
-										<control type="label">
-											<posx>0</posx>
-											<posy>35</posy>
-											<width max="1170">auto</width>
-											<label>$INFO[VideoPlayer.Year]$INFO[VideoPlayer.Genre, • ,]</label>
-											<font>Font-Alaska-S28-L</font>
-											<textcolor>$VAR[osd.text.normal]</textcolor>
-											<shadowcolor>18eeeeee</shadowcolor>
-											<scroll>false</scroll>
-											<align>left</align>
-											<visible>!VideoPlayer.Content(LiveTV) + !VideoPlayer.Content(episodes)</visible>
-										</control>	
-										<control type="label">
-											<posx>0</posx>
-											<posy>35</posy>
-											<width max="1170">auto</width>
-											<label>$INFO[VideoPlayer.TVShowTitle,, • ]$INFO[VideoPlayer.Season,S,]$INFO[VideoPlayer.Episode,E,]$INFO[VideoPlayer.Premiered, • ,]</label>
-											<font>Font-Alaska-S28-L</font>
-											<textcolor>$VAR[osd.text.normal]</textcolor>
-											<shadowcolor>18eeeeee</shadowcolor>
-											<scroll>false</scroll>
-											<align>left</align>
-											<visible>VideoPlayer.Content(episodes)</visible>
-										</control>	
-										<control type="label">
-											<posx>0</posx>
-											<posy>35</posy>
-											<width max="1170">auto</width>
-											<label>$INFO[VideoPlayer.ChannelNumber,$LOCALIZE[19029] ,]$INFO[VideoPlayer.ChannelName, • ,]$INFO[VideoPlayer.Genre, • ,]</label>
-											<font>Font-Alaska-S28-L</font>
-											<textcolor>$VAR[osd.text.normal]</textcolor>
-											<shadowcolor>18eeeeee</shadowcolor>
-											<scroll>false</scroll>
-											<align>left</align>
-											<visible>VideoPlayer.Content(LiveTV)</visible>
-										</control>	
+										<posy>35</posy>
+										<width>980</width>
+										<label>$INFO[VideoPlayer.Year]$INFO[VideoPlayer.Genre, • ,]</label>
+										<font>Font-Alaska-S28-L</font>
+										<textcolor>$VAR[osd.text.normal]</textcolor>
+										<shadowcolor>18eeeeee</shadowcolor>
+										<scroll>false</scroll>
+										<align>left</align>
+										<visible>!VideoPlayer.Content(LiveTV) + !VideoPlayer.Content(episodes)</visible>
+									</control>	
+									<control type="label">
+										<posx>0</posx>
+										<posy>35</posy>
+										<width>980</width>
+										<label>$INFO[VideoPlayer.TVShowTitle,, • ]$INFO[VideoPlayer.Season,S,]$INFO[VideoPlayer.Episode,E,]$INFO[VideoPlayer.Premiered, • ,]</label>
+										<font>Font-Alaska-S28-L</font>
+										<textcolor>$VAR[osd.text.normal]</textcolor>
+										<shadowcolor>18eeeeee</shadowcolor>
+										<scroll>false</scroll>
+										<align>left</align>
+										<visible>VideoPlayer.Content(episodes)</visible>
+									</control>	
+									<control type="label">
+										<posx>0</posx>
+										<posy>35</posy>
+										<width>840</width>
+										<label>$INFO[VideoPlayer.ChannelName]$INFO[VideoPlayer.Genre, • ,]</label>
+										<font>Font-Alaska-S28-L</font>
+										<textcolor>$VAR[osd.text.normal]</textcolor>
+										<shadowcolor>18eeeeee</shadowcolor>
+										<scroll>false</scroll>
+										<align>left</align>
+										<visible>VideoPlayer.Content(LiveTV)</visible>
 									</control>	
 								</control>
 
@@ -625,19 +626,44 @@
 				<aspectratio scalediffuse="false" aligny="top" align="center">keep</aspectratio>
 				<visible>VideoPlayer.Content(LiveTV) | [!VideoPlayer.Content(LiveTV) + Skin.HasSetting(videoosd.clearlogo) + [[VideoPlayer.Content(episodes) + !IsEmpty(Player.Art(tvshow.clearlogo))] | [VideoPlayer.Content(movies) + !IsEmpty(Player.Art(clearlogo))]]]</visible>
 			</control>
+			
 			<control type="group">
 				<posx>225</posx>
 				<posy>795</posy>
 				<control type="label">
 					<posx>0</posx>
-					<posy>0</posy>
+					<posy>19</posy>
+					<width>150</width>
+					<label>$INFO[VideoPlayer.ChannelNumber]</label>
+					<font>Font-OSD-ChannelNumber</font>
+					<textcolor>$VAR[osd.text.dark]</textcolor>
+					<scroll>false</scroll>
+					<align>left</align>
+					<visible>VideoPlayer.Content(LiveTV)</visible>
+				</control>
+				<control type="image">
+					<posx>825</posx>
+					<posy>-18</posy>
+					<width>55</width>
+					<height>55</height>
+					<texture>DefaultTVShows.png</texture>
+					<colordiffuse>$VAR[osd.text.dark]</colordiffuse>
+					<aspectratio align="right">keep</aspectratio>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>-4</posy>
 					<width>700</width>
 					<label>$VAR[OSDTitle]</label>
 					<font>Font-Alaska-S38-BL</font>
 					<textcolor>$VAR[osd.text.dark]</textcolor>
 					<shadowcolor>18eeeeee</shadowcolor>
-					<scroll>false</scroll>
+					<scroll>true</scroll>
+					<scrollsuffix> </scrollsuffix>
 					<align>left</align>
+					<animation effect="slide" end="50" condition="VideoPlayer.Content(LiveTV) + IntegerGreaterThan(VideoPlayer.ChannelNumber,0)">Conditional</animation>
+					<animation effect="slide" end="40" condition="VideoPlayer.Content(LiveTV) + IntegerGreaterThan(VideoPlayer.ChannelNumber,9)">Conditional</animation>
+					<animation effect="slide" end="45" condition="VideoPlayer.Content(LiveTV) + IntegerGreaterThan(VideoPlayer.ChannelNumber,99)">Conditional</animation>
 				</control>
 				<control type="label">
 					<posx>875</posx>
@@ -693,14 +719,6 @@
 						<texture border="10">arctic/flags/right.png</texture>
 						<colordiffuse>$VAR[osd.text.normal]</colordiffuse>
 					</control>
-					<!--<control type="image">
-						<posx>-70</posx>
-						<width>55</width>
-						<height>24</height>
-						<aspectratio>keep</aspectratio>
-						<texture>$INFO[VideoPlayer.VideoCodec,special://skin/extras/videoflags/,.png]</texture>
-						<colordiffuse>$VAR[osd.text.dark]</colordiffuse>
-					</control>-->
 					<control type="label">
 						<posx>-75</posx>
 						<width>62</width>
@@ -746,50 +764,45 @@
 						<height>24</height>
 					</control>
 				</control>
-				<control type="grouplist">
-					<orientation>horizontal</orientation>
-					<align>left</align>
-					<itemgap>-20</itemgap>
+				<control type="label">
 					<posx>0</posx>
 					<posy>35</posy>
-					<width>585</width>
-					<control type="label">
-						<posx>0</posx>
-						<posy>35</posy>
-						<width max="585">auto</width>
-						<label>$INFO[VideoPlayer.Year]$INFO[VideoPlayer.Genre, • ,]</label>
-						<font>Font-Alaska-S28-L</font>
-						<textcolor>$VAR[osd.text.normal]</textcolor>
-						<shadowcolor>18eeeeee</shadowcolor>
-						<scroll>false</scroll>
-						<align>left</align>
-						<visible>!VideoPlayer.Content(LiveTV) + !VideoPlayer.Content(episodes)</visible>
-					</control>	
-					<control type="label">
-						<posx>0</posx>
-						<posy>35</posy>
-						<width max="585">auto</width>
-						<label>$INFO[VideoPlayer.TVShowTitle,, • ]$INFO[VideoPlayer.Season,S,]$INFO[VideoPlayer.Episode,E,]$INFO[VideoPlayer.Premiered, • ,]</label>
-						<font>Font-Alaska-S28-L</font>
-						<textcolor>$VAR[osd.text.normal]</textcolor>
-						<shadowcolor>18eeeeee</shadowcolor>
-						<scroll>false</scroll>
-						<align>left</align>
-						<visible>VideoPlayer.Content(episodes)</visible>
-					</control>	
-					<control type="label">
-						<posx>0</posx>
-						<posy>35</posy>
-						<width max="585">auto</width>
-						<label>$INFO[VideoPlayer.ChannelNumber,$LOCALIZE[19029] ,]$INFO[VideoPlayer.ChannelName, • ,]$INFO[VideoPlayer.Genre, • ,]</label>
-						<font>Font-Alaska-S28-L</font>
-						<textcolor>$VAR[osd.text.normal]</textcolor>
-						<shadowcolor>18eeeeee</shadowcolor>
-						<scroll>false</scroll>
-						<align>left</align>
-						<visible>VideoPlayer.Content(LiveTV)</visible>
-					</control>	
-				</control>
+					<width>700</width>
+					<label>$INFO[VideoPlayer.Year]$INFO[VideoPlayer.Genre, • ,]</label>
+					<font>Font-Alaska-S28-L</font>
+					<textcolor>$VAR[osd.text.normal]</textcolor>
+					<shadowcolor>18eeeeee</shadowcolor>
+					<scroll>false</scroll>
+					<align>left</align>
+					<visible>!VideoPlayer.Content(LiveTV) + !VideoPlayer.Content(episodes)</visible>
+				</control>	
+				<control type="label">
+					<posx>0</posx>
+					<posy>35</posy>
+					<width>700</width>
+					<label>$INFO[VideoPlayer.TVShowTitle,, • ]$INFO[VideoPlayer.Season,S,]$INFO[VideoPlayer.Episode,E,]$INFO[VideoPlayer.Premiered, • ,]</label>
+					<font>Font-Alaska-S28-L</font>
+					<textcolor>$VAR[osd.text.normal]</textcolor>
+					<shadowcolor>18eeeeee</shadowcolor>
+					<scroll>false</scroll>
+					<align>left</align>
+					<visible>VideoPlayer.Content(episodes)</visible>
+				</control>	
+				<control type="label">
+					<posx>0</posx>
+					<posy>35</posy>
+					<width>820</width>
+					<label>$INFO[VideoPlayer.ChannelName]$INFO[VideoPlayer.Genre, • ,]</label>
+					<font>Font-Alaska-S28-L</font>
+					<textcolor>$VAR[osd.text.normal]</textcolor>
+					<shadowcolor>18eeeeee</shadowcolor>
+					<scroll>false</scroll>
+					<align>left</align>
+					<visible>VideoPlayer.Content(LiveTV)</visible>
+					<animation effect="slide" end="50" condition="VideoPlayer.Content(LiveTV) + IntegerGreaterThan(VideoPlayer.ChannelNumber,0)">Conditional</animation>
+					<animation effect="slide" end="40" condition="VideoPlayer.Content(LiveTV) + IntegerGreaterThan(VideoPlayer.ChannelNumber,9)">Conditional</animation>
+					<animation effect="slide" end="45" condition="VideoPlayer.Content(LiveTV) + IntegerGreaterThan(VideoPlayer.ChannelNumber,99)">Conditional</animation>
+				</control>	
 				<control type="label">
 					<posx>0</posx>
 					<posy>70</posy>

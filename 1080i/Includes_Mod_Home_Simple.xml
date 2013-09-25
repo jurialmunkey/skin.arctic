@@ -103,7 +103,7 @@
 				<control type="list" id="525">
 					<onup condition="!Skin.HasSetting(HomeClicksSubmenu) | Container(525).HasFocus(8)">SetFocus(83,0)</onup>					
 					<onup condition="Skin.HasSetting(HomeClicksSubmenu) + [[Container(525).HasFocus(3) + !stringcompare(Skin.String(music.widget.type),$LOCALIZE[42453])] | [Container(525).HasFocus(7) + !IsEmpty(Window(Home).Property(MostPlayedROM.1.Title)) + Skin.HasSetting(UseRCB)] | [Container(525).HasFocus(1) + !stringcompare(Skin.String(movie.widget.type),$LOCALIZE[42453])] | [Container(525).HasFocus(2) + !stringcompare(Skin.String(tvshow.widget.type),$LOCALIZE[42453])]]">SetFocus(82)</onup>
-					<onup condition="Skin.HasSetting(HomeClicksSubmenu) + [[Container(525).HasFocus(3) + stringcompare(Skin.String(music.widget.type),$LOCALIZE[42453])] | [Container(525).HasFocus(1) + stringcompare(Skin.String(movie.widget.type),$LOCALIZE[42453])] | [Container(525).HasFocus(2) + stringcompare(Skin.String(tvshow.widget.type),$LOCALIZE[42453])]]">SetFocus(90)</onup>
+					<onup condition="Skin.HasSetting(HomeClicksSubmenu) + [[Container(525).HasFocus(3) + stringcompare(Skin.String(music.widget.type),$LOCALIZE[42453])] | [Container(525).HasFocus(1) + stringcompare(Skin.String(movie.widget.type),$LOCALIZE[42453])] | [Container(525).HasFocus(2) + stringcompare(Skin.String(tvshow.widget.type),$LOCALIZE[42453])]]">SetFocus(89)</onup>
 					
 					<ondown>85</ondown>
 					<onleft>525</onleft>

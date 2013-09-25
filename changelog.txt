@@ -1,3 +1,8 @@
+[B]0.4.1[/B]
+Fixed focus of mixed widget to first item
+Fixed clock always showing in music vis
+Fixed double assignment of ids in "View Options"
+
 [B]0.4.0[/B]
 Addition of Mixed Widget
 Fixed video library update label not long enough

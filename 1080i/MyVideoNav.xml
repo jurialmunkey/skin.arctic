@@ -478,7 +478,7 @@
                         <visible>Control.IsVisible(51)</visible>
                     </control>
                     <!-- Low List : Watched Overlay -->
-                    <control type="radiobutton" id="120">
+                    <control type="radiobutton" id="121">
                         <include>ViewOptions.Button</include>
                         <selected>Skin.HasSetting(lowlist.posteroverlay)</selected>
                         <onclick>Skin.ToggleSetting(lowlist.posteroverlay)</onclick>
@@ -490,7 +490,7 @@
                         <visible>Control.IsVisible(52)</visible>
                     </control>
                     <!-- Banner List : Watched Overlay -->
-                    <control type="radiobutton" id="120">
+                    <control type="radiobutton" id="122">
                         <include>ViewOptions.Button</include>
                         <selected>Skin.HasSetting(bannerlist.posteroverlay)</selected>
                         <onclick>Skin.ToggleSetting(bannerlist.posteroverlay)</onclick>

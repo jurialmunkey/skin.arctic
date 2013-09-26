@@ -2,6 +2,8 @@
 Fixed focus of mixed widget to first item
 Fixed clock always showing in music vis
 Fixed double assignment of ids in "View Options"
+Swapped In-progress and Spotlight on mixed widget
+Added falback icon for logos on widget information
 
 [B]0.4.0[/B]
 Addition of Mixed Widget

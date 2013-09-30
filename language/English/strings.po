@@ -1263,3 +1263,7 @@ msgstr ""
 msgctxt "#42453"
 msgid "Mixed"
 msgstr ""
+
+msgctxt "#42454"
+msgid "Prevent changing widget types on up/down"
+msgstr ""

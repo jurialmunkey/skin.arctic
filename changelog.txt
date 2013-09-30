@@ -1,3 +1,12 @@
+[B]0.4.2[/B]
+Altered mixed widget scroll behaviour to be up for simple and down for panel
+Added option to scroll between 'simple' widget types on up/down as default
+ -- option to prevent in Skin Settings > Home > Manage custom widgets
+Added no-videologo.png and no-musiclogo.png to extras/widgets folder 
+ -- change these for what displays when no clearlogo is available to widgets
+Changed Artwork Downloader to download bulk depending on its own settings
+Fixed widget label persistence when other menu ids are open
+
 [B]0.4.1[/B]
 Fixed focus of mixed widget to first item
 Fixed clock always showing in music vis

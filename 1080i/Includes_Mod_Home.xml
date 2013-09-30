@@ -1141,12 +1141,12 @@
 						</animation>
 						<!-- Combination Widgets -->
 						<control type="group">
-							<visible>[Container(525).HasFocus(1) + stringcompare(Skin.String(movie.widget.type),$LOCALIZE[42453])] | [Container(525).HasFocus(2) + stringcompare(Skin.String(tvshow.widget.type),$LOCALIZE[42453])] | [Container(525).HasFocus(3) + stringcompare(Skin.String(music.widget.type),$LOCALIZE[42453])]</visible>
+							<visible>[[Container(525).HasFocus(1) + stringcompare(Skin.String(movie.widget.type),$LOCALIZE[42453])] | [Container(525).HasFocus(2) + stringcompare(Skin.String(tvshow.widget.type),$LOCALIZE[42453])] | [Container(525).HasFocus(3) + stringcompare(Skin.String(music.widget.type),$LOCALIZE[42453])]] + !Control.HasFocus(84)</visible>
 							<include>HomeWidget-NewWidget</include>
 						</control>
 						<!-- Singular Widgets -->
 						<control type="group">
-							<visible>[!Container(525).HasFocus(1) + !Container(525).HasFocus(2) + !Container(525).HasFocus(3)] | [Container(525).HasFocus(1) + !stringcompare(Skin.String(movie.widget.type),$LOCALIZE[42453])] | [Container(525).HasFocus(2) + !stringcompare(Skin.String(tvshow.widget.type),$LOCALIZE[42453])] | [Container(525).HasFocus(3) + !stringcompare(Skin.String(music.widget.type),$LOCALIZE[42453])]</visible>
+							<visible>[[Container(525).HasFocus(1) + !stringcompare(Skin.String(movie.widget.type),$LOCALIZE[42453])] | [Container(525).HasFocus(2) + !stringcompare(Skin.String(tvshow.widget.type),$LOCALIZE[42453])] | [Container(525).HasFocus(3) + !stringcompare(Skin.String(music.widget.type),$LOCALIZE[42453])] | [Container(525).HasFocus(7) + !IsEmpty(Window(Home).Property(MostPlayedROM.1.Title)) + Skin.HasSetting(UseRCB)]] + !Control.HasFocus(84)</visible>
 							<control type="label">
 								<posx>50</posx>
 								<posy>296</posy>
@@ -1160,19 +1160,19 @@
 							</control>
 							<control type="list" id="82">
 								<onup>525</onup>
-								<ondown condition="Skin.HasSetting(home.scrollablewidgets) + Container(525).HasFocus(1) + stringcompare(Skin.String(movie.widget.type),$LOCALIZE[575])">Skin.SetString(movie.widget.type,$LOCALIZE[41552])</ondown>
-								<ondown condition="Skin.HasSetting(home.scrollablewidgets) + Container(525).HasFocus(1) + stringcompare(Skin.String(movie.widget.type),$LOCALIZE[41550])">Skin.SetString(movie.widget.type,$LOCALIZE[575])</ondown>
-								<ondown condition="Skin.HasSetting(home.scrollablewidgets) + Container(525).HasFocus(1) + stringcompare(Skin.String(movie.widget.type),$LOCALIZE[41552])">Skin.SetString(movie.widget.type,$LOCALIZE[41550])</ondown>
-								<ondown condition="Skin.HasSetting(home.scrollablewidgets) + Container(525).HasFocus(1) + stringcompare(Skin.String(movie.widget.type),$LOCALIZE[575])">Skin.SetString(movie.widget.type,$LOCALIZE[41552])</ondown>
-								<ondown condition="Skin.HasSetting(home.scrollablewidgets) + Container(525).HasFocus(2) + stringcompare(Skin.String(tvshow.widget.type),$LOCALIZE[41551])">Skin.SetString(tvshow.widget.type,$LOCALIZE[41553])</ondown>
-								<ondown condition="Skin.HasSetting(home.scrollablewidgets) + Container(525).HasFocus(2) + stringcompare(Skin.String(tvshow.widget.type),$LOCALIZE[41550])">Skin.SetString(tvshow.widget.type,$LOCALIZE[41551])</ondown>
-								<ondown condition="Skin.HasSetting(home.scrollablewidgets) + Container(525).HasFocus(2) + stringcompare(Skin.String(tvshow.widget.type),$LOCALIZE[41553])">Skin.SetString(tvshow.widget.type,$LOCALIZE[41550])</ondown>
-								<ondown condition="Skin.HasSetting(home.scrollablewidgets) + Container(525).HasFocus(2) + stringcompare(Skin.String(tvshow.widget.type),$LOCALIZE[41551])">Skin.SetString(tvshow.widget.type,$LOCALIZE[41553])</ondown>
-								<ondown condition="Skin.HasSetting(home.scrollablewidgets) + Container(525).HasFocus(3) + stringcompare(Skin.String(music.widget.type),$LOCALIZE[41555])">Skin.SetString(music.widget.type,$LOCALIZE[41554])</ondown>
-								<ondown condition="Skin.HasSetting(home.scrollablewidgets) + Container(525).HasFocus(3) + stringcompare(Skin.String(music.widget.type),$LOCALIZE[41550])">Skin.SetString(music.widget.type,$LOCALIZE[41555])</ondown>
-								<ondown condition="Skin.HasSetting(home.scrollablewidgets) + Container(525).HasFocus(3) + stringcompare(Skin.String(music.widget.type),$LOCALIZE[41554])">Skin.SetString(music.widget.type,$LOCALIZE[41550])</ondown>
-								<ondown condition="Skin.HasSetting(home.scrollablewidgets) + Container(525).HasFocus(3) + stringcompare(Skin.String(music.widget.type),$LOCALIZE[41555])">Skin.SetString(music.widget.type,$LOCALIZE[41554])</ondown>
-								<ondown condition="!Skin.HasSetting(home.scrollablewidgets) | ![Container(525).HasFocus(1) | Container(525).HasFocus(2) | Container(525).HasFocus(3)]">SetFocus(84,0)</ondown>
+								<ondown condition="!Skin.HasSetting(home.scrollablewidgets) + Container(525).HasFocus(1) + stringcompare(Skin.String(movie.widget.type),$LOCALIZE[575])">Skin.SetString(movie.widget.type,$LOCALIZE[41552])</ondown>
+								<ondown condition="!Skin.HasSetting(home.scrollablewidgets) + Container(525).HasFocus(1) + stringcompare(Skin.String(movie.widget.type),$LOCALIZE[41550])">Skin.SetString(movie.widget.type,$LOCALIZE[575])</ondown>
+								<ondown condition="!Skin.HasSetting(home.scrollablewidgets) + Container(525).HasFocus(1) + stringcompare(Skin.String(movie.widget.type),$LOCALIZE[41552])">Skin.SetString(movie.widget.type,$LOCALIZE[41550])</ondown>
+								<ondown condition="!Skin.HasSetting(home.scrollablewidgets) + Container(525).HasFocus(1) + stringcompare(Skin.String(movie.widget.type),$LOCALIZE[575])">Skin.SetString(movie.widget.type,$LOCALIZE[41552])</ondown>
+								<ondown condition="!Skin.HasSetting(home.scrollablewidgets) + Container(525).HasFocus(2) + stringcompare(Skin.String(tvshow.widget.type),$LOCALIZE[41551])">Skin.SetString(tvshow.widget.type,$LOCALIZE[41553])</ondown>
+								<ondown condition="!Skin.HasSetting(home.scrollablewidgets) + Container(525).HasFocus(2) + stringcompare(Skin.String(tvshow.widget.type),$LOCALIZE[41550])">Skin.SetString(tvshow.widget.type,$LOCALIZE[41551])</ondown>
+								<ondown condition="!Skin.HasSetting(home.scrollablewidgets) + Container(525).HasFocus(2) + stringcompare(Skin.String(tvshow.widget.type),$LOCALIZE[41553])">Skin.SetString(tvshow.widget.type,$LOCALIZE[41550])</ondown>
+								<ondown condition="!Skin.HasSetting(home.scrollablewidgets) + Container(525).HasFocus(2) + stringcompare(Skin.String(tvshow.widget.type),$LOCALIZE[41551])">Skin.SetString(tvshow.widget.type,$LOCALIZE[41553])</ondown>
+								<ondown condition="!Skin.HasSetting(home.scrollablewidgets) + Container(525).HasFocus(3) + stringcompare(Skin.String(music.widget.type),$LOCALIZE[41555])">Skin.SetString(music.widget.type,$LOCALIZE[41554])</ondown>
+								<ondown condition="!Skin.HasSetting(home.scrollablewidgets) + Container(525).HasFocus(3) + stringcompare(Skin.String(music.widget.type),$LOCALIZE[41550])">Skin.SetString(music.widget.type,$LOCALIZE[41555])</ondown>
+								<ondown condition="!Skin.HasSetting(home.scrollablewidgets) + Container(525).HasFocus(3) + stringcompare(Skin.String(music.widget.type),$LOCALIZE[41554])">Skin.SetString(music.widget.type,$LOCALIZE[41550])</ondown>
+								<ondown condition="!Skin.HasSetting(home.scrollablewidgets) + Container(525).HasFocus(3) + stringcompare(Skin.String(music.widget.type),$LOCALIZE[41555])">Skin.SetString(music.widget.type,$LOCALIZE[41554])</ondown>
+								<ondown condition="Skin.HasSetting(home.scrollablewidgets) | ![Container(525).HasFocus(1) | Container(525).HasFocus(2) | Container(525).HasFocus(3)]">SetFocus(84,0)</ondown>
 								<onleft>82</onleft>
 								<onright>82</onright>
 								<onback>525</onback>

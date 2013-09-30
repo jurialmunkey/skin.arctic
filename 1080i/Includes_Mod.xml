@@ -404,7 +404,7 @@
 				<posy>20</posy>
 				<width>370</width>
 				<height>200</height>
-				<texture  fallback="DefaultVideo.png">$VAR[HomeWidget-Logo]</texture>
+				<texture fallback="special://skin/extras/widgets/no-videologo.png">$VAR[HomeWidget-Logo]</texture>
 				<aspectratio align="center" aligny="center" scalediffuse="false">keep</aspectratio>
 			</control>
 			<control type="group">
@@ -519,7 +519,7 @@
 				<posy>20</posy>
 				<width>370</width>
 				<height>200</height>
-				<texture fallback="DefaultAudio.png">$INFO[Skin.String(cdartlocation)]$VAR[HomeWidget-Label,,/logo.png]</texture>
+				<texture fallback="special://skin/extras/widgets/no-musiclogo.png">$INFO[Skin.String(cdartlocation)]$VAR[HomeWidget-Label,,/logo.png]</texture>
 				<aspectratio align="right" aligny="center" scalediffuse="false">keep</aspectratio>
 			</control>
 			<control type="label">
@@ -943,13 +943,15 @@
 			<texturefocus border="52">arctic/common/border-glo.png</texturefocus>
 			<texturenofocus>-</texturenofocus>
 			<colordiffuse>Mod_Glow_Border</colordiffuse>
-			<onup>525</onup>
+			<onup condition="StringCompare(Skin.String(homescreen.style),panel)">525</onup>
+			<onup condition="!StringCompare(Skin.String(homescreen.style),panel)">Control.Move(87,1)</onup>
+			<ondown condition="StringCompare(Skin.String(homescreen.style),panel)">Control.Move(87,1)</ondown>
+			<ondown condition="!StringCompare(Skin.String(homescreen.style),panel)">525</ondown>
 			<onleft>AlarmClock(87Move,Control.Move(87,1),00:07,silent,loop)</onleft>
-			<onright>AlarmClock(87Move,Control.Move(87,1),00:07,silent,loop)</onright>
-			<ondown>Control.Move(87,1)</ondown>
-			<onclick>$INFO[Container(87).ListItem.Property(Play)]</onclick>
 			<onleft>SetFocus(90,4)</onleft>
+			<onright>AlarmClock(87Move,Control.Move(87,1),00:07,silent,loop)</onright>
 			<onright>88</onright>
+			<onclick>$INFO[Container(87).ListItem.Property(Play)]</onclick>
 			<onback>525</onback>
 			<onfocus>CancelAlarm(87Move,true)</onfocus>			
 			<visible>!Container(525).HasFocus(3)</visible>
@@ -962,13 +964,15 @@
 			<texturefocus border="52">arctic/common/border-glo.png</texturefocus>
 			<texturenofocus>-</texturenofocus>
 			<colordiffuse>Mod_Glow_Border</colordiffuse>
-			<onup>525</onup>
+			<onup condition="StringCompare(Skin.String(homescreen.style),panel)">525</onup>
+			<onup condition="!StringCompare(Skin.String(homescreen.style),panel)">Control.Move(87,1)</onup>
+			<ondown condition="StringCompare(Skin.String(homescreen.style),panel)">Control.Move(87,1)</ondown>
+			<ondown condition="!StringCompare(Skin.String(homescreen.style),panel)">525</ondown>
 			<onleft>AlarmClock(87Move,Control.Move(87,1),00:07,silent,loop)</onleft>
-			<onright>AlarmClock(87Move,Control.Move(87,1),00:07,silent,loop)</onright>
-			<ondown>Control.Move(87,1)</ondown>
-			<onclick>$INFO[Container(87).ListItem.Property(Play)]</onclick>
 			<onleft>SetFocus(90,4)</onleft>
+			<onright>AlarmClock(87Move,Control.Move(87,1),00:07,silent,loop)</onright>
 			<onright>88</onright>
+			<onclick>$INFO[Container(87).ListItem.Property(Play)]</onclick>
 			<onback>525</onback>
 			<visible>Container(525).HasFocus(3)</visible>
 			<onfocus>CancelAlarm(87Move,true)</onfocus>			
@@ -983,11 +987,13 @@
 			<texturenofocus>-</texturenofocus>
 			<colordiffuse>Mod_Glow_Border</colordiffuse>
 			<onclick>$INFO[Container(86).ListItem.Property(Play)]</onclick>
-			<onup>525</onup>
+			<onup condition="StringCompare(Skin.String(homescreen.style),panel)">525</onup>
+			<onup condition="!StringCompare(Skin.String(homescreen.style),panel)">Control.Move(86,1)</onup>
+			<ondown condition="StringCompare(Skin.String(homescreen.style),panel)">Control.Move(86,1)</ondown>
+			<ondown condition="!StringCompare(Skin.String(homescreen.style),panel)">525</ondown>
 			<onleft>AlarmClock(86Move,Control.Move(86,1),00:07,silent,loop)</onleft>
-			<onright>AlarmClock(86Move,Control.Move(86,1),00:07,silent,loop)</onright>
-			<ondown>Control.Move(86,1)</ondown>
 			<onleft>89</onleft>
+			<onright>AlarmClock(86Move,Control.Move(86,1),00:07,silent,loop)</onright>
 			<onright>SetFocus(90,0)</onright>
 			<onback>525</onback>
 			<visible>!Container(525).HasFocus(3)</visible>
@@ -1003,11 +1009,13 @@
 			<texturenofocus>-</texturenofocus>
 			<colordiffuse>Mod_Glow_Border</colordiffuse>
 			<onclick>$INFO[Container(86).ListItem.Property(Play)]</onclick>
-			<onup>525</onup>
+			<onup condition="StringCompare(Skin.String(homescreen.style),panel)">525</onup>
+			<onup condition="!StringCompare(Skin.String(homescreen.style),panel)">Control.Move(86,1)</onup>
+			<ondown condition="StringCompare(Skin.String(homescreen.style),panel)">Control.Move(86,1)</ondown>
+			<ondown condition="!StringCompare(Skin.String(homescreen.style),panel)">525</ondown>
 			<onleft>AlarmClock(86Move,Control.Move(86,1),00:07,silent,loop)</onleft>
-			<onright>AlarmClock(86Move,Control.Move(86,1),00:07,silent,loop)</onright>
-			<ondown>Control.Move(86,1)</ondown>
 			<onleft>89</onleft>
+			<onright>AlarmClock(86Move,Control.Move(86,1),00:07,silent,loop)</onright>
 			<onright>SetFocus(90,0)</onright>
 			<onback>525</onback>
 			<visible>Container(525).HasFocus(3)</visible>
@@ -1017,8 +1025,11 @@
 		
 		<!-- 90 Control -->
 		<control type="list" id="90">
-			<onup>525</onup>
-			<ondown>525</ondown>
+			<onup condition="StringCompare(Skin.String(homescreen.style),panel)">525</onup>
+			<onup condition="!StringCompare(Skin.String(homescreen.style),panel)">Control.Move(90,1)</onup>
+			<ondown condition="!StringCompare(Skin.String(homescreen.style),panel)">525</ondown>
+			<ondown condition="Skin.HasSetting(home.scrollablewidgets) + StringCompare(Skin.String(homescreen.style),panel)">Control.Move(90,1)</ondown>
+			<ondown condition="!Skin.HasSetting(home.scrollablewidgets) + StringCompare(Skin.String(homescreen.style),panel)">84</ondown>
 			<onleft>88</onleft>
 			<onright>89</onright>
 			<onback>525</onback>
@@ -1037,7 +1048,11 @@
 		</control>
 		<control type="list" id="90">
 			<onup>525</onup>
-			<ondown>525</ondown>
+			<onup condition="StringCompare(Skin.String(homescreen.style),panel)">525</onup>
+			<onup condition="!StringCompare(Skin.String(homescreen.style),panel)">Control.Move(90,1)</onup>
+			<ondown condition="!StringCompare(Skin.String(homescreen.style),panel)">525</ondown>
+			<ondown condition="Skin.HasSetting(home.scrollablewidgets) + StringCompare(Skin.String(homescreen.style),panel)">Control.Move(90,1)</ondown>
+			<ondown condition="!Skin.HasSetting(home.scrollablewidgets) + StringCompare(Skin.String(homescreen.style),panel)">84</ondown>
 			<onleft>88</onleft>
 			<onright>89</onright>
 			<onback>525</onback>

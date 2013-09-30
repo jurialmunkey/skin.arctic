@@ -6,6 +6,7 @@ Added no-videologo.png and no-musiclogo.png to extras/widgets folder
  -- change these for what displays when no clearlogo is available to widgets
 Changed Artwork Downloader to download bulk depending on its own settings
 Fixed widget label persistence when other menu ids are open
+Added "Launch" button for Addon info
 
 [B]0.4.1[/B]
 Fixed focus of mixed widget to first item

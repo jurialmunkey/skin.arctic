@@ -1028,8 +1028,8 @@
 			<onup condition="StringCompare(Skin.String(homescreen.style),panel)">525</onup>
 			<onup condition="!StringCompare(Skin.String(homescreen.style),panel)">Control.Move(90,1)</onup>
 			<ondown condition="!StringCompare(Skin.String(homescreen.style),panel)">525</ondown>
-			<ondown condition="Skin.HasSetting(home.scrollablewidgets) + StringCompare(Skin.String(homescreen.style),panel)">Control.Move(90,1)</ondown>
-			<ondown condition="!Skin.HasSetting(home.scrollablewidgets) + StringCompare(Skin.String(homescreen.style),panel)">84</ondown>
+			<ondown condition="!Skin.HasSetting(home.scrollablewidgets) + StringCompare(Skin.String(homescreen.style),panel)">Control.Move(90,1)</ondown>
+			<ondown condition="Skin.HasSetting(home.scrollablewidgets) + StringCompare(Skin.String(homescreen.style),panel)">84</ondown>
 			<onleft>88</onleft>
 			<onright>89</onright>
 			<onback>525</onback>
@@ -1051,8 +1051,8 @@
 			<onup condition="StringCompare(Skin.String(homescreen.style),panel)">525</onup>
 			<onup condition="!StringCompare(Skin.String(homescreen.style),panel)">Control.Move(90,1)</onup>
 			<ondown condition="!StringCompare(Skin.String(homescreen.style),panel)">525</ondown>
-			<ondown condition="Skin.HasSetting(home.scrollablewidgets) + StringCompare(Skin.String(homescreen.style),panel)">Control.Move(90,1)</ondown>
-			<ondown condition="!Skin.HasSetting(home.scrollablewidgets) + StringCompare(Skin.String(homescreen.style),panel)">84</ondown>
+			<ondown condition="!Skin.HasSetting(home.scrollablewidgets) + StringCompare(Skin.String(homescreen.style),panel)">Control.Move(90,1)</ondown>
+			<ondown condition="Skin.HasSetting(home.scrollablewidgets) + StringCompare(Skin.String(homescreen.style),panel)">84</ondown>
 			<onleft>88</onleft>
 			<onright>89</onright>
 			<onback>525</onback>

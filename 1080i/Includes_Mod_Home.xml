@@ -1154,7 +1154,7 @@
 								<align>left</align>
 								<font>Font-MixedWidget</font>
 								<textcolor>mod-infotags</textcolor>
-								<width>200</width>
+								<width>300</width>
 								<scroll>false</scroll>
 								<animation effect="fade" start="100" end="25" time="100" condition="!Control.HasFocus(82)">Conditional</animation>
 							</control>

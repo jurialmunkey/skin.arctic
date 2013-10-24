@@ -1267,3 +1267,7 @@ msgstr ""
 msgctxt "#42454"
 msgid "Prevent changing widget types on up/down"
 msgstr ""
+
+msgctxt "#42456"
+msgid "On-screen"
+msgstr ""

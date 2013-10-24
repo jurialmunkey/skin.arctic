@@ -1,5 +1,7 @@
 <window>
-    <defaultcontrol always="true">8</defaultcontrol>
+    <include condition="VideoPlayer.Content(LiveTV)">OSDDefault8</include>
+    <include condition="!VideoPlayer.Content(LiveTV)">OSDDefaultControlSubtitles</include>
+    
     <onload condition="!Skin.HasSetting(osd.wideinfo)">SetProperty(ShowInfo,1,seekbar)</onload>
     <onload condition="!Skin.HasSetting(osd.wideinfo)">SetProperty(ShowInfo,1,videoosd)</onload>
     <onunload>ClearProperty(ExtendPlot,seekbar)</onunload>

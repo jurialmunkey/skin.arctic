@@ -372,8 +372,8 @@
 									<colordiffuse>$VAR[osd.text.normal]</colordiffuse>
 								</control>
 								<control type="label">
-									<posx>-70</posx>
-									<width>55</width>
+									<posx>-72</posx>
+									<width>60</width>
 									<height>24</height>
 									<label>$INFO[VideoPlayer.VideoResolution]</label>
 									<align>center</align>

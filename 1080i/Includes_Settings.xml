@@ -8,6 +8,12 @@
 		<value></value>
 	</variable>
 	
+	<variable name="skinsettings.musicinfo">
+		<value condition="Skin.HasSetting(musicvis.noinfo)">$LOCALIZE[42456]</value>
+		<value condition="Skin.HasSetting(musicvis.small) + !Skin.HasSetting(musicvis.noinfo)">$LOCALIZE[42449]</value>
+		<value condition="!Skin.HasSetting(musicvis.small) + !Skin.HasSetting(musicvis.noinfo)">$LOCALIZE[42451]</value>
+	</variable>
+	
 	<variable name="skinsettings.videoosd">
 		<value condition="!Skin.HasSetting(osd.wideinfo)">$LOCALIZE[42449]</value>
 		<value condition="Skin.HasSetting(osd.wideinfo) + Skin.HasSetting(osd.fullwidthinfo)">$LOCALIZE[42450]</value>

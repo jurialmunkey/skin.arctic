@@ -466,7 +466,17 @@
 							<onclick condition="!Skin.HasSetting(OSDVisualisation.Enabled) + !Skin.HasSetting(OSDVisualisation.ShowFanart) + Skin.HasSetting(ArtistSlideShow.Enabled)">Skin.SetBool(OSDVisualisation.Enabled)</onclick>
 							<onclick condition="!Skin.HasSetting(OSDVisualisation.Enabled) + !Skin.HasSetting(OSDVisualisation.ShowFanart) + Skin.HasSetting(ArtistSlideShow.Enabled)">Skin.SetBool(OSDVisualisation.ShowFanart)</onclick>
 						</control>
-						<control type="radiobutton" id="8002">
+						<control type="button" id="8002">
+							<width>1210</width>
+							<include>SettingsCategoryDefaultButtonVars</include>
+							<label> - $LOCALIZE[42131]</label>
+							<label2>$VAR[skinsettings.musicinfo]</label2>
+							<onclick condition="!Skin.HasSetting(musicvis.noinfo) + !Skin.HasSetting(musicvis.small)">Skin.SetBool(musicvis.small)</onclick>
+							<onclick condition="!Skin.HasSetting(musicvis.noinfo) + Skin.HasSetting(musicvis.small)">Skin.SetBool(musicvis.noinfo)</onclick>
+							<onclick condition="Skin.HasSetting(musicvis.noinfo)">Skin.Reset(musicvis.small)</onclick>
+							<onclick condition="Skin.HasSetting(musicvis.noinfo)">Skin.Reset(musicvis.noinfo)</onclick>
+						</control>
+						<control type="radiobutton" id="8003">
 							<width>1210</width>
 							<include>SettingsCategoryRadioButtonVars</include>
 							<selected>Skin.HasSetting(ArtistSlideShow.Animate)</selected>
@@ -474,21 +484,14 @@
 							<label> - $LOCALIZE[41105]</label>
 							<enable>Skin.HasSetting(ArtistSlideShow.Enabled)</enable>
 							<animation effect="fade" start="100" end="42" time="0" condition="!Control.IsEnabled(8002)">Conditional</animation>
-							<visible>Control.IsEnabled(8002)</visible>
+							<visible>Control.IsEnabled(8003)</visible>
 						</control>
-						<control type="radiobutton" id="8003">
+						<control type="radiobutton" id="8004">
 							<width>1210</width>
 							<include>SettingsCategoryRadioButtonVars</include>
 							<selected>!Skin.HasSetting(musicvis.hidetext)</selected>
 							<onclick>Skin.ToggleSetting(musicvis.hidetext)</onclick>
 							<label> - $LOCALIZE[42418]</label>
-						</control>
-						<control type="radiobutton" id="8004">
-							<width>1210</width>
-							<include>SettingsCategoryRadioButtonVars</include>
-							<selected>Skin.HasSetting(musicvis.small)</selected>
-							<onclick>Skin.ToggleSetting(musicvis.small)</onclick>
-							<label> - $LOCALIZE[42417]</label>
 						</control>
 						<control type="button" id="8005">
 							<width>1210</width>

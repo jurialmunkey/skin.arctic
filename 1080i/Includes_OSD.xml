@@ -93,6 +93,10 @@
         <defaultcontrol>1</defaultcontrol>
     </include>
     
+    <include name="OSDDefault8">
+    	<defaultcontrol always="true">8</defaultcontrol>
+    </include>
+    
     <variable name="OSDPlot">
         <value condition="!IsEmpty(Window(seekbar).Property(ShowNext))">$INFO[VideoPlayer.NextPlot]</value>
         <value>$INFO[VideoPlayer.Plot]</value>

@@ -1,6 +1,7 @@
 <window>
     <defaultcontrol>23</defaultcontrol>
     <visible>Window.IsActive(fullscreenvideo) + [[!IsEmpty(Window(videoosd).Property(ShowInfo)) + !IsEmpty(Window(seekbar).Property(ShowInfo)) + Window.IsActive(videoosd)] | Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Window.IsActive(fullscreeninfo)] + !Window.IsVisible(sliderdialog) + ![Window.IsActive(script-XBMC-Subtitles-main.xml) | Window.IsActive(pvrguideinfo) | Window.IsActive(pvrosdchannels) | Window.IsActive(pvrosdguide) | Window.IsActive(yesnodialog) | Window.IsActive(okdialog) | Window.IsActive(progressdialog) | Window.IsActive(virtualkeyboard) | Window.IsActive(numericinput) | Window.IsActive(shutdownmenu) | Window.IsActive(osdvideosettings) | Window.IsActive(osdaudiosettings) | Window.IsActive(videobookmarks)]</visible>
+    <!--<onload>SetProperty(ExtendPlot,1,seekbar)</onload>-->
     <onload condition="!Skin.HasSetting(videoosd.hideposterinfo) | VideoPlayer.Content(LiveTV)">SetProperty(ShowInfo,1,seekbar)</onload>
     <onunload condition="Skin.HasSetting(osd.wideinfo)">ClearProperty(ShowInfo,seekbar)</onunload>
     <onunload>ClearProperty(ExtendPlot,seekbar)</onunload>
@@ -35,7 +36,7 @@
 						<posx>145</posx>
 						<posy>190</posy>
 						<width>1630</width>
-						<height>430</height>
+						<height>350</height>
 						<bordertexture border="40">arctic/osd/white-25.png</bordertexture>
 						<bordersize>25</bordersize>
 						<texture border="40">arctic/common/16panel-light.png</texture>
@@ -49,7 +50,7 @@
 						<posx>145</posx>
 						<posy>190</posy>
 						<width>1630</width>
-						<height>430</height>
+						<height>350</height>
 						<bordertexture border="40">arctic/osd/white-25.png</bordertexture>
 						<bordersize>25</bordersize>
 						<texture border="40">arctic/common/16panel-light.png</texture>
@@ -66,7 +67,7 @@
 						<posx>-50</posx>
 						<posy>195</posy>
 						<width>2020</width>
-						<height>500</height>
+						<height>350</height>
 						<bordertexture border="40">arctic/osd/white-25.png</bordertexture>
 						<bordersize>25</bordersize>
 						<texture border="40">arctic/common/16panel-light.png</texture>
@@ -80,7 +81,7 @@
 						<posx>-50</posx>
 						<posy>195</posy>
 						<width>2020</width>
-						<height>500</height>
+						<height>350</height>
 						<bordertexture border="40">arctic/osd/white-25.png</bordertexture>
 						<bordersize>25</bordersize>
 						<texture border="40">arctic/common/16panel-light.png</texture>

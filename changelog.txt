@@ -3,6 +3,7 @@ Updated translations from transifex
 Added option for "on-screen" music info
 Set default focus to subtitles
 Minor tweak to simple home - submenu on click up from submenu closes it
+Fix lovefilm in sets - no item preload so reports right page number
 
 [B]0.4.2[/B]
 Altered mixed widget scroll behaviour to be up for simple and down for panel

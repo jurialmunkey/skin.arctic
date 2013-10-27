@@ -7,6 +7,7 @@ Fix lovefilm in sets - no item preload so reports right page number
 Fix broken addon text overlapping
 Fix choose art option for episodes
 Add scrolling text to panel list focused item
+Change default director icon to clapboard
 
 [B]0.4.2[/B]
 Altered mixed widget scroll behaviour to be up for simple and down for panel

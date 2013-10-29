@@ -807,6 +807,7 @@
 					<aligny>top</aligny>
 					<font>Font-MusicVis-Description</font>
 					<textcolor>99ffffff</textcolor>
+					<scroll>false</scroll>
 				</control>
 				<control type="label">
 					<description>Description</description>

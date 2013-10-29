@@ -495,6 +495,12 @@
             <size>32</size>
         </font>
         <font>
+        	<name>Font-MusicVis-Description</name>
+        	<filename>alaska_thin.ttf</filename>
+            <size>52</size>
+            <linespacing>0.85</linespacing>
+        </font>
+        <font>
         	<name>Font-MusicVis-Lyrics</name>
         	<filename>alaska_thin.ttf</filename>
             <size>92</size>

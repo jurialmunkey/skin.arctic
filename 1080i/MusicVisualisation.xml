@@ -91,6 +91,7 @@
 						<aspectratio scalediffuse="false">stretch</aspectratio>
 					</control>
 					<control type="label">
+						<visible>!Skin.HasSetting(musicvis.hidetext) | Player.ShowInfo | Window.IsActive(musicosd)</visible>
 						<description>Player Times</description>
 						<posx>1350</posx>
 						<posy>790</posy>
@@ -113,9 +114,9 @@
 					<animation effect="slide" end="-139" condition="!Skin.HasSetting(CDArt.Enabled)">Conditional</animation>
 					<control type="image">
 						<posx>400</posx>
-						<posy>-10</posy>
-						<width>297</width>
-						<height>297</height>
+						<posy>0</posy>
+						<width>277</width>
+						<height>277</height>
 						<texture background="true" fallback="osd/fullscreen/cd.png">$INFO[Player.Folderpath,,cdart.png]</texture>
 						<aspectratio align="center">keep</aspectratio>
 						<animation effect="rotate" center="auto" reversible="false" start="360" end="0" time="2500" loop="true" condition="Player.Playing">Conditional</animation>
@@ -690,12 +691,13 @@
 			</control>
         </control>
         <control type="group">
-			<animation effect="fade" time="600">Visible</animation>
-			<animation effect="fade" time="600">Hidden</animation>
 			<visible>Skin.HasSetting(musicvis.noinfo)</visible>
 			<posy>100</posy>
 			<control type="group">
-				<visible>!Skin.HasSetting(musicvis.hidetext) + !Window.IsVisible(script-XBMC_Lyrics-main.xml)</visible>
+				<posy>35</posy>
+				<visible>!Skin.HasSetting(musicvis.hidetext) + !Window.IsVisible(script-XBMC_Lyrics-main.xml) + !Player.ShowInfo + !Window.IsActive(musicosd)</visible>
+				<animation effect="fade" time="600">Visible</animation>
+				<animation effect="fade" time="350">Hidden</animation>
 				<control type="label">
 					<description>Now Playing</description>
 					<posx>0</posx>
@@ -743,7 +745,6 @@
 					<scrollsuffix> </scrollsuffix>
 					<visible>!Skin.HasSetting(musicvis.hidetext)</visible>
 				</control>
-			
 			</control>
 			<control type="image">
 				<posx>0</posx>
@@ -753,41 +754,8 @@
 				<texture background="true">arctic/common/vignette.png</texture>
 				<aspectratio scalediffuse="false">stretch</aspectratio>
 			</control>
-			<!--<control type="label">
-				<description>Player Times</description>
-				<posx>1900</posx>
-				<posy>875</posy>
-				<width>700</width>
-				<label>$INFO[MusicPlayer.Time(mm:ss)]$INFO[MusicPlayer.Duration(mm:ss), / ,]</label>
-				<align>right</align>
-				<font>Font-MusicVis-TimeNoInfo</font>
-				<angle>0</angle>
-				<textcolor>66ffffff</textcolor>
-			</control>-->
 			<control type="label">
-				<description>Player Times</description>
-				<posx>1350</posx>
-				<posy>805</posy>
-				<width>1500</width>
-				<label>$INFO[MusicPlayer.Time(mm)]</label>
-				<align>left</align>
-				<font>Font-MusicVis-Time</font>
-				<angle>0</angle>
-				<textcolor>33ffffff</textcolor>
-			</control>
-			<control type="label">
-				<description>Player Times</description>
-				<posx>1645</posx>
-				<posy>805</posy>
-				<width>1500</width>
-				<label>$INFO[MusicPlayer.Time(ss)]</label>
-				<align>left</align>
-				<font>Font-MusicVis-Time</font>
-				<angle>0</angle>
-				<textcolor>33ffffff</textcolor>
-			</control>
-			<control type="label">
-				<description>Player Times</description>
+				<description>Top Text</description>
 				<posx>0</posx>
 				<posy>-50</posy>
 				<width>1920</width>
@@ -796,57 +764,107 @@
 				<font>Font-MusicVis-Lyrics-Big</font>
 				<angle>0</angle>
 				<textcolor>66ffffff</textcolor>
-				<visible>Skin.HasSetting(musicvis.hidetext) | Window.IsVisible(script-XBMC_Lyrics-main.xml)</visible>
+				<visible>[!Skin.HasSetting(musicvis.hidetext) + Player.ShowInfo] | [Window.IsVisible(script-XBMC_Lyrics-main.xml) + Player.ShowInfo] | Window.IsActive(musicosd)</visible>
 				<scrollspeed>80</scrollspeed>
 				<pauseatend>0</pauseatend>
 				<scrollsuffix>  </scrollsuffix>
-			</control>
-			<control type="label">
-				<description>Player Times</description>
-				<posx>1885</posx>
-				<posy>925</posy>
-				<width>700</width>
-				<label>$INFO[MusicPlayer.BitRate,, KPBS]$INFO[MusicPlayer.SampleRate,     |     , KHZ]$INFO[MusicPlayer.BitsPerSample,     |     , BIT]$INFO[MusicPlayer.Channels,     |     , CH]</label>
-				<align>right</align> 
-				<font>Font-MusicVis-CodecInfo</font>
-				<textcolor>99ffffff</textcolor>
+				<animation effect="fade" time="600">Visible</animation>
+				<animation effect="fade" time="350">Hidden</animation>
 			</control>
 			<control type="group">
-				<posy>673</posy>
-				<posx>20</posx>
-				<control type="image">
-					<posx>138</posx>
-					<posy>5</posy>
-					<width>277</width>
-					<height>277</height>
-					<texture background="true" fallback="osd/fullscreen/cd.png">$INFO[Player.Folderpath,,cdart.png]</texture>
-					<aspectratio align="center">keep</aspectratio>
-					<animation effect="rotate" center="auto" reversible="false" start="360" end="0" time="10000" loop="true" condition="Player.Playing">Conditional</animation>
-					<visible>Skin.HasSetting(CDArt.Enabled)</visible>
+				<visible>Player.ShowInfo | Window.IsActive(musicosd)</visible>
+				<include>OSDSmallAnimation</include>
+				<control type="label">
+					<description>Player Times</description>
+					<posx>1350</posx>
+					<posy>805</posy>
+					<width>1500</width>
+					<label>$INFO[MusicPlayer.Time(mm)]</label>
+					<align>left</align>
+					<font>Font-MusicVis-Time</font>
+					<angle>0</angle>
+					<textcolor>33ffffff</textcolor>
 				</control>
-				<control type="image">
-					<description>Thumb</description>
-					<posx>-64</posx>
-					<posy>-64</posy>
-					<width>415</width>
-					<height>415</height>
-					<bordertexture background="true" border="100">arctic/common/16border64.png</bordertexture>
-					<bordersize>64</bordersize>
-					<texture background="true" diffuse="arctic/osd/287.png">windows/common/black.png</texture>
-					<aspectratio scalediffuse="false">stretch</aspectratio>
-				</control>	
-				<control type="image">
-					<description>Thumb</description>
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>287</width>
-					<height>287</height>
-					<texture background="true" diffuse="arctic/osd/287.png">$VAR[ArcticOSDPoster]</texture>
-					<aspectratio scalediffuse="false">scale</aspectratio>
+				<control type="label">
+					<description>Player Times</description>
+					<posx>1645</posx>
+					<posy>805</posy>
+					<width>1500</width>
+					<label>$INFO[MusicPlayer.Time(ss)]</label>
+					<align>left</align>
+					<font>Font-MusicVis-Time</font>
+					<angle>0</angle>
+					<textcolor>33ffffff</textcolor>
+				</control>
+				<control type="label">
+					<description>Description</description>
+					<posx>450</posx>
+					<posy>738</posy>
+					<width>880</width>
+					<height>300</height>
+					<label>[UPPERCASE]$INFO[MusicPlayer.Artist,[B],[/B]]$INFO[MusicPlayer.Title,   [CR],][/UPPERCASE]$INFO[MusicPlayer.Album,[CR],]$INFO[MusicPlayer.Year,  (,)]</label>
+					<align>left</align> 
+					<aligny>top</aligny>
+					<font>Font-MusicVis-Description</font>
+					<textcolor>99ffffff</textcolor>
+				</control>
+				<control type="label">
+					<description>Description</description>
+					<posx>450</posx>
+					<posy>925</posy>
+					<width>880</width>
+					<label>$INFO[MusicPlayer.Offset(1).Artist,$LOCALIZE[209]...    ,]$INFO[MusicPlayer.Offset(1).Title,  -  ,]</label>
+					<align>left</align> 
+					<font>Font-MusicVis-CodecInfo</font>
+					<textcolor>99ffffff</textcolor>
+				</control>
+				<control type="label">
+					<description>Bit Rate</description>
+					<posx>1885</posx>
+					<posy>925</posy>
+					<width>700</width>
+					<label>$INFO[MusicPlayer.BitRate,, KPBS]$INFO[MusicPlayer.SampleRate,     |     , KHZ]$INFO[MusicPlayer.BitsPerSample,     |     , BIT]$INFO[MusicPlayer.Channels,     |     , CH]</label>
+					<align>right</align> 
+					<font>Font-MusicVis-CodecInfo</font>
+					<textcolor>99ffffff</textcolor>
+				</control>
+				<control type="group">
+					<posy>673</posy>
+					<posx>20</posx>
+					<control type="image">
+						<posx>138</posx>
+						<posy>5</posy>
+						<width>277</width>
+						<height>277</height>
+						<texture background="true" fallback="osd/fullscreen/cd.png">$INFO[Player.Folderpath,,cdart.png]</texture>
+						<aspectratio align="center">keep</aspectratio>
+						<animation effect="rotate" center="auto" reversible="false" start="360" end="0" time="10000" loop="true" condition="Player.Playing">Conditional</animation>
+						<visible>Skin.HasSetting(CDArt.Enabled)</visible>
+					</control>
+					<control type="image">
+						<description>Thumb</description>
+						<posx>-64</posx>
+						<posy>-64</posy>
+						<width>415</width>
+						<height>415</height>
+						<bordertexture background="true" border="100">arctic/common/16border64.png</bordertexture>
+						<bordersize>64</bordersize>
+						<texture background="true" diffuse="arctic/osd/287.png">windows/common/black.png</texture>
+						<aspectratio scalediffuse="false">stretch</aspectratio>
+					</control>	
+					<control type="image">
+						<description>Thumb</description>
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>287</width>
+						<height>287</height>
+						<texture background="true" diffuse="arctic/osd/287.png">$VAR[ArcticOSDPoster]</texture>
+						<aspectratio scalediffuse="false">scale</aspectratio>
+					</control>
 				</control>
 			</control>
 		</control>
-    
+
     	<control type="group">
     		<include>OSDClockAnimation</include>
     		<visible>[Player.ShowInfo | Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Window.IsActive(musicosd)] + !Skin.HasSetting(musicvis.noinfo)</visible>

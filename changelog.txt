@@ -1,3 +1,7 @@
+[B]0.4.4[/B]
+Updates to on-screen music info view
+Updates to on-screen music osd
+
 [B]0.4.3[/B]
 Updated translations from transifex
 Added option for "on-screen" music info

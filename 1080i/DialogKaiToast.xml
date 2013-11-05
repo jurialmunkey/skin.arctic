@@ -96,9 +96,9 @@
 			<visible>Window.IsActive(fullscreenvideo) | [Window.IsActive(visualisation) + Skin.HasSetting(OSDMusicAlt.Enabled)]</visible>
 			<animation effect="slide" end="-213" time="300" tween="sine" easing="inout" condition="Window.IsActive(volumebar) | Player.Muted | substring(Player.Volume,-60.0)">Conditional</animation>
 			
-			<animation effect="slide" end="0,20" condition="[!Skin.HasSetting(osd.wideinfo) + Window.IsActive(fullscreenvideo)] | [Window.IsActive(visualisation) + [Skin.HasSetting(musicvis.noinfo) | Skin.HasSetting(musicvis.small)]]">Conditional</animation>
+			<animation effect="slide" end="0,20" condition="[!stringcompare(Skin.String(video.seekbar.type),medium) + !stringcompare(Skin.String(video.seekbar.type),full) + Window.IsActive(fullscreenvideo)] | [Window.IsActive(visualisation) + !stringcompare(Skin.String(music.seekbar.type),medium) + !stringcompare(Skin.String(music.seekbar.type),full)]">Conditional</animation>
 			<control type="group">
-				<visible>[Skin.HasSetting(osd.wideinfo) + Window.IsActive(fullscreenvideo)] | [Window.IsActive(visualisation) + [!Skin.HasSetting(musicvis.noinfo) + !Skin.HasSetting(musicvis.small)]]</visible>
+				<visible>[!stringcompare(Skin.String(video.seekbar.type),small) + !stringcompare(Skin.String(video.seekbar.type),onscreen) + Window.IsActive(fullscreenvideo)] | [Window.IsActive(visualisation) + !stringcompare(Skin.String(music.seekbar.type),small) + !stringcompare(Skin.String(music.seekbar.type),onscreen)]</visible>
 				<control type="image">
 					<posx>1295</posx>
 					<posy>36</posy>
@@ -125,7 +125,7 @@
 				</control>
 			</control>
 			<control type="group">
-				<visible>[!Skin.HasSetting(osd.wideinfo) + Window.IsActive(fullscreenvideo)] | [Window.IsActive(visualisation) + [Skin.HasSetting(musicvis.noinfo) | Skin.HasSetting(musicvis.small)]]</visible>
+				<visible>[!stringcompare(Skin.String(video.seekbar.type),medium) + !stringcompare(Skin.String(video.seekbar.type),full) + Window.IsActive(fullscreenvideo)] | [Window.IsActive(visualisation) + !stringcompare(Skin.String(music.seekbar.type),medium) + !stringcompare(Skin.String(music.seekbar.type),full)]</visible>
 				<control type="image">
 					<posx>1295</posx>
 					<posy>43</posy>

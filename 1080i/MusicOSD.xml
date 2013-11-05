@@ -3,7 +3,7 @@
     <allowoverlay>no</allowoverlay>
     <controls>
     	<control type="group">
-    		<visible>!Skin.HasSetting(musicvis.small) + !Skin.HasSetting(musicvis.noinfo)</visible>
+    		<visible>stringcompare(Skin.String(music.seekbar.type),medium)</visible>
 			<control type="group">
 				<visible>!Skin.HasSetting(osd.darkpanel)</visible>
 				<animation type="WindowOpen">
@@ -560,7 +560,7 @@
 			</control>
         </control>
         <control type="group">
-			<visible>Skin.HasSetting(musicvis.noinfo)</visible>
+			<visible>stringcompare(Skin.String(music.seekbar.type),onscreen)</visible>
 			<posy>340</posy>
 			<control type="group">
 				<posx>35</posx>
@@ -672,7 +672,7 @@
 				</control>
 			</control>
 			<control type="group">
-				<posx>425</posx>
+				<posx>300</posx>
 				<posy>415</posy>
 				<animation type="WindowOpen">
 					<effect type="fade" start="0" end="100" delay="250" time="450" tween="sine" easing="inout" />
@@ -842,10 +842,10 @@
 					<animation effect="fade" end="50" time="0" condition="!Control.IsEnabled(14)">Conditional</animation>
 				</control>
 			</control>
-			
 		</control>
         <control type="group">
-    		<visible>Skin.HasSetting(musicvis.small) + !Skin.HasSetting(musicvis.noinfo)</visible>
+        	<posx>185</posx>
+    		<visible>stringcompare(Skin.String(music.seekbar.type),small)</visible>
     		<animation type="WindowOpen" reversible="false" condition="![Player.ShowInfo | Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding]">
 				<effect type="fade" start="0" end="100" time="300" tween="sine" easing="inout" />
 				<effect type="slide" start="0,70" end="0" time="300" tween="sine" easing="inout" />

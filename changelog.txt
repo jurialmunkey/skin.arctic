@@ -1,3 +1,10 @@
+[B]0.4.5[/B]
+Consolidation of OSD info views
+  -- Small now called 'offset'
+  -- Medium now called 'tabbed'
+  -- On-screen called 'on-screen'
+  -- Full-width removed
+
 [B]0.4.4[/B]
 Updates to on-screen music info view
 Updates to on-screen music osd

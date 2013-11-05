@@ -490,6 +490,17 @@
             <style>bold</style>
         </font>
         <font>
+        	<name>Font-Onscreen-Plot</name>
+        	<filename>alaska_thin.ttf</filename>
+            <size>32</size>
+            <linespacing>0.9</linespacing>
+        </font>
+        <font>
+        	<name>Font-Onscreen-Time</name>
+        	<filename>alaska_thin.ttf</filename>
+            <size>150</size>
+        </font>
+        <font>
         	<name>Font-MusicVis-CodecInfo</name>
         	<filename>alaska_thin.ttf</filename>
             <size>32</size>

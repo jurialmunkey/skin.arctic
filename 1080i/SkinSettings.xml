@@ -471,10 +471,12 @@
 							<include>SettingsCategoryDefaultButtonVars</include>
 							<label> - $LOCALIZE[42131]</label>
 							<label2>$VAR[skinsettings.musicinfo]</label2>
-							<onclick condition="!Skin.HasSetting(musicvis.noinfo) + !Skin.HasSetting(musicvis.small)">Skin.SetBool(musicvis.small)</onclick>
-							<onclick condition="!Skin.HasSetting(musicvis.noinfo) + Skin.HasSetting(musicvis.small)">Skin.SetBool(musicvis.noinfo)</onclick>
-							<onclick condition="Skin.HasSetting(musicvis.noinfo)">Skin.Reset(musicvis.small)</onclick>
-							<onclick condition="Skin.HasSetting(musicvis.noinfo)">Skin.Reset(musicvis.noinfo)</onclick>
+							<onclick condition="stringcompare(Skin.String(music.seekbar.type),small)">Skin.SetString(music.seekbar.type,medium)</onclick>
+							<onclick condition="stringcompare(Skin.String(music.seekbar.type),onscreen)">Skin.SetString(music.seekbar.type,small)</onclick>
+							<!--<onclick condition="stringcompare(Skin.String(music.seekbar.type),full)">Skin.SetString(music.seekbar.type,onscreen)</onclick>
+							<onclick condition="stringcompare(Skin.String(music.seekbar.type),medium)">Skin.SetString(music.seekbar.type,full)</onclick>-->
+							<onclick condition="stringcompare(Skin.String(music.seekbar.type),medium)">Skin.SetString(music.seekbar.type,onscreen)</onclick>
+							<onclick condition="stringcompare(Skin.String(music.seekbar.type),small)">Skin.SetString(music.seekbar.type,medium)</onclick>
 						</control>
 						<control type="radiobutton" id="8003">
 							<width>1210</width>
@@ -498,10 +500,12 @@
 							<include>SettingsCategoryDefaultButtonVars</include>
 							<label>$LOCALIZE[20159]</label>
 							<label2>$VAR[skinsettings.videoosd]</label2>
-							<onclick condition="!Skin.HasSetting(osd.wideinfo)">Skin.SetBool(osd.fullwidthinfo)</onclick>
-							<onclick condition="!Skin.HasSetting(osd.wideinfo)">Skin.SetBool(osd.wideinfo)</onclick>
-							<onclick condition="Skin.HasSetting(osd.wideinfo) + Skin.HasSetting(osd.fullwidthinfo)">Skin.Reset(osd.fullwidthinfo)</onclick>
-							<onclick condition="Skin.HasSetting(osd.wideinfo) + !Skin.HasSetting(osd.fullwidthinfo)">Skin.Reset(osd.wideinfo)</onclick>
+							<onclick condition="stringcompare(Skin.String(video.seekbar.type),small)">Skin.SetString(video.seekbar.type,medium)</onclick>
+							<onclick condition="stringcompare(Skin.String(video.seekbar.type),onscreen)">Skin.SetString(video.seekbar.type,small)</onclick>
+							<!--<onclick condition="stringcompare(Skin.String(video.seekbar.type),full)">Skin.SetString(video.seekbar.type,onscreen)</onclick>
+							<onclick condition="stringcompare(Skin.String(video.seekbar.type),medium)">Skin.SetString(video.seekbar.type,full)</onclick>-->
+							<onclick condition="stringcompare(Skin.String(video.seekbar.type),medium)">Skin.SetString(video.seekbar.type,onscreen)</onclick>
+							<onclick condition="stringcompare(Skin.String(video.seekbar.type),small)">Skin.SetString(video.seekbar.type,medium)</onclick>
 						</control>
 						<control type="radiobutton" id="8006">
 							<width>1210</width>
@@ -509,7 +513,7 @@
 							<selected>Skin.HasSetting(videoosd.hideposterinfo)</selected>
 							<onclick>Skin.ToggleSetting(videoosd.hideposterinfo)</onclick>
 							<label> - $LOCALIZE[42442]</label>
-							<visible>Skin.HasSetting(osd.wideinfo)</visible>
+							<visible>stringcompare(Skin.String(video.seekbar.type),medium) | stringcompare(Skin.String(video.seekbar.type),full)</visible>
 						</control>
 						<control type="radiobutton" id="8007">
 							<width>1210</width>

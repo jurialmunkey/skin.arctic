@@ -4,6 +4,8 @@ Consolidation of OSD info views
   -- Medium now called 'tabbed'
   -- On-screen called 'on-screen'
   -- Full-width removed
+Music OSD uses artistslideshow additional info (bio, similar, discog)
+
 
 [B]0.4.4[/B]
 Updates to on-screen music info view

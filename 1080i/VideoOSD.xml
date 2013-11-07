@@ -2,8 +2,10 @@
     <include condition="VideoPlayer.Content(LiveTV)">OSDDefault8</include>
     <include condition="!VideoPlayer.Content(LiveTV)">OSDDefaultControlSubtitles</include>
     
-    <onload condition="stringcompare(Skin.String(video.seekbar.type),small)">SetProperty(ShowInfo,1,seekbar)</onload>
-    <onload condition="stringcompare(Skin.String(video.seekbar.type),small)">SetProperty(ShowInfo,1,videoosd)</onload>
+    <onload condition="[stringcompare(Skin.String(video.seekbar.type),small) | stringcompare(Skin.String(video.seekbar.type),onscreen)] + !VideoPlayer.Content(musicvideos)">SetProperty(ShowInfo,1,seekbar)</onload>
+    <onload condition="[stringcompare(Skin.String(video.seekbar.type),small) | stringcompare(Skin.String(video.seekbar.type),onscreen)] + !VideoPlayer.Content(musicvideos)">SetProperty(ShowInfo,1,videoosd)</onload>
+    <onload condition="[stringcompare(Skin.String(music.seekbar.type),small) | stringcompare(Skin.String(music.seekbar.type),onscreen)] + VideoPlayer.Content(musicvideos)">SetProperty(ShowInfo,1,seekbar)</onload>
+    <onload condition="[stringcompare(Skin.String(music.seekbar.type),small) | stringcompare(Skin.String(music.seekbar.type),onscreen)] + VideoPlayer.Content(musicvideos)">SetProperty(ShowInfo,1,videoosd)</onload>
     <onunload>ClearProperty(ExtendPlot,seekbar)</onunload>
     <onunload>ClearProperty(ShowInfo,videoosd)</onunload>
     <onunload>ClearProperty(SlideInfo,videoosd)</onunload>
@@ -12,7 +14,7 @@
     <controls>
     	<!-- TOP OSD -->
     	<control type="group">
-			<visible>!stringcompare(Skin.String(video.seekbar.type),small)</visible>
+			<visible>[!VideoPlayer.Content(musicvideos) + [stringcompare(Skin.String(video.seekbar.type),medium) | stringcompare(Skin.String(video.seekbar.type),full)]] | [VideoPlayer.Content(musicvideos) + [stringcompare(Skin.String(music.seekbar.type),medium) | stringcompare(Skin.String(music.seekbar.type),full)]]</visible>
 			<control type="group">
 				<visible>!Window.IsActive(pvrosdchannels) + !Window.IsVisible(sliderdialog) + !Skin.HasSetting(osd.darkpanel)</visible>
 				<animation type="WindowOpen">
@@ -102,7 +104,7 @@
 						<onup>SetProperty(ShowInfo,1,videoosd)</onup>
 						<ondown condition="IsEmpty(Window(seekbar).Property(ExtendPlot)) + IsEmpty(Window(seekbar).Property(ShowInfo))">Close</ondown>
 						<ondown condition="!IsEmpty(Window(seekbar).Property(ExtendPlot))">ClearProperty(ExtendPlot,seekbar)</ondown>
-						<ondown condition="!IsEmpty(Window(seekbar).Property(ShowInfo)) + IsEmpty(Window(seekbar).Property(ExtendPlot))">ClearProperty(ShowInfo,seekbar)</ondown>
+						<ondown condition="!IsEmpty(Window(seekbar).Property(ShowInfo))">ClearProperty(ShowInfo,seekbar)</ondown>
 						<visible>!VideoPlayer.Content(LiveTV)</visible>
 					</control>
 					<control type="togglebutton" id="7">
@@ -121,7 +123,7 @@
 						<onup>SetProperty(ShowInfo,1,videoosd)</onup>
 						<ondown condition="IsEmpty(Window(seekbar).Property(ExtendPlot)) + IsEmpty(Window(seekbar).Property(ShowInfo))">Close</ondown>
 						<ondown condition="!IsEmpty(Window(seekbar).Property(ExtendPlot))">ClearProperty(ExtendPlot,seekbar)</ondown>
-						<ondown condition="!IsEmpty(Window(seekbar).Property(ShowInfo)) + IsEmpty(Window(seekbar).Property(ExtendPlot))">ClearProperty(ShowInfo,seekbar)</ondown>
+						<ondown condition="!IsEmpty(Window(seekbar).Property(ShowInfo))">ClearProperty(ShowInfo,seekbar)</ondown>
 						<onclick>PlayerControl(Record)</onclick>
 						<enable>Player.CanRecord</enable>
 						<animation effect="fade" start="100" end="50" time="150" tween="sine" easing="inout" condition="!Player.CanRecord">Conditional</animation>
@@ -140,7 +142,7 @@
 						<onup>SetProperty(ShowInfo,1,videoosd)</onup>
 						<ondown condition="IsEmpty(Window(seekbar).Property(ExtendPlot)) + IsEmpty(Window(seekbar).Property(ShowInfo))">Close</ondown>
 						<ondown condition="!IsEmpty(Window(seekbar).Property(ExtendPlot))">ClearProperty(ExtendPlot,seekbar)</ondown>
-						<ondown condition="!IsEmpty(Window(seekbar).Property(ShowInfo)) + IsEmpty(Window(seekbar).Property(ExtendPlot))">ClearProperty(ShowInfo,seekbar)</ondown>
+						<ondown condition="!IsEmpty(Window(seekbar).Property(ShowInfo))">ClearProperty(ShowInfo,seekbar)</ondown>
 						<onleft>7</onleft>
 						<onright>2</onright>
 						<visible>!VideoPlayer.Content(LiveTV)</visible>
@@ -158,7 +160,7 @@
 						<onup>SetProperty(ShowInfo,1,videoosd)</onup>
 						<ondown condition="IsEmpty(Window(seekbar).Property(ExtendPlot)) + IsEmpty(Window(seekbar).Property(ShowInfo))">Close</ondown>
 						<ondown condition="!IsEmpty(Window(seekbar).Property(ExtendPlot))">ClearProperty(ExtendPlot,seekbar)</ondown>
-						<ondown condition="!IsEmpty(Window(seekbar).Property(ShowInfo)) + IsEmpty(Window(seekbar).Property(ExtendPlot))">ClearProperty(ShowInfo,seekbar)</ondown>
+						<ondown condition="!IsEmpty(Window(seekbar).Property(ShowInfo))">ClearProperty(ShowInfo,seekbar)</ondown>
 						<onleft>7</onleft>
 						<onright>13</onright>
 						<visible>VideoPlayer.Content(LiveTV)</visible>
@@ -176,7 +178,7 @@
 						<onup>SetProperty(ShowInfo,1,videoosd)</onup>
 						<ondown condition="IsEmpty(Window(seekbar).Property(ExtendPlot)) + IsEmpty(Window(seekbar).Property(ShowInfo))">Close</ondown>
 						<ondown condition="!IsEmpty(Window(seekbar).Property(ExtendPlot))">ClearProperty(ExtendPlot,seekbar)</ondown>
-						<ondown condition="!IsEmpty(Window(seekbar).Property(ShowInfo)) + IsEmpty(Window(seekbar).Property(ExtendPlot))">ClearProperty(ShowInfo,seekbar)</ondown>
+						<ondown condition="!IsEmpty(Window(seekbar).Property(ShowInfo))">ClearProperty(ShowInfo,seekbar)</ondown>
 						<onleft>1</onleft>
 						<onright>2</onright>
 						<visible>VideoPlayer.Content(LiveTV)</visible>
@@ -199,7 +201,7 @@
 						<onup>SetProperty(ShowInfo,1,videoosd)</onup>
 						<ondown condition="IsEmpty(Window(seekbar).Property(ExtendPlot)) + IsEmpty(Window(seekbar).Property(ShowInfo))">Close</ondown>
 						<ondown condition="!IsEmpty(Window(seekbar).Property(ExtendPlot))">ClearProperty(ExtendPlot,seekbar)</ondown>
-						<ondown condition="!IsEmpty(Window(seekbar).Property(ShowInfo)) + IsEmpty(Window(seekbar).Property(ExtendPlot))">ClearProperty(ShowInfo,seekbar)</ondown>
+						<ondown condition="!IsEmpty(Window(seekbar).Property(ShowInfo))">ClearProperty(ShowInfo,seekbar)</ondown>
 							<onleft condition="VideoPlayer.Content(LiveTV)">13</onleft>
 							<onleft condition="!VideoPlayer.Content(LiveTV)">1</onleft>
 							<onright>3</onright>
@@ -222,7 +224,7 @@
 						<onup>SetProperty(ShowInfo,1,videoosd)</onup>
 						<ondown condition="IsEmpty(Window(seekbar).Property(ExtendPlot)) + IsEmpty(Window(seekbar).Property(ShowInfo))">Close</ondown>
 						<ondown condition="!IsEmpty(Window(seekbar).Property(ExtendPlot))">ClearProperty(ExtendPlot,seekbar)</ondown>
-						<ondown condition="!IsEmpty(Window(seekbar).Property(ShowInfo)) + IsEmpty(Window(seekbar).Property(ExtendPlot))">ClearProperty(ShowInfo,seekbar)</ondown>
+						<ondown condition="!IsEmpty(Window(seekbar).Property(ShowInfo))">ClearProperty(ShowInfo,seekbar)</ondown>
 							<onleft>2</onleft>
 							<onright>4</onright>
 							<enable>Player.PauseEnabled</enable>
@@ -241,7 +243,7 @@
 						<onup>SetProperty(ShowInfo,1,videoosd)</onup>
 						<ondown condition="IsEmpty(Window(seekbar).Property(ExtendPlot)) + IsEmpty(Window(seekbar).Property(ShowInfo))">Close</ondown>
 						<ondown condition="!IsEmpty(Window(seekbar).Property(ExtendPlot))">ClearProperty(ExtendPlot,seekbar)</ondown>
-						<ondown condition="!IsEmpty(Window(seekbar).Property(ShowInfo)) + IsEmpty(Window(seekbar).Property(ExtendPlot))">ClearProperty(ShowInfo,seekbar)</ondown>
+						<ondown condition="!IsEmpty(Window(seekbar).Property(ShowInfo))">ClearProperty(ShowInfo,seekbar)</ondown>
 							<onleft>3</onleft>
 							<onright>5</onright>
 						</control>
@@ -261,7 +263,7 @@
 						<onup>SetProperty(ShowInfo,1,videoosd)</onup>
 						<ondown condition="IsEmpty(Window(seekbar).Property(ExtendPlot)) + IsEmpty(Window(seekbar).Property(ShowInfo))">Close</ondown>
 						<ondown condition="!IsEmpty(Window(seekbar).Property(ExtendPlot))">ClearProperty(ExtendPlot,seekbar)</ondown>
-						<ondown condition="!IsEmpty(Window(seekbar).Property(ShowInfo)) + IsEmpty(Window(seekbar).Property(ExtendPlot))">ClearProperty(ShowInfo,seekbar)</ondown>
+						<ondown condition="!IsEmpty(Window(seekbar).Property(ShowInfo))">ClearProperty(ShowInfo,seekbar)</ondown>
 							<onleft>4</onleft>
 							<onright>6</onright>
 							<enable>Player.SeekEnabled</enable>
@@ -280,7 +282,7 @@
 						<onup>SetProperty(ShowInfo,1,videoosd)</onup>
 						<ondown condition="IsEmpty(Window(seekbar).Property(ExtendPlot)) + IsEmpty(Window(seekbar).Property(ShowInfo))">Close</ondown>
 						<ondown condition="!IsEmpty(Window(seekbar).Property(ExtendPlot))">ClearProperty(ExtendPlot,seekbar)</ondown>
-						<ondown condition="!IsEmpty(Window(seekbar).Property(ShowInfo)) + IsEmpty(Window(seekbar).Property(ExtendPlot))">ClearProperty(ShowInfo,seekbar)</ondown>
+						<ondown condition="!IsEmpty(Window(seekbar).Property(ShowInfo))">ClearProperty(ShowInfo,seekbar)</ondown>
 							<onleft>5</onleft>
 							<onright>10</onright>
 							<visible>!VideoPlayer.Content(LiveTV)</visible>
@@ -304,7 +306,7 @@
 						<onup>SetProperty(ShowInfo,1,videoosd)</onup>
 						<ondown condition="IsEmpty(Window(seekbar).Property(ExtendPlot)) + IsEmpty(Window(seekbar).Property(ShowInfo))">Close</ondown>
 						<ondown condition="!IsEmpty(Window(seekbar).Property(ExtendPlot))">ClearProperty(ExtendPlot,seekbar)</ondown>
-						<ondown condition="!IsEmpty(Window(seekbar).Property(ShowInfo)) + IsEmpty(Window(seekbar).Property(ExtendPlot))">ClearProperty(ShowInfo,seekbar)</ondown>
+						<ondown condition="!IsEmpty(Window(seekbar).Property(ShowInfo))">ClearProperty(ShowInfo,seekbar)</ondown>
 							<animation effect="fade" start="100" end="50" time="150" tween="sine" easing="inout" condition="!VideoPlayer.HasMenu">Conditional</animation>
 						</control>
 						<control type="button" id="8">
@@ -340,7 +342,7 @@
 						<onup>SetProperty(ShowInfo,1,videoosd)</onup>
 						<ondown condition="IsEmpty(Window(seekbar).Property(ExtendPlot)) + IsEmpty(Window(seekbar).Property(ShowInfo))">Close</ondown>
 						<ondown condition="!IsEmpty(Window(seekbar).Property(ExtendPlot))">ClearProperty(ExtendPlot,seekbar)</ondown>
-						<ondown condition="!IsEmpty(Window(seekbar).Property(ShowInfo)) + IsEmpty(Window(seekbar).Property(ExtendPlot))">ClearProperty(ShowInfo,seekbar)</ondown>
+						<ondown condition="!IsEmpty(Window(seekbar).Property(ShowInfo))">ClearProperty(ShowInfo,seekbar)</ondown>
 							<onleft>8</onleft>
 							<onright>11</onright>
 						</control>
@@ -363,7 +365,7 @@
 						<onup>SetProperty(ShowInfo,1,videoosd)</onup>
 						<ondown condition="IsEmpty(Window(seekbar).Property(ExtendPlot)) + IsEmpty(Window(seekbar).Property(ShowInfo))">Close</ondown>
 						<ondown condition="!IsEmpty(Window(seekbar).Property(ExtendPlot))">ClearProperty(ExtendPlot,seekbar)</ondown>
-						<ondown condition="!IsEmpty(Window(seekbar).Property(ShowInfo)) + IsEmpty(Window(seekbar).Property(ExtendPlot))">ClearProperty(ShowInfo,seekbar)</ondown>
+						<ondown condition="!IsEmpty(Window(seekbar).Property(ShowInfo))">ClearProperty(ShowInfo,seekbar)</ondown>
 						</control>
 						<control type="button" id="8">
 							<description>Channel EPG</description>
@@ -381,7 +383,7 @@
 						<onup>SetProperty(ShowInfo,1,videoosd)</onup>
 						<ondown condition="IsEmpty(Window(seekbar).Property(ExtendPlot)) + IsEmpty(Window(seekbar).Property(ShowInfo))">Close</ondown>
 						<ondown condition="!IsEmpty(Window(seekbar).Property(ExtendPlot))">ClearProperty(ExtendPlot,seekbar)</ondown>
-						<ondown condition="!IsEmpty(Window(seekbar).Property(ShowInfo)) + IsEmpty(Window(seekbar).Property(ExtendPlot))">ClearProperty(ShowInfo,seekbar)</ondown>
+						<ondown condition="!IsEmpty(Window(seekbar).Property(ShowInfo))">ClearProperty(ShowInfo,seekbar)</ondown>
 						</control>
 						<control type="button" id="9">
 							<description>Teletext</description>
@@ -396,7 +398,7 @@
 						<onup>SetProperty(ShowInfo,1,videoosd)</onup>
 						<ondown condition="IsEmpty(Window(seekbar).Property(ExtendPlot)) + IsEmpty(Window(seekbar).Property(ShowInfo))">Close</ondown>
 						<ondown condition="!IsEmpty(Window(seekbar).Property(ExtendPlot))">ClearProperty(ExtendPlot,seekbar)</ondown>
-						<ondown condition="!IsEmpty(Window(seekbar).Property(ShowInfo)) + IsEmpty(Window(seekbar).Property(ExtendPlot))">ClearProperty(ShowInfo,seekbar)</ondown>
+						<ondown condition="!IsEmpty(Window(seekbar).Property(ShowInfo))">ClearProperty(ShowInfo,seekbar)</ondown>
 							<onleft>8</onleft>
 							<onright>11</onright>
 						</control>
@@ -451,7 +453,7 @@
 						<onup>SetProperty(ShowInfo,1,videoosd)</onup>
 						<ondown condition="IsEmpty(Window(seekbar).Property(ExtendPlot)) + IsEmpty(Window(seekbar).Property(ShowInfo))">Close</ondown>
 						<ondown condition="!IsEmpty(Window(seekbar).Property(ExtendPlot))">ClearProperty(ExtendPlot,seekbar)</ondown>
-						<ondown condition="!IsEmpty(Window(seekbar).Property(ShowInfo)) + IsEmpty(Window(seekbar).Property(ExtendPlot))">ClearProperty(ShowInfo,seekbar)</ondown>
+						<ondown condition="!IsEmpty(Window(seekbar).Property(ShowInfo))">ClearProperty(ShowInfo,seekbar)</ondown>
 						<onleft>9</onleft>
 						<onright>12</onright>
 					</control>
@@ -468,7 +470,7 @@
 						<onup>SetProperty(ShowInfo,1,videoosd)</onup>
 						<ondown condition="IsEmpty(Window(seekbar).Property(ExtendPlot)) + IsEmpty(Window(seekbar).Property(ShowInfo))">Close</ondown>
 						<ondown condition="!IsEmpty(Window(seekbar).Property(ExtendPlot))">ClearProperty(ExtendPlot,seekbar)</ondown>
-						<ondown condition="!IsEmpty(Window(seekbar).Property(ShowInfo)) + IsEmpty(Window(seekbar).Property(ExtendPlot))">ClearProperty(ShowInfo,seekbar)</ondown>
+						<ondown condition="!IsEmpty(Window(seekbar).Property(ShowInfo))">ClearProperty(ShowInfo,seekbar)</ondown>
 						<onleft>11</onleft>
 						<onright>7</onright>
 					</control>
@@ -492,7 +494,7 @@
 						<onup>SetProperty(ShowInfo,1,videoosd)</onup>
 						<ondown condition="IsEmpty(Window(seekbar).Property(ExtendPlot)) + IsEmpty(Window(seekbar).Property(ShowInfo))">Close</ondown>
 						<ondown condition="!IsEmpty(Window(seekbar).Property(ExtendPlot))">ClearProperty(ExtendPlot,seekbar)</ondown>
-						<ondown condition="!IsEmpty(Window(seekbar).Property(ShowInfo)) + IsEmpty(Window(seekbar).Property(ExtendPlot))">ClearProperty(ShowInfo,seekbar)</ondown>
+						<ondown condition="!IsEmpty(Window(seekbar).Property(ShowInfo))">ClearProperty(ShowInfo,seekbar)</ondown>
 						<visible>!VideoPlayer.Content(LiveTV)</visible>
 					</control>
 					<control type="togglebutton" id="7">
@@ -511,7 +513,7 @@
 						<onup>SetProperty(ShowInfo,1,videoosd)</onup>
 						<ondown condition="IsEmpty(Window(seekbar).Property(ExtendPlot)) + IsEmpty(Window(seekbar).Property(ShowInfo))">Close</ondown>
 						<ondown condition="!IsEmpty(Window(seekbar).Property(ExtendPlot))">ClearProperty(ExtendPlot,seekbar)</ondown>
-						<ondown condition="!IsEmpty(Window(seekbar).Property(ShowInfo)) + IsEmpty(Window(seekbar).Property(ExtendPlot))">ClearProperty(ShowInfo,seekbar)</ondown>
+						<ondown condition="!IsEmpty(Window(seekbar).Property(ShowInfo))">ClearProperty(ShowInfo,seekbar)</ondown>
 						<onclick>PlayerControl(Record)</onclick>
 						<enable>Player.CanRecord</enable>
 						<animation effect="fade" start="100" end="50" time="150" tween="sine" easing="inout" condition="!Player.CanRecord">Conditional</animation>
@@ -530,7 +532,7 @@
 						<onup>SetProperty(ShowInfo,1,videoosd)</onup>
 						<ondown condition="IsEmpty(Window(seekbar).Property(ExtendPlot)) + IsEmpty(Window(seekbar).Property(ShowInfo))">Close</ondown>
 						<ondown condition="!IsEmpty(Window(seekbar).Property(ExtendPlot))">ClearProperty(ExtendPlot,seekbar)</ondown>
-						<ondown condition="!IsEmpty(Window(seekbar).Property(ShowInfo)) + IsEmpty(Window(seekbar).Property(ExtendPlot))">ClearProperty(ShowInfo,seekbar)</ondown>
+						<ondown condition="!IsEmpty(Window(seekbar).Property(ShowInfo))">ClearProperty(ShowInfo,seekbar)</ondown>
 						<onleft>7</onleft>
 						<onright>2</onright>
 						<visible>!VideoPlayer.Content(LiveTV)</visible>
@@ -548,7 +550,7 @@
 						<onup>SetProperty(ShowInfo,1,videoosd)</onup>
 						<ondown condition="IsEmpty(Window(seekbar).Property(ExtendPlot)) + IsEmpty(Window(seekbar).Property(ShowInfo))">Close</ondown>
 						<ondown condition="!IsEmpty(Window(seekbar).Property(ExtendPlot))">ClearProperty(ExtendPlot,seekbar)</ondown>
-						<ondown condition="!IsEmpty(Window(seekbar).Property(ShowInfo)) + IsEmpty(Window(seekbar).Property(ExtendPlot))">ClearProperty(ShowInfo,seekbar)</ondown>
+						<ondown condition="!IsEmpty(Window(seekbar).Property(ShowInfo))">ClearProperty(ShowInfo,seekbar)</ondown>
 						<onleft>7</onleft>
 						<onright>13</onright>
 						<visible>VideoPlayer.Content(LiveTV)</visible>
@@ -566,7 +568,7 @@
 						<onup>SetProperty(ShowInfo,1,videoosd)</onup>
 						<ondown condition="IsEmpty(Window(seekbar).Property(ExtendPlot)) + IsEmpty(Window(seekbar).Property(ShowInfo))">Close</ondown>
 						<ondown condition="!IsEmpty(Window(seekbar).Property(ExtendPlot))">ClearProperty(ExtendPlot,seekbar)</ondown>
-						<ondown condition="!IsEmpty(Window(seekbar).Property(ShowInfo)) + IsEmpty(Window(seekbar).Property(ExtendPlot))">ClearProperty(ShowInfo,seekbar)</ondown>
+						<ondown condition="!IsEmpty(Window(seekbar).Property(ShowInfo))">ClearProperty(ShowInfo,seekbar)</ondown>
 						<onleft>1</onleft>
 						<onright>2</onright>
 						<visible>VideoPlayer.Content(LiveTV)</visible>
@@ -589,7 +591,7 @@
 						<onup>SetProperty(ShowInfo,1,videoosd)</onup>
 						<ondown condition="IsEmpty(Window(seekbar).Property(ExtendPlot)) + IsEmpty(Window(seekbar).Property(ShowInfo))">Close</ondown>
 						<ondown condition="!IsEmpty(Window(seekbar).Property(ExtendPlot))">ClearProperty(ExtendPlot,seekbar)</ondown>
-						<ondown condition="!IsEmpty(Window(seekbar).Property(ShowInfo)) + IsEmpty(Window(seekbar).Property(ExtendPlot))">ClearProperty(ShowInfo,seekbar)</ondown>
+						<ondown condition="!IsEmpty(Window(seekbar).Property(ShowInfo))">ClearProperty(ShowInfo,seekbar)</ondown>
 							<onleft condition="VideoPlayer.Content(LiveTV)">13</onleft>
 							<onleft condition="!VideoPlayer.Content(LiveTV)">1</onleft>
 							<onright>3</onright>
@@ -612,7 +614,7 @@
 						<onup>SetProperty(ShowInfo,1,videoosd)</onup>
 						<ondown condition="IsEmpty(Window(seekbar).Property(ExtendPlot)) + IsEmpty(Window(seekbar).Property(ShowInfo))">Close</ondown>
 						<ondown condition="!IsEmpty(Window(seekbar).Property(ExtendPlot))">ClearProperty(ExtendPlot,seekbar)</ondown>
-						<ondown condition="!IsEmpty(Window(seekbar).Property(ShowInfo)) + IsEmpty(Window(seekbar).Property(ExtendPlot))">ClearProperty(ShowInfo,seekbar)</ondown>
+						<ondown condition="!IsEmpty(Window(seekbar).Property(ShowInfo))">ClearProperty(ShowInfo,seekbar)</ondown>
 							<onleft>2</onleft>
 							<onright>4</onright>
 							<enable>Player.PauseEnabled</enable>
@@ -631,7 +633,7 @@
 						<onup>SetProperty(ShowInfo,1,videoosd)</onup>
 						<ondown condition="IsEmpty(Window(seekbar).Property(ExtendPlot)) + IsEmpty(Window(seekbar).Property(ShowInfo))">Close</ondown>
 						<ondown condition="!IsEmpty(Window(seekbar).Property(ExtendPlot))">ClearProperty(ExtendPlot,seekbar)</ondown>
-						<ondown condition="!IsEmpty(Window(seekbar).Property(ShowInfo)) + IsEmpty(Window(seekbar).Property(ExtendPlot))">ClearProperty(ShowInfo,seekbar)</ondown>
+						<ondown condition="!IsEmpty(Window(seekbar).Property(ShowInfo))">ClearProperty(ShowInfo,seekbar)</ondown>
 							<onleft>3</onleft>
 							<onright>5</onright>
 						</control>
@@ -651,7 +653,7 @@
 						<onup>SetProperty(ShowInfo,1,videoosd)</onup>
 						<ondown condition="IsEmpty(Window(seekbar).Property(ExtendPlot)) + IsEmpty(Window(seekbar).Property(ShowInfo))">Close</ondown>
 						<ondown condition="!IsEmpty(Window(seekbar).Property(ExtendPlot))">ClearProperty(ExtendPlot,seekbar)</ondown>
-						<ondown condition="!IsEmpty(Window(seekbar).Property(ShowInfo)) + IsEmpty(Window(seekbar).Property(ExtendPlot))">ClearProperty(ShowInfo,seekbar)</ondown>
+						<ondown condition="!IsEmpty(Window(seekbar).Property(ShowInfo))">ClearProperty(ShowInfo,seekbar)</ondown>
 							<onleft>4</onleft>
 							<onright>6</onright>
 							<enable>Player.SeekEnabled</enable>
@@ -670,7 +672,7 @@
 						<onup>SetProperty(ShowInfo,1,videoosd)</onup>
 						<ondown condition="IsEmpty(Window(seekbar).Property(ExtendPlot)) + IsEmpty(Window(seekbar).Property(ShowInfo))">Close</ondown>
 						<ondown condition="!IsEmpty(Window(seekbar).Property(ExtendPlot))">ClearProperty(ExtendPlot,seekbar)</ondown>
-						<ondown condition="!IsEmpty(Window(seekbar).Property(ShowInfo)) + IsEmpty(Window(seekbar).Property(ExtendPlot))">ClearProperty(ShowInfo,seekbar)</ondown>
+						<ondown condition="!IsEmpty(Window(seekbar).Property(ShowInfo))">ClearProperty(ShowInfo,seekbar)</ondown>
 							<onleft>5</onleft>
 							<onright>10</onright>
 							<visible>!VideoPlayer.Content(LiveTV)</visible>
@@ -694,7 +696,7 @@
 						<onup>SetProperty(ShowInfo,1,videoosd)</onup>
 						<ondown condition="IsEmpty(Window(seekbar).Property(ExtendPlot)) + IsEmpty(Window(seekbar).Property(ShowInfo))">Close</ondown>
 						<ondown condition="!IsEmpty(Window(seekbar).Property(ExtendPlot))">ClearProperty(ExtendPlot,seekbar)</ondown>
-						<ondown condition="!IsEmpty(Window(seekbar).Property(ShowInfo)) + IsEmpty(Window(seekbar).Property(ExtendPlot))">ClearProperty(ShowInfo,seekbar)</ondown>
+						<ondown condition="!IsEmpty(Window(seekbar).Property(ShowInfo))">ClearProperty(ShowInfo,seekbar)</ondown>
 							<animation effect="fade" start="100" end="50" time="150" tween="sine" easing="inout" condition="!VideoPlayer.HasMenu">Conditional</animation>
 						</control>
 						<control type="button" id="8">
@@ -730,7 +732,7 @@
 						<onup>SetProperty(ShowInfo,1,videoosd)</onup>
 						<ondown condition="IsEmpty(Window(seekbar).Property(ExtendPlot)) + IsEmpty(Window(seekbar).Property(ShowInfo))">Close</ondown>
 						<ondown condition="!IsEmpty(Window(seekbar).Property(ExtendPlot))">ClearProperty(ExtendPlot,seekbar)</ondown>
-						<ondown condition="!IsEmpty(Window(seekbar).Property(ShowInfo)) + IsEmpty(Window(seekbar).Property(ExtendPlot))">ClearProperty(ShowInfo,seekbar)</ondown>
+						<ondown condition="!IsEmpty(Window(seekbar).Property(ShowInfo))">ClearProperty(ShowInfo,seekbar)</ondown>
 							<onleft>8</onleft>
 							<onright>11</onright>
 						</control>
@@ -753,7 +755,7 @@
 						<onup>SetProperty(ShowInfo,1,videoosd)</onup>
 						<ondown condition="IsEmpty(Window(seekbar).Property(ExtendPlot)) + IsEmpty(Window(seekbar).Property(ShowInfo))">Close</ondown>
 						<ondown condition="!IsEmpty(Window(seekbar).Property(ExtendPlot))">ClearProperty(ExtendPlot,seekbar)</ondown>
-						<ondown condition="!IsEmpty(Window(seekbar).Property(ShowInfo)) + IsEmpty(Window(seekbar).Property(ExtendPlot))">ClearProperty(ShowInfo,seekbar)</ondown>
+						<ondown condition="!IsEmpty(Window(seekbar).Property(ShowInfo))">ClearProperty(ShowInfo,seekbar)</ondown>
 						</control>
 						<control type="button" id="8">
 							<description>Channel EPG</description>
@@ -771,7 +773,7 @@
 						<onup>SetProperty(ShowInfo,1,videoosd)</onup>
 						<ondown condition="IsEmpty(Window(seekbar).Property(ExtendPlot)) + IsEmpty(Window(seekbar).Property(ShowInfo))">Close</ondown>
 						<ondown condition="!IsEmpty(Window(seekbar).Property(ExtendPlot))">ClearProperty(ExtendPlot,seekbar)</ondown>
-						<ondown condition="!IsEmpty(Window(seekbar).Property(ShowInfo)) + IsEmpty(Window(seekbar).Property(ExtendPlot))">ClearProperty(ShowInfo,seekbar)</ondown>
+						<ondown condition="!IsEmpty(Window(seekbar).Property(ShowInfo))">ClearProperty(ShowInfo,seekbar)</ondown>
 						</control>
 						<control type="button" id="9">
 							<description>Teletext</description>
@@ -786,7 +788,7 @@
 						<onup>SetProperty(ShowInfo,1,videoosd)</onup>
 						<ondown condition="IsEmpty(Window(seekbar).Property(ExtendPlot)) + IsEmpty(Window(seekbar).Property(ShowInfo))">Close</ondown>
 						<ondown condition="!IsEmpty(Window(seekbar).Property(ExtendPlot))">ClearProperty(ExtendPlot,seekbar)</ondown>
-						<ondown condition="!IsEmpty(Window(seekbar).Property(ShowInfo)) + IsEmpty(Window(seekbar).Property(ExtendPlot))">ClearProperty(ShowInfo,seekbar)</ondown>
+						<ondown condition="!IsEmpty(Window(seekbar).Property(ShowInfo))">ClearProperty(ShowInfo,seekbar)</ondown>
 							<onleft>8</onleft>
 							<onright>11</onright>
 						</control>
@@ -796,7 +798,7 @@
         </control>
         <!-- SMALL OSD -->
         <control type="group">
-        	<visible>stringcompare(Skin.String(video.seekbar.type),small) + ![Window.IsActive(script-XBMC-Subtitles-main.xml) | Window.IsActive(pvrguideinfo) | Window.IsActive(pvrosdchannels) | Window.IsActive(pvrosdguide) | Window.IsActive(yesnodialog) | Window.IsActive(okdialog) | Window.IsActive(progressdialog) | Window.IsActive(virtualkeyboard) | Window.IsActive(numericinput) | Window.IsActive(shutdownmenu) | Window.IsActive(osdvideosettings) | Window.IsActive(osdaudiosettings) | Window.IsActive(videobookmarks) | Window.IsVisible(sliderdialog)]</visible>
+			<visible>[[stringcompare(Skin.String(video.seekbar.type),small) + !VideoPlayer.Content(musicvideos)] | [stringcompare(Skin.String(music.seekbar.type),small) + VideoPlayer.Content(musicvideos)]] + ![Window.IsActive(script-XBMC-Subtitles-main.xml) | Window.IsActive(pvrguideinfo) | Window.IsActive(pvrosdchannels) | Window.IsActive(pvrosdguide) | Window.IsActive(yesnodialog) | Window.IsActive(okdialog) | Window.IsActive(progressdialog) | Window.IsActive(virtualkeyboard) | Window.IsActive(numericinput) | Window.IsActive(shutdownmenu) | Window.IsActive(osdvideosettings) | Window.IsActive(osdaudiosettings) | Window.IsActive(videobookmarks) | Window.IsVisible(sliderdialog)]</visible>
         	<include>OSDSmallAnimation</include>
         	<posx>390</posx>
 			<control type="group">
@@ -1494,14 +1496,88 @@
 		</control>
 		<!-- ONSCREEN OSD -->
 		<control type="group">
-			<!--<visible>stringcompare(Skin.String(video.seekbar.type),onscreen)</visible>-->
-			<visible>false</visible>
+			<visible>[stringcompare(Skin.String(video.seekbar.type),onscreen) + !VideoPlayer.Content(musicvideos)] | [stringcompare(Skin.String(music.seekbar.type),onscreen) + VideoPlayer.Content(musicvideos)]</visible>
 			<include>OSDSmallAnimation</include>
 			<control type="group">
-				<posx>1160</posx>
+				<posx>430</posx>
 				<posy>995</posy>
-				<visible>Control.HasFocus(1) | Control.HasFocus(2) | Control.HasFocus(3) | Control.HasFocus(4) | Control.HasFocus(5) | Control.HasFocus(6) | Control.HasFocus(13)</visible>
+				<control type="button" id="11">
+					<description>Audio Settings</description>
+					<posx>0</posx>
+					<height>80</height>
+					<width>80</width>
+					<texturefocus>osd/fullscreen/buttons/audio-settings-fo.png</texturefocus>
+					<texturenofocus>osd/fullscreen/buttons/audio-settings-nofo.png</texturenofocus>
+					<onclick>activatewindow(124)</onclick>
+					<onup>SetProperty(ExtendPlot,1,seekbar)</onup>
+					<onup>SetProperty(ShowInfo,1,seekbar)</onup>
+					<onup>SetProperty(ShowInfo,1,videoosd)</onup>
+					<ondown condition="IsEmpty(Window(seekbar).Property(ExtendPlot))">Close</ondown>
+					<ondown condition="!IsEmpty(Window(seekbar).Property(ExtendPlot))">ClearProperty(ExtendPlot,seekbar)</ondown>
+					<onleft>9</onleft>
+					<onright>12</onright>
+				</control>
+				<control type="button" id="12">
+					<description>Video Settings</description>
+					<posx>60</posx>
+					<height>80</height>
+					<width>80</width>
+					<texturefocus>osd/fullscreen/buttons/video-settings-fo.png</texturefocus>
+					<texturenofocus>osd/fullscreen/buttons/video-settings-nofo.png</texturenofocus>
+					<onclick>activatewindow(123)</onclick>
+					<onup>SetProperty(ExtendPlot,1,seekbar)</onup>
+					<onup>SetProperty(ShowInfo,1,seekbar)</onup>
+					<onup>SetProperty(ShowInfo,1,videoosd)</onup>
+					<ondown condition="IsEmpty(Window(seekbar).Property(ExtendPlot))">Close</ondown>
+					<ondown condition="!IsEmpty(Window(seekbar).Property(ExtendPlot))">ClearProperty(ExtendPlot,seekbar)</ondown>
+					<onleft>11</onleft>
+					<onright>7</onright>
+				</control>
+				<control type="togglebutton" id="7">
+					<description>Subtitles</description>
+					<posx>120</posx>
+					<height>80</height>
+					<width>80</width>
+					<texturefocus>osd/fullscreen/buttons/subtitles-fo.png</texturefocus>
+					<texturenofocus>osd/fullscreen/buttons/subtitles-nofo.png</texturenofocus>
+					<alttexturefocus>osd/fullscreen/buttons/subtitles-fo.png</alttexturefocus>
+					<alttexturenofocus>osd/fullscreen/buttons/subtitles-nofo.png</alttexturenofocus>
+					<onclick>XBMC.RunScript($INFO[Skin.String(SubtitleScript_Path)])</onclick>
+					<altclick>Skin.SetAddon(SubtitleScript_Path,xbmc.python.subtitles)</altclick>
+					<altclick>XBMC.RunScript($INFO[Skin.String(SubtitleScript_Path)])</altclick>
+					<usealttexture>IsEmpty(Skin.String(SubtitleScript_Path))</usealttexture>
+					<onleft>12</onleft>
+					<onright>1</onright>
+					<onup>SetProperty(ExtendPlot,1,seekbar)</onup>
+					<onup>SetProperty(ShowInfo,1,seekbar)</onup>
+					<onup>SetProperty(ShowInfo,1,videoosd)</onup>
+					<ondown condition="IsEmpty(Window(seekbar).Property(ExtendPlot))">Close</ondown>
+					<ondown condition="!IsEmpty(Window(seekbar).Property(ExtendPlot))">ClearProperty(ExtendPlot,seekbar)</ondown>
+					<visible>!VideoPlayer.Content(LiveTV)</visible>
+				</control>
+				<control type="togglebutton" id="7">
+					<posx>120</posx>
+					<height>80</height>
+					<width>80</width>
+					<texturefocus>osd/fullscreen/buttons/record-off-fo.png</texturefocus>
+					<texturenofocus>osd/fullscreen/buttons/record-off-nofo.png</texturenofocus>
+					<alttexturefocus>osd/fullscreen/buttons/record-fo.png</alttexturefocus>
+					<alttexturenofocus>osd/fullscreen/buttons/record-nofo.png</alttexturenofocus>
+					<usealttexture>Player.Recording</usealttexture>
+					<onleft>12</onleft>
+					<onright>1</onright>
+					<onup>SetProperty(ExtendPlot,1,seekbar)</onup>
+					<onup>SetProperty(ShowInfo,1,seekbar)</onup>
+					<onup>SetProperty(ShowInfo,1,videoosd)</onup>
+					<ondown condition="IsEmpty(Window(seekbar).Property(ExtendPlot))">Close</ondown>
+					<ondown condition="!IsEmpty(Window(seekbar).Property(ExtendPlot))">ClearProperty(ExtendPlot,seekbar)</ondown>
+					<onclick>PlayerControl(Record)</onclick>
+					<enable>Player.CanRecord</enable>
+					<animation effect="fade" start="100" end="50" time="150" tween="sine" easing="inout" condition="!Player.CanRecord">Conditional</animation>
+					<visible>VideoPlayer.Content(LiveTV)</visible>
+				</control>
 				<control type="group">
+					<posx>92</posx>
 					<control type="button" id="1">
 						<description>Skip Back</description>
 						<posx>245</posx>
@@ -1510,9 +1586,12 @@
 						<texturefocus>osd/fullscreen/buttons/previous-fo.png</texturefocus>
 						<texturenofocus>osd/fullscreen/buttons/previous-nofo.png</texturenofocus>
 						<onclick>playercontrol(previous)</onclick>
-						<onup>1</onup>
-						<ondown>1</ondown>
-						<onleft>6</onleft>
+						<onup>SetProperty(ExtendPlot,1,seekbar)</onup>
+						<onup>SetProperty(ShowInfo,1,seekbar)</onup>
+						<onup>SetProperty(ShowInfo,1,videoosd)</onup>
+						<ondown condition="IsEmpty(Window(seekbar).Property(ExtendPlot))">Close</ondown>
+						<ondown condition="!IsEmpty(Window(seekbar).Property(ExtendPlot))">ClearProperty(ExtendPlot,seekbar)</ondown>
+						<onleft>7</onleft>
 						<onright>2</onright>
 						<visible>!VideoPlayer.Content(LiveTV)</visible>
 					</control>
@@ -1524,9 +1603,12 @@
 						<texturefocus>osd/fullscreen/buttons/up-fo.png</texturefocus>
 						<texturenofocus>osd/fullscreen/buttons/up-nofo.png</texturenofocus>
 						<onclick>playercontrol(previous)</onclick>
-						<onup>1</onup>
-						<ondown>1</ondown>
-						<onleft>6</onleft>
+						<onup>SetProperty(ExtendPlot,1,seekbar)</onup>
+						<onup>SetProperty(ShowInfo,1,seekbar)</onup>
+						<onup>SetProperty(ShowInfo,1,videoosd)</onup>
+						<ondown condition="IsEmpty(Window(seekbar).Property(ExtendPlot))">Close</ondown>
+						<ondown condition="!IsEmpty(Window(seekbar).Property(ExtendPlot))">ClearProperty(ExtendPlot,seekbar)</ondown>
+						<onleft>7</onleft>
 						<onright>13</onright>
 						<visible>VideoPlayer.Content(LiveTV)</visible>
 					</control>
@@ -1538,8 +1620,11 @@
 						<texturefocus>osd/fullscreen/buttons/down-fo.png</texturefocus>
 						<texturenofocus>osd/fullscreen/buttons/down-nofo.png</texturenofocus>
 						<onclick>playercontrol(next)</onclick>
-						<onup>1</onup>
-						<ondown>1</ondown>
+						<onup>SetProperty(ExtendPlot,1,seekbar)</onup>
+						<onup>SetProperty(ShowInfo,1,seekbar)</onup>
+						<onup>SetProperty(ShowInfo,1,videoosd)</onup>
+						<ondown condition="IsEmpty(Window(seekbar).Property(ExtendPlot))">Close</ondown>
+						<ondown condition="!IsEmpty(Window(seekbar).Property(ExtendPlot))">ClearProperty(ExtendPlot,seekbar)</ondown>
 						<onleft>1</onleft>
 						<onright>2</onright>
 						<visible>VideoPlayer.Content(LiveTV)</visible>
@@ -1557,8 +1642,11 @@
 							<alttexturefocus>osd/fullscreen/buttons/rewind-on-fo.png</alttexturefocus>
 							<alttexturenofocus>osd/fullscreen/buttons/rewind-on-nofo.png</alttexturenofocus>
 							<onclick>playercontrol(rewind)</onclick>
-							<onup>1</onup>
-							<ondown>1</ondown>
+							<onup>SetProperty(ExtendPlot,1,seekbar)</onup>
+							<onup>SetProperty(ShowInfo,1,seekbar)</onup>
+							<onup>SetProperty(ShowInfo,1,videoosd)</onup>
+							<ondown condition="IsEmpty(Window(seekbar).Property(ExtendPlot))">Close</ondown>
+							<ondown condition="!IsEmpty(Window(seekbar).Property(ExtendPlot))">ClearProperty(ExtendPlot,seekbar)</ondown>
 							<onleft condition="VideoPlayer.Content(LiveTV)">13</onleft>
 							<onleft condition="!VideoPlayer.Content(LiveTV)">1</onleft>
 							<onright>3</onright>
@@ -1576,8 +1664,11 @@
 							<alttexturefocus>osd/fullscreen/buttons/play-fo.png</alttexturefocus>
 							<alttexturenofocus>osd/fullscreen/buttons/play-nofo.png</alttexturenofocus>
 							<onclick>playercontrol(play)</onclick>
-							<onup>1</onup>
-							<ondown>1</ondown>
+							<onup>SetProperty(ExtendPlot,1,seekbar)</onup>
+							<onup>SetProperty(ShowInfo,1,seekbar)</onup>
+							<onup>SetProperty(ShowInfo,1,videoosd)</onup>
+							<ondown condition="IsEmpty(Window(seekbar).Property(ExtendPlot))">Close</ondown>
+							<ondown condition="!IsEmpty(Window(seekbar).Property(ExtendPlot))">ClearProperty(ExtendPlot,seekbar)</ondown>
 							<onleft>2</onleft>
 							<onright>4</onright>
 							<enable>Player.PauseEnabled</enable>
@@ -1591,8 +1682,11 @@
 							<texturefocus>osd/fullscreen/buttons/stop-fo.png</texturefocus>
 							<texturenofocus>osd/fullscreen/buttons/stop-nofo.png</texturenofocus>
 							<onclick>playercontrol(stop)</onclick>
-							<onup>1</onup>
-							<ondown>1</ondown>
+							<onup>SetProperty(ExtendPlot,1,seekbar)</onup>
+							<onup>SetProperty(ShowInfo,1,seekbar)</onup>
+							<onup>SetProperty(ShowInfo,1,videoosd)</onup>
+							<ondown condition="IsEmpty(Window(seekbar).Property(ExtendPlot))">Close</ondown>
+							<ondown condition="!IsEmpty(Window(seekbar).Property(ExtendPlot))">ClearProperty(ExtendPlot,seekbar)</ondown>
 							<onleft>3</onleft>
 							<onright>5</onright>
 						</control>
@@ -1607,8 +1701,11 @@
 							<alttexturefocus>osd/fullscreen/buttons/fast-forward-on-fo.png</alttexturefocus>
 							<alttexturenofocus>osd/fullscreen/buttons/fast-forward-on-nofo.png</alttexturenofocus>
 							<onclick>playercontrol(forward)</onclick>
-							<onup>1</onup>
-							<ondown>1</ondown>
+							<onup>SetProperty(ExtendPlot,1,seekbar)</onup>
+							<onup>SetProperty(ShowInfo,1,seekbar)</onup>
+							<onup>SetProperty(ShowInfo,1,videoosd)</onup>
+							<ondown condition="IsEmpty(Window(seekbar).Property(ExtendPlot))">Close</ondown>
+							<ondown condition="!IsEmpty(Window(seekbar).Property(ExtendPlot))">ClearProperty(ExtendPlot,seekbar)</ondown>
 							<onleft>4</onleft>
 							<onright>6</onright>
 							<enable>Player.SeekEnabled</enable>
@@ -1623,103 +1720,41 @@
 						<texturefocus>osd/fullscreen/buttons/next-fo.png</texturefocus>
 						<texturenofocus>osd/fullscreen/buttons/next-nofo.png</texturenofocus>
 						<onclick>playercontrol(next)</onclick>
-						<onup>1</onup>
-						<ondown>1</ondown>
+						<onup>SetProperty(ExtendPlot,1,seekbar)</onup>
+						<onup>SetProperty(ShowInfo,1,seekbar)</onup>
+						<onup>SetProperty(ShowInfo,1,videoosd)</onup>
+						<ondown condition="IsEmpty(Window(seekbar).Property(ExtendPlot))">Close</ondown>
+						<ondown condition="!IsEmpty(Window(seekbar).Property(ExtendPlot))">ClearProperty(ExtendPlot,seekbar)</ondown>
 						<onleft>5</onleft>
-						<onright>1</onright>
+						<onright>10</onright>
 						<visible>!VideoPlayer.Content(LiveTV)</visible>
 					</control>
 				</control>
-			</control>
-			<control type="group">
-				<posx>1160</posx>
-				<posy>995</posy>
-				<control type="button" id="11">
-					<description>Audio Settings</description>
-					<posx>245</posx>
-					<height>80</height>
-					<width>80</width>
-					<texturefocus>osd/fullscreen/buttons/audio-settings-fo.png</texturefocus>
-					<texturenofocus>osd/fullscreen/buttons/audio-settings-nofo.png</texturenofocus>
-					<onclick>activatewindow(124)</onclick>
-					<onup>1</onup>
-					<ondown>1</ondown>
-					<onleft>9</onleft>
-					<onright>12</onright>
-				</control>
-				<control type="button" id="12">
-					<description>Video Settings</description>
-					<posx>315</posx>
-					<height>80</height>
-					<width>80</width>
-					<texturefocus>osd/fullscreen/buttons/video-settings-fo.png</texturefocus>
-					<texturenofocus>osd/fullscreen/buttons/video-settings-nofo.png</texturenofocus>
-					<onclick>activatewindow(123)</onclick>
-					<onup>1</onup>
-					<ondown>1</ondown>
-					<onleft>11</onleft>
-					<onright>7</onright>
-				</control>
-				<control type="togglebutton" id="7">
-					<description>Subtitles</description>
-					<posx>385</posx>
-					<height>80</height>
-					<width>80</width>
-					<texturefocus>osd/fullscreen/buttons/subtitles-fo.png</texturefocus>
-					<texturenofocus>osd/fullscreen/buttons/subtitles-nofo.png</texturenofocus>
-					<alttexturefocus>osd/fullscreen/buttons/subtitles-fo.png</alttexturefocus>
-					<alttexturenofocus>osd/fullscreen/buttons/subtitles-nofo.png</alttexturenofocus>
-					<onclick>XBMC.RunScript($INFO[Skin.String(SubtitleScript_Path)])</onclick>
-					<altclick>Skin.SetAddon(SubtitleScript_Path,xbmc.python.subtitles)</altclick>
-					<altclick>XBMC.RunScript($INFO[Skin.String(SubtitleScript_Path)])</altclick>
-					<usealttexture>IsEmpty(Skin.String(SubtitleScript_Path))</usealttexture>
-					<onleft>12</onleft>
-					<onright>1</onright>
-					<onup>1</onup>
-					<ondown>1</ondown>
-					<visible>!VideoPlayer.Content(LiveTV)</visible>
-				</control>
-				<control type="togglebutton" id="7">
-					<posx>385</posx>
-					<height>80</height>
-					<width>80</width>
-					<texturefocus>osd/fullscreen/buttons/record-off-fo.png</texturefocus>
-					<texturenofocus>osd/fullscreen/buttons/record-off-nofo.png</texturenofocus>
-					<alttexturefocus>osd/fullscreen/buttons/record-fo.png</alttexturefocus>
-					<alttexturenofocus>osd/fullscreen/buttons/record-nofo.png</alttexturenofocus>
-					<usealttexture>Player.Recording</usealttexture>
-					<onleft>12</onleft>
-					<onright>10</onright>
-					<onup>1</onup>
-					<ondown>1</ondown>
-					<onclick>PlayerControl(Record)</onclick>
-					<enable>Player.CanRecord</enable>
-					<animation effect="fade" start="100" end="50" time="150" tween="sine" easing="inout" condition="!Player.CanRecord">Conditional</animation>
-					<visible>VideoPlayer.Content(LiveTV)</visible>
-				</control>
-			
 				<control type="group">
-					<posx>455</posx>
+					<posx>195</posx>
 					<control type="group">
 						<visible>!VideoPlayer.Content(LiveTV)</visible>
 						<control type="button" id="10">
 							<description>DVD Menu</description>
-							<posx>0</posx>
+							<posx>720</posx>
 							<height>80</height>
 							<width>80</width>
 							<texturefocus>osd/fullscreen/buttons/dvd-fo.png</texturefocus>
 							<texturenofocus>osd/fullscreen/buttons/dvd-nofo.png</texturenofocus>
 							<onclick>PlayerControl(ShowVideoMenu)</onclick>
 							<enable>VideoPlayer.HasMenu</enable>
-							<onleft>7</onleft>
+							<onleft>6</onleft>
 							<onright>8</onright>
-							<onup>1</onup>
-							<ondown>1</ondown>
+							<onup>SetProperty(ExtendPlot,1,seekbar)</onup>
+							<onup>SetProperty(ShowInfo,1,seekbar)</onup>
+							<onup>SetProperty(ShowInfo,1,videoosd)</onup>
+							<ondown condition="IsEmpty(Window(seekbar).Property(ExtendPlot))">Close</ondown>
+							<ondown condition="!IsEmpty(Window(seekbar).Property(ExtendPlot))">ClearProperty(ExtendPlot,seekbar)</ondown>
 							<animation effect="fade" start="100" end="50" time="150" tween="sine" easing="inout" condition="!VideoPlayer.HasMenu">Conditional</animation>
 						</control>
 						<control type="button" id="8">
 							<description>Info</description>
-							<posx>70</posx>
+							<posx>780</posx>
 							<height>80</height>
 							<width>80</width>
 							<texturefocus>osd/fullscreen/buttons/info-fo.png</texturefocus>
@@ -1730,19 +1765,25 @@
 							<onclick condition="!IsEmpty(Window(seekbar).Property(ExtendPlot))">ClearProperty(ExtendPlot,seekbar)</onclick>
 							<onleft>10</onleft>
 							<onright>9</onright>
-							<onup>1</onup>
-							<ondown>1</ondown>
+							<onup>SetProperty(ExtendPlot,1,seekbar)</onup>
+							<onup>SetProperty(ShowInfo,1,seekbar)</onup>
+							<onup>SetProperty(ShowInfo,1,videoosd)</onup>
+							<ondown condition="IsEmpty(Window(seekbar).Property(ExtendPlot))">Close</ondown>
+							<ondown condition="!IsEmpty(Window(seekbar).Property(ExtendPlot))">ClearProperty(ExtendPlot,seekbar)</ondown>
 						</control>
 						<control type="button" id="9">
 							<description>Bookmarks</description>
-							<posx>140</posx>
+							<posx>840</posx>
 							<height>80</height>
 							<width>80</width>
 							<texturefocus>osd/fullscreen/buttons/bookmarks-fo.png</texturefocus>
 							<texturenofocus>osd/fullscreen/buttons/bookmarks-nofo.png</texturenofocus>
 							<onclick>ActivateWindow(125)</onclick>
-							<onup>1</onup>
-							<ondown>1</ondown>
+							<onup>SetProperty(ExtendPlot,1,seekbar)</onup>
+							<onup>SetProperty(ShowInfo,1,seekbar)</onup>
+							<onup>SetProperty(ShowInfo,1,videoosd)</onup>
+							<ondown condition="IsEmpty(Window(seekbar).Property(ExtendPlot))">Close</ondown>
+							<ondown condition="!IsEmpty(Window(seekbar).Property(ExtendPlot))">ClearProperty(ExtendPlot,seekbar)</ondown>
 							<onleft>8</onleft>
 							<onright>11</onright>
 						</control>	
@@ -1751,41 +1792,51 @@
 						<visible>VideoPlayer.Content(LiveTV)</visible>
 						<control type="button" id="10">
 							<description>Channels</description>
-							<posx>0</posx>
+							<posx>720</posx>
 							<height>80</height>
 							<width>80</width>
 							<texturefocus>osd/fullscreen/buttons/channel-fo.png</texturefocus>
 							<texturenofocus>osd/fullscreen/buttons/channel-nofo.png</texturenofocus>
 							<onclick condition="!Skin.HasSetting(PVR.OSD.Reroute)">ActivateWindow(PVROSDChannels)</onclick>
 							 <onclick condition="Skin.HasSetting(PVR.OSD.Reroute)">ActivateWindowAndFocus(MyPVR, 32,0, 11,0)</onclick>
-							<onleft>7</onleft>
+							<onleft>6</onleft>
 							<onright>8</onright>
-							<onup>1</onup>
-							<ondown>1</ondown>
+							<onup>SetProperty(ExtendPlot,1,seekbar)</onup>
+							<onup>SetProperty(ShowInfo,1,seekbar)</onup>
+							<onup>SetProperty(ShowInfo,1,videoosd)</onup>
+							<ondown condition="IsEmpty(Window(seekbar).Property(ExtendPlot))">Close</ondown>
+							<ondown condition="!IsEmpty(Window(seekbar).Property(ExtendPlot))">ClearProperty(ExtendPlot,seekbar)</ondown>
 						</control>
 						<control type="button" id="8">
 							<description>Channel EPG</description>
-							<posx>70</posx>
+							<posx>780</posx>
 							<height>80</height>
 							<width>80</width>
 							<texturefocus>osd/fullscreen/buttons/epg-fo.png</texturefocus>
 							<texturenofocus>osd/fullscreen/buttons/epg-nofo.png</texturenofocus>
+							<!--<onclick>ActivateWindow(PVROSDGuide)</onclick>-->
 							<onclick>ActivateWindowAndFocus(MyPVR, 31,0, 10,0)</onclick>
 							<onleft>10</onleft>
 							<onright>9</onright>
-							<onup>1</onup>
-							<ondown>1</ondown>
+							<onup>SetProperty(ExtendPlot,1,seekbar)</onup>
+							<onup>SetProperty(ShowInfo,1,seekbar)</onup>
+							<onup>SetProperty(ShowInfo,1,videoosd)</onup>
+							<ondown condition="IsEmpty(Window(seekbar).Property(ExtendPlot))">Close</ondown>
+							<ondown condition="!IsEmpty(Window(seekbar).Property(ExtendPlot))">ClearProperty(ExtendPlot,seekbar)</ondown>
 						</control>
 						<control type="button" id="9">
 							<description>Teletext</description>
-							<posx>140</posx>
+							<posx>840</posx>
 							<height>80</height>
 							<width>80</width>
 							<texturefocus>osd/fullscreen/buttons/text-fo.png</texturefocus>
 							<texturenofocus>osd/fullscreen/buttons/text-nofo.png</texturenofocus>
 							<onclick>ActivateWindow(Teletext)</onclick>
-							<onup>1</onup>
-							<ondown>1</ondown>
+							<onup>SetProperty(ExtendPlot,1,seekbar)</onup>
+							<onup>SetProperty(ShowInfo,1,seekbar)</onup>
+							<onup>SetProperty(ShowInfo,1,videoosd)</onup>
+							<ondown condition="IsEmpty(Window(seekbar).Property(ExtendPlot))">Close</ondown>
+							<ondown condition="!IsEmpty(Window(seekbar).Property(ExtendPlot))">ClearProperty(ExtendPlot,seekbar)</ondown>
 							<onleft>8</onleft>
 							<onright>11</onright>
 						</control>

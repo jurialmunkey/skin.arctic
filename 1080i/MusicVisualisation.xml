@@ -316,12 +316,12 @@
 				<posx>312</posx>
 				<posy>868</posy>
 				<width>990</width>
-				<height>100</height>
-				<label>$INFO[MusicPlayer.Property(Album_Description)]</label>
+				<height>105</height>
+				<label>$INFO[Window(Visualisation).Property(ArtistSlideshow.ArtistBiography),,[CR][CR]]$INFO[Window(Visualisation).Property(ArtistSlideshow.1.AlbumName),[B]$LOCALIZE[21888][/B][CR],]$INFO[Window(Visualisation).Property(ArtistSlideshow.2.AlbumName),  •  ,]$INFO[Window(Visualisation).Property(ArtistSlideshow.3.AlbumName),  •  ,]$INFO[Window(Visualisation).Property(ArtistSlideshow.4.AlbumName),  •  ,]$INFO[Window(Visualisation).Property(ArtistSlideshow.5.AlbumName),  •  ,]$INFO[Window(Visualisation).Property(ArtistSlideshow.6.AlbumName),  •  ,]$INFO[Window(Visualisation).Property(ArtistSlideshow.7.AlbumName),  •  ,]$INFO[Window(Visualisation).Property(ArtistSlideshow.8.AlbumName),  •  ,]$INFO[Window(Visualisation).Property(ArtistSlideshow.9.AlbumName),  •  ,]$INFO[Window(Visualisation).Property(ArtistSlideshow.10.AlbumName),  •  ,]$INFO[Window(Visualisation).Property(ArtistSlideshow.1.SimilarName),[CR][CR][B]$LOCALIZE[42459][/B][CR],]$INFO[Window(Visualisation).Property(ArtistSlideshow.2.SimilarName),  •  ,]$INFO[Window(Visualisation).Property(ArtistSlideshow.3.SimilarName),  •  ,]$INFO[Window(Visualisation).Property(ArtistSlideshow.4.SimilarName),  •  ,]$INFO[Window(Visualisation).Property(ArtistSlideshow.5.SimilarName),  •  ,]$INFO[Window(Visualisation).Property(ArtistSlideshow.6.SimilarName),  •  ,]$INFO[Window(Visualisation).Property(ArtistSlideshow.7.SimilarName),  •  ,]$INFO[Window(Visualisation).Property(ArtistSlideshow.8.SimilarName),  •  ,]$INFO[Window(Visualisation).Property(ArtistSlideshow.9.SimilarName),  •  ,]$INFO[Window(Visualisation).Property(ArtistSlideshow.10.SimilarName),  •  ,]$INFO[MusicPlayer.offset(1).Title,[CR][CR][B]$LOCALIZE[209]...[/B][CR],]$INFO[MusicPlayer.offset(2).Title,  •  ,]$INFO[MusicPlayer.offset(3).Title,  •  ,]$INFO[MusicPlayer.offset(4).Title,  •  ,]$INFO[MusicPlayer.offset(5).Title,  •  ,]$INFO[MusicPlayer.offset(6).Title,  •  ,]$INFO[MusicPlayer.offset(7).Title,  •  ,]$INFO[MusicPlayer.offset(8).Title,  •  ,]$INFO[MusicPlayer.offset(9).Title,  •  ,]$INFO[MusicPlayer.offset(10).Title,  •  ,]</label>
 				<align>justify</align>
 				<textcolor>$VAR[osd.text.dark]</textcolor>
 				<shadowcolor>18eeeeee</shadowcolor>
-				<autoscroll delay="13000" time="3000" repeat="13000" />
+				<autoscroll delay="7000" time="2500" repeat="7000" />
 				<font>Font-Alaska-S25-NC</font>
 				<visible>!Window.IsVisible(musicosd)</visible>
 				<animation type="Visible" reversible="false">
@@ -770,8 +770,8 @@
 						<posx>0</posx>
 						<posy>80</posy>
 						<width>1190</width>
-						<height>100</height>
-						<label>$INFO[MusicPlayer.Property(Album_Description)]</label>
+						<height>105</height>
+						<label>$INFO[Window(Visualisation).Property(ArtistSlideshow.ArtistBiography),,[CR][CR]]$INFO[Window(Visualisation).Property(ArtistSlideshow.1.AlbumName),[B]$LOCALIZE[21888][/B][CR],]$INFO[Window(Visualisation).Property(ArtistSlideshow.2.AlbumName),  •  ,]$INFO[Window(Visualisation).Property(ArtistSlideshow.3.AlbumName),  •  ,]$INFO[Window(Visualisation).Property(ArtistSlideshow.4.AlbumName),  •  ,]$INFO[Window(Visualisation).Property(ArtistSlideshow.5.AlbumName),  •  ,]$INFO[Window(Visualisation).Property(ArtistSlideshow.6.AlbumName),  •  ,]$INFO[Window(Visualisation).Property(ArtistSlideshow.7.AlbumName),  •  ,]$INFO[Window(Visualisation).Property(ArtistSlideshow.8.AlbumName),  •  ,]$INFO[Window(Visualisation).Property(ArtistSlideshow.9.AlbumName),  •  ,]$INFO[Window(Visualisation).Property(ArtistSlideshow.10.AlbumName),  •  ,]$INFO[Window(Visualisation).Property(ArtistSlideshow.1.SimilarName),[CR][CR][B]$LOCALIZE[42459][/B][CR],]$INFO[Window(Visualisation).Property(ArtistSlideshow.2.SimilarName),  •  ,]$INFO[Window(Visualisation).Property(ArtistSlideshow.3.SimilarName),  •  ,]$INFO[Window(Visualisation).Property(ArtistSlideshow.4.SimilarName),  •  ,]$INFO[Window(Visualisation).Property(ArtistSlideshow.5.SimilarName),  •  ,]$INFO[Window(Visualisation).Property(ArtistSlideshow.6.SimilarName),  •  ,]$INFO[Window(Visualisation).Property(ArtistSlideshow.7.SimilarName),  •  ,]$INFO[Window(Visualisation).Property(ArtistSlideshow.8.SimilarName),  •  ,]$INFO[Window(Visualisation).Property(ArtistSlideshow.9.SimilarName),  •  ,]$INFO[Window(Visualisation).Property(ArtistSlideshow.10.SimilarName),  •  ,]$INFO[MusicPlayer.offset(1).Title,[CR][CR][B]$LOCALIZE[209]...[/B][CR],]$INFO[MusicPlayer.offset(2).Title,  •  ,]$INFO[MusicPlayer.offset(3).Title,  •  ,]$INFO[MusicPlayer.offset(4).Title,  •  ,]$INFO[MusicPlayer.offset(5).Title,  •  ,]$INFO[MusicPlayer.offset(6).Title,  •  ,]$INFO[MusicPlayer.offset(7).Title,  •  ,]$INFO[MusicPlayer.offset(8).Title,  •  ,]$INFO[MusicPlayer.offset(9).Title,  •  ,]$INFO[MusicPlayer.offset(10).Title,  •  ,]</label>
 						<align>justify</align>
 						<textcolor>$VAR[osd.text.dark]</textcolor>
 						<shadowcolor>18eeeeee</shadowcolor>

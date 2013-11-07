@@ -1268,3 +1268,7 @@ msgstr ""
 msgctxt "#42458"
 msgid "Tabbed"
 msgstr ""
+
+msgctxt "#42459"
+msgid "Similar Artists"
+msgstr ""

@@ -31,7 +31,7 @@
 						<effect type="fade" start="100" end="0" time="100" tween="sine" easing="out" />
 					</animation>
 					<control type="group">
-						<visible>stringcompare(Skin.String(video.seekbar.type),medium)</visible>
+						<visible>[!VideoPlayer.Content(musicvideos) + [stringcompare(Skin.String(video.seekbar.type),medium)]] | [VideoPlayer.Content(musicvideos) + [stringcompare(Skin.String(music.seekbar.type),medium)]]</visible>
 						<control type="image">
 							<posx>145</posx>
 							<posy>190</posy>
@@ -58,7 +58,7 @@
 						</control>
 					</control>
 					<control type="group">
-						<visible>stringcompare(Skin.String(video.seekbar.type),full)</visible>
+						<visible>[!VideoPlayer.Content(musicvideos) + [stringcompare(Skin.String(video.seekbar.type),full)]] | [VideoPlayer.Content(musicvideos) + [stringcompare(Skin.String(music.seekbar.type),full)]]</visible>
 						<control type="image">
 							<posx>-50</posx>
 							<posy>195</posy>
@@ -1038,21 +1038,28 @@
 				</animation>
 			</control>
 			<control type="group">
+				<visible>!Window.IsVisible(videoosd) | !IsEmpty(Window(seekbar).Property(ExtendPlot))</visible>
 				<animation type="WindowOpen" reversible="false">
 					<effect type="fade" start="0" end="100" time="300" tween="sine" easing="inout" />
 					<effect type="slide" start="0,70" end="0" time="300" tween="sine" easing="inout" />
 				</animation>
-				<animation type="Visible" reversible="false">
+				<animation type="Visible" reversible="false" condition="!Window.IsActive(videoosd)">
 					<effect type="fade" start="0" end="100" time="300" tween="sine" easing="inout"/>
 					<effect type="slide" start="0,70" end="0" time="300" tween="sine" easing="inout" />
+				</animation>
+				<animation type="Visible" reversible="false" condition="Window.IsActive(videoosd)">
+					<effect type="fade" start="0" end="100" time="300" tween="sine" easing="inout"/>
 				</animation>
 				<animation type="WindowClose" reversible="false">
 					<effect type="fade" end="0" start="100" time="200" tween="sine" easing="inout" />
 					<effect type="slide" end="0,70" start="0" time="200" tween="sine" easing="inout" />
 				</animation>
-				<animation type="Hidden" reversible="false">
+				<animation type="Hidden" reversible="false" condition="!Window.IsActive(videoosd)">
 					<effect type="fade" start="100" end="0" time="200" tween="sine" easing="inout" />
 					<effect type="slide" end="0,70" start="0" time="200" tween="sine" easing="inout" />
+				</animation>
+				<animation type="Hidden" reversible="false" condition="Window.IsActive(videoosd)">
+					<effect type="fade" start="100" end="0" time="200" tween="sine" easing="inout" />
 				</animation>
 				<control type="label">
 					<description>Description</description>
@@ -1096,54 +1103,57 @@
 					<scroll>false</scroll>
 					<visible>VideoPlayer.Content(MusicVideos)</visible>
 				</control>
-				<control type="label">
-					<description>Music Video Info</description>
-					<posx>330</posx>
-					<posy>925</posy>
-					<width>880</width>
-					<label>$INFO[Playlist.Position,$LOCALIZE[554]:  ,]$INFO[Playlist.Length,  $LOCALIZE[20163]  ,]</label>
-					<align>left</align> 
-					<font>Font-MusicVis-CodecInfo</font>
-					<textcolor>99ffffff</textcolor>
-					<visible>VideoPlayer.Content(MusicVideos)</visible>
-				</control>
-				<control type="textbox">
-					<description>Plot</description>
-					<posx>330</posx>
-					<posy>846</posy>
-					<width>980</width>
-					<height>110</height>
-					<label>$INFO[VideoPlayer.Season,Season ,  ]$INFO[VideoPlayer.Episode,Episode ,[CR]]$INFO[VideoPlayer.Plot]</label>
-					<align>left</align> 
-					<font>Font-Onscreen-Plot</font>
-					<textcolor>99ffffff</textcolor>
-					<visible>!VideoPlayer.Content(LiveTV)</visible>
-					<autoscroll delay="5000" time="3000" repeat="5000"/>
-				</control>
-				<control type="textbox">
-					<description>Plot</description>
-					<posx>330</posx>
-					<posy>846</posy>
-					<width>980</width>
-					<height>72</height>
-					<label>$VAR[OSDPlot]</label>
-					<align>left</align> 
-					<font>Font-Onscreen-Plot</font>
-					<textcolor>99ffffff</textcolor>
-					<visible>VideoPlayer.Content(LiveTV)</visible>
-					<autoscroll delay="5000" time="3000" repeat="5000"/>
-				</control>
-				<control type="textbox">
-					<description>Plot</description>
-					<posx>330</posx>
-					<posy>846</posy>
-					<width>980</width>
-					<height>110</height>
-					<label>[CR][CR]$VAR[OSDNextTitle]</label>
-					<align>left</align> 
-					<font>Font-Onscreen-Plot</font>
-					<textcolor>99ffffff</textcolor>
-					<visible>VideoPlayer.Content(LiveTV)</visible>
+				<control type="group">
+					<visible>!Window.IsVisible(videoosd)</visible>
+					<control type="label">
+						<description>Music Video Info</description>
+						<posx>330</posx>
+						<posy>925</posy>
+						<width>880</width>
+						<label>$INFO[Playlist.Position,$LOCALIZE[554]:  ,]$INFO[Playlist.Length,  $LOCALIZE[20163]  ,]</label>
+						<align>left</align> 
+						<font>Font-MusicVis-CodecInfo</font>
+						<textcolor>99ffffff</textcolor>
+						<visible>VideoPlayer.Content(MusicVideos)</visible>
+					</control>
+					<control type="textbox">
+						<description>Plot</description>
+						<posx>330</posx>
+						<posy>846</posy>
+						<width>980</width>
+						<height>110</height>
+						<label>$INFO[VideoPlayer.Season,Season ,  ]$INFO[VideoPlayer.Episode,Episode ,[CR]]$INFO[VideoPlayer.Plot]</label>
+						<align>left</align> 
+						<font>Font-Onscreen-Plot</font>
+						<textcolor>99ffffff</textcolor>
+						<visible>!VideoPlayer.Content(LiveTV) + !VideoPlayer.Content(musicvideos)</visible>
+						<autoscroll delay="5000" time="3000" repeat="5000"/>
+					</control>
+					<control type="textbox">
+						<description>Plot</description>
+						<posx>330</posx>
+						<posy>846</posy>
+						<width>980</width>
+						<height>72</height>
+						<label>$VAR[OSDPlot]</label>
+						<align>left</align> 
+						<font>Font-Onscreen-Plot</font>
+						<textcolor>99ffffff</textcolor>
+						<visible>VideoPlayer.Content(LiveTV)</visible>
+						<autoscroll delay="5000" time="3000" repeat="5000"/>
+					</control>
+					<control type="textbox">
+						<description>Plot</description>
+						<posx>330</posx>
+						<posy>846</posy>
+						<width>980</width>
+						<height>110</height>
+						<label>[CR][CR]$VAR[OSDNextTitle]</label>
+						<align>left</align> 
+						<font>Font-Onscreen-Plot</font>
+						<textcolor>99ffffff</textcolor>
+						<visible>VideoPlayer.Content(LiveTV)</visible>
+					</control>
 				</control>
 				<control type="label">
 					<description>Player Times</description>
@@ -1164,6 +1174,7 @@
 					<orientation>horizontal</orientation>
 					<usecontrolcoords>true</usecontrolcoords>
 					<align>left</align>
+					<visible>!Window.IsVisible(videoosd)</visible>
 					<control type="label">
 						<height>100</height>
 						<description>Duration</description>
@@ -1240,7 +1251,7 @@
 			</control>
 		</control>
 		<control type="group">
-			<visible>!stringcompare(Skin.String(video.seekbar.type),onscreen)</visible>
+			<visible>[!stringcompare(Skin.String(video.seekbar.type),onscreen) + !VideoPlayer.Content(musicvideos)] | [!stringcompare(Skin.String(music.seekbar.type),onscreen) + VideoPlayer.Content(musicvideos)]</visible>
 			<include>OSDWeatherClock</include>
 			<include>OSDChapterInfo</include>
         </control>

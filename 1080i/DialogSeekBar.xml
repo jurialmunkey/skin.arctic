@@ -8,7 +8,7 @@
     <controls>
         <!-- MEDIUM AND FULL -->
         <control type="group">
-			<visible>stringcompare(Skin.String(video.seekbar.type),medium) | stringcompare(Skin.String(video.seekbar.type),full)</visible>
+			<visible>[!VideoPlayer.Content(musicvideos) + [stringcompare(Skin.String(video.seekbar.type),medium) | stringcompare(Skin.String(video.seekbar.type),full)]] | [VideoPlayer.Content(musicvideos) + [stringcompare(Skin.String(music.seekbar.type),medium) | stringcompare(Skin.String(music.seekbar.type),full)]]</visible>
 			<animation type="WindowOpen" reversible="false">
 				<effect type="fade" start="0" end="100" time="250" tween="sine" easing="inout" />
 				<effect type="slide" start="0,120" end="0" time="250" tween="cubic" easing="out"/>
@@ -522,7 +522,7 @@
 		<control type="group">
 			<include>OSDSmallAnimation</include>
 			<posx>290</posx>
-			<visible>stringcompare(Skin.String(video.seekbar.type),small)</visible>
+			<visible>[stringcompare(Skin.String(video.seekbar.type),small) + !VideoPlayer.Content(musicvideos)] | [stringcompare(Skin.String(music.seekbar.type),small) + VideoPlayer.Content(musicvideos)]</visible>
 			
 			<control type="image">
 				<posx>-5</posx>
@@ -940,7 +940,7 @@
 		</control>
 		<!-- ONSCREEN -->
 		<control type="group">
-			<visible>stringcompare(Skin.String(video.seekbar.type),onscreen)</visible>
+			<visible>[stringcompare(Skin.String(video.seekbar.type),onscreen) + !VideoPlayer.Content(musicvideos)] | [stringcompare(Skin.String(music.seekbar.type),onscreen) + VideoPlayer.Content(musicvideos)]</visible>
 			
 			<posy>100</posy>
 			<control type="image">

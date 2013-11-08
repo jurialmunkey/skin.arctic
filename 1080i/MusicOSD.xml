@@ -561,9 +561,8 @@
         </control>
         <control type="group">
 			<visible>stringcompare(Skin.String(music.seekbar.type),onscreen)</visible>
-			<posy>340</posy>
+			<posy>442</posy>
 			<control type="group">
-				<posx>35</posx>
 				<animation effect="fade" start="100" end="30" time="350" condition="!Control.HasFocus(1) + !Control.HasFocus(2) + !Control.HasFocus(3) + !Control.HasFocus(4) + !Control.HasFocus(5) + !Control.HasFocus(6)">Conditional</animation>
 				<animation type="WindowOpen">
 					<effect type="fade" start="0" end="100" time="300" tween="sine" easing="inout" />
@@ -583,10 +582,10 @@
 				</animation>
 				<control type="button" id="1">
 					<description>Skip Back</description>
-					<posx>350</posx>
-					<posy>50</posy>
-					<height>250</height>
-					<width>250</width>
+					<posx>540</posx>
+					<posy>25</posy>
+					<height>150</height>
+					<width>150</width>
 					<texturefocus>osd/fullscreen/buttons/previous-fo.png</texturefocus>
 					<texturenofocus>osd/fullscreen/buttons/previous-nofo.png</texturenofocus>
 					<onclick>playercontrol(previous)</onclick>
@@ -597,9 +596,9 @@
 				</control>
 				<control type="togglebutton" id="2">
 					<description>Rewind</description>
-					<posx>460</posx>
-					<height>350</height>
-					<width>350</width>
+					<posx>640</posx>
+					<height>200</height>
+					<width>200</width>
 					<texturefocus>osd/fullscreen/buttons/rewind-fo.png</texturefocus>
 					<texturenofocus>osd/fullscreen/buttons/rewind-nofo.png</texturenofocus>
 					<usealttexture>Player.Rewinding</usealttexture>
@@ -613,9 +612,9 @@
 				</control>
 				<control type="togglebutton" id="3">
 					<description>Play / Pause</description>
-					<posx>660</posx>
-					<height>350</height>
-					<width>350</width>
+					<posx>790</posx>
+					<height>200</height>
+					<width>200</width>
 					<texturefocus>osd/fullscreen/buttons/pause-fo.png</texturefocus>
 					<texturenofocus>osd/fullscreen/buttons/pause-nofo.png</texturenofocus>
 					<usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
@@ -629,9 +628,9 @@
 				</control>
 				<control type="button" id="4">
 					<description>Stop</description>
-					<posx>860</posx>
-					<height>350</height>
-					<width>350</width>
+					<posx>940</posx>
+					<height>200</height>
+					<width>200</width>
 					<texturefocus>osd/fullscreen/buttons/stop-fo.png</texturefocus>
 					<texturenofocus>osd/fullscreen/buttons/stop-nofo.png</texturenofocus>
 					<onclick>playercontrol(stop)</onclick>
@@ -642,9 +641,9 @@
 				</control>
 				<control type="togglebutton" id="5">
 					<description>Forward</description>
-					<posx>1060</posx>
-					<height>350</height>
-					<width>350</width>
+					<posx>1090</posx>
+					<height>200</height>
+					<width>200</width>
 					<texturefocus>osd/fullscreen/buttons/fast-forward-fo.png</texturefocus>
 					<texturenofocus>osd/fullscreen/buttons/fast-forward-nofo.png</texturenofocus>
 					<usealttexture>Player.Forwarding</usealttexture>
@@ -658,10 +657,10 @@
 				</control>
 				<control type="button" id="6">
 					<description>Skip Forward</description>
-					<posx>1270</posx>
-					<posy>50</posy>
-					<height>250</height>
-					<width>250</width>
+					<posx>1240</posx>
+					<posy>25</posy>
+					<height>150</height>
+					<width>150</width>
 					<texturefocus>osd/fullscreen/buttons/next-fo.png</texturefocus>
 					<texturenofocus>osd/fullscreen/buttons/next-nofo.png</texturenofocus>
 					<onclick>playercontrol(next)</onclick>
@@ -672,8 +671,8 @@
 				</control>
 			</control>
 			<control type="group">
-				<posx>300</posx>
-				<posy>415</posy>
+				<posx>302</posx>
+				<posy>315</posy>
 				<animation type="WindowOpen">
 					<effect type="fade" start="0" end="100" delay="250" time="450" tween="sine" easing="inout" />
 				</animation>
@@ -1120,51 +1119,99 @@
 			<control type="group">
 				<visible>Skin.HasSetting(osd.darkpanel)</visible>
 				<control type="group">
-					<posx>-80</posx>
+					<posx>-75</posx>
 					<posy>985</posy>
-					<control type="button" id="7">
-						<description>Playlist</description>
-						<posx>560</posx>
-						<height>70</height>
-						<width>70</width>
-						<texturefocus>osd/fullscreen/buttons/playlists-fo.png</texturefocus>
-						<texturenofocus>osd/fullscreen/buttons/playlists-nofo.png</texturenofocus>
-						<onclick>Close</onclick>
-						<onclick>ActivateWindow(musicplaylist)</onclick>
-						<onleft>14</onleft>
-						<onright>12</onright>
-						<onup>20</onup>
-						<ondown>noop</ondown>
-					</control>
-					<control type="togglebutton" id="12">
-						<description>Shuffle</description>
-						<posx>620</posx>
-						<height>70</height>
-						<width>70</width>
-						<texturefocus>osd/fullscreen/buttons/shuffle_off-fo.png</texturefocus>
-						<texturenofocus>osd/fullscreen/buttons/shuffle_off-nofo.png</texturenofocus>
-						<usealttexture>Playlist.IsRandom</usealttexture>
-						<alttexturefocus>osd/fullscreen/buttons/shuffle_on-fo.png</alttexturefocus>
-						<alttexturenofocus>osd/fullscreen/buttons/shuffle_on-nofo.png</alttexturenofocus>
-						<onclick>PlayerControl(random)</onclick>
-						<onup>20</onup>
-						<ondown>noop</ondown>
-						<onleft>7</onleft>
-						<onright>10</onright>
-					</control>
-					<control type="button" id="10">
-						<description>Repeat</description>
-						<posx>680</posx>
-						<height>70</height>
-						<width>70</width>
-						<texturefocus>-</texturefocus>
-						<texturenofocus>-</texturenofocus>
-						<onclick>PlayerControl(repeat)</onclick>
-						<onleft>12</onleft>
-						<onright>1</onright>
-						<onup>20</onup>
-						<ondown>noop</ondown>
-						<animation effect="fade" start="100" end="50" time="150" tween="sine" easing="inout" condition="!VideoPlayer.HasMenu">Conditional</animation>
+					<control type="group">
+						<posx>-85</posx>
+						<control type="button" id="7">
+							<description>Playlist</description>
+							<posx>560</posx>
+							<height>70</height>
+							<width>70</width>
+							<texturefocus>osd/fullscreen/buttons/playlists-fo.png</texturefocus>
+							<texturenofocus>osd/fullscreen/buttons/playlists-nofo.png</texturenofocus>
+							<onclick>Close</onclick>
+							<onclick>ActivateWindow(musicplaylist)</onclick>
+							<onleft>14</onleft>
+							<onright>12</onright>
+							<onup>20</onup>
+							<ondown>noop</ondown>
+						</control>
+						<control type="togglebutton" id="12">
+							<description>Shuffle</description>
+							<posx>620</posx>
+							<height>70</height>
+							<width>70</width>
+							<texturefocus>osd/fullscreen/buttons/shuffle_off-fo.png</texturefocus>
+							<texturenofocus>osd/fullscreen/buttons/shuffle_off-nofo.png</texturenofocus>
+							<usealttexture>Playlist.IsRandom</usealttexture>
+							<alttexturefocus>osd/fullscreen/buttons/shuffle_on-fo.png</alttexturefocus>
+							<alttexturenofocus>osd/fullscreen/buttons/shuffle_on-nofo.png</alttexturenofocus>
+							<onclick>PlayerControl(random)</onclick>
+							<onup>20</onup>
+							<ondown>noop</ondown>
+							<onleft>7</onleft>
+							<onright>10</onright>
+						</control>
+						<control type="button" id="10">
+							<description>Repeat</description>
+							<posx>680</posx>
+							<height>70</height>
+							<width>70</width>
+							<texturefocus>-</texturefocus>
+							<texturenofocus>-</texturenofocus>
+							<onclick>PlayerControl(repeat)</onclick>
+							<onleft>12</onleft>
+							<onright>1</onright>
+							<onup>20</onup>
+							<ondown>noop</ondown>
+							<animation effect="fade" start="100" end="50" time="150" tween="sine" easing="inout" condition="!VideoPlayer.HasMenu">Conditional</animation>
+						</control>
+						<control type="group">
+							<posx>680</posx>
+							<control type="image">
+								<width>70</width>
+								<height>70</height>
+								<texture>osd/fullscreen/buttons/repeat-nofo.png</texture>
+								<visible>!Playlist.IsRepeat + !Playlist.IsRepeatOne</visible>
+								<visible>!Control.HasFocus(10)</visible>
+							</control>
+							<control type="image">
+								<width>70</width>
+								<height>70</height>
+								<texture>osd/fullscreen/buttons/repeat-fo.png</texture>
+								<visible>!Playlist.IsRepeat + !Playlist.IsRepeatOne</visible>
+								<visible>Control.HasFocus(10)</visible>
+							</control>
+							<control type="image">
+								<width>70</width>
+								<height>70</height>
+								<texture>osd/fullscreen/buttons/repeat_one-nofo.png</texture>
+								<visible>Playlist.IsRepeatOne</visible>
+								<visible>!Control.HasFocus(10)</visible>
+							</control>
+							<control type="image">
+								<width>70</width>
+								<height>70</height>
+								<texture>osd/fullscreen/buttons/repeat_one-fo.png</texture>
+								<visible>Playlist.IsRepeatOne</visible>
+								<visible>Control.HasFocus(10)</visible>
+							</control>
+							<control type="image">
+								<width>70</width>
+								<height>70</height>
+								<texture>osd/fullscreen/buttons/repeat_all-nofo.png</texture>
+								<visible>Playlist.IsRepeat</visible>
+								<visible>!Control.HasFocus(10)</visible>
+							</control>
+							<control type="image">
+								<width>70</width>
+								<height>70</height>
+								<texture>osd/fullscreen/buttons/repeat_all-fo.png</texture>
+								<visible>Playlist.IsRepeat</visible>
+								<visible>Control.HasFocus(10)</visible>
+							</control>
+						</control>
 					</control>
 					<control type="button" id="1">
 						<description>Skip Back</description>
@@ -1273,96 +1320,53 @@
 						<onup>20</onup>
 						<ondown>noop</ondown>
 					</control>
-					<control type="button" id="500">
-						<description>Viz presets</description>
-						<posx>1220</posx>
-						<height>70</height>
-						<width>70</width>
-						<texturefocus>osd/fullscreen/buttons/choose-viz-fo.png</texturefocus>
-						<texturenofocus>osd/fullscreen/buttons/choose-viz-nofo.png</texturenofocus>
-						<onclick>Addon.Default.OpenSettings(xbmc.player.musicviz)</onclick>
-						<onup>20</onup>
-						<ondown>noop</ondown>
-						<onleft>8</onleft>
-						<onright>13</onright>
-						<enable>Skin.HasSetting(OSDVisualisation.Enabled)</enable>
-						<animation effect="fade" end="50" time="0" condition="!Control.IsEnabled(500)">Conditional</animation>
-					</control>
-					<control type="button" id="13">
-						<description>Choose viz</description>
-						<posx>1280</posx>
-						<height>70</height>
-						<width>70</width>
-						<texturefocus>osd/fullscreen/buttons/viz-presets-fo.png</texturefocus>
-						<texturenofocus>osd/fullscreen/buttons/viz-presets-nofo.png</texturenofocus>
-						<onclick>ActivateWindow(122)</onclick>
-						<onup>20</onup>
-						<ondown>noop</ondown>
-						<onleft>500</onleft>
-						<onright>14</onright>
-						<enable>Skin.HasSetting(OSDVisualisation.Enabled)</enable>
-						<animation effect="fade" end="50" time="0" condition="!Control.IsEnabled(13)">Conditional</animation>
-					</control>
-					<control type="button" id="14">
-						<description>Viz settings</description>
-						<posx>1340</posx>
-						<height>70</height>
-						<width>70</width>
-						<texturefocus>osd/fullscreen/buttons/viz-settings-fo.png</texturefocus>
-						<texturenofocus>osd/fullscreen/buttons/viz-settings-nofo.png</texturenofocus>
-						<onclick>Addon.Default.OpenSettings(xbmc.player.musicviz)</onclick>
-						<onup>20</onup>
-						<ondown>noop</ondown>
-						<onleft>13</onleft>
-						<onright>7</onright>
-						<enable>Skin.HasSetting(OSDVisualisation.Enabled)</enable>
-						<animation effect="fade" end="50" time="0" condition="!Control.IsEnabled(14)">Conditional</animation>
-					</control>
-				</control>
-				<control type="group">
-					<posx>600</posx>
-					<posy>985</posy>
-					<control type="image">
-						<width>70</width>
-						<height>70</height>
-						<texture>osd/fullscreen/buttons/repeat-nofo.png</texture>
-						<visible>!Playlist.IsRepeat + !Playlist.IsRepeatOne</visible>
-						<visible>!Control.HasFocus(10)</visible>
-					</control>
-					<control type="image">
-						<width>70</width>
-						<height>70</height>
-						<texture>osd/fullscreen/buttons/repeat-fo.png</texture>
-						<visible>!Playlist.IsRepeat + !Playlist.IsRepeatOne</visible>
-						<visible>Control.HasFocus(10)</visible>
-					</control>
-					<control type="image">
-						<width>70</width>
-						<height>70</height>
-						<texture>osd/fullscreen/buttons/repeat_one-nofo.png</texture>
-						<visible>Playlist.IsRepeatOne</visible>
-						<visible>!Control.HasFocus(10)</visible>
-					</control>
-					<control type="image">
-						<width>70</width>
-						<height>70</height>
-						<texture>osd/fullscreen/buttons/repeat_one-fo.png</texture>
-						<visible>Playlist.IsRepeatOne</visible>
-						<visible>Control.HasFocus(10)</visible>
-					</control>
-					<control type="image">
-						<width>70</width>
-						<height>70</height>
-						<texture>osd/fullscreen/buttons/repeat_all-nofo.png</texture>
-						<visible>Playlist.IsRepeat</visible>
-						<visible>!Control.HasFocus(10)</visible>
-					</control>
-					<control type="image">
-						<width>70</width>
-						<height>70</height>
-						<texture>osd/fullscreen/buttons/repeat_all-fo.png</texture>
-						<visible>Playlist.IsRepeat</visible>
-						<visible>Control.HasFocus(10)</visible>
+					<control type="group">
+						<posx>90</posx>
+						<control type="button" id="500">
+							<description>Viz presets</description>
+							<posx>1220</posx>
+							<height>70</height>
+							<width>70</width>
+							<texturefocus>osd/fullscreen/buttons/choose-viz-fo.png</texturefocus>
+							<texturenofocus>osd/fullscreen/buttons/choose-viz-nofo.png</texturenofocus>
+							<onclick>Addon.Default.OpenSettings(xbmc.player.musicviz)</onclick>
+							<onup>20</onup>
+							<ondown>noop</ondown>
+							<onleft>8</onleft>
+							<onright>13</onright>
+							<enable>Skin.HasSetting(OSDVisualisation.Enabled)</enable>
+							<animation effect="fade" end="50" time="0" condition="!Control.IsEnabled(500)">Conditional</animation>
+						</control>
+						<control type="button" id="13">
+							<description>Choose viz</description>
+							<posx>1280</posx>
+							<height>70</height>
+							<width>70</width>
+							<texturefocus>osd/fullscreen/buttons/viz-presets-fo.png</texturefocus>
+							<texturenofocus>osd/fullscreen/buttons/viz-presets-nofo.png</texturenofocus>
+							<onclick>ActivateWindow(122)</onclick>
+							<onup>20</onup>
+							<ondown>noop</ondown>
+							<onleft>500</onleft>
+							<onright>14</onright>
+							<enable>Skin.HasSetting(OSDVisualisation.Enabled)</enable>
+							<animation effect="fade" end="50" time="0" condition="!Control.IsEnabled(13)">Conditional</animation>
+						</control>
+						<control type="button" id="14">
+							<description>Viz settings</description>
+							<posx>1340</posx>
+							<height>70</height>
+							<width>70</width>
+							<texturefocus>osd/fullscreen/buttons/viz-settings-fo.png</texturefocus>
+							<texturenofocus>osd/fullscreen/buttons/viz-settings-nofo.png</texturenofocus>
+							<onclick>Addon.Default.OpenSettings(xbmc.player.musicviz)</onclick>
+							<onup>20</onup>
+							<ondown>noop</ondown>
+							<onleft>13</onleft>
+							<onright>7</onright>
+							<enable>Skin.HasSetting(OSDVisualisation.Enabled)</enable>
+							<animation effect="fade" end="50" time="0" condition="!Control.IsEnabled(14)">Conditional</animation>
+						</control>
 					</control>
 				</control>
 			</control>

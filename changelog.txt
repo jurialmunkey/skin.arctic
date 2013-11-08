@@ -5,7 +5,8 @@ Consolidation of OSD info views
   -- On-screen called 'on-screen'
   -- Full-width removed
 Music OSD uses artistslideshow additional info (bio, similar, discog)
-
+Fixed Onscreen music-osd icon size
+Fixed Offset music-osd icon spacing
 
 [B]0.4.4[/B]
 Updates to on-screen music info view

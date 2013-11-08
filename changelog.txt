@@ -8,6 +8,7 @@ Music OSD uses artistslideshow additional info (bio, similar, discog)
 Fixed Onscreen music-osd icon size
 Fixed Offset music-osd icon spacing
 Onscreen video updates
+Fixed cover fade for music info wall
 
 [B]0.4.4[/B]
 Updates to on-screen music info view

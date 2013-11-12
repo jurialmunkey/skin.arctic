@@ -5114,7 +5114,7 @@
 				<aspectratio align="center" aligny="center">keep</aspectratio>
 				<texture fallback="special://skin/extras/studioflags/default-studio.png">$VAR[AeonFlagHDSD]</texture>
 				<colordiffuse>Mod_Tags_Alt</colordiffuse>
-				<visible>[Container.Content(episodes) | Container.Content(movies)]  + !substring(ListItem.Path,videodb://1/7,left)</visible>
+				<visible>[Container.Content(episodes) | Container.Content(movies)]  + ![substring(ListItem.Path,videodb://1/7,left) | substring(ListItem.Path,videodb://movies/sets,left)]</visible>
 				<animation effect="fade" end="90" condition="true">Conditional</animation>
 			</control>
 			<control type="image">
@@ -5125,7 +5125,7 @@
 				<aspectratio align="center" aligny="center">keep</aspectratio>
 				<texture fallback="special://skin/extras/studioflags/default-studio.png">flags/other/set-default.png</texture>
 				<colordiffuse>Mod_Tags_Alt</colordiffuse>
-				<visible>[Container.Content(episodes) | Container.Content(movies)] + substring(ListItem.Path,videodb://1/7,left)</visible>
+				<visible>[Container.Content(episodes) | Container.Content(movies)] + [substring(ListItem.Path,videodb://1/7,left) | substring(ListItem.Path,videodb://movies/sets,left)]</visible>
 				<animation effect="fade" end="90" condition="true">Conditional</animation>
 			</control>
 			<control type="image">
@@ -5145,7 +5145,7 @@
 				<aspectratio align="center" aligny="center">keep</aspectratio>
 				<texture fallback="special://skin/extras/studioflags/default-studio.png">$VAR[AeonFlagVideoCodec]</texture>
 				<colordiffuse>Mod_Tags</colordiffuse>
-				<visible>[Container.Content(episodes) | Container.Content(movies)] + !substring(ListItem.Path,videodb://1/7,left)</visible>
+				<visible>[Container.Content(episodes) | Container.Content(movies)] + ![substring(ListItem.Path,videodb://1/7,left) | substring(ListItem.Path,videodb://movies/sets,left)]</visible>
 			</control>
 			<control type="image">
 				<posx>0</posx>
@@ -5164,7 +5164,7 @@
 				<aspectratio align="center" aligny="center">keep</aspectratio>
 				<texture fallback="special://skin/extras/studioflags/default-studio.png">$VAR[AeonFlagAudioCodec]</texture>
 				<colordiffuse>Mod_Tags</colordiffuse>
-				<visible>[Container.Content(episodes) | Container.Content(movies)] + !substring(ListItem.Path,videodb://1/7,left)</visible>
+				<visible>[Container.Content(episodes) | Container.Content(movies)] + ![substring(ListItem.Path,videodb://1/7,left) | substring(ListItem.Path,videodb://movies/sets,left)]</visible>
 			</control>
 			<control type="label">
 				<font>Font-Alaska-S25-BL</font>
@@ -5177,7 +5177,7 @@
 				<aligny>center</aligny>
 				<label>20457</label>
 				<scroll>false</scroll>
-				<visible>[Container.Content(episodes) | Container.Content(movies)] + substring(ListItem.Path,videodb://1/7,left)</visible>
+				<visible>[Container.Content(episodes) | Container.Content(movies)] + [substring(ListItem.Path,videodb://1/7,left) | substring(ListItem.Path,videodb://movies/sets,left)]</visible>
 			</control>
 			<control type="image">
 				<posx>20</posx>

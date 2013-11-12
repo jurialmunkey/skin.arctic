@@ -252,7 +252,6 @@
 							<textcolor>mod-infotags-alt</textcolor>
 							<align>justify</align>
 							<autoscroll delay="13000" time="3000" repeat="13000" />
-							<visible>!substring(ListItem.Path,videodb://1/7,left)</visible>
 							<visible>Skin.HasSetting(music.panellist.showplot)</visible>
 						</control>
 						<control type="image">

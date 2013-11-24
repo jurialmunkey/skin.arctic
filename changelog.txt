@@ -5,6 +5,7 @@ Full-width option for both styles
 Improvements to OSD modular navigation
 Addition of DialogSubtitles.xml plus Gotham subs OSD button (untested)
 Added a monospaced font for Seekbar timer
+Fixed DialogSeekbar.xml for Channel Change time in LiveTV
 
 [B]0.4.5[/B]
 Consolidation of OSD info views

@@ -1,3 +1,7 @@
+[B]0.4.7[/B]
+Update simple home widgets style
+Added label for simple home widgets
+
 [B]0.4.6[/B]
 Changes to offset OSD (new style)
 Moved OSD controls for tabbed to lower part of screen

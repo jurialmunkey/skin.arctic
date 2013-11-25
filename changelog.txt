@@ -1,7 +1,9 @@
 [B]0.4.7[/B]
 Update simple home widgets style
 Added label for simple home widgets
-Changed widget clearlogo placeholders to empty
+Changed widget clearlogo placeholders to blank images
+Home list highlight turns off when widgets or power menu on
+Removed "Flatten" from MyVideoNav.xml (Gotham change)
 
 [B]0.4.6[/B]
 Changes to offset OSD (new style)

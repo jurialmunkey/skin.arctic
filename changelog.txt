@@ -1,6 +1,7 @@
 [B]0.4.7[/B]
 Update simple home widgets style
 Added label for simple home widgets
+Changed widget clearlogo placeholders to empty
 
 [B]0.4.6[/B]
 Changes to offset OSD (new style)

@@ -14,7 +14,7 @@
 	</variable>
     <include name="Viewtype-MusicInfoList"> 
     	<control type="group">  
-    		<visible>Control.IsVisible(61) + !Window.IsActive(movieinformation) + !Window.IsActive(script-Actors-DialogInfo.xml) + !Window.IsActive(script-Actors-DialogVideoInfo.xml) + IsEmpty(Window(Home).Property(script.metadata.actors.hasparent)) + !Window.IsActive(addoninformation) + !Window.IsActive(favourites)</visible> 
+    		<visible>Control.IsVisible(61) + !Window.IsActive(musicinformation) + !Window.IsActive(addoninformation) + !Window.IsActive(favourites)</visible> 
     		<include>CommonViewAnimations</include>
             <include>OptionsShutdownAnimation</include>
             <control type="group">

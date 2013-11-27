@@ -89,7 +89,7 @@
 				<visible>Player.Passthrough + [Window.IsActive(fullscreenvideo) | Window.IsActive(visualisation)] + Window.IsActive(volumebar)</visible>
 				<control type="label">
 					<description>Volume label</description>
-					<posx>1900</posx>
+					<posx>20</posx>
 					<posy>-11</posy>
 					<width>500</width>
 					<height>78</height>
@@ -97,7 +97,7 @@
 					<font>Font-Alaska-S28-L</font>
 					<textcolor>$VAR[osd.text.dark]</textcolor>
 					<shadowcolor>33ffffff</shadowcolor>
-					<align>right</align>
+					<align>left</align>
 					<scroll>No</scroll>
 				</control>
 			</control>

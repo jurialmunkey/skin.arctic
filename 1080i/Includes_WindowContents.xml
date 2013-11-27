@@ -351,11 +351,15 @@
             <randomize>true</randomize>
             <fadetime>600</fadetime>
             <loop>yes</loop>
+            <animation type="Visible">
+            	<effect type="slide" start="0" end="0" time="1400"/>
+            	<effect type="fade" start="0" end="100" delay="800" time="600"/>
+            </animation>
             <include>Animation_FanartFade</include>
             <imagepath background="true">$VAR[extrafanart.path]</imagepath>
             <animation effect="zoom" start="110" end="130" center="auto" time="10000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(Fanart.Animate)">Conditional</animation>
             <animation effect="slide" start="-30,-30" end="30,30" time="6000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(Fanart.Animate)">Conditional</animation>
-            <visible>!SubString(Container.FolderPath,plugin://,left) + System.IdleTime(1.4) + !Skin.HasSetting(HideFanart) + ![Skin.HasSetting(BackgroundVideo) + Player.HasVideo] + !Window.IsActive(favourites) + [[Skin.HasSetting(tvshows.use.extrafanart) + [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]] | [Skin.HasSetting(movies.use.extrafanart) + Container.Content(movies)] | [Skin.HasSetting(music.use.extrafanart) + [Container.Content(albums) | Container.Content(artists) | Container.Content(songs)]]]</visible>
+            <visible>!SubString(Container.FolderPath,plugin://,left) + [System.IdleTime(1.4) | Container.Content(episodes) | Container.Content(seasons) | Container.Content(songs)] + !Skin.HasSetting(HideFanart) + ![Skin.HasSetting(BackgroundVideo) + Player.HasVideo] + !Window.IsActive(favourites) + [[Skin.HasSetting(tvshows.use.extrafanart) + [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]] | [Skin.HasSetting(movies.use.extrafanart) + Container.Content(movies)] | [Skin.HasSetting(music.use.extrafanart) + [Container.Content(albums) | Container.Content(artists) | Container.Content(songs)]]]</visible>
         </control>
     </include>
     <include name="BackgroundFanartMusicOSD">

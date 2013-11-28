@@ -12,7 +12,7 @@
 				<control type="group">
 					<control type="image">
 						<posx>0</posx>
-						<posy>36</posy>
+						<posy>40</posy>
 						<width>250</width>
 						<height>110</height>
 						<bordertexture border="40">arctic/common/border-20.png</bordertexture>
@@ -24,7 +24,7 @@
 					</control>
 					<control type="image">
 						<posx>0</posx>
-						<posy>36</posy>
+						<posy>40</posy>
 						<width>250</width>
 						<height>110</height>
 						<bordertexture border="40">arctic/common/border-20.png</bordertexture>
@@ -89,15 +89,15 @@
 				<visible>Player.Passthrough + [Window.IsActive(fullscreenvideo) | Window.IsActive(visualisation)] + Window.IsActive(volumebar)</visible>
 				<control type="label">
 					<description>Volume label</description>
-					<posx>20</posx>
+					<posx>0</posx>
 					<posy>-11</posy>
-					<width>500</width>
+					<width>1920</width>
 					<height>78</height>
 					<label>$LOCALIZE[29802]</label>
 					<font>Font-Alaska-S28-L</font>
 					<textcolor>$VAR[osd.text.dark]</textcolor>
 					<shadowcolor>33ffffff</shadowcolor>
-					<align>left</align>
+					<align>center</align>
 					<scroll>No</scroll>
 				</control>
 			</control>

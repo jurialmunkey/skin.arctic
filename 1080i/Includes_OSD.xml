@@ -155,10 +155,11 @@
     
     <include name="OSDChapterInfo">
         <control type="group">
-        	<visible>[[!IsEmpty(Window(seekbar).Property(ShowInfo)) | Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Window.IsActive(videoosd) | Window.IsActive(musicosd) | Window.IsActive(fullscreenvideo)] + !Player.ShowCodec + !Window.IsActive(script-XBMC_Lyrics-main.xml) + !IsEmpty(Player.Chapter) + IntegerGreaterThan(Player.ChapterCount,0)]</visible>
-            <animation effect="slide" end="-70"  time="200" tween="sine" easing="inout" condition="[Window.IsVisible(volumebar) | Window.IsVisible(mutebug)]">Conditional</animation>
+        	<visible>[[!IsEmpty(Window(seekbar).Property(ShowInfo)) | Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Player.ShowInfo | Window.IsActive(videoosd) | Window.IsActive(musicosd) | Window.IsActive(fullscreenvideo)] + !Player.ShowCodec + !Window.IsActive(script-XBMC_Lyrics-main.xml) + !IsEmpty(Player.Chapter) + IntegerGreaterThan(Player.ChapterCount,0)]</visible>
+            <!--<animation effect="slide" end="-70"  time="200" tween="sine" easing="inout" condition="[Window.IsVisible(volumebar) | Window.IsVisible(mutebug)]">Conditional</animation>-->
             <include>OSDClockAnimation</include>
-            <posx>990</posx>
+            <!--<posx>990</posx>-->
+            <posx>0</posx>
 			<animation type="Conditional" condition="Window.IsActive(infodialog)">
                 <effect type="fade" start="100" end="8" tween="sine" easing="out" time="300" /> 
                 <effect type="zoom" start="100" end="50" center="1569,97" tween="sine" easing="inout" time="300" />
@@ -166,7 +167,7 @@
             <control type="group">
 				<control type="image">
 					<posx>150</posx>
-					<posy>-30</posy>
+					<posy>-26</posy>
 					<width>320</width>
 					<height>110</height>
 					<bordertexture border="40">arctic/common/border-20.png</bordertexture>
@@ -178,7 +179,7 @@
 				</control>
 				<control type="image">
 					<posx>150</posx>
-					<posy>-30</posy>
+					<posy>-26</posy>
 					<width>320</width>
 					<height>110</height>
 					<bordertexture border="40">arctic/common/border-20.png</bordertexture>
@@ -217,7 +218,7 @@
             	<control type="group">
 					<control type="image">
 						<posx>0</posx>
-						<posy>-30</posy>
+						<posy>-26</posy>
 						<width>340</width>
 						<height>110</height>
 						<bordertexture border="40">arctic/common/border-20.png</bordertexture>
@@ -226,10 +227,10 @@
 						<aspectratio>stretch</aspectratio>
 						<colordiffuse>mod-osdbar</colordiffuse>
 						<visible>!Skin.HasSetting(osd.darkpanel)</visible>
-					</control>
+					</control>	
 					<control type="image">
 						<posx>0</posx>
-						<posy>-30</posy>
+						<posy>-26</posy>
 						<width>340</width>
 						<height>110</height>
 						<bordertexture border="40">arctic/common/border-20.png</bordertexture>

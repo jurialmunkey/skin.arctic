@@ -213,7 +213,7 @@
             </animation>
 			<!-- Clocks -->
             <control type="group">
-            	<animation effect="slide" end="-70" time="200" tween="sine" easing="inout" condition="[Window.IsVisible(volumebar) | Window.IsVisible(mutebug)]">Conditional</animation>
+            	<animation effect="slide" end="-70" time="200" tween="sine" easing="inout" condition="[Window.IsVisible(volumebar) | Window.IsVisible(mutebug)] + !Player.Passthrough">Conditional</animation>
             	<posx>1430</posx>
             	<control type="group">
 					<control type="image">

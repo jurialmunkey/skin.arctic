@@ -9,6 +9,7 @@ Fix music panel list not hiding for music info
 Fix extrafanart System.IdleTime for navigation
 Fix extrafanart showing previous fanart
 Fix passthrough audio label - moved to left side 
+Added support for videoextras addon
 
 [B]0.4.6[/B]
 Changes to offset OSD (new style)

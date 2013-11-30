@@ -23,7 +23,7 @@
 				<posy>40</posy>
 				<control type="label">
 					<posx>-20</posx>
-					<posy>4</posy>
+					<posy>0</posy>
 					<width>500</width>
 					<label>$INFO[ListItem.TvShowTitle]</label>
 					<font>Font-Alaska-S34-BL</font>
@@ -34,7 +34,7 @@
 				</control>
 				<control type="label">
 					<posx>-20</posx>
-					<posy>34</posy>
+					<posy>30</posy>
 					<width>500</width>
 					<label>$INFO[ListItem.Season,$LOCALIZE[20373] ,  ]$INFO[ListItem.Episode,$LOCALIZE[20359] ,]</label>
 					<font>Font-Alaska-S25-L</font>
@@ -56,7 +56,7 @@
 				</control>
 				<control type="label">
 					<posx>100</posx>
-					<posy>4</posy>
+					<posy>0</posy>
 					<width>900</width>
 					<label>$VAR[MainTitle]</label>
 					<font>Font-Alaska-S34-BL</font>
@@ -68,7 +68,7 @@
 				</control>
 				<control type="label">
 					<posx>100</posx>
-					<posy>34</posy>
+					<posy>30</posy>
 					<width>900</width>
 					<label>$VAR[BannerList-Indicator,,  ]$VAR[UnderTitle]</label>
 					<font>Font-Alaska-S25-L</font>
@@ -132,8 +132,8 @@
 						<posy>5</posy>
 						<posx>865</posx>
 						<control type="group">
-							<posx>830</posx>
-							<posy>-30</posy>
+							<posx>824</posx>
+							<posy>-26</posy>
 							<include>Mod_Banner_Stars</include>
 						</control>
 						<control type="label">
@@ -153,7 +153,7 @@
 							<posx>100</posx>
 							<control type="label">
 								<posx>0</posx>
-								<posy>4</posy>
+								<posy>0</posy>
 								<width>690</width>
 								<label>$VAR[MainTitle]</label>
 								<font>Font-Alaska-S34-BL</font>
@@ -163,9 +163,9 @@
 							</control>
 							<control type="label">
 								<posx>0</posx>
-								<posy>34</posy>
+								<posy>30</posy>
 								<width>900</width>
-								<label>$VAR[BannerList-Indicator,,  ]$VAR[UnderTitle]</label>
+								<label>$VAR[BannerList-Indicator,,  ]$VAR[UnderTitle]$VAR[UnderTitle-Recent]</label>
 								<font>Font-Alaska-S25-L</font>
 								<textcolor>mod-infotags-alt2</textcolor>
 								<scroll>false</scroll>

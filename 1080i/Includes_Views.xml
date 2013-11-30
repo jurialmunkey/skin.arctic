@@ -687,6 +687,9 @@
     </variable>
     
     <!-- VIEWTYPES -->
+    <variable name="UnderTitle-Recent">
+		<value condition="stringcompare(Container.FolderPath,library://video/recentlyaddedepisodes.xml/) | stringcompare(Container.FolderPath,videodb://5/) | stringcompare(Container.FolderPath,videodb://recentlyaddedepisodes/)">$INFO[ListItem.TVShowTitle, • ,]$INFO[ListItem.Season, • ,]$INFO[ListItem.Episode,x,]</value>
+    </variable>
 	<variable name="UnderTitle">
 		<value condition="Container.Content(seasons) | Container.Content(tvshows)">$INFO[ListItem.Property(TotalEpisodes),, $LOCALIZE[20360]]$INFO[ListItem.Property(UnWatchedEpisodes),  •  , $LOCALIZE[16101]]</value>
 		<value condition="Container.Content(episodes)">$INFO[ListItem.Premiered]$INFO[ListItem.Duration, • , $LOCALIZE[12391]]</value>

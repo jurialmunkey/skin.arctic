@@ -10,6 +10,8 @@ Fix extrafanart System.IdleTime for navigation
 Fix extrafanart showing previous fanart
 Fix passthrough audio label - moved to left side 
 Added support for videoextras addon
+Alignment fix for Banner List
+Additions for Banner List in Recently Added Episodes view
 
 [B]0.4.6[/B]
 Changes to offset OSD (new style)

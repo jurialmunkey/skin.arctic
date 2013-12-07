@@ -90,7 +90,7 @@
 		<onup condition="Player.ShowInfo + stringcompare(Skin.String(video.seekbar.type),medium) + !IsEmpty(Window(seekbar).Property(ExtendPlot))">SetProperty(ShowNext,1,seekbar)</onup>
 		<onup condition="Player.ShowInfo + stringcompare(Skin.String(video.seekbar.type),medium) + IsEmpty(Window(seekbar).Property(ExtendPlot))">SetProperty(ExtendPlot,1,seekbar)</onup>
 		<onup condition="!Player.ShowInfo">Action(Info)</onup>
-		<ondown condition="!IsEmpty(Window(seekbar).Property(ExtendPlot)) + IsEmpty(Window(seekbar).Property(ShowNext))">ClearProperty(ExtendPlot,seekbar)</ondown>
+		<ondown condition="!IsEmpty(Window(seekbar).Property(ExtendPlot)) + IsEmpty(Window(seekbar).Property(ShowNext)) + Skin.HasSetting(video.seekbar.showplot)">ClearProperty(ExtendPlot,seekbar)</ondown>
 		<ondown condition="Player.ShowInfo + IsEmpty(Window(seekbar).Property(ShowNext))">Action(Info)</ondown>
 		<ondown condition="Player.ShowInfo + !IsEmpty(Window(seekbar).Property(ShowNext))">ClearProperty(ShowNext,seekbar)</ondown>
 		<ondown condition="!Player.ShowInfo">Close</ondown>
@@ -134,7 +134,8 @@
     
     <variable name="OSDPlot">
         <value condition="VideoPlayer.Content(LiveTV) + !IsEmpty(Window(seekbar).Property(ShowNext))">$INFO[VideoPlayer.NextPlot]</value>
-        <value condition="!VideoPlayer.Content(LiveTV) + IsEmpty(Window(seekbar).Property(ShowNext)) + !system.getbool(videolibrary.showunwatchedplots) + IsEmpty(VideoPlayer.PlayCount)">$LOCALIZE[42460]</value>
+        <!--<value condition="!VideoPlayer.Content(LiveTV) + IsEmpty(Window(seekbar).Property(ShowNext)) + !system.getbool(videolibrary.showunwatchedplots) + IsEmpty(VideoPlayer.PlayCount)">$LOCALIZE[42460]</value>-->
+        <value condition="!VideoPlayer.Content(LiveTV) + IsEmpty(Window(seekbar).Property(ShowNext)) + Skin.HasSetting(video.seekbar.showplot) + stringcompare(Skin.String(video.seekbar.type),small) + !Skin.HasSetting(video.seekbar.showinfo)">$LOCALIZE[42460]</value>
         <value>$INFO[VideoPlayer.Plot]</value>
     </variable>
     
@@ -156,6 +157,7 @@
     
     <include name="OSDChapterInfo">
         <control type="group">
+        	<animation effect="slide" end="0,20" condition="Skin.HasSetting(osd.topitems)">Conditional</animation>
         	<visible>[[!IsEmpty(Window(seekbar).Property(ShowInfo)) | Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Player.ShowInfo | Window.IsActive(videoosd) | Window.IsActive(musicosd) | Window.IsActive(fullscreenvideo)] + !Player.ShowCodec + !Window.IsActive(script-XBMC_Lyrics-main.xml) + !IsEmpty(Player.Chapter) + IntegerGreaterThan(Player.ChapterCount,0)]</visible>
             <!--<animation effect="slide" end="-70"  time="200" tween="sine" easing="inout" condition="[Window.IsVisible(volumebar) | Window.IsVisible(mutebug)]">Conditional</animation>-->
             <include>OSDClockAnimation</include>
@@ -207,6 +209,7 @@
     <include name="OSDWeatherClock">
         <control type="group">
             <include>OSDClockAnimation</include>
+            <animation effect="slide" end="0,20" condition="Skin.HasSetting(osd.topitems)">Conditional</animation>
             <visible>[Player.ShowInfo | Player.Muted | substring(Player.Volume,-60.0) | Window.IsActive(volumebar) | Window.IsActive(mutebug) | !IsEmpty(Window(seekbar).Property(ShowInfo)) | Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Window.IsActive(videoosd) | Window.IsActive(musicosd) | Window.IsActive(fullscreenvideo)] + [!Player.ShowCodec | Window.IsActive(visualisation)]</visible>
             <animation type="Conditional" condition="Window.IsActive(infodialog)">
                 <effect type="fade" start="100" end="8" tween="sine" easing="out" time="300" /> 

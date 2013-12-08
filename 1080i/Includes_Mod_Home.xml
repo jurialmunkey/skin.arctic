@@ -397,7 +397,6 @@
 								<height>600</height>
 								<viewtype>list</viewtype>
 								<orientation>horizontal</orientation>
-								<visible>![Control.HasFocus(84) | Control.HasFocus(85) | Window.IsActive(favourites) | [Container(525).HasFocus(7) + !Skin.HasSetting(UseRCB)]]</visible>
 								<include>Mod_82Layout</include>
 								<content>
 									<include>Mod_82Content</include>

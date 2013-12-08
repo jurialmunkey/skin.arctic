@@ -148,6 +148,7 @@
 					<onclick condition="substring(Window(3062).Property(edit_submenu),picture)">SetProperty(Dialog,$LOCALIZE[10002],skinsettings)</onclick>
 					<onclick condition="substring(Window(3062).Property(edit_submenu),program)">SetProperty(Dialog,$LOCALIZE[41504],skinsettings)</onclick>
 					<onclick condition="substring(Window(3062).Property(edit_submenu),weather)">SetProperty(Dialog,$LOCALIZE[12600],skinsettings)</onclick>
+					<onclick condition="substring(Window(3062).Property(edit_widget),favourites)">SetProperty(Dialog,$LOCALIZE[41251],skinsettings)</onclick>
 					<onclick condition="substring(Window(3062).Property(edit_widget),settings)">SetProperty(Dialog,$LOCALIZE[5],skinsettings)</onclick>
 					<onclick condition="substring(Window(3062).Property(edit_widget),pvr)">SetProperty(Dialog,$LOCALIZE[41220],skinsettings)</onclick>
 					<onclick>ActivateWindow(3002)</onclick>

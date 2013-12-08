@@ -76,79 +76,85 @@
 					<visible>!Skin.HasSetting(disable.pvr)</visible>
 				</control>
 				<control type="label">
-					<label>[COLOR red]$LOCALIZE[41220][/COLOR]</label>
+					<label>$LOCALIZE[41220]</label>
 					<include>Mod_HomeLabel</include>
 					<animation effect="fade" start="100" end="30" time="250" condition="!Control.HasFocus(3) | !Container(3).HasFocus(4)">Conditional</animation>
 					<visible>Skin.HasSetting(disable.pvr)</visible>
 				</control>
 				<control type="label">
-					<label>$INFO[Skin.String(Home.Movies.Tile.0.Label)]</label>
+					<label fallback="20190">$INFO[Skin.String(Home.Movies.Tile.0.Label)]</label>
 					<include>Mod_HomeLabel</include>
 					<animation effect="fade" start="100" end="30" time="250" condition="!Control.HasFocus(3) | !Container(3).HasFocus(1)">Conditional</animation>
 					<visible>!Skin.HasSetting(disable.movies)</visible>
 				</control>
 				<control type="label">
-					<label>[COLOR red]$INFO[Skin.String(Home.Movies.Tile.0.Label)][/COLOR]</label>
+					<textcolor>red</textcolor>
+					<label fallback="20190">$INFO[Skin.String(Home.Movies.Tile.0.Label)]</label>
 					<include>Mod_HomeLabel</include>
 					<animation effect="fade" start="100" end="30" time="250" condition="!Control.HasFocus(3) | !Container(3).HasFocus(1)">Conditional</animation>
 					<visible>Skin.HasSetting(disable.movies)</visible>
 				</control>
 				<control type="label">
-					<label>$INFO[Skin.String(Home.TvShows.Tile.0.Label)]</label>
+					<label fallback="20190">$INFO[Skin.String(Home.TvShows.Tile.0.Label)]</label>
 					<include>Mod_HomeLabel</include>
 					<animation effect="fade" start="100" end="30" time="250" condition="!Control.HasFocus(3) | !Container(3).HasFocus(2)">Conditional</animation>
 					<visible>!Skin.HasSetting(disable.tvshows)</visible>
 				</control>
 				<control type="label">
-					<label>[COLOR red]$INFO[Skin.String(Home.TvShows.Tile.0.Label)][/COLOR]</label>
+					<textcolor>red</textcolor>
+					<label fallback="20190">$INFO[Skin.String(Home.TvShows.Tile.0.Label)]</label>
 					<include>Mod_HomeLabel</include>
 					<animation effect="fade" start="100" end="30" time="250" condition="!Control.HasFocus(3) | !Container(3).HasFocus(2)">Conditional</animation>
 					<visible>Skin.HasSetting(disable.tvshows)</visible>
 				</control>
 				<control type="label">
-					<label>$INFO[Skin.String(Home.Music.Tile.0.Label)]</label>
+					<label fallback="20190">$INFO[Skin.String(Home.Music.Tile.0.Label)]</label>
 					<include>Mod_HomeLabel</include>
 					<animation effect="fade" start="100" end="30" time="250" condition="!Control.HasFocus(3) | !Container(3).HasFocus(3)">Conditional</animation>
 					<visible>!Skin.HasSetting(disable.music)</visible>
 				</control>
 				<control type="label">
-					<label>[COLOR red]$INFO[Skin.String(Home.Music.Tile.0.Label)][/COLOR]</label>
+					<textcolor>red</textcolor>
+					<label fallback="20190">$INFO[Skin.String(Home.Music.Tile.0.Label)]</label>
 					<include>Mod_HomeLabel</include>
 					<animation effect="fade" start="100" end="30" time="250" condition="!Control.HasFocus(3) | !Container(3).HasFocus(3)">Conditional</animation>
 					<visible>Skin.HasSetting(disable.music)</visible>
 				</control>
 				<control type="label">
-					<label>$INFO[Skin.String(Home.Pictures.Tile.0.Label)]</label>
+					<label fallback="20190">$INFO[Skin.String(Home.Pictures.Tile.0.Label)]</label>
 					<include>Mod_HomeLabel</include>
 					<animation effect="fade" start="100" end="30" time="250" condition="!Control.HasFocus(3) | !Container(3).HasFocus(5)">Conditional</animation>
 					<visible>!Skin.HasSetting(disable.pictures)</visible>
 				</control>
 				<control type="label">
-					<label>[COLOR red]$INFO[Skin.String(Home.Pictures.Tile.0.Label)][/COLOR]</label>
+					<textcolor>red</textcolor>
+					<label fallback="20190">$INFO[Skin.String(Home.Pictures.Tile.0.Label)]</label>
 					<include>Mod_HomeLabel</include>
 					<animation effect="fade" start="100" end="30" time="250" condition="!Control.HasFocus(3) | !Container(3).HasFocus(5)">Conditional</animation>
 					<visible>Skin.HasSetting(disable.pictures)</visible>
 				</control>
 				<control type="label">
-					<label>$INFO[Skin.String(Home.Programs.Tile.0.Label)]</label>
+					<label fallback="20190">$INFO[Skin.String(Home.Programs.Tile.0.Label)]</label>
 					<include>Mod_HomeLabel</include>
 					<animation effect="fade" start="100" end="30" time="250" condition="!Control.HasFocus(3) | !Container(3).HasFocus(7)">Conditional</animation>
 					<visible>!Skin.HasSetting(disable.programs)</visible>
 				</control>
 				<control type="label">
-					<label>[COLOR red]$INFO[Skin.String(Home.Programs.Tile.0.Label)][/COLOR]</label>
+					<textcolor>red</textcolor>
+					<label fallback="20190">$INFO[Skin.String(Home.Programs.Tile.0.Label)]</label>
 					<include>Mod_HomeLabel</include>
 					<animation effect="fade" start="100" end="30" time="250" condition="!Control.HasFocus(3) | !Container(3).HasFocus(7)">Conditional</animation>
 					<visible>Skin.HasSetting(disable.programs)</visible>
 				</control>
 				<control type="label">
-					<label>$INFO[Skin.String(Home.Weather.Tile.0.Label)]</label>
+					<label fallback="20190">$INFO[Skin.String(Home.Weather.Tile.0.Label)]</label>
 					<include>Mod_HomeLabel</include>
 					<animation effect="fade" start="100" end="30" time="250" condition="!Control.HasFocus(3) | !Container(3).HasFocus(8)">Conditional</animation>
 					<visible>!Skin.HasSetting(disable.weather)</visible>
 				</control>
 				<control type="label">
-					<label>[COLOR red]$INFO[Skin.String(Home.Weather.Tile.0.Label)][/COLOR]</label>
+					<textcolor>red</textcolor>
+					<label fallback="20190">$INFO[Skin.String(Home.Weather.Tile.0.Label)]</label>
 					<include>Mod_HomeLabel</include>
 					<animation effect="fade" start="100" end="30" time="250" condition="!Control.HasFocus(3) | !Container(3).HasFocus(8)">Conditional</animation>
 					<visible>Skin.HasSetting(disable.weather)</visible>

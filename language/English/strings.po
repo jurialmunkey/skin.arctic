@@ -1336,3 +1336,7 @@ msgctxt "#42476"
 msgid "Automatically show widgets after delay"
 msgstr ""
 
+msgctxt "#42477"
+msgid "Use slideshow in system info widget?"
+msgstr ""
+

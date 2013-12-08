@@ -403,7 +403,7 @@
     <include name="SettingsBackgroundDialogGlobal">
         <control type="image">
             <include>SettingsBackgroundDialogImageVars</include>
-            <texture background="true" fallback="special://skin/extras/backgrounds/09.jpg" diffuse="arctic/dialog/filebg.png">$INFO[Skin.String(GlobalBackdropSingle)]</texture>
+            <texture background="true" fallback="special://skin/extras/backgrounds/01.jpg" diffuse="arctic/dialog/filebg.png">$INFO[Skin.String(GlobalBackdropSingle)]</texture>
             <visible>IsEmpty(Skin.String(GlobalBackdropMulti))</visible>
         </control>
         
@@ -573,7 +573,7 @@
                 <include>SettingsBackgroundDialogRadioButtonVars-l</include>
                 <selected>!IsEmpty(Skin.String(HomeMoviesMultiImage))</selected>
                 <onclick>Skin.Reset(HomeMoviesSingleImage)</onclick>
-                <onclick>Skin.SetString(HomeMoviesMultiImage,special://skin/extras/backgrounds/movies/)</onclick>
+                <onclick>Skin.SetString(HomeMoviesMultiImage,special://skin/extras/backgrounds/)</onclick>
                 <label>$LOCALIZE[41253]</label>
                 <animation effect="fade" end="47" time="0" condition="!Control.IsEnabled(2103)">Conditional</animation>
             </control>
@@ -643,7 +643,7 @@
                 <include>SettingsBackgroundDialogRadioButtonVars-l</include>
                 <selected>!IsEmpty(Skin.String(HomeTVShowsMultiImage))</selected>
                 <onclick>Skin.Reset(HomeTVShowsSingleImage)</onclick>
-                <onclick>Skin.SetString(HomeTVShowsMultiImage,special://skin/extras/backgrounds/tvshows/)</onclick>
+                <onclick>Skin.SetString(HomeTVShowsMultiImage,special://skin/extras/backgrounds/)</onclick>
                 <label>$LOCALIZE[41253]</label>
                 <animation effect="fade" end="47" time="0" condition="!Control.IsEnabled(2103)">Conditional</animation>
             </control>
@@ -713,7 +713,7 @@
                 <include>SettingsBackgroundDialogRadioButtonVars-l</include>
                 <selected>!IsEmpty(Skin.String(HomeMusicMultiImage))</selected>
                 <onclick>Skin.Reset(HomeMusicSingleImage)</onclick>
-                <onclick>Skin.SetString(HomeMusicMultiImage,special://skin/extras/backgrounds/music/)</onclick>
+                <onclick>Skin.SetString(HomeMusicMultiImage,special://skin/extras/backgrounds/)</onclick>
                 <label>$LOCALIZE[41253]</label>
                 <animation effect="fade" end="47" time="0" condition="!Control.IsEnabled(2103)">Conditional</animation>
             </control>
@@ -783,7 +783,7 @@
                 <include>SettingsBackgroundDialogRadioButtonVars-l</include>
                 <selected>!IsEmpty(Skin.String(HomeProgramsMultiImage))</selected>
                 <onclick>Skin.Reset(HomeProgramsSingleImage)</onclick>
-                <onclick>Skin.SetString(HomeProgramsMultiImage,special://skin/extras/backgrounds/programs)</onclick>
+                <onclick>Skin.SetString(HomeProgramsMultiImage,special://skin/extras/backgrounds/)</onclick>
                 <label>$LOCALIZE[41253]</label>
                 <animation effect="fade" end="47" time="0" condition="!Control.IsEnabled(2103)">Conditional</animation>
             </control>
@@ -853,7 +853,7 @@
                 <include>SettingsBackgroundDialogRadioButtonVars-l</include>
                 <selected>!IsEmpty(Skin.String(HomeLiveTVMultiImage))</selected>
                 <onclick>Skin.Reset(HomeLiveTVSingleImage)</onclick>
-                <onclick>Skin.SetString(HomeLiveTVMultiImage,special://skin/extras/backgrounds/livetv/)</onclick>
+                <onclick>Skin.SetString(HomeLiveTVMultiImage,special://skin/extras/backgrounds/)</onclick>
                 <label>$LOCALIZE[41253]</label>
                 <animation effect="fade" end="47" time="0" condition="!Control.IsEnabled(2103)">Conditional</animation>
             </control>
@@ -923,7 +923,7 @@
                 <include>SettingsBackgroundDialogRadioButtonVars-l</include>
                 <selected>!IsEmpty(Skin.String(HomePicturesMultiImage))</selected>
                 <onclick>Skin.Reset(HomePicturesSingleImage)</onclick>
-                <onclick>Skin.SetString(HomePicturesMultiImage,special://skin/extras/backgrounds/pictures/)</onclick>
+                <onclick>Skin.SetString(HomePicturesMultiImage,special://skin/extras/backgrounds/)</onclick>
                 <label>$LOCALIZE[41253]</label>
                 <animation effect="fade" end="47" time="0" condition="!Control.IsEnabled(2103)">Conditional</animation>
             </control>
@@ -993,7 +993,7 @@
                 <include>SettingsBackgroundDialogRadioButtonVars-l</include>
                 <selected>!IsEmpty(Skin.String(HomeGamesMultiImage))</selected>
                 <onclick>Skin.Reset(HomeGamesSingleImage)</onclick>
-                <onclick>Skin.SetString(HomeGamesMultiImage,special://skin/extras/backgrounds/programs/)</onclick>
+                <onclick>Skin.SetString(HomeGamesMultiImage,special://skin/extras/backgrounds/)</onclick>
                 <label>$LOCALIZE[41253]</label>
                 <animation effect="fade" end="47" time="0" condition="!Control.IsEnabled(2103)">Conditional</animation>
             </control>
@@ -1070,7 +1070,7 @@
                 <selected>!IsEmpty(Skin.String(HomeWeatherMultiImage))</selected>
                 <onclick>Skin.Reset(HomeWeatherSingleImage)</onclick>
                 <onclick>Skin.Reset(HomeWeatherSingleImage)</onclick>
-                <onclick>Skin.SetString(HomeWeatherMultiImage,special://skin/extras/backgrounds/weather/)</onclick>
+                <onclick>Skin.SetString(HomeWeatherMultiImage,special://skin/extras/backgrounds/)</onclick>
                 <label>$LOCALIZE[41253]</label>
                 <animation effect="fade" end="47" time="0" condition="!Control.IsEnabled(2103)">Conditional</animation>
             </control>

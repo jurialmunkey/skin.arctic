@@ -1,3 +1,9 @@
+[B]0.5.1[/B]
+Removed Aeon Nox backgrounds
+Fixed Panel home labels in widgets
+Fixed some widgets not showing for panel
+Made slideshow for system info custom
+
 [B]0.5.0[/B]
 GUI customisation of categories, widgets, submenus, backgrounds
 Widgets can be set for any category

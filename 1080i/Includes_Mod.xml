@@ -380,7 +380,7 @@
 		<value condition="StringCompare(Container(525).ListItem.Property(widget),programs.addons)">$LOCALIZE[41550]</value>
 		<value condition="StringCompare(Container(525).ListItem.Property(widget),pictures.slideshow)">$LOCALIZE[108]</value>
 		<value condition="StringCompare(Container(525).ListItem.Property(widget),info.weather)">$LOCALIZE[10508]</value>
-		<value condition="StringCompare(Container(525).ListItem.Property(widget),info.system)">$LOCALIZE[138]</value>
+		<value condition="StringCompare(Container(525).ListItem.Property(widget),info.system) + !IsEmpty(Skin.String(pictures.slideshowpath))">$LOCALIZE[138]</value>
 		<value condition="StringCompare(Container(525).ListItem.Property(widget),movie.playlist1)">$INFO[Window.Property(WidgetPlayList1.Name)]</value>
 		<value condition="StringCompare(Container(525).ListItem.Property(widget),movie.playlist2)">$INFO[Window.Property(WidgetPlayList2.Name)]</value>
 		<value condition="StringCompare(Container(525).ListItem.Property(widget),movie.playlist3)">$INFO[Window.Property(WidgetPlayList3.Name)]</value>
@@ -6307,7 +6307,7 @@
 			<visible>!Skin.HasSetting(disable.movies) + Skin.HasSetting(HideSubmenuArrows)]</visible>
 		</control>
 		<control type="label">
-			<label>$INFO[Skin.String(Home.Movies.Tile.0.Label)]</label>
+			<label fallback="20190">$INFO[Skin.String(Home.Movies.Tile.0.Label)]</label>
 			<include>Mod_HomeLabel</include>
 			<animation effect="fade" start="100" end="30" time="250" condition="[!Control.HasFocus(525) + !Control.HasFocus(83)] | Control.HasFocus(85) | Control.HasFocus(84) | !Container(525).HasFocus(1)">Conditional</animation>
 			<visible>!Skin.HasSetting(disable.movies)</visible>
@@ -6333,7 +6333,7 @@
 		</control>
 
 		<control type="label">
-			<label>$INFO[Skin.String(Home.TvShows.Tile.0.Label)]</label>
+			<label fallback="20190">$INFO[Skin.String(Home.TvShows.Tile.0.Label)]</label>
 			<include>Mod_HomeLabel</include>
 			<animation effect="fade" start="100" end="30" time="250" condition="[!Control.HasFocus(525) + !Control.HasFocus(83)] | Control.HasFocus(85) | Control.HasFocus(84) | !Container(525).HasFocus(2)">Conditional</animation>
 			<visible>!Skin.HasSetting(disable.tvshows)</visible>
@@ -6358,7 +6358,7 @@
 			<visible>!Skin.HasSetting(disable.music) + Skin.HasSetting(HideSubmenuArrows)]</visible>
 		</control>
 		<control type="label">
-			<label>$INFO[Skin.String(Home.Music.Tile.0.Label)]</label>
+			<label fallback="20190">$INFO[Skin.String(Home.Music.Tile.0.Label)]</label>
 			<include>Mod_HomeLabel</include>
 			<animation effect="fade" start="100" end="30" time="250" condition="[!Control.HasFocus(525) + !Control.HasFocus(83)] | Control.HasFocus(85) | Control.HasFocus(84) | !Container(525).HasFocus(3)">Conditional</animation>
 			<visible>!Skin.HasSetting(disable.music)</visible>
@@ -6383,7 +6383,7 @@
 			<visible>!Skin.HasSetting(disable.pictures) + [[Skin.HasSetting(HomeClicksSubmenu) + StringCompare(Skin.String(homescreen.style),simple)] | Skin.HasSetting(HideSubmenuArrows)]</visible>
 		</control>
 		<control type="label">
-			<label>$INFO[Skin.String(Home.Pictures.Tile.0.Label)]</label>
+			<label fallback="20190">$INFO[Skin.String(Home.Pictures.Tile.0.Label)]</label>
 			<include>Mod_HomeLabel</include>
 			<animation effect="fade" start="100" end="30" time="250" condition="[!Control.HasFocus(525) + !Control.HasFocus(83)] | Control.HasFocus(85) | Control.HasFocus(84) | !Container(525).HasFocus(5)">Conditional</animation>
 			<visible>!Skin.HasSetting(disable.pictures)</visible>
@@ -6408,7 +6408,7 @@
 			<visible>!Skin.HasSetting(disable.programs) + [[Skin.HasSetting(HomeClicksSubmenu) + StringCompare(Skin.String(homescreen.style),simple)] | Skin.HasSetting(HideSubmenuArrows)]</visible>
 		</control>
 		<control type="label">
-			<label>$INFO[Skin.String(Home.Programs.Tile.0.Label)]</label>
+			<label fallback="20190">$INFO[Skin.String(Home.Programs.Tile.0.Label)]</label>
 			<include>Mod_HomeLabel</include>
 			<animation effect="fade" start="100" end="30" time="250" condition="[!Control.HasFocus(525) + !Control.HasFocus(83)] | Control.HasFocus(85) | Control.HasFocus(84) | !Container(525).HasFocus(7)">Conditional</animation>
 			<visible>!Skin.HasSetting(disable.programs)</visible>
@@ -6432,7 +6432,7 @@
 			<visible>!Skin.HasSetting(disable.weather) + [Skin.HasSetting(HomeClicksSubmenu) | StringCompare(Skin.String(homescreen.style),panel) | Skin.HasSetting(HideSubmenuArrows)]</visible>
 		</control>
 		<control type="label">
-			<label>$INFO[Skin.String(Home.Weather.Tile.0.Label)]</label>
+			<label fallback="20190">$INFO[Skin.String(Home.Weather.Tile.0.Label)]</label>
 			<include>Mod_HomeLabel</include>
 			<animation effect="fade" start="100" end="30" time="250" condition="[!Control.HasFocus(525) + !Control.HasFocus(83)] | Control.HasFocus(85) | Control.HasFocus(84) | !Container(525).HasFocus(8)">Conditional</animation>
 			<visible>!Skin.HasSetting(disable.weather)</visible>
@@ -6449,7 +6449,7 @@
 	</include>
 	<include name="Mod_525Content">
 		<item id="1">
-			<label>20342</label>
+			<label>$INFO[Skin.String(Home.Movies.Tile.0.Label)]</label>
 			<visible>!Skin.HasSetting(disable.movies)</visible>
 			<property name="single">$INFO[Skin.String(HomeMoviesSingleImage)]</property>
 			<property name="multi">$INFO[Skin.String(HomeMoviesMultiImage)]</property>
@@ -6462,7 +6462,7 @@
 			<icon>DefaultMovies.png</icon>
 		</item>
 		<item id="2">
-			<label>20343</label>
+			<label>$INFO[Skin.String(Home.TvShows.Tile.0.Label)]</label>
 			<visible>!Skin.HasSetting(disable.tvshows)</visible>
 			<property name="single">$INFO[Skin.String(HomeTVShowsSingleImage)]</property>
 			<property name="multi">$INFO[Skin.String(HomeTVShowsMultiImage)]</property>
@@ -6475,7 +6475,7 @@
 			<icon>DefaultTVShows.png</icon>
 		</item>
 		<item id="3">
-			<label>2</label>
+			<label>$INFO[Skin.String(Home.Music.Tile.0.Label)]</label>
 			<visible>!Skin.HasSetting(disable.music)</visible>
 			<property name="single">$INFO[Skin.String(HomeMusicSingleImage)]</property>
 			<property name="multi">$INFO[Skin.String(HomeMusicMultiImage)]</property>
@@ -6488,7 +6488,7 @@
 			<icon>DefaultAudio.png</icon>
 		</item>
 		<item id="5">
-			<label>1</label>
+			<label>$INFO[Skin.String(Home.Pictures.Tile.0.Label)]</label>
 			<visible>!Skin.HasSetting(disable.pictures)</visible>
 			<property name="single">$INFO[Skin.String(HomePicturesSingleImage)]</property>
 			<property name="multi">$INFO[Skin.String(HomePicturesMultiImage)]</property>
@@ -6501,7 +6501,7 @@
 			<icon>DefaultPicture.png</icon>
 		</item>
 		<item id="7">
-			<label>0</label>
+			<label>$INFO[Skin.String(Home.Programs.Tile.0.Label)]</label>
 			<visible>!Skin.HasSetting(disable.programs)</visible>
 			<property name="single">$INFO[Skin.String(HomeProgramsSingleImage)]</property>
 			<property name="multi">$INFO[Skin.String(HomeProgramsMultiImage)]</property>
@@ -6514,7 +6514,7 @@
 			<icon>DefaultAddonProgram.png</icon>
 		</item>
 		<item id="8">
-			<label>8</label>
+			<label>$INFO[Skin.String(Home.Weather.Tile.0.Label)]</label>
 			<visible>!Skin.HasSetting(disable.weather)</visible>
 			<property name="single">$INFO[Skin.String(HomeWeatherSingleImage)]</property>
 			<property name="multi">$INFO[Skin.String(HomeWeatherMultiImage)]</property>

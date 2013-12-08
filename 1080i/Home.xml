@@ -8,7 +8,6 @@
     <onload condition="!stringcompare(Skin.String(video.seekbar.type),small) + !stringcompare(Skin.String(video.seekbar.type),medium) + !stringcompare(Skin.String(video.seekbar.type),onscreen)">Skin.SetString(video.seekbar.type,small)</onload>
     <onload condition="!stringcompare(Skin.String(music.seekbar.type),small) + !stringcompare(Skin.String(music.seekbar.type),medium) + !stringcompare(Skin.String(music.seekbar.type),onscreen)">Skin.SetString(music.seekbar.type,small)</onload>
     <onload condition="IsEmpty(Skin.String(homescreen.style))">Skin.SetString(homescreen.style,simple)</onload>
-    <onload condition="IsEmpty(Skin.String(pictures.slideshowpath))">Skin.SetString(pictures.slideshowpath,special://skin/extras/backgrounds/system/)</onload>
 	<onload condition="System.HasAddon(script.games.rom.collection.browser)">RunScript(script.games.rom.collection.browser,limit=10)</onload>
 	<onload condition="!Skin.HasSetting(Skin.Init.Complete) | !Skin.HasSetting(Skin.Initialization.Items) | IsEmpty(Window(home).Property(SkinInitStarted))">AlarmClock(Skin.Initialization,ReplaceWindow(startup),00:01,silent)</onload>
 	<onunload>SetFocus(525)</onunload>

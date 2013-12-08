@@ -207,6 +207,7 @@
 						<label>10511</label>
 						<icon>special://skin/extras/icons/sysinfo.png</icon>
 						<onclick>Skin.SetString($INFO[Window(3060).Property(edit_widget)],info.system)</onclick>
+						<onclick>ActivateWindow(3066)</onclick>
 						<onclick>Close</onclick>
 					</item>
 					<item id="18">

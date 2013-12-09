@@ -21,13 +21,14 @@
     	-->
     	
         <control type="group">
-        	<visible>!Window.IsActive(FileBrowser) + !Window.IsActive(virtualkeyboard) + !Window.IsActive(DialogSelect.xml)</visible>
+        	<posy>-70</posy>
+        	<visible>!Window.IsVisible(FileBrowser) + !Window.IsVisible(virtualkeyboard) + !Window.IsVisible(DialogSelect.xml) + !Window.IsVisible(3065)</visible>
             <include>KeyboardAnimations</include>  
             <control type="image">
             	<posx>185</posx>
             	<posy>170</posy>
             	<width>1550</width>
-            	<height>740</height>
+            	<height>810</height>
             	<texture border="15">arctic/common/panel.png</texture>
             	<bordertexture border="35">arctic/common/border-20.png</bordertexture>
             	<bordersize>20</bordersize>
@@ -55,7 +56,7 @@
             	<posx>215</posx>
 				<posy>250</posy>
 				<width>1500</width>
-				<height>630</height>
+				<height>700</height>
 				<scrolltime tween="cubic" easing="out">500</scrolltime>
 				<orientation>horizontal</orientation>
 				<itemlayout width="375" height="70">
@@ -419,6 +420,19 @@
 						<onclick>Skin.SetString($INFO[Window(3061).Property(edit_submenu),,.TypeName],$LOCALIZE[41151])</onclick>
 						<onclick>Close</onclick>
 					</item>
+					<item id="39">
+						<description>Music Video</description>
+						<label>20389</label>
+						<icon>special://skin/extras/icons/musicvideos.png</icon>
+						<onclick>Skin.Reset($INFO[Window(3061).Property(edit_submenu),,.Animate])</onclick>
+						<onclick>Skin.Reset($INFO[Window(3061).Property(edit_submenu),,.ShowLabel])</onclick>
+						<onclick>Skin.SetString($INFO[Window(3061).Property(edit_submenu),,.Icon],special://skin/extras/icons/musicvideos.png)</onclick>
+						<onclick>Skin.SetString($INFO[Window(3061).Property(edit_submenu),,.Label],$LOCALIZE[20389])</onclick>
+						<onclick>Skin.SetString($INFO[Window(3061).Property(edit_submenu),,.Path],ActivateWindow(videos,musicvideos,return))</onclick>
+						<onclick>Skin.SetString($INFO[Window(3061).Property(edit_submenu),,.Type],7)</onclick>
+						<onclick>Skin.SetString($INFO[Window(3061).Property(edit_submenu),,.TypeName],$LOCALIZE[41151])</onclick>
+						<onclick>Close</onclick>
+					</item>
 					<item id="25">
 						<description>Programs</description>
 						<label>41504</label>
@@ -467,6 +481,45 @@
 						<onclick>Skin.SetString($INFO[Window(3061).Property(edit_submenu),,.Icon],special://skin/extras/icons/addons.png)</onclick>
 						<onclick>Skin.SetString($INFO[Window(3061).Property(edit_submenu),,.Label],$LOCALIZE[24001])</onclick>
 						<onclick>Skin.SetString($INFO[Window(3061).Property(edit_submenu),,.Path],ActivateWindow(programs,addons,return))</onclick>
+						<onclick>Skin.SetString($INFO[Window(3061).Property(edit_submenu),,.Type],7)</onclick>
+						<onclick>Skin.SetString($INFO[Window(3061).Property(edit_submenu),,.TypeName],$LOCALIZE[41151])</onclick>
+						<onclick>Close</onclick>
+					</item>
+					<item id="37">
+						<description>Weather</description>
+						<label>8</label>
+						<icon>special://skin/extras/icons/weather.png</icon>
+						<onclick>Skin.Reset($INFO[Window(3061).Property(edit_submenu),,.Animate])</onclick>
+						<onclick>Skin.Reset($INFO[Window(3061).Property(edit_submenu),,.ShowLabel])</onclick>
+						<onclick>Skin.SetString($INFO[Window(3061).Property(edit_submenu),,.Icon],special://skin/extras/icons/weather.png)</onclick>
+						<onclick>Skin.SetString($INFO[Window(3061).Property(edit_submenu),,.Label],$LOCALIZE[8])</onclick>
+						<onclick>Skin.SetString($INFO[Window(3061).Property(edit_submenu),,.Path],ActivateWindow(weather,return))</onclick>
+						<onclick>Skin.SetString($INFO[Window(3061).Property(edit_submenu),,.Type],7)</onclick>
+						<onclick>Skin.SetString($INFO[Window(3061).Property(edit_submenu),,.TypeName],$LOCALIZE[41151])</onclick>
+						<onclick>Close</onclick>
+					</item>
+					<item id="38">
+						<description>Update Video Library</description>
+						<label>24069</label>
+						<icon>special://skin/extras/icons/arrows.png</icon>
+						<onclick>Skin.Reset($INFO[Window(3061).Property(edit_submenu),,.Animate])</onclick>
+						<onclick>Skin.Reset($INFO[Window(3061).Property(edit_submenu),,.ShowLabel])</onclick>
+						<onclick>Skin.SetString($INFO[Window(3061).Property(edit_submenu),,.Icon],special://skin/extras/icons/arrows.png)</onclick>
+						<onclick>Skin.SetString($INFO[Window(3061).Property(edit_submenu),,.Label],$LOCALIZE[24069])</onclick>
+						<onclick>Skin.SetString($INFO[Window(3061).Property(edit_submenu),,.Path],UpdateLibrary(video))</onclick>
+						<onclick>Skin.SetString($INFO[Window(3061).Property(edit_submenu),,.Type],7)</onclick>
+						<onclick>Skin.SetString($INFO[Window(3061).Property(edit_submenu),,.TypeName],$LOCALIZE[41151])</onclick>
+						<onclick>Close</onclick>
+					</item>
+					<item id="40">
+						<description>Clean Video Library</description>
+						<label>334</label>
+						<icon>special://skin/extras/icons/system.png</icon>
+						<onclick>Skin.Reset($INFO[Window(3061).Property(edit_submenu),,.Animate])</onclick>
+						<onclick>Skin.Reset($INFO[Window(3061).Property(edit_submenu),,.ShowLabel])</onclick>
+						<onclick>Skin.SetString($INFO[Window(3061).Property(edit_submenu),,.Icon],special://skin/extras/icons/system.png)</onclick>
+						<onclick>Skin.SetString($INFO[Window(3061).Property(edit_submenu),,.Label],$LOCALIZE[334])</onclick>
+						<onclick>Skin.SetString($INFO[Window(3061).Property(edit_submenu),,.Path],CleanLibrary(video))</onclick>
 						<onclick>Skin.SetString($INFO[Window(3061).Property(edit_submenu),,.Type],7)</onclick>
 						<onclick>Skin.SetString($INFO[Window(3061).Property(edit_submenu),,.TypeName],$LOCALIZE[41151])</onclick>
 						<onclick>Close</onclick>
@@ -587,6 +640,7 @@
 						<icon>special://skin/extras/icons/config.png</icon>
 						<onclick>Skin.SetString($INFO[Window(3061).Property(edit_submenu),,.Type],7)</onclick>
 						<onclick>Skin.SetString($INFO[Window(3061).Property(edit_submenu),,.TypeName],$LOCALIZE[41151])</onclick>
+						<onclick>SetProperty(custom_label,$LOCALIZE[42478],virtualkeyboard)</onclick>
 						<onclick>Skin.SetString($INFO[Window(3061).Property(edit_submenu),,.Path])</onclick>
 						<onclick>Skin.SetString($INFO[Window(3061).Property(edit_submenu),,.Label])</onclick>
 						<onclick>SetProperty(ChooseArt,true,3054)</onclick>

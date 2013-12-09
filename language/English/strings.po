@@ -1340,3 +1340,7 @@ msgctxt "#42477"
 msgid "Use slideshow in system info widget?"
 msgstr ""
 
+msgctxt "#42478"
+msgid "Set path"
+msgstr ""
+

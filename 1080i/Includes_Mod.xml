@@ -3272,7 +3272,7 @@
 		</item>
 		<!-- tvshow next aired -->
 		<item id="1">
-			<onclick>ActivateWindow(Videos,$INFO[Window.Property(NextAired.1.Library)])</onclick>
+			<onclick>ActivateWindow(Videos,$INFO[Window.Property(NextAired.1.Library)],return)</onclick>
 			<icon>$INFO[Window.Property(NextAired.1.Art(fanart))]</icon>
 			<property name="Poster">$INFO[Window.Property(NextAired.1.Art(poster))]</property>
 			<property name="Plot">$INFO[Window.Property(NextAired.1.AirTime)]$INFO[Window.Property(NextAired.1.Network), - ,]$INFO[Window.Property(NextAired.1.Status), - ,]$INFO[Window.Property(NextAired.1.Classification),[CR],]$INFO[Window.Property(NextAired.1.Genre), - ,]$INFO[Window.Property(NextAired.1.Runtime),[CR], $LOCALIZE[12391]]</property>
@@ -3282,7 +3282,7 @@
 			<visible>StringCompare(Container(525).ListItem.Property(widget),tvshow.nextaired) + !IsEmpty(Window.Property(NextAired.1.Label))</visible>
 		</item>
 		<item id="2">
-			<onclick>ActivateWindow(Videos,$INFO[Window.Property(NextAired.2.Library)])</onclick>
+			<onclick>ActivateWindow(Videos,$INFO[Window.Property(NextAired.2.Library)],return)</onclick>
 			<icon>$INFO[Window.Property(NextAired.2.Art(fanart))]</icon>
 			<property name="Poster">$INFO[Window.Property(NextAired.2.Art(poster))]</property>
 			<property name="Plot">$INFO[Window.Property(NextAired.2.AirTime),, - ]$INFO[Window.Property(NextAired.2.Network)]$INFO[Window.Property(NextAired.2.Status), - ,]$INFO[Window.Property(NextAired.2.Classification),[CR],]$INFO[Window.Property(NextAired.2.Genre), - ,]$INFO[Window.Property(NextAired.2.Runtime),[CR], $LOCALIZE[12391]]</property>
@@ -3292,7 +3292,7 @@
 			<visible>StringCompare(Container(525).ListItem.Property(widget),tvshow.nextaired) + !IsEmpty(Window.Property(NextAired.2.Label))</visible>
 		</item>
 		<item id="3">
-			<onclick>ActivateWindow(Videos,$INFO[Window.Property(NextAired.3.Library)])</onclick>
+			<onclick>ActivateWindow(Videos,$INFO[Window.Property(NextAired.3.Library)],return)</onclick>
 			<icon>$INFO[Window.Property(NextAired.3.Art(fanart))]</icon>
 			<property name="Poster">$INFO[Window.Property(NextAired.3.Art(poster))]</property>
 			<property name="Plot">$INFO[Window.Property(NextAired.3.AirTime),, - ]$INFO[Window.Property(NextAired.3.Network)]$INFO[Window.Property(NextAired.3.Status), - ,]$INFO[Window.Property(NextAired.3.Classification),[CR],]$INFO[Window.Property(NextAired.3.Genre), - ,]$INFO[Window.Property(NextAired.3.Runtime),[CR], $LOCALIZE[12391]]</property>
@@ -3302,7 +3302,7 @@
 			<visible>StringCompare(Container(525).ListItem.Property(widget),tvshow.nextaired) + !IsEmpty(Window.Property(NextAired.3.Label))</visible>
 		</item>
 		<item id="4">
-			<onclick>ActivateWindow(Videos,$INFO[Window.Property(NextAired.4.Library)])</onclick>
+			<onclick>ActivateWindow(Videos,$INFO[Window.Property(NextAired.4.Library)],return)</onclick>
 			<icon>$INFO[Window.Property(NextAired.4.Art(fanart))]</icon>
 			<property name="Poster">$INFO[Window.Property(NextAired.4.Art(poster))]</property>
 			<property name="Plot">$INFO[Window.Property(NextAired.4.AirTime),, - ]$INFO[Window.Property(NextAired.4.Network)]$INFO[Window.Property(NextAired.4.Status), - ,]$INFO[Window.Property(NextAired.4.Classification),[CR],]$INFO[Window.Property(NextAired.4.Genre), - ,]$INFO[Window.Property(NextAired.4.Runtime),[CR], $LOCALIZE[12391]]</property>
@@ -3312,7 +3312,7 @@
 			<visible>StringCompare(Container(525).ListItem.Property(widget),tvshow.nextaired) + !IsEmpty(Window.Property(NextAired.4.Label))</visible>
 		</item>
 		<item id="5">
-			<onclick>ActivateWindow(Videos,$INFO[Window.Property(NextAired.5.Library)])</onclick>
+			<onclick>ActivateWindow(Videos,$INFO[Window.Property(NextAired.5.Library)],return)</onclick>
 			<icon>$INFO[Window.Property(NextAired.5.Art(fanart))]</icon>
 			<property name="Poster">$INFO[Window.Property(NextAired.5.Art(poster))]</property>
 			<property name="Plot">$INFO[Window.Property(NextAired.5.AirTime),, - ]$INFO[Window.Property(NextAired.5.Network)]$INFO[Window.Property(NextAired.5.Status), - ,]$INFO[Window.Property(NextAired.5.Classification),[CR],]$INFO[Window.Property(NextAired.5.Genre), - ,]$INFO[Window.Property(NextAired.5.Runtime),[CR], $LOCALIZE[12391]]</property>
@@ -3322,7 +3322,7 @@
 			<visible>StringCompare(Container(525).ListItem.Property(widget),tvshow.nextaired) + !IsEmpty(Window.Property(NextAired.5.Label))</visible>
 		</item>
 		<item id="6">
-			<onclick>ActivateWindow(Videos,$INFO[Window.Property(NextAired.6.Library)])</onclick>
+			<onclick>ActivateWindow(Videos,$INFO[Window.Property(NextAired.6.Library)],return)</onclick>
 			<icon>$INFO[Window.Property(NextAired.6.Art(fanart))]</icon>
 			<property name="Poster">$INFO[Window.Property(NextAired.6.Art(poster))]</property>
 			<property name="Plot">$INFO[Window.Property(NextAired.6.AirTime),, - ]$INFO[Window.Property(NextAired.6.Network)]$INFO[Window.Property(NextAired.6.Status), - ,]$INFO[Window.Property(NextAired.6.Classification),[CR],]$INFO[Window.Property(NextAired.6.Genre), - ,]$INFO[Window.Property(NextAired.6.Runtime),[CR], $LOCALIZE[12391]]</property>
@@ -3332,7 +3332,7 @@
 			<visible>StringCompare(Container(525).ListItem.Property(widget),tvshow.nextaired) + !IsEmpty(Window.Property(NextAired.6.Label))</visible>
 		</item>
 		<item id="7">
-			<onclick>ActivateWindow(Videos,$INFO[Window.Property(NextAired.7.Library)])</onclick>
+			<onclick>ActivateWindow(Videos,$INFO[Window.Property(NextAired.7.Library)],return)</onclick>
 			<icon>$INFO[Window.Property(NextAired.7.Art(fanart))]</icon>
 			<property name="Poster">$INFO[Window.Property(NextAired.7.Art(poster))]</property>
 			<property name="Plot">$INFO[Window.Property(NextAired.7.AirTime),, - ]$INFO[Window.Property(NextAired.7.Network)]$INFO[Window.Property(NextAired.7.Status), - ,]$INFO[Window.Property(NextAired.7.Classification),[CR],]$INFO[Window.Property(NextAired.7.Genre), - ,]$INFO[Window.Property(NextAired.7.Runtime),[CR], $LOCALIZE[12391]]</property>
@@ -3342,7 +3342,7 @@
 			<visible>StringCompare(Container(525).ListItem.Property(widget),tvshow.nextaired) + !IsEmpty(Window.Property(NextAired.7.Label))</visible>
 		</item>
 		<item id="8">
-			<onclick>ActivateWindow(Videos,$INFO[Window.Property(NextAired.8.Library)])</onclick>
+			<onclick>ActivateWindow(Videos,$INFO[Window.Property(NextAired.8.Library)],return)</onclick>
 			<icon>$INFO[Window.Property(NextAired.8.Art(fanart))]</icon>
 			<property name="Poster">$INFO[Window.Property(NextAired.8.Art(poster))]</property>
 			<property name="Plot">$INFO[Window.Property(NextAired.8.AirTime),, - ]$INFO[Window.Property(NextAired.8.Network)]$INFO[Window.Property(NextAired.8.Status), - ,]$INFO[Window.Property(NextAired.8.Classification),[CR],]$INFO[Window.Property(NextAired.8.Genre), - ,]$INFO[Window.Property(NextAired.8.Runtime),[CR], $LOCALIZE[12391]]</property>
@@ -3352,7 +3352,7 @@
 			<visible>StringCompare(Container(525).ListItem.Property(widget),tvshow.nextaired) + !IsEmpty(Window.Property(NextAired.8.Label))</visible>
 		</item>
 		<item id="9">
-			<onclick>ActivateWindow(Videos,$INFO[Window.Property(NextAired.9.Library)])</onclick>
+			<onclick>ActivateWindow(Videos,$INFO[Window.Property(NextAired.9.Library)],return)</onclick>
 			<icon>$INFO[Window.Property(NextAired.9.Art(fanart))]</icon>
 			<property name="Poster">$INFO[Window.Property(NextAired.9.Art(poster))]</property>
 			<property name="Plot">$INFO[Window.Property(NextAired.9.AirTime),, - ]$INFO[Window.Property(NextAired.9.Network)]$INFO[Window.Property(NextAired.9.Status), - ,]$INFO[Window.Property(NextAired.9.Classification),[CR],]$INFO[Window.Property(NextAired.9.Genre), - ,]$INFO[Window.Property(NextAired.9.Runtime),[CR], $LOCALIZE[12391]]</property>
@@ -3362,7 +3362,7 @@
 			<visible>StringCompare(Container(525).ListItem.Property(widget),tvshow.nextaired) + !IsEmpty(Window.Property(NextAired.9.Label))</visible>
 		</item>
 		<item id="10">
-			<onclick>ActivateWindow(Videos,$INFO[Window.Property(NextAired.10.Library)])</onclick>
+			<onclick>ActivateWindow(Videos,$INFO[Window.Property(NextAired.10.Library)],return)</onclick>
 			<icon>$INFO[Window.Property(NextAired.10.Art(fanart))]</icon>
 			<property name="Poster">$INFO[Window.Property(NextAired.10.Art(poster))]</property>
 			<property name="Plot">$INFO[Window.Property(NextAired.10.AirTime),, - ]$INFO[Window.Property(NextAired.10.Network)]$INFO[Window.Property(NextAired.10.Status), - ,]$INFO[Window.Property(NextAired.10.Classification),[CR],]$INFO[Window.Property(NextAired.10.Genre), - ,]$INFO[Window.Property(NextAired.10.Runtime),[CR], $LOCALIZE[12391]]</property>

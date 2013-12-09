@@ -163,6 +163,9 @@
 							<onup>525</onup>
 							<onback>525</onback>
 							<onclick>SetFocus(525)</onclick>
+							<onclick condition="substring(Container(525).ListItem.Property(widget),info.system)">ActivateWindow(systeminfo)</onclick>
+							<onclick condition="substring(Container(525).ListItem.Property(widget),info.weather)">ActivateWindow(weather)</onclick>
+							<onclick condition="substring(Container(525).ListItem.Property(widget),pictures.slideshow)">SlideShow($INFO[Skin.String(pictures.slideshowpath2)],random)</onclick>
 						</control>
 						<control type="label">
 							<posx>50</posx>

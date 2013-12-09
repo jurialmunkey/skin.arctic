@@ -6,6 +6,7 @@ Made slideshow for system info custom
 Dialogkeyboard.xml can now take a custom_label property
 Use custom_label property to distinguish setting path from label
 Added preset items weather, update, clean and music videos
+Fixed on-screen video info issue
 
 [B]0.5.0[/B]
 GUI customisation of categories, widgets, submenus, backgrounds

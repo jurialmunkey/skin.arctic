@@ -228,7 +228,14 @@
 				<control type="list" id="83">
 					<include>listEndAnimation</include>
 					<include>panel.slideup.anim</include>
-					<animation effect="slide" end="276" condition="Container(525).HasFocus(4)">Conditional</animation>
+					<animation effect="slide" end="92" condition="!IntegerGreaterThan(Container(83).NumItems,9)">Conditional</animation>
+					<animation effect="slide" end="92" condition="!IntegerGreaterThan(Container(83).NumItems,8)">Conditional</animation>
+					<animation effect="slide" end="92" condition="!IntegerGreaterThan(Container(83).NumItems,7)">Conditional</animation>
+					<animation effect="slide" end="92" condition="!IntegerGreaterThan(Container(83).NumItems,6)">Conditional</animation>
+					<animation effect="slide" end="92" condition="!IntegerGreaterThan(Container(83).NumItems,5)">Conditional</animation>
+					<animation effect="slide" end="92" condition="!IntegerGreaterThan(Container(83).NumItems,4)">Conditional</animation>
+					<animation effect="slide" end="92" condition="!IntegerGreaterThan(Container(83).NumItems,3)">Conditional</animation>
+					<animation effect="slide" end="92" condition="!IntegerGreaterThan(Container(83).NumItems,2)">Conditional</animation>
 					<onup>525</onup>
 					<ondown>525</ondown>
 					<onback>525</onback>

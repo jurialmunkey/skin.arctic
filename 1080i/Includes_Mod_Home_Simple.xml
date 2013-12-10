@@ -380,7 +380,15 @@
 				</control>
 				<!-- SUBMENU ITEMS -->
 				<control type="list" id="83">
-					<animation effect="slide" end="276" condition="Container(525).HasFocus(4)">Conditional</animation>
+					<animation effect="slide" end="92" condition="!IntegerGreaterThan(Container(83).NumItems,9)">Conditional</animation>
+					<animation effect="slide" end="92" condition="!IntegerGreaterThan(Container(83).NumItems,8)">Conditional</animation>
+					<animation effect="slide" end="92" condition="!IntegerGreaterThan(Container(83).NumItems,7)">Conditional</animation>
+					<animation effect="slide" end="92" condition="!IntegerGreaterThan(Container(83).NumItems,6)">Conditional</animation>
+					<animation effect="slide" end="92" condition="!IntegerGreaterThan(Container(83).NumItems,5)">Conditional</animation>
+					<animation effect="slide" end="92" condition="!IntegerGreaterThan(Container(83).NumItems,4)">Conditional</animation>
+					<animation effect="slide" end="92" condition="!IntegerGreaterThan(Container(83).NumItems,3)">Conditional</animation>
+					<animation effect="slide" end="92" condition="!IntegerGreaterThan(Container(83).NumItems,2)">Conditional</animation>
+					
 					<onup condition="!Skin.HasSetting(HomeClicksSubmenu) + !IsEmpty(Container(525).ListItem.Property(widget)) + !substring(Container(525).ListItem.Property(widget),mixed)">SetFocus(82)</onup>
 					<onup condition="!Skin.HasSetting(HomeClicksSubmenu) + substring(Container(525).ListItem.Property(widget),mixed)">SetFocus(89)</onup>
 					<onup condition="Skin.HasSetting(HomeClicksSubmenu)">525</onup>

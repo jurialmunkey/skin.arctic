@@ -1,6 +1,7 @@
 [B]0.5.2[/B]
 Hide empty submenu tiles except one at end
-Centre submenu tiles
+Center submenu tiles
+Added weather fanart as an option for global fanart 
 
 [B]0.5.1[/B]
 Removed Aeon Nox backgrounds

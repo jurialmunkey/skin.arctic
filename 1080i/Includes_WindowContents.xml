@@ -276,7 +276,7 @@
 <!-- Skin Backdrops -->
 <!-- ============== -->
     <variable name="Mod_BackgroundSingle">
-    	<!--<value condition="!IsEmpty(Skin.String(WeatherFanartDir)) + !IsEmpty(Window(Weather).Property(Current.FanartCode))">$INFO[Skin.String(WeatherFanartDir)]$INFO[Window(Weather).Property(Current.FanartCode)]</value>-->
+    	<value condition="IsEmpty(Container(525).ListItem.property(single)) + IsEmpty(Container(525).ListItem.property(multi)) + Skin.HasSetting(GlobalBackdropWeather) + !IsEmpty(Skin.String(WeatherFanartDir)) + !IsEmpty(Window(Weather).Property(Current.FanartCode))">$INFO[Skin.String(WeatherFanartDir)]$INFO[Window(Weather).Property(Current.FanartCode)]</value>
     	<value condition="IsEmpty(Container(525).ListItem.property(single)) + IsEmpty(Container(525).ListItem.property(multi)) + !IsEmpty(Skin.String(GlobalBackdropMulti))">$INFO[Skin.String(GlobalBackdropMulti)]</value>
     	<value condition="IsEmpty(Container(525).ListItem.property(single)) + IsEmpty(Container(525).ListItem.property(multi)) + !IsEmpty(Skin.String(GlobalBackdropSingle)) + !IsEmpty(Skin.String(GlobalBackdropSingle))">$INFO[Skin.String(GlobalBackdropSingle)]</value>
     	<value condition="!IsEmpty(Container(525).ListItem.property(multi))">$INFO[Container(525).ListItem.property(multi)]</value>

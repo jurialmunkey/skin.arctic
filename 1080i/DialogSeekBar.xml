@@ -918,9 +918,9 @@
 					<description>Description</description>
 					<posx>330</posx>
 					<posy>738</posy>
-					<width>980</width>
+					<width>1550</width>
 					<height>300</height>
-					<label>[UPPERCASE][B]$INFO[VideoPlayer.Title][/B][/UPPERCASE]$INFO[VideoPlayer.ChannelNumber,[CR]CH. ,   ]$INFO[VideoPlayer.ChannelName]</label>
+					<label>[UPPERCASE][B]$INFO[VideoPlayer.Title][/B][/UPPERCASE]$INFO[VideoPlayer.ChannelNumber,[CR]Ch. ,   ]$INFO[VideoPlayer.ChannelName]</label>
 					<align>left</align> 
 					<aligny>top</aligny>
 					<font>Font-MusicVis-Description</font>
@@ -932,7 +932,7 @@
 					<description>Description</description>
 					<posx>330</posx>
 					<posy>738</posy>
-					<width>980</width>
+					<width>1550</width>
 					<height>300</height>
 					<label>[UPPERCASE]$INFO[VideoPlayer.Title,[B],[/B]]$INFO[VideoPlayer.Year,[B]  (,)[/B]][/UPPERCASE]$INFO[VideoPlayer.Genre,[CR],]$INFO[VideoPlayer.TvShowTitle,[CR],]</label>
 					<align>left</align> 
@@ -946,7 +946,7 @@
 					<description>Description</description>
 					<posx>330</posx>
 					<posy>738</posy>
-					<width>980</width>
+					<width>1550</width>
 					<height>300</height>
 					<label>[UPPERCASE]$INFO[VideoPlayer.Artist,[B],[/B]]$INFO[VideoPlayer.Title,   [CR],][/UPPERCASE]$INFO[VideoPlayer.Album,[CR],]$INFO[VideoPlayer.Year,  (,)]</label>
 					<align>left</align> 
@@ -975,7 +975,7 @@
 						<width>980</width>
 						<height>110</height>
 						<label>$INFO[VideoPlayer.Season,Season ,  ]$INFO[VideoPlayer.Episode,Episode ,[CR]]$INFO[VideoPlayer.Plot]</label>
-						<align>left</align> 
+						<align>justify</align> 
 						<font>Font-Onscreen-Plot</font>
 						<textcolor>99ffffff</textcolor>
 						<visible>!VideoPlayer.Content(LiveTV) + !VideoPlayer.Content(musicvideos)</visible>
@@ -988,7 +988,7 @@
 						<width>980</width>
 						<height>72</height>
 						<label>$VAR[OSDPlot]</label>
-						<align>left</align> 
+						<align>justify</align> 
 						<font>Font-Onscreen-Plot</font>
 						<textcolor>99ffffff</textcolor>
 						<visible>VideoPlayer.Content(LiveTV)</visible>
@@ -1009,102 +1009,30 @@
 				</control>
 				<control type="label">
 					<description>Player Times</description>
-					<posx>1318</posx>
-					<posy>757</posy>
+					<posx>1880</posx>
+					<posy>846</posy>
 					<width>700</width>
-					<label>•</label>
-					<align>left</align>
-					<font>Font-Onscreen-Time</font>
-					<angle>0</angle>
-					<textcolor>33ffffff</textcolor>
-					<visible>IntegerGreaterThan(VideoPlayer.Time(hh),0)</visible>
-				</control>
-				<control type="label">
-					<description>Player Times</description>
-					<posx>1278</posx>
-					<posy>757</posy>
-					<width>700</width>
-					<label>•</label>
-					<align>left</align>
-					<font>Font-Onscreen-Time</font>
-					<angle>0</angle>
-					<textcolor>33ffffff</textcolor>
-					<visible>IntegerGreaterThan(VideoPlayer.Time(hh),1)</visible>
-				</control>
-				<control type="label">
-					<description>Player Times</description>
-					<posx>1238</posx>
-					<posy>757</posy>
-					<width>700</width>
-					<label>•</label>
-					<align>left</align>
-					<font>Font-Onscreen-Time</font>
-					<angle>0</angle>
-					<textcolor>33ffffff</textcolor>
-					<visible>IntegerGreaterThan(VideoPlayer.Time(hh),2)</visible>
-				</control>
-				<control type="label">
-					<description>Player Times</description>
-					<posx>1365</posx>
-					<posy>805</posy>
-					<width>1500</width>
-					<label>$INFO[VideoPlayer.Time(mm)]</label>
-					<align>left</align>
-					<font>Font-MusicVis-Time</font>
-					<angle>0</angle>
-					<textcolor>33ffffff</textcolor>
-				</control>
-				<control type="label">
-					<description>Player Times</description>
-					<posx>1640</posx>
-					<posy>805</posy>
-					<width>1500</width>
-					<label>$INFO[VideoPlayer.Time(ss)]</label>
-					<align>left</align>
-					<font>Font-MusicVis-Time</font>
-					<angle>0</angle>
-					<textcolor>33ffffff</textcolor>
-				</control>
-				<control type="grouplist">
-					<posx>1380</posx>
-					<posy>885</posy>
-					<width>500</width>
-					<height>100</height>
-					<orientation>horizontal</orientation>
-					<usecontrolcoords>true</usecontrolcoords>
+					<label>$INFO[VideoPlayer.Time(hh:mm:ss)]</label>
 					<align>right</align>
+					<font>Font-Video-Time</font>
+					<angle>0</angle>
+					<textcolor>33ffffff</textcolor>
+				</control>
 					<control type="label">
+						<posx>1372</posx>
+						<posy>885</posy>
+						<width>140</width>
 						<height>100</height>
 						<description>Duration</description>
-						<width max="300">auto</width>
-						<height>100</height>
 						<aligny>center</aligny>
+						<align>left</align>
 						<label>$INFO[Player.Duration(hh:mm:ss)]</label>
 						<font>Font-MusicVis-CodecInfo</font>
 						<textcolor>99ffffff</textcolor>
 					</control>
-					
 					<control type="image">
-						<posx>5</posx>
-						<description>Finish Time</description>
-						<width>100</width>
-						<height>100</height>
-						<texture>osd/fullscreen/clock-green.png</texture>
-						<colordiffuse>3fffffff</colordiffuse>
-						<aspectratio>keep</aspectratio>
-					</control>
-					<control type="label">
-						<posx>-25</posx>
-						<description>Finish Time</description>
-						<width max="300">auto</width>
-						<height>100</height>
-						<aligny>center</aligny>
-						<label>$INFO[Player.FinishTime(hh:mm:xx)]</label>
-						<font>Font-MusicVis-CodecInfo</font>
-						<textcolor>99ffffff</textcolor>
-					</control>
-					<control type="image">
-						<posx>5</posx>
+						<posx>1476</posx>
+						<posy>885</posy>
 						<description>Current Time</description>
 						<width>100</width>
 						<height>100</height>
@@ -1113,16 +1041,40 @@
 						<aspectratio>keep</aspectratio>
 					</control>
 					<control type="label">
-						<posx>-25</posx>
+						<posx>1550</posx>
+						<posy>885</posy>
+						<width>140</width>
 						<description>Current Time</description>
-						<width max="300">auto</width>
 						<height>100</height>
 						<aligny>center</aligny>
+						<align>center</align>
 						<label>$INFO[System.Time(hh:mm:xx)]</label>
 						<font>Font-MusicVis-CodecInfo</font>
 						<textcolor>99ffffff</textcolor>
 					</control>
-				</control>
+					<control type="image">
+						<posx>1670</posx>
+						<posy>885</posy>
+						<description>Finish Time</description>
+						<width>100</width>
+						<height>100</height>
+						<texture>osd/fullscreen/clock-green.png</texture>
+						<colordiffuse>3fffffff</colordiffuse>
+						<aspectratio>keep</aspectratio>
+					</control>
+					<control type="label">
+						<posx>1746</posx>
+						<posy>885</posy>
+						<width>140</width>
+						<description>Finish Time</description>
+						<height>100</height>
+						<align>center</align>
+						<aligny>center</aligny>
+						<label>$VAR[OSD.Player.FinishTime]</label>
+						<font>Font-MusicVis-CodecInfo</font>
+						<textcolor>99ffffff</textcolor>
+					</control>
+					
 				<control type="group">
 					
 					<posy>673</posy>

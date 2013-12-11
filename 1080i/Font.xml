@@ -527,6 +527,11 @@
         	<filename>alaska_mono.ttf</filename>
             <size>240</size>
         </font>
+    	<font>
+        	<name>Font-Video-Time</name>
+        	<filename>alaska_mono.ttf</filename>
+            <size>120</size>
+        </font>
 		<font>
         	<name>Font-MusicVis-TimeNoInfo</name>
         	<filename>BebasNeue.ttf</filename>

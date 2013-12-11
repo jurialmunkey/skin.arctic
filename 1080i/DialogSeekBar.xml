@@ -975,7 +975,7 @@
 						<width>980</width>
 						<height>110</height>
 						<label>$INFO[VideoPlayer.Season,Season ,  ]$INFO[VideoPlayer.Episode,Episode ,[CR]]$INFO[VideoPlayer.Plot]</label>
-						<align>justify</align> 
+						<align>left</align> 
 						<font>Font-Onscreen-Plot</font>
 						<textcolor>99ffffff</textcolor>
 						<visible>!VideoPlayer.Content(LiveTV) + !VideoPlayer.Content(musicvideos)</visible>
@@ -988,7 +988,7 @@
 						<width>980</width>
 						<height>72</height>
 						<label>$VAR[OSDPlot]</label>
-						<align>justify</align> 
+						<align>left</align> 
 						<font>Font-Onscreen-Plot</font>
 						<textcolor>99ffffff</textcolor>
 						<visible>VideoPlayer.Content(LiveTV)</visible>

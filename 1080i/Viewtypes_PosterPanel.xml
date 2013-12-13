@@ -102,11 +102,11 @@
                 <pagecontrol>70</pagecontrol>
                 <orientation>vertical</orientation>
                 <viewtype label="42314">list</viewtype>
+                <onright>70</onright>
+                <onleft condition="Skin.HasSetting(KioskMode)">64</onleft>
+                <onleft condition="!Skin.HasSetting(KioskMode)">9010</onleft>
                 <onup>64</onup>
                 <ondown>64</ondown>
-                <onleft condition="!Skin.HasSetting(KioskMode)">9010</onleft>
-                <onleft condition="Skin.HasSetting(KioskMode)">64</onleft>
-                <onright>70</onright>
                 <preloaditems>2</preloaditems>
                 <visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(actors) | Container.HasFolders | Container.Content(episodes) | Container.Content(seasons)</visible>
                 <itemlayout width="168" height="238">

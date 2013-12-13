@@ -30,16 +30,19 @@
     <include file="Viewtypes_Thumbnail.xml" />			<!-- (500) -->
     
 
-    <include file="Viewtypes_MusicList.xml" />
-    <include file="Viewtypes_MusicListLow.xml" />
-    <include file="Viewtypes_MusicPanel.xml" />
-    <include file="Viewtypes_MusicPanelBig.xml" />
-    <include file="Viewtypes_MusicPanelFanart.xml" />
-    <include file="Viewtypes_MusicWall.xml" />
-	<include file="Viewtypes_MusicCoverInfo.xml" />
-	<include file="Viewtypes_MusicShortList.xml" />
-	<include file="Viewtypes_MusicSongInfo.xml" />
-	<include file="Viewtypes_MusicInfoList.xml" />
+    <include file="Viewtypes_Music_List.xml" />			<!-- (50) -->
+    <include file="Viewtypes_Music_MediumList.xml" />	<!-- (51) -->
+    <include file="Viewtypes_Music_LowList.xml" />		<!-- (52) -->
+    <include file="Viewtypes_Music_PanelList.xml" />	<!-- (53) -->
+	<include file="Viewtypes_Music_Banner.xml" />		<!-- (54) -->
+	<include file="Viewtypes_Music_Panel.xml" />		<!-- (63) -->
+	<include file="Viewtypes_Music_PanelCover.xml" />	<!-- (64) -->
+	<include file="Viewtypes_Music_Coverinfo.xml" />	<!-- (65) -->
+	<include file="Viewtypes_Music_BigCover.xml" />		<!-- (66) -->
+	<include file="Viewtypes_Music_InfoList.xml" />		<!-- (501) -->
+	<include file="Viewtypes_Music_InfoStrip.xml" />	<!-- (502) -->
+	<include file="Viewtypes_Music_WallHorz.xml" />		<!-- (503) -->
+	<include file="Viewtypes_Music_Wall.xml" />			<!-- (504) -->
 	
     <include name="VideoViews">
         <include>Viewtype-BigList</include>				<!-- (50) -->
@@ -64,16 +67,19 @@
     
     <include name="MusicViews">
         <include>Viewtype-MusicList</include>        	<!-- (50) -->
-        <include>Viewtype-MusicPanel</include>			<!-- (51) -->
-        <include>Viewtype-MusicPanelFanart</include>	<!-- (52) -->
-        <include>Viewtype-MusicWall</include>			<!-- (53) -->
-        <include>Viewtype-MusicLowList</include>		<!-- (54) -->
-        <include>Viewtype-MusicPanelBig</include>		<!-- (55) -->
-        <include>Viewtype-ClassicCoverView</include>	<!-- (56) -->
-        <include>Viewtype-MusicShortList</include>		<!-- (57) -->
-        <include>Viewtype-SongInfo</include>			<!-- (59) -->
-        <include>Viewtype-CoverList</include>			<!-- (60) -->
-        <include>Viewtype-MusicInfoList</include>		<!-- (61) -->
+        <include>Viewtype-Music-MediumList</include>    <!-- (51) -->
+        <include>Viewtype-Music-LowList</include>       <!-- (52) -->
+        <include>Viewtype-Music-PanelList</include>     <!-- (53) -->
+        <include>Viewtype-Music-Banner</include>        <!-- (54) -->
+        <include>Viewtype-LoveFilm</include>			<!-- (56) -->
+        <include>Viewtype-Music-Panel</include>        	<!-- (63) -->
+        <include>Viewtype-Music-PanelCover</include>    <!-- (64) -->
+        <include>Viewtype-Music-Coverinfo</include>     <!-- (65) -->
+        <include>Viewtype-Music-BigCover</include>      <!-- (66) -->
+        <include>Viewtype-Thumbnail</include>			<!-- (500) -->
+        <include>Viewtype-Music-InfoList</include>		<!-- (501) -->
+        <include>Viewtype-Music-InfoStrip</include>		<!-- (502) -->
+        <include>Viewtype-Music-WallHorz</include>		<!-- (503) -->
     </include>
     
     <include name="MusicFileViews">
@@ -708,8 +714,8 @@
 	
 	<variable name="MusicPlotBox">
 		<value condition="Container.Content(songs)">$INFO[ListItem.Genre,[CR][B]$LOCALIZE[515]:[/B]  ,]$INFO[ListItem.Year,[CR][B]$LOCALIZE[562]:[/B]  ,]$INFO[ListItem.Duration,[CR][B]$LOCALIZE[180]:[/B]  ,]</value>
-		<value condition="Container.Content(albums) + !IsEmpty(ListItem.Property(Album_Description))">$INFO[ListItem.Property(Album_Description),[B]$LOCALIZE[183][/B][CR],]$INFO[Window(home).Property(Album.Songs.Tracklist),[CR][CR][B]$LOCALIZE[182][/B][CR],]</value>
-		<value condition="Container.Content(albums) + IsEmpty(ListItem.Property(Album_Description))">$INFO[Window(home).Property(Album.Songs.Tracklist),[B]$LOCALIZE[182][/B][CR],]</value>
+		<value condition="Container.Content(albums) + !IsEmpty(ListItem.Property(Album_Description))">$INFO[ListItem.Property(Album_Description),[B]$LOCALIZE[183][/B][CR],]$INFO[Window(home).Property(Album.Song.1.Title),[CR][CR][B]$LOCALIZE[182][/B][CR][B]1. [/B],]  $INFO[Window(home).Property(Album.Song.2.Title), [B]2. [/B],]  $INFO[Window(home).Property(Album.Song.3.Title), [B]3. [/B],]  $INFO[Window(home).Property(Album.Song.4.Title), [B]4. [/B],]$INFO[Window(home).Property(Album.Song.5.Title), [B]5. [/B],]  $INFO[Window(home).Property(Album.Song.6.Title), [B]6. [/B],]  $INFO[Window(home).Property(Album.Song.7.Title), [B]7. [/B],]  $INFO[Window(home).Property(Album.Song.8.Title), [B]8. [/B],]$INFO[Window(home).Property(Album.Song.9.Title), [B]9. [/B],]  $INFO[Window(home).Property(Album.Song.10.Title), [B]10. [/B],]  $INFO[Window(home).Property(Album.Song.11.Title), [B]11. [/B],]  $INFO[Window(home).Property(Album.Song.12.Title), [B]12. [/B],]$INFO[Window(home).Property(Album.Song.13.Title), [B]13. [/B],]  $INFO[Window(home).Property(Album.Song.14.Title), [B]14. [/B],]  $INFO[Window(home).Property(Album.Song.15.Title), [B]15. [/B],]  $INFO[Window(home).Property(Album.Song.16.Title), [B]16. [/B],]</value>
+		<value condition="Container.Content(albums) + IsEmpty(ListItem.Property(Album_Description))">$INFO[Window(home).Property(Album.Song.1.Title),[B]$LOCALIZE[182][/B][CR][B]1. [/B],]  $INFO[Window(home).Property(Album.Song.2.Title), [B]2. [/B],]  $INFO[Window(home).Property(Album.Song.3.Title), [B]3. [/B],]  $INFO[Window(home).Property(Album.Song.4.Title), [B]4. [/B],]$INFO[Window(home).Property(Album.Song.5.Title), [B]5. [/B],]  $INFO[Window(home).Property(Album.Song.6.Title), [B]6. [/B],]  $INFO[Window(home).Property(Album.Song.7.Title), [B]7. [/B],]  $INFO[Window(home).Property(Album.Song.8.Title), [B]8. [/B],]$INFO[Window(home).Property(Album.Song.9.Title), [B]9. [/B],]  $INFO[Window(home).Property(Album.Song.10.Title), [B]10. [/B],]  $INFO[Window(home).Property(Album.Song.11.Title), [B]11. [/B],]  $INFO[Window(home).Property(Album.Song.12.Title), [B]12. [/B],]$INFO[Window(home).Property(Album.Song.13.Title), [B]13. [/B],]  $INFO[Window(home).Property(Album.Song.14.Title), [B]14. [/B],]  $INFO[Window(home).Property(Album.Song.15.Title), [B]15. [/B],]  $INFO[Window(home).Property(Album.Song.16.Title), [B]16. [/B],]</value>
 		<value condition="Container.Content(artists) + !IsEmpty(ListItem.Property(Artist_Description))">$INFO[ListItem.Property(Artist_Description),[B]$LOCALIZE[21887][/B][CR],]$INFO[Window(home).Property(Artist.Album.1.Title),[CR][CR][B]$LOCALIZE[21888][/B][CR],]$INFO[Window(home).Property(Artist.Album.2.Title),[CR],]$INFO[Window(home).Property(Artist.Album.3.Title),[CR],]$INFO[Window(home).Property(Artist.Album.4.Title),[CR],]$INFO[Window(home).Property(Artist.Album.5.Title),[CR],]$INFO[Window(home).Property(Artist.Album.6.Title),[CR],]$INFO[Window(home).Property(Artist.Album.7.Title),[CR],]$INFO[Window(home).Property(Artist.Album.8.Title),[CR],]$INFO[Window(home).Property(Artist.Album.9.Title),[CR],]$INFO[Window(home).Property(Artist.Album.10.Title),[CR],]</value>
 		<value condition="Container.Content(artists) + IsEmpty(ListItem.Property(Artist_Description))">$INFO[Window(home).Property(Artist.Album.1.Title),[B]$LOCALIZE[21888][/B][CR],]$INFO[Window(home).Property(Artist.Album.2.Title),[CR],]$INFO[Window(home).Property(Artist.Album.3.Title),[CR],]$INFO[Window(home).Property(Artist.Album.4.Title),[CR],]$INFO[Window(home).Property(Artist.Album.5.Title),[CR],]$INFO[Window(home).Property(Artist.Album.6.Title),[CR],]$INFO[Window(home).Property(Artist.Album.7.Title),[CR],]$INFO[Window(home).Property(Artist.Album.8.Title),[CR],]$INFO[Window(home).Property(Artist.Album.9.Title),[CR],]$INFO[Window(home).Property(Artist.Album.10.Title),[CR],]</value>
 	</variable>

@@ -1,3 +1,10 @@
+[B]0.5.5[/B]
+Clean-up of music view types
+Added new music view types -- info list, info strip, horz wall
+Ported lovefilm
+Modified existing types info wall for added labels
+New thumbs view
+
 [B]0.5.2[/B]
 Hide empty submenu tiles except one at end
 Center submenu tiles

@@ -9,7 +9,7 @@
 	</variable>
     <include name="Viewtype-Thumbnail">
         <control type="group">
-            <visible>Control.IsVisible(500) + !Window.IsActive(musicinformation)</visible>
+            <visible>Control.IsVisible(500) + !Window.IsActive(musicinformation) + !Window.IsActive(movieinformation) + !Window.IsActive(addoninformation)</visible>
             <include>CommonViewAnimations</include>
             <include>OptionsShutdownAnimation</include>
             <include>listEndAnimation</include>

@@ -1,3 +1,6 @@
+[B]0.5.6[/B]
+Info-list for videos
+
 [B]0.5.5[/B]
 Clean-up of music view types
 Added new music view types -- info list, info strip, horz wall

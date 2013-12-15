@@ -28,6 +28,7 @@
     <include file="Viewtypes_InfoWall.xml" />			<!-- (63) -->
     <include file="Viewtypes_PosterPanel.xml" />		<!-- (64) -->
     <include file="Viewtypes_Thumbnail.xml" />			<!-- (500) -->
+    <include file="Viewtypes_InfoList.xml" />			<!-- (501) -->
     
 
     <include file="Viewtypes_Music_List.xml" />			<!-- (50) -->
@@ -39,7 +40,7 @@
 	<include file="Viewtypes_Music_PanelCover.xml" />	<!-- (64) -->
 	<include file="Viewtypes_Music_Coverinfo.xml" />	<!-- (65) -->
 	<include file="Viewtypes_Music_BigCover.xml" />		<!-- (66) -->
-	<include file="Viewtypes_Music_InfoList.xml" />		<!-- (501) -->
+	
 	<include file="Viewtypes_Music_InfoStrip.xml" />	<!-- (502) -->
 	<include file="Viewtypes_Music_WallHorz.xml" />		<!-- (503) -->
 	<include file="Viewtypes_Music_Wall.xml" />			<!-- (504) -->
@@ -61,6 +62,7 @@
         <include>Viewtype-InfoWall</include>			<!-- (63) -->
         <include>Viewtype-PosterPanel</include>			<!-- (64) -->
         <include>Viewtype-Thumbnail</include>			<!-- (500) -->
+        <include>Viewtype-InfoList</include>			<!-- (501) -->
         
         <include condition="Skin.HasSetting(NextAired.Enabled)">NextAiredInfo</include>
     </include>
@@ -77,7 +79,7 @@
         <include>Viewtype-Music-Coverinfo</include>     <!-- (65) -->
         <include>Viewtype-Music-BigCover</include>      <!-- (66) -->
         <include>Viewtype-Thumbnail</include>			<!-- (500) -->
-        <include>Viewtype-Music-InfoList</include>		<!-- (501) -->
+        <include>Viewtype-InfoList</include>			<!-- (501) -->
         <include>Viewtype-Music-InfoStrip</include>		<!-- (502) -->
         <include>Viewtype-Music-WallHorz</include>		<!-- (503) -->
     </include>
@@ -758,7 +760,7 @@
     <variable name="ListInfoPosterVar">
         <value condition="Container.Content(episodes) + !IsEmpty(ListItem.Art(tvshow.poster))">$INFO[ListItem.Art(tvshow.poster)]</value>
         <value condition="!IsEmpty(ListItem.Art(poster))">$INFO[ListItem.Art(poster)]</value>
-        <value condition="IsEmpty(ListItem.Art(poster)) + !IsEmpty(ListItem.Icon)">$INFO[ListItem.Icon]</value>
+        <value condition="IsEmpty(ListItem.Art(poster)) + !IsEmpty(ListItem.Icon) + !Container.Content(movies) + !Container.Content(tvshows) + !Container.Content(episodes) + !Container.Content(Seasons)">$INFO[ListItem.Icon]</value>
 		<value>$INFO[ListItem.ActualIcon,views/fallbacks/,/large.png]</value>
     </variable>
     

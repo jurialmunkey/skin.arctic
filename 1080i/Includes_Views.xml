@@ -38,7 +38,7 @@
 	<include file="Viewtypes_Music_Banner.xml" />		<!-- (54) -->
 	<include file="Viewtypes_Music_Panel.xml" />		<!-- (63) -->
 	<include file="Viewtypes_Music_PanelCover.xml" />	<!-- (64) -->
-	<include file="Viewtypes_Music_Coverinfo.xml" />	<!-- (65) -->
+	<include file="Viewtypes_Music_CoverInfo.xml" />	<!-- (65) -->
 	<include file="Viewtypes_Music_BigCover.xml" />		<!-- (66) -->
 	
 	<include file="Viewtypes_Music_InfoStrip.xml" />	<!-- (502) -->
@@ -548,12 +548,6 @@
         <value>7FFFFFFF</value>
     </variable>
     
-    <variable name="SelectedColor.Open">
-    </variable>
-    
-    <variable name="SelectedColor.Close">
-    </variable>
-    
     <variable name="CoverViewBottomInfo">
         <value condition="Container.Content(Artists)">$INFO[Container(55).ListItem.Artist]</value>
         <value condition="Container.Content(Songs) | Window.IsVisible(MusicPlaylist)">$INFO[Container(55).ListItem.Title]$INFO[ListItem.Duration, (,)]</value>
@@ -582,8 +576,8 @@
     </variable>
     
     <variable name="MusicListLabel">
-        <value condition="!IsEmpty(ListItem.Title)">$VAR[SelectedColor.Open]$INFO[ListItem.Title]$VAR[SelectedColor.Close]</value>
-        <value>$VAR[SelectedColor.Open]$INFO[ListItem.Label]$VAR[SelectedColor.Close]</value>
+        <value condition="!IsEmpty(ListItem.Title)">$INFO[ListItem.Title]</value>
+        <value>$INFO[ListItem.Label]</value>
     </variable>
     
     <variable name="MusicListStar">
@@ -597,10 +591,10 @@
     </variable>
     
     <variable name="MusicListSongLabel">
-        <value condition="[stringcompare(Container.FolderPath,musicdb://5/1/) | stringcompare(Container.FolderPath,musicdb://top100/songs/)]">$VAR[SelectedColor.Open]$INFO[ListItem.Title]$VAR[SelectedColor.Close]</value>
-        <value condition="!IsEmpty(ListItem.Title) + !IntegerGreaterThan(ListItem.TrackNumber,9)">$VAR[SelectedColor.Open]$INFO[ListItem.TrackNumber,0,. ]$INFO[ListItem.Title]$VAR[SelectedColor.Close]</value>
-        <value condition="!IsEmpty(ListItem.Title)">$VAR[SelectedColor.Open]$INFO[ListItem.TrackNumber,,. ]$INFO[ListItem.Title]$VAR[SelectedColor.Close]</value>
-        <value>$VAR[SelectedColor.Open]$INFO[ListItem.Label]$VAR[SelectedColor.Close]</value>
+        <value condition="[stringcompare(Container.FolderPath,musicdb://5/1/) | stringcompare(Container.FolderPath,musicdb://top100/songs/)]">$INFO[ListItem.Title]</value>
+        <value condition="!IsEmpty(ListItem.Title) + !IntegerGreaterThan(ListItem.TrackNumber,9)">$INFO[ListItem.TrackNumber,0,. ]$INFO[ListItem.Title]</value>
+        <value condition="!IsEmpty(ListItem.Title)">$INFO[ListItem.TrackNumber,,. ]$INFO[ListItem.Title]</value>
+        <value>$INFO[ListItem.Label]</value>
     </variable>
     
     <variable name="MusicListSongLabel2">

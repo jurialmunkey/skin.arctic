@@ -1,6 +1,9 @@
 [B]0.5.6[/B]
 Info-list for videos
 Show labels view option for thumbnails in music view
+Added scroll bar for info list plot
+Modified info list for sets icons and sets plot
+Fixed missing in-progress tv-show
 
 [B]0.5.5[/B]
 Clean-up of music view types

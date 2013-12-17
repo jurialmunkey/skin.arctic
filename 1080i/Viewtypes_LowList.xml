@@ -349,29 +349,12 @@
                             <posy>114</posy>
                             <width>565</width>
                             <height>180</height>
-                            <label>$INFO[ListItem.Plot]</label>
+							<label>$VAR[ExtendedInfo.Plot]</label>
                             <align>justify</align>
                             <textcolor>cceeeeee</textcolor>
                             <autoscroll delay="13000" time="3000" repeat="13000" />
                             <font>Font-Alaska-S25-NC</font>
-                            <visible>![substring(ListItem.Path,videodb://1/7,left) | substring(ListItem.Path,videodb://movies/sets,left)]</visible>
                         </control>
-                        <control type="textbox">
-							<description>Plot</description>
-                            <posx>0</posx>
-                            <posy>114</posy>
-                            <width>565</width>
-                            <height>180</height>
-                            <label>$INFO[ListItem.Plot]</label>
-                            <align>justify</align>
-                            <textcolor>cceeeeee</textcolor>
-                            <font>Font-Alaska-S25-NC</font>
-							<align>justify</align>
-							<textcolor>mod-infotags-li</textcolor>
-							<autoscroll delay="8000" time="3000" repeat="8000" />
-							<info>Window(home).Property(Set.Movies.ExtendedPlot)</info>
-							<visible>[substring(ListItem.Path,videodb://1/7,left) | substring(ListItem.Path,videodb://movies/sets,left)]</visible>
-						</control>
 						<control type="button" id="72">
 							<visible allowhiddenfocus="true">false</visible>
 							<onleft>52</onleft>
@@ -428,29 +411,13 @@
 								<posy>114</posy>
 								<width>1450</width>
 								<height>184</height>
-								<label>$INFO[ListItem.Plot]</label>
-								<align>justify</align>
-								<textcolor>cceeeeee</textcolor>
-								<autoscroll delay="13000" time="3000" repeat="13000" />
-								<font>Font-Alaska-S25-NC</font>
-								<visible>![substring(ListItem.Path,videodb://1/7,left) | substring(ListItem.Path,videodb://movies/sets,left)]</visible>
-								<pagecontrol>73</pagecontrol>
-							</control>
-							<control type="textbox">
-								<description>Plot</description>
-								<posx>0</posx>
-								<posy>114</posy>
-								<width>1450</width>
-								<height>184</height>
-								<label>$INFO[ListItem.Plot]</label>
+								<label>$VAR[ExtendedInfo.Plot]</label>
 								<align>justify</align>
 								<textcolor>cceeeeee</textcolor>
 								<font>Font-Alaska-S25-NC</font>
 								<align>justify</align>
 								<textcolor>mod-infotags-li</textcolor>
 								<autoscroll delay="8000" time="3000" repeat="8000" />
-								<info>Window(home).Property(Set.Movies.ExtendedPlot)</info>
-								<visible>[substring(ListItem.Path,videodb://1/7,left) | substring(ListItem.Path,videodb://movies/sets,left)]</visible>
 								<pagecontrol>73</pagecontrol>
 							</control>
 							<control type="scrollbar" id="73">

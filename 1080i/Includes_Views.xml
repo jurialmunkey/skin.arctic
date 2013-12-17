@@ -138,9 +138,15 @@
 <!-- ========= -->  
 <!-- Variables -->
 <!-- ========= -->
+
+	<variable name="ExtendedInfo.Plot">
+		<value condition="substring(ListItem.Path,videodb://1/7,left) | substring(ListItem.Path,videodb://movies/sets,left)">$INFO[Window(home).Property(Set.Movies.ExtendedPlot)]</value>
+		<value>$INFO[ListItem.Plot]</value>
+	</variable>
     
     <!-- HD/SD flag -->
     <variable name="ListHDSDFlag">
+    	<value condition="substring(ListItem.Path,videodb://1/7,left) | substring(ListItem.Path,videodb://movies/sets,left)">flags/other/set-default.png</value>
         <value condition="SubString(ListItem.FileNameAndPath,.3D.) | SubString(ListItem.FileNameAndPath,-3D.)">flags/other/3d-default.png</value>
         <value condition="IntegerGreaterThan(ListItem.VideoResolution,719)">flags/defs/hd.png</value>
         <value condition="!IsEmpty(ListItem.VideoResolution)">flags/defs/sd.png</value>

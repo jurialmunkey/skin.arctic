@@ -4478,6 +4478,7 @@
 				<height>199</height>
 				<texture border="35" diffuse="views/posterview/diffuse-ref.png" flipy="true">views/newgloss/whitepanel-15.png</texture>
 				<colordiffuse>bbeeeeee</colordiffuse>
+				<visible>!Skin.HasSetting(HideCoverReflection)</visible>
 			</control>
 			<control type="image">
 				<posx>10</posx>
@@ -4520,6 +4521,7 @@
 					<height>199</height>
 					<texture border="35" diffuse="views/posterview/diffuse-ref.png" flipy="true">views/newgloss/whitepanel-15.png</texture>
 					<colordiffuse>bbeeeeee</colordiffuse>
+					<visible>!Skin.HasSetting(HideCoverReflection)</visible>
 				</control>
 				<control type="image">
 					<posx>0</posx>
@@ -4628,6 +4630,7 @@
 					<height>199</height>
 					<texture border="35" diffuse="views/posterview/diffuse-ref.png" flipy="true">views/newgloss/whitepanel-15.png</texture>
 					<colordiffuse>bbeeeeee</colordiffuse>
+					<visible>!Skin.HasSetting(HideCoverReflection)</visible>
 				</control>
 				<control type="image">
 					<posx>0</posx>
@@ -4736,6 +4739,7 @@
 					<height>199</height>
 					<texture border="35" diffuse="views/posterview/diffuse-ref.png" flipy="true">views/newgloss/whitepanel-15.png</texture>
 					<colordiffuse>bbeeeeee</colordiffuse>
+					<visible>!Skin.HasSetting(HideCoverReflection)</visible>
 				</control>
 				<control type="image">
 					<posx>0</posx>

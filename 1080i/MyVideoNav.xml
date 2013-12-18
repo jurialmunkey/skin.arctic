@@ -753,7 +753,7 @@
                         <textureradiofocus>buttons/radio/options-radio-button-fo.png</textureradiofocus>
                         <textureradionofocus>buttons/radio/options-radio-button-nf.png</textureradionofocus>
                         <radioposx>-19</radioposx>
-                        <visible>Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons)</visible>
+                        <visible>Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(episodes)</visible>
                     </control>
                     <!-- Poster Panel -->
                     <control type="radiobutton" id="216">

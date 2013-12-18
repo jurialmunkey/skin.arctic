@@ -1,3 +1,10 @@
+[B]0.5.7[/B]
+Info-wall view for episodes
+Added clear, rename and select item to configuration options
+Added moviesets as a preset custom item
+Backgrounds dialog menu
+
+
 [B]0.5.6[/B]
 Info-list for videos
 Show labels view option for thumbnails in music view

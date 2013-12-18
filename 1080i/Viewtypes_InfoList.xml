@@ -294,7 +294,7 @@
 								<height>100</height>
 								<font>Font-Condensed-S34-B</font>
 								<align>right</align>
-								<label fallback="[COLOR=Mod_Tags_Light]0.0[/COLOR]">$INFO[ListItem.Rating,,.0]</label>
+								<label fallback="[COLOR=Mod_Tags_Alt2]0.0[/COLOR]">$INFO[ListItem.Rating,,.0]</label>
 								<textcolor>Mod_Tags_Alt</textcolor>
 								<selectedcolor>Mod_Tags_Alt</selectedcolor>
 								<scroll>false</scroll>
@@ -307,7 +307,7 @@
 								<height>100</height>
 								<font>Font-Condensed-S34-B</font>
 								<align>right</align>
-								<label fallback="[COLOR=Mod_Tags_Light]0.0[/COLOR]">$INFO[ListItem.Rating]</label>
+								<label fallback="[COLOR=Mod_Tags_Alt2]0.0[/COLOR]">$INFO[ListItem.Rating]</label>
 								<textcolor>Mod_Tags_Alt2</textcolor>
 								<selectedcolor>Mod_Tags_Alt2</selectedcolor>
 								<scroll>false</scroll>

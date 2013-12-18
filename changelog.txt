@@ -4,6 +4,7 @@ Added clear, rename and select item to configuration options
 Added moviesets as a preset custom item
 Backgrounds dialog menu
 Fixed reflections option for weather widget
+EPG Timeline view has progress indicator
 
 [B]0.5.6[/B]
 Info-list for videos

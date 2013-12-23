@@ -3,6 +3,7 @@ Added song info to banner, info and big list
 Can queue items and change rating from song info
 Song info in playlist mode can move items up/down and remove
 Added "now playing" quick link to side menu
+Infostrip for videos
 
 [B]0.5.8[/B]
 Fixed weather widget reloading upon power menu access in panel view

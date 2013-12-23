@@ -75,7 +75,7 @@
                 <onleft condition="Skin.HasSetting(KioskMode)">63</onleft>
                 <onright>70</onright>
                 <preloaditems>2</preloaditems>
-                <itemlayout width="168" height="238" condition="Skin.HasSetting(infowall.hidelabels) + [Container.Content(sets) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)] + !substring(Container.FolderPath,plugin://,left)">
+                <itemlayout width="168" height="238" condition="Skin.HasSetting(infowall.hidelabels) + [Container.Content(sets) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)]">
                     <control type="image">
                         <description>Poster</description>
                         <posx>6</posx>
@@ -116,7 +116,7 @@
                     </control>
 					
                 </itemlayout>
-                <itemlayout width="168" height="357" condition="!Skin.HasSetting(infowall.hidelabels) + [Container.Content(sets) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)] + !substring(Container.FolderPath,plugin://,left)">
+                <itemlayout width="168" height="357" condition="!Skin.HasSetting(infowall.hidelabels) + [Container.Content(sets) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)]">
                     <control type="image">
                         <description>Poster</description>
                         <posx>6</posx>
@@ -169,7 +169,7 @@
 						<scroll>false</scroll>
 					</control>
                 </itemlayout>
-                <itemlayout width="336" height="238" condition="Skin.HasSetting(infowall.hidelabels) + [Container.Content(episodes) | substring(Container.FolderPath,plugin://,left)]">
+                <itemlayout width="336" height="238" condition="Skin.HasSetting(infowall.hidelabels) + [Container.Content(episodes)]">
                     <control type="image">
                         <description>Poster</description>
                         <posx>6</posx>
@@ -209,7 +209,7 @@
                         <colordiffuse>Mod_Cover_Fade</colordiffuse>
                     </control>
                 </itemlayout>
-                <itemlayout width="336" height="357" condition="!Skin.HasSetting(infowall.hidelabels) + [Container.Content(episodes) | substring(Container.FolderPath,plugin://,left)]">
+                <itemlayout width="336" height="357" condition="!Skin.HasSetting(infowall.hidelabels) + [Container.Content(episodes)]">
                     <control type="image">
                         <description>Poster</description>
                         <posx>6</posx>
@@ -307,7 +307,7 @@
 					</control>
                     
                 </itemlayout>
-                <focusedlayout width="168" height="238" condition="Skin.HasSetting(infowall.hidelabels) + [Container.Content(sets) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)] + !substring(Container.FolderPath,plugin://,left)">
+                <focusedlayout width="168" height="238" condition="Skin.HasSetting(infowall.hidelabels) + [Container.Content(sets) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)]">
                     <control type="group">
                         <animation effect="zoom" start="75" end="122" time="150" center="auto">Focus</animation>
 						<control type="image">
@@ -349,7 +349,7 @@
 						</control>
                     </control>
                 </focusedlayout>
-                <focusedlayout width="168" height="357" condition="!Skin.HasSetting(infowall.hidelabels) + [Container.Content(sets) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)] + !substring(Container.FolderPath,plugin://,left)">
+                <focusedlayout width="168" height="357" condition="!Skin.HasSetting(infowall.hidelabels) + [Container.Content(sets) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)]">
                     <control type="group">
                         <animation effect="zoom" start="75" end="100" time="150" center="auto">Focus</animation>
 						<control type="image">
@@ -414,7 +414,7 @@
 						</control>
                     </control>
                 </focusedlayout>
-                <focusedlayout width="336" height="238" condition="Skin.HasSetting(infowall.hidelabels) + [Container.Content(episodes) | substring(Container.FolderPath,plugin://,left)]">
+                <focusedlayout width="336" height="238" condition="Skin.HasSetting(infowall.hidelabels) + [Container.Content(episodes)]">
                     <control type="group">
                         <animation effect="zoom" start="75" end="112" time="150" center="auto">Focus</animation>
 						<control type="image">
@@ -456,7 +456,7 @@
 						</control>
                     </control>
                 </focusedlayout>
-                <focusedlayout width="336" height="357" condition="!Skin.HasSetting(infowall.hidelabels) + [Container.Content(episodes) | substring(Container.FolderPath,plugin://,left)]">
+                <focusedlayout width="336" height="357" condition="!Skin.HasSetting(infowall.hidelabels) + [Container.Content(episodes)]">
                     <control type="group">
                         <animation effect="zoom" start="75" end="100" time="150" center="auto">Focus</animation>
 						<control type="image">

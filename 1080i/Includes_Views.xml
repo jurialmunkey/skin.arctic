@@ -1,9 +1,7 @@
 <includes>
     <include file="ViewtypesPictures.xml" />
     <include file="ViewtypesPrograms.xml" />
-    <include file="ViewtypesAddons.xml" />
     <include file="ViewtypesPVR.xml" />
-    <include file="Viewtypes_AdvBanner.xml" />
     <include file="Viewtypes_AdvWall.xml" />
     <include file="Viewtypes_AdvReel.xml" />
     <include file="Viewtypes_AdvLandscape.xml" />
@@ -96,15 +94,12 @@
 
     <include name="ProgramViews">
         <include>Viewtype-ProgramList</include>
-        <include>Viewtype-ProgramInfo</include>
         <include>Viewtype-Thumbnail</include>
-        <include>Viewtype-AdvBanner</include>
-        <include>Viewtype-AdvWall</include>
-        <include>Viewtype-AdvInfoWall</include>
-        <include>Viewtype-AdvReel</include>
-        <include>Viewtype-AdvLandscape</include>
-        <include>Viewtype-AdvClassicInfo</include>
-        <include>Viewtype-AdvPosterInfo</include>
+        <include>Viewtype-AdvBanner</include>			<!-- (54) -->
+        
+        <include>Viewtype-InfoWall</include>			<!-- (63) -->
+        
+        <include>Viewtype-InfoList</include>			<!-- (501) -->
     </include>
     
     <include name="AddonViews">
@@ -141,7 +136,9 @@
 
 	<variable name="ExtendedInfo.Plot">
 		<value condition="substring(ListItem.Path,videodb://1/7,left) | substring(ListItem.Path,videodb://movies/sets,left)">$INFO[Window(home).Property(Set.Movies.ExtendedPlot)]</value>
-		<value>$INFO[ListItem.Plot]</value>
+		<value condition="!IsEmpty(ListItem.Plot)">$INFO[ListItem.Plot]</value>
+		<value condition="!IsEmpty(ListItem.Property(Addon.Description))">$INFO[ListItem.Property(Addon.Description)]</value>
+		<value condition="!IsEmpty(ListItem.Property(Addon.Summary))">$INFO[ListItem.Property(Addon.Summary)]</value>
 	</variable>
     
     <!-- HD/SD flag -->
@@ -452,7 +449,7 @@
     
     <variable name="ThumbIcon">
         <value condition="!IsEmpty(ListItem.Art(thumb))">$INFO[ListItem.Art(thumb)]</value>
-        <value condition="!IsEmpty(ListItem.Icon)">$INFO[ListItem.Icon]</value>
+        <!--<value condition="!IsEmpty(ListItem.Icon)">$INFO[ListItem.Icon]</value>-->
         <value>$INFO[ListItem.ActualIcon,views/fallbacks/,/square-medium.png]</value>
     </variable>
     
@@ -715,11 +712,13 @@
 	</variable>
 	
 	<variable name="MusicPlotBox">
+		<value condition="Container.Content(addons)">$INFO[ListItem.Property(Addon.Description)]</value>
 		<value condition="Container.Content(songs)">$INFO[ListItem.Genre,[CR][B]$LOCALIZE[515]:[/B]  ,]$INFO[ListItem.Year,[CR][B]$LOCALIZE[562]:[/B]  ,]$INFO[ListItem.Duration,[CR][B]$LOCALIZE[180]:[/B]  ,]</value>
 		<value condition="Container.Content(albums) + !IsEmpty(ListItem.Property(Album_Description))">$INFO[ListItem.Property(Album_Description),[B]$LOCALIZE[183][/B][CR],]$INFO[Window(home).Property(Album.Song.1.Title),[CR][CR][B]$LOCALIZE[182][/B][CR][B]1. [/B],]  $INFO[Window(home).Property(Album.Song.2.Title), [B]2. [/B],]  $INFO[Window(home).Property(Album.Song.3.Title), [B]3. [/B],]  $INFO[Window(home).Property(Album.Song.4.Title), [B]4. [/B],]$INFO[Window(home).Property(Album.Song.5.Title), [B]5. [/B],]  $INFO[Window(home).Property(Album.Song.6.Title), [B]6. [/B],]  $INFO[Window(home).Property(Album.Song.7.Title), [B]7. [/B],]  $INFO[Window(home).Property(Album.Song.8.Title), [B]8. [/B],]$INFO[Window(home).Property(Album.Song.9.Title), [B]9. [/B],]  $INFO[Window(home).Property(Album.Song.10.Title), [B]10. [/B],]  $INFO[Window(home).Property(Album.Song.11.Title), [B]11. [/B],]  $INFO[Window(home).Property(Album.Song.12.Title), [B]12. [/B],]$INFO[Window(home).Property(Album.Song.13.Title), [B]13. [/B],]  $INFO[Window(home).Property(Album.Song.14.Title), [B]14. [/B],]  $INFO[Window(home).Property(Album.Song.15.Title), [B]15. [/B],]  $INFO[Window(home).Property(Album.Song.16.Title), [B]16. [/B],]</value>
 		<value condition="Container.Content(albums) + IsEmpty(ListItem.Property(Album_Description))">$INFO[Window(home).Property(Album.Song.1.Title),[B]$LOCALIZE[182][/B][CR][B]1. [/B],]  $INFO[Window(home).Property(Album.Song.2.Title), [B]2. [/B],]  $INFO[Window(home).Property(Album.Song.3.Title), [B]3. [/B],]  $INFO[Window(home).Property(Album.Song.4.Title), [B]4. [/B],]$INFO[Window(home).Property(Album.Song.5.Title), [B]5. [/B],]  $INFO[Window(home).Property(Album.Song.6.Title), [B]6. [/B],]  $INFO[Window(home).Property(Album.Song.7.Title), [B]7. [/B],]  $INFO[Window(home).Property(Album.Song.8.Title), [B]8. [/B],]$INFO[Window(home).Property(Album.Song.9.Title), [B]9. [/B],]  $INFO[Window(home).Property(Album.Song.10.Title), [B]10. [/B],]  $INFO[Window(home).Property(Album.Song.11.Title), [B]11. [/B],]  $INFO[Window(home).Property(Album.Song.12.Title), [B]12. [/B],]$INFO[Window(home).Property(Album.Song.13.Title), [B]13. [/B],]  $INFO[Window(home).Property(Album.Song.14.Title), [B]14. [/B],]  $INFO[Window(home).Property(Album.Song.15.Title), [B]15. [/B],]  $INFO[Window(home).Property(Album.Song.16.Title), [B]16. [/B],]</value>
 		<value condition="Container.Content(artists) + !IsEmpty(ListItem.Property(Artist_Description))">$INFO[ListItem.Property(Artist_Description),[B]$LOCALIZE[21887][/B][CR],]$INFO[Window(home).Property(Artist.Album.1.Title),[CR][CR][B]$LOCALIZE[21888][/B][CR],]$INFO[Window(home).Property(Artist.Album.2.Title),[CR],]$INFO[Window(home).Property(Artist.Album.3.Title),[CR],]$INFO[Window(home).Property(Artist.Album.4.Title),[CR],]$INFO[Window(home).Property(Artist.Album.5.Title),[CR],]$INFO[Window(home).Property(Artist.Album.6.Title),[CR],]$INFO[Window(home).Property(Artist.Album.7.Title),[CR],]$INFO[Window(home).Property(Artist.Album.8.Title),[CR],]$INFO[Window(home).Property(Artist.Album.9.Title),[CR],]$INFO[Window(home).Property(Artist.Album.10.Title),[CR],]</value>
 		<value condition="Container.Content(artists) + IsEmpty(ListItem.Property(Artist_Description))">$INFO[Window(home).Property(Artist.Album.1.Title),[B]$LOCALIZE[21888][/B][CR],]$INFO[Window(home).Property(Artist.Album.2.Title),[CR],]$INFO[Window(home).Property(Artist.Album.3.Title),[CR],]$INFO[Window(home).Property(Artist.Album.4.Title),[CR],]$INFO[Window(home).Property(Artist.Album.5.Title),[CR],]$INFO[Window(home).Property(Artist.Album.6.Title),[CR],]$INFO[Window(home).Property(Artist.Album.7.Title),[CR],]$INFO[Window(home).Property(Artist.Album.8.Title),[CR],]$INFO[Window(home).Property(Artist.Album.9.Title),[CR],]$INFO[Window(home).Property(Artist.Album.10.Title),[CR],]</value>
+		<value>$INFO[ListItem.Plot]</value>
 	</variable>
 	
 	<variable name="EpisodeNumber">
@@ -753,14 +752,16 @@
         <value condition="Container.Content(episodes)">$INFO[ListItem.Thumb]</value>
         <value condition="!IsEmpty(ListItem.Art(landscape)) + Skin.HasSetting(PreferLandscapeArt)">$INFO[ListItem.Art(landscape)]</value>
         <value condition="!IsEmpty(ListItem.Art(fanart))">$INFO[ListItem.Art(fanart)]</value>
-        <value condition="IsEmpty(ListItem.Thumb)">$INFO[ListItem.ActualIcon,views/fallbacks/,/landscape.png]</value>
-        <value>$INFO[ListItem.Thumb]</value>
+        <value condition="!IsEmpty(ListItem.Thumb)">$INFO[ListItem.Thumb]</value>
+        <value condition="substring(Container.FolderPath,plugin://,left)">views/fallbacks/DefaultFolder.png/landscape.png</value>
+        <value condition="IsEmpty(ListItem.Thumb) + !substring(Container.FolderPath,plugin://,left)">$INFO[ListItem.ActualIcon,views/fallbacks/,/landscape.png]</value>
+        <value>views/fallbacks/DefaultFolder.png/landscape.png</value>
     </variable>
 
     <variable name="ListInfoPosterVar">
         <value condition="Container.Content(episodes) + !IsEmpty(ListItem.Art(tvshow.poster))">$INFO[ListItem.Art(tvshow.poster)]</value>
         <value condition="!IsEmpty(ListItem.Art(poster))">$INFO[ListItem.Art(poster)]</value>
-        <value condition="IsEmpty(ListItem.Art(poster)) + !IsEmpty(ListItem.Icon) + !Container.Content(movies) + !Container.Content(tvshows) + !Container.Content(episodes) + !Container.Content(Seasons)">$INFO[ListItem.Icon]</value>
+        <value condition="IsEmpty(ListItem.Art(poster)) + !IsEmpty(ListItem.Thumb) + !Container.Content(movies) + !Container.Content(tvshows) + !Container.Content(episodes) + !Container.Content(Seasons)">$INFO[ListItem.Thumb]</value>
 		<value>$INFO[ListItem.ActualIcon,views/fallbacks/,/large.png]</value>
     </variable>
     
@@ -785,81 +786,153 @@
 	
 	<!-- Banner Stars -->
 	<variable name="Mod_Banner_Stars_1">
-		<value condition="[Container.Content(songs)| Container.Content(albums) | Container.Content(artists)] + StringCompare(ListItem.StarRating,rating5.png)">views/list/other/star_fo.png</value>
 		<value condition="IntegerGreaterThan(ListItem.Rating,9)">views/list/other/star_fo.png</value>
 		<value condition="IntegerGreaterThan(ListItem.Rating,8)">views/list/other/star_half.png</value>
 		<value>views/list/other/star_nofo.png</value>
 	</variable>
 	<variable name="Mod_Banner_Stars_2">
-		<value condition="[Container.Content(songs)| Container.Content(albums) | Container.Content(artists)] + StringCompare(ListItem.StarRating,rating5.png)">views/list/other/star_fo.png</value>
-		<value condition="[Container.Content(songs)| Container.Content(albums) | Container.Content(artists)] + StringCompare(ListItem.StarRating,rating4.png)">views/list/other/star_fo.png</value>
 		<value condition="IntegerGreaterThan(ListItem.Rating,7)">views/list/other/star_fo.png</value>
 		<value condition="IntegerGreaterThan(ListItem.Rating,6)">views/list/other/star_half.png</value>
 		<value>views/list/other/star_nofo.png</value>
 	</variable>
 	<variable name="Mod_Banner_Stars_3">
-		<value condition="[Container.Content(songs)| Container.Content(albums) | Container.Content(artists)] + StringCompare(ListItem.StarRating,rating5.png)">views/list/other/star_fo.png</value>
-		<value condition="[Container.Content(songs)| Container.Content(albums) | Container.Content(artists)] + StringCompare(ListItem.StarRating,rating4.png)">views/list/other/star_fo.png</value>
-		<value condition="[Container.Content(songs)| Container.Content(albums) | Container.Content(artists)] + StringCompare(ListItem.StarRating,rating3.png)">views/list/other/star_fo.png</value>
 		<value condition="IntegerGreaterThan(ListItem.Rating,5)">views/list/other/star_fo.png</value>
 		<value condition="IntegerGreaterThan(ListItem.Rating,4)">views/list/other/star_half.png</value>
 		<value>views/list/other/star_nofo.png</value>
 	</variable>
 	<variable name="Mod_Banner_Stars_4">
-		<value condition="[Container.Content(songs)| Container.Content(albums) | Container.Content(artists)] + StringCompare(ListItem.StarRating,rating5.png)">views/list/other/star_fo.png</value>
-		<value condition="[Container.Content(songs)| Container.Content(albums) | Container.Content(artists)] + StringCompare(ListItem.StarRating,rating4.png)">views/list/other/star_fo.png</value>
-		<value condition="[Container.Content(songs)| Container.Content(albums) | Container.Content(artists)] + StringCompare(ListItem.StarRating,rating3.png)">views/list/other/star_fo.png</value>
-		<value condition="[Container.Content(songs)| Container.Content(albums) | Container.Content(artists)] + StringCompare(ListItem.StarRating,rating2.png)">views/list/other/star_fo.png</value>
 		<value condition="IntegerGreaterThan(ListItem.Rating,3)">views/list/other/star_fo.png</value>
 		<value condition="IntegerGreaterThan(ListItem.Rating,2)">views/list/other/star_half.png</value>
 		<value>views/list/other/star_nofo.png</value>
 	</variable>
 	<variable name="Mod_Banner_Stars_5">
-		<value condition="[Container.Content(songs)| Container.Content(albums) | Container.Content(artists)] + StringCompare(ListItem.StarRating,rating5.png)">views/list/other/star_fo.png</value>
-		<value condition="[Container.Content(songs)| Container.Content(albums) | Container.Content(artists)] + StringCompare(ListItem.StarRating,rating4.png)">views/list/other/star_fo.png</value>
-		<value condition="[Container.Content(songs)| Container.Content(albums) | Container.Content(artists)] + StringCompare(ListItem.StarRating,rating3.png)">views/list/other/star_fo.png</value>
-		<value condition="[Container.Content(songs)| Container.Content(albums) | Container.Content(artists)] + StringCompare(ListItem.StarRating,rating2.png)">views/list/other/star_fo.png</value>
-		<value condition="[Container.Content(songs)| Container.Content(albums) | Container.Content(artists)] + StringCompare(ListItem.StarRating,rating1.png)">views/list/other/star_fo.png</value>
 		<value condition="IntegerGreaterThan(ListItem.Rating,1)">views/list/other/star_fo.png</value>
 		<value condition="IntegerGreaterThan(ListItem.Rating,0)">views/list/other/star_half.png</value>
 		<value>views/list/other/star_nofo.png</value>
 	</variable>
 	<include name="Mod_Banner_Stars">
-		<control type="image">
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>72</width>
-			<height>72</height>
-			<texture>$VAR[Mod_Banner_Stars_1]</texture>
+		<control type="group">
+			<visible>![Container.Content(songs)| Container.Content(albums) | Container.Content(artists)] </visible>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>72</width>
+				<height>72</height>
+				<texture>$VAR[Mod_Banner_Stars_1]</texture>
+			</control>
+			<control type="image">
+				<posx>40</posx>
+				<posy>0</posy>
+				<width>72</width>
+				<height>72</height>
+				<texture>$VAR[Mod_Banner_Stars_2]</texture>
+			</control>
+			<control type="image">
+				<posx>80</posx>
+				<posy>0</posy>
+				<width>72</width>
+				<height>72</height>
+				<texture>$VAR[Mod_Banner_Stars_3]</texture>
+			</control>
+			<control type="image">
+				<posx>120</posx>
+				<posy>0</posy>
+				<width>72</width>
+				<height>72</height>
+				<texture>$VAR[Mod_Banner_Stars_4]</texture>
+			</control>
+			<control type="image">
+				<posx>160</posx>
+				<posy>0</posy>
+				<width>72</width>
+				<height>72</height>
+				<texture>$VAR[Mod_Banner_Stars_5]</texture>
+			</control>
 		</control>
-		<control type="image">
-			<posx>40</posx>
-			<posy>0</posy>
-			<width>72</width>
-			<height>72</height>
-			<texture>$VAR[Mod_Banner_Stars_2]</texture>
+		<control type="group">
+			<visible>[Container.Content(songs)| Container.Content(albums) | Container.Content(artists)] </visible>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>72</width>
+				<height>72</height>
+				<texture>views/list/other/star_nofo.png</texture>
+				<visible>!StringCompare(ListItem.StarRating,rating5.png)</visible>
+			</control>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>72</width>
+				<height>72</height>
+				<texture>views/list/other/star_fo.png</texture>
+				<visible>StringCompare(ListItem.StarRating,rating5.png)</visible>
+			</control>
+			<control type="image">
+				<posx>40</posx>
+				<posy>0</posy>
+				<width>72</width>
+				<height>72</height>
+				<texture>views/list/other/star_nofo.png</texture>
+				<visible>!StringCompare(ListItem.StarRating,rating5.png) + !StringCompare(ListItem.StarRating,rating4.png)</visible>
+			</control>
+			<control type="image">
+				<posx>40</posx>
+				<posy>0</posy>
+				<width>72</width>
+				<height>72</height>
+				<texture>views/list/other/star_fo.png</texture>
+				<visible>StringCompare(ListItem.StarRating,rating5.png) | StringCompare(ListItem.StarRating,rating4.png)</visible>
+			</control>
+			<control type="image">
+				<posx>80</posx>
+				<posy>0</posy>
+				<width>72</width>
+				<height>72</height>
+				<texture>views/list/other/star_nofo.png</texture>
+				<visible>![StringCompare(ListItem.StarRating,rating5.png) | StringCompare(ListItem.StarRating,rating4.png) | StringCompare(ListItem.StarRating,rating3.png)]</visible>
+			</control>
+			<control type="image">
+				<posx>80</posx>
+				<posy>0</posy>
+				<width>72</width>
+				<height>72</height>
+				<texture>views/list/other/star_fo.png</texture>
+				<visible>StringCompare(ListItem.StarRating,rating5.png) | StringCompare(ListItem.StarRating,rating4.png) | StringCompare(ListItem.StarRating,rating3.png)</visible>
+			</control>
+			<control type="image">
+				<posx>120</posx>
+				<posy>0</posy>
+				<width>72</width>
+				<height>72</height>
+				<texture>views/list/other/star_nofo.png</texture>
+				<visible>![StringCompare(ListItem.StarRating,rating5.png) | StringCompare(ListItem.StarRating,rating4.png) | StringCompare(ListItem.StarRating,rating3.png) | StringCompare(ListItem.StarRating,rating2.png)]</visible>
+			</control>
+			<control type="image">
+				<posx>120</posx>
+				<posy>0</posy>
+				<width>72</width>
+				<height>72</height>
+				<texture>views/list/other/star_fo.png</texture>
+				<visible>StringCompare(ListItem.StarRating,rating5.png) | StringCompare(ListItem.StarRating,rating4.png) | StringCompare(ListItem.StarRating,rating3.png) | StringCompare(ListItem.StarRating,rating2.png)</visible>
+			</control>
+			<control type="image">
+				<posx>160</posx>
+				<posy>0</posy>
+				<width>72</width>
+				<height>72</height>
+				<texture>views/list/other/star_nofo.png</texture>
+				<visible>![StringCompare(ListItem.StarRating,rating5.png) | StringCompare(ListItem.StarRating,rating4.png) | StringCompare(ListItem.StarRating,rating3.png) | StringCompare(ListItem.StarRating,rating2.png) | StringCompare(ListItem.StarRating,rating1.png)]</visible>
+			</control>
+			<control type="image">
+				<posx>160</posx>
+				<posy>0</posy>
+				<width>72</width>
+				<height>72</height>
+				<texture>views/list/other/star_fo.png</texture>
+				<visible>StringCompare(ListItem.StarRating,rating5.png) | StringCompare(ListItem.StarRating,rating4.png) | StringCompare(ListItem.StarRating,rating3.png) | StringCompare(ListItem.StarRating,rating2.png) | StringCompare(ListItem.StarRating,rating1.png)</visible>
+			</control>
 		</control>
-		<control type="image">
-			<posx>80</posx>
-			<posy>0</posy>
-			<width>72</width>
-			<height>72</height>
-			<texture>$VAR[Mod_Banner_Stars_3]</texture>
-		</control>
-		<control type="image">
-			<posx>120</posx>
-			<posy>0</posy>
-			<width>72</width>
-			<height>72</height>
-			<texture>$VAR[Mod_Banner_Stars_4]</texture>
-		</control>
-		<control type="image">
-			<posx>160</posx>
-			<posy>0</posy>
-			<width>72</width>
-			<height>72</height>
-			<texture>$VAR[Mod_Banner_Stars_5]</texture>
-		</control>
+		
 	</include>
 	
 	<variable name="Metadata.Actors.InLibrary">

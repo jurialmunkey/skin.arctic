@@ -7,6 +7,7 @@
 		<value>$INFO[ListItem.Label]</value>
 	</variable>
 	<variable name="Music-InfoList-Label2">
+		<value condition="Container.Content(addons)">$INFO[ListItem.Property(Addon.Creator)]</value>
 		<value condition="Container.Content(Songs) | Window.IsVisible(MusicPlaylist)">$INFO[ListItem.Artist]</value>
 		<value condition="Container.Content(Artists)">$INFO[ListItem.Property(Artist_Genre)]</value>
 		<value condition="Container.Content(episodes)">$INFO[ListItem.Premiered]$INFO[ListItem.Duration, • , $LOCALIZE[12391]]</value>
@@ -16,6 +17,7 @@
 		<value>$INFO[ListItem.Label2]</value>
 	</variable>
 	<variable name="Music-InfoList-Label3">
+		<value condition="Container.Content(addons)">$INFO[ListItem.Label2]</value>
 		<value condition="Container.Content(Songs) | Window.IsVisible(MusicPlaylist)">$INFO[ListItem.Duration]</value>
 		<value condition="Container.Content(tvshows) | Container.Content(seasons)">$INFO[ListItem.Property(UnwatchedEpisodes)]</value>
 		<value>$INFO[ListItem.Year]</value>
@@ -210,6 +212,7 @@
                             <effect type="fade" start="71.5" end="100" time="500" tween="sine" easing="inout" />
                         </animation>
                         <animation effect="fade" start="100" end="71.5" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(501)">Conditional</animation>
+                        <visible>!Window.IsVisible(songinformation)</visible>
                         <control type="label">
 							<description>Label</description>
 							<posx>120</posx>
@@ -325,7 +328,7 @@
 					<posy>6</posy>
 					<width>294</width>
 					<height>294</height>
-					<texture background="true" diffuse="arctic/panel/fanart.png" fallback="views/fallbacks/DefaultAlbumCover.png/square-large.png">$INFO[ListItem.Thumb]</texture>
+					<texture background="true" diffuse="arctic/panel/fanart.png" fallback="views/fallbacks/DefaultAlbumCover.png/square-large.png">$VAR[ListInfoPosterVar]</texture>
 					<aspectratio scalediffuse="false">scale</aspectratio>
 					<fadetime>200</fadetime>
 				</control>
@@ -345,7 +348,7 @@
 					<posy>6</posy>
 					<width>523</width>
 					<height>294</height>
-					<texture background="true" diffuse="arctic/panel/fanart.png" fallback="views/fallbacks/DefaultArtist.png/square-large.png">$INFO[ListItem.Art(fanart)]</texture>
+					<texture background="true" diffuse="arctic/panel/fanart.png" fallback="views/fallbacks/DefaultArtist.png/square-large.png">$VAR[ListInfoLandscapeVar]</texture>
 					<aspectratio scalediffuse="false">scale</aspectratio>
 					<fadetime>200</fadetime>
 				</control>

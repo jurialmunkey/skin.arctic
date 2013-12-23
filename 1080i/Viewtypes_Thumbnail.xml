@@ -32,7 +32,7 @@
                 <onleft condition="!Skin.HasSetting(KioskMode)">9010</onleft>
                 <onright>70</onright>
                 <preloaditems>2</preloaditems>
-                <itemlayout width="238" height="357" condition="!Container.Content(movies) + !Container.Content(tvshows) + !Container.Content(seasons) + !Skin.HasSetting(thumbnails.hidelabel)">
+                <itemlayout width="238" height="357" condition="[[!Container.Content(sets) + !Container.Content(movies) + !Container.Content(tvshows) + !Container.Content(seasons)] | substring(Container.FolderPath,plugin://,left)] + !Skin.HasSetting(thumbnails.hidelabel)">
                     <control type="image">
                         <description>Poster</description>
                         <posx>6</posx>
@@ -76,7 +76,7 @@
 						<scroll>false</scroll>
 					</control>
                 </itemlayout>
-                <itemlayout width="238" height="238" condition="!Container.Content(movies) + !Container.Content(tvshows) + !Container.Content(seasons) + Skin.HasSetting(thumbnails.hidelabel)">
+                <itemlayout width="238" height="238" condition="[[!Container.Content(sets) + !Container.Content(movies) + !Container.Content(tvshows) + !Container.Content(seasons)] | substring(Container.FolderPath,plugin://,left)] + Skin.HasSetting(thumbnails.hidelabel)">
                     <control type="image">
                         <description>Poster</description>
                         <posx>6</posx>
@@ -107,7 +107,7 @@
                         <aspectratio>stretch</aspectratio>
                     </control>
                 </itemlayout>
-                <itemlayout width="168" height="357" condition="Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)">
+                <itemlayout width="168" height="357" condition="!substring(Container.FolderPath,plugin://,left) + [Container.Content(sets) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)]">
                     <control type="image">
                         <description>Poster</description>
                         <posx>6</posx>
@@ -160,7 +160,11 @@
 						<scroll>false</scroll>
 					</control>
                 </itemlayout>
-                <focusedlayout width="238" height="357" condition="!Container.Content(movies) + !Container.Content(tvshows) + !Container.Content(seasons) + !Skin.HasSetting(thumbnails.hidelabel)">
+                <focusedlayout width="238" height="357" condition="[[!Container.Content(sets) + !Container.Content(movies) + !Container.Content(tvshows) + !Container.Content(seasons)] | substring(Container.FolderPath,plugin://,left)] + !Skin.HasSetting(thumbnails.hidelabel)">
+                	<!-- Set View to Info Wall if Thumbnails for Youtube is set -->
+                	<control type="button">
+                		<onfocus condition="substring(Container.FolderPath,plugin://plugin.video.youtube,left)">Container.SetViewMode(63)</onfocus>
+                	</control>
                     <control type="group">
                         <animation effect="zoom" end="100" start="80" time="150" delay="50" center="auto">Focus</animation>
                         <control type="image">
@@ -217,7 +221,11 @@
 						</control>
 					</control>	
                 </focusedlayout>
-                <focusedlayout width="238" height="238" condition="!Container.Content(movies) + !Container.Content(tvshows) + !Container.Content(seasons) + Skin.HasSetting(thumbnails.hidelabel)">
+                <focusedlayout width="238" height="238" condition="[[!Container.Content(sets) + !Container.Content(movies) + !Container.Content(tvshows) + !Container.Content(seasons)] | substring(Container.FolderPath,plugin://,left)] + Skin.HasSetting(thumbnails.hidelabel)">
+                	<!-- Set View to Info Wall if Thumbnails for Youtube is set -->
+                	<control type="button">
+                		<onfocus condition="substring(Container.FolderPath,plugin://plugin.video.youtube,left)">Container.SetViewMode(63)</onfocus>
+                	</control>
                     <control type="group">
                         <animation effect="zoom" end="125" start="80" time="150" delay="50" center="auto">Focus</animation>
                         <control type="image">
@@ -261,7 +269,7 @@
 						</control>-->
 					</control>	
                 </focusedlayout>
-                <focusedlayout width="168" height="357" condition="Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)">
+                <focusedlayout width="168" height="357" condition="!substring(Container.FolderPath,plugin://,left) + [Container.Content(sets) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)]">
                     <control type="group">
                         <animation effect="zoom" start="75" end="100" time="150" center="auto">Focus</animation>
 						<control type="image">

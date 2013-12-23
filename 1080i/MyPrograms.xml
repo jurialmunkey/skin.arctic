@@ -2,7 +2,7 @@
     <defaultcontrol always="true">50</defaultcontrol>
     <allowoverlay>yes</allowoverlay>
     <backgroundcolor>0</backgroundcolor>
-    <views>50,52,54,500,60,502,503,513,507,514,56</views>
+    <views>50,500,63,501,54</views>
     <controls>
         <include>CommonItems</include>
         <include>ProgramHeader</include>
@@ -159,172 +159,6 @@
                     <texturefocus border="70,2,2,2">dialogs/options/buttons/custom-fo.png</texturefocus>
                     <texturenofocus border="70,2,2,2">dialogs/options/buttons/custom-nf.png</texturenofocus>
                 </control>
-                <control type="radiobutton" id="102">
-                    <description>Show info in Info List</description>
-                    <include>ViewOptions.Button</include>
-                    <label>$LOCALIZE[42015]</label>
-                    <texturefocus border="2">dialogs/options/buttons/default-fo.png</texturefocus>
-                    <onclick>Skin.ToggleSetting(ProgramInfoListHideInfo)</onclick>
-                    <selected>!Skin.HasSetting(ProgramInfoListHideInfo)</selected>
-                    <visible>Control.IsVisible(52)</visible>
-                    <textureradioon>buttons/radio/options-radio-button-fo.png</textureradioon>
-                    <textureradiooff>buttons/radio/options-radio-button-nf.png</textureradiooff>
-                    <radioposx>-19</radioposx>
-                </control>
-                <control type="radiobutton" id="103">
-                    <description>Show plot in Info List</description>
-                    <include>ViewOptions.Button</include>
-                    <label>$LOCALIZE[42018]</label>
-                    <texturefocus border="2">dialogs/options/buttons/default-fo.png</texturefocus>
-                    <onclick>Skin.ToggleSetting(ProgramInfoListPlot)</onclick>
-                    <selected>Skin.HasSetting(ProgramInfoListPlot)</selected>
-                    <visible>Control.IsVisible(52)</visible>
-                    <textureradioon>buttons/radio/options-radio-button-fo.png</textureradioon>
-                    <textureradiooff>buttons/radio/options-radio-button-nf.png</textureradiooff>
-                    <radioposx>-19</radioposx>
-                    <enable>!Skin.HasSetting(ProgramInfoListHideInfo)</enable>
-                    <animation effect="fade" start="100" end="50" time="0" condition="!Control.IsEnabled(103)">Conditional</animation>
-                </control>
-                <control type="radiobutton" id="104">
-                    <description>Show info in Info List Square</description>
-                    <include>ViewOptions.Button</include>
-                    <label>$LOCALIZE[42015]</label>
-                    <texturefocus border="2">dialogs/options/buttons/default-fo.png</texturefocus>
-                    <onclick>Skin.ToggleSetting(ProgramInfoListSquareHideInfo)</onclick>
-                    <selected>!Skin.HasSetting(ProgramInfoListSquareHideInfo)</selected>
-                    <visible>Control.IsVisible(53)</visible>
-                    <textureradioon>buttons/radio/options-radio-button-fo.png</textureradioon>
-                    <textureradiooff>buttons/radio/options-radio-button-nf.png</textureradiooff>
-                    <radioposx>-19</radioposx>
-                </control>
-                <control type="radiobutton" id="105">
-                    <description>Show plot in Info List Square</description>
-                    <include>ViewOptions.Button</include>
-                    <label>$LOCALIZE[42018]</label>
-                    <texturefocus border="2">dialogs/options/buttons/default-fo.png</texturefocus>
-                    <onclick>Skin.ToggleSetting(ProgramInfoListSquarePlot)</onclick>
-                    <selected>Skin.HasSetting(ProgramInfoListSquarePlot)</selected>
-                    <visible>Control.IsVisible(53)</visible>
-                    <textureradioon>buttons/radio/options-radio-button-fo.png</textureradioon>
-                    <textureradiooff>buttons/radio/options-radio-button-nf.png</textureradiooff>
-                    <radioposx>-19</radioposx>
-                    <enable>!Skin.HasSetting(ProgramInfoListSquareHideInfo)</enable>
-                    <animation effect="fade" start="100" end="50" time="0" condition="!Control.IsEnabled(105)">Conditional</animation>
-                </control>
-                <control type="radiobutton" id="106">
-                    <description>Show info in Info Panel</description>
-                    <include>ViewOptions.Button</include>
-                    <label>$LOCALIZE[42015]</label>
-                    <texturefocus border="2">dialogs/options/buttons/default-fo.png</texturefocus>
-                    <onclick>Skin.ToggleSetting(ProgramInfoPanelHideInfo)</onclick>
-                    <selected>!Skin.HasSetting(ProgramInfoPanelHideInfo)</selected>
-                    <visible>Control.IsVisible(54)</visible>
-                    <textureradioon>buttons/radio/options-radio-button-fo.png</textureradioon>
-                    <textureradiooff>buttons/radio/options-radio-button-nf.png</textureradiooff>
-                    <radioposx>-19</radioposx>
-                </control>
-                <control type="radiobutton" id="107">
-                    <description>Show plot in Info Panel</description>
-                    <include>ViewOptions.Button</include>
-                    <label>$LOCALIZE[42018]</label>
-                    <texturefocus border="2">dialogs/options/buttons/default-fo.png</texturefocus>
-                    <onclick>Skin.ToggleSetting(ProgramInfoPanelPlot)</onclick>
-                    <selected>Skin.HasSetting(ProgramInfoPanelPlot)</selected>
-                    <visible>Control.IsVisible(54)</visible>
-                    <textureradioon>buttons/radio/options-radio-button-fo.png</textureradioon>
-                    <textureradiooff>buttons/radio/options-radio-button-nf.png</textureradiooff>
-                    <radioposx>-19</radioposx>
-                    <enable>!Skin.HasSetting(ProgramInfoPanelHideInfo)</enable>
-                    <animation effect="fade" start="100" end="50" time="0" condition="!Control.IsEnabled(107)">Conditional</animation>
-                </control>
-                <control type="radiobutton" id="108">
-                    <description>Show info in Info Panel Square</description>
-                    <include>ViewOptions.Button</include>
-                    <label>$LOCALIZE[42015]</label>
-                    <texturefocus border="2">dialogs/options/buttons/default-fo.png</texturefocus>
-                    <onclick>Skin.ToggleSetting(ProgramInfoPanelSquareHideInfo)</onclick>
-                    <selected>!Skin.HasSetting(ProgramInfoPanelSquareHideInfo)</selected>
-                    <visible>Control.IsVisible(55)</visible>
-                    <textureradioon>buttons/radio/options-radio-button-fo.png</textureradioon>
-                    <textureradiooff>buttons/radio/options-radio-button-nf.png</textureradiooff>
-                    <radioposx>-19</radioposx>
-                </control>
-                <control type="radiobutton" id="109">
-                    <description>Show plot in Info Panel Square</description>
-                    <include>ViewOptions.Button</include>
-                    <label>$LOCALIZE[42018]</label>
-                    <texturefocus border="2">dialogs/options/buttons/default-fo.png</texturefocus>
-                    <onclick>Skin.ToggleSetting(ProgramInfoPanelSquarePlot)</onclick>
-                    <selected>Skin.HasSetting(ProgramInfoPanelSquarePlot)</selected>
-                    <visible>Control.IsVisible(55)</visible>
-                    <textureradioon>buttons/radio/options-radio-button-fo.png</textureradioon>
-                    <textureradiooff>buttons/radio/options-radio-button-nf.png</textureradiooff>
-                    <radioposx>-19</radioposx>
-                    <enable>!Skin.HasSetting(ProgramInfoPanelSquareHideInfo)</enable>
-                    <animation effect="fade" start="100" end="50" time="0" condition="!Control.IsEnabled(109)">Conditional</animation>
-                </control>
-                <control type="radiobutton" id="110">
-                    <description>Use small thumbs in thumbnail video view</description>
-                    <include>ViewOptions.Button</include>
-                    <label>$LOCALIZE[42024]</label>
-                    <texturefocus border="2">dialogs/options/buttons/default-fo.png</texturefocus>
-                    <onclick>Skin.ToggleSetting(ProgramThumbnailSmall)</onclick>
-                    <selected>Skin.HasSetting(ProgramThumbnailSmall)</selected>
-                    <visible>Control.IsVisible(501)</visible>
-                    <textureradioon>buttons/radio/options-radio-button-fo.png</textureradioon>
-                    <textureradiooff>buttons/radio/options-radio-button-nf.png</textureradiooff>
-                    <radioposx>-19</radioposx>
-                </control>
-                <control type="radiobutton" id="111">
-                    <description>Show info in thumbnail view</description>
-                    <include>ViewOptions.Button</include>
-                    <label>$LOCALIZE[42015]</label>
-                    <texturefocus border="2">dialogs/options/buttons/default-fo.png</texturefocus>
-                    <onclick>Skin.ToggleSetting(ProgramThumbnailHideInfo)</onclick>
-                    <selected>!Skin.HasSetting(ProgramThumbnailHideInfo)</selected>
-                    <visible>Control.IsVisible(501)</visible>
-                    <textureradioon>buttons/radio/options-radio-button-fo.png</textureradioon>
-                    <textureradiooff>buttons/radio/options-radio-button-nf.png</textureradiooff>
-                    <radioposx>-19</radioposx>
-                </control>
-                <control type="radiobutton" id="112">
-                    <description>Show plot in thumbnail view</description>
-                    <include>ViewOptions.Button</include>
-                    <label>$LOCALIZE[42018]</label>
-                    <texturefocus border="2">dialogs/options/buttons/default-fo.png</texturefocus>
-                    <onclick>Skin.ToggleSetting(ProgramThumbnailPlot)</onclick>
-                    <selected>Skin.HasSetting(ProgramThumbnailPlot)</selected>
-                    <visible>Control.IsVisible(501)</visible>
-                    <textureradioon>buttons/radio/options-radio-button-fo.png</textureradioon>
-                    <textureradiooff>buttons/radio/options-radio-button-nf.png</textureradiooff>
-                    <radioposx>-19</radioposx>
-                    <enable>!Skin.HasSetting(ProgramThumbnailHideInfo)</enable>
-                    <animation effect="fade" start="100" end="50" time="0" condition="!Control.IsEnabled(112)">Conditional</animation>
-                </control>
-                <control type="radiobutton" id="113">
-                    <description>Show plot in thumbnail square view</description>
-                    <include>ViewOptions.Button</include>
-                    <label>$LOCALIZE[42018]</label>
-                    <texturefocus border="2">dialogs/options/buttons/default-fo.png</texturefocus>
-                    <onclick>Skin.ToggleSetting(ProgramThumbnailSquarePlot)</onclick>
-                    <selected>Skin.HasSetting(ProgramThumbnailSquarePlot)</selected>
-                    <visible>Control.IsVisible(502)</visible>
-                    <textureradioon>buttons/radio/options-radio-button-fo.png</textureradioon>
-                    <textureradiooff>buttons/radio/options-radio-button-nf.png</textureradiooff>
-                    <radioposx>-19</radioposx>
-                </control>
-                <control type="radiobutton" id="114">
-                    <description>Show plot in thumbnail square view</description>
-                    <include>ViewOptions.Button</include>
-                    <label>$LOCALIZE[42445]</label>
-                    <texturefocus border="2">dialogs/options/buttons/default-fo.png</texturefocus>
-                    <onclick>Skin.ToggleSetting(thumbnails.hidelabel)</onclick>
-                    <selected>!Skin.HasSetting(thumbnails.hidelabel)</selected>
-                    <visible>Control.IsVisible(500)</visible>
-                    <textureradioon>buttons/radio/options-radio-button-fo.png</textureradioon>
-                    <textureradiooff>buttons/radio/options-radio-button-nf.png</textureradiooff>
-                    <radioposx>-19</radioposx>
-                </control>
             </control>
             <control type="grouplist" id="9223">
                 <description>View Controls</description>
@@ -371,93 +205,33 @@
                     <radioposx>-19</radioposx>
                 </control>
                 <control type="radiobutton" id="204">
-                    <description>Big Info</description>
+                    <description>Info Wall</description>
                     <include>ViewOptions.Button</include>
-                    <label>42318</label>
+                    <label>Info Wall</label>
                     <texturefocus border="2">dialogs/options/buttons/default-fo.png</texturefocus>
-                    <onclick>Container.SetViewMode(52)</onclick>
-                    <selected>Control.IsVisible(52)</selected>
+                    <onclick>Container.SetViewMode(63)</onclick>
+                    <selected>Control.IsVisible(63)</selected>
                     <textureradioon>buttons/radio/options-radio-button-fo.png</textureradioon>
                     <textureradiooff>buttons/radio/options-radio-button-nf.png</textureradiooff>
                     <radioposx>-19</radioposx>
-                    <visible>substring(Container.FolderPath,plugin://plugin.program.advanced.launcher/,left)</visible>
+                    <!--<visible>substring(Container.FolderPath,plugin://plugin.program.advanced.launcher/,left)</visible>-->
                 </control>
                 <control type="radiobutton" id="205">
-                    <description>Banner</description>
+                    <description>Info List</description>
                     <include>ViewOptions.Button</include>
-                    <label>42304</label>
+                    <label>Info List</label>
                     <texturefocus border="2">dialogs/options/buttons/default-fo.png</texturefocus>
-                    <onclick>Container.SetViewMode(60)</onclick>
-                    <selected>Control.IsVisible(60)</selected>
+                    <onclick>Container.SetViewMode(501)</onclick>
+                    <selected>Control.IsVisible(501)</selected>
                     <textureradioon>buttons/radio/options-radio-button-fo.png</textureradioon>
                     <textureradiooff>buttons/radio/options-radio-button-nf.png</textureradiooff>
                     <radioposx>-19</radioposx>
                     <!--<visible>substring(Container.FolderPath,plugin://plugin.program.advanced.launcher/,left)</visible>-->
                 </control>
                 <control type="radiobutton" id="206">
-                    <description>Wall</description>
+                    <description>Banner List</description>
                     <include>ViewOptions.Button</include>
-                    <label>42311</label>
-                    <texturefocus border="2">dialogs/options/buttons/default-fo.png</texturefocus>
-                    <onclick>Container.SetViewMode(502)</onclick>
-                    <selected>Control.IsVisible(502)</selected>
-                    <textureradioon>buttons/radio/options-radio-button-fo.png</textureradioon>
-                    <textureradiooff>buttons/radio/options-radio-button-nf.png</textureradiooff>
-                    <radioposx>-19</radioposx>
-                    <visible>substring(Container.FolderPath,plugin://plugin.program.advanced.launcher/,left)</visible>
-                </control>
-                <control type="radiobutton" id="208">
-                    <description>Reel</description>
-                    <include>ViewOptions.Button</include>
-                    <label>42307</label>
-                    <texturefocus border="2">dialogs/options/buttons/default-fo.png</texturefocus>
-                    <onclick>Container.SetViewMode(513)</onclick>
-                    <selected>Control.IsVisible(513)</selected>
-                    <textureradioon>buttons/radio/options-radio-button-fo.png</textureradioon>
-                    <textureradiooff>buttons/radio/options-radio-button-nf.png</textureradiooff>
-                    <radioposx>-19</radioposx>
-                    <visible>substring(Container.FolderPath,plugin://plugin.program.advanced.launcher/,left)</visible>
-                </control>
-                <control type="radiobutton" id="209">
-                    <description>Landscape</description>
-                    <include>ViewOptions.Button</include>
-                    <label>42312</label>
-                    <texturefocus border="2">dialogs/options/buttons/default-fo.png</texturefocus>
-                    <onclick>Container.SetViewMode(507)</onclick>
-                    <selected>Control.IsVisible(507)</selected>
-                    <textureradioon>buttons/radio/options-radio-button-fo.png</textureradioon>
-                    <textureradiooff>buttons/radio/options-radio-button-nf.png</textureradiooff>
-                    <radioposx>-19</radioposx>
-                    <visible>substring(Container.FolderPath,plugin://plugin.program.advanced.launcher/,left)</visible>
-                </control>
-                <control type="radiobutton" id="210">
-                    <description>Classic Info</description>
-                    <include>ViewOptions.Button</include>
-                    <label>42309</label>
-                    <texturefocus border="2">dialogs/options/buttons/default-fo.png</texturefocus>
-                    <onclick>Container.SetViewMode(514)</onclick>
-                    <selected>Control.IsVisible(514)</selected>
-                    <textureradioon>buttons/radio/options-radio-button-fo.png</textureradioon>
-                    <textureradiooff>buttons/radio/options-radio-button-nf.png</textureradiooff>
-                    <radioposx>-19</radioposx>
-                    <visible>substring(Container.FolderPath,plugin://plugin.program.advanced.launcher/,left)</visible>
-                </control>
-                <control type="radiobutton" id="211">
-                    <description>Poster Info</description>
-                    <include>ViewOptions.Button</include>
-                    <label>42310</label>
-                    <texturefocus border="2">dialogs/options/buttons/default-fo.png</texturefocus>
-                    <onclick>Container.SetViewMode(56)</onclick>
-                    <selected>Control.IsVisible(56)</selected>
-                    <textureradioon>buttons/radio/options-radio-button-fo.png</textureradioon>
-                    <textureradiooff>buttons/radio/options-radio-button-nf.png</textureradiooff>
-                    <radioposx>-19</radioposx>
-                    <visible>substring(Container.FolderPath,plugin://plugin.program.advanced.launcher/,left)</visible>
-                </control>
-                <control type="radiobutton" id="212">
-                    <description>Info Wall</description>
-                    <include>ViewOptions.Button</include>
-                    <label>42313</label>
+                    <label>Banner List</label>
                     <texturefocus border="2">dialogs/options/buttons/default-fo.png</texturefocus>
                     <onclick>Container.SetViewMode(54)</onclick>
                     <selected>Control.IsVisible(54)</selected>

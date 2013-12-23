@@ -2014,7 +2014,7 @@
                             <description>Label</description>
                             <posx>25</posx>
                             <posy>15</posy>
-                            <width>120</width>
+                            <width>140</width>
                             <height>32</height>
                             <font>Font-Condensed-S32</font>
                             <align>left</align>
@@ -2027,7 +2027,7 @@
                             <description>Label</description>
                             <posx>25</posx>
                             <posy>50</posy>
-                            <width>120</width>
+                            <width>140</width>
                             <height>32</height>
                             <font>Font-Condensed-S32</font>
                             <align>left</align>
@@ -2111,7 +2111,7 @@
                                 <description>Label</description>
                                 <posx>25</posx>
                                 <posy>15</posy>
-                                <width>120</width>
+                                <width>140</width>
                                 <height>32</height>
                                 <font>Font-Condensed-S32</font>
                                 <align>left</align>
@@ -2124,7 +2124,7 @@
                                 <description>Label</description>
                                 <posx>25</posx>
                                 <posy>50</posy>
-                                <width>120</width>
+                                <width>140</width>
                                 <height>32</height>
                                 <font>Font-Condensed-S32</font>
                                 <align>left</align>

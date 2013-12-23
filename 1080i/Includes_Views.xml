@@ -2,12 +2,6 @@
     <include file="ViewtypesPictures.xml" />
     <include file="ViewtypesPrograms.xml" />
     <include file="ViewtypesPVR.xml" />
-    <include file="Viewtypes_AdvWall.xml" />
-    <include file="Viewtypes_AdvReel.xml" />
-    <include file="Viewtypes_AdvLandscape.xml" />
-    <include file="Viewtypes_AdvClassicInfo.xml" />
-    <include file="Viewtypes_AdvPosterInfo.xml" />
-    <include file="Viewtypes_AdvInfoWall.xml" />
     
     <!-- Video Viewtypes -->
     <include file="Viewtypes_BigList.xml" />			<!-- (50) -->
@@ -96,7 +90,10 @@
         <include>Viewtype-ProgramList</include>
         <include>Viewtype-Thumbnail</include>
         <include>Viewtype-AdvBanner</include>			<!-- (54) -->
-        
+        <include>Viewtype-LoveFilm</include>			<!-- (56) -->
+        <include>Viewtype-Reel</include>				<!-- (57) -->
+        <include>Viewtype-ClassicInfo</include>			<!-- (59) -->
+        <include>Viewtype-Landscape</include>			<!-- (62) -->
         <include>Viewtype-InfoWall</include>			<!-- (63) -->
         
         <include>Viewtype-InfoList</include>			<!-- (501) -->

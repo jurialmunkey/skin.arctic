@@ -21,6 +21,7 @@
     <include file="Viewtypes_PosterPanel.xml" />		<!-- (64) -->
     <include file="Viewtypes_Thumbnail.xml" />			<!-- (500) -->
     <include file="Viewtypes_InfoList.xml" />			<!-- (501) -->
+    <include file="Viewtypes_InfoStrip.xml" />			<!-- (502) -->
     
 
     <include file="Viewtypes_Music_List.xml" />			<!-- (50) -->
@@ -55,6 +56,7 @@
         <include>Viewtype-PosterPanel</include>			<!-- (64) -->
         <include>Viewtype-Thumbnail</include>			<!-- (500) -->
         <include>Viewtype-InfoList</include>			<!-- (501) -->
+        <include>Viewtype-InfoStrip</include>			<!-- (502) -->
         
         <include condition="Skin.HasSetting(NextAired.Enabled)">NextAiredInfo</include>
     </include>

@@ -4,7 +4,8 @@
 <!-- ============== -->
     <include name="Viewtype-InfoWall">
         <control type="group">
-            <visible>Control.IsVisible(63) + !Window.IsActive(movieinformation) + !Window.IsActive(musicinformation)</visible>
+        	<animation effect="slide" end="24" condition="![Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]">Conditional</animation>
+            <visible>Control.IsVisible(63) + !Window.IsActive(movieinformation) + !Window.IsActive(musicinformation) + !Window.IsActive(addoninformation)</visible>
             <include>CommonViewAnimations</include>
             <include>OptionsShutdownAnimation</include>
             <posx>36</posx>
@@ -19,7 +20,7 @@
                     <width>828</width>
                     <height>464</height>
                     <texture background="true" diffuse="arctic/panel/fanart.png">$VAR[ListInfoLandscapeVar]</texture>
-                    <aspectratio scalediffuse="false">stretch</aspectratio>
+                    <aspectratio scalediffuse="false">scale</aspectratio>
                     <fadetime>200</fadetime>
                 </control>
                 <control type="image">
@@ -74,7 +75,7 @@
                 <onleft condition="Skin.HasSetting(KioskMode)">63</onleft>
                 <onright>70</onright>
                 <preloaditems>2</preloaditems>
-                <itemlayout width="168" height="238" condition="Skin.HasSetting(infowall.hidelabels) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)]">
+                <itemlayout width="168" height="238" condition="Skin.HasSetting(infowall.hidelabels) + [Container.Content(sets) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)] + !substring(Container.FolderPath,plugin://,left)">
                     <control type="image">
                         <description>Poster</description>
                         <posx>6</posx>
@@ -115,7 +116,7 @@
                     </control>
 					
                 </itemlayout>
-                <itemlayout width="168" height="357" condition="!Skin.HasSetting(infowall.hidelabels) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)]">
+                <itemlayout width="168" height="357" condition="!Skin.HasSetting(infowall.hidelabels) + [Container.Content(sets) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)] + !substring(Container.FolderPath,plugin://,left)">
                     <control type="image">
                         <description>Poster</description>
                         <posx>6</posx>
@@ -168,7 +169,7 @@
 						<scroll>false</scroll>
 					</control>
                 </itemlayout>
-                <itemlayout width="336" height="238" condition="Skin.HasSetting(infowall.hidelabels) + Container.Content(episodes)">
+                <itemlayout width="336" height="238" condition="Skin.HasSetting(infowall.hidelabels) + [Container.Content(episodes) | substring(Container.FolderPath,plugin://,left)]">
                     <control type="image">
                         <description>Poster</description>
                         <posx>6</posx>
@@ -208,7 +209,7 @@
                         <colordiffuse>Mod_Cover_Fade</colordiffuse>
                     </control>
                 </itemlayout>
-                <itemlayout width="336" height="357" condition="!Skin.HasSetting(infowall.hidelabels) + Container.Content(episodes)">
+                <itemlayout width="336" height="357" condition="!Skin.HasSetting(infowall.hidelabels) + [Container.Content(episodes) | substring(Container.FolderPath,plugin://,left)]">
                     <control type="image">
                         <description>Poster</description>
                         <posx>6</posx>
@@ -261,7 +262,52 @@
 						<scroll>false</scroll>
 					</control>
                 </itemlayout>
-                <focusedlayout width="168" height="238" condition="Skin.HasSetting(infowall.hidelabels) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)]">
+                <itemlayout width="238" height="357" condition="![Container.Content(sets) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]">
+                    <control type="image">
+                        <description>Poster</description>
+                        <posx>6</posx>
+                        <posy>6</posy>
+                        <width>226</width>
+                        <height>226</height>
+                        <texture background="true" diffuse="arctic/covers/226.png" fallback="views/fallbacks/DefaultAlbumCover.png/square-large.png">$VAR[WallPoster]</texture>
+                        <aspectratio scalediffuse="false">scale</aspectratio>
+                    </control>
+                    <control type="image">
+                        <description>Border</description>
+                        <posx>-4</posx>
+                        <posy>-4</posy>
+                        <width>246</width>
+                        <height>246</height>
+                        <texture border="25">arctic/common/border.png</texture>
+                        <colordiffuse>Mod_Border_Fade</colordiffuse>
+                        <aspectratio>stretch</aspectratio>
+                    </control>
+                    <control type="image">
+                        <description>White</description>
+                        <posx>6</posx>
+                        <posy>6</posy>
+                        <width>226</width>
+                        <height>226</height>
+                        <texture>arctic/covers/226.png</texture>
+                        <colordiffuse>Mod_Cover_Fade</colordiffuse>
+                        <aspectratio>stretch</aspectratio>
+                    </control>
+                    <control type="textbox">
+						<description>Artist Label</description>
+						<posx>14</posx>
+						<posy>240</posy>
+						<width>210</width>
+						<height>90</height>
+						<label>[B]$INFO[ListItem.Label,,[CR]][/B]$INFO[ListItem.Label2]</label>
+						<align>center</align>
+						<aligny>top</aligny>
+						<textcolor>Mod_Tags_Dark</textcolor>
+						<font>Font-AlbumCover-Title</font>
+						<scroll>false</scroll>
+					</control>
+                    
+                </itemlayout>
+                <focusedlayout width="168" height="238" condition="Skin.HasSetting(infowall.hidelabels) + [Container.Content(sets) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)] + !substring(Container.FolderPath,plugin://,left)">
                     <control type="group">
                         <animation effect="zoom" start="75" end="122" time="150" center="auto">Focus</animation>
 						<control type="image">
@@ -303,7 +349,7 @@
 						</control>
                     </control>
                 </focusedlayout>
-                <focusedlayout width="168" height="357" condition="!Skin.HasSetting(infowall.hidelabels) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)]">
+                <focusedlayout width="168" height="357" condition="!Skin.HasSetting(infowall.hidelabels) + [Container.Content(sets) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)] + !substring(Container.FolderPath,plugin://,left)">
                     <control type="group">
                         <animation effect="zoom" start="75" end="100" time="150" center="auto">Focus</animation>
 						<control type="image">
@@ -368,7 +414,7 @@
 						</control>
                     </control>
                 </focusedlayout>
-                <focusedlayout width="336" height="238" condition="Skin.HasSetting(infowall.hidelabels) + Container.Content(episodes)">
+                <focusedlayout width="336" height="238" condition="Skin.HasSetting(infowall.hidelabels) + [Container.Content(episodes) | substring(Container.FolderPath,plugin://,left)]">
                     <control type="group">
                         <animation effect="zoom" start="75" end="112" time="150" center="auto">Focus</animation>
 						<control type="image">
@@ -410,7 +456,7 @@
 						</control>
                     </control>
                 </focusedlayout>
-                <focusedlayout width="336" height="357" condition="!Skin.HasSetting(infowall.hidelabels) + Container.Content(episodes)">
+                <focusedlayout width="336" height="357" condition="!Skin.HasSetting(infowall.hidelabels) + [Container.Content(episodes) | substring(Container.FolderPath,plugin://,left)]">
                     <control type="group">
                         <animation effect="zoom" start="75" end="100" time="150" center="auto">Focus</animation>
 						<control type="image">
@@ -474,6 +520,63 @@
 							<scroll>false</scroll>
 						</control>
                     </control>
+                </focusedlayout>
+                <focusedlayout width="238" height="357" condition="![Container.Content(sets) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]">
+                    <control type="group">
+                        <animation effect="zoom" end="100" start="80" time="150" delay="50" center="auto">Focus</animation>
+                        <control type="image">
+							<description>Poster</description>
+							<posx>6</posx>
+							<posy>6</posy>
+							<width>226</width>
+							<height>226</height>
+							<texture background="true" diffuse="arctic/covers/226.png" fallback="views/fallbacks/DefaultAlbumCover.png/square-large.png">$VAR[WallPoster]</texture>
+							<aspectratio scalediffuse="false">scale</aspectratio>
+						</control>
+						<control type="image">
+							<description>Border</description>
+							<posx>-4</posx>
+							<posy>-4</posy>
+							<width>246</width>
+							<height>246</height>
+							<texture border="25">arctic/common/border.png</texture>
+							<aspectratio>stretch</aspectratio>
+							<colordiffuse>Mod_Border</colordiffuse>
+						</control>
+						<control type="textbox">
+							<description>Artist Label</description>
+							<posx>14</posx>
+							<posy>240</posy>
+							<width>210</width>
+							<height>90</height>
+							<label>[B]$INFO[ListItem.Label,,[CR]][/B]$INFO[ListItem.Label2]</label>
+							<align>center</align>
+							<aligny>top</aligny>
+							<textcolor>Mod_Tags_Dark</textcolor>
+							<font>Font-AlbumCover-Title</font>
+							<scroll>false</scroll>
+						</control>
+						<control type="image">
+							<description>Border</description>
+							<posx>-4</posx>
+							<posy>-4</posy>
+							<width>246</width>
+							<height>246</height>
+							<texture border="25">arctic/common/border.png</texture>
+							<aspectratio>stretch</aspectratio>
+							<colordiffuse>Mod_Border</colordiffuse>
+						</control>
+						<control type="image">
+							<description>Border</description>
+							<posx>6</posx>
+							<posy>6</posy>
+							<width>226</width>
+							<height>226</height>
+							<texture border="25">arctic/common/border-glo-flat.png</texture>
+							<aspectratio>stretch</aspectratio>
+							<colordiffuse>Mod_Glow_Border</colordiffuse>
+						</control>
+					</control>	
                 </focusedlayout>
             </control>
         </control>

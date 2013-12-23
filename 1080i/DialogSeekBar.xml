@@ -172,7 +172,7 @@
 							<textcolor>$VAR[osd.text.normal]</textcolor>
 						</control>
 						<control type="image">
-							<posx>15</posx>
+							<posx>16</posx>
 							<width>70</width>
 							<height>24</height>
 							<texture border="10">arctic/flags/left.png</texture>

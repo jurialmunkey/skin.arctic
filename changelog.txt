@@ -1,3 +1,19 @@
+[B]0.5.9[/B]
+Added song info to banner, info and big list
+Can queue items and change rating from song info
+Song info in playlist mode can move items up/down and remove
+Added "now playing" quick link to side menu
+
+[B]0.5.8[/B]
+Fixed weather widget reloading upon power menu access in panel view
+Added loading indicator for widgets in panel view
+Updated from transifex
+Made music files/playlist view menu consistent
+Made adv filter consistent
+Added update buttons to side menus
+Added viewtypes to movie sets/collections view
+Fixed thumbs/info-wall for collections view
+
 [B]0.5.7[/B]
 Info-wall view for episodes
 Added clear, rename and select item to configuration options

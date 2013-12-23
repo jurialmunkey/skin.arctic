@@ -941,6 +941,7 @@
 						<height>85</height>
 						<aspectratio>stretch</aspectratio>
 						<texture border="12">windows/pvr/genres/line.png</texture>
+						<colordiffuse>77ffffff</colordiffuse>
 					</control>
 				    <control type="image">
 				        <posx>0</posx>
@@ -1060,6 +1061,7 @@
 						<height>85</height>
 						<aspectratio>stretch</aspectratio>
 						<texture border="12">windows/pvr/genres/line.png</texture>
+						<colordiffuse>77ffffff</colordiffuse>
 					</control>
 					<control type="image" id="2">
 					    <posx>2</posx>

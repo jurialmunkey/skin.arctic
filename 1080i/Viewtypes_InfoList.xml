@@ -226,7 +226,7 @@
 								<height>100</height>
 								<texture>$VAR[ListHDSDFlag]</texture>
 								<colordiffuse>mod-infotags-alt</colordiffuse>
-								<visible>!Skin.HasSetting(infolist.backpanel)</visible>
+								<visible>Skin.HasSetting(infolist.backpanel)</visible>
 								<visible>[!IsEmpty(ListItem.VideoResolution) | substring(ListItem.Path,videodb://1/7,left) | substring(ListItem.Path,videodb://movies/sets,left)] + [Container.Content(movies) | Container.Content(episodes)]</visible>
 							</control>
 							<control type="image">

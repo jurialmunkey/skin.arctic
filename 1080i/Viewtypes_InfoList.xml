@@ -10,10 +10,11 @@
 		<value condition="Container.Content(addons)">$INFO[ListItem.Property(Addon.Creator)]</value>
 		<value condition="Container.Content(Songs) | Window.IsVisible(MusicPlaylist)">$INFO[ListItem.Artist]</value>
 		<value condition="Container.Content(Artists)">$INFO[ListItem.Property(Artist_Genre),,   ]$INFO[ListItem.Property(Artist_YearsActive)]</value>
-		<value condition="Container.Content(episodes)">$INFO[ListItem.Premiered]$INFO[ListItem.Duration, • , $LOCALIZE[12391]]</value>
-		<value condition="Container.Content(seasons)">$INFO[ListItem.Studio]</value>
-		<value condition="Container.Content(movies)">$INFO[ListItem.Year]$INFO[ListItem.Genre, • ,]</value>
-		<value condition="Container.Content(tvshows)">$INFO[ListItem.Studio,, • ]$INFO[ListItem.Genre]</value>
+		<value condition="Container.Content(movies) + [substring(ListItem.Path,videodb://1/7,left) | substring(ListItem.Path,videodb://movies/sets,left)]">$LOCALIZE[20457]</value>
+		<value condition="Container.Content(episodes)">$INFO[ListItem.Premiered]$INFO[ListItem.Duration,  •  , $LOCALIZE[12391]]</value>
+		<value condition="Container.Content(seasons)">$INFO[ListItem.Property(TotalEpisodes),, $LOCALIZE[20360]]</value>
+		<value condition="Container.Content(movies)">$INFO[ListItem.Year]$INFO[ListItem.Genre,  •  ,]</value>
+		<value condition="Container.Content(tvshows)">$INFO[ListItem.Studio,,  •  ]$INFO[ListItem.Genre]</value>
 		<value>$INFO[ListItem.Label2]</value>
 	</variable>
 	<variable name="InfoList-Label3">

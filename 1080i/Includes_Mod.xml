@@ -1193,7 +1193,8 @@
 				<font>Font-Alaska-S25-L</font>
 				<textcolor>mod-infotags</textcolor>
 				<width>149</width>
-				<scroll>false</scroll>
+				<scroll>true</scroll>
+				<scrollsuffix>   </scrollsuffix>
 				<visible>IsEmpty(ListItem.Property(showlabel))</visible>
 			</control>
 		</control>
@@ -1236,7 +1237,8 @@
 				<font>Font-Alaska-S25-L</font>
 				<textcolor>mod-infotags-alt</textcolor>
 				<width>149</width>
-				<scroll>false</scroll>
+				<scroll>true</scroll>
+				<scrollsuffix>   </scrollsuffix>
 				<visible>IsEmpty(ListItem.Property(showlabel))</visible>
 			</control>
 			<control type="image">
@@ -1287,7 +1289,8 @@
 				<font>Font-Alaska-S25-L</font>
 				<textcolor>mod-infotags</textcolor>
 				<width>149</width>
-				<scroll>false</scroll>
+				<scroll>true</scroll>
+				<scrollsuffix>   </scrollsuffix>
 				<visible>IsEmpty(ListItem.Property(showlabel))</visible>
 			</control>
 		</control>

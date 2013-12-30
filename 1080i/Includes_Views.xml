@@ -68,6 +68,7 @@
     
     <include name="MusicFileViews">
         <include>Viewtype-MusicList</include>
+        <include>Viewtype-InfoList</include>			<!-- (501) -->
     </include>
 
     <include name="PictureViews">

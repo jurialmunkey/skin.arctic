@@ -1,3 +1,8 @@
+[B]0.6.2[/B]
+Info list for MyMusicSongs.xml
+Banner list view for seasons
+
+
 [B]0.6.1[/B]
 Hooks for tvtunes on movies
 Fixed panel list not showing episode unwatched in tvshows with no back panel

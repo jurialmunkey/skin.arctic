@@ -1,0 +1,273 @@
+<includes>
+	
+	<include name="Mod_HomeList_Combo">
+	    <control type="group">
+	        <posy>-10</posy>
+	        <animation effect="slide" start="0" end="0,-70" time="350" easing="inout" tween="cubic" condition="[Control.HasFocus(82) | Control.HasFocus(90) | Control.HasFocus(88) | Control.HasFocus(89)] + [substring(Container(525).ListItem.Property(widget),movie) | substring(Container(525).ListItem.Property(widget),tvshow) | substring(Container(525).ListItem.Property(widget),music) | substring(Container(525).ListItem.Property(widget),addon) | substring(Container(525).ListItem.Property(widget),rcb)]">Conditional</animation>
+            <!-- Widgets Plus Background -->
+            <control type="group">
+                <posy>308</posy>
+                <control type="image">
+                    <posx>-10</posx>
+                    <posy>-148</posy>
+                    <width>1940</width>
+                    <height>800</height>
+                    <texture border="15">arctic/common/panel.png</texture>
+                    <bordertexture border="40">arctic/common/border-20.png</bordertexture>
+                    <bordersize>20</bordersize>
+                    <animation effect="zoom" start="-10,148,1940,800" end="-10,242,1940,645" time="350" easing="inout" tween="cubic" condition="[Control.HasFocus(82) | Control.HasFocus(90) | Control.HasFocus(88) | Control.HasFocus(89)] + [substring(Container(525).ListItem.Property(widget),movie) | substring(Container(525).ListItem.Property(widget),tvshow) | substring(Container(525).ListItem.Property(widget),music) | substring(Container(525).ListItem.Property(widget),addon) | substring(Container(525).ListItem.Property(widget),rcb)]">Conditional</animation>
+                </control>
+                <!-- BOTTOM FANART AND INFO PANEL -->
+				<control type="group">
+				    <posx>-8</posx>
+					<posy>14</posy>
+					<visible>[Control.HasFocus(82) | Control.HasFocus(90) | Control.HasFocus(88) | Control.HasFocus(89)]</visible>
+					<animation effect="fade" start="0" end="100" delay="290" time="450" tween="cubic" easing="out" reversible="false" condition="Skin.HasSetting(simple.home.widgetvis)">Visible</animation>					
+					<animation effect="fade" start="0" end="100" delay="750" time="450" tween="cubic" easing="out" reversible="false" condition="!Skin.HasSetting(simple.home.widgetvis)">Visible</animation>					
+					<include>Home-Fanart-Info-Content</include>
+				</control>
+                <!-- Panel -->
+                <control type="group">
+                    <control type="image">
+                        <animation effect="slide" start="0" end="0,30" condition="true">Conditional</animation>
+                        <height>400</height>
+                        <include>Mod_GreyPanelDimensions2</include>
+                    </control>
+                    <!-- RECENT ITEMS -->
+                
+                    <control type="group">
+
+                        <!-- Slideshow Widget -->
+                        <control type="group">
+                            <posy>285</posy>
+                            <include>Mod_WidgetSlideshow</include>
+                            <visible>stringcompare(Container(525).ListItem.Property(widget),pictures.slideshow)</visible>
+                        </control>
+                        <!-- Weather Widget -->
+                        <control type="group">
+                            <posy>285</posy>
+                            <include>Mod_WidgetWeather</include>
+                            <visible>stringcompare(Container(525).ListItem.Property(widget),info.weather)</visible>
+                        </control>
+                        <!-- SysInfo Widget -->
+                        <control type="group">
+                            <posy>285</posy>
+                            <include>Mod_WidgetSysInfo</include>
+                            <visible>stringcompare(Container(525).ListItem.Property(widget),info.system)</visible>
+                        </control>
+                        <!-- Combination Widgets -->
+                        <control type="group">
+                            <posy>-35</posy>
+                            <visible>[stringcompare(Container(525).ListItem.Property(widget),movie.mixed) | stringcompare(Container(525).ListItem.Property(widget),tvshow.mixed) | stringcompare(Container(525).ListItem.Property(widget),music.mixed)] + !IsEmpty(Window(Home).Property(SkinWidgets_Running))</visible>
+                            <include>HomeWidget-NewWidget</include>
+                        </control>
+                        <!-- Singular Widgets -->
+                        <control type="group">
+                            <visible>[substring(Container(525).ListItem.Property(widget),movie) | substring(Container(525).ListItem.Property(widget),tvshow) | substring(Container(525).ListItem.Property(widget),music) | substring(Container(525).ListItem.Property(widget),rcb) | substring(Container(525).ListItem.Property(widget),addons)] + !stringcompare(Container(525).ListItem.Property(widget),movie.mixed) + !stringcompare(Container(525).ListItem.Property(widget),tvshow.mixed) + !stringcompare(Container(525).ListItem.Property(widget),music.mixed) + !IsEmpty(Container(525).ListItem.Property(widget)) + !IsEmpty(Window(Home).Property(SkinWidgets_Running))</visible>
+                            <control type="list" id="82">
+                                <ondown condition="!Skin.HasSetting(home.scrollablewidgets) + Container(525).HasFocus(1) + stringcompare(Skin.String(movie.widget.type),movie.random)">Skin.SetString(movie.widget.type,movie.recommended)</ondown>
+                                <ondown condition="!Skin.HasSetting(home.scrollablewidgets) + Container(525).HasFocus(1) + stringcompare(Skin.String(movie.widget.type),movie.recent)">Skin.SetString(movie.widget.type,movie.random)</ondown>
+                                <ondown condition="!Skin.HasSetting(home.scrollablewidgets) + Container(525).HasFocus(1) + stringcompare(Skin.String(movie.widget.type),movie.recommended)">Skin.SetString(movie.widget.type,movie.recent)</ondown>
+                                <ondown condition="!Skin.HasSetting(home.scrollablewidgets) + Container(525).HasFocus(1) + stringcompare(Skin.String(movie.widget.type),movie.random)">Skin.SetString(movie.widget.type,movie.recommended)</ondown>
+                                <ondown condition="!Skin.HasSetting(home.scrollablewidgets) + Container(525).HasFocus(1) + stringcompare(Skin.String(movie.widget.type),tvshow.random)">Skin.SetString(movie.widget.type,tvshow.recommended)</ondown>
+                                <ondown condition="!Skin.HasSetting(home.scrollablewidgets) + Container(525).HasFocus(1) + stringcompare(Skin.String(movie.widget.type),tvshow.recent)">Skin.SetString(movie.widget.type,tvshow.random)</ondown>
+                                <ondown condition="!Skin.HasSetting(home.scrollablewidgets) + Container(525).HasFocus(1) + stringcompare(Skin.String(movie.widget.type),tvshow.recommended)">Skin.SetString(movie.widget.type,tvshow.recent)</ondown>
+                                <ondown condition="!Skin.HasSetting(home.scrollablewidgets) + Container(525).HasFocus(1) + stringcompare(Skin.String(movie.widget.type),tvshow.random)">Skin.SetString(movie.widget.type,tvshow.recommended)</ondown>
+                                <ondown condition="!Skin.HasSetting(home.scrollablewidgets) + Container(525).HasFocus(1) + stringcompare(Skin.String(movie.widget.type),music.random)">Skin.SetString(movie.widget.type,music.recommended)</ondown>
+                                <ondown condition="!Skin.HasSetting(home.scrollablewidgets) + Container(525).HasFocus(1) + stringcompare(Skin.String(movie.widget.type),music.recent)">Skin.SetString(movie.widget.type,music.random)</ondown>
+                                <ondown condition="!Skin.HasSetting(home.scrollablewidgets) + Container(525).HasFocus(1) + stringcompare(Skin.String(movie.widget.type),music.recommended)">Skin.SetString(movie.widget.type,music.recent)</ondown>
+                                <ondown condition="!Skin.HasSetting(home.scrollablewidgets) + Container(525).HasFocus(1) + stringcompare(Skin.String(movie.widget.type),music.random)">Skin.SetString(movie.widget.type,music.recommended)</ondown>
+                                <ondown condition="!Skin.HasSetting(home.scrollablewidgets) + Container(525).HasFocus(2) + stringcompare(Skin.String(tvshow.widget.type),movie.random)">Skin.SetString(tvshow.widget.type,movie.recommended)</ondown>
+                                <ondown condition="!Skin.HasSetting(home.scrollablewidgets) + Container(525).HasFocus(2) + stringcompare(Skin.String(tvshow.widget.type),movie.recent)">Skin.SetString(tvshow.widget.type,movie.random)</ondown>
+                                <ondown condition="!Skin.HasSetting(home.scrollablewidgets) + Container(525).HasFocus(2) + stringcompare(Skin.String(tvshow.widget.type),movie.recommended)">Skin.SetString(tvshow.widget.type,movie.recent)</ondown>
+                                <ondown condition="!Skin.HasSetting(home.scrollablewidgets) + Container(525).HasFocus(2) + stringcompare(Skin.String(tvshow.widget.type),movie.random)">Skin.SetString(tvshow.widget.type,movie.recommended)</ondown>
+                                <ondown condition="!Skin.HasSetting(home.scrollablewidgets) + Container(525).HasFocus(2) + stringcompare(Skin.String(tvshow.widget.type),tvshow.random)">Skin.SetString(tvshow.widget.type,tvshow.recommended)</ondown>
+                                <ondown condition="!Skin.HasSetting(home.scrollablewidgets) + Container(525).HasFocus(2) + stringcompare(Skin.String(tvshow.widget.type),tvshow.recent)">Skin.SetString(tvshow.widget.type,tvshow.random)</ondown>
+                                <ondown condition="!Skin.HasSetting(home.scrollablewidgets) + Container(525).HasFocus(2) + stringcompare(Skin.String(tvshow.widget.type),tvshow.recommended)">Skin.SetString(tvshow.widget.type,tvshow.recent)</ondown>
+                                <ondown condition="!Skin.HasSetting(home.scrollablewidgets) + Container(525).HasFocus(2) + stringcompare(Skin.String(tvshow.widget.type),tvshow.random)">Skin.SetString(tvshow.widget.type,tvshow.recommended)</ondown>
+                                <ondown condition="!Skin.HasSetting(home.scrollablewidgets) + Container(525).HasFocus(2) + stringcompare(Skin.String(tvshow.widget.type),music.random)">Skin.SetString(tvshow.widget.type,music.recommended)</ondown>
+                                <ondown condition="!Skin.HasSetting(home.scrollablewidgets) + Container(525).HasFocus(2) + stringcompare(Skin.String(tvshow.widget.type),music.recent)">Skin.SetString(tvshow.widget.type,music.random)</ondown>
+                                <ondown condition="!Skin.HasSetting(home.scrollablewidgets) + Container(525).HasFocus(2) + stringcompare(Skin.String(tvshow.widget.type),music.recommended)">Skin.SetString(tvshow.widget.type,music.recent)</ondown>
+                                <ondown condition="!Skin.HasSetting(home.scrollablewidgets) + Container(525).HasFocus(2) + stringcompare(Skin.String(tvshow.widget.type),music.random)">Skin.SetString(tvshow.widget.type,music.recommended)</ondown>
+                                <ondown condition="!Skin.HasSetting(home.scrollablewidgets) + Container(525).HasFocus(3) + stringcompare(Skin.String(music.widget.type),movie.random)">Skin.SetString(music.widget.type,movie.recommended)</ondown>
+                                <ondown condition="!Skin.HasSetting(home.scrollablewidgets) + Container(525).HasFocus(3) + stringcompare(Skin.String(music.widget.type),movie.recent)">Skin.SetString(music.widget.type,movie.random)</ondown>
+                                <ondown condition="!Skin.HasSetting(home.scrollablewidgets) + Container(525).HasFocus(3) + stringcompare(Skin.String(music.widget.type),movie.recommended)">Skin.SetString(music.widget.type,movie.recent)</ondown>
+                                <ondown condition="!Skin.HasSetting(home.scrollablewidgets) + Container(525).HasFocus(3) + stringcompare(Skin.String(music.widget.type),movie.random)">Skin.SetString(music.widget.type,movie.recommended)</ondown>
+                                <ondown condition="!Skin.HasSetting(home.scrollablewidgets) + Container(525).HasFocus(3) + stringcompare(Skin.String(music.widget.type),tvshow.random)">Skin.SetString(music.widget.type,tvshow.recommended)</ondown>
+                                <ondown condition="!Skin.HasSetting(home.scrollablewidgets) + Container(525).HasFocus(3) + stringcompare(Skin.String(music.widget.type),tvshow.recent)">Skin.SetString(music.widget.type,tvshow.random)</ondown>
+                                <ondown condition="!Skin.HasSetting(home.scrollablewidgets) + Container(525).HasFocus(3) + stringcompare(Skin.String(music.widget.type),tvshow.recommended)">Skin.SetString(music.widget.type,tvshow.recent)</ondown>
+                                <ondown condition="!Skin.HasSetting(home.scrollablewidgets) + Container(525).HasFocus(3) + stringcompare(Skin.String(music.widget.type),tvshow.random)">Skin.SetString(music.widget.type,tvshow.recommended)</ondown>
+                                <ondown condition="!Skin.HasSetting(home.scrollablewidgets) + Container(525).HasFocus(3) + stringcompare(Skin.String(music.widget.type),music.random)">Skin.SetString(music.widget.type,music.recommended)</ondown>
+                                <ondown condition="!Skin.HasSetting(home.scrollablewidgets) + Container(525).HasFocus(3) + stringcompare(Skin.String(music.widget.type),music.recent)">Skin.SetString(music.widget.type,music.random)</ondown>
+                                <ondown condition="!Skin.HasSetting(home.scrollablewidgets) + Container(525).HasFocus(3) + stringcompare(Skin.String(music.widget.type),music.recommended)">Skin.SetString(music.widget.type,music.recent)</ondown>
+                                <ondown condition="!Skin.HasSetting(home.scrollablewidgets) + Container(525).HasFocus(3) + stringcompare(Skin.String(music.widget.type),music.random)">Skin.SetString(music.widget.type,music.recommended)</ondown>
+                            
+                                <ondown condition="Skin.HasSetting(home.scrollablewidgets) | IsEmpty(Container(525).ListItem.Property(widget))">525</ondown>
+                                <onup>525</onup>
+                                <onleft>82</onleft>
+                                <onright>82</onright>
+                                <posx>35</posx>
+                                <posy>285</posy>
+                                <scrolltime tween="cubic" easing="out">500</scrolltime>
+                                <width>1860</width>
+                                <height>600</height>
+                                <viewtype>list</viewtype>
+                                <orientation>horizontal</orientation>
+                                <include>Mod_82Layout</include>
+                                <content>
+                                    <include>Mod_82Content</include>
+                                </content>
+                            </control>
+                        </control>
+                        <control type="button" id="82">
+                            <visible>![[substring(Container(525).ListItem.Property(widget),movie) | substring(Container(525).ListItem.Property(widget),tvshow) | substring(Container(525).ListItem.Property(widget),music) | substring(Container(525).ListItem.Property(widget),rcb) | substring(Container(525).ListItem.Property(widget),addons)] + !stringcompare(Container(525).ListItem.Property(widget),movie.mixed) + !stringcompare(Container(525).ListItem.Property(widget),tvshow.mixed) + !stringcompare(Container(525).ListItem.Property(widget),music.mixed) + !IsEmpty(Container(525).ListItem.Property(widget)) + !IsEmpty(Window(Home).Property(SkinWidgets_Running))]</visible>
+                            <ondown>525</ondown>
+                            <onleft>525</onleft>
+                            <onright>525</onright>
+                            <onup>525</onup>
+                            <onback>525</onback>
+                            <onclick>SetFocus(525)</onclick>
+                            <onclick condition="substring(Container(525).ListItem.Property(widget),info.system)">ActivateWindow(systeminfo)</onclick>
+                            <onclick condition="substring(Container(525).ListItem.Property(widget),info.weather)">ActivateWindow(weather)</onclick>
+                            <onclick condition="substring(Container(525).ListItem.Property(widget),pictures.slideshow)">SlideShow($INFO[Skin.String(pictures.slideshowpath2)],random)</onclick>
+                        </control>
+                        <control type="label">
+                            <posx>50</posx>
+                            <posy>260</posy>
+                            <label>$VAR[MixedWidget-Label]</label>
+                            <align>left</align>
+                            <font>Font-MixedWidget</font>
+                            <textcolor>mod-infotags</textcolor>
+                            <width>300</width>
+                            <scroll>false</scroll>
+                            <animation effect="fade" start="100" end="25" time="100" condition="!Control.HasFocus(82)">Conditional</animation>
+                        </control>
+                    </control>
+                
+                
+                </control>
+            </control>
+            <control type="list" id="525">
+                <visible allowhiddenfocus="true">![Control.HasFocus(82) | Control.HasFocus(90) | Control.HasFocus(88) | Control.HasFocus(89)]</visible>
+                <animation effect="fade" start="100" end="0" time="0" reversible="false">Hidden</animation>
+                <animation effect="fade" start="0" end="100" delay="400" time="200" reversible="false">Visible</animation>
+                <posx>24</posx>
+                <posy>192</posy>
+                <onup>525</onup>
+                <ondown>525</ondown>
+                <onleft>525</onleft>
+                <onright>SetFocus(83,0)</onright>
+                <scrolltime tween="cubic" easing="out">500</scrolltime>
+                <width>380</width>
+                <height>355</height>
+                <viewtype>list</viewtype>
+                <orientation>vertical</orientation>
+                <itemlayout height="71">
+                    <control type="image">
+                        <posx>0</posx>
+                        <posy>0</posy>
+                        <width>360</width>
+                        <height>70</height>
+                        <texture border="90,3,90,3">views/list/other/separator.png</texture>
+                    </control>
+                    <control type="image">
+                        <posx>-6</posx>
+                        <posy>-2</posy>
+                        <width>100</width>
+                        <height>100</height>
+                        <texture>$INFO[ListItem.Icon]</texture>
+                        <aspectratio align="left">keep</aspectratio>
+                    </control>
+                    <control type="label">
+                        <posx>60</posx>
+                        <posy>0</posy>
+                        <width>360</width>
+                        <height>70</height>
+                        <align>left</align>
+                        <aligny>center</aligny>
+                        <label>$INFO[ListItem.Label]</label>
+                        <textcolor>mod-infotags-alt</textcolor>
+                        <focusedcolor>white</focusedcolor>
+                        <disabledcolor>mod-infotags-vl</disabledcolor>
+                        <font>Font-Condensed-S30-B</font>
+                        <textoffsetx>35</textoffsetx>
+                    </control>
+                </itemlayout>
+                <focusedlayout height="71">
+                    <control type="button">
+                        <onfocus>AlarmClock(86Move,Control.Move(86,1),00:07,silent,loop)</onfocus>
+                        <onfocus>AlarmClock(DelayStart,AlarmClock(87Move,Control.Move(87,1),00:07,silent,loop),00:03,silent)</onfocus>
+                    </control>
+                    <control type="image">
+                        <posx>0</posx>
+                        <posy>0</posy>
+                        <width>374</width>
+                        <height>70</height>
+                        <texture border="10">views/other/focus-mod8.png</texture>
+                        <animation effect="fade" start="100" end="30" time="0" condition="!Control.HasFocus(525)">Conditional</animation>
+                    </control>
+                    <control type="image">
+                        <posx>-6</posx>
+                        <posy>-2</posy>
+                        <width>100</width>
+                        <height>100</height>
+                        <texture>$INFO[ListItem.Icon]</texture>
+                        <aspectratio align="left">keep</aspectratio>
+                    </control>
+                    <control type="label">
+                        <posx>60</posx>
+                        <posy>0</posy>
+                        <width>360</width>
+                        <height>70</height>
+                        <align>left</align>
+                        <aligny>center</aligny>
+                        <label>$INFO[ListItem.Label]</label>
+                        <textcolor>white</textcolor>
+                        <font>Font-Condensed-S30-B</font>
+                        <textoffsetx>35</textoffsetx>
+                    </control>
+                </focusedlayout>                
+                <content>
+                    <include>Mod_525Content</include>
+                </content>
+            </control>
+            <!-- SUBMENU ITEMS -->
+            <control type="panel" id="83">
+                <visible allowhiddenfocus="true">![Control.HasFocus(82) | Control.HasFocus(90) | Control.HasFocus(88) | Control.HasFocus(89)]</visible>
+                <animation effect="fade" start="100" end="0" time="0" reversible="false">Hidden</animation>
+                <animation effect="fade" start="0" end="100" delay="400" time="200" reversible="false">Visible</animation>
+                <onleft>525</onleft>
+                <onback>525</onback>
+                <ondown>82</ondown>
+                <onup>83</onup>
+                <posx>403</posx>
+                <posy>182</posy>
+                <scrolltime tween="cubic" easing="out">500</scrolltime>
+                <width>1840</width>
+                <height>368</height>
+                <viewtype>list</viewtype>
+                <orientation>horizontal</orientation>
+                <animation type="VisibleChange">
+                    <effect type="fade" end="100" start="0" time="350"/>
+                </animation>
+                <itemlayout width="184" height="184">
+                    <include>Mod_83Items</include>
+                </itemlayout>
+                <focusedlayout width="184" height="184">
+                    <include>Mod_83Focused</include>
+                </focusedlayout>
+                <content>
+                    <include>Mod_83Content</include>
+                </content>
+            </control>
+            <!--<control type="image">
+                <posx>1333</posx>
+                <posy>192</posy>
+                <width>562</width>
+                <height>354</height>
+                <texture border="10">views/other/focus-mod8.png</texture>
+                <colordiffuse>Mod_Tags_Light</colordiffuse>
+            </control>-->
+        </control>
+	</include>
+</includes>

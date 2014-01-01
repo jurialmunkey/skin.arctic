@@ -1327,7 +1327,7 @@
 			<property name="path">$INFO[Skin.String(Home.Movies.Tile.2.Path)]</property>
 			<property name="animate">$INFO[Skin.String(Home.Movies.Tile.2.Animate)]</property>
 			<property name="custom">1</property>
-			<visible>Container(525).HasFocus(1) + [!IsEmpty(Skin.String(Home.Movies.Tile.1.Path)) | !IsEmpty(Skin.String(Home.Movies.Tile.2.Path))]</visible>
+			<visible>Container(525).HasFocus(1) + [!IsEmpty(Skin.String(Home.Movies.Tile.1.Path)) | !IsEmpty(Skin.String(Home.Movies.Tile.2.Path)) | StringCompare(Skin.String(homescreen.style),combo)]</visible>
 		</item>
 		<item id="2">
 			<label>$INFO[Skin.String(Home.Movies.Tile.3.Label)]</label>
@@ -1343,7 +1343,7 @@
 			<property name="path">$INFO[Skin.String(Home.Movies.Tile.3.Path)]</property>
 			<property name="animate">$INFO[Skin.String(Home.Movies.Tile.3.Animate)]</property>
 			<property name="custom">1</property>
-			<visible>Container(525).HasFocus(1) + [!IsEmpty(Skin.String(Home.Movies.Tile.2.Path)) | !IsEmpty(Skin.String(Home.Movies.Tile.3.Path))]</visible>
+			<visible>Container(525).HasFocus(1) + [!IsEmpty(Skin.String(Home.Movies.Tile.2.Path)) | !IsEmpty(Skin.String(Home.Movies.Tile.3.Path)) | StringCompare(Skin.String(homescreen.style),combo)]</visible>
 		</item>
 		<item id="3">
 			<label>$INFO[Skin.String(Home.Movies.Tile.4.Label)]</label>
@@ -1359,7 +1359,7 @@
 			<property name="path">$INFO[Skin.String(Home.Movies.Tile.4.Path)]</property>
 			<property name="animate">$INFO[Skin.String(Home.Movies.Tile.4.Animate)]</property>
 			<property name="custom">1</property>
-			<visible>Container(525).HasFocus(1) + [!IsEmpty(Skin.String(Home.Movies.Tile.3.Path)) | !IsEmpty(Skin.String(Home.Movies.Tile.4.Path))]</visible>
+			<visible>Container(525).HasFocus(1) + [!IsEmpty(Skin.String(Home.Movies.Tile.3.Path)) | !IsEmpty(Skin.String(Home.Movies.Tile.4.Path)) | StringCompare(Skin.String(homescreen.style),combo)]</visible>
 		</item>
 		<item id="4">
 			<label>$INFO[Skin.String(Home.Movies.Tile.5.Label)]</label>
@@ -1375,7 +1375,7 @@
 			<property name="path">$INFO[Skin.String(Home.Movies.Tile.5.Path)]</property>
 			<property name="animate">$INFO[Skin.String(Home.Movies.Tile.5.Animate)]</property>
 			<property name="custom">1</property>
-			<visible>Container(525).HasFocus(1) + [!IsEmpty(Skin.String(Home.Movies.Tile.4.Path)) | !IsEmpty(Skin.String(Home.Movies.Tile.5.Path))]</visible>
+			<visible>Container(525).HasFocus(1) + [!IsEmpty(Skin.String(Home.Movies.Tile.4.Path)) | !IsEmpty(Skin.String(Home.Movies.Tile.5.Path)) | StringCompare(Skin.String(homescreen.style),combo)]</visible>
 		</item>
 		<item id="5">
 			<label>$INFO[Skin.String(Home.Movies.Tile.6.Label)]</label>
@@ -1391,7 +1391,7 @@
 			<property name="path">$INFO[Skin.String(Home.Movies.Tile.6.Path)]</property>
 			<property name="animate">$INFO[Skin.String(Home.Movies.Tile.6.Animate)]</property>
 			<property name="custom">1</property>  
-			<visible>Container(525).HasFocus(1) + [!IsEmpty(Skin.String(Home.Movies.Tile.5.Path)) | !IsEmpty(Skin.String(Home.Movies.Tile.6.Path))]</visible>
+			<visible>Container(525).HasFocus(1) + [!IsEmpty(Skin.String(Home.Movies.Tile.5.Path)) | !IsEmpty(Skin.String(Home.Movies.Tile.6.Path)) | StringCompare(Skin.String(homescreen.style),combo)]</visible>
 		</item>
 		<item id="6">
 			<label>$INFO[Skin.String(Home.Movies.Tile.7.Label)]</label>
@@ -1407,7 +1407,7 @@
 			<property name="path">$INFO[Skin.String(Home.Movies.Tile.7.Path)]</property>
 			<property name="animate">$INFO[Skin.String(Home.Movies.Tile.7.Animate)]</property>
 			<property name="custom">1</property>
-			<visible>Container(525).HasFocus(1) + [!IsEmpty(Skin.String(Home.Movies.Tile.6.Path)) | !IsEmpty(Skin.String(Home.Movies.Tile.7.Path))]</visible>
+			<visible>Container(525).HasFocus(1) + [!IsEmpty(Skin.String(Home.Movies.Tile.6.Path)) | !IsEmpty(Skin.String(Home.Movies.Tile.7.Path)) | StringCompare(Skin.String(homescreen.style),combo)]</visible>
 		</item>
 		<item id="7">
 			<label>$INFO[Skin.String(Home.Movies.Tile.8.Label)]</label>
@@ -1423,7 +1423,7 @@
 			<property name="path">$INFO[Skin.String(Home.Movies.Tile.8.Path)]</property>
 			<property name="animate">$INFO[Skin.String(Home.Movies.Tile.8.Animate)]</property>
 			<property name="custom">1</property>
-			<visible>Container(525).HasFocus(1) + [!IsEmpty(Skin.String(Home.Movies.Tile.7.Path)) | !IsEmpty(Skin.String(Home.Movies.Tile.8.Path))]</visible>
+			<visible>Container(525).HasFocus(1) + [!IsEmpty(Skin.String(Home.Movies.Tile.7.Path)) | !IsEmpty(Skin.String(Home.Movies.Tile.8.Path)) | StringCompare(Skin.String(homescreen.style),combo)]</visible>
 		</item>
 		<item id="8">
 			<label>$INFO[Skin.String(Home.Movies.Tile.9.Label)]</label>
@@ -1439,7 +1439,7 @@
 			<property name="path">$INFO[Skin.String(Home.Movies.Tile.9.Path)]</property>
 			<property name="animate">$INFO[Skin.String(Home.Movies.Tile.9.Animate)]</property>
 			<property name="custom">1</property>
-			<visible>Container(525).HasFocus(1) + [!IsEmpty(Skin.String(Home.Movies.Tile.8.Path)) | !IsEmpty(Skin.String(Home.Movies.Tile.9.Path))]</visible>
+			<visible>Container(525).HasFocus(1) + [!IsEmpty(Skin.String(Home.Movies.Tile.8.Path)) | !IsEmpty(Skin.String(Home.Movies.Tile.9.Path)) | StringCompare(Skin.String(homescreen.style),combo)]</visible>
 		</item>
 		<item id="9">
 			<label>$INFO[Skin.String(Home.Movies.Tile.10.Label)]</label>
@@ -1455,7 +1455,7 @@
 			<property name="path">$INFO[Skin.String(Home.Movies.Tile.10.Path)]</property>
 			<property name="animate">$INFO[Skin.String(Home.Movies.Tile.10.Animate)]</property>
 			<property name="custom">1</property>
-			<visible>Container(525).HasFocus(1) + [!IsEmpty(Skin.String(Home.Movies.Tile.9.Path)) | !IsEmpty(Skin.String(Home.Movies.Tile.10.Path))]</visible>
+			<visible>Container(525).HasFocus(1) + [!IsEmpty(Skin.String(Home.Movies.Tile.9.Path)) | !IsEmpty(Skin.String(Home.Movies.Tile.10.Path)) | StringCompare(Skin.String(homescreen.style),combo)]</visible>
 		</item>
 		
 		<!--TVSHOW ITEMS-->
@@ -1489,7 +1489,7 @@
 			<property name="path">$INFO[Skin.String(Home.Tvshows.Tile.2.Path)]</property>
 			<property name="animate">$INFO[Skin.String(Home.Tvshows.Tile.2.Animate)]</property>
 			<property name="custom">1</property>
-			<visible>Container(525).HasFocus(2) + [!IsEmpty(Skin.String(Home.Tvshows.Tile.1.Path)) | !IsEmpty(Skin.String(Home.Tvshows.Tile.2.Path))]</visible>
+			<visible>Container(525).HasFocus(2) + [!IsEmpty(Skin.String(Home.Tvshows.Tile.1.Path)) | !IsEmpty(Skin.String(Home.Tvshows.Tile.2.Path)) | StringCompare(Skin.String(homescreen.style),combo)]</visible>
 		</item>
 		<item id="2">
 			<label>$INFO[Skin.String(Home.Tvshows.Tile.3.Label)]</label>
@@ -1505,7 +1505,7 @@
 			<property name="path">$INFO[Skin.String(Home.Tvshows.Tile.3.Path)]</property>
 			<property name="animate">$INFO[Skin.String(Home.Tvshows.Tile.3.Animate)]</property>
 			<property name="custom">1</property>
-			<visible>Container(525).HasFocus(2) + [!IsEmpty(Skin.String(Home.Tvshows.Tile.2.Path)) | !IsEmpty(Skin.String(Home.Tvshows.Tile.3.Path))]</visible>
+			<visible>Container(525).HasFocus(2) + [!IsEmpty(Skin.String(Home.Tvshows.Tile.2.Path)) | !IsEmpty(Skin.String(Home.Tvshows.Tile.3.Path)) | StringCompare(Skin.String(homescreen.style),combo)]</visible>
 		</item>
 		<item id="3">
 			<label>$INFO[Skin.String(Home.Tvshows.Tile.4.Label)]</label>
@@ -1521,7 +1521,7 @@
 			<property name="path">$INFO[Skin.String(Home.Tvshows.Tile.4.Path)]</property>
 			<property name="animate">$INFO[Skin.String(Home.Tvshows.Tile.4.Animate)]</property>
 			<property name="custom">1</property>
-			<visible>Container(525).HasFocus(2) + [!IsEmpty(Skin.String(Home.Tvshows.Tile.3.Path)) | !IsEmpty(Skin.String(Home.Tvshows.Tile.4.Path))]</visible>
+			<visible>Container(525).HasFocus(2) + [!IsEmpty(Skin.String(Home.Tvshows.Tile.3.Path)) | !IsEmpty(Skin.String(Home.Tvshows.Tile.4.Path)) | StringCompare(Skin.String(homescreen.style),combo)]</visible>
 		</item>
 		<item id="4">
 			<label>$INFO[Skin.String(Home.Tvshows.Tile.5.Label)]</label>
@@ -1537,7 +1537,7 @@
 			<property name="path">$INFO[Skin.String(Home.Tvshows.Tile.5.Path)]</property>
 			<property name="animate">$INFO[Skin.String(Home.Tvshows.Tile.5.Animate)]</property>
 			<property name="custom">1</property>  
-			<visible>Container(525).HasFocus(2) + [!IsEmpty(Skin.String(Home.Tvshows.Tile.4.Path)) | !IsEmpty(Skin.String(Home.Tvshows.Tile.5.Path))]</visible>
+			<visible>Container(525).HasFocus(2) + [!IsEmpty(Skin.String(Home.Tvshows.Tile.4.Path)) | !IsEmpty(Skin.String(Home.Tvshows.Tile.5.Path)) | StringCompare(Skin.String(homescreen.style),combo)]</visible>
 		</item>
 		<item id="5">
 			<label>$INFO[Skin.String(Home.Tvshows.Tile.6.Label)]</label>
@@ -1553,7 +1553,7 @@
 			<property name="path">$INFO[Skin.String(Home.Tvshows.Tile.6.Path)]</property>
 			<property name="animate">$INFO[Skin.String(Home.Tvshows.Tile.6.Animate)]</property>
 			<property name="custom">1</property>
-			<visible>Container(525).HasFocus(2) + [!IsEmpty(Skin.String(Home.Tvshows.Tile.5.Path)) | !IsEmpty(Skin.String(Home.Tvshows.Tile.6.Path))]</visible>
+			<visible>Container(525).HasFocus(2) + [!IsEmpty(Skin.String(Home.Tvshows.Tile.5.Path)) | !IsEmpty(Skin.String(Home.Tvshows.Tile.6.Path)) | StringCompare(Skin.String(homescreen.style),combo)]</visible>
 		</item>
 		<item id="6">
 			<label>$INFO[Skin.String(Home.Tvshows.Tile.7.Label)]</label>
@@ -1569,7 +1569,7 @@
 			<property name="path">$INFO[Skin.String(Home.Tvshows.Tile.7.Path)]</property>
 			<property name="animate">$INFO[Skin.String(Home.Tvshows.Tile.7.Animate)]</property>
 			<property name="custom">1</property>
-			<visible>Container(525).HasFocus(2) + [!IsEmpty(Skin.String(Home.Tvshows.Tile.6.Path)) | !IsEmpty(Skin.String(Home.Tvshows.Tile.7.Path))]</visible>
+			<visible>Container(525).HasFocus(2) + [!IsEmpty(Skin.String(Home.Tvshows.Tile.6.Path)) | !IsEmpty(Skin.String(Home.Tvshows.Tile.7.Path)) | StringCompare(Skin.String(homescreen.style),combo)]</visible>
 		</item>
 		<item id="7">
 			<label>$INFO[Skin.String(Home.Tvshows.Tile.8.Label)]</label>
@@ -1585,7 +1585,7 @@
 			<property name="path">$INFO[Skin.String(Home.Tvshows.Tile.8.Path)]</property>
 			<property name="animate">$INFO[Skin.String(Home.Tvshows.Tile.8.Animate)]</property>
 			<property name="custom">1</property>
-			<visible>Container(525).HasFocus(2) + [!IsEmpty(Skin.String(Home.Tvshows.Tile.7.Path)) | !IsEmpty(Skin.String(Home.Tvshows.Tile.8.Path))]</visible>
+			<visible>Container(525).HasFocus(2) + [!IsEmpty(Skin.String(Home.Tvshows.Tile.7.Path)) | !IsEmpty(Skin.String(Home.Tvshows.Tile.8.Path)) | StringCompare(Skin.String(homescreen.style),combo)]</visible>
 		</item>
 		<item id="8">
 			<label>$INFO[Skin.String(Home.Tvshows.Tile.9.Label)]</label>
@@ -1601,7 +1601,7 @@
 			<property name="path">$INFO[Skin.String(Home.Tvshows.Tile.9.Path)]</property>
 			<property name="animate">$INFO[Skin.String(Home.Tvshows.Tile.9.Animate)]</property>
 			<property name="custom">1</property>
-			<visible>Container(525).HasFocus(2) + [!IsEmpty(Skin.String(Home.Tvshows.Tile.8.Path)) | !IsEmpty(Skin.String(Home.Tvshows.Tile.9.Path))]</visible>
+			<visible>Container(525).HasFocus(2) + [!IsEmpty(Skin.String(Home.Tvshows.Tile.8.Path)) | !IsEmpty(Skin.String(Home.Tvshows.Tile.9.Path)) | StringCompare(Skin.String(homescreen.style),combo)]</visible>
 		</item>
 		<item id="9">
 			<label>$INFO[Skin.String(Home.Tvshows.Tile.10.Label)]</label>
@@ -1617,7 +1617,7 @@
 			<property name="path">$INFO[Skin.String(Home.Tvshows.Tile.10.Path)]</property>
 			<property name="animate">$INFO[Skin.String(Home.Tvshows.Tile.10.Animate)]</property>
 			<property name="custom">1</property>
-			<visible>Container(525).HasFocus(2) + [!IsEmpty(Skin.String(Home.Tvshows.Tile.9.Path)) | !IsEmpty(Skin.String(Home.Tvshows.Tile.10.Path))]</visible>
+			<visible>Container(525).HasFocus(2) + [!IsEmpty(Skin.String(Home.Tvshows.Tile.9.Path)) | !IsEmpty(Skin.String(Home.Tvshows.Tile.10.Path)) | StringCompare(Skin.String(homescreen.style),combo)]</visible>
 		</item>
 		
 		<!--MUSIC ITEMS-->
@@ -1651,7 +1651,7 @@
 			<property name="path">$INFO[Skin.String(Home.Music.Tile.2.Path)]</property>
 			<property name="animate">$INFO[Skin.String(Home.Music.Tile.2.Animate)]</property>
 			<property name="custom">1</property>
-			<visible>Container(525).HasFocus(3) + [!IsEmpty(Skin.String(Home.Music.Tile.1.Path)) | !IsEmpty(Skin.String(Home.Music.Tile.2.Path))]</visible>
+			<visible>Container(525).HasFocus(3) + [!IsEmpty(Skin.String(Home.Music.Tile.1.Path)) | !IsEmpty(Skin.String(Home.Music.Tile.2.Path)) | StringCompare(Skin.String(homescreen.style),combo)]</visible>
 		</item>
 		<item id="3">
 			<label>$INFO[Skin.String(Home.Music.Tile.3.Label)]</label>
@@ -1667,7 +1667,7 @@
 			<property name="path">$INFO[Skin.String(Home.Music.Tile.3.Path)]</property>
 			<property name="animate">$INFO[Skin.String(Home.Music.Tile.3.Animate)]</property>
 			<property name="custom">1</property>
-			<visible>Container(525).HasFocus(3) + [!IsEmpty(Skin.String(Home.Music.Tile.2.Path)) | !IsEmpty(Skin.String(Home.Music.Tile.3.Path))]</visible>
+			<visible>Container(525).HasFocus(3) + [!IsEmpty(Skin.String(Home.Music.Tile.2.Path)) | !IsEmpty(Skin.String(Home.Music.Tile.3.Path)) | StringCompare(Skin.String(homescreen.style),combo)]</visible>
 		</item>
 		<item id="4">
 			<label>$INFO[Skin.String(Home.Music.Tile.4.Label)]</label>
@@ -1683,7 +1683,7 @@
 			<property name="path">$INFO[Skin.String(Home.Music.Tile.4.Path)]</property>
 			<property name="animate">$INFO[Skin.String(Home.Music.Tile.4.Animate)]</property>
 			<property name="custom">1</property>
-			<visible>Container(525).HasFocus(3) + [!IsEmpty(Skin.String(Home.Music.Tile.3.Path)) | !IsEmpty(Skin.String(Home.Music.Tile.4.Path))]</visible>
+			<visible>Container(525).HasFocus(3) + [!IsEmpty(Skin.String(Home.Music.Tile.3.Path)) | !IsEmpty(Skin.String(Home.Music.Tile.4.Path)) | StringCompare(Skin.String(homescreen.style),combo)]</visible>
 		</item>
 		<item id="5">
 			<label>$INFO[Skin.String(Home.Music.Tile.5.Label)]</label>
@@ -1699,7 +1699,7 @@
 			<property name="path">$INFO[Skin.String(Home.Music.Tile.5.Path)]</property>
 			<property name="animate">$INFO[Skin.String(Home.Music.Tile.5.Animate)]</property>
 			<property name="custom">1</property>
-			<visible>Container(525).HasFocus(3) + [!IsEmpty(Skin.String(Home.Music.Tile.4.Path)) | !IsEmpty(Skin.String(Home.Music.Tile.5.Path))]</visible>
+			<visible>Container(525).HasFocus(3) + [!IsEmpty(Skin.String(Home.Music.Tile.4.Path)) | !IsEmpty(Skin.String(Home.Music.Tile.5.Path)) | StringCompare(Skin.String(homescreen.style),combo)]</visible>
 		</item>
 		<item id="6">
 			<label>$INFO[Skin.String(Home.Music.Tile.6.Label)]</label>
@@ -1715,7 +1715,7 @@
 			<property name="path">$INFO[Skin.String(Home.Music.Tile.6.Path)]</property>
 			<property name="animate">$INFO[Skin.String(Home.Music.Tile.6.Animate)]</property>
 			<property name="custom">1</property>
-			<visible>Container(525).HasFocus(3) + [!IsEmpty(Skin.String(Home.Music.Tile.5.Path)) | !IsEmpty(Skin.String(Home.Music.Tile.6.Path))]</visible>
+			<visible>Container(525).HasFocus(3) + [!IsEmpty(Skin.String(Home.Music.Tile.5.Path)) | !IsEmpty(Skin.String(Home.Music.Tile.6.Path)) | StringCompare(Skin.String(homescreen.style),combo)]</visible>
 		</item>
 		<item id="7">
 			<label>$INFO[Skin.String(Home.Music.Tile.7.Label)]</label>
@@ -1731,7 +1731,7 @@
 			<property name="path">$INFO[Skin.String(Home.Music.Tile.7.Path)]</property>
 			<property name="animate">$INFO[Skin.String(Home.Music.Tile.7.Animate)]</property>
 			<property name="custom">1</property>
-			<visible>Container(525).HasFocus(3) + [!IsEmpty(Skin.String(Home.Music.Tile.6.Path)) | !IsEmpty(Skin.String(Home.Music.Tile.7.Path))]</visible>
+			<visible>Container(525).HasFocus(3) + [!IsEmpty(Skin.String(Home.Music.Tile.6.Path)) | !IsEmpty(Skin.String(Home.Music.Tile.7.Path)) | StringCompare(Skin.String(homescreen.style),combo)]</visible>
 		</item>
 		<item id="8">
 			<label>$INFO[Skin.String(Home.Music.Tile.8.Label)]</label>
@@ -1747,7 +1747,7 @@
 			<property name="path">$INFO[Skin.String(Home.Music.Tile.8.Path)]</property>
 			<property name="animate">$INFO[Skin.String(Home.Music.Tile.8.Animate)]</property>
 			<property name="custom">1</property>
-			<visible>Container(525).HasFocus(3) + [!IsEmpty(Skin.String(Home.Music.Tile.7.Path)) | !IsEmpty(Skin.String(Home.Music.Tile.8.Path))]</visible>
+			<visible>Container(525).HasFocus(3) + [!IsEmpty(Skin.String(Home.Music.Tile.7.Path)) | !IsEmpty(Skin.String(Home.Music.Tile.8.Path)) | StringCompare(Skin.String(homescreen.style),combo)]</visible>
 		</item>
 		<item id="9">
 			<label>$INFO[Skin.String(Home.Music.Tile.9.Label)]</label>
@@ -1763,7 +1763,7 @@
 			<property name="path">$INFO[Skin.String(Home.Music.Tile.9.Path)]</property>
 			<property name="animate">$INFO[Skin.String(Home.Music.Tile.9.Animate)]</property>
 			<property name="custom">1</property>
-			<visible>Container(525).HasFocus(3) + [!IsEmpty(Skin.String(Home.Music.Tile.8.Path)) | !IsEmpty(Skin.String(Home.Music.Tile.9.Path))]</visible>
+			<visible>Container(525).HasFocus(3) + [!IsEmpty(Skin.String(Home.Music.Tile.8.Path)) | !IsEmpty(Skin.String(Home.Music.Tile.9.Path)) | StringCompare(Skin.String(homescreen.style),combo)]</visible>
 		</item>
 		<item id="10">
 			<label>$INFO[Skin.String(Home.Music.Tile.10.Label)]</label>
@@ -1779,7 +1779,7 @@
 			<property name="path">$INFO[Skin.String(Home.Music.Tile.10.Path)]</property>
 			<property name="animate">$INFO[Skin.String(Home.Music.Tile.10.Animate)]</property>
 			<property name="custom">1</property>
-			<visible>Container(525).HasFocus(3) + [!IsEmpty(Skin.String(Home.Music.Tile.9.Path)) | !IsEmpty(Skin.String(Home.Music.Tile.10.Path))]</visible>
+			<visible>Container(525).HasFocus(3) + [!IsEmpty(Skin.String(Home.Music.Tile.9.Path)) | !IsEmpty(Skin.String(Home.Music.Tile.10.Path)) | StringCompare(Skin.String(homescreen.style),combo)]</visible>
 		</item>
 		
 		<!--PVR ITEMS-->
@@ -1882,7 +1882,7 @@
 			<property name="path">$INFO[Skin.String(Home.Pictures.Tile.2.Path)]</property>
 			<property name="animate">$INFO[Skin.String(Home.Pictures.Tile.2.Animate)]</property>
 			<property name="custom">1</property>
-			<visible>Container(525).HasFocus(5) + [!IsEmpty(Skin.String(Home.Pictures.Tile.1.Path)) | !IsEmpty(Skin.String(Home.Pictures.Tile.2.Path))]</visible>
+			<visible>Container(525).HasFocus(5) + [!IsEmpty(Skin.String(Home.Pictures.Tile.1.Path)) | !IsEmpty(Skin.String(Home.Pictures.Tile.2.Path)) | StringCompare(Skin.String(homescreen.style),combo)]</visible>
 		</item>
 		<item id="6">
 			<label>$INFO[Skin.String(Home.Pictures.Tile.3.Label)]</label>
@@ -1898,7 +1898,7 @@
 			<property name="path">$INFO[Skin.String(Home.Pictures.Tile.3.Path)]</property>
 			<property name="animate">$INFO[Skin.String(Home.Pictures.Tile.3.Animate)]</property>
 			<property name="custom">1</property>
-			<visible>Container(525).HasFocus(5) + [!IsEmpty(Skin.String(Home.Pictures.Tile.2.Path)) | !IsEmpty(Skin.String(Home.Pictures.Tile.3.Path))]</visible>
+			<visible>Container(525).HasFocus(5) + [!IsEmpty(Skin.String(Home.Pictures.Tile.2.Path)) | !IsEmpty(Skin.String(Home.Pictures.Tile.3.Path)) | StringCompare(Skin.String(homescreen.style),combo)]</visible>
 		</item>
 		<item id="2">
 			<label>$INFO[Skin.String(Home.Pictures.Tile.4.Label)]</label>
@@ -1914,7 +1914,7 @@
 			<property name="path">$INFO[Skin.String(Home.Pictures.Tile.4.Path)]</property>
 			<property name="animate">$INFO[Skin.String(Home.Pictures.Tile.4.Animate)]</property>
 			<property name="custom">1</property>
-			<visible>Container(525).HasFocus(5) + [!IsEmpty(Skin.String(Home.Pictures.Tile.3.Path)) | !IsEmpty(Skin.String(Home.Pictures.Tile.4.Path))]</visible>
+			<visible>Container(525).HasFocus(5) + [!IsEmpty(Skin.String(Home.Pictures.Tile.3.Path)) | !IsEmpty(Skin.String(Home.Pictures.Tile.4.Path)) | StringCompare(Skin.String(homescreen.style),combo)]</visible>
 		</item>
 		<item id="3">
 			<label>$INFO[Skin.String(Home.Pictures.Tile.5.Label)]</label>
@@ -1930,7 +1930,7 @@
 			<property name="path">$INFO[Skin.String(Home.Pictures.Tile.5.Path)]</property>
 			<property name="animate">$INFO[Skin.String(Home.Pictures.Tile.5.Animate)]</property>
 			<property name="custom">1</property>
-			<visible>Container(525).HasFocus(5) + [!IsEmpty(Skin.String(Home.Pictures.Tile.4.Path)) | !IsEmpty(Skin.String(Home.Pictures.Tile.5.Path))]</visible>
+			<visible>Container(525).HasFocus(5) + [!IsEmpty(Skin.String(Home.Pictures.Tile.4.Path)) | !IsEmpty(Skin.String(Home.Pictures.Tile.5.Path)) | StringCompare(Skin.String(homescreen.style),combo)]</visible>
 		</item>
 		<item id="4">
 			<label>$INFO[Skin.String(Home.Pictures.Tile.6.Label)]</label>
@@ -1946,7 +1946,7 @@
 			<property name="path">$INFO[Skin.String(Home.Pictures.Tile.6.Path)]</property>
 			<property name="animate">$INFO[Skin.String(Home.Pictures.Tile.6.Animate)]</property>
 			<property name="custom">1</property>
-			<visible>Container(525).HasFocus(5) + [!IsEmpty(Skin.String(Home.Pictures.Tile.5.Path)) | !IsEmpty(Skin.String(Home.Pictures.Tile.6.Path))]</visible>
+			<visible>Container(525).HasFocus(5) + [!IsEmpty(Skin.String(Home.Pictures.Tile.5.Path)) | !IsEmpty(Skin.String(Home.Pictures.Tile.6.Path)) | StringCompare(Skin.String(homescreen.style),combo)]</visible>
 		</item>
 		<item id="7">
 			<label>$INFO[Skin.String(Home.Pictures.Tile.7.Label)]</label>
@@ -1962,7 +1962,7 @@
 			<property name="path">$INFO[Skin.String(Home.Pictures.Tile.7.Path)]</property>
 			<property name="animate">$INFO[Skin.String(Home.Pictures.Tile.7.Animate)]</property>
 			<property name="custom">1</property>
-			<visible>Container(525).HasFocus(5) + [!IsEmpty(Skin.String(Home.Pictures.Tile.6.Path)) | !IsEmpty(Skin.String(Home.Pictures.Tile.7.Path))]</visible>
+			<visible>Container(525).HasFocus(5) + [!IsEmpty(Skin.String(Home.Pictures.Tile.6.Path)) | !IsEmpty(Skin.String(Home.Pictures.Tile.7.Path)) | StringCompare(Skin.String(homescreen.style),combo)]</visible>
 		</item>
 		<item id="8">
 			<label>$INFO[Skin.String(Home.Pictures.Tile.8.Label)]</label>
@@ -1978,7 +1978,7 @@
 			<property name="path">$INFO[Skin.String(Home.Pictures.Tile.8.Path)]</property>
 			<property name="animate">$INFO[Skin.String(Home.Pictures.Tile.8.Animate)]</property>
 			<property name="custom">1</property>
-			<visible>Container(525).HasFocus(5) + [!IsEmpty(Skin.String(Home.Pictures.Tile.7.Path)) | !IsEmpty(Skin.String(Home.Pictures.Tile.8.Path))]</visible>
+			<visible>Container(525).HasFocus(5) + [!IsEmpty(Skin.String(Home.Pictures.Tile.7.Path)) | !IsEmpty(Skin.String(Home.Pictures.Tile.8.Path)) | StringCompare(Skin.String(homescreen.style),combo)]</visible>
 		</item>
 		<item id="9">
 			<label>$INFO[Skin.String(Home.Pictures.Tile.9.Label)]</label>
@@ -1994,7 +1994,7 @@
 			<property name="path">$INFO[Skin.String(Home.Pictures.Tile.9.Path)]</property>
 			<property name="animate">$INFO[Skin.String(Home.Pictures.Tile.9.Animate)]</property>
 			<property name="custom">1</property>
-			<visible>Container(525).HasFocus(5) + [!IsEmpty(Skin.String(Home.Pictures.Tile.8.Path)) | !IsEmpty(Skin.String(Home.Pictures.Tile.9.Path))]</visible>
+			<visible>Container(525).HasFocus(5) + [!IsEmpty(Skin.String(Home.Pictures.Tile.8.Path)) | !IsEmpty(Skin.String(Home.Pictures.Tile.9.Path)) | StringCompare(Skin.String(homescreen.style),combo)]</visible>
 		</item>
 		<item id="10">
 			<label>$INFO[Skin.String(Home.Pictures.Tile.10.Label)]</label>
@@ -2010,7 +2010,7 @@
 			<property name="path">$INFO[Skin.String(Home.Pictures.Tile.10.Path)]</property>
 			<property name="animate">$INFO[Skin.String(Home.Pictures.Tile.10.Animate)]</property>
 			<property name="custom">1</property>
-			<visible>Container(525).HasFocus(5) + [!IsEmpty(Skin.String(Home.Pictures.Tile.9.Path)) | !IsEmpty(Skin.String(Home.Pictures.Tile.10.Path))]</visible>
+			<visible>Container(525).HasFocus(5) + [!IsEmpty(Skin.String(Home.Pictures.Tile.9.Path)) | !IsEmpty(Skin.String(Home.Pictures.Tile.10.Path)) | StringCompare(Skin.String(homescreen.style),combo)]</visible>
 		</item>
 		<!--PROGRAMS ITEMS-->
 		<item id="1">
@@ -2043,7 +2043,7 @@
 			<property name="path">$INFO[Skin.String(Home.Programs.Tile.2.Path)]</property>
 			<property name="animate">$INFO[Skin.String(Home.Programs.Tile.2.Animate)]</property>
 			<property name="custom">1</property>
-			<visible>Container(525).HasFocus(7) + [!IsEmpty(Skin.String(Home.Programs.Tile.1.Path)) | !IsEmpty(Skin.String(Home.Programs.Tile.2.Path))]</visible>
+			<visible>Container(525).HasFocus(7) + [!IsEmpty(Skin.String(Home.Programs.Tile.1.Path)) | !IsEmpty(Skin.String(Home.Programs.Tile.2.Path)) | StringCompare(Skin.String(homescreen.style),combo)]</visible>
 		</item>
 		<item id="6">
 			<label>$INFO[Skin.String(Home.Programs.Tile.3.Label)]</label>
@@ -2059,7 +2059,7 @@
 			<property name="path">$INFO[Skin.String(Home.Programs.Tile.3.Path)]</property>
 			<property name="animate">$INFO[Skin.String(Home.Programs.Tile.3.Animate)]</property>
 			<property name="custom">1</property>
-			<visible>Container(525).HasFocus(7) + [!IsEmpty(Skin.String(Home.Programs.Tile.2.Path)) | !IsEmpty(Skin.String(Home.Programs.Tile.3.Path))]</visible>
+			<visible>Container(525).HasFocus(7) + [!IsEmpty(Skin.String(Home.Programs.Tile.2.Path)) | !IsEmpty(Skin.String(Home.Programs.Tile.3.Path)) | StringCompare(Skin.String(homescreen.style),combo)]</visible>
 		</item>
 		<item id="2">
 			<label>$INFO[Skin.String(Home.Programs.Tile.4.Label)]</label>
@@ -2075,7 +2075,7 @@
 			<property name="path">$INFO[Skin.String(Home.Programs.Tile.4.Path)]</property>
 			<property name="animate">$INFO[Skin.String(Home.Programs.Tile.4.Animate)]</property>
 			<property name="custom">1</property>
-			<visible>Container(525).HasFocus(7) + [!IsEmpty(Skin.String(Home.Programs.Tile.3.Path)) | !IsEmpty(Skin.String(Home.Programs.Tile.4.Path))]</visible>
+			<visible>Container(525).HasFocus(7) + [!IsEmpty(Skin.String(Home.Programs.Tile.3.Path)) | !IsEmpty(Skin.String(Home.Programs.Tile.4.Path)) | StringCompare(Skin.String(homescreen.style),combo)]</visible>
 		</item>
 		<item id="3">
 			<label>$INFO[Skin.String(Home.Programs.Tile.5.Label)]</label>
@@ -2091,7 +2091,7 @@
 			<property name="path">$INFO[Skin.String(Home.Programs.Tile.5.Path)]</property>
 			<property name="animate">$INFO[Skin.String(Home.Programs.Tile.5.Animate)]</property>
 			<property name="custom">1</property>
-			<visible>Container(525).HasFocus(7) + [!IsEmpty(Skin.String(Home.Programs.Tile.4.Path)) | !IsEmpty(Skin.String(Home.Programs.Tile.5.Path))]</visible>
+			<visible>Container(525).HasFocus(7) + [!IsEmpty(Skin.String(Home.Programs.Tile.4.Path)) | !IsEmpty(Skin.String(Home.Programs.Tile.5.Path)) | StringCompare(Skin.String(homescreen.style),combo)]</visible>
 		</item>
 		<item id="4">
 			<label>$INFO[Skin.String(Home.Programs.Tile.6.Label)]</label>
@@ -2107,7 +2107,7 @@
 			<property name="path">$INFO[Skin.String(Home.Programs.Tile.6.Path)]</property>
 			<property name="animate">$INFO[Skin.String(Home.Programs.Tile.6.Animate)]</property>
 			<property name="custom">1</property>
-			<visible>Container(525).HasFocus(7) + [!IsEmpty(Skin.String(Home.Programs.Tile.5.Path)) | !IsEmpty(Skin.String(Home.Programs.Tile.6.Path))]</visible>
+			<visible>Container(525).HasFocus(7) + [!IsEmpty(Skin.String(Home.Programs.Tile.5.Path)) | !IsEmpty(Skin.String(Home.Programs.Tile.6.Path)) | StringCompare(Skin.String(homescreen.style),combo)]</visible>
 		</item>
 		<item id="7">
 			<label>$INFO[Skin.String(Home.Programs.Tile.7.Label)]</label>
@@ -2123,7 +2123,7 @@
 			<property name="path">$INFO[Skin.String(Home.Programs.Tile.7.Path)]</property>
 			<property name="animate">$INFO[Skin.String(Home.Programs.Tile.7.Animate)]</property>
 			<property name="custom">1</property>
-			<visible>Container(525).HasFocus(7) + [!IsEmpty(Skin.String(Home.Programs.Tile.6.Path)) | !IsEmpty(Skin.String(Home.Programs.Tile.7.Path))]</visible>
+			<visible>Container(525).HasFocus(7) + [!IsEmpty(Skin.String(Home.Programs.Tile.6.Path)) | !IsEmpty(Skin.String(Home.Programs.Tile.7.Path)) | StringCompare(Skin.String(homescreen.style),combo)]</visible>
 		</item>
 		<item id="8">
 			<label>$INFO[Skin.String(Home.Programs.Tile.8.Label)]</label>
@@ -2139,7 +2139,7 @@
 			<property name="path">$INFO[Skin.String(Home.Programs.Tile.8.Path)]</property>
 			<property name="animate">$INFO[Skin.String(Home.Programs.Tile.8.Animate)]</property>
 			<property name="custom">1</property>
-			<visible>Container(525).HasFocus(7) + [!IsEmpty(Skin.String(Home.Programs.Tile.7.Path)) | !IsEmpty(Skin.String(Home.Programs.Tile.8.Path))]</visible>
+			<visible>Container(525).HasFocus(7) + [!IsEmpty(Skin.String(Home.Programs.Tile.7.Path)) | !IsEmpty(Skin.String(Home.Programs.Tile.8.Path)) | StringCompare(Skin.String(homescreen.style),combo)]</visible>
 		</item>
 		<item id="9">
 			<label>$INFO[Skin.String(Home.Programs.Tile.9.Label)]</label>
@@ -2155,7 +2155,7 @@
 			<property name="path">$INFO[Skin.String(Home.Programs.Tile.9.Path)]</property>
 			<property name="animate">$INFO[Skin.String(Home.Programs.Tile.9.Animate)]</property>
 			<property name="custom">1</property>
-			<visible>Container(525).HasFocus(7) + [!IsEmpty(Skin.String(Home.Programs.Tile.8.Path)) | !IsEmpty(Skin.String(Home.Programs.Tile.9.Path))]</visible>
+			<visible>Container(525).HasFocus(7) + [!IsEmpty(Skin.String(Home.Programs.Tile.8.Path)) | !IsEmpty(Skin.String(Home.Programs.Tile.9.Path)) | StringCompare(Skin.String(homescreen.style),combo)]</visible>
 		</item>
 		<item id="10">
 			<label>$INFO[Skin.String(Home.Programs.Tile.10.Label)]</label>
@@ -2171,7 +2171,7 @@
 			<property name="path">$INFO[Skin.String(Home.Programs.Tile.10.Path)]</property>
 			<property name="animate">$INFO[Skin.String(Home.Programs.Tile.10.Animate)]</property>
 			<property name="custom">1</property>
-			<visible>Container(525).HasFocus(7) + [!IsEmpty(Skin.String(Home.Programs.Tile.9.Path)) | !IsEmpty(Skin.String(Home.Programs.Tile.10.Path))]</visible>
+			<visible>Container(525).HasFocus(7) + [!IsEmpty(Skin.String(Home.Programs.Tile.9.Path)) | !IsEmpty(Skin.String(Home.Programs.Tile.10.Path)) | StringCompare(Skin.String(homescreen.style),combo)]</visible>
 		</item>
 		
 		<!-- WEATHER ITEMS -->
@@ -2205,7 +2205,7 @@
 			<property name="path">$INFO[Skin.String(Home.Weather.Tile.2.Path)]</property>
 			<property name="animate">$INFO[Skin.String(Home.Weather.Tile.2.Animate)]</property>
 			<property name="custom">1</property>
-			<visible>Container(525).HasFocus(8) + [!IsEmpty(Skin.String(Home.Weather.Tile.1.Path)) | !IsEmpty(Skin.String(Home.Weather.Tile.2.Path))]</visible>
+			<visible>Container(525).HasFocus(8) + [!IsEmpty(Skin.String(Home.Weather.Tile.1.Path)) | !IsEmpty(Skin.String(Home.Weather.Tile.2.Path)) | StringCompare(Skin.String(homescreen.style),combo)]</visible>
 		</item>
 		<item id="6">
 			<label>$INFO[Skin.String(Home.Weather.Tile.3.Label)]</label>
@@ -2221,7 +2221,7 @@
 			<property name="path">$INFO[Skin.String(Home.Weather.Tile.3.Path)]</property>
 			<property name="animate">$INFO[Skin.String(Home.Weather.Tile.3.Animate)]</property>
 			<property name="custom">1</property>
-			<visible>Container(525).HasFocus(8) + [!IsEmpty(Skin.String(Home.Weather.Tile.2.Path)) | !IsEmpty(Skin.String(Home.Weather.Tile.3.Path))]</visible>
+			<visible>Container(525).HasFocus(8) + [!IsEmpty(Skin.String(Home.Weather.Tile.2.Path)) | !IsEmpty(Skin.String(Home.Weather.Tile.3.Path)) | StringCompare(Skin.String(homescreen.style),combo)]</visible>
 		</item>
 		<item id="2">
 			<label>$INFO[Skin.String(Home.Weather.Tile.4.Label)]</label>
@@ -2237,7 +2237,7 @@
 			<property name="path">$INFO[Skin.String(Home.Weather.Tile.4.Path)]</property>
 			<property name="animate">$INFO[Skin.String(Home.Weather.Tile.4.Animate)]</property>
 			<property name="custom">1</property>
-			<visible>Container(525).HasFocus(8) + [!IsEmpty(Skin.String(Home.Weather.Tile.3.Path)) | !IsEmpty(Skin.String(Home.Weather.Tile.4.Path))]</visible>
+			<visible>Container(525).HasFocus(8) + [!IsEmpty(Skin.String(Home.Weather.Tile.3.Path)) | !IsEmpty(Skin.String(Home.Weather.Tile.4.Path)) | StringCompare(Skin.String(homescreen.style),combo)]</visible>
 		</item>
 		<item id="3">
 			<label>$INFO[Skin.String(Home.Weather.Tile.5.Label)]</label>
@@ -2253,7 +2253,7 @@
 			<property name="path">$INFO[Skin.String(Home.Weather.Tile.5.Path)]</property>
 			<property name="animate">$INFO[Skin.String(Home.Weather.Tile.5.Animate)]</property>
 			<property name="custom">1</property>
-			<visible>Container(525).HasFocus(8) + [!IsEmpty(Skin.String(Home.Weather.Tile.4.Path)) | !IsEmpty(Skin.String(Home.Weather.Tile.5.Path))]</visible>
+			<visible>Container(525).HasFocus(8) + [!IsEmpty(Skin.String(Home.Weather.Tile.4.Path)) | !IsEmpty(Skin.String(Home.Weather.Tile.5.Path)) | StringCompare(Skin.String(homescreen.style),combo)]</visible>
 		</item>
 		<item id="4">
 			<label>$INFO[Skin.String(Home.Weather.Tile.6.Label)]</label>
@@ -2269,7 +2269,7 @@
 			<property name="path">$INFO[Skin.String(Home.Weather.Tile.6.Path)]</property>
 			<property name="animate">$INFO[Skin.String(Home.Weather.Tile.6.Animate)]</property>
 			<property name="custom">1</property>
-			<visible>Container(525).HasFocus(8) + [!IsEmpty(Skin.String(Home.Weather.Tile.5.Path)) | !IsEmpty(Skin.String(Home.Weather.Tile.6.Path))]</visible>
+			<visible>Container(525).HasFocus(8) + [!IsEmpty(Skin.String(Home.Weather.Tile.5.Path)) | !IsEmpty(Skin.String(Home.Weather.Tile.6.Path)) | StringCompare(Skin.String(homescreen.style),combo)]</visible>
 		</item>
 		<item id="7">
 			<label>$INFO[Skin.String(Home.Weather.Tile.7.Label)]</label>
@@ -2285,7 +2285,7 @@
 			<property name="path">$INFO[Skin.String(Home.Weather.Tile.7.Path)]</property>
 			<property name="animate">$INFO[Skin.String(Home.Weather.Tile.7.Animate)]</property>
 			<property name="custom">1</property>
-			<visible>Container(525).HasFocus(8) + [!IsEmpty(Skin.String(Home.Weather.Tile.6.Path)) | !IsEmpty(Skin.String(Home.Weather.Tile.7.Path))]</visible>
+			<visible>Container(525).HasFocus(8) + [!IsEmpty(Skin.String(Home.Weather.Tile.6.Path)) | !IsEmpty(Skin.String(Home.Weather.Tile.7.Path)) | StringCompare(Skin.String(homescreen.style),combo)]</visible>
 		</item>
 		<item id="8">
 			<label>$INFO[Skin.String(Home.Weather.Tile.8.Label)]</label>
@@ -2301,7 +2301,7 @@
 			<property name="path">$INFO[Skin.String(Home.Weather.Tile.8.Path)]</property>
 			<property name="animate">$INFO[Skin.String(Home.Weather.Tile.8.Animate)]</property>
 			<property name="custom">1</property>
-			<visible>Container(525).HasFocus(8) + [!IsEmpty(Skin.String(Home.Weather.Tile.7.Path)) | !IsEmpty(Skin.String(Home.Weather.Tile.8.Path))]</visible>
+			<visible>Container(525).HasFocus(8) + [!IsEmpty(Skin.String(Home.Weather.Tile.7.Path)) | !IsEmpty(Skin.String(Home.Weather.Tile.8.Path)) | StringCompare(Skin.String(homescreen.style),combo)]</visible>
 		</item>
 		<item id="9">
 			<label>$INFO[Skin.String(Home.Weather.Tile.9.Label)]</label>
@@ -2317,7 +2317,7 @@
 			<property name="path">$INFO[Skin.String(Home.Weather.Tile.9.Path)]</property>
 			<property name="animate">$INFO[Skin.String(Home.Weather.Tile.9.Animate)]</property>
 			<property name="custom">1</property>
-			<visible>Container(525).HasFocus(8) + [!IsEmpty(Skin.String(Home.Weather.Tile.8.Path)) | !IsEmpty(Skin.String(Home.Weather.Tile.9.Path))]</visible>
+			<visible>Container(525).HasFocus(8) + [!IsEmpty(Skin.String(Home.Weather.Tile.8.Path)) | !IsEmpty(Skin.String(Home.Weather.Tile.9.Path)) | StringCompare(Skin.String(homescreen.style),combo)]</visible>
 		</item>
 		<item id="10">
 			<label>$INFO[Skin.String(Home.Weather.Tile.10.Label)]</label>
@@ -2333,7 +2333,7 @@
 			<property name="path">$INFO[Skin.String(Home.Weather.Tile.10.Path)]</property>
 			<property name="animate">$INFO[Skin.String(Home.Weather.Tile.10.Animate)]</property>
 			<property name="custom">1</property>
-			<visible>Container(525).HasFocus(8) + [!IsEmpty(Skin.String(Home.Weather.Tile.9.Path)) | !IsEmpty(Skin.String(Home.Weather.Tile.10.Path))]</visible>
+			<visible>Container(525).HasFocus(8) + [!IsEmpty(Skin.String(Home.Weather.Tile.9.Path)) | !IsEmpty(Skin.String(Home.Weather.Tile.10.Path)) | StringCompare(Skin.String(homescreen.style),combo)]</visible>
 		</item>
 		
 		<!--SETTINGS ITEMS-->
@@ -6455,6 +6455,20 @@
 		</control>
 	</include>
 	<include name="Mod_525Content">
+	    <item id="4">
+			<label>41220</label>
+			<visible>!Skin.HasSetting(disable.pvr) + System.GetBool(pvrmanager.enabled) + StringCompare(Skin.String(homescreen.style),combo)</visible>
+			<property name="single">$INFO[Skin.String(HomeLiveTVSingleImage)]</property>
+			<property name="multi">$INFO[Skin.String(HomeLiveTVMultiImage)]</property>
+			<property name="widget">$INFO[Skin.String(pvr.widget.type)]</property>
+			<onclick condition="!Skin.HasSetting(HomeClicksSubmenu)">ActivateWindow(PVR)</onclick>
+			<onclick condition="!Skin.HasSetting(HomeClicksSubmenu) + !Skin.HasSetting(pvr.epgdefault)">SetFocus(32)</onclick>
+			<onclick condition="!Skin.HasSetting(HomeClicksSubmenu) + !Skin.HasSetting(pvr.epgdefault)">SetFocus(11)</onclick>
+			<onclick condition="!Skin.HasSetting(HomeClicksSubmenu) + Skin.HasSetting(pvr.epgdefault)">SetFocus(31)</onclick>
+			<onclick condition="!Skin.HasSetting(HomeClicksSubmenu) + Skin.HasSetting(pvr.epgdefault)">SetFocus(10)</onclick>
+			<onclick condition="Skin.HasSetting(HomeClicksSubmenu)">SetFocus(83,0)</onclick>
+			<icon>special://skin/extras/icons/tvguide.png</icon>
+		</item>
 		<item id="1">
 			<label>$INFO[Skin.String(Home.Movies.Tile.0.Label)]</label>
 			<visible>!Skin.HasSetting(disable.movies)</visible>
@@ -6466,7 +6480,7 @@
 			<onclick condition="!Skin.HasSetting(HomeClicksSubmenu) + stringcompare(Skin.String(Home.Movies.Tile.0.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(Home.Movies.Tile.0.Path)],return)</onclick>
 			<onclick condition="!Skin.HasSetting(HomeClicksSubmenu) + [stringcompare(Skin.String(Home.Movies.Tile.0.Type),6) | stringcompare(Skin.String(Home.Movies.Tile.0.Type),7)]">$INFO[Skin.String(Home.Movies.Tile.0.Path)]</onclick>
 			<onclick condition="Skin.HasSetting(HomeClicksSubmenu)">SetFocus(83,0)</onclick>
-			<icon>DefaultMovies.png</icon>
+			<icon>$INFO[Skin.String(Home.Movies.Tile.0.Icon)]</icon>
 		</item>
 		<item id="2">
 			<label>$INFO[Skin.String(Home.TvShows.Tile.0.Label)]</label>
@@ -6479,7 +6493,7 @@
 			<onclick condition="!Skin.HasSetting(HomeClicksSubmenu) + stringcompare(Skin.String(Home.TvShows.Tile.0.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(Home.TvShows.Tile.0.Path)],return)</onclick>
 			<onclick condition="!Skin.HasSetting(HomeClicksSubmenu) + [stringcompare(Skin.String(Home.TvShows.Tile.0.Type),6) | stringcompare(Skin.String(Home.TvShows.Tile.0.Type),7)]">$INFO[Skin.String(Home.TvShows.Tile.0.Path)]</onclick>
 			<onclick condition="Skin.HasSetting(HomeClicksSubmenu)">SetFocus(83,0)</onclick>
-			<icon>DefaultTVShows.png</icon>
+			<icon>$INFO[Skin.String(Home.TVShows.Tile.0.Icon)]</icon>
 		</item>
 		<item id="3">
 			<label>$INFO[Skin.String(Home.Music.Tile.0.Label)]</label>
@@ -6492,7 +6506,7 @@
 			<onclick condition="!Skin.HasSetting(HomeClicksSubmenu) + stringcompare(Skin.String(Home.Music.Tile.0.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(Home.Music.Tile.0.Path)],return)</onclick>
 			<onclick condition="!Skin.HasSetting(HomeClicksSubmenu) + [stringcompare(Skin.String(Home.Music.Tile.0.Type),6) | stringcompare(Skin.String(Home.Music.Tile.0.Type),7)]">$INFO[Skin.String(Home.Music.Tile.0.Path)]</onclick>
 			<onclick condition="Skin.HasSetting(HomeClicksSubmenu)">SetFocus(83,0)</onclick>
-			<icon>DefaultAudio.png</icon>
+			<icon>$INFO[Skin.String(Home.Music.Tile.0.Icon)]</icon>
 		</item>
 		<item id="5">
 			<label>$INFO[Skin.String(Home.Pictures.Tile.0.Label)]</label>
@@ -6505,7 +6519,7 @@
 			<onclick condition="!Skin.HasSetting(HomeClicksSubmenu) + stringcompare(Skin.String(Home.Pictures.Tile.0.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(Home.Pictures.Tile.0.Path)],return)</onclick>
 			<onclick condition="!Skin.HasSetting(HomeClicksSubmenu) + [stringcompare(Skin.String(Home.Pictures.Tile.0.Type),6) | stringcompare(Skin.String(Home.Pictures.Tile.0.Type),7)]">$INFO[Skin.String(Home.Pictures.Tile.0.Path)]</onclick>
 			<onclick condition="Skin.HasSetting(HomeClicksSubmenu)">SetFocus(83,0)</onclick>
-			<icon>DefaultPicture.png</icon>
+			<icon>$INFO[Skin.String(Home.Pictures.Tile.0.Icon)]</icon>
 		</item>
 		<item id="7">
 			<label>$INFO[Skin.String(Home.Programs.Tile.0.Label)]</label>
@@ -6518,7 +6532,7 @@
 			<onclick condition="!Skin.HasSetting(HomeClicksSubmenu) + stringcompare(Skin.String(Home.Programs.Tile.0.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(Home.Programs.Tile.0.Path)],return)</onclick>
 			<onclick condition="!Skin.HasSetting(HomeClicksSubmenu) + [stringcompare(Skin.String(Home.Programs.Tile.0.Type),6) | stringcompare(Skin.String(Home.Programs.Tile.0.Type),7)]">$INFO[Skin.String(Home.Programs.Tile.0.Path)]</onclick>
 			<onclick condition="Skin.HasSetting(HomeClicksSubmenu)">SetFocus(83,0)</onclick>
-			<icon>DefaultAddonProgram.png</icon>
+			<icon>$INFO[Skin.String(Home.Programs.Tile.0.Icon)]</icon>
 		</item>
 		<item id="8">
 			<label>$INFO[Skin.String(Home.Weather.Tile.0.Label)]</label>
@@ -6531,7 +6545,7 @@
 			<onclick condition="!Skin.HasSetting(HomeClicksSubmenu) + stringcompare(Skin.String(Home.Weather.Tile.0.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(Home.Weather.Tile.0.Path)],return)</onclick>
 			<onclick condition="!Skin.HasSetting(HomeClicksSubmenu) + [stringcompare(Skin.String(Home.Weather.Tile.0.Type),6) | stringcompare(Skin.String(Home.Programs.Tile.0.Type),7)]">$INFO[Skin.String(Home.Weather.Tile.0.Path)]</onclick>
 			<onclick condition="Skin.HasSetting(HomeClicksSubmenu)">SetFocus(83,0)</onclick>
-			<icon>DefaultAddonWeather.png</icon>
+			<icon>$INFO[Skin.String(Home.Weather.Tile.0.Icon)]</icon>
 		</item>
 		<item id="9">
 			<label>5</label>
@@ -6540,7 +6554,7 @@
 			<property name="multi">$INFO[Skin.String(HomeSettingsMultiImage)]</property>
 			<property name="widget">$INFO[Skin.String(settings.widget.type)]</property>
 			<onclick>SetFocus(83,0)</onclick>
-			<icon>DefaultAddonService.png</icon>
+			<icon>special://skin/extras/icons/settings.png</icon>
 		</item>
 		<item id="11">
 			<label>341</label>
@@ -6549,6 +6563,7 @@
 			<onclick>SetFocus(525)</onclick>
 			<onclick>PlayDVD</onclick>
 			<visible>System.HasMediaDVD</visible>
+			<icon>special://skin/extras/icons/dvd.png</icon>
 		</item>
 		<item id="10">
 			<label>1036</label>
@@ -6558,11 +6573,11 @@
 			<onclick>SetFocus(525)</onclick>
 			<onclick>ActivateWindow(Favourites)</onclick>
 			<visible>!Skin.HasSetting(disable.favourites)</visible>
-			<icon>DefaultFavourites.png</icon>
+			<icon>special://skin/extras/icons/favourites.png</icon>
 		</item>
 		<item id="4">
 			<label>41220</label>
-			<visible>!Skin.HasSetting(disable.pvr) + System.GetBool(pvrmanager.enabled)</visible>
+			<visible>!Skin.HasSetting(disable.pvr) + System.GetBool(pvrmanager.enabled) + !StringCompare(Skin.String(homescreen.style),combo)</visible>
 			<property name="single">$INFO[Skin.String(HomeLiveTVSingleImage)]</property>
 			<property name="multi">$INFO[Skin.String(HomeLiveTVMultiImage)]</property>
 			<property name="widget">$INFO[Skin.String(pvr.widget.type)]</property>
@@ -6572,7 +6587,7 @@
 			<onclick condition="!Skin.HasSetting(HomeClicksSubmenu) + Skin.HasSetting(pvr.epgdefault)">SetFocus(31)</onclick>
 			<onclick condition="!Skin.HasSetting(HomeClicksSubmenu) + Skin.HasSetting(pvr.epgdefault)">SetFocus(10)</onclick>
 			<onclick condition="Skin.HasSetting(HomeClicksSubmenu)">SetFocus(83,0)</onclick>
-			<icon>DefaultTVGuide.png</icon>
+			<icon>special://skin/extras/icons/tvguide.png</icon>
 		</item>
 		
 	</include>

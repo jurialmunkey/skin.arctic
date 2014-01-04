@@ -769,7 +769,7 @@
 			<height>600</height>
 			<viewtype>list</viewtype>
 			<orientation>vertical</orientation>
-			<visible>![Control.HasFocus(84) | Control.HasFocus(85) | Window.IsActive(favourites) | [Container(525).HasFocus(7) + !Skin.HasSetting(UseRCB)]]</visible>
+			<visible>![Control.HasFocus(84) | Control.HasFocus(85) | Window.IsActive(favourites)]</visible>
 			<itemlayout height="600">
 			</itemlayout>
 			<focusedlayout height="600">	
@@ -944,7 +944,7 @@
 			<height>600</height>
 			<viewtype>list</viewtype>
 			<orientation>vertical</orientation>
-			<visible>![Control.HasFocus(84) | Control.HasFocus(85) | Window.IsActive(favourites) | [Container(525).HasFocus(7) + !Skin.HasSetting(UseRCB)]]</visible>
+			<visible>![Control.HasFocus(84) | Control.HasFocus(85) | Window.IsActive(favourites)]</visible>
 			<itemlayout height="600">
 			</itemlayout>
 			<focusedlayout height="600">				
@@ -1086,7 +1086,7 @@
 			<height>600</height>
 			<viewtype>list</viewtype>
 			<orientation>horizontal</orientation>
-			<visible>[stringcompare(Container(525).ListItem.Property(widget),movie.mixed) | stringcompare(Container(525).ListItem.Property(widget),tvshow.mixed)] + [![Control.HasFocus(84) | Control.HasFocus(85) | Window.IsActive(favourites) | [Container(525).HasFocus(7) + !Skin.HasSetting(UseRCB)]] | StringCompare(Skin.String(homescreen.style),simple)]</visible>
+			<visible>[stringcompare(Container(525).ListItem.Property(widget),movie.mixed) | stringcompare(Container(525).ListItem.Property(widget),tvshow.mixed)] + [![Control.HasFocus(84) | Control.HasFocus(85) | Window.IsActive(favourites)] | StringCompare(Skin.String(homescreen.style),simple)]</visible>
 			<include>Mod_90Layout</include>
 			<content>
 				<include>Mod_90Content</include>
@@ -1109,7 +1109,7 @@
 			<height>600</height>
 			<viewtype>list</viewtype>
 			<orientation>horizontal</orientation>
-			<visible>stringcompare(Container(525).ListItem.Property(widget),music.mixed) + [![Control.HasFocus(84) | Control.HasFocus(85) | Window.IsActive(favourites) | [Container(525).HasFocus(7) + !Skin.HasSetting(UseRCB)]] | StringCompare(Skin.String(homescreen.style),simple)]</visible>
+			<visible>stringcompare(Container(525).ListItem.Property(widget),music.mixed) + [![Control.HasFocus(84) | Control.HasFocus(85) | Window.IsActive(favourites)] | StringCompare(Skin.String(homescreen.style),simple)]</visible>
 			<include>Mod_90Layout</include>
 			<content>
 				<include>Mod_90Content</include>
@@ -1155,7 +1155,104 @@
 	<include name="panel.slidedown.anim">
 		<animation effect="slide" start="0" end="0,150" time="350" tween="cubic" easing="inout" condition="Control.HasFocus(82) | Control.HasFocus(90) | Control.HasFocus(88) | Control.HasFocus(89) | Control.HasFocus(83) | Control.HasFocus(84)">Conditional</animation>
 	</include>
-	
+	<include name="Mod_83Items_NoInvert">
+    	<control type="group">
+			<!--<control type="image">
+				<posx>10</posx>
+				<posy>10</posy>
+				<width>169</width>
+				<height>169</height>
+				<texture border="5">views/newgloss/whitepanel.png</texture>
+				<colordiffuse>mod-infotags-alt</colordiffuse>
+			</control>-->
+			<control type="image">
+				<posx>10</posx>
+				<posy>10</posy>
+				<width>169</width>
+				<height>169</height>
+				<texture fallback="special://skin/extras/icons/addtile.png" diffuse="arctic/home/83tile.png">$INFO[ListItem.Property(poster)]</texture>
+				<aspectratio scalediffuse="false" align="center" aligny="center">scale</aspectratio>
+			</control>
+			<control type="label">
+				<posx>92</posx>
+				<posy>146</posy>
+				<label>$INFO[ListItem.Label]</label>
+				<align>center</align>
+				<font>Font-Alaska-S25-L</font>
+				<textcolor>mod-infotags-alt</textcolor>
+				<width>149</width>
+				<scroll>true</scroll>
+				<scrollsuffix>   </scrollsuffix>
+				<visible>IsEmpty(ListItem.Property(showlabel))</visible>
+			</control>
+		</control>
+	</include>	
+	<include name="Mod_83Focused_NoInvert">
+		<control type="group">
+			<visible>Control.HasFocus(83)</visible>
+			<control type="image">
+				<posx>10</posx>
+				<posy>10</posy>
+				<width>169</width>
+				<height>169</height>
+				<texture border="5">views/other/focus-mod.png</texture>
+			</control>
+			<control type="image">
+				<posx>10</posx>
+				<posy>10</posy>
+				<width>169</width>
+				<height>169</height>
+				<texture fallback="special://skin/extras/icons/addtile.png" diffuse="arctic/home/83tile.png">$INFO[ListItem.Property(poster)]</texture>
+				<colordiffuse>mod-infotags-alt</colordiffuse>
+				<aspectratio scalediffuse="false" align="center" aligny="center">keep</aspectratio>
+			</control>
+			<control type="label">
+				<posx>92</posx>
+				<posy>146</posy>
+				<label>$INFO[ListItem.Label]</label>
+				<align>center</align>
+				<font>Font-Alaska-S25-L</font>
+				<textcolor>mod-infotags-alt</textcolor>
+				<width>149</width>
+				<scroll>true</scroll>
+				<scrollsuffix>   </scrollsuffix>
+				<visible>IsEmpty(ListItem.Property(showlabel))</visible>
+			</control>
+			<control type="image">
+				<posx>-12</posx>
+				<posy>-12</posy>
+				<width>213</width>
+				<height>213</height>
+				<texture border="52">arctic/common/border-glo.png</texture>
+				<colordiffuse>Mod_Glow_Border</colordiffuse>
+				<visible>!IsEmpty(ListItem.Property(animate))</visible>
+			</control>
+		</control>
+		<control type="group">
+			<visible>!Control.HasFocus(83)</visible>
+			<control type="image">
+				<posx>10</posx>
+				<posy>10</posy>
+				<width>169</width>
+				<height>169</height>
+				<texture fallback="special://skin/extras/icons/addtile.png" diffuse="arctic/home/83tile.png">$INFO[ListItem.Property(poster)]</texture>
+				<colordiffuse>mod-infotags-alt</colordiffuse>
+				<aspectratio scalediffuse="false" align="center" aligny="center">scale</aspectratio>
+			</control>
+			<control type="label">
+				<posx>92</posx>
+				<posy>146</posy>
+				<label>$INFO[ListItem.Label]</label>
+				<align>center</align>
+				<font>Font-Alaska-S25-L</font>
+				<textcolor>mod-infotags-alt</textcolor>
+				<width>149</width>
+				<scroll>true</scroll>
+				<scrollsuffix>   </scrollsuffix>
+				<visible>IsEmpty(ListItem.Property(showlabel))</visible>
+			</control>
+		</control>
+	</include>
     <include name="Mod_83Items">
     	<control type="group">
 			<control type="image">

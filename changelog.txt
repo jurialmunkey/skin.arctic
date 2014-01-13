@@ -1,5 +1,6 @@
 [B]0.6.3[/B]
 Made infostrip wider
+Infostrip big posters (show labels view option)
 
 [B]0.6.2[/B]
 Info list for MyMusicSongs.xml

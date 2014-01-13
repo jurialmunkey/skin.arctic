@@ -213,7 +213,7 @@
 							<description>Update Library</description>
 							<icon>special://skin/extras/icons/arrows.png</icon>
 							<label>24069</label>
-							<onclick>UpdateLibrary(videos)</onclick>
+							<onclick>UpdateLibrary(video)</onclick>
 						</item>
                     	
                     	<!-- Removed for Gotham -->

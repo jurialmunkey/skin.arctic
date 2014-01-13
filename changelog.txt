@@ -1,6 +1,8 @@
 [B]0.6.3[/B]
 Made infostrip wider
 Infostrip big posters (show labels view option)
+Added option for shutdown button on homescreen menu
+Fixed update videos in side menu
 
 [B]0.6.2[/B]
 Info list for MyMusicSongs.xml

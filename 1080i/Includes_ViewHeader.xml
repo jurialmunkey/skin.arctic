@@ -271,6 +271,8 @@
                         <scroll>false</scroll>
                         <align>left</align>
                     </control>
+                    <!-- FIX ME -->
+                    <!-- Show only when files or plugin etc -->
                     <control type="label">
                         <width min="0" max="500">auto</width>
                         <height>120</height>
@@ -279,7 +281,7 @@
                         <textcolor>Mod_Tags</textcolor>
                         <scroll>false</scroll>
                         <align>left</align>
-                        <visible>[Skin.HasSetting(HideInfoTags) | !Skin.HasSetting(ShowLowerLogo)] + !substring(Container.FolderPath,library,left) + !substring(Container.FolderPath,special,left) + !substring(Container.FolderPath,addons,left) + !substring(Container.FolderPath,sources,left) + !Container.Content(episodes) + ![stringcompare(Container.FolderPath,videodb://4/) | stringcompare(Container.FolderPath,videodb://recentlyaddedmovies/)]</visible>
+                        <visible>!substring(Container.FolderPath,library,left) + !substring(Container.FolderPath,special,left) + !substring(Container.FolderPath,addons,left) + !substring(Container.FolderPath,sources,left) + !Container.Content(episodes) + ![stringcompare(Container.FolderPath,videodb://4/) | stringcompare(Container.FolderPath,videodb://recentlyaddedmovies/)]</visible>
                     </control>
                     <control type="label">
                         <width min="0" max="500">auto</width>

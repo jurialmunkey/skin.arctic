@@ -6352,6 +6352,12 @@
 	
 	
 	<include name="Mod_525GroupList">
+	    <control type="image">
+			<width>30</width>
+			<height>30</height>
+			<texture>windows/home/shutdown.png</texture>
+			<animation effect="fade" start="100" end="30" time="250" condition="[!Control.HasFocus(525) + !Control.HasFocus(83)] | Control.HasFocus(84) | !Container(525).HasFocus(12)">Conditional</animation>
+		</control>
 		<control type="image">
 			<width>30</width>
 			<height>30</height>
@@ -6652,6 +6658,13 @@
 			<property name="widget">$INFO[Skin.String(settings.widget.type)]</property>
 			<onclick>SetFocus(83,0)</onclick>
 			<icon>special://skin/extras/icons/settings.png</icon>
+		</item>
+		<item id="12">
+			<label>5</label>
+			<property name="single">$INFO[Skin.String(HomeHomeSingleImage)]</property>
+			<property name="multi">$INFO[Skin.String(HomeHomeMultiImage)]</property>
+			<onclick>SetFocus(84,0)</onclick>
+			<visible>!Skin.HasSetting(disable.homepowermenu)</visible>
 		</item>
 		<item id="11">
 			<label>341</label>

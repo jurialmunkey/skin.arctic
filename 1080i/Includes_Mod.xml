@@ -6357,6 +6357,7 @@
 			<height>30</height>
 			<texture>windows/home/shutdown.png</texture>
 			<animation effect="fade" start="100" end="30" time="250" condition="[!Control.HasFocus(525) + !Control.HasFocus(83)] | Control.HasFocus(84) | !Container(525).HasFocus(12)">Conditional</animation>
+			<visible>!Skin.HasSetting(disable.homepowermenu)</visible>
 		</control>
 		<control type="image">
 			<width>30</width>

@@ -2514,6 +2514,95 @@
 			<onclick>ActivateWindow(profiles)</onclick>
 			<visible>Container(525).HasFocus(9)</visible>
 		</item>
+		<!-- POWER ITEMS -->
+		<item id="0">
+			<description>Weather</description>
+			<label>$LOCALIZE[8]</label>
+			<onclick>SetFocus(525)</onclick>
+			<onclick condition="!IsEmpty(Weather.Plugin)">ActivateWindow(weather)</onclick>
+			<onclick condition="IsEmpty(Weather.Plugin)">ActivateWindow(weathersettings)</onclick>
+			<property name="Poster">special://skin/extras/icons/weather.png</property>
+			<visible>Container(525).HasFocus(10)</visible>
+		</item>
+		<item id="1">
+			<description>System Info button</description>
+			<label>$LOCALIZE[130]</label>
+			<onclick>SetFocus(525)</onclick>
+			<onclick>ActivateWindow(systeminfo)</onclick>
+			<visible>System.Loggedon</visible>
+			<property name="Poster">special://skin/extras/icons/sysinfo.png</property>
+			<visible>Container(525).HasFocus(10)</visible>
+		</item>
+		<item id="8">
+			<description>Favourites</description>
+			<property name="Poster">special://skin/extras/icons/star.png</property>
+			<label>$LOCALIZE[1036]</label>
+			<onclick>SetFocus(525)</onclick>
+			<onclick>ActivateWindow(Favourites)</onclick>
+			<visible>Container(525).HasFocus(10)</visible>
+		</item>
+		<item id="2">
+			<description>File Manager</description>
+			<label>$LOCALIZE[7]</label>
+			<onclick>SetFocus(525)</onclick>
+			<onclick>ActivateWindow(filemanager)</onclick>
+			<visible>Container(525).HasFocus(10)</visible>
+			<visible>System.Loggedon</visible>
+			<property name="Poster">special://skin/extras/icons/folder.png</property>                        
+		</item>
+		<item id="3">
+			<description>Quit</description>
+			<property name="Poster">special://skin/extras/icons/no.png</property>
+			<onclick>SetFocus(525)</onclick>
+			<label>$LOCALIZE[13012]</label>
+			<onclick>XBMC.Quit()</onclick>
+			<visible>System.ShowExitButton</visible>
+			<visible>Container(525).HasFocus(10)</visible>
+		</item>
+		<item id="4">
+			<property name="Poster">special://skin/extras/icons/downloads2.png</property>
+			<onclick>SetFocus(525)</onclick>
+			<description>Restart PC button</description>
+			<label>$LOCALIZE[13013]</label>
+			<onclick>XBMC.Reset()</onclick>
+			<visible>System.CanReboot</visible>
+			<visible>Container(525).HasFocus(10)</visible>
+		</item>
+		<item id="5">
+			<description>Suspend</description>
+			<property name="Poster">special://skin/extras/icons/boxdown.png</property>
+			<onclick>SetFocus(525)</onclick>
+			<label>$LOCALIZE[13011]</label>
+			<onclick>XBMC.Suspend()</onclick>
+			<visible>System.CanSuspend</visible>
+			<visible>Container(525).HasFocus(10)</visible>
+		</item>
+		<item id="6">
+			<description>Power</description>
+			<property name="Poster">special://skin/extras/icons/downloads.png</property>
+			<onclick>SetFocus(525)</onclick>
+			<label>$LOCALIZE[13005]</label>
+			<onclick condition="System.CanPowerDown">XBMC.Powerdown()</onclick>
+			<onclick condition="!System.CanPowerDown">XBMC.Shutdown()</onclick>
+			<visible>System.CanPowerDown | System.CanHibernate</visible>
+			<visible>Container(525).HasFocus(10)</visible>
+		</item>
+		<item id="7">
+			<description>Update Library</description>
+			<property name="Poster">special://skin/extras/icons/arrows.png</property>
+			<label>$LOCALIZE[24069]</label>
+			<onclick>SetFocus(525)</onclick>
+			<onclick condition="!Library.IsScanningVideo">UpdateLibrary(video)</onclick>
+			<visible>Container(525).HasFocus(10)</visible>
+		</item>
+		<item id="12">
+			<description>Configure Home Screen</description>
+			<property name="Poster">special://skin/extras/icons/config.png</property>
+			<label>$LOCALIZE[24020]</label>
+			<onclick>SetFocus(525)</onclick>
+			<onclick>ActivateWindow(3063)</onclick>
+			<visible>Container(525).HasFocus(10)</visible>
+		</item>
 	</include>
 	
 	<include name="Mod_84Content">
@@ -6352,31 +6441,6 @@
 	
 	
 	<include name="Mod_525GroupList">
-	    <control type="image">
-			<width>30</width>
-			<height>30</height>
-			<texture>windows/home/shutdown.png</texture>
-			<animation effect="fade" start="100" end="30" time="250" condition="[!Control.HasFocus(525) + !Control.HasFocus(83)] | Control.HasFocus(84) | !Container(525).HasFocus(12)">Conditional</animation>
-			<visible>!Skin.HasSetting(disable.homepowermenu)</visible>
-		</control>
-		<control type="image">
-			<width>30</width>
-			<height>30</height>
-			<texture>osd/fullscreen/cd.png</texture>
-			<animation effect="fade" start="100" end="30" time="250" condition="[!Control.HasFocus(525) + !Control.HasFocus(83)] | !Container(525).HasFocus(11)">Conditional</animation>
-			<visible>System.HasMediaDVD</visible>
-		</control>
-		<control type="image">
-			<width>30</width>
-			<height>30</height>
-			<texture>windows/home/favourites.png</texture>
-			<animation effect="fade" start="100" end="30" time="250" condition="[!Control.HasFocus(525) + !Control.HasFocus(83)] | Control.HasFocus(85) | Control.HasFocus(84) | !Container(525).HasFocus(10)">Conditional</animation>
-			<visible>!Skin.HasSetting(disable.favourites)</visible>
-		</control>
-		<control type="image">
-			<width>30</width>
-			<visible>!Skin.HasSetting(disable.pvr) + System.GetBool(pvrmanager.enabled)</visible>
-		</control>
 		<control type="image">
 			<width>19</width>
 			<height>28</height>
@@ -6384,13 +6448,14 @@
 			<include>visiblehidefadeinfo</include>
 			<colordiffuse>white</colordiffuse>
 			<animation effect="fade" start="100" end="0" time="250" condition="[!Control.HasFocus(525) + !Control.HasFocus(83)] | !Container(525).HasFocus(4) | Control.HasFocus(83)  | Control.HasFocus(84) | Control.HasFocus(85)">Conditional</animation>
-			<visible>!Skin.HasSetting(disable.pvr) + System.GetBool(pvrmanager.enabled) + [!Skin.HasSetting(HomeClicksSubmenu) | StringCompare(Skin.String(homescreen.style),panel)] + !Skin.HasSetting(HideSubmenuArrows)</visible>
+			<animation effect="rotate" start="0" end="180" time="0" center="9,15" condition="StringCompare(Skin.String(homescreen.style),simple)">Conditional</animation>
+			<visible>!Skin.HasSetting(disable.pvr) + System.GetBool(pvrmanager.enabled) + !Skin.HasSetting(HideSubmenuArrows)</visible>
 		</control>
 		<control type="image">
 			<width>19</width>
 			<height>28</height>
 			<texture>-</texture>
-			<visible>!Skin.HasSetting(disable.pvr) + System.GetBool(pvrmanager.enabled) + [[Skin.HasSetting(HomeClicksSubmenu) + StringCompare(Skin.String(homescreen.style),simple)] | Skin.HasSetting(HideSubmenuArrows)]</visible>
+			<visible>!Skin.HasSetting(disable.pvr) + System.GetBool(pvrmanager.enabled) + Skin.HasSetting(HideSubmenuArrows)</visible>
 		</control>
 		<control type="label">
 			<label>41220</label>
@@ -6409,6 +6474,7 @@
 			<include>visiblehidefadeinfo</include>
 			<colordiffuse>white</colordiffuse>
 			<animation effect="fade" start="100" end="0" time="250" condition="[!Control.HasFocus(525) + !Control.HasFocus(83)] | !Container(525).HasFocus(1) | Control.HasFocus(84) | Control.HasFocus(85)">Conditional</animation>
+			<animation effect="rotate" start="0" end="180" time="0" center="9,15" condition="StringCompare(Skin.String(homescreen.style),simple)">Conditional</animation>
 			<visible>!Skin.HasSetting(disable.movies) + !Skin.HasSetting(HideSubmenuArrows)</visible>
 		</control>
 		<control type="image">
@@ -6431,6 +6497,7 @@
 			<width>19</width>
 			<height>28</height>
 			<texture>windows/home/submenu-arrow.png</texture>
+			<animation effect="rotate" start="0" end="180" time="0" center="9,15" condition="StringCompare(Skin.String(homescreen.style),simple)">Conditional</animation>
 			<include>visiblehidefadeinfo</include>
 			<colordiffuse>white</colordiffuse>
 			<animation effect="fade" start="100" end="0" time="250" condition="[!Control.HasFocus(525) + !Control.HasFocus(83)] | !Container(525).HasFocus(2) | Control.HasFocus(84) | Control.HasFocus(85)">Conditional</animation>
@@ -6457,6 +6524,7 @@
 			<width>19</width>
 			<height>28</height>
 			<texture>windows/home/submenu-arrow.png</texture>
+			<animation effect="rotate" start="0" end="180" time="0" center="9,15" condition="StringCompare(Skin.String(homescreen.style),simple)">Conditional</animation>
 			<include>visiblehidefadeinfo</include>
 			<colordiffuse>white</colordiffuse>
 			<animation effect="fade" start="100" end="0" time="250" condition="[!Control.HasFocus(525) + !Control.HasFocus(83)] | !Container(525).HasFocus(3) | Control.HasFocus(84) | Control.HasFocus(85)">Conditional</animation>
@@ -6482,16 +6550,17 @@
 			<width>19</width>
 			<height>28</height>
 			<texture>windows/home/submenu-arrow.png</texture>
+			<animation effect="rotate" start="0" end="180" time="0" center="9,15" condition="StringCompare(Skin.String(homescreen.style),simple)">Conditional</animation>
 			<include>visiblehidefadeinfo</include>
 			<colordiffuse>white</colordiffuse>
 			<animation effect="fade" start="100" end="0" time="250" condition="[!Control.HasFocus(525) + !Control.HasFocus(83)] | !Container(525).HasFocus(5) | Control.HasFocus(83)  | Control.HasFocus(84) | Control.HasFocus(85)">Conditional</animation>
-			<visible>!Skin.HasSetting(disable.pictures) + [!Skin.HasSetting(HomeClicksSubmenu) | StringCompare(Skin.String(homescreen.style),panel)] + !Skin.HasSetting(HideSubmenuArrows)</visible>
+			<visible>!Skin.HasSetting(disable.pictures) + !Skin.HasSetting(HideSubmenuArrows)</visible>
 		</control>
 		<control type="image">
 			<width>19</width>
 			<height>28</height>
 			<texture>-</texture>
-			<visible>!Skin.HasSetting(disable.pictures) + [[Skin.HasSetting(HomeClicksSubmenu) + StringCompare(Skin.String(homescreen.style),simple)] | Skin.HasSetting(HideSubmenuArrows)]</visible>
+			<visible>!Skin.HasSetting(disable.pictures) + Skin.HasSetting(HideSubmenuArrows)</visible>
 		</control>
 		<control type="label">
 			<label fallback="20190">$INFO[Skin.String(Home.Pictures.Tile.0.Label)]</label>
@@ -6507,16 +6576,17 @@
 			<width>19</width>
 			<height>28</height>
 			<texture>windows/home/submenu-arrow.png</texture>
+			<animation effect="rotate" start="0" end="180" time="0" center="9,15" condition="StringCompare(Skin.String(homescreen.style),simple)">Conditional</animation>
 			<include>visiblehidefadeinfo</include>
 			<colordiffuse>white</colordiffuse>
 			<animation effect="fade" start="100" end="0" time="250" condition="[!Control.HasFocus(525) + !Control.HasFocus(83)] | !Container(525).HasFocus(7) | Control.HasFocus(83)  | Control.HasFocus(84) | Control.HasFocus(85)">Conditional</animation>
-			<visible>!Skin.HasSetting(disable.programs) + [!Skin.HasSetting(HomeClicksSubmenu) | StringCompare(Skin.String(homescreen.style),panel)] + !Skin.HasSetting(HideSubmenuArrows)</visible>
+			<visible>!Skin.HasSetting(disable.programs) + !Skin.HasSetting(HideSubmenuArrows)</visible>
 		</control>
 		<control type="image">
 			<width>19</width>
 			<height>28</height>
 			<texture>-</texture>
-			<visible>!Skin.HasSetting(disable.programs) + [[Skin.HasSetting(HomeClicksSubmenu) + StringCompare(Skin.String(homescreen.style),simple)] | Skin.HasSetting(HideSubmenuArrows)]</visible>
+			<visible>!Skin.HasSetting(disable.programs) + Skin.HasSetting(HideSubmenuArrows)</visible>
 		</control>
 		<control type="label">
 			<label fallback="20190">$INFO[Skin.String(Home.Programs.Tile.0.Label)]</label>
@@ -6532,15 +6602,16 @@
 			<width>19</width>
 			<height>28</height>
 			<texture>windows/home/submenu-arrow.png</texture>
+			<animation effect="rotate" start="0" end="180" time="0" center="9,15" condition="StringCompare(Skin.String(homescreen.style),simple)">Conditional</animation>
 			<include>visiblehidefadeinfo</include>
 			<colordiffuse>white</colordiffuse>
 			<animation effect="fade" start="100" end="0" time="250" condition="[!Control.HasFocus(525) + !Control.HasFocus(83)] | !Container(525).HasFocus(8) | Control.HasFocus(83)  | Control.HasFocus(84) | Control.HasFocus(85)">Conditional</animation>
-			<visible>!Skin.HasSetting(disable.weather) + !Skin.HasSetting(HomeClicksSubmenu) + StringCompare(Skin.String(homescreen.style),simple) + !Skin.HasSetting(HideSubmenuArrows)</visible>
+			<visible>!Skin.HasSetting(disable.weather) + !Skin.HasSetting(HideSubmenuArrows)</visible>
 		</control>
 		<control type="image">
 			<width>19</width>
 			<height>28</height>
-			<visible>!Skin.HasSetting(disable.weather) + [Skin.HasSetting(HomeClicksSubmenu) | StringCompare(Skin.String(homescreen.style),panel) | Skin.HasSetting(HideSubmenuArrows)]</visible>
+			<visible>!Skin.HasSetting(disable.weather) + Skin.HasSetting(HideSubmenuArrows)</visible>
 		</control>
 		<control type="label">
 			<label fallback="20190">$INFO[Skin.String(Home.Weather.Tile.0.Label)]</label>
@@ -6554,25 +6625,32 @@
 		<control type="image">
 			<width>30</width>
 			<height>30</height>
+			<texture>osd/fullscreen/cd.png</texture>
+			<animation effect="fade" start="100" end="30" time="250" condition="[!Control.HasFocus(525) + !Control.HasFocus(83)] | !Container(525).HasFocus(11)">Conditional</animation>
+			<visible>System.HasMediaDVD</visible>
+		</control>
+		<control type="image">
+			<width>30</width>
+			<height>30</height>
 			<texture>windows/home/settings.png</texture>
 			<animation effect="fade" start="100" end="30" time="250" condition="[!Control.HasFocus(525) + !Control.HasFocus(83)] | Control.HasFocus(84) | !Container(525).HasFocus(9)">Conditional</animation>
 		</control>
+		<control type="image">
+			<width>30</width>
+			<height>30</height>
+			<texture>windows/home/favourites.png</texture>
+			<animation effect="fade" start="100" end="30" time="250" condition="[!Control.HasFocus(525) + !Control.HasFocus(83)] | Control.HasFocus(85) | Control.HasFocus(84) | !Container(525).HasFocus(10)">Conditional</animation>
+			<visible>!Skin.HasSetting(disable.favourites) + Skin.HasSetting(disable.homepowermenu)</visible>
+		</control>
+		<control type="image">
+			<width>30</width>
+			<height>30</height>
+			<texture>windows/home/shutdown.png</texture>
+			<animation effect="fade" start="100" end="30" time="250" condition="[!Control.HasFocus(525) + !Control.HasFocus(83)] | Control.HasFocus(85) | Control.HasFocus(84) | !Container(525).HasFocus(10)">Conditional</animation>
+			<visible>!Skin.HasSetting(disable.favourites) + !Skin.HasSetting(disable.homepowermenu)</visible>
+		</control>
 	</include>
 	<include name="Mod_525Content">
-	    <item id="4">
-			<label>41220</label>
-			<visible>!Skin.HasSetting(disable.pvr) + System.GetBool(pvrmanager.enabled) + StringCompare(Skin.String(homescreen.style),combo)</visible>
-			<property name="single">$INFO[Skin.String(HomeLiveTVSingleImage)]</property>
-			<property name="multi">$INFO[Skin.String(HomeLiveTVMultiImage)]</property>
-			<property name="widget">$INFO[Skin.String(pvr.widget.type)]</property>
-			<onclick condition="!Skin.HasSetting(HomeClicksSubmenu)">ActivateWindow(PVR)</onclick>
-			<onclick condition="!Skin.HasSetting(HomeClicksSubmenu) + !Skin.HasSetting(pvr.epgdefault)">SetFocus(32)</onclick>
-			<onclick condition="!Skin.HasSetting(HomeClicksSubmenu) + !Skin.HasSetting(pvr.epgdefault)">SetFocus(11)</onclick>
-			<onclick condition="!Skin.HasSetting(HomeClicksSubmenu) + Skin.HasSetting(pvr.epgdefault)">SetFocus(31)</onclick>
-			<onclick condition="!Skin.HasSetting(HomeClicksSubmenu) + Skin.HasSetting(pvr.epgdefault)">SetFocus(10)</onclick>
-			<onclick condition="Skin.HasSetting(HomeClicksSubmenu)">SetFocus(83,0)</onclick>
-			<icon>special://skin/extras/icons/tvguide.png</icon>
-		</item>
 		<item id="1">
 			<label>$INFO[Skin.String(Home.Movies.Tile.0.Label)]</label>
 			<visible>!Skin.HasSetting(disable.movies)</visible>
@@ -6651,22 +6729,6 @@
 			<onclick condition="Skin.HasSetting(HomeClicksSubmenu)">SetFocus(83,0)</onclick>
 			<icon>$INFO[Skin.String(Home.Weather.Tile.0.Icon)]</icon>
 		</item>
-		<item id="9">
-			<label>5</label>
-			<visible>true</visible>
-			<property name="single">$INFO[Skin.String(HomeSettingsSingleImage)]</property>
-			<property name="multi">$INFO[Skin.String(HomeSettingsMultiImage)]</property>
-			<property name="widget">$INFO[Skin.String(settings.widget.type)]</property>
-			<onclick>SetFocus(83,0)</onclick>
-			<icon>special://skin/extras/icons/settings.png</icon>
-		</item>
-		<item id="12">
-			<label>5</label>
-			<property name="single">$INFO[Skin.String(HomeHomeSingleImage)]</property>
-			<property name="multi">$INFO[Skin.String(HomeHomeMultiImage)]</property>
-			<onclick>SetFocus(84,0)</onclick>
-			<visible>!Skin.HasSetting(disable.homepowermenu)</visible>
-		</item>
 		<item id="11">
 			<label>341</label>
 			<property name="single">$INFO[Skin.String(HomeHomeSingleImage)]</property>
@@ -6676,6 +6738,15 @@
 			<visible>System.HasMediaDVD</visible>
 			<icon>special://skin/extras/icons/dvd.png</icon>
 		</item>
+		<item id="9">
+			<label>5</label>
+			<visible>true</visible>
+			<property name="single">$INFO[Skin.String(HomeSettingsSingleImage)]</property>
+			<property name="multi">$INFO[Skin.String(HomeSettingsMultiImage)]</property>
+			<property name="widget">$INFO[Skin.String(settings.widget.type)]</property>
+			<onclick>SetFocus(83,0)</onclick>
+			<icon>special://skin/extras/icons/settings.png</icon>
+		</item>
 		<item id="10">
 			<label>1036</label>
 			<property name="single">$INFO[Skin.String(HomeHomeSingleImage)]</property>
@@ -6683,7 +6754,16 @@
 			<property name="widget">$INFO[Skin.String(favourites.widget.type)]</property>
 			<onclick>SetFocus(525)</onclick>
 			<onclick>ActivateWindow(Favourites)</onclick>
-			<visible>!Skin.HasSetting(disable.favourites)</visible>
+			<visible>!Skin.HasSetting(disable.favourites) + Skin.HasSetting(disable.homepowermenu)</visible>
+			<icon>special://skin/extras/icons/favourites.png</icon>
+		</item>
+		<item id="10">
+			<label>Shutdown</label>
+			<property name="single">$INFO[Skin.String(HomeHomeSingleImage)]</property>
+			<property name="multi">$INFO[Skin.String(HomeHomeMultiImage)]</property>
+			<property name="widget">$INFO[Skin.String(favourites.widget.type)]</property>
+			<onclick>SetFocus(83,0)</onclick>
+			<visible>!Skin.HasSetting(disable.favourites) + !Skin.HasSetting(disable.homepowermenu)</visible>
 			<icon>special://skin/extras/icons/favourites.png</icon>
 		</item>
 		<item id="4">

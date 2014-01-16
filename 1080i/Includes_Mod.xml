@@ -121,6 +121,50 @@
             </animation>
             <include>HomeProfileInfo-Content</include>
         </control>
+        <control type="group">
+            <visible>StringCompare(Skin.String(homescreen.style),simple)</visible>
+            <visible>Skin.HasSetting(HideHomeProfileInfo)</visible>
+            <posx>75</posx>
+            <posy>918</posy>
+            <animation effect="slide" start="0" end="0,500" time="250" condition="StringCompare(Skin.String(homescreen.style),simple)">WindowClose</animation>
+			<animation effect="slide" start="0" end="0,500" time="250" condition="StringCompare(Skin.String(homescreen.style),simple)">Hidden</animation>
+			<animation type="WindowOpen" reversible="false" condition="StringCompare(Skin.String(homescreen.style),simple)">
+                <effect type="fade" start="0" end="100" time="300" tween="sine" easing="inout" />
+                <effect type="slide" start="0,500" end="0" time="250" />
+            </animation>
+            <animation type="Visible" reversible="false" condition="StringCompare(Skin.String(homescreen.style),simple)">
+                <effect type="fade" start="0" end="100" time="300" tween="sine" easing="inout" />
+                <effect type="slide" start="0,500" end="0" time="250" />
+            </animation>
+            <animation type="WindowClose" condition="StringCompare(Skin.String(homescreen.style),simple) + [Window.Next(fullscreenvideo) | Window.Next(visualisation) | Window.Next(slideshow)]" reversible="false">
+                <effect type="fade" start="100" end="0" time="300" tween="sine" easing="inout" />
+            </animation>
+            <control type="group">
+                <control type="image">
+                    <posx>5</posx>
+                    <posy>26</posy>
+                    <width>100</width>
+                    <height>100</height>
+                    <texture>weather/small/$INFO[Weather.FanartCode].png</texture>
+                    <colordiffuse>mod-infotags-d</colordiffuse>
+                </control>
+                <control type="label">
+                    <posx>110</posx>
+                    <posy>32</posy>
+                    <width>600</width>
+                    <height>60</height>
+                    <font>Font-Alaska-S36-BL</font>
+                    <textcolor>mod-infotags-d</textcolor>
+                    <scroll>false</scroll>
+                    <align>left</align>
+                    <label>$INFO[Window(Weather).Property(Location)]</label>
+                </control>
+                <control type="label">
+                    <include>HomeProfileInfoLabel</include>
+                    <label>$INFO[Window(Weather).Property(Current.Condition)]$INFO[Window(Weather).Property(Current.Temperature), ,]$INFO[System.TemperatureUnits]</label>
+                </control>
+            </control>
+        </control>
     </include>
     
 	<include name="mod-favourites">
@@ -1157,14 +1201,6 @@
 	</include>
 	<include name="Mod_83Items_NoInvert">
     	<control type="group">
-			<!--<control type="image">
-				<posx>10</posx>
-				<posy>10</posy>
-				<width>169</width>
-				<height>169</height>
-				<texture border="5">views/newgloss/whitepanel.png</texture>
-				<colordiffuse>mod-infotags-alt</colordiffuse>
-			</control>-->
 			<control type="image">
 				<posx>10</posx>
 				<posy>10</posy>
@@ -6630,10 +6666,18 @@
 			<visible>System.HasMediaDVD</visible>
 		</control>
 		<control type="image">
+			<width>12</width>
+			<visible>System.HasMediaDVD</visible>
+		</control>
+		<control type="image">
 			<width>30</width>
 			<height>30</height>
 			<texture>windows/home/settings.png</texture>
 			<animation effect="fade" start="100" end="30" time="250" condition="[!Control.HasFocus(525) + !Control.HasFocus(83)] | Control.HasFocus(84) | !Container(525).HasFocus(9)">Conditional</animation>
+		</control>
+		<control type="image">
+			<width>12</width>
+			<visible>!Skin.HasSetting(disable.favourites)</visible>
 		</control>
 		<control type="image">
 			<width>30</width>

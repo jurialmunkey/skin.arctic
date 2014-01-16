@@ -1,7 +1,7 @@
 <includes>
 	<include name="Mod_SimpleWidgetVisibility-Off">
 		<animation effect="fade" start="0" end="100" time="450" easing="inout" tween="cubic" reversible="false" condition="Control.HasFocus(82) | Control.HasFocus(90) | Control.HasFocus(88) | Control.HasFocus(89)">Conditional</animation>
-		<animation effect="slide" start="0,500" end="0" time="450" easing="inout" tween="cubic" reversible="false" condition="Control.HasFocus(82) | Control.HasFocus(90) | Control.HasFocus(88) | Control.HasFocus(89)">Conditional</animation>
+		<animation effect="slide" start="0,500" end="0" time="650" easing="out" tween="back" reversible="false" condition="Control.HasFocus(82) | Control.HasFocus(90) | Control.HasFocus(88) | Control.HasFocus(89)">Conditional</animation>
 		<animation effect="slide" end="0,500" start="0" delay="450" time="450" easing="inout" tween="cubic" reversible="false" condition="![Control.HasFocus(82) | Control.HasFocus(90) | Control.HasFocus(88) | Control.HasFocus(89)]">Conditional</animation>
 		<animation effect="fade" start="100" end="0" delay="450" time="450" easing="inout" tween="cubic" reversible="false" condition="![Control.HasFocus(82) | Control.HasFocus(90) | Control.HasFocus(88) | Control.HasFocus(89)]">Conditional</animation>
 		<animation effect="slide" end="0,500" start="0" delay="0" time="450" easing="inout" tween="cubic" reversible="false" condition="![Control.HasFocus(82) | Control.HasFocus(90) | Control.HasFocus(88) | Control.HasFocus(89)] + ![substring(Container(525).ListItem.Property(widget),movie) | substring(Container(525).ListItem.Property(widget),tvshow) | substring(Container(525).ListItem.Property(widget),music) | substring(Container(525).ListItem.Property(widget),addon) | substring(Container(525).ListItem.Property(widget),rcb)]">Conditional</animation>
@@ -209,15 +209,11 @@
 					<include>Mod_525GroupList</include>
 				</control>
 				<control type="list" id="525">
-					<!--<onup condition="!Skin.HasSetting(HomeClicksSubmenu)">SetFocus(83,0)</onup>					
-					<onup condition="Skin.HasSetting(HomeClicksSubmenu) + !substring(Container(525).ListItem.Property(widget),mixed) + !IsEmpty(Container(525).ListItem.Property(widget))">SetFocus(82)</onup>
-					<onup condition="Skin.HasSetting(HomeClicksSubmenu) + substring(Container(525).ListItem.Property(widget),mixed)">SetFocus(89)</onup>
-					<ondown>85</ondown>-->
 					<onup condition="!substring(Container(525).ListItem.Property(widget),mixed) + !IsEmpty(Container(525).ListItem.Property(widget))">SetFocus(82)</onup>
 					<onup condition="substring(Container(525).ListItem.Property(widget),mixed)">SetFocus(89)</onup>
 					<ondown>SetFocus(83,0)</ondown>
-					<!--<ondown condition="!Container(525).HasFocus(10) | Skin.HasSetting(disable.homepowermenu)">SetFocus(83,0)</ondown>
-					<ondown condition="Container(525).HasFocus(10) + !Skin.HasSetting(disable.homepowermenu)">SetFocus(84,0)</ondown>-->
+					<!--<ondown condition="!Skin.HasSetting(HomeClicksSubmenu)">SetFocus(83,0)</ondown>
+					<ondown condition="Skin.HasSetting(HomeClicksSubmenu)">SetFocus(84,0)</ondown>-->
 					<onleft>525</onleft>
 					<onright>525</onright>
 					<scrolltime tween="cubic" easing="out">500</scrolltime>

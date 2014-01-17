@@ -7,6 +7,8 @@ Gotham Work Begins
 Added weather to Simple Home Screen when profile info is disabled
 Changed Navigation on Simple Home (Down for submenu Up for widgets always)
 
+Added Aspect and Channels Flags
+
 [B]0.6.3[/B]
 Made infostrip wider
 Infostrip big posters (show labels view option)

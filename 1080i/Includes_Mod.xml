@@ -7109,6 +7109,7 @@
 				<width>92</width>
 				<height>48</height>
 				<aspectratio align="center" aligny="center">keep</aspectratio>
+				<texture fallback="special://skin/extras/studioflags/default-studio.png">$INFO[ListItem.VideoAspect,special://skin/extras/aspectratio/,.png]</texture>
 				<texture fallback="special://skin/extras/studioflags/default-studio.png">$VAR[AeonFlagVideoCodec]</texture>
 				<colordiffuse>Mod_Tags</colordiffuse>
 				<visible>[Container.Content(episodes) | Container.Content(movies)] + ![substring(ListItem.Path,videodb://1/7,left) | substring(ListItem.Path,videodb://movies/sets,left)]</visible>
@@ -7128,6 +7129,7 @@
 				<width>92</width>
 				<height>48</height>
 				<aspectratio align="center" aligny="center">keep</aspectratio>
+				<texture fallback="special://skin/extras/studioflags/default-studio.png">$INFO[ListItem.AudioChannels,special://skin/extras/audiochannels/,.png]</texture>
 				<texture fallback="special://skin/extras/studioflags/default-studio.png">$VAR[AeonFlagAudioCodec]</texture>
 				<colordiffuse>Mod_Tags</colordiffuse>
 				<visible>[Container.Content(episodes) | Container.Content(movies)] + ![substring(ListItem.Path,videodb://1/7,left) | substring(ListItem.Path,videodb://movies/sets,left)]</visible>

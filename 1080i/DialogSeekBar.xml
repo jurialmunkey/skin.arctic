@@ -404,7 +404,6 @@
 					<posy>770</posy>
 					<control type="group">
 						<control type="group">
-						    <visible>!Control.IsVisible(24)</visible>
 							<visible>!IsEmpty(Window(seekbar).Property(ExtendPlot)) | stringcompare(Skin.String(video.seekbar.type),small) | [!Player.ShowInfo + !Window.IsActive(fullscreeninfo) + ![!Window.IsVisible(videoosd) + Skin.HasSetting(video.seekbar.showinfo) + [Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding]]]</visible>
 							<animation type="Visible" reversible="false">
 								<effect type="fade" start="0" end="100" time="250" tween="sine" easing="inout" />
@@ -434,7 +433,7 @@
 								<shadowcolor>18eeeeee</shadowcolor>
 								<scroll>false</scroll>
 								<align>center</align>
-								<visible>Player.Paused</visible>
+								<visible>Player.Paused + !Player.Caching</visible>
 							</control>	
 							<control type="label">
 								<posx>200</posx>
@@ -448,27 +447,18 @@
 								<align>center</align>
 								<visible>Player.Seeking | Player.Forwarding | Player.Rewinding</visible>
 							</control>
-						</control>
-						<control type="group">
-						    <visible>Control.IsVisible(24)</visible>
-							<visible>!IsEmpty(Window(seekbar).Property(ExtendPlot)) | stringcompare(Skin.String(video.seekbar.type),small) | [!Player.ShowInfo + !Window.IsActive(fullscreeninfo) + ![!Window.IsVisible(videoosd) + Skin.HasSetting(video.seekbar.showinfo) + [Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding]]]</visible>
-							<animation type="Visible" reversible="false">
-								<effect type="fade" start="0" end="100" time="250" tween="sine" easing="inout" />
-							</animation>
-							<animation type="Hidden" reversible="false">
-								<effect type="fade" end="0" start="100" time="250" tween="sine" easing="inout" />
-							</animation>
 							<control type="label">
 								<posx>200</posx>
 								<posy>249</posy>
 								<width>225</width>
-								<label>$INFO[Control.GetLabel(24)]</label>
+								<label>$LOCALIZE[15107] $INFO[Player.CacheLevel]%</label>
 								<font>Font-Alaska-S28-L</font>
 								<textcolor>$VAR[osd.text.dark]</textcolor>
 								<shadowcolor>18eeeeee</shadowcolor>
 								<scroll>false</scroll>
 								<align>center</align>
-							</control>	
+								<visible>Player.Caching</visible>
+							</control>
 						</control>
 						<control type="image">
 							<posx>398</posx>

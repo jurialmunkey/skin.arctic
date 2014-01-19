@@ -6860,25 +6860,17 @@
     </variable>
     
     <variable name="AeonFlagVideoCodec">
+        <value condition="!IsEmpty(ListItem.VideoAspect) + !Skin.HasSetting(infotags.showvideocodec)">$INFO[ListItem.VideoAspect,special://skin/extras/aspectratio/,.png]</value>
         <value condition="!IsEmpty(ListItem.VideoCodec) + [Container.Content(episodes) | Container.Content(movies)]">$INFO[ListItem.VideoCodec,special://skin/extras/videoflags/,.png]</value>
         <value>special://skin/extras/videoflags/default.png</value>
     </variable>
     
     <variable name="AeonFlagAudioCodec">
+        <value condition="!IsEmpty(ListItem.AudioChannels) + !Skin.HasSetting(infotags.showaudiocodec)">$INFO[ListItem.AudioChannels,special://skin/extras/audiochannels/,.png]</value>
     	<value condition="!IsEmpty(ListItem.Property(Album_Label)) + Container.Content(albums)">$INFO[ListItem.Property(Album_Label),special://skin/extras/recordlabel/,.png]</value>
         <value condition="!IsEmpty(ListItem.AudioCodec) + [Container.Content(episodes) | Container.Content(movies)]">$INFO[ListItem.AudioCodec,special://skin/extras/audioflags/,.png]</value>
         <value condition="!IsEmpty(ListItem.FileExtension) + [Container.Content(songs)]">$INFO[ListItem.FileExtension,special://skin/extras/audioflags/,.png]</value>
         <value>special://skin/extras/audioflags/defaultscreen.png</value>
-    </variable>
-    
-    <variable name="AeonFlagAudioChannels">
-    	<value condition="StringCompare(ListItem.AudioChannels,1)">1.0</value>
-    	<value condition="StringCompare(ListItem.AudioChannels,2)">2.0</value>
-    	<value condition="StringCompare(ListItem.AudioChannels,4)">4.0</value>
-    	<value condition="StringCompare(ListItem.AudioChannels,5)">4.1</value>
-    	<value condition="StringCompare(ListItem.AudioChannels,6)">5.1</value>
-    	<value condition="StringCompare(ListItem.AudioChannels,8)">7.1</value>
-    	<value>0.0</value>
     </variable>
     
     <variable name="AeonFlagStars">
@@ -7109,7 +7101,6 @@
 				<width>92</width>
 				<height>48</height>
 				<aspectratio align="center" aligny="center">keep</aspectratio>
-				<texture fallback="special://skin/extras/studioflags/default-studio.png">$INFO[ListItem.VideoAspect,special://skin/extras/aspectratio/,.png]</texture>
 				<texture fallback="special://skin/extras/studioflags/default-studio.png">$VAR[AeonFlagVideoCodec]</texture>
 				<colordiffuse>Mod_Tags</colordiffuse>
 				<visible>[Container.Content(episodes) | Container.Content(movies)] + ![substring(ListItem.Path,videodb://1/7,left) | substring(ListItem.Path,videodb://movies/sets,left)]</visible>
@@ -7129,7 +7120,6 @@
 				<width>92</width>
 				<height>48</height>
 				<aspectratio align="center" aligny="center">keep</aspectratio>
-				<texture fallback="special://skin/extras/studioflags/default-studio.png">$INFO[ListItem.AudioChannels,special://skin/extras/audiochannels/,.png]</texture>
 				<texture fallback="special://skin/extras/studioflags/default-studio.png">$VAR[AeonFlagAudioCodec]</texture>
 				<colordiffuse>Mod_Tags</colordiffuse>
 				<visible>[Container.Content(episodes) | Container.Content(movies)] + ![substring(ListItem.Path,videodb://1/7,left) | substring(ListItem.Path,videodb://movies/sets,left)]</visible>

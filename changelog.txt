@@ -1,3 +1,8 @@
+[B]0.6.5[/B]
+Option to change infotags back to audio/video codec (Skin Settings > Infomation)
+Tidy up of skin settings
+Added buffering label to seekbar
+
 [B]0.6.4[/B]
 Gotham Work Begins
  - Added Settings Level Change (press left from settings category)

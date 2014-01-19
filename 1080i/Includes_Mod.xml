@@ -6993,13 +6993,13 @@
 			<control type="label">
 				<font>Font-Alaska-S25-BL</font>
 				<textcolor>Mod_Tags</textcolor>
-				<posx>-100</posx>
+				<posx>-90</posx>
 				<posy>60</posy>
-				<width>92</width>
+				<width>82</width>
 				<height>48</height>
-				<align>center</align>
+				<align>left</align>
 				<aligny>center</aligny>
-				<label fallback="0.0">$INFO[ListItem.Rating]</label>
+				<label fallback="● 0.0">$INFO[ListItem.Rating,● ,]</label>
 				<scroll>false</scroll>
 				<visible>Skin.HasSetting(infotags.numericrating)</visible>
 				<animation effect="slide" end="4" condition="Container.Content(artists) | Container.Content(albums) | Container.Content(songs)">Conditional</animation>

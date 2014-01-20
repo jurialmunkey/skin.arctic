@@ -2,6 +2,9 @@
 Option to change infotags back to audio/video codec (Skin Settings > Infomation)
 Tidy up of skin settings
 Added buffering label to seekbar
+Auto-show widgets now keeps widgets up persistently on simple home
+Removed fade from panel home widget change
+Fixed widgets not hiding on panel home when favourites visible
 
 [B]0.6.4[/B]
 Gotham Work Begins

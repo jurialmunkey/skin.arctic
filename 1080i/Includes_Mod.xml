@@ -4682,9 +4682,7 @@
 	</include>
 	<include name="Mod_WidgetWeather">
 		<posx>35</posx>
-		<animation effect="fade" start="0" end="100" time="250">Visible</animation>
-		<animation effect="fade" start="100" end="0" time="450" condition="Window.IsActive(favourites)">Conditional</animation>
-		<animation effect="fade" start="0" end="100" delay="150" time="450" condition="!Window.IsActive(favourites)">Conditional</animation>
+		
 		<control type="group">
 			<posy>84</posy>
 			<posx>572</posx>
@@ -5202,9 +5200,6 @@
 	</include>
 	<include name="Mod_WidgetSlideshow">
 		<posx>35</posx>
-		<animation effect="fade" start="0" end="100" time="350">Visible</animation>
-		<animation effect="fade" start="100" end="0" time="450" condition="Window.IsActive(favourites)">Conditional</animation>
-		<animation effect="fade" start="0" end="100" delay="150" time="450" condition="!Window.IsActive(favourites)">Conditional</animation>
 		<control type="group">
 			<control type="image">
 				<posx>10</posx>
@@ -5312,9 +5307,6 @@
 	</include>
 	<include name="Mod_WidgetSysInfo">
 		<posx>35</posx>
-		<animation effect="fade" start="0" end="100" time="350">Visible</animation>
-		<animation effect="fade" start="100" end="0" time="450" condition="Window.IsActive(favourites)">Conditional</animation>
-		<animation effect="fade" start="0" end="100" delay="150" time="450" condition="!Window.IsActive(favourites)">Conditional</animation>
 		<control type="group">
 			<visible>!IsEmpty(Skin.String(pictures.slideshowpath))</visible>
 			<control type="image">

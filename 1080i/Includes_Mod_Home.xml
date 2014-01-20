@@ -311,11 +311,9 @@
 					<!-- WIDGETS -->
 					<control type="group">
 						<posy>12</posy>
-						<visible>!Container(525).OnNext + !Container(525).OnPrevious + !IsEmpty(Window(Home).Property(SkinWidgets_Running))</visible>
-						<animation type="Visible" reversible="false">
-							<effect type="slide" time="100" start="0" end="0"/>
-							<effect type="fade" delay="100" time="150" start="0" end="100"/>
-						</animation>
+						
+						<animation effect="fade" start="100" end="0" time="350" condition="Window.IsActive(favourites)">Conditional</animation>
+                        <animation effect="fade" start="0" end="100" delay="150" time="350" condition="!Window.IsActive(favourites)">Conditional</animation>
 						<control type="label">
 							<posx>50</posx>
 							<posy>296</posy>

@@ -18,14 +18,6 @@
             <effect type="fade" start="0" end="100" delay="600"  time="450" easing="out" tween="cubic"/>
             <effect type="slide" start="0,500" end="0" delay="600" time="650" easing="out" tween="back"/>
         </animation>
-        <!--<animation type="Conditional" reversible="false" condition="!Container(525).OnNext">
-            <effect type="slide" start="1920" end="0" delay="0" time="300" easing="inout" tween="cubic" center="auto"/>
-            <effect type="zoom" start="80" end="100" delay="200" time="200" easing="inout" tween="cubic" center="auto"/>
-        </animation>
-        <animation type="Conditional" reversible="false" condition="!Container(525).OnPrevious">
-            <effect type="slide" start="-1920" end="0" delay="0" time="300" easing="inout" tween="cubic" center="auto"/>
-            <effect type="zoom" start="80" end="100" delay="200" time="200" easing="inout" tween="cubic" center="auto"/>
-        </animation>-->
         <animation type="Hidden" reversible="false" condition="Control.HasFocus(83) | Control.HasFocus(84)">
             <effect type="fade" end="0" start="100" delay="0"  time="250" />
             <effect type="slide" end="0,230" start="0" delay="0" time="250"/>
@@ -425,17 +417,7 @@
                 <height>286</height>
                 <texture border="35">views/newgloss/whitepanel-15.png</texture>
             </control>
-            <control type="button" id="85">
-                <width>1</width>
-                <height>1</height>
-                <visible allowhiddenfocus="true">false</visible>
-                <onclick>SetFocus(84)</onclick>
-                <onfocus>SetFocus(84)</onfocus>
-                <onup>525</onup>
-                <ondown>525</ondown>
-                <onleft>525</onleft>
-                <onright>525</onright>
-            </control>
+            
         </control>
     </include>
 </includes>

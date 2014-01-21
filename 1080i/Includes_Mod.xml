@@ -102,6 +102,38 @@
             <include condition="!StringCompare(Skin.String(homescreen.style),simple)">BannerListInfoAnimation</include>
             <include>HomeProfileInfo-Content</include>
         </control>
+        <!--<control type="group">
+            <visible>!Window.IsActive(favourites) + !Window.IsActive(script-globalsearch-main.xml) + !Window.IsActive(script-globalsearch-infodialog.xml) + !Window.IsActive(script-globalsearch-contextmenu.xml) + ![Window.IsVisible(virtualkeyboard) + !IsEmpty(Window.Property(HomeSearch))] + !StringCompare(Skin.String(homescreen.style),simple)</visible>
+            <visible>Skin.HasSetting(HideHomeProfileInfo)</visible>
+            <posx>75</posx>
+            <posy>24</posy>
+            <include condition="!StringCompare(Skin.String(homescreen.style),simple)">BannerListInfoAnimation</include>
+            <control type="group">
+                <control type="image">
+                    <posx>5</posx>
+                    <posy>26</posy>
+                    <width>100</width>
+                    <height>100</height>
+                    <texture>weather/small/$INFO[Weather.FanartCode].png</texture>
+                    <colordiffuse>$VAR[HomeProfileColorDark]</colordiffuse>
+                </control>
+                <control type="label">
+                    <posx>110</posx>
+                    <posy>32</posy>
+                    <width>600</width>
+                    <height>60</height>
+                    <font>Font-Alaska-S36-BL</font>
+                    <textcolor>$VAR[HomeProfileColorDark]</textcolor>
+                    <scroll>false</scroll>
+                    <align>left</align>
+                    <label>$INFO[Window(Weather).Property(Location)]</label>
+                </control>
+                <control type="label">                    
+                    <include>HomeProfileInfoLabel</include>
+                    <label>$INFO[Window(Weather).Property(Current.Condition)]$INFO[Window(Weather).Property(Current.Temperature), ,]$INFO[System.TemperatureUnits]</label>
+                </control>
+            </control>
+        </control>-->
         <control type="group">
             <visible>!Window.IsActive(script-globalsearch-main.xml) + !Window.IsActive(script-globalsearch-infodialog.xml) + !Window.IsActive(script-globalsearch-contextmenu.xml) + ![Window.IsVisible(virtualkeyboard) + !IsEmpty(Window.Property(HomeSearch))] + StringCompare(Skin.String(homescreen.style),simple)</visible>
             <posx>75</posx>
@@ -146,7 +178,7 @@
                     <width>100</width>
                     <height>100</height>
                     <texture>weather/small/$INFO[Weather.FanartCode].png</texture>
-                    <colordiffuse>mod-infotags-d</colordiffuse>
+                    <textcolor>$VAR[HomeProfileColorDark]</textcolor>
                 </control>
                 <control type="label">
                     <posx>110</posx>
@@ -154,12 +186,12 @@
                     <width>600</width>
                     <height>60</height>
                     <font>Font-Alaska-S36-BL</font>
-                    <textcolor>mod-infotags-d</textcolor>
+                    <textcolor>$VAR[HomeProfileColorDark]</textcolor>
                     <scroll>false</scroll>
                     <align>left</align>
                     <label>$INFO[Window(Weather).Property(Location)]</label>
                 </control>
-                <control type="label">
+                <control type="label">                    
                     <include>HomeProfileInfoLabel</include>
                     <label>$INFO[Window(Weather).Property(Current.Condition)]$INFO[Window(Weather).Property(Current.Temperature), ,]$INFO[System.TemperatureUnits]</label>
                 </control>
@@ -1194,13 +1226,17 @@
 
     
 	<include name="panel.slideup.anim">
-		<animation effect="slide" start="0" end="0,-70" time="350" tween="cubic" easing="inout" condition="Control.HasFocus(82) | Control.HasFocus(90) | Control.HasFocus(88) | Control.HasFocus(89) | Control.HasFocus(83) | Control.HasFocus(84)">Conditional</animation>
+	    <animation effect="slide" start="0" end="0,-220" time="350" tween="cubic" easing="inout" condition="Control.HasFocus(82) | Control.HasFocus(90) | Control.HasFocus(88) | Control.HasFocus(89) | Control.HasFocus(83) | Control.HasFocus(84)">Conditional</animation>
+	    <!--<animation effect="slide" start="0" end="0,-180" time="350" tween="cubic" easing="inout" condition="Control.HasFocus(82) | Control.HasFocus(90) | Control.HasFocus(88) | Control.HasFocus(89)">Conditional</animation>
+	    <animation effect="slide" start="0" end="0,-220" time="350" tween="cubic" easing="inout" condition="Control.HasFocus(83) | Control.HasFocus(84)">Conditional</animation>-->
+		<!--<animation effect="slide" start="0" end="0,-70" time="350" tween="cubic" easing="inout" condition="Control.HasFocus(82) | Control.HasFocus(90) | Control.HasFocus(88) | Control.HasFocus(89) | Control.HasFocus(83) | Control.HasFocus(84)">Conditional</animation>-->
 	</include>
 	<include name="panel.slidedown.anim">
-		<animation effect="slide" start="0" end="0,150" time="350" tween="cubic" easing="inout" condition="Control.HasFocus(82) | Control.HasFocus(90) | Control.HasFocus(88) | Control.HasFocus(89) | Control.HasFocus(83) | Control.HasFocus(84)">Conditional</animation>
+		<!--<animation effect="slide" start="0" end="0,150" time="350" tween="cubic" easing="inout" condition="Control.HasFocus(82) | Control.HasFocus(90) | Control.HasFocus(88) | Control.HasFocus(89) | Control.HasFocus(83) | Control.HasFocus(84)">Conditional</animation>-->
 	</include>
 	<include name="Mod_83Items_NoInvert">
     	<control type="group">
+  
 			<control type="image">
 				<posx>10</posx>
 				<posy>10</posy>
@@ -1226,20 +1262,14 @@
 	<include name="Mod_83Focused_NoInvert">
 		<control type="group">
 			<visible>Control.HasFocus(83)</visible>
-			<control type="image">
-				<posx>10</posx>
-				<posy>10</posy>
-				<width>169</width>
-				<height>169</height>
-				<texture border="5">views/other/focus-mod.png</texture>
-			</control>
+
 			<control type="image">
 				<posx>10</posx>
 				<posy>10</posy>
 				<width>169</width>
 				<height>169</height>
 				<texture fallback="special://skin/extras/icons/addtile.png" diffuse="arctic/home/83tile.png">$INFO[ListItem.Property(poster)]</texture>
-				<colordiffuse>mod-infotags-alt</colordiffuse>
+				<colordiffuse>ff33b5e5</colordiffuse>
 				<aspectratio scalediffuse="false" align="center" aligny="center">keep</aspectratio>
 			</control>
 			<control type="label">
@@ -1248,7 +1278,7 @@
 				<label>$INFO[ListItem.Label]</label>
 				<align>center</align>
 				<font>Font-Alaska-S25-L</font>
-				<textcolor>mod-infotags-alt</textcolor>
+				<textcolor>ff33b5e5</textcolor>
 				<width>149</width>
 				<scroll>true</scroll>
 				<scrollsuffix>   </scrollsuffix>

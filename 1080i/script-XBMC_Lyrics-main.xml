@@ -5,11 +5,6 @@
             <description>Scraper label</description>
             <visible>false</visible>
         </control>
-        <control type="spincontrol" id="101">
-            <posx>-100</posx>
-            <posy>-100</posy>
-            <visible>false</visible>
-        </control>
         <control type="spincontrol" id="111">
             <posx>-100</posx>
             <posy>-100</posy>
@@ -29,17 +24,6 @@
                 <effect type="fade" start="100" end="0" tween="sine" easing="inout" time="250" />
             </animation>
             <visible>Window.IsActive(visualisation)</visible>
-            <control type="textbox" id="100">
-        		<description>textarea</description>
-        		<posx>100</posx>
-        		<posy>90</posy>
-        		<width>1720</width>
-        		<height>590</height>
-        		<autoscroll time="2000" delay="10000" repeat="10000">!Control.HasFocus(101)</autoscroll>
-        		<font>Font-MusicVis-Lyrics</font>
-        		<textcolor>77white</textcolor>
-        		<align>center</align>
-        	</control>
         	<control type="list" id="110">
         	    <posx>0</posx>
         	    <posy>0</posy>

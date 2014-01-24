@@ -178,7 +178,7 @@
                     <width>100</width>
                     <height>100</height>
                     <texture>weather/small/$INFO[Weather.FanartCode].png</texture>
-                    <textcolor>$VAR[HomeProfileColorDark]</textcolor>
+                    <colordiffuse>$VAR[HomeProfileColorDark]</colordiffuse>
                 </control>
                 <control type="label">
                     <posx>110</posx>

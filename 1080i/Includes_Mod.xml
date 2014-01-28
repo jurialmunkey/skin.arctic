@@ -79,18 +79,15 @@
 			</control>
 			<control type="label">
 				<include>HomeProfileInfoLabel</include>
-				<label>$INFO[Window(Weather).Property(Current.Condition)]$INFO[Window(Weather).Property(Current.Temperature), ,]$INFO[System.TemperatureUnits]</label>
-				<visible>Container(525).HasFocus(8) + Weather.IsFetched</visible>
-			</control>
-			<control type="label">
-				<include>HomeProfileInfoLabel</include>
-				<label>503</label>
-				<visible>Container(525).HasFocus(8) + !Weather.IsFetched</visible>
-			</control>
-			<control type="label">
-				<include>HomeProfileInfoLabel</include>
 				<label>$INFO[Container(525).ListItem.Label]</label>
-				<visible>!Container(525).HasFocus(1) + !Container(525).HasFocus(2) + !Container(525).HasFocus(3) + !Container(525).HasFocus(4) + !Container(525).HasFocus(8)</visible>
+				<visible>!Container(525).HasFocus(1) + !Container(525).HasFocus(2) + !Container(525).HasFocus(3) + !Container(525).HasFocus(4)</visible>
+				<visible>!Weather.IsFetched</visible>
+			</control>
+			<control type="label">
+				<include>HomeProfileInfoLabel</include>
+				<label>$INFO[Container(525).ListItem.Label] • $INFO[Window(Weather).Property(Current.Condition)]$INFO[Window(Weather).Property(Current.Temperature), ,]$INFO[System.TemperatureUnits]</label>
+				<visible>!Container(525).HasFocus(1) + !Container(525).HasFocus(2) + !Container(525).HasFocus(3) + !Container(525).HasFocus(4)</visible>
+				<visible>Weather.IsFetched</visible>
 			</control>
 		</control>
     </include>
@@ -102,38 +99,6 @@
             <include condition="!StringCompare(Skin.String(homescreen.style),simple)">BannerListInfoAnimation</include>
             <include>HomeProfileInfo-Content</include>
         </control>
-        <!--<control type="group">
-            <visible>!Window.IsActive(favourites) + !Window.IsActive(script-globalsearch-main.xml) + !Window.IsActive(script-globalsearch-infodialog.xml) + !Window.IsActive(script-globalsearch-contextmenu.xml) + ![Window.IsVisible(virtualkeyboard) + !IsEmpty(Window.Property(HomeSearch))] + !StringCompare(Skin.String(homescreen.style),simple)</visible>
-            <visible>Skin.HasSetting(HideHomeProfileInfo)</visible>
-            <posx>75</posx>
-            <posy>24</posy>
-            <include condition="!StringCompare(Skin.String(homescreen.style),simple)">BannerListInfoAnimation</include>
-            <control type="group">
-                <control type="image">
-                    <posx>5</posx>
-                    <posy>26</posy>
-                    <width>100</width>
-                    <height>100</height>
-                    <texture>weather/small/$INFO[Weather.FanartCode].png</texture>
-                    <colordiffuse>$VAR[HomeProfileColorDark]</colordiffuse>
-                </control>
-                <control type="label">
-                    <posx>110</posx>
-                    <posy>32</posy>
-                    <width>600</width>
-                    <height>60</height>
-                    <font>Font-Alaska-S36-BL</font>
-                    <textcolor>$VAR[HomeProfileColorDark]</textcolor>
-                    <scroll>false</scroll>
-                    <align>left</align>
-                    <label>$INFO[Window(Weather).Property(Location)]</label>
-                </control>
-                <control type="label">                    
-                    <include>HomeProfileInfoLabel</include>
-                    <label>$INFO[Window(Weather).Property(Current.Condition)]$INFO[Window(Weather).Property(Current.Temperature), ,]$INFO[System.TemperatureUnits]</label>
-                </control>
-            </control>
-        </control>-->
         <control type="group">
             <visible>!Window.IsActive(script-globalsearch-main.xml) + !Window.IsActive(script-globalsearch-infodialog.xml) + !Window.IsActive(script-globalsearch-contextmenu.xml) + ![Window.IsVisible(virtualkeyboard) + !IsEmpty(Window.Property(HomeSearch))] + StringCompare(Skin.String(homescreen.style),simple)</visible>
             <posx>75</posx>

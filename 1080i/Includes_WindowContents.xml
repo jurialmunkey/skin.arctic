@@ -124,7 +124,7 @@
 					<height>120</height>
 					<label>$INFO[Pvr.NextRecordingTitle,$LOCALIZE[19106]: ,]</label>
 					<font>Font-Alaska-S36-BL</font>
-					<textcolor>mod-infotags-d</textcolor>
+					<textcolor>Mod_Tags_Dark</textcolor>
 					<scroll>false</scroll>
 					<align>right</align>
 					<animation effect="slide" end="0,16" time="300" tween="sine" easing="inout" condition="IsEmpty(Control.GetLabel(934))">Conditional</animation>
@@ -137,7 +137,7 @@
 					<height>120</height>
 					<label>$INFO[Pvr.NextRecordingChannel,, • ]$INFO[Pvr.NextRecordingDateTime]</label>
 					<font>Font-Alaska-S28-L</font>
-					<textcolor>mod-infotags-d</textcolor>
+					<textcolor>Mod_Tags_Dark</textcolor>
 					<scroll>false</scroll>
 					<align>right</align>
 				</control>
@@ -152,7 +152,7 @@
 					<height>120</height>
 					<label>$INFO[Pvr.NowRecordingTitle,$LOCALIZE[19043]: ,]</label>
 					<font>Font-Alaska-S36-BL</font>
-					<textcolor>mod-infotags-d</textcolor>
+					<textcolor>Mod_Tags_Dark</textcolor>
 					<scroll>false</scroll>
 					<align>right</align>
 					<animation effect="slide" end="0,16" time="300" tween="sine" easing="inout" condition="IsEmpty(Control.GetLabel(934))">Conditional</animation>
@@ -165,7 +165,7 @@
 					<height>120</height>
 					<label>$INFO[Pvr.NowRecordingChannel,, • ]$INFO[Pvr.NowRecordingDateTime]</label>
 					<font>Font-Alaska-S28-L</font>
-					<textcolor>mod-infotags-d</textcolor>
+					<textcolor>Mod_Tags_Dark</textcolor>
 					<scroll>false</scroll>
 					<align>right</align>
 				</control>
@@ -177,7 +177,7 @@
 				<height>100</height>
 				<texture>windows/home/icons/tv.png</texture>
 				<aspectratio align="center">keep</aspectratio>
-				<colordiffuse>mod-infotags-d</colordiffuse>
+				<colordiffuse>Mod_Tags_Dark</colordiffuse>
 			</control>
 		</control>
 		<control type="image">

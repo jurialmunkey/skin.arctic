@@ -1191,13 +1191,13 @@
 
     
 	<include name="panel.slideup.anim">
-	    <animation effect="slide" start="0" end="0,-220" time="350" tween="cubic" easing="inout" condition="Control.HasFocus(82) | Control.HasFocus(90) | Control.HasFocus(88) | Control.HasFocus(89) | Control.HasFocus(83) | Control.HasFocus(84)">Conditional</animation>
+	    <!--<animation effect="slide" start="0" end="0,-220" time="350" tween="cubic" easing="inout" condition="Control.HasFocus(82) | Control.HasFocus(90) | Control.HasFocus(88) | Control.HasFocus(89) | Control.HasFocus(83) | Control.HasFocus(84)">Conditional</animation>-->
 	    <!--<animation effect="slide" start="0" end="0,-180" time="350" tween="cubic" easing="inout" condition="Control.HasFocus(82) | Control.HasFocus(90) | Control.HasFocus(88) | Control.HasFocus(89)">Conditional</animation>
 	    <animation effect="slide" start="0" end="0,-220" time="350" tween="cubic" easing="inout" condition="Control.HasFocus(83) | Control.HasFocus(84)">Conditional</animation>-->
-		<!--<animation effect="slide" start="0" end="0,-70" time="350" tween="cubic" easing="inout" condition="Control.HasFocus(82) | Control.HasFocus(90) | Control.HasFocus(88) | Control.HasFocus(89) | Control.HasFocus(83) | Control.HasFocus(84)">Conditional</animation>-->
+		<animation effect="slide" start="0" end="0,-70" time="350" tween="cubic" easing="inout" condition="Control.HasFocus(82) | Control.HasFocus(90) | Control.HasFocus(88) | Control.HasFocus(89) | Control.HasFocus(83) | Control.HasFocus(84)">Conditional</animation>
 	</include>
 	<include name="panel.slidedown.anim">
-		<!--<animation effect="slide" start="0" end="0,150" time="350" tween="cubic" easing="inout" condition="Control.HasFocus(82) | Control.HasFocus(90) | Control.HasFocus(88) | Control.HasFocus(89) | Control.HasFocus(83) | Control.HasFocus(84)">Conditional</animation>-->
+		<animation effect="slide" start="0" end="0,150" time="350" tween="cubic" easing="inout" condition="Control.HasFocus(82) | Control.HasFocus(90) | Control.HasFocus(88) | Control.HasFocus(89) | Control.HasFocus(83) | Control.HasFocus(84)">Conditional</animation>
 	</include>
 	<include name="Mod_83Items_NoInvert">
     	<control type="group">

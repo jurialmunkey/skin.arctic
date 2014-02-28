@@ -6504,7 +6504,7 @@
 			<width>19</width>
 			<height>28</height>
 			<texture>-</texture>
-			<visible>!Skin.HasSetting(disable.movies) + Skin.HasSetting(HideSubmenuArrows)]</visible>
+			<visible>!Skin.HasSetting(disable.movies) + Skin.HasSetting(HideSubmenuArrows)</visible>
 		</control>
 		<control type="label">
 			<label fallback="20190">$INFO[Skin.String(Home.Movies.Tile.0.Label)]</label>
@@ -6530,7 +6530,7 @@
 			<width>19</width>
 			<height>28</height>
 			<texture>-</texture>
-			<visible>!Skin.HasSetting(disable.tvshows) + Skin.HasSetting(HideSubmenuArrows)]</visible>
+			<visible>!Skin.HasSetting(disable.tvshows) + Skin.HasSetting(HideSubmenuArrows)</visible>
 		</control>
 
 		<control type="label">
@@ -6557,7 +6557,7 @@
 			<width>19</width>
 			<height>28</height>
 			<texture>-</texture>
-			<visible>!Skin.HasSetting(disable.music) + Skin.HasSetting(HideSubmenuArrows)]</visible>
+			<visible>!Skin.HasSetting(disable.music) + Skin.HasSetting(HideSubmenuArrows)</visible>
 		</control>
 		<control type="label">
 			<label fallback="20190">$INFO[Skin.String(Home.Music.Tile.0.Label)]</label>

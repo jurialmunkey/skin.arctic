@@ -1,6 +1,7 @@
 [B]0.6.6[/B]
 Fixed lyrics for Gotham
 Fixed weather icon colour
+..
 
 [B]0.6.5[/B]
 Option to change infotags back to audio/video codec (Skin Settings > Infomation)
